@@ -4,12 +4,14 @@ import os from 'node:os';
 import {createHash} from 'node:crypto';
 import {pathToFileURL, fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
+import {brotliDecompressSync} from 'node:zlib';
 import {loadPages} from './pages.mjs';
 import {loadDemos, sourceManifest} from './demos.mjs';
 
 export const BASE = '/awesome-threejs-games/';
 export const VIDEO_LIMIT = 12_000_000;
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
+const decodeText = bytes => { try { return new TextDecoder('utf-8',{fatal:true}).decode(bytes); } catch { return null; } };
 const json = async file => JSON.parse(await readFile(file, 'utf8'));
 const exists = async file => {try {await stat(file); return true;} catch (error) {if (error.code === 'ENOENT') return false; throw error;}};
 const writeJSON = async (file, value) => {await mkdir(path.dirname(file), {recursive:true}); await writeFile(file, JSON.stringify(value, null, 2) + '\n');};
@@ -184,7 +186,17 @@ export async function copyRuntime(source, destination, prefix, {slug} = {}) {
     const to = path.join(destination, targetName);
     await mkdir(path.dirname(to), {recursive:true});
     if (TEXT.test(file) || aliases.includes(file)) {
-      let text = await readFile(from, 'utf8');
+      const bytes = await readFile(from);
+      let text = decodeText(bytes);
+      if (text === null) {
+        // Some captures stored the server's compressed body verbatim (Content-Encoding: br).
+        // Pages serves bytes as-is, so decode them here; never rewrite undecodable bytes.
+        let decoded = null;
+        try { decoded = decodeText(brotliDecompressSync(bytes)); } catch {}
+        if (decoded === null) { await copyFile(from, to); continue; }
+        text = decoded;
+        rewrites.push({file:targetName,count:1,before:'brotli-compressed capture',after:'decoded UTF-8 text',operation:'decode stored Content-Encoding body'});
+      }
       if (file.endsWith('.html') && !/<link\b[^>]*\brel\s*=\s*["'](?:shortcut\s+)?icon["']/i.test(text)) {
         const icon = '<link rel="icon" href="data:,">';
         text = /<head[^>]*>/i.test(text) ? text.replace(/<head[^>]*>/i,head=>head+icon) : icon+text;

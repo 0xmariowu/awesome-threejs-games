@@ -180,3 +180,22 @@ test('INKWAVE copying excludes the private project while preserving local files 
     assert.equal(await readFile(path.join(unrelated, 'src/garden/main.js'), 'utf8'), 'local bytes');
   } finally {await rm(root, {recursive:true, force:true});}
 });
+
+test('brotli-captured text is decoded before URL rewriting and other binary text is copied untouched', async () => {
+  const {brotliCompressSync} = await import('node:zlib');
+  const root = await mkdtemp(path.join(os.tmpdir(), 'gameref-brotli-'));
+  try {
+    const source = path.join(root, 'game'), destination = path.join(root, 'site');
+    await mkdir(path.join(source, '_vercel'), {recursive:true});
+    const script = '"use strict";fetch("/api/x");console.log("ok")';
+    await writeFile(path.join(source, 'index.html'), '<html><head></head><body></body></html>');
+    await writeFile(path.join(source, '_vercel/script.js'), brotliCompressSync(Buffer.from(script)));
+    const odd = Buffer.from([0xff, 0xfe, 0x00, 0x41]);
+    await writeFile(path.join(source, 'odd.txt'), odd);
+    await copyRuntime(source, destination, BASE+'games/game/', {slug:'game'});
+    const out = await readFile(path.join(destination, '_vercel/script.js'), 'utf8');
+    assert.ok(out.startsWith('"use strict";'), out.slice(0, 40));
+    assert.ok(!out.includes('�'));
+    assert.deepEqual(await readFile(path.join(destination, 'odd.txt')), odd);
+  } finally { await rm(root, {recursive:true, force:true}); }
+});
