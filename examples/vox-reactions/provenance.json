@@ -1,0 +1,43 @@
+{
+  "project": "vox-arcana",
+  "source": "https://jev-spell.vercel.app/",
+  "scope": "Unchanged reaction and combat modules, their complete static import closure and archived Three r169; new single-target canvas host.",
+  "files": [
+    {
+      "source": "vox-arcana/public/js/combat.js",
+      "path": "examples/vox-reactions/original/combat.js",
+      "sha256": "40ce31c76dbe55f93f1c31f9bee75c339796d383aec5d630aa125c18029fce24"
+    },
+    {
+      "source": "vox-arcana/public/js/elements.js",
+      "path": "examples/vox-reactions/original/elements.js",
+      "sha256": "e6e13f9e8dbf8fb2a71b2680121cb44d49c70022b1da30739c03e5c25dcab1a6"
+    },
+    {
+      "source": "vox-arcana/public/js/util.js",
+      "path": "examples/vox-reactions/original/util.js",
+      "sha256": "5e38e1714d663dc541558638f2709f69f31eb0274fe36dccf29032adc5b8bdf2"
+    },
+    {
+      "source": "vox-arcana/public/js/i18n.js",
+      "path": "examples/vox-reactions/original/i18n.js",
+      "sha256": "c7228a951e978feab737147fd5dbeae8ea086641b4ca358889a61f972a8e49f6"
+    },
+    {
+      "source": "vox-arcana/public/js/languages.js",
+      "path": "examples/vox-reactions/original/languages.js",
+      "sha256": "80bb1e5826964e78a53c4bdd4be1b974f9f10cde8b8326303a36297c74562b98"
+    },
+    {
+      "source": "vox-arcana/public/js/more-locales.js",
+      "path": "examples/vox-reactions/original/more-locales.js",
+      "sha256": "3675b29fe3929b88c57ea65cc6de360ca6706f6a14439930ef709532e3b80390"
+    },
+    {
+      "source": "vox-arcana/public/_external/cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "path": "examples/vox-reactions/original/three.module.js",
+      "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416"
+    }
+  ],
+  "assets": []
+}

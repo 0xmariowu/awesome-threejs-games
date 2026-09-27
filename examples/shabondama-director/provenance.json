@@ -1,0 +1,49 @@
+{
+  "project": "shabondama-biyori",
+  "source": "https://claude.ai/artifact/FozvXt7fcZ6ydzxndkRS1k",
+  "scope": "Unmodified director and bubble flight in a small host scene. Local browser ES modules; no build.",
+  "files": [
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/director.js",
+      "path": "examples/shabondama-director/original/sim/director.js",
+      "sha256": "b907f4f176d5ddf2ea574c8abe7d0435d95e2e441f1abf91b591998f9c4936cc"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/flight.js",
+      "path": "examples/shabondama-director/original/sim/flight.js",
+      "sha256": "30a4d4321ebcc73f22aa61d396406d47930830658a0bc3026883d0429e827690"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/wind.js",
+      "path": "examples/shabondama-director/original/sim/wind.js",
+      "sha256": "4fc385c1400aac069e7979d155c9f7107c21e72bf4690ba8c54955c2ff672e95"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/world/layout.js",
+      "path": "examples/shabondama-director/original/world/layout.js",
+      "sha256": "663db32db8aa3b68656dd739f88a443267c2a1170b7cc5d2a79c476d0abdf07d"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/util/noise.js",
+      "path": "examples/shabondama-director/original/util/noise.js",
+      "sha256": "6424fdb07a4fdbe8a003070394b58c4dfa47aee7e235b4c47c9f35dea63a2f2b"
+    },
+    {
+      "source": "shabondama-biyori/public/_external/cdn.jsdelivr.net/npm/three@0.186.0/build/three.core.js",
+      "path": "examples/shabondama-director/original/vendor/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "source": "shabondama-biyori/public/_external/cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+      "path": "examples/shabondama-director/original/vendor/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ],
+  "references": [
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/main.js",
+      "sha256": "4db6769b475f5b307ffb75442b78bfbe45164d9ef631aa9a11b441b925340c1a",
+      "scope": "Input routing and update order, lines 375-415 and 511-535; reference only, not imported."
+    }
+  ]
+}

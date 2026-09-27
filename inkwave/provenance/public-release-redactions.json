@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-27",
+  "type": "public-release redaction",
+  "authorization": "Owner requested exclusion of the separate private project while preserving its files locally.",
+  "scope": "Archived documentation and CI only; no original runtime changes.",
+  "hash_algorithm": "sha256",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "reason": "Remove private-only npm install, check, test and build steps; retain original static checks.",
+      "before_sha256": "0dd09d188164df1f5c80a5e14ef3b4f96dd15c0433f254b8bccebc3fea6eb173",
+      "after_sha256": "80ededa54e18b1fa6290098ad7d14a416fc2c387d297c5cf08a3a30a24ae8c2c"
+    },
+    {
+      "path": "README.md",
+      "reason": "Remove the private project guide, local plan link and excluded-audio caveat from public documentation.",
+      "before_sha256": "9d6ee9527a35944057f2851d0af6faf34f00a18c06bd101bbc5ed7e82c12cbe7",
+      "after_sha256": "6100be91e1a75207cb886a4c2ac0d9f83b2e01075bce6e15766ad06521fba428"
+    },
+    {
+      "path": "TECHNICAL.md",
+      "reason": "Remove private project references; document the original static entry and build-free setup.",
+      "before_sha256": "0c5eb3d181c02539b70307b3badfa7016d924f8adf71c533b9b49783b148cddc",
+      "after_sha256": "67cfd160e8e00d0dcd913bd4b86e955a2b5217470eb2657ed192b11ce9b11054"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "reason": "Remove the notice for audio excluded from public distribution; retain original bundled dependency notices.",
+      "before_sha256": "59a74a2e86ce8239d3aa4677201d690edfc9c52074956a810172523ea8ea1e06",
+      "after_sha256": "4566188b4aae001fb2a89eaff2b20a69ec59c5548ec3fc74821b2db1eeeeefc5"
+    },
+    {
+      "path": "provenance/localization.json",
+      "reason": "Remove private project name from the original runtime scope description.",
+      "before_sha256": "1c64e1db6cfc2ea24828c14c2ea72a6b48f340f67f7eed02261988038e4c0179",
+      "after_sha256": "b3f54c91076f8a3f5105ef3bc10aa7939cc481c02028b39318ac7261b4d91d9d"
+    },
+    {
+      "path": "provenance/manifest.json",
+      "reason": "Remove private project name from the origin limitation; preserve all 70 original runtime hashes.",
+      "before_sha256": "0cb981f066164a7a6c1978a0595123d34bde756a0defe9e1aceb10ceaab6def7",
+      "after_sha256": "76aa4642fdb67d06cd6a65a5e16161979ce0e6889ca7e48683521c52817e1bf4"
+    }
+  ]
+}

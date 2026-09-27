@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="data:,">
+<title>Audio Engine Test</title>
+<style>
+  :root { --bg: #f4f1ea; --fg: #2d2a38; --card: #fbf9f4; --ok: #3f8f6b; --bad: #c24d5a; }
+  body { margin: 16px; background: var(--bg); color: var(--fg); font: 13px/1.45 system-ui, sans-serif; }
+  h1 { font-size: 16px; margin: 0 0 10px; }
+  table { border-collapse: collapse; background: var(--card); }
+  td, th { padding: 3px 8px; text-align: right; border-bottom: 1px solid #e6e1d6; font-variant-numeric: tabular-nums; }
+  td:first-child, th:first-child, td:last-child { text-align: left; }
+  .ok { color: var(--ok); } .bad { color: var(--bad); }
+  canvas { display: block; margin: 4px 0 10px; border-radius: 4px; max-width: 100%; }
+  #sum { font-weight: 600; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<h1>audio.js — offline render test (one OfflineAudioContext per case)</h1>
+<div id="sum">running…</div>
+<table><thead><tr><th>case</th><th>rms dB</th><th>active dB</th><th>max100 dB</th><th>peak</th><th>L−R dB</th><th>ms</th><th>checks</th></tr></thead><tbody id="rows"></tbody></table>
+<div id="pngs"></div>
+<script type="module">
+// Renders every sound of src/core/audio.js offline. audio.update() is driven from OfflineAudioContext.suspend()
+// every STEP frames (the engine's scheduler runs on the audio clock). Per case: RMS over the whole render,
+// "active" RMS (100 ms windows within 30 dB of the loudest), loudest 100 ms window, sample peak, L/R balance,
+// engine warnings / exceptions / non-finite samples, and case-specific checks.
+// Query: ?only=substring  &png=1 (spectrograms)  &par=3 (cases rendered concurrently)
+// Results: window.__results (array), window.__done = true.
+import { createAudio } from '../src/core/audio.js';
+
+const SR = 48000, STEP = 2048, Q = STEP / SR;
+const QS = new URLSearchParams(location.search);
+const PNG = QS.get('png') === '1', PAR = Math.max(1, Number(QS.get('par') || 3)), ONLY = QS.get('only');
+const V = (x, y, z) => ({ x, y, z });
+const db = (v) => (v > 1e-9 ? 20 * Math.log10(v) : -180);
+
+// engine warnings are attributed to the case whose code is running (JS is single-threaded)
+let cur = null;
+const ow = console.warn.bind(console);
+console.warn = (...a) => { const s = a.map((x) => (x && x.stack) || String(x)).join(' '); if (cur) cur.warns.push(s); ow(...a); };
+
+function makeCam() {   // listener at the origin, eye 1.6 m, facing -Z (right ear = +X)
+  const e = [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1.6, 0, 1];
+  return { matrixWorld: { elements: e }, updateMatrixWorld() {}, move(x, y, z) { e[12] = x; e[13] = y; e[14] = z; } };
+}
+const once = (fn) => { let done = false; return (...a) => { if (!done) { done = true; fn(...a); } }; };
+/** one-shot at `pos`, fired at 0.05 s */
+const shot = (label, name, pos, dur, extra = {}, more = {}) => ({ name: label, dur, setup: (a) => { const go = once(() => a.play(name, { position: pos, ...extra })); return (t) => { if (t > 0.05) go(); }; }, ...more });
+/** nearest point of a 36 m train (front at xf, moving +X) to the listener at x = 0 */
+const nearest = (xf, z) => V(Math.max(xf - 36, Math.min(xf, 0)), 1.4, z);
+const cruise = (v, z, dur) => ({ name: `trainRun ${v} m/s alongside ${-z} m`, dur, speed: v, rhythm: v >= 8, setup: (a) => { a.loop('trainRun', { position: V(0, 1.4, z), volume: 0.9, params: { speed: v } }); return null; } });
+
+// ---------------------------------------------------------------------------------------------- cases
+const CASES = [
+  { name: 'wind', dur: 6, amb: ['wind'] },
+  { name: 'birds', dur: 12, amb: ['birds'] },
+  { name: 'town', dur: 12, amb: ['town'] },
+  { name: 'ambience (start default: wind+birds+town)', dur: 10, ambience: true },
+  { name: 'crossingBell 10 m (made before start, on at 0.2 s)', dur: 4, tag: 'bell10', setup: (a) => { const h = a.loop('crossingBell', { position: V(0, 3.4, -10), volume: 0 }); const on = once(() => h.setVolume(1, 0.08)); return (t) => { if (t > 0.2) on(); }; } },
+  { name: 'crossingBell 30 m', dur: 3, tag: 'bell30', setup: (a) => { a.loop('crossingBell', { position: V(0, 3.4, -30), volume: 1 }); return null; } },
+  { name: 'crossingBell 150 m', dur: 3, tag: 'bell150', setup: (a) => { a.loop('crossingBell', { position: V(0, 3.4, -150), volume: 1 }); return null; } },
+  { name: 'trainRun pass-by 20 m/s at 10 m', dur: 8, setup: (a) => { const p = V(0, 1.4, -10); a.loop('trainRun', { position: () => p, volume: 0.9, params: { speed: 20 } }); return (t) => { Object.assign(p, nearest(-70 + 20 * t, -10)); }; } },
+  cruise(5, -10, 4), cruise(10, -10, 7), cruise(20, -10, 5),
+  { name: 'trainRun departing 0.8 m/s² at 6 m', dur: 10, setup: (a) => { const p = V(0, 1.4, -6); const h = a.loop('trainRun', { position: () => p, volume: 0.9, params: { speed: 0 } }); return (t) => { const tt = Math.max(0, t - 1); h.setParam('speed', 0.8 * tt); Object.assign(p, nearest(18 + 0.4 * tt * tt, -6)); }; } },
+  { name: 'trainRun idle (stopped) 6 m', dur: 3, setup: (a) => { a.loop('trainRun', { position: V(0, 1.4, -6), volume: 0.9, params: { speed: 0 } }); return null; } },
+  { name: 'trainRun 20 m/s at 150 m', dur: 4, tag: 'train150', setup: (a) => { a.loop('trainRun', { position: V(0, 1.4, -150), volume: 0.9, params: { speed: 20 } }); return null; } },
+  { name: 'trainRun 700 m (out of range, asleep)', dur: 4.5, expect: 'silent', asleep: true, setup: (a) => { a.loop('trainRun', { position: V(0, 1.4, -700), volume: 0.9, params: { speed: 20 } }); return null; } },
+  { name: 'crossingBell wakes from sleep (vol 0 until 3.8 s)', dur: 5, quiet: [0, 3.8], loud: [3.9, 5], probe: { t: 3.6, name: 'asleep at 3.6 s', fn: (s) => s.awake === 0 }, setup: (a) => { const h = a.loop('crossingBell', { position: V(0, 3.4, -10), volume: 0 }); const on = once(() => h.setVolume(1, 0.08)); return (t) => { if (t > 3.8) on(); }; } },
+  { name: 'trainRun wakes: 700 m -> 10 m at 4 s', dur: 6, quiet: [0, 4], loud: [4.2, 6], probe: { t: 3.8, name: 'asleep at 3.8 s', fn: (s) => s.awake === 0 }, setup: (a) => { const p = V(0, 1.4, -700); a.loop('trainRun', { position: () => p, volume: 0.9, params: { speed: 15 } }); return (t) => { if (t > 4) p.z = -10; }; } },
+  { name: 'cafeMusic 4 m', dur: 8, tag: 'cafe4', setup: (a) => { a.loop('cafeMusic', { position: V(0, 1.6, -4), volume: 0.35 }); return null; } },
+  { name: 'cafeMusic 30 m', dur: 5, tag: 'cafe30', setup: (a) => { a.loop('cafeMusic', { position: V(0, 1.6, -30), volume: 0.35 }); return null; } },
+  shot('trainBrake 8 m (unlinked)', 'trainBrake', V(0, 1.4, -8), 13),
+  { name: 'trainBrake linked to a braking trainRun', dur: 13, setup: (a) => { const p = V(-40, 1.4, -8); const h = a.loop('trainRun', { position: () => p, volume: 0.9, params: { speed: 8 } }); let v = 8, x = -40; const go = once(() => a.play('trainBrake', { position: V(p.x, p.y, p.z) })); return (t) => { if (t > 1) v = Math.max(0, 8 - 0.75 * (t - 1)); x += v * Q; p.x = Math.min(0, x); h.setParam('speed', v); if (t > 1.02) go(); }; } },
+  shot('doorOpen 3 m', 'doorOpen', V(1, 2.2, -3), 2),
+  shot('doorClose 3 m', 'doorClose', V(1, 2.2, -3), 2.4),
+  shot('doorChime 3 m (train)', 'doorChime', V(1, 2.2, -3), 1.8),
+  shot('doorChime 2.5 m vol 0.45 (konbini)', 'doorChime', V(1, 2.0, -2.2), 1.8, { volume: 0.45 }),
+  shot('departMelody 7 m (PA)', 'departMelody', V(3, 3.4, -6), 9),
+  shot('announce 7 m (chime; speech off)', 'announce', V(3, 3.4, -6), 3.5, { text: 'まもなく、1番線に電車がまいります。' }),
+  shot('bicycleBell 4.5 m', 'bicycleBell', V(-2, 1.1, -4), 1.8),
+  shot('catMeow 2.7 m', 'catMeow', V(1, 0.3, -2.5), 1.3),
+  shot('sparrow 6.5 m', 'sparrow', V(-3, 4, -5), 1.2),
+  shot('vendingDrop 1.8 m', 'vendingDrop', V(0.8, 0.5, -1.5), 1.5),
+  { name: "footstep (removed: play + loop are silent no-ops)", dur: 1, expect: 'silent', setup: (a) => { const go = once(() => { a.play('footstep'); a.play('footstep', { position: V(0, 0, -1) }); a.loop('footstep'); }); return (t) => { if (t > 0.05) go(); }; } },
+  { name: 'panning: bell 6 m east', dur: 1.6, pan: 'R', setup: (a) => { const go = once(() => a.play('bicycleBell', { position: V(6, 1.6, 0) })); return (t) => { if (t > 0.05) go(); }; } },
+  { name: 'panning: bell 6 m west', dur: 1.6, pan: 'L', setup: (a) => { const go = once(() => a.play('bicycleBell', { position: V(-6, 1.6, 0) })); return (t) => { if (t > 0.05) go(); }; } },
+  { name: 'mute 1.5–3 s (bell loop)', dur: 4.5, quiet: [1.75, 2.95], setup: (a) => { a.loop('crossingBell', { position: V(0, 3.4, -6), volume: 1 }); let s = 0; return (t) => { if (t > 1.5 && s === 0) { a.muted = true; s = 1; } if (t > 3 && s === 1) { a.muted = false; s = 2; } }; } },
+  { name: 'loop stop() at 1.5 s (+ disposal)', dur: 3.5, quiet: [2.5, 3.5], after: (a) => a.stats.loops === 0, setup: (a) => { const h = a.loop('crossingBell', { position: V(0, 3.4, -6), volume: 1 }); const s = once(() => { h.stop(); h.stop(); h.setVolume(1); h.setParam('x', 1); }); return (t) => { if (t > 1.5) s(); }; } },
+  { name: 'handles made before start (train + café)', dur: 3, setup: (a) => { const tr = a.loop('trainRun', { position: () => V(0, 1.4, -8) }); tr.setVolume(0.8); tr.setParam('speed', 12); a.loop('cafeMusic', { position: V(3, 1.6, -3), volume: 0.35 }); return null; } },
+  { name: 'setPosition upgrade (café, non-spatial -> 6 m at 1 s)', dur: 3, setup: (a) => { const h = a.loop('cafeMusic', { volume: 0.35 }); const s = once(() => h.setPosition(V(6, 1.6, 0))); return (t) => { if (t > 1) s(); }; } },
+  { name: 'duck: departMelody + announce at 2 s', dur: 8, setup: (a) => { const d = once(() => a.play('departMelody', { position: V(3, 3.4, -6) })), an = once(() => a.play('announce', { position: V(3, 3.4, -6), text: 'ドアが閉まります' })); return (t) => { if (t > 0.05) d(); if (t > 2) an(); }; } },
+  { name: 'voice cap: 60 sparrows + 30 bells in one frame', dur: 2, cap: true, setup: (a) => { const go = once(() => { for (let i = 0; i < 60; i++) a.play('sparrow', { position: V(i % 7 - 3, 3, -4 - (i % 5)) }); for (let i = 0; i < 30; i++) a.play('bicycleBell', { position: V(2, 1, -3) }); }); return (t) => { if (t > 0.05) go(); }; } },
+  { name: 'robustness: bad names / args never throw', dur: 1.5, allowWarn: /unknown (sound|loop)/, setup: (a, cam) => {
+      const go = once(() => {
+        a.play('nope'); a.play(); a.play(null, null); a.play('sparrow', 5); a.play('sparrow', { position: 'x' }); a.play('sparrow', { position: [1, 2] }); a.play('sparrow', { volume: 'loud' }); a.play('announce', { text: 42 });
+        a.loop('nope').setVolume(1); a.loop('__proto__'); a.loop('constructor'); a.loop('trainRun', null).setParam('speed', 'fast');
+        const b = a.loop('trainRun', { position: () => { throw new Error('boom'); }, volume: 1 }); b.setPosition(undefined); b.setVolume(NaN); b.setParam(); b.stop(); b.stop();
+        a.update(null, NaN); a.update({}, -1); a.update(cam, Infinity); a.setMaster('x'); a.setMaster(0.85); a.start();
+      });
+      return (t) => { if (t > 0.05) go(); };
+    } },
+  { name: 'FULL MIX (worst case)', dur: 10, ambience: true, full: 1, noClip: true },
+  { name: 'FULL MIX at master 2.0 (limiter)', dur: 6, ambience: true, full: 2, noClip: true },
+];
+// busiest plausible moment: bell + passing train + brake + café + melody + announce + doors + vending + bicycle
+for (const c of CASES) if (c.full) c.setup = (a) => {
+  if (c.full === 2) a.setMaster(2);
+  const bellH = a.loop('crossingBell', { position: V(-6, 3.4, -10), volume: 1 });
+  const p = V(0, 1.4, -9); a.loop('trainRun', { position: () => p, volume: 0.9, params: { speed: 20 } });
+  const p2 = V(0, 1.4, -13); const t2 = a.loop('trainRun', { position: () => p2, volume: 0.9, params: { speed: 8 } });
+  a.loop('cafeMusic', { position: V(8, 1.6, 4), volume: 0.35 });
+  const d = once(() => a.play('departMelody', { position: V(4, 3.4, -5) })), an = once(() => a.play('announce', { position: V(4, 3.4, -5), text: 'x' })), br = once(() => a.play('trainBrake', { position: V(p2.x, p2.y, p2.z) }));
+  const dc = once(() => { a.play('doorChime', { position: V(2, 2, -3) }); a.play('doorClose', { position: V(2, 2, -3) }); a.play('vendingDrop', { position: V(1, 0.5, -1) }); a.play('bicycleBell', { position: V(-1, 1, -2) }); a.play('catMeow', { position: V(1, 0.3, -1.5) }); });
+  return (t) => { Object.assign(p, nearest(-40 + 20 * t, -9)); t2.setParam('speed', Math.max(0, 8 - 0.75 * t)); if (t > 0.3) { d(); br(); } if (t > 2.5) an(); if (t > 3.5) dc(); if (t > 8.5) bellH.setVolume(0, 0.1); };
+};
+
+// ---------------------------------------------------------------------------------------------- analysis
+function analyse(buf, c) {
+  const L = buf.getChannelData(0), R = buf.getChannelData(1), n = L.length;
+  let s = 0, sl = 0, sr = 0, pk = 0, nan = 0;
+  for (let i = 0; i < n; i++) { const l = L[i], r = R[i]; if (!Number.isFinite(l) || !Number.isFinite(r)) { nan++; continue; } sl += l * l; sr += r * r; s += (l * l + r * r) / 2; const a = Math.max(Math.abs(l), Math.abs(r)); if (a > pk) pk = a; }
+  const W = Math.round(0.1 * SR), wins = [];
+  for (let i = 0; i + W <= n; i += W) { let a = 0; for (let k = 0; k < W; k++) a += (L[i + k] * L[i + k] + R[i + k] * R[i + k]) / 2; wins.push(Math.sqrt(a / W)); }
+  const maxWin = Math.max(0, ...wins), act = wins.filter((w) => w > maxWin * 0.0316 && w > 1e-5);
+  const activeRms = act.length ? Math.sqrt(act.reduce((q, w) => q + w * w, 0) / act.length) : 0;
+  const rmsIn = (t0, t1) => { const a0 = Math.round(t0 * SR), a1 = Math.min(n, Math.round(t1 * SR)); let a = 0; for (let i = a0; i < a1; i++) a += (L[i] * L[i] + R[i] * R[i]) / 2; return Math.sqrt(a / Math.max(1, a1 - a0)); };
+  return { L, R, rms: Math.sqrt(s / n), rmsL: Math.sqrt(sl / n), rmsR: Math.sqrt(sr / n), peak: pk, maxWin, activeRms, activeFrac: act.length / Math.max(1, wins.length), wins, nan, rmsIn };
+}
+/** rail-joint period: autocorrelation of the click envelope (first difference, 5 ms hops) around 25/v */
+function jointPeriod(L, R, v) {
+  const hop = Math.round(0.005 * SR), skip = Math.round(0.6 * SR), n = Math.floor((L.length - skip) / hop), env = new Float64Array(n);
+  let prev = 0;
+  for (let i = 0; i < n; i++) { let a = 0; for (let k = 0; k < hop; k++) { const j = skip + i * hop + k, x = (L[j] + R[j]) / 2, d = x - prev; prev = x; a += d * d; } env[i] = Math.sqrt(a / hop); }
+  let m = 0; for (const e of env) m += e; m /= n; for (let i = 0; i < n; i++) env[i] -= m;
+  const P = 25 / v, lo = Math.round((0.55 * P) / 0.005), hi = Math.min(n - 10, Math.round((1.5 * P) / 0.005));
+  let best = 0, bestLag = 0;
+  for (let lag = lo; lag <= hi; lag++) { let a = 0; for (let i = 0; i + lag < n; i++) a += env[i] * env[i + lag]; a /= n - lag; if (a > best) { best = a; bestLag = lag; } }
+  return bestLag * 0.005;
+}
+const CMAP = [[20, 18, 32], [58, 34, 92], [128, 52, 128], [206, 88, 120], [246, 156, 96], [252, 232, 150]];
+function col(v) { v = Math.max(0, Math.min(0.9999, v)) * (CMAP.length - 1); const i = Math.floor(v), f = v - i, a = CMAP[i], b = CMAP[i + 1]; return [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f, a[2] + (b[2] - a[2]) * f]; }
+function fft(re, im) {
+  const n = re.length;
+  for (let i = 1, j = 0; i < n; i++) { let bit = n >> 1; for (; j & bit; bit >>= 1) j ^= bit; j ^= bit; if (i < j) { [re[i], re[j]] = [re[j], re[i]]; [im[i], im[j]] = [im[j], im[i]]; } }
+  for (let len = 2; len <= n; len <<= 1) {
+    const ang = -2 * Math.PI / len, wr = Math.cos(ang), wi = Math.sin(ang);
+    for (let i = 0; i < n; i += len) { let cr = 1, ci = 0; for (let k = 0; k < len / 2; k++) { const a = i + k, b = a + len / 2; const tr = re[b] * cr - im[b] * ci, ti = re[b] * ci + im[b] * cr; re[b] = re[a] - tr; im[b] = im[a] - ti; re[a] += tr; im[a] += ti; const nr = cr * wr - ci * wi; ci = cr * wi + ci * wr; cr = nr; } }
+  }
+}
+function spectrogram(st, title) {
+  const Wd = 900, Hs = 180, He = 50, Ht = 22, H = Ht + Hs + He, cv = document.createElement('canvas'); cv.width = Wd; cv.height = H;
+  const g = cv.getContext('2d'); g.fillStyle = '#1d1b26'; g.fillRect(0, 0, Wd, H);
+  const { L, R } = st, n = L.length, F = 2048, hop = Math.max(64, Math.floor((n - F) / Wd)), re = new Float64Array(F), im = new Float64Array(F), win = new Float64Array(F);
+  for (let i = 0; i < F; i++) win[i] = 0.5 - 0.5 * Math.cos((2 * Math.PI * i) / (F - 1));
+  const img = g.createImageData(Wd, Hs), fLo = 40, fHi = 16000, rowBin = [];
+  for (let y = 0; y < Hs; y++) rowBin.push(Math.min(F / 2 - 1, Math.round((fLo * Math.pow(fHi / fLo, 1 - y / (Hs - 1)) / SR) * F)));
+  for (let x = 0; x < Wd; x++) {
+    const o = x * hop; if (o + F > n) break;
+    for (let i = 0; i < F; i++) { re[i] = ((L[o + i] + R[o + i]) / 2) * win[i]; im[i] = 0; }
+    fft(re, im);
+    for (let y = 0; y < Hs; y++) { const b = rowBin[y], v = (db(Math.hypot(re[b], im[b]) / (F / 4)) + 100) / 90, [r, gg, bb] = col(v), p = (y * Wd + x) * 4; img.data[p] = r; img.data[p + 1] = gg; img.data[p + 2] = bb; img.data[p + 3] = 255; }
+  }
+  g.putImageData(img, 0, Ht);
+  const y0 = Ht + Hs; g.strokeStyle = '#ffd27a'; g.beginPath();
+  st.wins.forEach((w, i) => { const x = (i / st.wins.length) * Wd, y = y0 + He * Math.min(1, -db(w) / 80); i ? g.lineTo(x, y) : g.moveTo(x, y); }); g.stroke();
+  g.fillStyle = '#fff'; g.font = '12px system-ui'; g.fillText(title, 6, 15);
+  return cv;
+}
+
+// ---------------------------------------------------------------------------------------------- run
+async function run(c) {
+  const t0 = performance.now(), len = Math.round(c.dur * SR), oac = new OfflineAudioContext(2, len, SR);
+  const ctx = { warns: [], errs: [] };
+  const guard = (f) => { cur = ctx; try { return f(); } catch (e) { ctx.errs.push('exception: ' + (e && e.message || e)); return null; } finally { cur = null; } };
+  const a = guard(() => createAudio({ context: oac, ambience: !!c.ambience, speech: false, seed: 7 }));
+  const cam = makeCam(); let maxVoices = 0, probed = null;
+  const step = guard(() => (c.setup ? c.setup(a, cam) : null));
+  guard(() => { a.start(); if (!a.ready) ctx.errs.push('not ready after start()'); if (c.amb) for (const nm of c.amb) a.loop(nm, { volume: 1 }); a.update(cam, 0); });
+  for (let k = 1; k * Q < c.dur - 0.01; k++) {
+    const tt = k * Q;
+    oac.suspend(tt).then(() => { guard(() => { if (step) step(tt, a, cam); a.update(cam, Q); maxVoices = Math.max(maxVoices, a.stats.voices); if (c.probe && probed === null && tt >= c.probe.t) probed = !!c.probe.fn(a.stats); }); oac.resume(); });
+  }
+  const tmo = Math.max(8000, c.dur * 1500);
+  const buf = await Promise.race([oac.startRendering(), new Promise((r) => setTimeout(() => r(null), tmo))]);
+  if (!buf) return { name: c.name, ok: false, errs: [`render did not finish within ${tmo} ms (hang)`], checks: [] };
+  const st = analyse(buf, c), stats = a.stats, errs = ctx.errs.slice();
+  for (const w of ctx.warns) if (!(c.allowWarn && c.allowWarn.test(w))) errs.push('warn: ' + w.slice(0, 200));
+  if (st.nan) errs.push(`${st.nan} non-finite samples`);
+  const checks = [['no clip (peak<0.98)', st.peak < 0.98]];
+  if (c.expect === 'silent') checks.push(['silent', st.rms < 1e-5]); else if (!c.allowWarn) checks.push(['audible', st.maxWin > 3e-4]);
+  if (c.pan === 'R') checks.push(['right louder', st.rmsR > st.rmsL * 1.4]);
+  if (c.pan === 'L') checks.push(['left louder', st.rmsL > st.rmsR * 1.4]);
+  if (c.quiet) checks.push([`silent ${c.quiet[0]}–${c.quiet[1]} s`, st.rmsIn(c.quiet[0], c.quiet[1]) < 1e-4]);
+  if (c.loud) checks.push([`audible ${c.loud[0]}–${c.loud[1]} s`, st.rmsIn(c.loud[0], c.loud[1]) > 3e-3]);
+  if (c.asleep) checks.push(['asleep', stats.awake === 0]);
+  if (c.probe) checks.push([c.probe.name, probed === true]);
+  if (c.after) checks.push(['disposed', !!c.after(a)]);
+  if (c.cap) checks.push([`voices capped (max ${maxVoices} ≤ 20 incl. fading)`, maxVoices <= 20]);
+  let period = null;
+  if (c.rhythm) { period = jointPeriod(st.L, st.R, c.speed); checks.push([`joint rhythm ${period.toFixed(2)} s ≈ ${(25 / c.speed).toFixed(2)} s`, Math.abs(period - 25 / c.speed) < 0.08 * 25 / c.speed]); }
+  const ok = !errs.length && checks.every((x) => x[1]);
+  const res = { name: c.name, tag: c.tag, speed: c.speed, ok, errs, checks, rmsDb: +db(st.rms).toFixed(1), activeDb: +db(st.activeRms).toFixed(1), maxWinDb: +db(st.maxWin).toFixed(1), peak: +st.peak.toFixed(3), lrDb: +(db(st.rmsL) - db(st.rmsR)).toFixed(1), period, stats, maxVoices, ms: Math.round(performance.now() - t0) };
+  if (PNG) res.png = spectrogram(st, `${c.name}  active ${res.activeDb} dB  peak ${res.peak}`).toDataURL('image/png');
+  return res;
+}
+
+function row(r) {
+  const tr = document.createElement('tr');
+  const chk = (r.checks || []).map(([k, v]) => `<span class="${v ? 'ok' : 'bad'}">${k}</span>`).join(' · ') + (r.errs && r.errs.length ? ` <span class="bad">${r.errs.join('<br>')}</span>` : '');
+  tr.innerHTML = `<td class="${r.ok ? 'ok' : 'bad'}">${r.ok ? 'OK' : 'FAIL'} ${r.name}</td><td>${r.rmsDb ?? ''}</td><td>${r.activeDb ?? ''}</td><td>${r.maxWinDb ?? ''}</td><td>${r.peak ?? ''}</td><td>${r.lrDb ?? ''}</td><td>${r.ms ?? ''}</td><td>${chk}</td>`;
+  document.getElementById('rows').appendChild(tr);
+  if (r.png) { const im = new Image(); im.src = r.png; document.getElementById('pngs').appendChild(im); }
+}
+
+(async () => {
+  const list = CASES.filter((c) => !ONLY || c.name.toLowerCase().includes(ONLY.toLowerCase()));
+  const results = new Array(list.length); let next = 0;
+  const worker = async () => { while (next < list.length) { const i = next++; try { results[i] = await run(list[i]); } catch (e) { results[i] = { name: list[i].name, ok: false, errs: ['exception: ' + (e && e.stack || e)], checks: [] }; } document.getElementById('sum').textContent = `${results.filter(Boolean).length}/${list.length}…`; } };
+  await Promise.all(Array.from({ length: Math.min(PAR, list.length) }, worker));
+  // relations between cases (attenuation with distance, loudness following train speed)
+  const by = (tag) => results.find((r) => r && r.tag === tag), rel = [];
+  const cmp = (name, a, b, minDb) => { if (a && b) rel.push({ name, ok: a.activeDb - b.activeDb >= minDb, detail: `${(a.activeDb - b.activeDb).toFixed(1)} dB (need ≥ ${minDb})` }); };
+  cmp('bell 10 m louder than 30 m', by('bell10'), by('bell30'), 6);
+  cmp('bell 30 m louder than 150 m', by('bell30'), by('bell150'), 10);
+  cmp('café 4 m louder than 30 m', by('cafe4'), by('cafe30'), 10);
+  const sp = results.filter((r) => r && r.speed).sort((p, q) => p.speed - q.speed);
+  for (let i = 1; i < sp.length; i++) rel.push({ name: `train ${sp[i].speed} m/s louder than ${sp[i - 1].speed} m/s`, ok: sp[i].activeDb > sp[i - 1].activeDb + 2, detail: `${(sp[i].activeDb - sp[i - 1].activeDb).toFixed(1)} dB` });
+  const t20 = results.find((r) => r && r.speed === 20);
+  cmp('train 10 m louder than 150 m', t20, by('train150'), 15);
+  for (const r of results) row(r);
+  for (const r of rel) { const tr = document.createElement('tr'); tr.innerHTML = `<td class="${r.ok ? 'ok' : 'bad'}">${r.ok ? 'OK' : 'FAIL'} ${r.name}</td><td colspan="6"></td><td>${r.detail}</td>`; document.getElementById('rows').appendChild(tr); }
+  const bad = results.filter((r) => !r.ok).length + rel.filter((r) => !r.ok).length;
+  document.getElementById('sum').innerHTML = bad ? `<span class="bad">${bad} FAILED</span>` : `<span class="ok">ALL ${results.length + rel.length} OK</span>`;
+  window.__results = results.map((r) => ({ ...r })); window.__relations = rel; window.__done = true;
+})();
+</script>
+</body>
+</html>

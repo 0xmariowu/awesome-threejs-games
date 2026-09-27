@@ -1,0 +1,7 @@
+{
+  "signature": "{\"version\":2,\"worldVersion\":4226488463,\"sunDir\":{\"azimuthDeg\":150,\"elevationDeg\":38},\"sun\":{\"intensity\":4.2,\"color\":[1,0.86,0.7],\"discRadiance\":400},\"sky\":{\"url\":\"/assets/render/kloofendal_48d_partly_cloudy_puresky/kloofendal_48d_partly_cloudy_puresky_4k.hdr\",\"gain\":1,\"horizon\":[0.56,0.71,0.86],\"zenith\":[0.062,0.255,0.62],\"gradientDeg\":16,\"sunCap\":12,\"ground\":[0.1,0.125,0.075]},\"env\":{\"intensity\":1.16,\"saturation\":0.72},\"probes\":{\"enabled\":true,\"sRange\":[90,470],\"margin\":45,\"spacing\":28,\"yRange\":[1.5,23],\"layers\":3,\"falloff\":40,\"intensity\":1}}",
+  "width": 11,
+  "height": 3,
+  "depth": 133,
+  "file": "bounce.bin.gz"
+}

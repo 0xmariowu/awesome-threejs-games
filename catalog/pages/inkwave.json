@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "slug": "inkwave",
+  "title": "INKWAVE — Turf Riot",
+  "tagline": "4 对 4 涂地对战，展示 GPU 涂色、程序化角色与电脑对手",
+  "category": "战斗",
+  "overview_video": "inkwave/overview",
+  "examples": [
+    {
+      "id": "inkwave-paint",
+      "title": "墨水涂地与墙面",
+      "one_liner": "射击涂色、覆盖对方墨水，实时查看地面占领率",
+      "candidate": "inkwave.paint",
+      "title_en": "Ink on floors and walls",
+      "one_liner_en": "Shoot ink, cover enemy ink and see ground coverage update in real time."
+    },
+    {
+      "id": "inkwave-3c",
+      "title": "奔跑跳跃与潜墨",
+      "one_liner": "原版角色移动、鱿鱼潜墨与平滑跟随镜头",
+      "candidate": "inkwave.3c",
+      "title_en": "Running, jumping and ink diving",
+      "one_liner_en": "Original character movement, squid ink diving and a smooth follow camera."
+    }
+  ],
+  "tagline_en": "4v4 turf battles with GPU painting, procedural characters and computer opponents."
+}

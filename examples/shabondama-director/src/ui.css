@@ -1,0 +1,154 @@
+/* Palette follows webgame-lab/src/embed.ts. Layout stays with each host. */
+:root[data-theme] {
+  --ui-bg: #F5F7FA;
+  --ui-panel: #FFFFFF;
+  --ui-line: #D9E0EA;
+  --ui-ink: #111827;
+  --ui-muted: #5B687C;
+  --ui-accent: #B7791F;
+  --ui-link: #2F5FD0;
+  --ui-font: system-ui, -apple-system, "PingFang SC", sans-serif;
+  --ui-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --ui-radius: 8px;
+  --ui-width: 280px;
+  --ui-shadow: 0 4px 16px #0000000d;
+  --ink: var(--ui-ink); --muted: var(--ui-muted); --line: var(--ui-line);
+  --paper: var(--ui-bg); --teal: var(--ui-link);
+  color-scheme: light;
+  color: var(--ui-ink);
+  background: var(--ui-bg);
+  font-family: var(--ui-font);
+}
+:root[data-theme="dark"] {
+  --ui-bg: #0E141F;
+  --ui-panel: #151D2B;
+  --ui-line: #25324A;
+  --ui-ink: #E7EDF6;
+  --ui-muted: #8C99AF;
+  --ui-accent: #F0B541;
+  --ui-link: #6FA1FF;
+  color-scheme: dark;
+}
+html[data-theme] body { color: var(--ui-ink); background: var(--ui-bg); font-family: var(--ui-font); }
+html[data-theme] a { color: var(--ui-link); }
+html[data-theme] :focus-visible { outline: 2px solid var(--ui-link); outline-offset: -2px; }
+[hidden] { display: none !important; }
+/* Two independent cards: scene on the left, compact dev console on the right. */
+html.demo-frame, html.demo-frame body {
+  width: 100%; height: auto; min-height: 0; margin: 0; padding: 0; overflow: hidden;
+}
+.demo-frame * { box-sizing: border-box; }
+html.demo-frame body { display: block; }
+html.demo-frame .demo-frame-layout {
+  position: relative; inset: auto; overflow: visible;
+  display: grid; grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: auto; gap: 12px;
+  width: 100%; height: auto; min-height: 0; max-width: none; margin: 0; padding: 0; align-items: start;
+}
+html.demo-frame .demo-frame-layout.picture-only { grid-template-columns: minmax(0, 1fr); }
+.demo-visual { min-width: 0; }
+html.demo-frame .demo-picture {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
+  background: var(--ui-bg); border: 1px solid var(--ui-line); border-radius: 10px;
+}
+html.demo-frame [data-demo-picture] {
+  position: absolute !important; inset: 0; display: block; width: 100% !important; height: 100% !important;
+  min-height: 0; max-width: none; margin: 0; padding: 0; border: 0; border-radius: 0;
+  outline-offset: -3px;
+}
+html.demo-frame [data-demo-picture] canvas { display: block; width: 100%; height: 100%; }
+html.demo-frame .demo-controls {
+  display: flex; flex-direction: column; gap: 12px; min-width: 260px;
+  max-height: var(--picture-height); overflow: auto; overscroll-behavior: contain;
+  padding: 12px; background: var(--ui-panel); border: 1px solid var(--ui-line); border-radius: 10px;
+  color: var(--ui-ink); font: 13px/1.4 var(--ui-font); scrollbar-width: thin;
+}
+html.demo-frame .demo-controls :is(h2,h3,legend) {
+  font: 11px/1.4 var(--ui-font); color: var(--ui-muted); margin: 0 0 6px;
+  text-transform: none; letter-spacing: normal;
+}
+html.demo-frame .demo-controls .demo-console-title { font-size: 12px; margin: 0; }
+.demo-parameters { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+html.demo-frame [data-demo-control], html.demo-frame [data-demo-readout] {
+  position: static !important; inset: auto !important; transform: none !important;
+  width: auto !important; height: auto; min-width: 0; max-width: none !important; max-height: none;
+  margin: 0; padding: 0 !important; border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important; backdrop-filter: none !important;
+  color: var(--ui-ink); pointer-events: auto; text-align: left; white-space: normal;
+  z-index: auto; font: inherit;
+}
+html.demo-frame .demo-parameters :is([data-demo-control], fieldset, .actions, .button-row, .teams, #elements, #pods, .controls) {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; align-items: start;
+}
+html.demo-frame .demo-parameters :is(fieldset, .actions, .button-row, .teams, #elements, #pods, label, h2, p, a, #model-list) { grid-column: 1 / -1; }
+html.demo-frame .demo-controls fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+html.demo-frame .demo-controls :is(button, input, select) {
+  font: 13px/1.2 var(--ui-font); height: 30px; min-width: 0; max-width: 100%;
+  border: 1px solid var(--ui-line); border-radius: 5px; padding: 4px 7px;
+  color: var(--ui-ink); background: var(--ui-panel); letter-spacing: normal;
+}
+html.demo-frame .demo-controls button { cursor: pointer; width: 100%; white-space: normal; overflow-wrap: normal; }
+html.demo-frame .demo-controls label {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  min-width: 0; margin: 0; font: 13px/1.4 var(--ui-font); background: transparent;
+}
+html.demo-frame .demo-controls label :is(select,input:not([type=checkbox]),meter) { width: 55%; min-width: 0; }
+html.demo-frame .demo-controls input[type=checkbox] { width: 16px; height: 16px; order: 1; margin: 0; }
+html.demo-frame .demo-controls input[type=range] { padding: 0; }
+html.demo-frame .demo-controls label:has(input[type=range]) { flex-wrap: wrap; }
+html.demo-frame .demo-controls label input[type=range] { flex-basis: 100%; width: 100%; }
+html.demo-frame .demo-performance { border-top: 1px solid var(--ui-line); padding-top: 10px; margin-top: auto; display: grid; gap: 8px; font: 12px/1.5 var(--ui-font); }
+html.demo-frame .demo-performance :is(output,dd,strong,.ui-number) { font: 12px/1.5 var(--ui-mono); font-variant-numeric: tabular-nums; }
+html.demo-frame .demo-performance dl { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 10px; margin: 0; }
+html.demo-frame .demo-performance :is(dt,dd) { margin: 0; min-width: 0; }
+html.demo-frame .demo-performance dt { color: var(--ui-muted); }
+html.demo-frame .demo-controls :is(p,ol) { margin: 0; padding: 0; }
+html.demo-frame .demo-controls ol { list-style-position: inside; }
+html.demo-frame .demo-controls :is(p,span,strong,output,label,h2,dt,dd,legend,small,li) { text-shadow: none; letter-spacing: normal; }
+html.demo-frame .demo-controls :is(.legend, small, .eyebrow, #equation, #history, #status) { color: var(--ui-muted); font-size: 12px; }
+html.demo-frame .demo-controls :is(canvas#map, canvas#wall-map, canvas#chunks) {
+  position: static; display: block; width: min(100%, 240px) !important; height: auto; transform: none; margin: 0;
+}
+html.demo-frame #labels { display: grid; gap: 4px; }
+html.demo-frame #labels .label { position: static; transform: none; white-space: normal; font: 12px/1.5 var(--ui-font); }
+html.demo-frame .demo-controls .model-library { display: block; }
+html.demo-frame #model-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; max-height: none; overflow: visible; }
+html.demo-frame #model-list button { margin: 0; height: auto; min-height: 30px; padding: 6px; }
+html.demo-frame #model-list .asset-stats { display: none; }
+html.demo-frame #model-list :is(strong,small) { font: 12px/1.4 var(--ui-font); overflow-wrap: anywhere; }
+html.demo-frame .demo-controls :is(#reaction,#speed) { font-size: 14px; }
+html.demo-frame .demo-controls :is(#telemetry,#status) { position: static; transform: none; width: auto; max-width: none; }
+html.demo-frame .demo-controls :is(.scores,.bar,.health-track) { width: 100%; }
+html.demo-frame .demo-controls .stats { display: grid; grid-template-columns: 1fr; gap: 3px; }
+html.demo-frame .demo-controls .stats > div { display: flex; justify-content: space-between; }
+html.demo-frame .demo-controls .scale { display: flex; gap: 6px; font-size: 10px; }
+html.demo-frame [data-demo-hint] {
+  position: static !important; inset: auto !important; transform: none !important;
+  display: block; width: auto !important; max-width: none; margin: 6px 0 0 !important;
+  padding: 0 !important; border: 0 !important; border-radius: 0 !important;
+  background: transparent !important; box-shadow: none !important; text-align: left;
+  color: var(--ui-muted) !important; font: 12px/1.5 var(--ui-font); white-space: nowrap;
+}
+html.demo-frame [data-demo-hint] * { color: inherit; }
+html.demo-frame .demo-controls button:hover { background: color-mix(in srgb, var(--ui-link) 10%, var(--ui-panel)); }
+html.demo-frame .demo-controls #chunks { background: #26353C; }
+html[data-theme] button[aria-pressed="true"], html.demo-frame .demo-controls button[aria-pressed="true"] {
+  color: var(--ui-link); border-color: var(--ui-link); background: color-mix(in srgb, var(--ui-link) 12%, var(--ui-panel));
+}
+@media (max-width: 759px) {
+  html.demo-frame .demo-frame-layout { grid-template-columns: minmax(0, 1fr); }
+  html.demo-frame .demo-controls { min-width: 0; max-height: none; overflow: visible; }
+  .demo-parameters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  html.demo-frame .demo-parameters > [data-demo-control] { grid-column: 1 / -1; }
+}
+
+html.demo-frame .demo-controls :is(button, select, input) { margin: 0; accent-color: var(--ui-link); }
+html.demo-frame .demo-controls label { padding: 0; }
+html.demo-frame .demo-controls label output { color: var(--ui-muted); }
+html.demo-frame .demo-controls [data-demo-readout] { text-shadow: none; }
+html.demo-frame .demo-controls .demo-metrics { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 12px; }
+html.demo-frame .demo-controls .demo-metrics dt { color: var(--ui-muted); font-family: var(--ui-font); }
+
+html.demo-frame .demo-controls #species { width: 78%; }
+
+/* Long host explanations yield to the picture and its one-line input hint. */
+html.demo-frame [data-demo-note] { display: none !important; }

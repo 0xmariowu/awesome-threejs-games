@@ -1,0 +1,1 @@
+function e(){return typeof window>`u`?Promise.resolve():new Promise(e=>{window.requestAnimationFrame(()=>{window.requestAnimationFrame(()=>{e()})})})}export{e as t};

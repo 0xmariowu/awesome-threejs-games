@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="color-scheme" content="dark" />
+    <title>Arkenfall</title>
+    <meta name="description" content="Arkenfall is an open world action game that runs in your browser. Mend the Frayed Vale, fight the Unravelled and climb the Loomspire." />
+    <meta name="theme-color" content="#141823" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./icon-192.png" sizes="192x192" type="image/png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Arkenfall" />
+    <meta property="og:title" content="Arkenfall" />
+    <meta property="og:description" content="An open world action game in your browser. Mend the Frayed Vale, fight the Unravelled and climb the Loomspire." />
+    <meta property="og:image" content="./og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sunset over the Salt Teeth sea stacks in Arkenfall" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arkenfall" />
+    <meta name="twitter:description" content="An open world action game in your browser. Mend the Frayed Vale, fight the Unravelled and climb the Loomspire." />
+    <meta name="twitter:image" content="./og.png" />
+    <style>@font-face{font-family:Arkenfall Display;font-style:normal;font-weight:100 900;font-display:swap;src:url(./assets/fraunces-latin-full-normal-CFFu7zhK.woff2)format("woff2-variations")}@font-face{font-family:Arkenfall Sans;font-style:normal;font-weight:200 800;font-display:swap;src:url(./assets/manrope-latin-wght-normal-DHIcAJRg.woff2)format("woff2-variations")}:root{--lightningcss-light: ;--lightningcss-dark:initial;color-scheme:dark}html,body{background:#0b0e16;height:100%;margin:0;overflow:hidden}#app{position:fixed;inset:0}#app canvas{width:100%;height:100%;display:block}#ui-root{pointer-events:none;z-index:10;position:fixed;inset:0}#loading{--s:max(.74px, min(calc(100vw / 1920), calc(100vh / 1080)));--mx:max(20px, calc(118 * var(--s)));--mt:max(20px, calc(76 * var(--s)));--mb:max(22px, calc(64 * var(--s)));--ch:max(4px, calc(5 * var(--s)));--ink:7, 9, 16;--ease:cubic-bezier(.22, .8, .26, 1);z-index:100;pointer-events:none;color:#f2ece0;-webkit-font-smoothing:antialiased;background:#0b0e16;font-family:Arkenfall Sans,system-ui,Segoe UI,sans-serif;position:fixed;inset:0;overflow:hidden}#loading.handoff{z-index:5}#loading.leaving{opacity:0;transition:opacity var(--leave,.9s) cubic-bezier(.45, 0, .3, 1)}.ls-base{filter:blur(9px)brightness(.4)saturate(1.1);background:#151b27 url(data:image/webp;base64,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) 40% 58%/cover;animation:1.2s both ls-fade;position:absolute;inset:-3%}.ls-art{transform:translate3d(var(--px,0px), var(--py,0px), 0);transition:transform 1.6s var(--ease);position:absolute;inset:-1.5%}.ls-s{opacity:0;position:absolute;inset:0}.ls-s .kb{transform-origin:var(--fx) var(--fy);will-change:transform;position:absolute;inset:0}.ls-s img{object-fit:cover;object-position:var(--fx) var(--fy);width:100%;height:100%;display:block}.ls-s0{transition:opacity 1.8s cubic-bezier(.33,0,.2,1)}.art-in .ls-s0,html:not(.js) .ls-s0{opacity:1}@media (min-aspect-ratio:17/9){.ls-s img{object-position:var(--fx) 100%}.ls-s .kb{transform-origin:var(--fx) 100%}.ls-base{background-position:40% 100%}}.ls-shade{background:radial-gradient(calc(760 * var(--s)) calc(300 * var(--s)) at calc(var(--mx) + 150 * var(--s)) calc(var(--mt) + 14 * var(--s)), rgba(var(--ink), .64) 0%, rgba(var(--ink), .4) 38%, rgba(var(--ink), .14) 70%, rgba(var(--ink), 0) 100%), linear-gradient(0deg, rgba(var(--ink), .76) 0%, rgba(var(--ink), .46) 10%, rgba(var(--ink), .15) 22%, rgba(var(--ink), 0) 32%), radial-gradient(140% 110% at 50% 42%, rgba(var(--ink), 0) 58%, rgba(var(--ink), .34) 100%), linear-gradient(rgba(var(--ink), .08), rgba(var(--ink), .08));transition:opacity 1.5s;position:absolute;inset:0}.ls-mark{left:var(--mx);top:var(--mt);align-items:center;gap:max(11px, calc(15 * var(--s)));display:flex;position:absolute}.ls-knot{width:max(22px, calc(32 * var(--s)));height:max(22px, calc(32 * var(--s)));filter:drop-shadow(0 0 6px rgba(var(--ink), .6));animation:ls-knot 1.8s var(--ease) .15s both;flex:none;overflow:visible}.ls-knot path{fill:none;stroke:#ffb347;stroke-width:1.8px;stroke-linecap:round;stroke-linejoin:round}.ls-wm{font:400 max(20px, calc(29 * var(--s)))/1 "Arkenfall Display", Georgia, serif;font-variation-settings:"SOFT" 100, "WONK" 1;letter-spacing:.34em;color:#f2ece0;text-shadow:0 1px 2px rgba(var(--ink), .45), 0 1px 18px rgba(var(--ink), .6);margin:0 -.34em 0 0;padding-top:.1em}.ls-foot{left:var(--mx);right:var(--mx);bottom:calc(var(--mb) + env(safe-area-inset-bottom,0px));position:absolute}.ls-row{margin-bottom:max(13px, calc(19 * var(--s)));justify-content:space-between;align-items:flex-end;gap:32px;display:flex}.ls-tipbox{align-items:center;gap:max(12px, calc(16 * var(--s)));flex:auto;min-width:0;display:flex}.ls-tipbox:before{content:"";width:max(20px, calc(30 * var(--s)));background:linear-gradient(90deg,#ffb34700,#ffb347);flex:none;height:1px}.ls-tips,.ls-tipset{flex:auto;min-width:0;display:grid}.ls-tips>*,.ls-tipset p{grid-area:1/1}.ls-tips p{opacity:0;white-space:nowrap;text-overflow:ellipsis;font:500 max(14px, calc(19 * var(--s)))/1.4 "Arkenfall Sans", system-ui, "Segoe UI", sans-serif;letter-spacing:.005em;color:#f2ece0eb;text-shadow:0 1px 2px rgba(var(--ink), .4), 0 1px 14px rgba(var(--ink), .6);margin:0;overflow:hidden}.ls-tipset p.on,html:not(.js) .ls-tipset p:first-child{opacity:1}.ls-tipset,.ls-slow{transition:opacity .5s}.slow .ls-tipset{opacity:0}.slow .ls-slow{opacity:1;transition:opacity .8s .5s}html.js #loading:not(.live) .ls-tipset{animation:.5s 20s both ls-out}html.js #loading:not(.live) .ls-slow{animation:.8s 20.5s both ls-fade}.ls-pct{height:1.15em;margin-bottom:max(2px, calc(3.4 * var(--s)));font:600 max(12px, calc(15 * var(--s)))/1.15 "Arkenfall Sans", system-ui, "Segoe UI", sans-serif;font-variant-numeric:tabular-nums;letter-spacing:.04em;color:#f2ece0d1;text-shadow:0 1px 2px rgba(var(--ink), .4), 0 1px 12px rgba(var(--ink), .65);flex:none;align-items:flex-end;display:inline-flex}.ls-pct .col{height:1.15em;display:inline-block;overflow:hidden}.ls-pct .col b{font-weight:inherit;will-change:transform;display:block}.ls-pct .col i{height:1.15em;font-style:normal;display:block}.ls-pct .u b{animation:6s step-end both ls-pre-u}.ls-pct .full,.done .ls-pct .col{display:none}.done .ls-pct .full{display:inline}.ls-line{height:var(--ch);animation:.9s .1s both ls-fade;position:relative}.ls-line:before{content:"";height:1px;box-shadow:0 0 0 1px rgba(var(--ink), .2), 0 0 8px 1px rgba(var(--ink), .3);background:#f2ece042;margin-top:-.5px;position:absolute;top:50%;left:0;right:0}.ls-fill{animation:6s linear both ls-pre-f;position:absolute;inset:0;overflow:hidden;transform:translate(-100%)}.ls-ctr{animation:6s linear both ls-pre-c;position:absolute;inset:0;transform:translate(100%);-webkit-mask-image:linear-gradient(90deg,#0000,#000 min(9%,150px));mask-image:linear-gradient(90deg,#0000,#000 min(9%,150px))}.ls-cord{top:0;left:calc(-2 * var(--ch));width:calc(100% + 2 * var(--ch));height:100%;animation:1.8s linear infinite ls-twist;display:block;position:absolute}.ls-head{animation:6s linear both ls-pre-h;position:absolute;inset:0;transform:translate(0%)}.ls-head:before{content:"";width:max(56px, calc(96 * var(--s)));background:linear-gradient(90deg,#ffd6a000,#ffe8c4cc);height:2px;margin:-1px -2px 0 0;position:absolute;top:50%;right:100%}.ls-head i{width:max(5px, calc(7 * var(--s)));height:max(5px, calc(7 * var(--s)));box-shadow:0 0 calc(8 * var(--s)) calc(2 * var(--s)) #ffb347e6, 0 0 calc(24 * var(--s)) calc(6 * var(--s)) #ff822d4d;background:#fff4e2;border-radius:50%;animation:1.6s ease-in-out infinite alternate ls-pulse;position:absolute;top:50%;left:0;transform:translate(-50%,-50%)}.ls-fray{width:max(16px, calc(26 * var(--s)));height:max(12px, calc(20 * var(--s)));opacity:0;position:absolute;top:50%;left:0;overflow:visible;transform:translate(-1px,-50%)}.done .ls-head{opacity:0;transition:opacity .8s .3s}.done .ls-cord,.done .ls-head i{animation-play-state:paused}.ls-fail{display:none}.ls-sr{clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;margin:-1px;position:absolute;overflow:hidden}.js .ls-ui{opacity:0}.type-in .ls-wm{opacity:1;transition:opacity 1.4s .2s}.type-in .ls-row{opacity:1;transition:opacity 1.2s .45s}.ls-err{pointer-events:auto}.ls-err .ls-wm,.ls-err .ls-row{opacity:1}.ls-err .ls-art{filter:brightness(.7)saturate(.7);transition:filter 1.2s}.ls-err .ls-fill,.ls-err .ls-ctr,.ls-err .ls-head,.ls-err .ls-pct b{animation-play-state:paused}.ls-err .ls-line:before{background:#c4484a80}.ls-err .ls-cord{filter:saturate(.35)brightness(.75);transition:filter .8s;animation-play-state:paused}.ls-err .ls-head:before,.ls-err .ls-head i,.ls-err .ls-tipbox,.ls-err .ls-pct{display:none}.ls-err .ls-fray{opacity:1;transition:opacity .6s}.ls-err .ls-fail{flex:1;justify-content:space-between;align-items:flex-end;gap:24px;animation:.6s both ls-fade;display:flex}.ls-fail h2{margin:0 0 max(6px, calc(8 * var(--s)));font:400 max(20px, calc(28 * var(--s)))/1.15 "Arkenfall Display", Georgia, serif;font-variation-settings:"SOFT" 100, "WONK" 1;color:#f2ece0;text-shadow:0 1px 16px rgba(var(--ink), .6)}.ls-fail p{font:500 max(14px, calc(17 * var(--s)))/1.45 "Arkenfall Sans", system-ui, "Segoe UI", sans-serif;color:#f2ece0cc;text-shadow:0 1px 12px rgba(var(--ink), .6);margin:0}.ls-fail button{cursor:pointer;min-height:44px;padding:max(10px, calc(13 * var(--s))) max(22px, calc(30 * var(--s)));font:600 max(13px, calc(15 * var(--s)))/1 "Arkenfall Sans", system-ui, "Segoe UI", sans-serif;letter-spacing:.06em;color:#f2ece0;background:#0e121c6b;border:1px solid #f2ece06b;border-radius:999px;flex:none;transition:background-color .25s,border-color .25s}.ls-fail button:hover,.ls-fail button:focus-visible{background:#f2ece024;border-color:#f2ece0cc;outline:none}.handoff .ls-mark{opacity:0;transition:opacity .4s cubic-bezier(.2,.6,.4,1)}.handoff .ls-foot{opacity:0;visibility:hidden;transition:opacity .6s,visibility 0s .6s}.handoff .ls-shade{opacity:.35}@keyframes ls-fade{0%{opacity:0}to{opacity:1}}@keyframes ls-knot{0%{opacity:0;transform:rotate(-40deg)scale(.86)}55%{opacity:1}to{opacity:1;transform:none}}@keyframes ls-pre-f{0%{transform:translate(-100%)}13.333%{transform:translate(-95.5%)}25%{transform:translate(-94.4%)}50%{transform:translate(-93.6%)}to{transform:translate(-93%)}}@keyframes ls-pre-c{0%{transform:translate(100%)}13.333%{transform:translate(95.5%)}25%{transform:translate(94.4%)}50%{transform:translate(93.6%)}to{transform:translate(93%)}}@keyframes ls-pre-h{0%{transform:translate(0%)}13.333%{transform:translate(4.5%)}25%{transform:translate(5.6%)}50%{transform:translate(6.4%)}to{transform:translate(7%)}}@keyframes ls-pre-u{0%{transform:translateY(0%)}2.963%{transform:translateY(-10%)}5.926%{transform:translateY(-20%)}8.889%{transform:translateY(-30%)}11.852%{transform:translateY(-40%)}18.636%{transform:translateY(-50%)}37.5%{transform:translateY(-60%)}to{transform:translateY(-70%)}}@keyframes ls-out{0%{opacity:1}to{opacity:0}}@keyframes ls-twist{0%{transform:translate(0)}to{transform:translateX(calc(2 * var(--ch)))}}@keyframes ls-pulse{0%{opacity:.6}to{opacity:1}}@media (max-width:700px){#loading{--mx:22px;--mt:26px;--mb:30px}.ls-mark{gap:10px}.ls-knot{width:20px;height:20px}.ls-wm{letter-spacing:.3em;margin-right:-.3em;font-size:17px}.ls-row{gap:20px;margin-bottom:13px}.ls-tipbox{align-items:flex-start}.ls-tipbox:before{width:16px;margin-top:.72em}.ls-tips p{white-space:normal;-webkit-line-clamp:2;text-wrap:pretty;-webkit-box-orient:vertical;font-size:14px;line-height:1.45;display:-webkit-box}.ls-pct{font-size:12px}.ls-err .ls-fail{flex-direction:column;align-items:flex-start;gap:16px}}@media (max-width:359px){.ls-tips p{-webkit-line-clamp:3;font-size:13px}}@media (max-height:480px) and (orientation:landscape){#loading{--mt:16px;--mb:16px}#loading:not(.slow) .ls-tipbox{visibility:hidden}}@media (prefers-reduced-motion:reduce){.ls-art{transition:none}.ls-knot{animation-name:ls-fade}.ls-cord,.ls-head i{animation:none}}</style>
+    <script>document.documentElement.classList.add('js');</script>
+    <script type="module" crossorigin src="./assets/index-CycyvIDp.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="ui-root"></div>
+    <div id="loading" aria-busy="true">
+      <div class="ls-base" aria-hidden="true"></div>
+      <div class="ls-art" aria-hidden="true">
+        <div class="ls-s ls-s0" style="--fx:40%;--fy:58%"><div class="kb"><img src="./loading/art-03.webp" alt="" fetchpriority="high" decoding="async" /></div></div>
+      </div>
+      <div class="ls-shade" aria-hidden="true"></div>
+      <div class="ls-mark">
+        <svg class="ls-knot" viewBox="-14 -14 28 28" aria-hidden="true"><path d="M0,-3L0.7,-3L1.4,-3L2.1,-2.9L2.8,-2.8L3.4,-2.6L4.1,-2.4L4.7,-2.2L5.3,-2L5.9,-1.7L6.5,-1.4L7.1,-1.1L7.6,-0.7L8.1,-0.4L8.5,0L8.9,0.4L9.3,0.8L9.7,1.3L10,1.7L10.2,2.2L10.4,2.6L10.6,3.1L10.8,3.6L10.9,4L10.9,4.5L10.9,4.9L10.9,5.4L10.8,5.8L10.7,6.2L10.6,6.6L10.4,7L10.2,7.3L9.9,7.6L9.6,7.9L9.3,8.2L8.9,8.5L8.5,8.7L8.1,8.8L7.6,9L7.2,9.1L6.7,9.2L6.2,9.2L5.6,9.2L5.1,9.2L4.6,9.1L4,9M-3.1,3.6L-3.5,3L-3.8,2.3L-4.1,1.7L-4.4,1.1L-4.6,0.4L-4.8,-0.2L-5,-0.9L-5.1,-1.5L-5.2,-2.2L-5.3,-2.8L-5.3,-3.5L-5.3,-4.1L-5.3,-4.7L-5.2,-5.4L-5.1,-5.9L-4.9,-6.5L-4.8,-7L-4.6,-7.6L-4.3,-8L-4.1,-8.5L-3.8,-8.9L-3.5,-9.3L-3.1,-9.7L-2.8,-10L-2.4,-10.3L-2,-10.5L-1.6,-10.7L-1.2,-10.8L-0.8,-11L-0.4,-11L0,-11L0.4,-11L0.8,-11L1.2,-10.8L1.6,-10.7L2,-10.5L2.4,-10.3L2.8,-10L3.1,-9.7L3.5,-9.3L3.8,-8.9L4.1,-8.5L4.3,-8L4.6,-7.6L4.8,-7L4.9,-6.5M3.8,2.3L3.5,3L3.1,3.6L2.7,4.1L2.3,4.7L1.8,5.2L1.4,5.7L0.9,6.2L0.4,6.6L-0.1,7.1L-0.7,7.4L-1.2,7.8L-1.8,8.1L-2.3,8.4L-2.9,8.6L-3.4,8.8L-4,9L-4.6,9.1L-5.1,9.2L-5.6,9.2L-6.2,9.2L-6.7,9.2L-7.2,9.1L-7.6,9L-8.1,8.8L-8.5,8.7L-8.9,8.5L-9.3,8.2L-9.6,7.9L-9.9,7.6L-10.2,7.3L-10.4,7L-10.6,6.6L-10.7,6.2L-10.8,5.8L-10.9,5.4L-10.9,4.9L-10.9,4.5L-10.9,4L-10.8,3.6L-10.6,3.1L-10.4,2.6L-10.2,2.2L-10,1.7L-9.7,1.3L-9.3,0.8L-8.9,0.4M-0.7,-3L0,-3" /></svg>
+        <h1 class="ls-wm ls-ui" aria-label="Arkenfall">ARKENFALL</h1>
+      </div>
+      <div class="ls-foot">
+        <div class="ls-row ls-ui">
+          <div class="ls-tipbox" aria-hidden="true">
+            <div class="ls-tips"><div class="ls-tipset">
+              <p>Rethread a waystone and it will carry you back along its thread.</p>
+              <p>A dodge in the last instant of a blow stitches time slow.</p>
+              <p>Knotguards raise a woven shield. A heavy cleave pulls it aside.</p>
+              <p>The Loomspire marks north. Every road in the Vale remembers it.</p>
+              <p>Each blow winds the spindle. Full, it unravels everything near you.</p>
+              <p>Emberpods burst when struck. Let the Unravelled walk into the flame.</p>
+              <p>A Loomhulk carries its ember knot on its back. Circle it.</p>
+              <p>Parry just before the blow lands, then strike while they reel.</p>
+              <p>Shuttlewings hover out of reach until the Lash drags them down.</p>
+              <p>Kettle Ford hangs its cloth so the wind has something to hold.</p>
+            </div><p class="ls-slow">This is taking longer than usual</p></div>
+          </div>
+          <div class="ls-pct" aria-hidden="true"><span class="col t"><b><i>&nbsp;</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></b></span><span class="col u"><b><i>0</i><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i><i>6</i><i>7</i><i>8</i><i>9</i></b></span><span class="full">100</span><span>%</span></div>
+          <div class="ls-fail" role="alert">
+            <div><h2>Arkenfall could not start</h2><p>Something went wrong while starting. Reload to try again.</p></div>
+            <button type="button" onclick="location.reload()">Reload</button>
+          </div>
+        </div>
+        <div class="ls-line" role="progressbar" aria-label="Loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="ls-fill"><div class="ls-ctr">
+            <svg class="ls-cord" viewBox="0 0 8000 8" preserveAspectRatio="xMinYMid slice" aria-hidden="true">
+              <defs><pattern id="ls-ply" width="16" height="8" patternUnits="userSpaceOnUse"><g fill="none" stroke-width="2.3">
+                <path d="M4,6C6.91,6 9.09,2 12,2" stroke="#b06a2e" /><path d="M-4,6C-1.09,6 1.09,2 4,2M12,6C14.91,6 17.09,2 20,2" stroke="#7c2c30" />
+                <path d="M-4,2C-1.09,2 1.09,6 4,6M12,2C14.91,2 17.09,6 20,6M4,2C6.91,2 9.09,6 12,6" stroke="rgba(18,10,10,0.5)" stroke-width="3.1" />
+                <path d="M-4,2C-1.09,2 1.09,6 4,6M12,2C14.91,2 17.09,6 20,6" stroke="#ffb347" /><path d="M4,2C6.91,2 9.09,6 12,6" stroke="#d24c42" />
+              </g></pattern></defs>
+              <rect width="8000" height="8" fill="url(#ls-ply)" />
+            </svg>
+          </div></div>
+          <div class="ls-head"><i></i>
+            <svg class="ls-fray" viewBox="0 -10 26 20" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-width="1.1">
+              <path d="M0,-1C4,-2 7,-1 9,2S12,7 11,9.5" stroke="rgba(255,179,71,0.75)" /><path d="M0,1C4,2 6,4 7,8" stroke="rgba(210,76,66,0.8)" />
+              <path d="M0,0C5,-1 9,-2 13,-1S17,3 19,4" stroke="rgba(242,226,200,0.45)" /><path d="M0,-1C3,-3 5,-6 5,-8" stroke="rgba(255,179,71,0.5)" />
+              <path d="M0,0C5,0 9,2 12,5S15,10 14,11" stroke="rgba(210,76,66,0.6)" />
+            </g></svg>
+          </div>
+        </div>
+      </div>
+      <p class="ls-sr" aria-live="polite">Loading</p>
+    </div>
+    <script>
+      // Reveal + key-art rotation. The page shows the painting in shadow, the knot and the line until the first
+      // image is decoded and both fonts are in, then art and type come up together (after 2.2 s each part as soon
+      // as it is ready; type after 6 s even without its fonts). Later paintings are fetched one at a time 7 s
+      // before their turn at low priority, so they never compete with the engine's download. Each crossfade, its
+      // push-in and its tip change are scheduled ahead as WAAPI animations with one start time, so they land on
+      // time and together while the main thread is busy building the world. Until the main script takes over
+      // (src/ui/loading.ts adds .live), this also shows the failure state if that script cannot load.
+      (function () {
+        // both fonts start here, with the image (a font preload, or loading them from the head, holds back the
+        // first frame by about 100 ms)
+        var fontOk = Promise.all([document.fonts.load('400 1em "Arkenfall Display"'), document.fonts.load('500 1em "Arkenfall Sans"')]).catch(function () {});
+        var L = document.getElementById('loading');
+        var still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // the main script failed to load (or to run within 20 s): stop the rotation, offer a reload. A late
+        // script still takes over (loading.ts clears the state).
+        function fail() {
+          if (L.classList.contains('live') || !L.isConnected) return;
+          L.classList.add('ls-err', 'settled');
+          L.setAttribute('aria-busy', 'false');
+          // (the push-ins and crossfades, not the transitions that dim the art)
+          L.querySelector('.ls-art').getAnimations({ subtree: true }).forEach(function (a) { if (!a.transitionProperty) a.pause(); });
+          L.querySelector('.ls-fail button').focus({ preventScroll: true });
+        }
+        addEventListener('error', function (e) { var t = e.target; if (t && t.tagName === 'SCRIPT' && t.type === 'module') fail(); }, true);
+        setTimeout(fail, 20000);
+        // the first painting holds 15 s (a whole first visit, usually), then 10 s each
+        var FIRST = 15000, HOLD = 10000, FADE = 2600, LEAD = 7000, LIFE = FADE * 2 + HOLD;
+        // [file, hero x %, hero y %]: the push-in closes on the Mender, who stays put while the world grows
+        var ART = [['03', 40, 58], ['07', 44, 62], ['04', 40, 55], ['10', 28, 68], ['08', 30, 55], ['11', 38, 62], ['05', 38, 50], ['02', 28, 68], ['09', 45, 65], ['06', 30, 45]];
+        // a gentler push where the art is already enlarged a lot (large or dense screens), so it never goes soft
+        var up = Math.max(innerWidth / 1672, innerHeight / 941) * (window.devicePixelRatio || 1);
+        var PUSH = still ? 0 : up > 1.45 ? 0.05 : up > 1.2 ? 0.065 : 0.08;
+        function run(el, kf, o, at) { var a = el.animate(kf, o); a.startTime = at; return a; }
+        function scale(k) { return { transform: 'scale(' + k + ')' }; }
+
+        // tips: a random one first, then each changes with its painting (out, then in: never two at once)
+        var tips = L.querySelectorAll('.ls-tipset p'), tip = Math.floor(Math.random() * tips.length);
+        tips[tip].className = 'on';
+        function nextTip(delay, at) {
+          var a = tips[tip], b = tips[tip = (tip + 1) % tips.length];
+          run(a, [{ opacity: 1 }, { opacity: 0 }], { duration: 700, delay: delay + 500, easing: 'ease-in', fill: 'forwards' }, at);
+          run(b, [{ opacity: 0 }, { opacity: 1 }], { duration: 1000, delay: delay + 1300, easing: 'ease-out', fill: 'forwards' }, at);
+        }
+
+        var base = L.querySelector('.ls-s0'), img = base.querySelector('img'), stage = base.parentNode, top = base;
+        var imgOk = new Promise(function (res) {
+          if (img.complete) res(); else { img.addEventListener('load', res); img.addEventListener('error', res); }
+        }).then(function () { return img.naturalWidth ? img.decode().catch(function () {}) : 0; });
+        // never before a first frame is on screen, so the fade always starts from the painting in shadow
+        var painted = new Promise(function (r) { requestAnimationFrame(function () { requestAnimationFrame(r); }); });
+        var artAt = 0;
+        function showArt() {
+          if (artAt) return;
+          artAt = performance.now();
+          L.classList.add('art-in');
+          // the opening painting stays for the hand-off: after its turn its push eases to a stop at the same
+          // scale as the others
+          if (PUSH && !L.classList.contains('settled')) run(base.firstElementChild, [scale(1), { transform: 'scale(' + (1 + PUSH * 0.94) + ')', offset: (FIRST + FADE) / (FIRST + FADE + 5000), easing: 'cubic-bezier(0.15, 0.67, 0.35, 1)' }, scale(1 + PUSH)],
+            { duration: FIRST + FADE + 5000, fill: 'both' }, artAt);
+          plan(1, artAt + FIRST);
+          // once the painting is fully up, the blurred stand-in underneath stops costing a composited layer
+          var fade = base.getAnimations()[0];
+          (fade ? fade.finished : Promise.resolve()).then(function () { if (img.naturalWidth) L.querySelector('.ls-base').style.visibility = 'hidden'; }, function () {});
+        }
+        function showType() { L.classList.add('type-in'); }
+        Promise.all([imgOk, fontOk, painted]).then(function () { showArt(); showType(); });
+        setTimeout(function () { imgOk.then(showArt); fontOk.then(showType); }, 2200);
+        setTimeout(showType, 6000);
+
+        function plan(k, at) { setTimeout(function () { fetchSlide(k, at); }, Math.max(0, at - LEAD - performance.now())); }
+        function fetchSlide(k, at) {
+          if (L.classList.contains('settled') || !L.isConnected) return;
+          var a = ART[k], im = new Image(), next = k + 1 < ART.length ? k + 1 : 1;
+          im.alt = ''; im.decoding = 'async'; im.fetchPriority = 'low';
+          im.src = 'loading/art-' + a[0] + '.webp';
+          im.decode().then(function () {
+            if (L.classList.contains('settled') || !L.isConnected) return;
+            var s = document.createElement('div'), kb = document.createElement('div');
+            s.className = 'ls-s'; s.style.cssText = '--fx:' + a[1] + '%;--fy:' + a[2] + '%';
+            kb.className = 'kb'; kb.appendChild(im); s.appendChild(kb); stage.appendChild(s);
+            var now = performance.now(), start = Math.max(now + 80, at), delay = start - now;
+            run(s, [{ opacity: 0 }, { opacity: 1 }], { duration: FADE, delay: delay, easing: 'cubic-bezier(0.45, 0, 0.3, 1)', fill: 'both' }, now);
+            if (PUSH) run(kb, [scale(1), scale(1 + PUSH)], { duration: LIFE, delay: delay, fill: 'both' }, now);
+            nextTip(delay, now);
+            // the slide underneath is retired once covered (the opening painting stays for the hand-off)
+            var under = top; top = s;
+            setTimeout(function () { if (under !== base) under.remove(); }, delay + FADE + 300);
+            plan(next, start + HOLD);
+          }, function () { plan(next, at + HOLD); });
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,470 @@
+{
+ "vertexCount": 27239,
+ "indexCount": 162630,
+ "pieces": [
+  {
+   "id": "rock_moss_set_01_0",
+   "source": "rock_moss_set_01",
+   "dims": [
+    0.6642215016720525,
+    0.43715750330180075,
+    1
+   ],
+   "lods": [
+    {
+     "vOff": 0,
+     "vCount": 1302,
+     "iOff": 0,
+     "iCount": 7800
+    },
+    {
+     "vOff": 1302,
+     "vCount": 322,
+     "iOff": 7800,
+     "iCount": 1920
+    },
+    {
+     "vOff": 1624,
+     "vCount": 77,
+     "iOff": 9720,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_01_1",
+   "source": "rock_moss_set_01",
+   "dims": [
+    0.8136054947041375,
+    0.3866725763842164,
+    1
+   ],
+   "lods": [
+    {
+     "vOff": 1701,
+     "vCount": 1283,
+     "iOff": 10170,
+     "iCount": 7740
+    },
+    {
+     "vOff": 2984,
+     "vCount": 322,
+     "iOff": 17910,
+     "iCount": 1920
+    },
+    {
+     "vOff": 3306,
+     "vCount": 77,
+     "iOff": 19830,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_01_2",
+   "source": "rock_moss_set_01",
+   "dims": [
+    1,
+    0.5215325757380453,
+    0.9862481337705997
+   ],
+   "lods": [
+    {
+     "vOff": 3383,
+     "vCount": 1301,
+     "iOff": 20280,
+     "iCount": 7800
+    },
+    {
+     "vOff": 4684,
+     "vCount": 322,
+     "iOff": 28080,
+     "iCount": 1920
+    },
+    {
+     "vOff": 5006,
+     "vCount": 77,
+     "iOff": 30000,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_01_3",
+   "source": "rock_moss_set_01",
+   "dims": [
+    1,
+    0.8311221610582967,
+    0.9234415824249512
+   ],
+   "lods": [
+    {
+     "vOff": 5083,
+     "vCount": 1302,
+     "iOff": 30450,
+     "iCount": 7800
+    },
+    {
+     "vOff": 6385,
+     "vCount": 322,
+     "iOff": 38250,
+     "iCount": 1920
+    },
+    {
+     "vOff": 6707,
+     "vCount": 77,
+     "iOff": 40170,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_01_4",
+   "source": "rock_moss_set_01",
+   "dims": [
+    0.6060441550767461,
+    0.40199593983068554,
+    1
+   ],
+   "lods": [
+    {
+     "vOff": 6784,
+     "vCount": 1302,
+     "iOff": 40620,
+     "iCount": 7800
+    },
+    {
+     "vOff": 8086,
+     "vCount": 322,
+     "iOff": 48420,
+     "iCount": 1920
+    },
+    {
+     "vOff": 8408,
+     "vCount": 77,
+     "iOff": 50340,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_01_5",
+   "source": "rock_moss_set_01",
+   "dims": [
+    0.7710367971202686,
+    0.4576401749507727,
+    1
+   ],
+   "lods": [
+    {
+     "vOff": 8485,
+     "vCount": 1302,
+     "iOff": 50790,
+     "iCount": 7800
+    },
+    {
+     "vOff": 9787,
+     "vCount": 322,
+     "iOff": 58590,
+     "iCount": 1920
+    },
+    {
+     "vOff": 10109,
+     "vCount": 77,
+     "iOff": 60510,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_0",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.43824765740518673,
+    0.815402846856857
+   ],
+   "lods": [
+    {
+     "vOff": 10186,
+     "vCount": 1302,
+     "iOff": 60960,
+     "iCount": 7800
+    },
+    {
+     "vOff": 11488,
+     "vCount": 322,
+     "iOff": 68760,
+     "iCount": 1920
+    },
+    {
+     "vOff": 11810,
+     "vCount": 77,
+     "iOff": 70680,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_1",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.3743901529707655,
+    0.6209417567831718
+   ],
+   "lods": [
+    {
+     "vOff": 11887,
+     "vCount": 1302,
+     "iOff": 71130,
+     "iCount": 7800
+    },
+    {
+     "vOff": 13189,
+     "vCount": 322,
+     "iOff": 78930,
+     "iCount": 1920
+    },
+    {
+     "vOff": 13511,
+     "vCount": 77,
+     "iOff": 80850,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_2",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.4659612749686374,
+    0.9138388547081856
+   ],
+   "lods": [
+    {
+     "vOff": 13588,
+     "vCount": 1300,
+     "iOff": 81300,
+     "iCount": 7788
+    },
+    {
+     "vOff": 14888,
+     "vCount": 322,
+     "iOff": 89088,
+     "iCount": 1920
+    },
+    {
+     "vOff": 15210,
+     "vCount": 77,
+     "iOff": 91008,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_3",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.6007531927537684,
+    0.5442602877843087
+   ],
+   "lods": [
+    {
+     "vOff": 15287,
+     "vCount": 1302,
+     "iOff": 91458,
+     "iCount": 7800
+    },
+    {
+     "vOff": 16589,
+     "vCount": 322,
+     "iOff": 99258,
+     "iCount": 1920
+    },
+    {
+     "vOff": 16911,
+     "vCount": 77,
+     "iOff": 101178,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_4",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.3488336318313812,
+    0.7043530812747687
+   ],
+   "lods": [
+    {
+     "vOff": 16988,
+     "vCount": 1302,
+     "iOff": 101628,
+     "iCount": 7800
+    },
+    {
+     "vOff": 18290,
+     "vCount": 322,
+     "iOff": 109428,
+     "iCount": 1920
+    },
+    {
+     "vOff": 18612,
+     "vCount": 77,
+     "iOff": 111348,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_5",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.6707911983847515,
+    0.7825580685846013
+   ],
+   "lods": [
+    {
+     "vOff": 18689,
+     "vCount": 1302,
+     "iOff": 111798,
+     "iCount": 7800
+    },
+    {
+     "vOff": 19991,
+     "vCount": 322,
+     "iOff": 119598,
+     "iCount": 1920
+    },
+    {
+     "vOff": 20313,
+     "vCount": 77,
+     "iOff": 121518,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "rock_moss_set_02_6",
+   "source": "rock_moss_set_02",
+   "dims": [
+    1,
+    0.43992359183759117,
+    0.7177436133219134
+   ],
+   "lods": [
+    {
+     "vOff": 20390,
+     "vCount": 1302,
+     "iOff": 121968,
+     "iCount": 7800
+    },
+    {
+     "vOff": 21692,
+     "vCount": 322,
+     "iOff": 129768,
+     "iCount": 1920
+    },
+    {
+     "vOff": 22014,
+     "vCount": 77,
+     "iOff": 131688,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "boulder_01_0",
+   "source": "boulder_01",
+   "dims": [
+    0.695029128159898,
+    0.5484409181438022,
+    1
+   ],
+   "lods": [
+    {
+     "vOff": 22091,
+     "vCount": 1302,
+     "iOff": 132138,
+     "iCount": 7800
+    },
+    {
+     "vOff": 23393,
+     "vCount": 322,
+     "iOff": 139938,
+     "iCount": 1920
+    },
+    {
+     "vOff": 23715,
+     "vCount": 77,
+     "iOff": 141858,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "namaqualand_boulder_05_0",
+   "source": "namaqualand_boulder_05",
+   "dims": [
+    1,
+    0.39465511755090904,
+    0.5483596026295019
+   ],
+   "lods": [
+    {
+     "vOff": 23792,
+     "vCount": 1302,
+     "iOff": 142308,
+     "iCount": 7800
+    },
+    {
+     "vOff": 25094,
+     "vCount": 322,
+     "iOff": 150108,
+     "iCount": 1920
+    },
+    {
+     "vOff": 25416,
+     "vCount": 77,
+     "iOff": 152028,
+     "iCount": 450
+    }
+   ]
+  },
+  {
+   "id": "namaqualand_boulder_02_0",
+   "source": "namaqualand_boulder_02",
+   "dims": [
+    1,
+    0.3485735340870684,
+    0.48743822662323966
+   ],
+   "lods": [
+    {
+     "vOff": 25493,
+     "vCount": 1325,
+     "iOff": 152478,
+     "iCount": 7791
+    },
+    {
+     "vOff": 26818,
+     "vCount": 337,
+     "iOff": 160269,
+     "iCount": 1914
+    },
+    {
+     "vOff": 27155,
+     "vCount": 84,
+     "iOff": 162183,
+     "iCount": 447
+    }
+   ]
+  }
+ ]
+}

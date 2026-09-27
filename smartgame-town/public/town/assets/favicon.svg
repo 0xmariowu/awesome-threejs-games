@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fb4ff"/>
+      <stop offset="1" stop-color="#c9ecff"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#sky)"/>
+  <rect x="0" y="46" width="64" height="18" fill="#7ccb5e"/>
+  <rect x="6" y="30" width="16" height="18" rx="2" fill="#fff1d6"/>
+  <polygon points="4,31 14,21 24,31" fill="#e07a5f"/>
+  <rect x="42" y="28" width="18" height="20" rx="2" fill="#3a3f5c"/>
+  <rect x="45" y="32" width="12" height="3" rx="1.5" fill="#ff5c8a"/>
+  <rect x="24" y="24" width="16" height="15" rx="4" fill="#ffdcb8"/>
+  <rect x="23" y="20" width="18" height="7" rx="3" fill="#3ddc97"/>
+  <circle cx="29" cy="31" r="1.8" fill="#2a2330"/>
+  <circle cx="35" cy="31" r="1.8" fill="#2a2330"/>
+  <path d="M29 35 q3 2.5 6 0" stroke="#8b3a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <rect x="25" y="39" width="14" height="10" rx="2" fill="#118ab2"/>
+  <circle cx="40" cy="20" r="2.4" fill="#ff5c8a"/>
+</svg>

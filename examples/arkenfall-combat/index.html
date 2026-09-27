@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Arkenfall · Melee training</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">
+  {"imports":{
+    "./original/Game-BmRmdldn.js":"./src/game-shim.js",
+    "./original/cache-DIhMlTLC.js":"./src/cache-shim.js",
+    "./original/Settings-Xp8ACwpw.js":"./src/settings-shim.js",
+    "./original/material-Di0Yd9td.js":"./src/material-shim.js"
+  }}
+  </script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<div aria-label="Melee training scene" data-demo-picture="" id="world" tabindex="0"></div>
+<header class="ui-panel" data-demo-readout=""><output id="result">Left click to strike the training target</output></header>
+<nav aria-label="Training settings" class="ui-panel" data-demo-control="">
+<button aria-pressed="false" id="slow">Slow motion</button>
+<button aria-pressed="true" id="helpers">Swing trail</button>
+<button aria-pressed="false" id="practice">Parry practice</button>
+<button id="reset">Reset position</button>
+</nav>
+<section aria-label="Action timing windows" class="ui-panel" data-demo-readout="" id="timing">
+<div><span id="move">Idle</span><output id="counter">Hits 0</output></div>
+<div id="track"><span id="active"></span><span id="cancel"></span><i id="cursor"></i></div>
+<div class="legend"><span>Gold · Hit window</span><span>Cyan · Chain the next move</span></div>
+<output id="cue">Training target ready</output>
+</section>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="LMB · RMB · F" id="hint">Left click to combo · Hold right click to charge, release for a heavy attack · F to parry · Time incoming strikes in parry practice</p>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { font: 14px/1.5 system-ui, sans-serif; color: #254752; background: #c8e5e7; }
+#world, #labels { position: absolute; inset: 0; }
+#world { touch-action: none; outline: none; }
+canvas { display: block; }
+#labels { pointer-events: none; overflow: hidden; }
+.label { position: absolute; white-space: nowrap; transform: translate(-50%, -100%); font-size: 12px; padding: 2px 8px; border-radius: 3px; background: #faffffdf; border-bottom: 2px solid var(--state); }
+header, aside, footer, #status { position: absolute; z-index: 2; }
+header { top: 22px; left: 26px; pointer-events: none; }
+h1 { margin: 0; font-size: 24px; font-weight: 650; letter-spacing: .1em; }
+header p { margin: 5px 0; font-variant-numeric: tabular-nums; }
+aside { top: 25px; right: 26px; display: flex; gap: 6px; }
+button { font: inherit; color: inherit; border: 1px solid #779da5; border-radius: 4px; padding: 6px 11px; background: #f5ffffe6; cursor: pointer; }
+button[aria-pressed=true] { color: #fff; background: #315f68; }
+button:focus-visible { outline: 3px solid #e5a73a; outline-offset: 3px; }
+footer { bottom: 0; width: 100%; padding: 11px 16px; text-align: center; background: #f8ffffdf; font-size: clamp(10px, 1.2vw, 14px); }
+#status { left: 50%; bottom: 48px; transform: translateX(-50%); margin: 0; padding: 5px 14px; background: #f8ffffe8; border-radius: 4px; pointer-events: none; white-space: nowrap; }
+@media (max-width: 700px) { header { top: 12px; left: 14px; } h1 { font-size: 18px; } header p { font-size: 11px; } aside { top: 14px; right: 14px; gap: 3px; } button { font-size: 11px; padding: 5px 7px; } .label { font-size: 10px; } }

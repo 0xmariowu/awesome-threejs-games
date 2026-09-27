@@ -1,0 +1,76 @@
+{
+  "phase": "Unified library and first bounded extraction",
+  "status": "phase-1-delivered",
+  "counts": {
+    "original_projects": 15,
+    "source_analysis_candidates": 62,
+    "existing_lab_scenes": 45,
+    "independent_extractions": 1,
+    "archived_files_checked": 4242
+  },
+  "checks": [
+    {
+      "command": "node --test tools/library.test.mjs tools/server.test.mjs examples/tidewater-fishing/*.test.mjs",
+      "passed": true,
+      "tests": 12,
+      "evidence": "output/library-development-2026-09-26/verification.txt"
+    },
+    {
+      "command": "python3 -m unittest discover -s tools -p 'test_*.py'",
+      "passed": true,
+      "tests": 16
+    },
+    {
+      "cwd": "../webgame-lab",
+      "command": "npm run build && npm test -- --run",
+      "passed": true,
+      "tests": 169,
+      "note": "Existing chunk-size warnings remain. Only App clean-display condition was edited; prior dirty work preserved."
+    },
+    {
+      "cwd": "cloudkeep/upstream",
+      "command": "npm ci; npm test; npm run build",
+      "passed": true,
+      "tests": 37,
+      "note": "Original exploration release b28406d, no source edits. 68 tracked files pinned; 25 production files."
+    },
+    {
+      "command": "python3 output/library-development-2026-09-26/browser_check.py",
+      "passed": true,
+      "evidence": "output/library-development-2026-09-26/browser.json",
+      "scope": "Desktop/mobile library, search/filters/source/clipboard/download, one player across launches, original Cloudkeep exploration and save/Continue, existing cloudkeep-cam, fishing pointer/keyboard/pause/save/sell."
+    },
+    {
+      "command": "node tools/library-cli.mjs verify",
+      "passed": true,
+      "note": "No missing or stale registered source hashes."
+    },
+    {
+      "command": "python3 output/library-research-2026-09-26/verify_findings.py",
+      "passed": true,
+      "source_files_hashed": 99,
+      "cloudkeep_snapshot_files": 68
+    },
+    {
+      "command": "python3 tools/audit.py --all",
+      "passed": true,
+      "evidence": "output/library-development-2026-09-26/archive-audit.jsonl"
+    },
+    {
+      "command": "python3 tools/audit.py --all --runtime",
+      "passed": false,
+      "expected_open_issues": [
+        "Hanakawa startup/visual review",
+        "Moritsuki black minigame scenes"
+      ],
+      "evidence": "output/library-development-2026-09-26/runtime-audit.jsonl"
+    }
+  ],
+  "scope_limits": [
+    "62 source analyses are not 62 finished modules. The new fishing example covers two bounded source mechanisms.",
+    "Existing lab tests passed, but only cloudkeep-cam received a fresh browser launch check in this phase.",
+    "Missing original servers and historical fidelity/performance failures remain open.",
+    "No full-game or pixel-perfect certification.",
+    "Library players keep their opener relationship for window lifecycle; source reads and mutations enforce loopback Host, Origin and catalog scope, plus a launch token."
+  ]
+}

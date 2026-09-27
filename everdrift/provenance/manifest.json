@@ -1,0 +1,104 @@
+{
+  "source": "https://everdrift.iliareingold.com/",
+  "entry_path": "/index.html",
+  "files": [
+    {
+      "url": "https://everdrift.iliareingold.com/everdrift-8dd1a13e413c.audio.position.worklet.js",
+      "path": "everdrift-8dd1a13e413c.audio.position.worklet.js",
+      "bytes": 2973,
+      "sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+      "content_type": "text/javascript",
+      "local_sha256": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/everdrift-8dd1a13e413c.audio.worklet.js",
+      "path": "everdrift-8dd1a13e413c.audio.worklet.js",
+      "bytes": 7298,
+      "sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+      "content_type": "text/javascript",
+      "local_sha256": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/everdrift-8dd1a13e413c.js",
+      "path": "everdrift-8dd1a13e413c.js",
+      "bytes": 279815,
+      "sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c",
+      "content_type": "text/javascript",
+      "local_sha256": "68586d6daafc93c6e697b3fb258976874aa7459b8931165ebb1dc3c9614cc42c"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/everdrift-8dd1a13e413c.pck",
+      "path": "everdrift-8dd1a13e413c.pck",
+      "bytes": 5032416,
+      "sha256": "249386b47e6112b9868e2b009e0ac15d1f6314a2b325e6ac84e4db94ac044589",
+      "content_type": "application/octet-stream",
+      "local_sha256": "249386b47e6112b9868e2b009e0ac15d1f6314a2b325e6ac84e4db94ac044589"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/everdrift-8dd1a13e413c.wasm",
+      "path": "everdrift-8dd1a13e413c.wasm",
+      "bytes": 39509339,
+      "sha256": "7eda98958eb09135a1acb54a4323a00b1a55af1997f15fa1cdc2b93e3df46656",
+      "content_type": "application/wasm",
+      "local_sha256": "7eda98958eb09135a1acb54a4323a00b1a55af1997f15fa1cdc2b93e3df46656"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/index.apple-touch-icon.png",
+      "path": "index.apple-touch-icon.png",
+      "bytes": 11944,
+      "sha256": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5",
+      "content_type": "image/png",
+      "local_sha256": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/",
+      "path": "index.html",
+      "bytes": 7118,
+      "sha256": "e15deff87888d4ba334a0ba253d619af27c320017e5da0cbd2e9716f9d30079c",
+      "content_type": "text/html",
+      "local_sha256": "e15deff87888d4ba334a0ba253d619af27c320017e5da0cbd2e9716f9d30079c"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/index.icon.png",
+      "path": "index.icon.png",
+      "bytes": 5700,
+      "sha256": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5",
+      "content_type": "image/png",
+      "local_sha256": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/index.png",
+      "path": "index.png",
+      "bytes": 21443,
+      "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+      "content_type": "image/png",
+      "local_sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/og.png",
+      "path": "og.png",
+      "bytes": 526045,
+      "sha256": "68c78df54913afb06edc38c410bfe7c42d7559a3a2307b5921472500534c713c",
+      "content_type": "image/png",
+      "local_sha256": "68c78df54913afb06edc38c410bfe7c42d7559a3a2307b5921472500534c713c"
+    },
+    {
+      "url": "https://everdrift.iliareingold.com/version.json",
+      "path": "version.json",
+      "bytes": 79,
+      "sha256": "81685cbf9b84e6f066e8c20d0a8b0bd8a27c8d1d3b6a3c6da40a760f56c95dc6",
+      "content_type": "application/json",
+      "local_sha256": "81685cbf9b84e6f066e8c20d0a8b0bd8a27c8d1d3b6a3c6da40a760f56c95dc6"
+    }
+  ],
+  "failed": {
+    "https://everdrift.iliareingold.com/.audio.position.worklet.js": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/.audio.worklet.js": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/.js": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/.side.wasm": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/.wasm": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/godot.audio.position.worklet.js": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/godot.audio.worklet.js": "HTTP 404; ",
+    "https://everdrift.iliareingold.com/godot.web.template_release.wasm32.nothreads.wasm": "HTTP 404; "
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 3,
+  "slug": "cloudkeep",
+  "title": "Cloudkeep",
+  "tagline": "飞艇探索浮岛，展示飞行控制、平滑追随镜头与模型制作流程",
+  "category": "飞行探索",
+  "overview_video": "cloudkeep/overview",
+  "examples": [
+    {
+      "id": "cloudkeep-flight",
+      "title": "飞行与追随镜头",
+      "one_liner": "驾驶飞艇，对比平滑与直接跟随，观察镜头避障",
+      "candidate": "cloudkeep.flight",
+      "title_en": "Flight and follow camera",
+      "one_liner_en": "Fly an airship, compare smooth and direct following, and watch camera collision avoidance."
+    },
+    {
+      "id": "cloudkeep-models",
+      "title": "模型与远景减面",
+      "one_liner": "旋转查看 18 个模型，对比远景版本、线框与三角形数量",
+      "candidate": "cloudkeep.asset-build",
+      "title_en": "Models and distant detail",
+      "one_liner_en": "Rotate 18 models and compare distant versions, wireframes and triangle counts."
+    },
+    {
+      "id": "cloudkeep-ecology",
+      "title": "喂食、捕获与生态",
+      "one_liner": "投食引来生物，加速惊扰，按住 Q 捕获并观察金币与回归",
+      "candidate": "cloudkeep.ecology",
+      "title_en": "Feeding, capture and ecology",
+      "one_liner_en": "Lure creatures with food, startle them by speeding up, and hold Q to capture; watch coins and returns."
+    },
+    {
+      "id": "cloudkeep-atmosphere",
+      "title": "云海与入云雾效",
+      "one_liner": "飞入六团体积云，观察雾气收紧，对比入云前后的视野",
+      "candidate": "cloudkeep.atmosphere",
+      "title_en": "Cloud sea and in-cloud fog",
+      "one_liner_en": "Fly into six volumetric clouds and compare visibility as the fog closes in."
+    }
+  ],
+  "tagline_en": "Explore floating islands by airship, with flight controls, a smooth follow camera and a model-building workflow."
+}

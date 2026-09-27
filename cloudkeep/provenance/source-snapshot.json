@@ -1,0 +1,347 @@
+{
+  "source": "../../cloudkeep",
+  "revision": "b28406d581bfbc3c905c200e552b669f4dd02a15",
+  "status": "Exact original exploration release; selected by user exclusion of Sky Arena. No source edits.",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 66,
+      "sha256": "949945920c2fda1d20c965d053fac5fb4daaf6897865491420b0edee70613f42"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 161,
+      "sha256": "07c350546224832c50528c0d9218ab50cb2fc8dbc662d8be11302498a28a8d24"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 915,
+      "sha256": "9e4a298fd2270e30c3a9075a401c29125e701527a81e4dd81182ab4c852c67e6"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "8c09ee40d72139720037d3f640541f79e5be39f23ea8359eb02bf3b7d9d243b0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9945,
+      "sha256": "f62dc08d9a9af15caefcb21cc4d7eb01c0da92f4329cc730f3cf3f6889cd4862"
+    },
+    {
+      "path": "art/ASSETS.md",
+      "bytes": 3789,
+      "sha256": "85c1ccbd7a42bf25f54b99a8c1d7bd699024495b468cacaec1c201104c0c2f92"
+    },
+    {
+      "path": "art/DIRECTION.md",
+      "bytes": 12936,
+      "sha256": "db3a8265a3e15382fc09c41a358f9eb37308eba9cacbc8625d7243c4cff1a6b5"
+    },
+    {
+      "path": "art/cloudkeep.blend",
+      "bytes": 10201510,
+      "sha256": "5ad8635388cd0699d1cac22e3764f3fdf35af9133f2f60e08771c605c44ff45f"
+    },
+    {
+      "path": "art/concept.png",
+      "bytes": 2428765,
+      "sha256": "6d7edd582ee5bf787f579f2ee156d4a9157fc40f1f5ee685e9c1c78fe8309773"
+    },
+    {
+      "path": "art/previews/boost.png",
+      "bytes": 938386,
+      "sha256": "f2d01df4aa73681524472b91717ab491ddb05ed0d8f366530dd0aca13519d556"
+    },
+    {
+      "path": "art/previews/natural-light-mobile.png",
+      "bytes": 289693,
+      "sha256": "db7f103aa111a18dfb5bf8a8179c4577ee6e8c754099d91d1e0ffbf256d489bb"
+    },
+    {
+      "path": "art/previews/natural-light.png",
+      "bytes": 1242514,
+      "sha256": "88c51b3d342ee29e3829b7601a52cb5a0347691059993fc9af40fbe7ea98574b"
+    },
+    {
+      "path": "art/previews/orbit.png",
+      "bytes": 1211694,
+      "sha256": "601899fedbf1f95c7803f1d84fd5034d54ca3ead39fc8c8eb6bee1eea26e8069"
+    },
+    {
+      "path": "art/showcase/Cloudkeep-4K60-Cover.jpg",
+      "bytes": 434838,
+      "sha256": "b3baca8d919fabca9ccc2c49e6d6a1776f0839618689b13bdddda57dee6ae5f2"
+    },
+    {
+      "path": "art/showcase/Cloudkeep-Cover.jpg",
+      "bytes": 541003,
+      "sha256": "9977999fb3233e0f221b3c25e40a6d58a2fb41f37a2d4773f333a0f62292b429"
+    },
+    {
+      "path": "art/showcase/README-4K60.md",
+      "bytes": 1939,
+      "sha256": "634994829e3077f295c76b2114fcc4b1cd6de6532ab3f58ba4cea96fbde4d257"
+    },
+    {
+      "path": "art/showcase/README.md",
+      "bytes": 1580,
+      "sha256": "9ac984c7d71acd69f2d78df199b63cc6284bced2cafa1c544c4cd945857b4b71"
+    },
+    {
+      "path": "art/showcase/Verification-4K60.json",
+      "bytes": 2257,
+      "sha256": "bb17718ce773917b86e282f6030700e1494b97551c49326fc180c8f75ef0626c"
+    },
+    {
+      "path": "index.html",
+      "bytes": 672,
+      "sha256": "63e2db73434d32cef304d3e2e38cba79c8f29f95d0961d7d0d96e4ab6cace7b0"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 54499,
+      "sha256": "8556abb9c5bf3f587be13c04e7a2209b40c634e4dd1e290f169e6579ca91f07d"
+    },
+    {
+      "path": "package.json",
+      "bytes": 906,
+      "sha256": "cd7a87eb9a5601cdbf601b202e8632bbc907ea3c63d28777ccdfad99170aa64a"
+    },
+    {
+      "path": "prompts/README.md",
+      "bytes": 746,
+      "sha256": "fc35c59b681f56979eac546dacefca6ab6848faa298cd925a3b9c0fcdbcbb470"
+    },
+    {
+      "path": "prompts/original.txt",
+      "bytes": 2859,
+      "sha256": "3a83fb919e2b4836040b17c931ece4ed2b8c93bda94dc444c180f6ad4f4bf575"
+    },
+    {
+      "path": "public/assets/airship.glb",
+      "bytes": 1327516,
+      "sha256": "a2b33e467bcbea3ef61d5205e426303f3633ce4de5d116d95fd81a53e5f45059"
+    },
+    {
+      "path": "public/assets/bird.glb",
+      "bytes": 278324,
+      "sha256": "e9f97598ce64da967bffec0bdf0f959a55f00c4913d5820202759fbebe297a48"
+    },
+    {
+      "path": "public/assets/cloud-billow.png",
+      "bytes": 1651517,
+      "sha256": "550fb16f706c7b9dc7eb00c5b6cd327658ab261545c61838c1231e75bc14e088"
+    },
+    {
+      "path": "public/assets/cloud.glb",
+      "bytes": 50768,
+      "sha256": "c12534675fe2d2fa200ae19beea523c8b5b1fc6c15e68a23f39e455df5e3da3b"
+    },
+    {
+      "path": "public/assets/food.glb",
+      "bytes": 13848,
+      "sha256": "ea8492f87c2e81dede3a9646c5bb6231fca4d52ef504d33d9d0cd2c0167b3915"
+    },
+    {
+      "path": "public/assets/island-distant.glb",
+      "bytes": 851068,
+      "sha256": "3a39c310a8a0522cd4ee8ec1a2fe1a7948ed497158745635fa4a4f8e7aac28a9"
+    },
+    {
+      "path": "public/assets/island.glb",
+      "bytes": 2939460,
+      "sha256": "ed0f24d081e3d4fbd3864e1df2306d06e8c93557731563d3c7aecda530d23e15"
+    },
+    {
+      "path": "public/assets/jelly.glb",
+      "bytes": 401212,
+      "sha256": "f8b0270836e213e55ec97051e2398b61088a11a1e8a231e2bf798da1ec6ac6d9"
+    },
+    {
+      "path": "public/assets/koi.glb",
+      "bytes": 287484,
+      "sha256": "d7dfe7ee414e017771ed1d3ed239b17602905aed7d1ebfc5ca7ad9c594cce981"
+    },
+    {
+      "path": "public/assets/lighthouse-distant.glb",
+      "bytes": 901848,
+      "sha256": "a2a0d4d34064d4ae605c3a3cfab13f2848e95306057696454b63e1c3412a240a"
+    },
+    {
+      "path": "public/assets/lighthouse.glb",
+      "bytes": 3190048,
+      "sha256": "22ecf3dfcaae9d4716a14672f81fe88723e5aecad7f47ce8070ec361a1fd0071"
+    },
+    {
+      "path": "public/assets/manifest.json",
+      "bytes": 1762,
+      "sha256": "f463509b843f13c9322fd16cca23f87f2722ebeda7b3683f56c31ed9733ce2e9"
+    },
+    {
+      "path": "public/assets/moth.glb",
+      "bytes": 407956,
+      "sha256": "7d8179add5fe33270a098816b79b1b7468db2a81df4366b9ec4fdc4e958fb9cf"
+    },
+    {
+      "path": "public/assets/orchard-distant.glb",
+      "bytes": 927376,
+      "sha256": "60c2619d47f3656cd64a1ceb0524b57cb05a4799d2959b212e7963320504b284"
+    },
+    {
+      "path": "public/assets/orchard.glb",
+      "bytes": 3174148,
+      "sha256": "32b286a561a2de23498cc4f4c33a9c7063bad4c86f70b80664e4e11107e1fa78"
+    },
+    {
+      "path": "public/assets/pearl.glb",
+      "bytes": 37224,
+      "sha256": "202c5d6eef2d6355b23abd12ebba7a3fe5808b856893e6ff73f42e43918ec9bc"
+    },
+    {
+      "path": "public/assets/ray.glb",
+      "bytes": 866388,
+      "sha256": "8ed82ac6a1323b9128a7f05a6af5a19df4f66ed8c863aa628b860bd042cdd167"
+    },
+    {
+      "path": "public/assets/ruins-distant.glb",
+      "bytes": 871540,
+      "sha256": "612a3a41fa7bd14a95d235e2124248051290fec2ef0785bb0b787005de56c9ce"
+    },
+    {
+      "path": "public/assets/ruins.glb",
+      "bytes": 3093300,
+      "sha256": "523d990d8bd9adb8ee460d0907c2fb59e7891d459c4a6b23b4fdaebff0bcb724"
+    },
+    {
+      "path": "public/assets/sky.png",
+      "bytes": 1355572,
+      "sha256": "bd84d3b4866043f79b4338092e7071cec443bcc652e75cbb3dd2dd03168bcbb2"
+    },
+    {
+      "path": "public/assets/whale.glb",
+      "bytes": 399752,
+      "sha256": "5b5aba36d5a4db8c99c40200a64acd8fa0ad27a56d51505e1b3f9692f3387e02"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 400,
+      "sha256": "d416b354b03359c1f2e84aeafd37f1a8f25f238f9ed96bb434e744b39ecc93f8"
+    },
+    {
+      "path": "scripts/build-assets.mjs",
+      "bytes": 613,
+      "sha256": "8f63f9a4a39e5e62776138330147122e76171d03261574c612a90b4e244ed311"
+    },
+    {
+      "path": "scripts/build_assets.py",
+      "bytes": 25752,
+      "sha256": "be6fd90dca186c836f2f9ec301c695737eb6581e09a9b0fb12acf10bfc9f799e"
+    },
+    {
+      "path": "scripts/modeling.py",
+      "bytes": 6766,
+      "sha256": "6454d9e6ce2710d064df4eade395c8e6014e7510283e1a355e97237a68c1384b"
+    },
+    {
+      "path": "scripts/sky_creatures.py",
+      "bytes": 7257,
+      "sha256": "a4369306ced83d539465daafe17b6efd0d377162e6ab531d6e37138fcba1571c"
+    },
+    {
+      "path": "src/atmosphere.ts",
+      "bytes": 9267,
+      "sha256": "f48447285d1f559bc8017c2ee949a0ed8f1330e44c6f754f40164b4b827ffc17"
+    },
+    {
+      "path": "src/audio.ts",
+      "bytes": 15069,
+      "sha256": "74700fc0344051176e652fac91d6b20891fb0f8aa1464d747303a5a6cc9ca765"
+    },
+    {
+      "path": "src/coins.ts",
+      "bytes": 1506,
+      "sha256": "815ac98b137d33d29ec3ef0a001a21f7e273e8501fe801d50f16a7577bcb2f15"
+    },
+    {
+      "path": "src/effects.ts",
+      "bytes": 20031,
+      "sha256": "b36ee52a1a0009eeabc59052f12e63b5e504d023130436ae7c80243e14817a53"
+    },
+    {
+      "path": "src/flight-camera.ts",
+      "bytes": 2191,
+      "sha256": "11e5bacfa297e09c45facbb11df63d9efcb120ef5ccba8ad2f5d29eeb301b24f"
+    },
+    {
+      "path": "src/input.ts",
+      "bytes": 7858,
+      "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff"
+    },
+    {
+      "path": "src/main.ts",
+      "bytes": 5518,
+      "sha256": "2ecaacb539815cb70549e3efc3e7655ae86e43ba7743742b874a355cb85da2f3"
+    },
+    {
+      "path": "src/materials.ts",
+      "bytes": 7454,
+      "sha256": "d626cf1ab4428d04db9e8ed9eab43c2906191ea1291bca2902c209c21187ef15"
+    },
+    {
+      "path": "src/music.ts",
+      "bytes": 4788,
+      "sha256": "b14363c19649a79caf18e447ec21508aff8c1e5ba63faa08b7b91c3387955d04"
+    },
+    {
+      "path": "src/scene.ts",
+      "bytes": 20295,
+      "sha256": "e593b494661af90441cbca0f0605fe4847a044ace462e3910de12128bf2de1d8"
+    },
+    {
+      "path": "src/simulation.ts",
+      "bytes": 28477,
+      "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+    },
+    {
+      "path": "src/storage.ts",
+      "bytes": 422,
+      "sha256": "1aba7eeef3d26ac3c9a05c9502c0fa276bcfc0dfd0ecb5bb72ab44703f15884f"
+    },
+    {
+      "path": "src/style.css",
+      "bytes": 20570,
+      "sha256": "2e5ed9fb83dae4556ac4dcc4cd630de4ecfe052bbd46d9e18e5b315536d2a5f8"
+    },
+    {
+      "path": "src/ui.ts",
+      "bytes": 18206,
+      "sha256": "6495728584346aa436227aeefb4b051b1c2c29993eefae0a10750fa8cf0f7428"
+    },
+    {
+      "path": "src/waterfalls.ts",
+      "bytes": 1472,
+      "sha256": "28e946c117f0788284c068e29a2b370af91bb7cf2fb18749fbaefd358627903d"
+    },
+    {
+      "path": "tests/ecosystem.test.ts",
+      "bytes": 7643,
+      "sha256": "d36fc86b6cd4b57b1b4fe0ddfbfbcdf1a98f690f1e94918f2d919367987c70f7"
+    },
+    {
+      "path": "tests/flight-camera.test.ts",
+      "bytes": 3565,
+      "sha256": "6b5db8ce6b133377ca6de868c884becdb4f8fd08e097764e49d050da2e6010d9"
+    },
+    {
+      "path": "tests/simulation.test.ts",
+      "bytes": 8457,
+      "sha256": "6f5186aee4e7d3188dcebf84358467795f88d0a13b90a3c47932ad5cf3f839b3"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 306,
+      "sha256": "6db27e0a56b114d36d3305280ed090dc4c0f354ca8c49daa283864983bd992af"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Bubble thin-film iridescence</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">{"imports":{"three":"./original/vendor/three.module.js"}}</script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main>
+<canvas aria-label="Rotatable thin-film bubble" data-demo-picture="" id="world" tabindex="0"></canvas>
+<aside aria-label="Demo controls" class="ui-panel" data-demo-control="">
+<label for="thickness">Film thickness <output id="thickness-value">420 nm</output></label>
+<input id="thickness" max="900" min="80" step="10" type="range" value="420"/>
+<button aria-pressed="false" id="pause" type="button">Pause flow</button>
+<button aria-pressed="false" data-console-en="Overlap" data-console-zh="重叠气泡" id="overlap" type="button">Overlapping bubbles</button>
+<button aria-pressed="false" data-console-en="Occlusion" data-console-zh="前景遮挡" id="depth" type="button">Foreground occlusion</button>
+<button id="reset" type="button">Reset view</button>
+</aside>
+<footer class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="Drag · Scroll">Drag to orbit · Wheel to zoom · Adjust film thickness to change colors</footer>
+</main>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

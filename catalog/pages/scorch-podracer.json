@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "slug": "scorch-podracer",
+  "title": "SCORCH — Desert Pod Racing",
+  "tagline": "沙漠飞梭竞速，展示程序化赛道、载具与合成音效",
+  "category": "赛车",
+  "overview_video": "scorch-podracer/overview",
+  "examples": [
+    {
+      "id": "scorch-racing",
+      "title": "飞梭驾驶力学",
+      "one_liner": "在原版沙漠赛道体验加速、推进、倾斜与侧滑",
+      "candidate": "scorch-podracer.racing",
+      "title_en": "Pod racing physics",
+      "one_liner_en": "Try acceleration, thrust, banking and sliding on the original desert track."
+    },
+    {
+      "id": "scorch-race-ai",
+      "title": "前瞻赛车 AI",
+      "one_liner": "六艘飞梭自动竞速，显示前瞻目标，也可随时接管驾驶",
+      "candidate": "scorch-podracer.race-ai",
+      "title_en": "Look-ahead racing AI",
+      "one_liner_en": "Six pods race automatically with look-ahead targets shown; take over driving at any time."
+    }
+  ],
+  "tagline_en": "Desert pod racing with procedural tracks, vehicles and synthesized sound effects."
+}

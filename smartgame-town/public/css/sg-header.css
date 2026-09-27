@@ -1,0 +1,407 @@
+/* ==========================================================================
+   スマートゲーム 共通ヘッダー（全ゲーム共通・上部固定）
+   /js/sg-header.js とセットで使う。各ゲームの style.css の後に読み込むこと。
+
+   --sgh-header-h : バー本体の高さ
+   --sgh-top      : バー全体の高さ（セーフエリア込み）。ゲーム側のレイアウトは
+                   この値ぶんだけ下にずらす／縮める
+   ========================================================================== */
+:root {
+  --sgh-header-h: 48px;
+  --sgh-top: calc(var(--sgh-header-h) + env(safe-area-inset-top, 0px));
+
+  --sgh-bg: rgba(7, 9, 20, 0.82);
+  --sgh-panel-bg: #10142a;
+  --sgh-border: rgba(120, 140, 255, 0.22);
+  --sgh-text: #eaefff;
+  --sgh-text-sub: #8b95bd;
+  --sgh-cyan: #00f0ff;
+  --sgh-violet: #7c4dff;
+  --sgh-magenta: #ff2e88;
+  --sgh-z: 2147482500;
+  /* パネルを開いている間は、全国ランキング・結果画面などのオーバーレイ（2147483000）より上に出す */
+  --sgh-panel-z: 2147483200;
+}
+
+@media (min-width: 768px) {
+  :root { --sgh-header-h: 54px; }
+}
+
+/* 本文はヘッダーのぶんだけ下げる（ゲーム側の body padding より後に読み込むこと） */
+body {
+  padding-top: var(--sgh-top);
+}
+
+.sgh-header,
+.sgh-header *,
+.sgh-panel,
+.sgh-panel * {
+  box-sizing: border-box;
+}
+
+/* ---------- バー ---------- */
+.sgh-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--sgh-z);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: var(--sgh-top);
+  padding: env(safe-area-inset-top, 0px) max(10px, env(safe-area-inset-right, 0px)) 0 max(10px, env(safe-area-inset-left, 0px));
+  background: var(--sgh-bg);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: inset 0 -1px 0 var(--sgh-border), 0 2px 14px rgba(0, 0, 0, 0.35);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+  color: var(--sgh-text);
+  line-height: 1.4;
+}
+
+.sgh-header__logo,
+.sgh-header__burger {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  box-shadow: none;
+  text-transform: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sgh-header__logo:hover,
+.sgh-header__burger:hover,
+.sgh-header__logo[aria-expanded="true"],
+.sgh-header__burger[aria-expanded="true"] {
+  border-color: var(--sgh-border);
+  background: rgba(120, 140, 255, 0.12);
+}
+
+.sgh-header__logo:focus-visible,
+.sgh-header__burger:focus-visible {
+  outline: 2px solid var(--sgh-cyan);
+  outline-offset: 2px;
+}
+
+/* スマゲータウンから開いたゲーム: 左上は「スマゲータウンに戻る」のリンク（<a>）。ゲーム側の a {} の下線・色を受けないようにする */
+.sgh-header__logo--town,
+.sgh-header__logo--town:hover,
+.sgh-header__logo--town:visited {
+  color: inherit;
+  text-decoration: none;
+  border-color: var(--sgh-border);
+  background: rgba(120, 140, 255, 0.12);
+}
+.sgh-header__logo--town:hover { background: rgba(120, 140, 255, 0.22); }
+
+.sgh-header__mark {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  background: linear-gradient(120deg, var(--sgh-cyan), var(--sgh-violet) 55%, var(--sgh-magenta));
+  -webkit-mask: no-repeat center/13px 13px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 4 L20 12 L7 20 Z' fill='%23fff'/%3E%3C/svg%3E");
+  mask: no-repeat center/13px 13px url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 4 L20 12 L7 20 Z' fill='%23fff'/%3E%3C/svg%3E");
+  box-shadow: 0 0 0 1px rgba(120, 140, 255, 0.35) inset;
+}
+
+.sgh-header__title {
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.sgh-header__caret {
+  width: 8px;
+  height: 8px;
+  margin-left: -2px;
+  border-right: 2px solid var(--sgh-text-sub);
+  border-bottom: 2px solid var(--sgh-text-sub);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.18s ease;
+}
+
+.sgh-header__logo[aria-expanded="true"] .sgh-header__caret {
+  transform: rotate(-135deg) translate(-1px, -1px);
+}
+
+/* ハンバーガー */
+.sgh-burger {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 14px;
+}
+
+.sgh-burger i {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--sgh-text);
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.sgh-burger i:nth-child(1) { top: 0; }
+.sgh-burger i:nth-child(2) { top: 6px; }
+.sgh-burger i:nth-child(3) { top: 12px; }
+
+.sgh-header__burger[aria-expanded="true"] .sgh-burger i:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.sgh-header__burger[aria-expanded="true"] .sgh-burger i:nth-child(2) { opacity: 0; }
+.sgh-header__burger[aria-expanded="true"] .sgh-burger i:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ---------- 開閉パネル ---------- */
+/* 開いている間はバーも背景幕より上に出す（もう一度押して閉じられるように） */
+html.sgh-panel-open .sgh-header { z-index: var(--sgh-panel-z); }
+
+.sgh-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--sgh-panel-z) - 1);
+  background: rgba(3, 4, 12, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 0;
+  padding: 0;
+  cursor: default;
+}
+
+.sgh-panel {
+  position: fixed;
+  top: var(--sgh-top);
+  z-index: var(--sgh-panel-z);
+  width: min(320px, calc(100vw - 16px));
+  max-height: calc(100dvh - var(--sgh-top) - var(--ad-space, 0px) - 12px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  margin: 6px 8px;
+  padding: 8px;
+  border: 1px solid var(--sgh-border);
+  border-radius: 14px;
+  background: var(--sgh-panel-bg);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  color: var(--sgh-text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transform-origin: top center;
+  animation: sgh-panel-in 0.16s ease-out;
+}
+
+.sgh-panel--left { left: 0; }
+.sgh-panel--right { right: 0; }
+
+@keyframes sgh-panel-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sgh-panel { animation: none; }
+  .sgh-burger i, .sgh-header__caret { transition: none; }
+}
+
+.sgh-panel__label {
+  margin: 10px 8px 4px;
+  color: var(--sgh-text-sub);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.sgh-panel__label:first-child { margin-top: 4px; }
+
+.sgh-panel__empty {
+  margin: 0 8px 8px;
+  color: var(--sgh-text-sub);
+  font-size: 0.78rem;
+}
+
+.sgh-panel__hr {
+  height: 1px;
+  margin: 8px 4px;
+  background: var(--sgh-border);
+}
+
+/* 行（ボタン / リンク共通）
+   ゲーム側の button {} / a {} のような要素セレクタの影響を受けないよう、
+   効いてほしいプロパティは省略せずすべて明示する */
+.sgh-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  box-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  -webkit-appearance: none;
+  appearance: none;
+  transform: none;
+  width: 100%;
+  min-height: 46px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--sgh-text);
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sgh-item:hover { background: rgba(120, 140, 255, 0.14); }
+.sgh-item:active { background: rgba(120, 140, 255, 0.22); }
+.sgh-item:focus-visible { outline: 2px solid var(--sgh-cyan); outline-offset: -2px; }
+
+.sgh-item__icon {
+  flex: 0 0 auto;
+  width: 26px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.sgh-item__body { flex: 1 1 auto; min-width: 0; }
+
+.sgh-item__name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.sgh-item__note {
+  display: block;
+  color: var(--sgh-text-sub);
+  font-size: 0.74rem;
+}
+
+.sgh-item__state {
+  flex: 0 0 auto;
+  color: var(--sgh-text-sub);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.sgh-item--on .sgh-item__state { color: var(--sgh-cyan); }
+
+/* ゲームアイコン付きの行 */
+.sgh-item__thumb {
+  display: block;
+  flex: 0 0 auto;
+  margin: 0;
+  max-width: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--sgh-border);
+  background: #0a0d1c;
+  object-fit: cover;
+}
+
+.sgh-item--home .sgh-item__icon { color: var(--sgh-cyan); }
+
+/* 共通ヘッダーのメニューに集約した、ゲーム側の元ボタン（DOM とイベントはそのまま残す） */
+.sgh-native-hidden { display: none !important; }
+
+.sgh-item--fav.sgh-item--on .sgh-item__icon { color: #ffd54a; }
+
+/* お気に入り一覧ページへの導線 */
+.sgh-item--all .sgh-item__icon { color: #ffd54a; }
+
+/* アカウント（ログイン状態）の行。ログイン中はアイコンをシアンに */
+.sgh-item--account .sgh-item__icon { color: var(--sgh-text-sub); }
+.sgh-item--account.sgh-item--on .sgh-item__icon { color: var(--sgh-cyan); }
+
+/* ---------- パネル用の静的ブロック ----------
+   各ゲームの index.html に /top/tools/gen-sgh-static.js が書き出す。
+   ページ本体には表示せず、パネルを開いたときだけ中身として使う。
+   HTML に残しておくことで、クローラーがトップページを経由せずにゲームからゲームへ辿れ、
+   ゲームの説明文もページのテキストとして読める（以前は sg-header.js が実行時に
+   組み立てていたため、ゲームページの HTML には内部リンクも説明文も無かった）。
+
+   nav.sgh-related … 左パネルの「関連するゲーム」の元データ（JSが読んで行を作る）
+   div.sgh-about   … 右パネルの先頭に出すゲーム紹介（JSがこの要素ごとパネルへ移す） */
+.sgh-related,
+.sgh-about {
+  display: none;
+}
+
+/* パネルへ移されたときだけ見える */
+.sgh-panel .sgh-about {
+  display: block;
+  padding: 12px 14px 14px;
+  margin: 0;
+  border-bottom: 1px solid var(--sgh-border);
+  /* パネル（角丸14px）の内側に 8px + 枠1px 分だけ入っているので、同心円になる 6px にする */
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, rgba(124, 77, 255, 0.14), rgba(124, 77, 255, 0));
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic UI", Meiryo, sans-serif;
+  text-align: left;
+}
+
+.sgh-panel .sgh-about__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+
+.sgh-panel .sgh-about__icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  object-fit: cover;
+}
+
+.sgh-panel .sgh-about__name {
+  display: block;
+  min-width: 0;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--sgh-text);
+  letter-spacing: 0.01em;
+}
+
+.sgh-panel .sgh-about__desc {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--sgh-text-sub);
+  text-align: left;
+  letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+  .sgh-panel .sgh-about__name { font-size: 16px; }
+  .sgh-panel .sgh-about__desc { font-size: 12.5px; }
+}

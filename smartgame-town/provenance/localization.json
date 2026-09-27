@@ -1,0 +1,22 @@
+{
+  "modified_files": [
+    "_external/101405.gsspcln.jp/t/004/252/a1004252.js",
+    "_external/cdn.microad.jp/compass/compass2.js",
+    "_external/i.socdm.com/sdk/js/adg-browser-m.js",
+    "_external/i.socdm.com/sdk/js/adg-script-loader-41c213910cc3.js",
+    "_external/imp-adedge.i-mobile.co.jp/script/imp_spot_define.js",
+    "_external/imp-adedge.i-mobile.co.jp/script/v1/spot-b91a17173865.js",
+    "_external/j.microad.net/js/compass.js",
+    "_external/static.criteo.net/js/ld/publishertag.js",
+    "_external/supership-jp.github.io/ADGBrowser-m/adg-browser-m.js",
+    "ad/slot.html",
+    "ad/slot.js",
+    "index.html",
+    "town/index.html",
+    "town/index.html"
+  ],
+  "changes": [
+    "External library/font URLs rewritten to local copies; original text retained in original-text/.",
+    "Third-party hosting toolbar and Google analytics loader removed when matched."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "slug": "everdrift",
+  "title": "Everdrift",
+  "tagline": "操控风力的平台跳跃游戏，展示 Godot 网页运行与着色器",
+  "category": "其他引擎",
+  "overview_video": "everdrift/overview",
+  "examples": [],
+  "tagline_en": "A wind-controlled platformer showing Godot in the browser and shaders."
+}

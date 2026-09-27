@@ -1,0 +1,372 @@
+{
+  "project": "tidewater",
+  "source": "https://github.com/dgreenheck/tidewater",
+  "scope": "Unchanged FFT, surface queries, asynchronous readback, boat physics and procedural boat/buoy geometry with their complete relative-import closure. New host rendering and controls.",
+  "files": [
+    {
+      "source": "tidewater/upstream/src/core/Input.js",
+      "path": "examples/tidewater-ocean/original/core/Input.js",
+      "sha256": "837aede0dd64ed6e8bea9aa885e6e034e7d810740561a02edfdee9b8b828f646"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/Engine.js",
+      "path": "examples/tidewater-ocean/original/engine/Engine.js",
+      "sha256": "e0ab1f2893204c5996b409931357de0b1429e502a73f2c61f9f058a69e4617bb"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/constants.js",
+      "path": "examples/tidewater-ocean/original/engine/constants.js",
+      "sha256": "4610679066f55da362c10a896fea17058ee646affff3981d6e2aede118f2947f"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/core/EventDispatcher.js",
+      "path": "examples/tidewater-ocean/original/engine/core/EventDispatcher.js",
+      "sha256": "3225f116d0407a8b603917ab8bbe8656f1cbfe97fc1165028bf7420093ae70f3"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/BufferAttribute.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/BufferAttribute.js",
+      "sha256": "48cc710ca8029bc15b3c03533b13c478ae55cf52a453543e10d7ffc933580a41"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/BufferGeometry.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/BufferGeometry.js",
+      "sha256": "ef3e8470f6cc0745bc50e354c3145da8e470ea1de0e056d33f3f0501901e7376"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/BufferGeometryUtils.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/BufferGeometryUtils.js",
+      "sha256": "c7ab418b86ddd4b623eb7fa6b037c800c141f9f444772d604658961d2d623d4c"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/PolyhedronGeometry.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/PolyhedronGeometry.js",
+      "sha256": "6b5e756688f3ea962c012d7e06c595d1fd5730fba9e44b1cccc5455013b45473"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/PrimitiveGeometries.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/PrimitiveGeometries.js",
+      "sha256": "cbde738b33b5e0c67d729825c7d8620b2d819c7aa70bf680b15d94d265732ceb"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/RoundedBoxGeometry.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/RoundedBoxGeometry.js",
+      "sha256": "f4c05c55362ff68a2fe2eeae21e9d783344243265e1e18567154fe95b3971413"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/TubeGeometry.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/TubeGeometry.js",
+      "sha256": "f493cb4de35444a9adfedf2b7a57994f59cba823e9768b5102080b750b9ef5a2"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/geometry/index.js",
+      "path": "examples/tidewater-ocean/original/engine/geometry/index.js",
+      "sha256": "7aa336e8ff7d01675b375fbb499ae9820952595f9bac9b169df22d6b1de5538c"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/Compute.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/Compute.js",
+      "sha256": "bd64385e6d5de7e9a1a7986eb71c7a032d5ed7763568f47285437c9f185a9aa8"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/GPU.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/GPU.js",
+      "sha256": "708e0fd59edea32349b5c372f14cc6e09b20dd1e24f536868106ad2a8330428d"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/Mipmaps.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/Mipmaps.js",
+      "sha256": "c3262f6f22cb30275847666ab6f7ed543f0c77b5d06f1d9aa84611cadc7070c6"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/Readback.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/Readback.js",
+      "sha256": "d16b3a3ecc588e5743534cfb10129428666d4114fb7e3372af51cb068529148d"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/Shader.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/Shader.js",
+      "sha256": "b45b50583a6525aa4aa9a26ae5be699032e5c5ae57780daf99ed2a6402860bd6"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/Texture.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/Texture.js",
+      "sha256": "4e446d488ee36c88c7ae03552995544559ad4ada2f41320dd206fd4f99f95453"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/gpu/Uniforms.js",
+      "path": "examples/tidewater-ocean/original/engine/gpu/Uniforms.js",
+      "sha256": "51bf60e5da6bbab612cc1405cce5dcb7a759a3732bd0fd7cdfe5e1df73105940"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/index.js",
+      "path": "examples/tidewater-ocean/original/engine/index.js",
+      "sha256": "239f0f1370717789618b0094b983717ca501ad957eaa02bdf3e2b872a66dc454"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/loaders/GLTF.js",
+      "path": "examples/tidewater-ocean/original/engine/loaders/GLTF.js",
+      "sha256": "b8a2c3666fa27ea504e62d315ed9c125e178007a27d151eb59c9d1ea5ac210d1"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Box3.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Box3.js",
+      "sha256": "170c606467f859c5a3f6dae1b32256711f61b927aaec42fe3cbcfb4a51c16356"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/CatmullRomCurve3.js",
+      "path": "examples/tidewater-ocean/original/engine/math/CatmullRomCurve3.js",
+      "sha256": "b21bae1708947c35819fce3dbe97f90f893c36d7db42392fbd5b63de05991f5f"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Color.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Color.js",
+      "sha256": "ad9a0110fd607695522c17dce08aa5eacee017e1160fce3aa5ba37704b893d25"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/DataUtils.js",
+      "path": "examples/tidewater-ocean/original/engine/math/DataUtils.js",
+      "sha256": "f94e4a385baae53868d2e334b31d04c5ac42ca7d382b5f9effcc6ada9060db38"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Euler.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Euler.js",
+      "sha256": "5bf51c4b93fffc1cb9c24d4ba75af7b00bc1520880e18353d4f69cddea7e37c7"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Frustum.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Frustum.js",
+      "sha256": "cd6eba21f91122150afc973be49a215a0620c4ae1aea7f3ef0ff65d34d1b3bd9"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/MathUtils.js",
+      "path": "examples/tidewater-ocean/original/engine/math/MathUtils.js",
+      "sha256": "8adcc4743bf966b097bd25057abeb50b313ec9b9030e457825a5da209e1f9534"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Matrix3.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Matrix3.js",
+      "sha256": "32fa721dfd326e1c0a53695b68938d4f2a5e85903c9b56c7b5f69e80456382da"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Matrix4.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Matrix4.js",
+      "sha256": "c5c1dc971d61cbd21efcb083fdbdfb1e9fb0c6a56c9422266cfdc8b8353d57cc"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Plane.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Plane.js",
+      "sha256": "523139ba4761b0f89cb4154e55b90ef6cf79f8c684fa5c50a67dffc4ad8a3d0d"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Quaternion.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Quaternion.js",
+      "sha256": "040b4dd121db6effed1fbb8f2c5a6fb8d96d9523cf91ddde5105dc48c41fb3ce"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Ray.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Ray.js",
+      "sha256": "88e40df102d8ca15bf36395883937d1d903541a932d2293cca0690d72373cdcd"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/ShapeUtils.js",
+      "path": "examples/tidewater-ocean/original/engine/math/ShapeUtils.js",
+      "sha256": "f560e483842a6ba7e9c73dc6e66614099faf6f4a342c23a83ced82de7cc39976"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Sphere.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Sphere.js",
+      "sha256": "9bf98f3c0ff69bd68a0fa1dedd8a19a6abdb37dc2c2979a27ab89def1f94f71c"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Spherical.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Spherical.js",
+      "sha256": "b0388ee43a1feea9c31d184af0f3b4746261667bfe3d5a3a548cb257862a7772"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Timer.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Timer.js",
+      "sha256": "065eccbebb840beed5481ccf60f09bd50969d5965aac394f8858d136a4d1ec31"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Vector2.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Vector2.js",
+      "sha256": "195d0d4cc60dca87b7386464dca3fcfc6c76c852a3ef3dab95e3556ce7947b54"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Vector3.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Vector3.js",
+      "sha256": "af1252233ab373aeb9bb8f3514c8fdc3f00e8d2d9d71cdf16536f475a54bcb54"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/Vector4.js",
+      "path": "examples/tidewater-ocean/original/engine/math/Vector4.js",
+      "sha256": "84deef94dbf6a335ed53aeaa2d6e65cd1f2d90687fb0fd37d18c4fdbf5e25710"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/math/index.js",
+      "path": "examples/tidewater-ocean/original/engine/math/index.js",
+      "sha256": "96a474ebaf2666dc51217e3d8224254794a5576db3d0acb2ce4a56e00911a2cf"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/Frame.js",
+      "path": "examples/tidewater-ocean/original/engine/render/Frame.js",
+      "sha256": "664f0ecfc0fb4b52d19bca4b1278e8dd0bd979d57e27f3e749e87b7fbc76a398"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/FullscreenPass.js",
+      "path": "examples/tidewater-ocean/original/engine/render/FullscreenPass.js",
+      "sha256": "21c7d6014158f76ce8d0b7c4674a1a76c6750d6934db3e327adc5dca1c0bd552"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/Material.js",
+      "path": "examples/tidewater-ocean/original/engine/render/Material.js",
+      "sha256": "a84b1a3363c954ca4e3c7a5e0bfa0995a3f1e385506f3b05de2dea6b50713d22"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/MeshRenderer.js",
+      "path": "examples/tidewater-ocean/original/engine/render/MeshRenderer.js",
+      "sha256": "7efb3ddb9ad751be89416e301ffdfe3e6613c5b011f9f134c42b35d62b3c6782"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/MeshShader.js",
+      "path": "examples/tidewater-ocean/original/engine/render/MeshShader.js",
+      "sha256": "610c72bfd72494d8302e776c46afdc2e4b982aaf9068106d5041571efc8b6cd6"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/SceneRenderer.js",
+      "path": "examples/tidewater-ocean/original/engine/render/SceneRenderer.js",
+      "sha256": "1ad99e121c8f09ccbd4d411f31f4fccc50e749c41429d6131e6be6c80370d5ca"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/Shadows.js",
+      "path": "examples/tidewater-ocean/original/engine/render/Shadows.js",
+      "sha256": "3d70ceacbb25505533ce4f47779ba5d97bc5834e2b1e01d0eb659a26c7b8dc91"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/Skinning.js",
+      "path": "examples/tidewater-ocean/original/engine/render/Skinning.js",
+      "sha256": "14fbc0224cfcad6ee18af4911c6e290a4d495c0dc094e89be1cf8e3de3bdc25d"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/wgsl/common.js",
+      "path": "examples/tidewater-ocean/original/engine/render/wgsl/common.js",
+      "sha256": "502580bf3c7d684833f2ce622f0f1d34425b0aa3842aedb2106816f5fbbd91c5"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/render/wgsl/lighting.js",
+      "path": "examples/tidewater-ocean/original/engine/render/wgsl/lighting.js",
+      "sha256": "6f8ed6fa5198ace6c5131429ea356acc8eb2c3de2dbf8761b7954e4c9795f38b"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/Camera.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/Camera.js",
+      "sha256": "041f492248dc5425e89c6e207009a6d8ae19264e68cc8638027fd3de4466a160"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/Group.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/Group.js",
+      "sha256": "c9837f1c2dd612cf94e1a7b7aac46c1f0fe84573b40ddfc21e75cca333dee2a1"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/Layers.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/Layers.js",
+      "sha256": "b4f9be617a8ebf912561da0414681b06f9dd4179af60bdce16cfa8de49717977"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/Mesh.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/Mesh.js",
+      "sha256": "2ca60839273eca616fb98582aa78f75205ae922a2aafc22bd14c27faad75c2c0"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/Object3D.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/Object3D.js",
+      "sha256": "6bf8eb3d3ddc95c3e919cfaf91d62e2761b1dcd97b1c769383dab74a94cc34e0"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/Scene.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/Scene.js",
+      "sha256": "45b6080a68d116088ee45c024216f9d4c7eaa0b33cdd83cadb80ce196d3cb7c3"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/scene/index.js",
+      "path": "examples/tidewater-ocean/original/engine/scene/index.js",
+      "sha256": "80fa84e958bb59d407f080aaa0c43ad6a9b6432fe948733b25707467e02b4ee1"
+    },
+    {
+      "source": "tidewater/upstream/src/engine/webgpu.js",
+      "path": "examples/tidewater-ocean/original/engine/webgpu.js",
+      "sha256": "f5bef1ce79dababfe5e838d77042293102dad18737b144c872867f36e7fdd461"
+    },
+    {
+      "source": "tidewater/upstream/src/materials/Materials.js",
+      "path": "examples/tidewater-ocean/original/materials/Materials.js",
+      "sha256": "b730faeb06d578e4f505ed29f0baa493d32cd250111e8209cbaed0efcbf8a58d"
+    },
+    {
+      "source": "tidewater/upstream/src/ocean/OceanFFT.js",
+      "path": "examples/tidewater-ocean/original/ocean/OceanFFT.js",
+      "sha256": "0b49481bdd7aaad20d0cadf4ae5a079f6fca71d712f46b281bde44ab0d03f208"
+    },
+    {
+      "source": "tidewater/upstream/src/ocean/WaterQuery.js",
+      "path": "examples/tidewater-ocean/original/ocean/WaterQuery.js",
+      "sha256": "6d00c2638c137bf763782c1930477b7a09c94ef4dac08f980200eabb9f46bf76"
+    },
+    {
+      "source": "tidewater/upstream/src/ocean/WaterSurface.js",
+      "path": "examples/tidewater-ocean/original/ocean/WaterSurface.js",
+      "sha256": "ca52b7c33a90f1539a6f613ebf1d73f3b90b56cffcea0a87bf953d109b690487"
+    },
+    {
+      "source": "tidewater/upstream/src/player/BoatController.js",
+      "path": "examples/tidewater-ocean/original/player/BoatController.js",
+      "sha256": "8e63f7858d86493f89ff228373f4a327380eda2b0735e3858651b1e4f999534b"
+    },
+    {
+      "source": "tidewater/upstream/src/world/BoatModel.js",
+      "path": "examples/tidewater-ocean/original/world/BoatModel.js",
+      "sha256": "52a8997b5d12b2147a026af929e5d5656c6a5a0ba2709cc52c5ebb3a92de9401"
+    },
+    {
+      "source": "tidewater/upstream/src/world/WorldLayout.js",
+      "path": "examples/tidewater-ocean/original/world/WorldLayout.js",
+      "sha256": "1b25b7df2fe82a66c9656d185ba5871322d6dfa3507ab9034c1c2133f8b97230"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/BoatMaterials.js",
+      "path": "examples/tidewater-ocean/original/world/boat/BoatMaterials.js",
+      "sha256": "9234e169c2eaa34e8331285ddce6916ddb6b17fa9ec8ea84834da2559207da3c"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/DeckGear.js",
+      "path": "examples/tidewater-ocean/original/world/boat/DeckGear.js",
+      "sha256": "87ef89c6f8ea82b91a0abdef26d354a4a3d2253773aba8f9d7de743eeb29880c"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/GeoKit.js",
+      "path": "examples/tidewater-ocean/original/world/boat/GeoKit.js",
+      "sha256": "aea6fdc8c3576c7d8ff03a7e75ccd3e6fef0ce227c24432b95a04e684874fae7"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/HullBuilder.js",
+      "path": "examples/tidewater-ocean/original/world/boat/HullBuilder.js",
+      "sha256": "a4d2b5e1f815688805bf22a6af7c9fd963962fe826dae276ae9e17aea008497b"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/HullLines.js",
+      "path": "examples/tidewater-ocean/original/world/boat/HullLines.js",
+      "sha256": "091fd3469f626e3891de60f4e9806a4da89336b245b227aa6227ab4d110ad993"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/Running.js",
+      "path": "examples/tidewater-ocean/original/world/boat/Running.js",
+      "sha256": "05c461c66c30af336daea58d782f74856fd774019547dba068ccfd3ed4d97cb9"
+    },
+    {
+      "source": "tidewater/upstream/src/world/boat/Wheelhouse.js",
+      "path": "examples/tidewater-ocean/original/world/boat/Wheelhouse.js",
+      "sha256": "05051b16f5f65fb1b27b5a96cafedbf23421e1e739255b2251630b10eff4afc7"
+    }
+  ]
+}

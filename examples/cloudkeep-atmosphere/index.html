@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cloudkeep · Clouds and immersion fog</title>
+<link href="data:," rel="icon"/>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<div aria-label="Cloud flight scene" data-demo-picture="" id="world" tabindex="0"></div>
+<header class="ui-panel" data-demo-readout=""><output id="readout">Loading clouds…</output></header>
+<nav aria-label="Cloud settings" class="ui-panel" data-demo-control="">
+<label>Cloud bank <select aria-label="Select cloud bank" id="bank">
+<option value="0">01</option><option value="1">02</option><option value="2">03</option>
+<option value="3">04</option><option value="4">05</option><option value="5">06</option>
+</select></label>
+<button data-console-en="Exit clouds" data-console-zh="离开云团" id="reset">Return outside clouds</button>
+<button aria-pressed="true" id="fog">Immersion fog</button>
+<button aria-pressed="false" id="helpers">Cloud boundaries</button>
+</nav>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD · R/F · Shift · C · ↔" id="hint">WASD to fly · R/F up/down · Shift to boost · Drag to steer · Right drag to orbit · Wheel to zoom · C to recenter</p>
+<p data-demo-readout="" hidden="" id="error" role="alert"></p>
+<script src="/src/host.ts" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,1847 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-26",
+  "scope": "15 references; source inspection and proposed extractions, not newly verified reusable packages",
+  "candidate_count": 62,
+  "priorities": {
+    "P0": "First extraction wave: bounded contracts and high reuse value",
+    "P1": "Second wave: retain fixture and integration dependencies",
+    "P2": "Research or blocked: renderer/backend/source recovery coupling"
+  },
+  "candidates": [
+    {
+      "id": "hanakawa.boat",
+      "project": "hanakawa",
+      "title": "Boat forces and docking",
+      "category": [
+        "physics",
+        "vehicle"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "hanakawa/assets/boat-DaKAMpSv.js",
+          "sha256": "75ca8c7f4a38557e4b1734b85e36b405e98272018a7d56697ace6eb7f56c6c10"
+        },
+        {
+          "path": "hanakawa/assets/hullSpec-CNwDzYD8.js",
+          "sha256": "ce65d71373183f8070159532186afa8dbd516e0cc93f840a68e8cf94f4fdc6ba"
+        }
+      ],
+      "observed_mechanism": "Controls drive spool-up thrust, water-relative forces and forces at the hull; dockForces, boundaryForces and groundForces constrain movement. snapshot/interpolate separate simulation from display.",
+      "proposed_boundary": "Inject water velocity, terrain and dock queries into the boat solver; retain units and original coefficients.",
+      "dependencies": [
+        "Rigid-body integration",
+        "world water/ground queries",
+        "hull mass and displacement data"
+      ],
+      "proposed_verification": "Replay thrust, reverse, cross-current and dock/undock at fixed timesteps; compare position, heading and applied force traces.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "hanakawa.camera",
+      "project": "hanakawa",
+      "title": "Bridge-aware boat camera",
+      "category": [
+        "3c",
+        "camera"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "hanakawa/assets/camera-BZCFS0Jb.js",
+          "sha256": "918ba0effedd2892ca3dcbc793b123269dc39d8d2e1d331d4adb9094252746c2"
+        }
+      ],
+      "observed_mechanism": "Damped camera modes use floorAt, bridgeCeiling and lineOfSight; angle wrapping and analytic damping avoid abrupt turns.",
+      "proposed_boundary": "Camera target plus obstruction-query interface; keep helm and chase modes together until transitions match.",
+      "dependencies": [
+        "Three vectors",
+        "boat pose",
+        "bridge and ground services"
+      ],
+      "proposed_verification": "Drive under a low bridge, reverse and switch helm/chase; check clipping and continuity at 30/60/120 Hz.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "hanakawa.water",
+      "project": "hanakawa",
+      "title": "River surface and wake",
+      "category": [
+        "rendering",
+        "water"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "hanakawa/assets/water-BpetgGmD.js",
+          "sha256": "b6585277b4fd6289e10c0a0c7238d0d4e7582a7aae827705253dafed080bd047"
+        }
+      ],
+      "observed_mechanism": "Water rendering combines clipmap geometry, reflections, a boat mask and a wake grid with sources/weirs.",
+      "proposed_boundary": "One short river reach plus original water-query contract and a moving hull; preserve wake/shore inputs.",
+      "dependencies": [
+        "Three WebGPU/TSL",
+        "custom lighting",
+        "terrain channel data"
+      ],
+      "proposed_verification": "Compare the same bank, boat wake and reflection at original DPR; inspect seams and moving-grid resets.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "hanakawa.delivery",
+      "project": "hanakawa",
+      "title": "Delivery, passage and docking progression",
+      "category": [
+        "gameplay",
+        "persistence"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "hanakawa/assets/game-DXv9Pcsb.js",
+          "sha256": "79d52eaef97677740e66fadd2dfcee55fb91083b6a518e040e865f39a8800c55"
+        }
+      ],
+      "observed_mechanism": "Quest data gates cargo/passages/docks/rewards; bridge crossing checks interpolate across movement segments.",
+      "proposed_boundary": "A delivery state machine emitting events, with injected storage and location facts.",
+      "dependencies": [
+        "Route/quest data",
+        "boat load state",
+        "bridge/dock identifiers"
+      ],
+      "proposed_verification": "Replay deliveries, cross a gate in one large step, reload mid-route and ensure rewards are not duplicated.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "hanakawa.vegetation",
+      "project": "hanakawa",
+      "title": "Baked vegetation and impostors",
+      "category": [
+        "rendering",
+        "assets",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "hanakawa/assets/vegetation-C2QfA5c6.js",
+          "sha256": "0457189d10ffb4fe72638453bb3677ad19dbb8ad8a16c8f76917d990fbaf5ff7"
+        },
+        {
+          "path": "hanakawa/assets/vegetation/baked/manifest.json",
+          "sha256": "18bf8ce20e45330f91a74151525c4524472e215befca5b0816e2f9e2e58c7930"
+        },
+        {
+          "path": "hanakawa/assets/vegetation/impostors/manifest.json",
+          "sha256": "c2836d57f3015d8008743481fd70a4ed8deb41e2fd594313118bfd4915e51e18"
+        }
+      ],
+      "observed_mechanism": "Runtime consumes pre-baked compressed fields/atlases and distant impostors, separate from source GLB vegetation assets.",
+      "proposed_boundary": "A small near/far vegetation patch preserving the bake manifest and runtime decoder.",
+      "dependencies": [
+        "WebGPU materials",
+        "compressed binary layout",
+        "baked placement data"
+      ],
+      "proposed_verification": "Record bytes, decode time, draw counts and silhouettes while crossing LOD thresholds.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "monolith-wilds.terrain",
+      "project": "monolith-wilds",
+      "title": "Terrain streaming and worker jobs",
+      "category": [
+        "world",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "monolith-wilds/assets/terrain-MmovLCQt.js",
+          "sha256": "065b7d588604cdc2e34baa2a1fca167c6e4d33d54cb823e6b02b1ace9dc8d1e0"
+        },
+        {
+          "path": "monolith-wilds/assets/terrain-worker-DVcr_hr3.js",
+          "sha256": "c3287ad56c3090fb33273eba359d794f92c9c867e5e5f9f73fe17ef9182278c8"
+        }
+      ],
+      "observed_mechanism": "Quadtree selection/refinement and eviction cooperate with a worker pool and geometry allocator; result buffers include morph positions/normals.",
+      "proposed_boundary": "Terrain tile scheduler and geometry job contract around an injected height function.",
+      "dependencies": [
+        "Three WebGL buffers",
+        "worker transfer ownership",
+        "LOD morph data"
+      ],
+      "proposed_verification": "Fly a repeatable path; compare cracks, popping, job queue length and bounded memory after revisiting tiles.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "monolith-wilds.tour",
+      "project": "monolith-wilds",
+      "title": "Walk/fly/tour camera handoff",
+      "category": [
+        "3c",
+        "camera"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "monolith-wilds/assets/controls-DX7CeMlr.js",
+          "sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b"
+        },
+        {
+          "path": "monolith-wilds/assets/tour-Do76daLD.js",
+          "sha256": "5849bab548c1339af00d7ba6f9f1e89cc9a147fb56b2af8dd731646d0b00ab34"
+        }
+      ],
+      "observed_mechanism": "Walk/fly modes query terrain and obstacles; authored tour stops use orbit/push/crane/truck moves and bounded turning/FOV blending.",
+      "proposed_boundary": "Input modes plus camera handoff policy; author stops as data instead of copying landmarks.",
+      "dependencies": [
+        "Terrain/obstacle queries",
+        "pointer lock",
+        "landmark coordinates"
+      ],
+      "proposed_verification": "Interrupt every tour move with user input and switch walk/fly; verify no position snaps or stuck pointer lock.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "monolith-wilds.water",
+      "project": "monolith-wilds",
+      "title": "Water fields and worker baking",
+      "category": [
+        "water",
+        "rendering"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "monolith-wilds/assets/water-CMdFOwUw.js",
+          "sha256": "c557b8e6e0f79e67ebdc5114d05b6b4d55b9b3fe85ce2ee905fe06880a236e20"
+        },
+        {
+          "path": "monolith-wilds/assets/water-bake-worker-DfGbNK0h.js",
+          "sha256": "34ef4a07ddfbb9091f2c23fdba1b7d43b760b9a37223fb717151df0008e45dc3"
+        }
+      ],
+      "observed_mechanism": "Water uses wave bands/reflections; the bake worker builds height/SDF-related spatial fields for the surface.",
+      "proposed_boundary": "A bounded water region with the exact field-generation and sampling layout.",
+      "dependencies": [
+        "Three WebGL",
+        "worker field format",
+        "terrain sampling"
+      ],
+      "proposed_verification": "Freeze time and compare shore/depth/reflection samples; measure bake cost separately from steady rendering.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "monolith-wilds.landmarks",
+      "project": "monolith-wilds",
+      "title": "Procedural landmark construction",
+      "category": [
+        "world",
+        "assets"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "monolith-wilds/assets/builder-BZhEe_8v.js",
+          "sha256": "44ac78ed84d449b8866c33708e11f3b67ab9e9eb3f9dc59538215b1a01babd2c"
+        },
+        {
+          "path": "monolith-wilds/assets/temple-BUB7d4Jj.js",
+          "sha256": "1873389e869258afafc81e34ac3346d90b562cd81f8767746bedb52d968153b8"
+        },
+        {
+          "path": "monolith-wilds/assets/observatory-Yis9EN5I.js",
+          "sha256": "8f5ef74742b3b094440586521ab9c96443d0f3aa412eb8ea9d221379715f62b8"
+        }
+      ],
+      "observed_mechanism": "Separate landmark modules consume common construction helpers; authored structure lives in parameters and geometry code.",
+      "proposed_boundary": "One landmark using the original construction vocabulary and material registry.",
+      "dependencies": [
+        "Three geometry",
+        "shared builder/materials",
+        "world coordinate convention"
+      ],
+      "proposed_verification": "Generate the same seed twice; compare bounding boxes, geometry counts, collisions and silhouette snapshots.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "inkwave.3c",
+      "project": "inkwave",
+      "title": "Character locomotion and camera pipeline",
+      "category": [
+        "3c",
+        "animation"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "inkwave/src/game/actor.js",
+          "sha256": "e0fedbc7fc2b5df799223f2e77e3a795972eb4f779d822a43dea1a7e99a97074"
+        },
+        {
+          "path": "inkwave/src/game/character.js",
+          "sha256": "e47f7f97b9fc7c413adc31812f4367fc9a6f2bcd7b66459d023ead326ea65d4d"
+        },
+        {
+          "path": "inkwave/src/game/cameraRig.js",
+          "sha256": "9c2fd9f3ab67e9c349ba77c1423e23ebe237e8fce9338fb301ae3a6bee9f3fc4"
+        },
+        {
+          "path": "inkwave/src/game/player.js",
+          "sha256": "f532bbe5c19e038a8829b368d3cbf2d416c1405081df8f1681f75c5cbf123ef1"
+        }
+      ],
+      "observed_mechanism": "Actor, procedural character, camera rig and player input are separate modules but share movement/form/weapon state. Existing lab factories preserve this composition.",
+      "proposed_boundary": "Keep locomotion state separate from the rig; expose world queries and input ownership; use existing lab adapters as a migration example.",
+      "dependencies": [
+        "Three WebGL",
+        "paint/form policy",
+        "procedural rig semantics"
+      ],
+      "proposed_verification": "Replay run/jump/form/aim transitions; compare root motion and camera framing. Inspect existing lab QA; do not assume arbitrary GLB compatibility.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "inkwave.paint",
+      "project": "inkwave",
+      "title": "GPU painting and CPU surface ownership",
+      "category": [
+        "rendering",
+        "gameplay"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "inkwave/src/world/paint.js",
+          "sha256": "fd90c2ace5e1d46774b8c670c0662b260aeda619ea6ad7abd49cb43d96a8b91c"
+        },
+        {
+          "path": "inkwave/src/world/levelMaterial.js",
+          "sha256": "5263f93886cb9614f2e6fb0b2433e07a77f3d23d532e8c1b3b733c62fe29fbae"
+        }
+      ],
+      "observed_mechanism": "Paint appearance and gameplay ownership are separate concerns; the CPU grid supports movement/team queries while the GPU represents marks.",
+      "proposed_boundary": "Surface facts plus a rendering adapter; allow a second consumer such as hazard/boost zones.",
+      "dependencies": [
+        "Render targets",
+        "level UV mapping",
+        "team ownership grid"
+      ],
+      "proposed_verification": "Stamp boundaries, overlapping teams and corners; confirm visual color agrees with queried ownership, including a second gameplay consumer.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "inkwave.weapons",
+      "project": "inkwave",
+      "title": "Weapon events and audiovisual feedback",
+      "category": [
+        "combat",
+        "audio",
+        "vfx"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "inkwave/src/game/weapons.js",
+          "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f"
+        },
+        {
+          "path": "inkwave/src/fx/fxHooks.js",
+          "sha256": "3cd69a78018605456822f4685a58ecb477a65352bde4284bab11c41427d85d90"
+        },
+        {
+          "path": "inkwave/src/audio/audio.js",
+          "sha256": "55a816beb0b01c307c936457bc274f3c3b279090dc2d187890990ac5763fc3bf"
+        }
+      ],
+      "observed_mechanism": "Weapons, effect hooks and audio are separated files around gameplay events; existing lab work distinguishes presentation sequences from damage rules.",
+      "proposed_boundary": "Typed weapon events feeding effects/audio adapters; keep authoritative hit resolution outside presentation.",
+      "dependencies": [
+        "Actor/hit queries",
+        "pool ownership",
+        "paint world"
+      ],
+      "proposed_verification": "Use one recorded shot/hit sequence, check damage once and compare impact, sound and paint ordering.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "inkwave.bots",
+      "project": "inkwave",
+      "title": "Navigation and bot decision-making",
+      "category": [
+        "ai",
+        "world"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "inkwave/src/game/nav.js",
+          "sha256": "56d858e9a9fa8f3d556c074285cbe2cd75e78900be327d4fe158fdb48683f8a9"
+        },
+        {
+          "path": "inkwave/src/game/bots.js",
+          "sha256": "a3a5fea8c040eb4645643c16672bba23fd5d5cfc93475d067a10969ce2ac540d"
+        },
+        {
+          "path": "inkwave/src/world/level.js",
+          "sha256": "fd8048cbcc207bebe9ad8111aadd5ac60c22c8ed96cdd61c0cabfd22c1f29980"
+        }
+      ],
+      "observed_mechanism": "Bots consume navigation and level data rather than only chasing screen coordinates; level construction also defines collision context.",
+      "proposed_boundary": "Navigation queries and bot policy against a small original layout.",
+      "dependencies": [
+        "Level geometry",
+        "team/objective state",
+        "weapon reach"
+      ],
+      "proposed_verification": "Run seeded rounds; record unreachable objectives, wall collisions, stuck durations and route choice.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "longhoang-lyo.robot",
+      "project": "longhoang-lyo",
+      "title": "Terrain-following robot controller",
+      "category": [
+        "3c",
+        "physics"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "longhoang-lyo/public/assets/B-Z8xTec.js",
+          "sha256": "dfffeb91b1fc9269f3f13c825a78bade164b872b0fec0a6955966a7d247d1abd"
+        }
+      ],
+      "observed_mechanism": "Production bundle retains ground support/step/drop logic, Rapier bodies and fixed-step accumulation with display interpolation.",
+      "proposed_boundary": "A recovered controller around Rapier and support-query inputs; retain the original bundle as the reference.",
+      "dependencies": [
+        "Rapier collider groups/CCD",
+        "Three transforms",
+        "robot asset dimensions"
+      ],
+      "proposed_verification": "Drive slopes, ledges and steps at different render rates; compare support contacts and interpolated pose.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "longhoang-lyo.tracks",
+      "project": "longhoang-lyo",
+      "title": "Vehicle tracks and independent turret",
+      "category": [
+        "animation",
+        "vehicle"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "longhoang-lyo/public/assets/B-Z8xTec.js",
+          "sha256": "dfffeb91b1fc9269f3f13c825a78bade164b872b0fec0a6955966a7d247d1abd"
+        }
+      ],
+      "observed_mechanism": "Bundle implements track segments/model data and aim/steering relationships for player and enemy robots.",
+      "proposed_boundary": "Track animation driven by travel/turn measurements plus a separately aimed turret.",
+      "dependencies": [
+        "Original model pivots",
+        "instanced geometry",
+        "robot movement state"
+      ],
+      "proposed_verification": "Turn in place, reverse and aim across the hull; compare track phase and turret orientation.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "longhoang-lyo.assets",
+      "project": "longhoang-lyo",
+      "title": "Compressed model/texture loading pipeline",
+      "category": [
+        "assets",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "longhoang-lyo/public/assets/B-Z8xTec.js",
+          "sha256": "dfffeb91b1fc9269f3f13c825a78bade164b872b0fec0a6955966a7d247d1abd"
+        },
+        {
+          "path": "longhoang-lyo/public/basis/basis_transcoder.js",
+          "sha256": "8478b5b6d6b74e7d3082b89f6417321d8d1dc0307f2b30d4484bb11b441696a1"
+        }
+      ],
+      "observed_mechanism": "Deployed assets include GLB models and KTX2 textures with a local Basis transcoder.",
+      "proposed_boundary": "A loader example retaining decoder versions and compressed-texture support checks.",
+      "dependencies": [
+        "Three loaders",
+        "KTX2/Basis runtime",
+        "model/material metadata"
+      ],
+      "proposed_verification": "Cold-load offline on target GPU, count missing requests and verify compressed textures visually; keep fallback behavior explicit.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "longhoang-lyo.presentation",
+      "project": "longhoang-lyo",
+      "title": "Robot styling and gameplay transitions",
+      "category": [
+        "rendering",
+        "vfx"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "longhoang-lyo/public/assets/B-Z8xTec.js",
+          "sha256": "dfffeb91b1fc9269f3f13c825a78bade164b872b0fec0a6955966a7d247d1abd"
+        }
+      ],
+      "observed_mechanism": "The bundle contains material/outline modifications and effect timelines tied to robot gameplay and portfolio transitions.",
+      "proposed_boundary": "One robot material/effect sequence with named inputs, separated from portfolio navigation.",
+      "dependencies": [
+        "Version-specific shader hooks",
+        "GSAP timelines",
+        "asset licenses unconfirmed"
+      ],
+      "proposed_verification": "Freeze matching poses and lighting, compare outlines, effects and transition cleanup after repeated entry/exit.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "vox-arcana.spell-spec",
+      "project": "vox-arcana",
+      "title": "Local spell language to structured specification",
+      "category": [
+        "gameplay",
+        "ai-boundary"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "vox-arcana/public/js/spellbook.js",
+          "sha256": "5bb05de52d8fe4d233ad3c7d5c415b6a8dd4686bf8e36980cbe21361cf8db27d"
+        },
+        {
+          "path": "vox-arcana/public/js/elements.js",
+          "sha256": "e6e13f9e8dbf8fb2a71b2680121cb44d49c70022b1da30739c03e5c25dcab1a6"
+        }
+      ],
+      "observed_mechanism": "localParse maps bilingual phrases to element/shape/morph/trajectory/payload parameters. Jev parsing is a separate unavailable service path.",
+      "proposed_boundary": "Pure parse/normalize/validate specification stage; preserve the local rule parser without calling it AI inference.",
+      "dependencies": [
+        "Element/form tables",
+        "localization",
+        "explicit provider boundary"
+      ],
+      "proposed_verification": "Table-driven phrases and contradictory/out-of-range inputs; serialize normalized results and compare original casts.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "vox-arcana.spells",
+      "project": "vox-arcana",
+      "title": "Parameterized spell execution and effects",
+      "category": [
+        "combat",
+        "vfx"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "vox-arcana/public/js/spells.js",
+          "sha256": "354b1a7c08b396a9a182f1ab66e0fbc1d8d365c5d2ba1ecd7d87f356f7f4a05b"
+        },
+        {
+          "path": "vox-arcana/public/js/vfxkit.js",
+          "sha256": "8209b19fe8ff07868e935ab21cc631e1fc05eda09f96e79f5836f851a32e2a90"
+        }
+      ],
+      "observed_mechanism": "SpellSystem implements behavior from the normalized specification; VFX helpers represent the same parameters visually.",
+      "proposed_boundary": "One projectile plus one self/utility form through the original specification pipeline.",
+      "dependencies": [
+        "Three",
+        "world collision",
+        "combat targets",
+        "effect pools"
+      ],
+      "proposed_verification": "Cast the same specification with fixed seed; compare trajectory, contacts, duration and effects at multiple frame rates.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "vox-arcana.reactions",
+      "project": "vox-arcana",
+      "title": "Element reaction and combat rules",
+      "category": [
+        "combat",
+        "gameplay"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "vox-arcana/public/js/elements.js",
+          "sha256": "e6e13f9e8dbf8fb2a71b2680121cb44d49c70022b1da30739c03e5c25dcab1a6"
+        },
+        {
+          "path": "vox-arcana/public/js/combat.js",
+          "sha256": "40ce31c76dbe55f93f1c31f9bee75c339796d383aec5d630aa125c18029fce24"
+        }
+      ],
+      "observed_mechanism": "reactionFor and applyHit combine aura/element data with Combatant state and enhancements.",
+      "proposed_boundary": "Reaction resolution and damage/status events, independent of spell text entry.",
+      "dependencies": [
+        "Element/shape balance data",
+        "combatant state"
+      ],
+      "proposed_verification": "Cover reaction order, immunity, repeated hits and status expiration; assert exact health/status results.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "vox-arcana.magic-circle",
+      "project": "vox-arcana",
+      "title": "Worker-painted magic circles",
+      "category": [
+        "vfx",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "vox-arcana/public/js/magicCircle.js",
+          "sha256": "55678709a81eb6f135629b12749382320a136779723a6f8aa6b6b19e8cec305a"
+        },
+        {
+          "path": "vox-arcana/public/js/circleWorker.js",
+          "sha256": "9939640160f790d608ba8221ab3c68c96108a8fe0fac9264f7f890a1e2cae918"
+        },
+        {
+          "path": "vox-arcana/public/js/circlePaint.js",
+          "sha256": "3758ff9d1507c92ae2f40cb990e4ced48292f6f763989254c1dda8cd13b02563"
+        }
+      ],
+      "observed_mechanism": "Circle geometry/presentation and paint generation are separated into runtime and worker modules.",
+      "proposed_boundary": "One circle renderer with a serializable paint job and bounded result cache.",
+      "dependencies": [
+        "Canvas worker support",
+        "Three texture lifecycle",
+        "spell/style parameters"
+      ],
+      "proposed_verification": "Repeat identical jobs, replace spells rapidly and dispose while a worker finishes; check no stale texture or memory growth.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "sakuragaoka-station.world-contract",
+      "project": "sakuragaoka-station",
+      "title": "Procedural world build contract",
+      "category": [
+        "world",
+        "architecture"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "sakuragaoka-station/public/src/core/ctx.js",
+          "sha256": "3c4e8e1a9f8db612eb2648f0b7c78d9f0d52b45b86d4b53d0e98c6d96b4d078a"
+        },
+        {
+          "path": "sakuragaoka-station/public/src/core/geo.js",
+          "sha256": "3b64528e783e433d7651a1e5dc6924e98b3b9173870875e511573c820abbc234"
+        },
+        {
+          "path": "sakuragaoka-station/public/src/main.js",
+          "sha256": "978f97cbed597f2e0f61d16b2187401824754b946ed81999c01cab77d1b1af95"
+        }
+      ],
+      "observed_mechanism": "World modules share construction/context helpers and register static geometry, dynamic objects and update work.",
+      "proposed_boundary": "Document and reproduce one block builder using explicit services and deterministic time/randomness.",
+      "dependencies": [
+        "Three 0.170",
+        "material and physics services",
+        "fixed world coordinates"
+      ],
+      "proposed_verification": "Build twice with the same seed; compare object/collider counts and validate teardown of registered updates.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "sakuragaoka-station.batch-atlas",
+      "project": "sakuragaoka-station",
+      "title": "Material-aware batching and texture atlases",
+      "category": [
+        "rendering",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "sakuragaoka-station/public/src/core/batch2.js",
+          "sha256": "cc224240ab1ac2d61af1d3ad96136cc2559c5af29d912da1c167f5a0e69a6c7d"
+        }
+      ],
+      "observed_mechanism": "batchStatic bakes material colors into vertex colors, packs eligible canvas textures into atlas pages, and partitions near/far spatial cells. It excludes skinned/instanced/morph/custom cases.",
+      "proposed_boundary": "Extract batchStatic with its eligibility checks and material signatures intact.",
+      "dependencies": [
+        "Three 0.170",
+        "toon material factory",
+        "Canvas 2D",
+        "UV/color-space semantics"
+      ],
+      "proposed_verification": "Compare before/after screenshots and draw calls; test transparent materials, repeated UVs and non-batchable objects.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "sakuragaoka-station.walk",
+      "project": "sakuragaoka-station",
+      "title": "Lightweight walking and colliders",
+      "category": [
+        "3c",
+        "physics"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "sakuragaoka-station/public/src/core/physics.js",
+          "sha256": "484edf5e19595224f3fb26dbddfcd6033e96c37ee5dbf04e6b0e216b7397d811"
+        },
+        {
+          "path": "sakuragaoka-station/public/src/core/player.js",
+          "sha256": "343495b618a834a542c0177d92eef1c0f3b8dc6581e8607e07f58d9e49e396db"
+        }
+      ],
+      "observed_mechanism": "The custom physics layer exposes boxes, ramps/stairs and cylinders for a walkable procedural scene.",
+      "proposed_boundary": "A walker with primitive query inputs and stair/ramp fixtures.",
+      "dependencies": [
+        "World scale",
+        "player shape",
+        "pointer lock/touch input"
+      ],
+      "proposed_verification": "Walk ramps, stairs, corners and dynamic obstacles; verify grounding and speed independent of render rate.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "sakuragaoka-station.train",
+      "project": "sakuragaoka-station",
+      "title": "Scheduled train choreography",
+      "category": [
+        "world",
+        "animation"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "sakuragaoka-station/public/src/world/trains/schedule.js",
+          "sha256": "debfb8c0506120c103dc4ef9055ca32993455c2cd9e0026e7b9c88381d9ba3f9"
+        },
+        {
+          "path": "sakuragaoka-station/public/src/world/trains/builder.js",
+          "sha256": "7afd999ae51445b0649f54b1d0729667bfd00af25c3378a147b91ed01d881ab2"
+        },
+        {
+          "path": "sakuragaoka-station/public/src/world/trains/car.js",
+          "sha256": "58a684a01c9c6f675e3e21f241fd447dddfb0db7a0b1492012de34ebb4e9d409"
+        }
+      ],
+      "observed_mechanism": "Train construction is separate from schedule data/logic, enabling timed world activity in the station scene.",
+      "proposed_boundary": "One train and platform driven by a shared clock; retain the original timing relationship.",
+      "dependencies": [
+        "Rail/station coordinates",
+        "train geometry",
+        "world updates"
+      ],
+      "proposed_verification": "Sample arrival, dwell and departure through a complete original cycle, then jump time and resume.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "smartgame-town.avatar",
+      "project": "smartgame-town",
+      "title": "Layered avatar compositing and caches",
+      "category": [
+        "assets",
+        "ui"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "smartgame-town/public/town/js/town.js",
+          "sha256": "90f4cc882365616f0af7b2f276e2af5a37df1f3781b23841921389835b1dd44e"
+        }
+      ],
+      "observed_mechanism": "Avatar code transforms/flips part canvases and caches results with bounded map eviction; original part assets supply the visual vocabulary.",
+      "proposed_boundary": "Avatar composition from explicit part IDs and transforms with bounded cache ownership.",
+      "dependencies": [
+        "Canvas 2D",
+        "part catalog and images",
+        "original layer order"
+      ],
+      "proposed_verification": "Compare multiple outfits, mirrored offsets and cache eviction; verify every part resolves offline.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "smartgame-town.room",
+      "project": "smartgame-town",
+      "title": "Room dimensions and furnishing state",
+      "category": [
+        "world",
+        "gameplay"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "smartgame-town/public/town/js/town.js",
+          "sha256": "90f4cc882365616f0af7b2f276e2af5a37df1f3781b23841921389835b1dd44e"
+        }
+      ],
+      "observed_mechanism": "Room tiers define cell counts and upgrades; furnishing placement shares world/UI state inside the bundle.",
+      "proposed_boundary": "A local room-data editor and placement validator, independent of account purchase operations.",
+      "dependencies": [
+        "Room/grid schema",
+        "furniture catalog",
+        "collision and UI state"
+      ],
+      "proposed_verification": "Load layouts at each supported room size, validate occupied cells and preserve transforms through save/reload.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "smartgame-town.input",
+      "project": "smartgame-town",
+      "title": "Modal UI and world input ownership",
+      "category": [
+        "3c",
+        "ui"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "smartgame-town/public/town/js/town.js",
+          "sha256": "90f4cc882365616f0af7b2f276e2af5a37df1f3781b23841921389835b1dd44e"
+        }
+      ],
+      "observed_mechanism": "Town entry/avatar editing and modal flows coexist with world input; some state changes are gated on asynchronous account operations.",
+      "proposed_boundary": "Explicit active-input owner and cancellation policy around editor/gameplay transitions.",
+      "dependencies": [
+        "DOM event routing",
+        "avatar state",
+        "account lifecycle for online branches"
+      ],
+      "proposed_verification": "Hold movement while opening/closing editor/dialogs; verify no stuck keys or movement behind blocking menus.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "smartgame-town.services",
+      "project": "smartgame-town",
+      "title": "Account-epoch asynchronous service boundary",
+      "category": [
+        "network",
+        "persistence"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "smartgame-town/public/town/js/town.js",
+          "sha256": "90f4cc882365616f0af7b2f276e2af5a37df1f3781b23841921389835b1dd44e"
+        }
+      ],
+      "observed_mechanism": "Client write queues and epoch checks guard asynchronous account changes, but PHP implementations are absent.",
+      "proposed_boundary": "Document the request/state machine as a reference; do not provide fake successful account/chat/payment endpoints.",
+      "dependencies": [
+        "Unavailable PHP backend",
+        "session/auth semantics",
+        "local persistence"
+      ],
+      "proposed_verification": "Offline client must report unavailable operations; a future authorized server integration must test account changes during in-flight writes.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "everdrift.wind-vfx",
+      "project": "everdrift",
+      "title": "Instanced wind volumes",
+      "category": [
+        "vfx",
+        "rendering"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "everdrift/extracted/shaders/fx_wind.gdshader",
+          "sha256": "6f5e1d439c3cf6e42bd2492181658979744153b416508a9f5a20423549b01f6e"
+        }
+      ],
+      "observed_mechanism": "Godot MultiMesh custom attributes encode spawn/lifetime/twist/style; shader deforms tube geometry into multiple wind effects with age-based fade.",
+      "proposed_boundary": "A shader algorithm port with explicit instance attribute schema; source shader remains the authority.",
+      "dependencies": [
+        "Godot shader built-ins",
+        "MultiMesh geometry",
+        "alpha blending"
+      ],
+      "proposed_verification": "Freeze age/seed/style and compare silhouettes and fade; test every style before a GLSL/TSL adaptation is called equivalent.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "everdrift.toon-water",
+      "project": "everdrift",
+      "title": "Depth-based toon water",
+      "category": [
+        "water",
+        "rendering"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "everdrift/extracted/shaders/world_water.gdshader",
+          "sha256": "c304f7e38b4bb4bb851b41505048ea66567df938e7b6117c113c52f0f6abd0ea"
+        }
+      ],
+      "observed_mechanism": "Depth reconstruction controls shallow/deep colors and shoreline foam; Voronoi edges add crest lines and vertex swell perturbs normals.",
+      "proposed_boundary": "Water material plus depth-input adapter; handle target engine projection/depth conventions explicitly.",
+      "dependencies": [
+        "Godot depth texture",
+        "world lighting include",
+        "render ordering"
+      ],
+      "proposed_verification": "Compare shallow/deep/shore samples from a fixed camera; validate depth reconstruction before adjusting style.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "everdrift.foliage",
+      "project": "everdrift",
+      "title": "Instanced foliage motion and tint",
+      "category": [
+        "rendering",
+        "world"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "everdrift/extracted/shaders/world_foliage.gdshader",
+          "sha256": "0796fb4eae0325b7bddc57e48e9a8de6fa7fc8a9c0ebfe6119d52d1e6df24b0b"
+        }
+      ],
+      "observed_mechanism": "Vertex height controls bending; per-instance RGB and vertex alpha select tinted parts, while an up-biased normal blends vegetation with ground.",
+      "proposed_boundary": "One instanced grass/flower patch with authored vertex masks and shared clock.",
+      "dependencies": [
+        "Godot instance attributes",
+        "world lighting include",
+        "original mesh masks"
+      ],
+      "proposed_verification": "Compare roots/tips, per-instance color and ground transition at fixed time.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "everdrift.transition",
+      "project": "everdrift",
+      "title": "Screen transitions and speed feedback",
+      "category": [
+        "vfx",
+        "ui"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "everdrift/extracted/shaders/ui_transition.gdshader",
+          "sha256": "da2c221e8df456a6f00ce6eebcc89105bd660ea8a50768564151e15cb301a053"
+        },
+        {
+          "path": "everdrift/extracted/shaders/fx_speedlines.gdshader",
+          "sha256": "6c98b2f327da6726451475366429612e1fe0ba8fe3f10d3ba0b206dacf52b398"
+        }
+      ],
+      "observed_mechanism": "Readable shaders preserve transition and movement feedback even though game scripts are compiled GDC bytecode.",
+      "proposed_boundary": "Shader examples first; flight/movement behavior remains a separate decompilation investigation.",
+      "dependencies": [
+        "Godot screen coordinates",
+        "uniform timing",
+        "compiled controller not recovered"
+      ],
+      "proposed_verification": "Sweep transition/speed uniforms and verify aspect-ratio behavior; do not claim original movement source recovery.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "scorch-podracer.racing",
+      "project": "scorch-podracer",
+      "title": "Arcade racer forces and track coordinates",
+      "category": [
+        "physics",
+        "vehicle"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "scorch-podracer/public/index.html",
+          "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+        }
+      ],
+      "observed_mechanism": "stepRacer resolves forward/lateral velocity, drag, speed-dependent yaw, off-road/air modifiers and boost energy; track projection supplies progress and lateral offset.",
+      "proposed_boundary": "Track query interface plus one racer state/input step preserving coefficients.",
+      "dependencies": [
+        "Track tables",
+        "vehicle stats",
+        "collision/barrier queries"
+      ],
+      "proposed_verification": "Replay throttle/brake/reverse/boost and off-road motion; compare progress and velocity traces at fixed step.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "scorch-podracer.race-ai",
+      "project": "scorch-podracer",
+      "title": "Look-ahead racing AI",
+      "category": [
+        "ai",
+        "vehicle"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "scorch-podracer/public/index.html",
+          "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+        }
+      ],
+      "observed_mechanism": "aiInput chooses a look-ahead point, changes lanes, avoids racers and estimates corner speed before choosing throttle/brake/boost.",
+      "proposed_boundary": "AI produces the same input schema as the player against track/racer queries.",
+      "dependencies": [
+        "Track curvature",
+        "vehicle yaw/speed limits",
+        "nearby racers"
+      ],
+      "proposed_verification": "Seed lanes, run multiple laps and report wall impacts/stuck time; test narrow sections and overtakes.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "scorch-podracer.camera",
+      "project": "scorch-podracer",
+      "title": "Racing chase/cockpit/finish camera",
+      "category": [
+        "camera",
+        "3c"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "scorch-podracer/public/index.html",
+          "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+        }
+      ],
+      "observed_mechanism": "updateCamera blends target heading/height, speed FOV, boost and shake, with distinct menu, cockpit and finish policies.",
+      "proposed_boundary": "Camera mode state plus race pose/velocity/event inputs.",
+      "dependencies": [
+        "Three camera",
+        "track height",
+        "vehicle pose",
+        "race phase"
+      ],
+      "proposed_verification": "Compare menu→countdown→race→finish and reverse view; verify no angle-wrap snap and retain original shake.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "scorch-podracer.track",
+      "project": "scorch-podracer",
+      "title": "Procedural track and stable shadow framing",
+      "category": [
+        "rendering",
+        "world"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "scorch-podracer/public/index.html",
+          "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+        }
+      ],
+      "observed_mechanism": "buildTrackMesh uses sampled centerline/lateral geometry; updateSunShadow snaps shadow framing to a texel grid.",
+      "proposed_boundary": "One generated track section and its matching collision/query representation.",
+      "dependencies": [
+        "Three embedded version",
+        "track samples",
+        "shadow-map resolution"
+      ],
+      "proposed_verification": "Compare visible road and drivable boundaries; move camera slowly to inspect shadow shimmer without reducing quality.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "moritsuki.progress",
+      "project": "moritsuki",
+      "title": "Shared progression across minigames",
+      "category": [
+        "gameplay",
+        "persistence"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "moritsuki/public/moritsuki/src/shared/progress.js",
+          "sha256": "e8e9dad41d05fe712365875b0fe033a4067e00457d199c1a835a52b976430f03"
+        },
+        {
+          "path": "moritsuki/public/moritsuki/src/shared/items.js",
+          "sha256": "d54128fcc6cbe97324d4805051d35d6c6d0ef9043e5158229612993de47691c4"
+        },
+        {
+          "path": "moritsuki/public/moritsuki/src/shared/townLink.js",
+          "sha256": "9e4337adc49249d84b7f882b963426f9d496c9c98ae80114789589a867b6c22a"
+        }
+      ],
+      "observed_mechanism": "Separate shared modules connect items/progress and town return flow across five game entries.",
+      "proposed_boundary": "Versioned progression store and return-location messages with game-specific adapters.",
+      "dependencies": [
+        "LocalStorage origin",
+        "item IDs",
+        "town routing"
+      ],
+      "proposed_verification": "Earn an item in a minigame, return to town and reload; verify idempotence and shared-state consistency.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "moritsuki.characters",
+      "project": "moritsuki",
+      "title": "Worker-generated procedural characters",
+      "category": [
+        "assets",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "moritsuki/public/moritsuki/src/town/kid/kid.worker.js",
+          "sha256": "4aee097f7f44eb5b908bc1733c7250e40c6232fdb382195759f17bef06dbe9d9"
+        },
+        {
+          "path": "moritsuki/public/moritsuki/src/town/people/people.worker.js",
+          "sha256": "07db22ee02d5d554ac00a4aa683ef808c00f52da4f7b49d0af5883eebe9ab021"
+        },
+        {
+          "path": "moritsuki/public/moritsuki/src/town/kid/model.js",
+          "sha256": "eb009471861d4c7f5b67c67d9af2ec7095deaa75f02e6792815b6961bc2c2fa6"
+        }
+      ],
+      "observed_mechanism": "Character model construction is split into worker jobs and runtime assembly, including separate kid and NPC pipelines.",
+      "proposed_boundary": "One parameterized character job with a versioned transferable result schema.",
+      "dependencies": [
+        "Geometry/texture buffers",
+        "worker ownership",
+        "material assembly"
+      ],
+      "proposed_verification": "Build identical parameters twice, cancel/restart generation and compare buffer bounds and visible shape.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "moritsuki.fish",
+      "project": "moritsuki",
+      "title": "Procedural fish surface generation",
+      "category": [
+        "assets",
+        "rendering"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "moritsuki/public/moritsuki/src/fish/fishpaint.worker.js",
+          "sha256": "1162ca546c4e45d0680e79db22c85d0d2e418b2fa1ae27bb01b7dd109488c11e"
+        },
+        {
+          "path": "moritsuki/public/moritsuki/src/unagi/fish/fishpaint.worker.js",
+          "sha256": "8f9a2e80b11c5423e5ce58222786ad87881e5d988585c9359bff9e1e91dfde8f"
+        }
+      ],
+      "observed_mechanism": "Fish texture generation is available as readable worker code in both common and eel-game pipelines.",
+      "proposed_boundary": "One species texture generator with explicit seed/palette/UV contract.",
+      "dependencies": [
+        "Worker Canvas support",
+        "species mesh UV layout",
+        "material parameters"
+      ],
+      "proposed_verification": "Compare seeded surface maps and the rendered fish from several angles; retain species-specific parameters.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "moritsuki.water-pass",
+      "project": "moritsuki",
+      "title": "Depth-composited water investigation",
+      "category": [
+        "water",
+        "rendering"
+      ],
+      "stage": "source-inspected-runtime-blocked",
+      "source_refs": [
+        {
+          "path": "moritsuki/public/moritsuki/src/hamaguri/water.js",
+          "sha256": "9bcd33802e173771248996adb69cd8635b644575c994013ee535f808b948e659"
+        },
+        {
+          "path": "moritsuki/public/moritsuki/src/hamaguri/post.js",
+          "sha256": "5b1660424e3059bc62c579b0206f5e6105bb1c7306cb24b159de23610658bb58"
+        }
+      ],
+      "observed_mechanism": "WaterPass reads color/depth, beach height and murk inputs and reconstructs camera rays. Disabling WaterPass made the scene visible in diagnostic runs; the original site also reproduces black output.",
+      "proposed_boundary": "Quarantined reference until the depth/material path is diagnosed; not a ready reusable water module.",
+      "dependencies": [
+        "Three 0.170",
+        "HalfFloat render target",
+        "depth texture",
+        "matrix uniforms"
+      ],
+      "proposed_verification": "Reduce to a minimal original pass chain and inspect finite color/depth values. Preserve the effect and original graphics; never use effect removal as the fix.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "tidewater.fishing",
+      "project": "tidewater",
+      "title": "Fishing tension state machine",
+      "category": [
+        "gameplay"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tidewater/upstream/src/game/CatchMinigame.js",
+          "sha256": "d1d0d6e4db854bdefa5a5b40a7a4ddc210ac52f8fd2396e1c8389cca0619a4d2"
+        },
+        {
+          "path": "tidewater/upstream/src/game/FishTable.js",
+          "sha256": "d57d3df458aed23488b2d5b15c3ac369009afeb7f9b53d95f646b4ab50ed4b03"
+        }
+      ],
+      "observed_mechanism": "CatchMinigame.update integrates tension, line distance, fish stamina and surges with injected RNG; outcomes include caught, snapped and escaped.",
+      "proposed_boundary": "Pure fishing simulation plus a tiny input/HUD adapter.",
+      "dependencies": [
+        "FishTable balance data",
+        "seconds/metres/kg conventions",
+        "injected RNG"
+      ],
+      "proposed_verification": "Seed fish surges; exercise all terminal outcomes, sustained overload/slack and multiple timesteps.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "tidewater.economy",
+      "project": "tidewater",
+      "title": "Inventory, fish records and saves",
+      "category": [
+        "persistence",
+        "gameplay"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tidewater/upstream/src/game/GameState.js",
+          "sha256": "685f094a70be6b576ee2e8d50ff500922a494da27a60444d3915ec2cb91b0c4e"
+        }
+      ],
+      "observed_mechanism": "GameState owns inventory capacity, fish records, money/upgrades/fuel and storage; records can update even when a catch exceeds hold capacity.",
+      "proposed_boundary": "Inject storage and events; isolate economy from rendering/boat controls.",
+      "dependencies": [
+        "Item/fish/upgrade tables",
+        "save version",
+        "storage failures"
+      ],
+      "proposed_verification": "Catch with full hold, sell, buy, reload malformed/old saves; check balances and non-duplicated records.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "tidewater.ocean-query",
+      "project": "tidewater",
+      "title": "FFT ocean with asynchronous surface queries",
+      "category": [
+        "water",
+        "physics"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tidewater/upstream/src/ocean/OceanFFT.js",
+          "sha256": "0b49481bdd7aaad20d0cadf4ae5a079f6fca71d712f46b281bde44ab0d03f208"
+        },
+        {
+          "path": "tidewater/upstream/src/ocean/WaterQuery.js",
+          "sha256": "6d00c2638c137bf763782c1930477b7a09c94ef4dac08f980200eabb9f46bf76"
+        },
+        {
+          "path": "tidewater/upstream/src/player/BoatController.js",
+          "sha256": "8e63f7858d86493f89ff228373f4a327380eda2b0735e3858651b1e4f999534b"
+        }
+      ],
+      "observed_mechanism": "GPU ocean displacement feeds query compute/readback. WaterQuery records result time, inputs, version and latency because CPU results arrive 1–3 frames later.",
+      "proposed_boundary": "Keep ocean surface sampling, latency handling and boat integration as a coupled example initially.",
+      "dependencies": [
+        "Custom WebGPU engine",
+        "WGSL/storage buffers",
+        "readback ring",
+        "boat settings"
+      ],
+      "proposed_verification": "Compare visible water and buoyancy sample heights with timestamps; stress readback delays and wave changes.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "tidewater.shore-wake",
+      "project": "tidewater",
+      "title": "Near-shore water and boat wakes",
+      "category": [
+        "water",
+        "rendering"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tidewater/upstream/src/ocean/ShoreSim.js",
+          "sha256": "fe121eb60c1929382dbdbf314f0ef2b43b44042ddae6363177711a774ddbe2b0"
+        },
+        {
+          "path": "tidewater/upstream/src/ocean/WakeSim.js",
+          "sha256": "4868b0443155f1a96d7f3675ec6ce0c54d28ec79a00c365e03f0d45979fe9c82"
+        }
+      ],
+      "observed_mechanism": "Dedicated near-shore and wake simulations participate in the ocean surface/query architecture.",
+      "proposed_boundary": "A small shoreline plus one boat with the original GPU pass scheduling.",
+      "dependencies": [
+        "Custom compute wrappers",
+        "terrain depth",
+        "FFT surface",
+        "query composition"
+      ],
+      "proposed_verification": "Compare shoreline/wake interactions at fixed path/time, including grid recentering and GPU resource lifetime.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "shabondama-biyori.director",
+      "project": "shabondama-biyori",
+      "title": "Cinematic camera director with user handoff",
+      "category": [
+        "camera",
+        "3c"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/director.js",
+          "sha256": "b907f4f176d5ddf2ea574c8abe7d0435d95e2e441f1abf91b591998f9c4936cc"
+        }
+      ],
+      "observed_mechanism": "Director coordinates authored spots and title/blow/follow/inside/drift/pop states with manual gaze, FOV, focus and film/fade values.",
+      "proposed_boundary": "Bubble target plus a camera/director state machine, keeping manual-input handoff explicit.",
+      "dependencies": [
+        "Bubble state",
+        "world landmarks",
+        "ground/obstacle queries",
+        "post-processing uniforms"
+      ],
+      "proposed_verification": "Replay blow→follow→inside→pop, interrupt with drag, and verify smooth framing and no stuck input.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "shabondama-biyori.wind",
+      "project": "shabondama-biyori",
+      "title": "Shared wind field and bubble flight",
+      "category": [
+        "physics",
+        "world"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/wind.js",
+          "sha256": "4fc385c1400aac069e7979d155c9f7107c21e72bf4690ba8c54955c2ff672e95"
+        },
+        {
+          "path": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/flight.js",
+          "sha256": "30a4d4321ebcc73f22aa61d396406d47930830658a0bc3026883d0429e827690"
+        }
+      ],
+      "observed_mechanism": "Wind exposes gust and curl fields; Flight combines terrain slopes, gorge flow, thermals and obstacle-aware motion. Visual vegetation and moving bubbles share wind concepts.",
+      "proposed_boundary": "Wind query with explicit clock/seed, plus flight adapter injecting terrain and obstacles; extract gorge assumptions into data.",
+      "dependencies": [
+        "Noise functions",
+        "authored layout",
+        "JS/GLSL field agreement"
+      ],
+      "proposed_verification": "Sample CPU/GPU wind at matching points/time; replay bubble paths near slopes, trees and rising thermals.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "shabondama-biyori.bubble",
+      "project": "shabondama-biyori",
+      "title": "Thin-film bubble rendering",
+      "category": [
+        "rendering",
+        "vfx"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "shabondama-biyori/public/_f/1790342986-3d06/src/render/bubbles.js",
+          "sha256": "365e44287413b9a1c424b241e1aa2bcd5838743b06e7dfdf61a1f4103ce62dee"
+        }
+      ],
+      "observed_mechanism": "FILM_GLSL and filmD compute reflection/thickness; BubbleRenderer uses instance data, 3D film noise and depth/environment inputs.",
+      "proposed_boundary": "One bubble material and instanced list adapter, retaining sorting and depth dependencies.",
+      "dependencies": [
+        "Three r186",
+        "depth/environment textures",
+        "3D film noise",
+        "transparent ordering"
+      ],
+      "proposed_verification": "Compare front/back reflection at fixed age and light; test intersecting bubbles and foreground depth at original DPR.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "shabondama-biyori.fauna",
+      "project": "shabondama-biyori",
+      "title": "Simulation/render separation for ambient wildlife",
+      "category": [
+        "ai",
+        "animation"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "shabondama-biyori/public/_f/1790342986-3d06/src/sim/fauna_birds.js",
+          "sha256": "83344b0162821f89f3378a59a580efe75aa4e94d27ab23b766606ae6fb0a85d9"
+        },
+        {
+          "path": "shabondama-biyori/public/_f/1790342986-3d06/src/render/species_birds.js",
+          "sha256": "1c2c70aca3da01b6f29a0dd3d18bef3735069fe624412105b5522bcc63b0532d"
+        }
+      ],
+      "observed_mechanism": "Bird behavior and species rendering live in separate simulation and render modules.",
+      "proposed_boundary": "One ambient species producing pose/state snapshots into an instanced or pooled renderer.",
+      "dependencies": [
+        "World/wind queries",
+        "species shape conventions",
+        "shared time"
+      ],
+      "proposed_verification": "Freeze/replay simulation snapshots and compare visible poses; measure update/render cost separately.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "arkenfall.combat",
+      "project": "arkenfall",
+      "title": "Action combat, input windows and hit sweeps",
+      "category": [
+        "combat",
+        "animation"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "arkenfall/public/assets/combat-DANZZ0C7.js",
+          "sha256": "324cf55415cffde0b48c3de9a6f83505427b4aa11a4a0c6723742754f8b5d493"
+        },
+        {
+          "path": "arkenfall/public/assets/Actor-CPc2Vruf.js",
+          "sha256": "c17f6b77964a68e6eb7bbfa5ea313b77618e8540665e3dd4cac7e8742b373589"
+        },
+        {
+          "path": "arkenfall/public/assets/anim-exnbZ3yq.js",
+          "sha256": "bd987938d0fa2b1cafb6e36e80eb8797ed4e8320a9cf078a79929cfd35b6887c"
+        }
+      ],
+      "observed_mechanism": "Combat combines buffered actions, parry/charge/combo policies, swept attack trails and root motion; Actor resolves health/poise and hit outcomes.",
+      "proposed_boundary": "One weapon/enemy fixture exposing input, pose samples, sweep queries and combat events.",
+      "dependencies": [
+        "Procedural animation pose",
+        "actor registry",
+        "collision/target selection",
+        "time policies"
+      ],
+      "proposed_verification": "Replay combo/charge/parry/dodge windows at fixed step; ensure a sweep hits once and preserves stagger/knockback.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "arkenfall.camera",
+      "project": "arkenfall",
+      "title": "Combat lock-on and obstruction recovery",
+      "category": [
+        "camera",
+        "3c"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "arkenfall/public/assets/camera-CsWg7FPD.js",
+          "sha256": "3c0d88088db1aa18eaec66d3f34e4fd36a92a3ee48686363fdb8f13980207e0a"
+        }
+      ],
+      "observed_mechanism": "Camera uses lock candidates, trunk obstruction queries, pivot clamps and recovery/handoff logic with FOV and shake.",
+      "proposed_boundary": "Target pose plus candidate/obstruction services; separate shot policy from world geometry.",
+      "dependencies": [
+        "Three vectors",
+        "lock state",
+        "world trunk/obstacle queries"
+      ],
+      "proposed_verification": "Circle a target near trees, switch lock and enter boss framing; check near-plane clipping and recovery continuity.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "arkenfall.cache",
+      "project": "arkenfall",
+      "title": "Versioned procedural resource cache",
+      "category": [
+        "assets",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "arkenfall/public/assets/cache-DIhMlTLC.js",
+          "sha256": "eb0926a458b395688e75f18e652d284aed409617756627dfb91cc1ef0696067f"
+        }
+      ],
+      "observed_mechanism": "Small IndexedDB helper versions keys, clears older prefixes and fails softly when cache access is unavailable.",
+      "proposed_boundary": "A cache adapter returning optional results; keep generated resource format/version in the caller.",
+      "dependencies": [
+        "IndexedDB",
+        "generation version prefix",
+        "worker result serialization"
+      ],
+      "proposed_verification": "Test empty/warm/old-version/denied storage and late worker completion; gameplay must still initialize.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "arkenfall.schedule",
+      "project": "arkenfall",
+      "title": "Ordered simulation/render stages",
+      "category": [
+        "architecture",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "arkenfall/public/assets/contracts-CvM_HOZo.js",
+          "sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d"
+        }
+      ],
+      "observed_mechanism": "Named numeric stage order places input/player/combat/enemies before camera/effects/audio/UI and final render.",
+      "proposed_boundary": "Explicit phase registration with deterministic order and lifecycle ownership.",
+      "dependencies": [
+        "World services",
+        "fixed/variable time split",
+        "cross-stage state dependencies"
+      ],
+      "proposed_verification": "Trace stage ordering, pause/resume and disposal; reject duplicate/unregistered handlers in a future adapter.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "tableparty-kart.race",
+      "project": "tableparty-kart",
+      "title": "Track-relative kart simulation",
+      "category": [
+        "physics",
+        "vehicle"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tableparty-kart/public/assets/kart-7vz70Zig.js",
+          "sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa"
+        },
+        {
+          "path": "tableparty-kart/public/assets/trackProtocol-OIX5LHKx.js",
+          "sha256": "8b91e097770508d9576cdc0c47198c19bd1f00e7472c9a8665c9c1f50229799c"
+        }
+      ],
+      "observed_mechanism": "Track helpers provide projection/loop/rail/support queries; stepDriver manages drift, boost, airborne/tricks, rescue and progress/checkpoints.",
+      "proposed_boundary": "Track query plus driver state/input step; preserve track format and vehicle tuning.",
+      "dependencies": [
+        "Course specifications",
+        "character stats",
+        "track protocol",
+        "original timestep"
+      ],
+      "proposed_verification": "Replay drift release, ramp/trick landing, off-track rescue and gate crossing; compare state traces with original client.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "tableparty-kart.bots",
+      "project": "tableparty-kart",
+      "title": "Racing and battle AI",
+      "category": [
+        "ai",
+        "gameplay"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tableparty-kart/public/assets/kart-7vz70Zig.js",
+          "sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa"
+        }
+      ],
+      "observed_mechanism": "botInput, curveAt and pack/rival pacing share the race state; battle has separate shot and rotation handling.",
+      "proposed_boundary": "Bot input policy using the same driver controls; keep race and battle policies separate.",
+      "dependencies": [
+        "Track geometry",
+        "driver/item state",
+        "difficulty settings"
+      ],
+      "proposed_verification": "Seed a full race and a battle; track progress, recovery loops, item use and terminal results.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "tableparty-kart.audio",
+      "project": "tableparty-kart",
+      "title": "Spatial race audio and bounded voices",
+      "category": [
+        "audio",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tableparty-kart/public/assets/kart-7vz70Zig.js",
+          "sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa"
+        }
+      ],
+      "observed_mechanism": "Audio loads dynamic cue/music paths, handles unlock/rebuild/pause, limits simultaneous one-shots and spatially mixes nearby rival engines.",
+      "proposed_boundary": "Audio event sink with asset resolver and listener/rival poses.",
+      "dependencies": [
+        "Web Audio",
+        "all original MP3 cues",
+        "user gesture",
+        "voice/loop ownership"
+      ],
+      "proposed_verification": "Pause/resume and switch course repeatedly; compare cue timing, rival panning and bounded voice counts with no missing assets.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "tableparty-kart.render",
+      "project": "tableparty-kart",
+      "title": "Kart LODs, crowds and course assets",
+      "category": [
+        "rendering",
+        "assets"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tableparty-kart/public/assets/kart-7vz70Zig.js",
+          "sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa"
+        },
+        {
+          "path": "tableparty-kart/public/assets/meshopt_decoder.module-O9a9x0ao.js",
+          "sha256": "f54e0d2b93a95d59cb17f6ab14486d2d18b66bd4957ae8c5c7ac4763de58b91d"
+        }
+      ],
+      "observed_mechanism": "Hashed GLBs load through an import map; course rendering combines LOD/shadow models, instanced spectators, procedural props and dynamic sky/ground textures.",
+      "proposed_boundary": "One course renderer with explicit dynamic asset manifest, preserving original shader/LOD choices.",
+      "dependencies": [
+        "Three WebGL",
+        "meshopt",
+        "course theme data",
+        "original assets"
+      ],
+      "proposed_verification": "Visit all eight courses, compare LOD silhouettes/shadows and collect every runtime request at original DPR.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "tableparty-kart.network",
+      "project": "tableparty-kart",
+      "title": "Snapshot interpolation and server boundary",
+      "category": [
+        "network"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "tableparty-kart/public/assets/kart-7vz70Zig.js",
+          "sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa"
+        }
+      ],
+      "observed_mechanism": "Client connects to /kart-room, handles resume/session/frame messages and retains bounded frame history; server authority and ranked state are not deployed client code.",
+      "proposed_boundary": "Protocol/interpolation study only until the real server source is available.",
+      "dependencies": [
+        "Unavailable WebSocket/ranked server",
+        "ordered ticks",
+        "input sequence counters"
+      ],
+      "proposed_verification": "Document message shapes from code; future authorized server tests need jitter/loss/reconnect. Do not use mock success as parity evidence.",
+      "priority": "P2",
+      "extraction_verified": false
+    },
+    {
+      "id": "cloudkeep.flight",
+      "project": "cloudkeep",
+      "title": "Airship movement, orbit and input ownership",
+      "category": [
+        "3c",
+        "physics"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "cloudkeep/upstream/src/simulation.ts",
+          "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+        },
+        {
+          "path": "cloudkeep/upstream/src/flight-camera.ts",
+          "sha256": "11e5bacfa297e09c45facbb11df63d9efcb120ef5ccba8ad2f5d29eeb301b24f"
+        },
+        {
+          "path": "cloudkeep/upstream/src/input.ts",
+          "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff"
+        }
+      ],
+      "observed_mechanism": "Renderer-independent Simulation integrates pitched/strafe/altitude flight. FlightCamera uses unwrapped drag angles, exponential follow and explicit shortest-arc recentering.",
+      "proposed_boundary": "Simulation input/state plus camera/view adapter; preserve original metre scale and max pitch.",
+      "dependencies": [
+        "Three vectors for camera only",
+        "world islands",
+        "input gesture ownership"
+      ],
+      "proposed_verification": "Use existing flight/input/camera tests and actual W/boost/drag/recenter in exploration mode.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "cloudkeep.ecology",
+      "project": "cloudkeep",
+      "title": "Creature feeding, capture and persistence",
+      "category": [
+        "ai",
+        "gameplay",
+        "persistence"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "cloudkeep/upstream/src/simulation.ts",
+          "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+        },
+        {
+          "path": "cloudkeep/upstream/src/storage.ts",
+          "sha256": "1aba7eeef3d26ac3c9a05c9502c0fa276bcfc0dfd0ecb5bb72ab44703f15884f"
+        }
+      ],
+      "observed_mechanism": "Creature states include roam/flock/forage/flee/capturing; feeding/capture/coin/respawn events drive rewards and saves with validated reconstruction.",
+      "proposed_boundary": "Deterministic ecosystem state plus event sink and injected storage, independent of scene rendering.",
+      "dependencies": [
+        "Species parameters",
+        "food/coin state",
+        "save migration",
+        "clock/RNG"
+      ],
+      "proposed_verification": "Existing ecosystem/save tests plus capture cancellation, delayed respawn and reload with pending coins.",
+      "priority": "P0",
+      "extraction_verified": false
+    },
+    {
+      "id": "cloudkeep.atmosphere",
+      "project": "cloudkeep",
+      "title": "Layered clouds, materials and pooled effects",
+      "category": [
+        "rendering",
+        "vfx"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "cloudkeep/upstream/src/atmosphere.ts",
+          "sha256": "f48447285d1f559bc8017c2ee949a0ed8f1330e44c6f754f40164b4b827ffc17"
+        },
+        {
+          "path": "cloudkeep/upstream/src/materials.ts",
+          "sha256": "d626cf1ab4428d04db9e8ed9eab43c2906191ea1291bca2902c209c21187ef15"
+        },
+        {
+          "path": "cloudkeep/upstream/src/effects.ts",
+          "sha256": "b36ee52a1a0009eeabc59052f12e63b5e504d023130436ae7c80243e14817a53"
+        }
+      ],
+      "observed_mechanism": "Atmosphere, material detail/deformation and SkyEffects are separated from simulation; original visuals combine cloud layers and bounded particles.",
+      "proposed_boundary": "One sky/ship/material fixture with a separately owned effects pool.",
+      "dependencies": [
+        "Three r186 WebGL",
+        "sky/cloud art",
+        "depth/post chain"
+      ],
+      "proposed_verification": "Compare fixed flight poses at native DPR; inspect cloud overdraw and effect-pool memory across repeated capture/boost.",
+      "priority": "P1",
+      "extraction_verified": false
+    },
+    {
+      "id": "cloudkeep.asset-build",
+      "project": "cloudkeep",
+      "title": "Reproducible Blender asset pipeline",
+      "category": [
+        "assets",
+        "performance"
+      ],
+      "stage": "source-inspected",
+      "source_refs": [
+        {
+          "path": "cloudkeep/upstream/scripts/build_assets.py",
+          "sha256": "be6fd90dca186c836f2f9ec301c695737eb6581e09a9b0fb12acf10bfc9f799e"
+        },
+        {
+          "path": "cloudkeep/upstream/scripts/sky_creatures.py",
+          "sha256": "a4369306ced83d539465daafe17b6efd0d377162e6ab531d6e37138fcba1571c"
+        },
+        {
+          "path": "cloudkeep/upstream/scripts/modeling.py",
+          "sha256": "6454d9e6ce2710d064df4eade395c8e6014e7510283e1a355e97237a68c1384b"
+        },
+        {
+          "path": "cloudkeep/upstream/art/ASSETS.md",
+          "sha256": "85c1ccbd7a42bf25f54b99a8c1d7bd699024495b468cacaec1c201104c0c2f92"
+        }
+      ],
+      "observed_mechanism": "Modeling scripts batch meshes by material and animation pivot; original editable Blender scene and runtime GLBs are retained.",
+      "proposed_boundary": "One creature plus near/far garden export with provenance, units, pivot and material contracts.",
+      "dependencies": [
+        "Blender toolchain",
+        "vertex colors",
+        "animation pivots",
+        "generated sky/cloud image provenance"
+      ],
+      "proposed_verification": "Regenerate into a separate output, compare bounds/pivots/material slots and runtime silhouette; never overwrite hand-edited originals.",
+      "priority": "P1",
+      "extraction_verified": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "slug": "sakuragaoka-station",
+  "title": "Sakuragaoka Station",
+  "tagline": "第一人称漫步日式车站小镇，展示程序化建模与卡通着色",
+  "category": "城镇与生活",
+  "overview_video": "sakuragaoka-station/overview",
+  "examples": [],
+  "tagline_en": "Walk through a Japanese station town in first person, with procedural modeling and toon shading."
+}

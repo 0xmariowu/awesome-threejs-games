@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "slug": "vox-arcana",
+  "title": "Vox Arcana",
+  "tagline": "元素法术对战，展示文字指令解析、法术轨迹与元素反应",
+  "category": "战斗",
+  "overview_video": "vox-arcana/overview",
+  "examples": [
+    {
+      "id": "vox-reactions",
+      "title": "元素反应实验场",
+      "one_liner": "施放不同元素，观察冻结、燃烧、感电与伤害变化",
+      "candidate": "vox-arcana.reactions",
+      "title_en": "Elemental reaction playground",
+      "one_liner_en": "Cast different elements and observe freezing, burning, electric shocks and damage changes."
+    }
+  ],
+  "tagline_en": "Elemental spell battles with text command parsing, spell trajectories and elemental reactions."
+}

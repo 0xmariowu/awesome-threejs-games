@@ -1,0 +1,5 @@
+{
+  "root": "public",
+  "entry": "/kart/index.html",
+  "port": 8100
+}

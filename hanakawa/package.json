@@ -1,0 +1,20 @@
+{
+  "name": "hanakawa-boat-game",
+  "version": "1.0.0",
+  "description": "Hanakawa Boat Game — A scenic Japanese river-boating and cargo transport simulation with WebGPU, TSL, and Rapier physics.",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "threejs",
+    "webgpu",
+    "tsl",
+    "rapier",
+    "physics",
+    "boat-game",
+    "japanese-aesthetic"
+  ],
+  "author": "",
+  "license": "ISC"
+}

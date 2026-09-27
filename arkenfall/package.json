@@ -1,0 +1,7 @@
+{
+  "name": "arkenfall-reference",
+  "private": true,
+  "scripts": {
+    "start": "node ../tools/server.mjs ."
+  }
+}

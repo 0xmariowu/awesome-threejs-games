@@ -1,0 +1,7 @@
+{
+  "name": "tableparty-kart-reference",
+  "private": true,
+  "scripts": {
+    "start": "node ../tools/server.mjs ."
+  }
+}

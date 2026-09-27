@@ -1,0 +1,96 @@
+{
+  "project": "inkwave",
+  "scope": "Unchanged actor, procedural character, original input/controller, collision queries and follow camera in a host-owned practice scene with static ink sampling.",
+  "files": [
+    {
+      "source": "inkwave/src/config.js",
+      "path": "examples/inkwave-3c/original/config.js",
+      "sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6"
+    },
+    {
+      "source": "inkwave/src/core/ctx.js",
+      "path": "examples/inkwave-3c/original/core/ctx.js",
+      "sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04"
+    },
+    {
+      "source": "inkwave/src/core/input.js",
+      "path": "examples/inkwave-3c/original/core/input.js",
+      "sha256": "17d1418379aded288cdfb965c297c20635ed54f44e533f95060d99f4d5b344e3"
+    },
+    {
+      "source": "inkwave/src/game/actor.js",
+      "path": "examples/inkwave-3c/original/game/actor.js",
+      "sha256": "e0fedbc7fc2b5df799223f2e77e3a795972eb4f779d822a43dea1a7e99a97074"
+    },
+    {
+      "source": "inkwave/src/game/character.js",
+      "path": "examples/inkwave-3c/original/game/character.js",
+      "sha256": "e47f7f97b9fc7c413adc31812f4367fc9a6f2bcd7b66459d023ead326ea65d4d"
+    },
+    {
+      "source": "inkwave/src/game/cameraRig.js",
+      "path": "examples/inkwave-3c/original/game/cameraRig.js",
+      "sha256": "9c2fd9f3ab67e9c349ba77c1423e23ebe237e8fce9338fb301ae3a6bee9f3fc4"
+    },
+    {
+      "source": "inkwave/src/game/player.js",
+      "path": "examples/inkwave-3c/original/game/player.js",
+      "sha256": "f532bbe5c19e038a8829b368d3cbf2d416c1405081df8f1681f75c5cbf123ef1"
+    },
+    {
+      "source": "inkwave/src/game/physics.js",
+      "path": "examples/inkwave-3c/original/game/physics.js",
+      "sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48"
+    },
+    {
+      "source": "inkwave/src/game/weapons.js",
+      "path": "examples/inkwave-3c/original/game/weapons.js",
+      "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f"
+    },
+    {
+      "source": "inkwave/src/game/character-geo.js",
+      "path": "examples/inkwave-3c/original/game/character-geo.js",
+      "sha256": "6494f29b533bb0346d09a95cbaa9b1e0b934bb20fdf88248ed4fc05a905b7627"
+    },
+    {
+      "source": "inkwave/src/game/character-mats.js",
+      "path": "examples/inkwave-3c/original/game/character-mats.js",
+      "sha256": "53cf4fdd2db474eef730d7c447c7c07a0aa2bc94baae8c0f081759cdde4e95a1"
+    },
+    {
+      "source": "inkwave/src/game/character-weapons.js",
+      "path": "examples/inkwave-3c/original/game/character-weapons.js",
+      "sha256": "a75e15972dbce296fb5630358d570f1f206ed72c2626cb69a139f0fbf9451925"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "inkwave/vendor/three/build/three.module.js",
+      "path": "examples/inkwave-3c/vendor/three/build/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "source": "inkwave/vendor/three/build/three.core.js",
+      "path": "examples/inkwave-3c/vendor/three/build/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "source": "inkwave/vendor/three/jsm/utils/BufferGeometryUtils.js",
+      "path": "examples/inkwave-3c/vendor/three/jsm/utils/BufferGeometryUtils.js",
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    }
+  ],
+  "assets": [],
+  "notices": [
+    {
+      "source": "inkwave/LICENSE",
+      "path": "examples/inkwave-3c/LICENSE",
+      "sha256": "8c09ee40d72139720037d3f640541f79e5be39f23ea8359eb02bf3b7d9d243b0"
+    },
+    {
+      "source": "inkwave/vendor/three/LICENSE",
+      "path": "examples/inkwave-3c/THREE-LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    }
+  ]
+}

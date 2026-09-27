@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Monolith Wilds · Camera handoff</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">
+    {"imports":{"./original/index-DGqtqlWq.js":"./src/world-shim.js"}}
+  </script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main aria-label="Interactive camera handoff" data-demo-picture="" id="world"></main>
+<header class="ui-panel" data-demo-readout=""><strong id="mode">Loading</strong></header>
+<nav aria-label="Camera mode" class="ui-panel" data-demo-control="">
+<button aria-pressed="false" data-mode="walk">Walk · F</button>
+<button aria-pressed="true" data-mode="fly">Fly · F</button>
+<button aria-pressed="false" data-mode="tour">Auto tour · C</button>
+<button aria-pressed="false" id="slow">Slow motion</button>
+</nav>
+<aside class="ui-panel" data-demo-readout=""><span id="motion">Free exploration</span><span id="height"></span></aside>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD · Space/Q · Shift · F/C" id="hint">WASD to move · Drag to look / click to lock · Space / Q up/down · Shift to boost · F walk / fly · C tour · Esc to unlock</p>
+<p data-demo-readout="" hidden="" id="error" role="alert"></p>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

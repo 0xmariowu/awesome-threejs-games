@@ -1,0 +1,19 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; color: #f4f7f2; background: #17394a; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+canvas { display: block; outline: none; touch-action: none; }
+#panel, #status, #hint { position: fixed; z-index: 1; background: #102c36df; border: 1px solid #b9d9da38; }
+#panel { top: 18px; left: 18px; padding: 16px 18px; border-radius: 8px; display: flex; align-items: center; gap: 18px; }
+h1 { font-size: 17px; margin: 0 6px 0 0; font-weight: 600; }
+label { display: flex; align-items: center; gap: 7px; font-size: 13px; white-space: nowrap; }
+select { padding: 5px 8px; color: inherit; background: #204b57; border: 1px solid #659299; border-radius: 4px; }
+input { accent-color: #eab263; }
+#status { right: 18px; top: 18px; padding: 12px 16px; border-radius: 8px; font-size: 12px; line-height: 1.8; white-space: pre-line; font-variant-numeric: tabular-nums; }
+#hint { bottom: 14px; left: 50%; transform: translateX(-50%); margin: 0; padding: 9px 14px; border-radius: 5px; white-space: nowrap; font-size: 12px; }
+@media (max-width: 850px) { #panel { gap: 10px; padding: 10px; top: 10px; left: 10px; } h1 { font-size: 14px; } #status { top: 66px; right: 10px; } #hint { font-size: 10px; } }
+/* Native checkbox painting discards rounded corners in Chrome. */
+html.demo-frame .demo-controls input[type="checkbox"] {
+  appearance: none; display: inline-grid; place-content: center;
+  width: 18px; height: 18px; padding: 0; border-radius: 5px;
+}
+html.demo-frame input[type="checkbox"]:checked::after { content: '✓'; color: var(--ui-link); font-size: 12px; }

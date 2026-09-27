@@ -1,0 +1,46 @@
+{
+  "project": "arkenfall",
+  "source": "https://www.arkenfall.site/",
+  "scope": "Unchanged deployed camera and its math/order/Three.js dependencies. Game sensitivity and material fade imports are host shims. Single target and world-query services are host fixtures.",
+  "files": [
+    {
+      "source": "arkenfall/public/assets/camera-CsWg7FPD.js",
+      "path": "examples/arkenfall-camera/original/camera-CsWg7FPD.js",
+      "sha256": "3c0d88088db1aa18eaec66d3f34e4fd36a92a3ee48686363fdb8f13980207e0a"
+    },
+    {
+      "source": "arkenfall/public/assets/contracts-CvM_HOZo.js",
+      "path": "examples/arkenfall-camera/original/contracts-CvM_HOZo.js",
+      "sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d"
+    },
+    {
+      "source": "arkenfall/public/assets/math-CaZ96FWb.js",
+      "path": "examples/arkenfall-camera/original/math-CaZ96FWb.js",
+      "sha256": "2318bd0bf3a7f42e8a33d60176b1be641a763ffd820fca71e44b4fae83857d67"
+    },
+    {
+      "source": "arkenfall/public/assets/three.core-_y2F91K_.js",
+      "path": "examples/arkenfall-camera/original/three.core-_y2F91K_.js",
+      "sha256": "ec3d682180124403141cdac483b52850f39c1370765545f61ba754805b436e5b"
+    },
+    {
+      "source": "arkenfall/public/assets/three.module-DGcYoYN8.js",
+      "path": "examples/arkenfall-camera/original/three.module-DGcYoYN8.js",
+      "sha256": "392e914950e761c4b60477354d93975f0e153b5d16d36eb2593b02e4b0f4b20e"
+    }
+  ],
+  "references": [
+    {
+      "source": "arkenfall/public/assets/Game-BmRmdldn.js",
+      "sha256": "184af5d470b8008326b645df2e6a1244a69ee6820e0609a92fa3d4e83d3b3d01"
+    },
+    {
+      "source": "arkenfall/public/assets/material-Di0Yd9td.js",
+      "sha256": "da3a02db17e03bee6280895c5953791ce0f3b2f11a72dbaf85b3e6ea59b51416"
+    },
+    {
+      "source": "arkenfall/public/assets/combat-DANZZ0C7.js",
+      "sha256": "324cf55415cffde0b48c3de9a6f83505427b4aa11a4a0c6723742754f8b5d493"
+    }
+  ]
+}

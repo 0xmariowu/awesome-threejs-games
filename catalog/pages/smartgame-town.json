@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "slug": "smartgame-town",
+  "title": "Smartgame Town",
+  "tagline": "可装扮角色的三维小镇，展示程序化场景与分层角色贴图",
+  "category": "城镇与生活",
+  "overview_video": "smartgame-town/overview",
+  "examples": [],
+  "tagline_en": "A 3D town with character customization, procedural scenes and layered character textures."
+}

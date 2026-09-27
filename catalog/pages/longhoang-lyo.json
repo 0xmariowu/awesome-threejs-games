@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "slug": "longhoang-lyo",
+  "title": "Long Hoang / Lyo",
+  "tagline": "驾驶战斗机器人的互动作品集，展示物理模拟与压缩纹理",
+  "category": "开放世界动作",
+  "overview_video": "longhoang-lyo/overview",
+  "examples": [],
+  "tagline_en": "An interactive portfolio with a combat robot, physics simulation and compressed textures."
+}

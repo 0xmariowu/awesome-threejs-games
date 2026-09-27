@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Moritsuki · Character workshop</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">{"imports":{"three":"./original/vendor/three.module.js"}}</script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main aria-label="Original character preview" data-demo-picture="" id="world"></main>
+<aside class="ui-panel" data-demo-control="">
+<label for="character">Select character</label>
+<select id="character"><option value="natsumi">Natsumi</option><option value="isogai">Dr. Isogai</option><option value="kid">Straw-hat boy</option></select>
+<button id="generate">Regenerate</button>
+<button aria-pressed="false" id="wireframe">Show wireframe</button>
+<p class="ui-panel" data-demo-readout="" id="status" role="status">Starting…</p>
+<progress aria-label="Completed background tasks" data-demo-readout="" id="progress" max="7" value="0"></progress>
+<div class="heartbeat" data-demo-readout=""><span id="pulse">◴</span><span>Main thread running</span></div>
+<output data-demo-readout="" id="stats"></output>
+</aside>
+<footer class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="Drag · Scroll">Drag to rotate · Wheel to zoom · Switch characters to cancel and rebuild</footer>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

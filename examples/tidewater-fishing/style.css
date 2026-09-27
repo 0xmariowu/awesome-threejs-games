@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; }
+.setup label { display: grid; gap: 5px; width: 100%; }
+.setup input { width: 100%; }
+.status, .gauge-label, .scale { display: flex; justify-content: space-between; gap: 8px; }
+.status { margin-bottom: 12px; }
+.gauge { height: 18px; position: relative; margin-top: 8px; background: var(--ui-line); border-radius: 4px; overflow: hidden; }
+.safe-band { position: absolute; left: 23.0769%; width: 42.3077%; height: 100%; background: #7bc7a2; }
+#needle { position: absolute; width: 3px; height: 100%; background: var(--ui-ink); }
+.scale { font-size: 10px; color: var(--ui-muted); margin-top: 5px; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.stats div { display: grid; gap: 3px; }
+.stats strong { font: 18px var(--ui-mono); }
+#reel { touch-action: none; user-select: none; }
+.save { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+#message { color: var(--ui-link); }

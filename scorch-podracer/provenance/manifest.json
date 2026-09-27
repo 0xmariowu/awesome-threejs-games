@@ -1,0 +1,42 @@
+{
+  "source": "https://scortch-podracer.netlify.app/",
+  "entry_path": "/index.html",
+  "files": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Bungee&family=Black+Ops+One&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-0ab808b00f90",
+      "bytes": 417,
+      "sha256": "45b62dbd6a98ddbddcd3621ad3b96776da32928262767db46f366e29a56170d5",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "e6be1c6f28d0f81098efe124b7bfd23648fd80d8b0149fc990e34dc5e5edade8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/blackopsone/v21/qWcsB6-ypo7xBdr6Xshe96H3WDw.ttf",
+      "path": "_external/fonts.gstatic.com/s/blackopsone/v21/qWcsB6-ypo7xBdr6Xshe96H3WDw.ttf",
+      "bytes": 162480,
+      "sha256": "bd8a70e63df108745316c6ad277874cbe139bbb90cbcaf705810ecc089fe59f8",
+      "content_type": "font/ttf",
+      "local_sha256": "bd8a70e63df108745316c6ad277874cbe139bbb90cbcaf705810ecc089fe59f8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/bungee/v17/N0bU2SZBIuF2PU_ECg.ttf",
+      "path": "_external/fonts.gstatic.com/s/bungee/v17/N0bU2SZBIuF2PU_ECg.ttf",
+      "bytes": 110456,
+      "sha256": "ff0ad5d7496a911460625f9052ea50b05e289065be71a1cb21c71896585224d2",
+      "content_type": "font/ttf",
+      "local_sha256": "ff0ad5d7496a911460625f9052ea50b05e289065be71a1cb21c71896585224d2"
+    },
+    {
+      "url": "https://scortch-podracer.netlify.app/",
+      "path": "index.html",
+      "bytes": 955492,
+      "sha256": "0dcf08472b4fe1a500ab477c91d983d85d722da45e1fe92d9dd76e5e35a54079",
+      "content_type": "text/html; charset=UTF-8",
+      "local_sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+    }
+  ],
+  "failed": {
+    "https://scortch-podracer.netlify.app/build/three.js": "HTTP 404; ",
+    "https://scortch-podracer.netlify.app/build/three.min.js": "HTTP 404; "
+  }
+}

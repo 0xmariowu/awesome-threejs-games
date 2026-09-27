@@ -1,0 +1,2460 @@
+{
+  "source": "https://tableparty.io/kart/",
+  "entry_path": "/kart/index.html",
+  "files": [
+    {
+      "url": "https://tableparty.io/art/apple-touch-icon.png",
+      "path": "art/apple-touch-icon.png",
+      "bytes": 17824,
+      "sha256": "6f16e7ee43cc742ed4c47df1321321f7695d0c05602c3394ce10cb8b0a107d68",
+      "content_type": "image/png",
+      "local_sha256": "6f16e7ee43cc742ed4c47df1321321f7695d0c05602c3394ce10cb8b0a107d68"
+    },
+    {
+      "url": "https://tableparty.io/art/icon-192.png",
+      "path": "art/icon-192.png",
+      "bytes": 19871,
+      "sha256": "82c5d95d4a5febda88c8d3815e4b0ea937e1627aa5da09352bf00d8bbe22d53f",
+      "content_type": "image/png",
+      "local_sha256": "82c5d95d4a5febda88c8d3815e4b0ea937e1627aa5da09352bf00d8bbe22d53f"
+    },
+    {
+      "url": "https://tableparty.io/assets/BufferGeometryUtils-Bu9JBDdd.js",
+      "path": "assets/BufferGeometryUtils-Bu9JBDdd.js",
+      "bytes": 620023,
+      "sha256": "ea69bd598ae0dc3134406adaa0562ca66c2989b591756e47b2b01e282ad8d8af",
+      "content_type": "text/javascript",
+      "local_sha256": "ea69bd598ae0dc3134406adaa0562ca66c2989b591756e47b2b01e282ad8d8af"
+    },
+    {
+      "url": "https://tableparty.io/assets/PitLane-C72HRLPk.js",
+      "path": "assets/PitLane-C72HRLPk.js",
+      "bytes": 4046,
+      "sha256": "6f020d1020b79c2c903466d03c55db31d993951a2509e124e08a3432c809c3dd",
+      "content_type": "text/javascript",
+      "local_sha256": "6f020d1020b79c2c903466d03c55db31d993951a2509e124e08a3432c809c3dd"
+    },
+    {
+      "url": "https://tableparty.io/assets/RankedMoments-BN3gvbjj.js",
+      "path": "assets/RankedMoments-BN3gvbjj.js",
+      "bytes": 2202,
+      "sha256": "70a056721bc700200929f2c3334794db6da2930c9ff1bff46c625a18a2d53813",
+      "content_type": "text/javascript",
+      "local_sha256": "70a056721bc700200929f2c3334794db6da2930c9ff1bff46c625a18a2d53813"
+    },
+    {
+      "url": "https://tableparty.io/assets/RankedTakeover-CoJK7flx.js",
+      "path": "assets/RankedTakeover-CoJK7flx.js",
+      "bytes": 16170,
+      "sha256": "8e38dda089b6eed4379ab6269876c9419ec2c27185076e051545498e0968eb33",
+      "content_type": "text/javascript",
+      "local_sha256": "8e38dda089b6eed4379ab6269876c9419ec2c27185076e051545498e0968eb33"
+    },
+    {
+      "url": "https://tableparty.io/assets/RankedTakeover-LI4KSvZ1.css",
+      "path": "assets/RankedTakeover-LI4KSvZ1.css",
+      "bytes": 18447,
+      "sha256": "f2a3d12273a96aa801b464a795936a56d9bd06811e7cf69d4874614240296423",
+      "content_type": "text/css",
+      "local_sha256": "f2a3d12273a96aa801b464a795936a56d9bd06811e7cf69d4874614240296423"
+    },
+    {
+      "url": "https://tableparty.io/assets/RoomEnvironment-xhUqicLX.js",
+      "path": "assets/RoomEnvironment-xhUqicLX.js",
+      "bytes": 2073,
+      "sha256": "d9dd79da3159bf06c430d7e5b692bc4922916b9cf1be6365bdd83427a98090eb",
+      "content_type": "text/javascript",
+      "local_sha256": "d9dd79da3159bf06c430d7e5b692bc4922916b9cf1be6365bdd83427a98090eb"
+    },
+    {
+      "url": "https://tableparty.io/assets/RoundedBoxGeometry-Cp3JkDub.js",
+      "path": "assets/RoundedBoxGeometry-Cp3JkDub.js",
+      "bytes": 1728,
+      "sha256": "49bcde0dfcfe97b636abf37e56a88ae5fe3c13dcc5df36d2a3e593fcad4d84fc",
+      "content_type": "text/javascript",
+      "local_sha256": "49bcde0dfcfe97b636abf37e56a88ae5fe3c13dcc5df36d2a3e593fcad4d84fc"
+    },
+    {
+      "url": "https://tableparty.io/assets/StartingGrid-Kt6Wgcbh.js",
+      "path": "assets/StartingGrid-Kt6Wgcbh.js",
+      "bytes": 10789,
+      "sha256": "35fca761e8fb6660bcb1d9d5d262cee35f9553ae13c09138961fe627000c8222",
+      "content_type": "text/javascript",
+      "local_sha256": "35fca761e8fb6660bcb1d9d5d262cee35f9553ae13c09138961fe627000c8222"
+    },
+    {
+      "url": "https://tableparty.io/assets/Trailer-BfFtlItL.js",
+      "path": "assets/Trailer-BfFtlItL.js",
+      "bytes": 2456,
+      "sha256": "39cfee17efcdee15e4c3c93f9cd58b6f7f0ba8c315e7d94788399e0f715594ba",
+      "content_type": "text/javascript",
+      "local_sha256": "39cfee17efcdee15e4c3c93f9cd58b6f7f0ba8c315e7d94788399e0f715594ba"
+    },
+    {
+      "url": "https://tableparty.io/assets/Trailer-BmO4bbD6.css",
+      "path": "assets/Trailer-BmO4bbD6.css",
+      "bytes": 2233,
+      "sha256": "a33af3a585c265d20720720cae0460f6f7b41aa87d12b5496b85eb93f1473422",
+      "content_type": "text/css",
+      "local_sha256": "a33af3a585c265d20720720cae0460f6f7b41aa87d12b5496b85eb93f1473422"
+    },
+    {
+      "url": "https://tableparty.io/assets/bruno-lod-BNSusgpb.glb",
+      "path": "assets/bruno-lod-BNSusgpb.glb",
+      "bytes": 207448,
+      "sha256": "9a5e881b8fce4b85f952b5758f58425ac060f275276aafda52817db035087287",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "9a5e881b8fce4b85f952b5758f58425ac060f275276aafda52817db035087287"
+    },
+    {
+      "url": "https://tableparty.io/assets/bruno-race-lod-BdAbtuMW.glb",
+      "path": "assets/bruno-race-lod-BdAbtuMW.glb",
+      "bytes": 86680,
+      "sha256": "a355255a4cae63206a324e021500ebf16fc3fe035a1ced1dbd694b464964bd4e",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "a355255a4cae63206a324e021500ebf16fc3fe035a1ced1dbd694b464964bd4e"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-castle-lod-BIVuq9GC.glb",
+      "path": "assets/candy-castle-lod-BIVuq9GC.glb",
+      "bytes": 232348,
+      "sha256": "e66b5ff8cc868174565c1091eb233594faa6bfac454b37162bbd80d23fe755f4",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "e66b5ff8cc868174565c1091eb233594faa6bfac454b37162bbd80d23fe755f4"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-castle-shadow-Cq76cKPH.glb",
+      "path": "assets/candy-castle-shadow-Cq76cKPH.glb",
+      "bytes": 4952,
+      "sha256": "ddfa1eab5757bcf6597b5c39046c3a760f4b8a8c86b9bfc4e3b4f53b62eb4664",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "ddfa1eab5757bcf6597b5c39046c3a760f4b8a8c86b9bfc4e3b4f53b62eb4664"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-cupcake-house-far-D7iD4s-A.glb",
+      "path": "assets/candy-cupcake-house-far-D7iD4s-A.glb",
+      "bytes": 14520,
+      "sha256": "52c7bcbb82b650d8581b09243dc10fadef5bc5cfc18f624e8245afd1e40c7b86",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "52c7bcbb82b650d8581b09243dc10fadef5bc5cfc18f624e8245afd1e40c7b86"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-cupcake-house-lod-glf3HGH4.glb",
+      "path": "assets/candy-cupcake-house-lod-glf3HGH4.glb",
+      "bytes": 93912,
+      "sha256": "d009e4047813bcc8b8ff965399e3108b024a757d63a822e816414bc6379d82b5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d009e4047813bcc8b8ff965399e3108b024a757d63a822e816414bc6379d82b5"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-gumdrop-cluster-far-BUnot3PD.glb",
+      "path": "assets/candy-gumdrop-cluster-far-BUnot3PD.glb",
+      "bytes": 13104,
+      "sha256": "bc7bf69d650acaa5b1227eb894d34bac02ae5550c9369b3521218a32d80a2434",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "bc7bf69d650acaa5b1227eb894d34bac02ae5550c9369b3521218a32d80a2434"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-gumdrop-cluster-lod-C8fVGrO7.glb",
+      "path": "assets/candy-gumdrop-cluster-lod-C8fVGrO7.glb",
+      "bytes": 78460,
+      "sha256": "03d0fc51439e1ad3b19c34b9b0a27700bacdd1b85f793325d35e961ff0fc1ed4",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "03d0fc51439e1ad3b19c34b9b0a27700bacdd1b85f793325d35e961ff0fc1ed4"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-lollipop-tree-far-DYNJUbu4.glb",
+      "path": "assets/candy-lollipop-tree-far-DYNJUbu4.glb",
+      "bytes": 14980,
+      "sha256": "00b02fdb183f5bffc142f1d947362e870f10f2be1861b62b2b4a9a48d32d714f",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "00b02fdb183f5bffc142f1d947362e870f10f2be1861b62b2b4a9a48d32d714f"
+    },
+    {
+      "url": "https://tableparty.io/assets/candy-lollipop-tree-lod-k0w52tja.glb",
+      "path": "assets/candy-lollipop-tree-lod-k0w52tja.glb",
+      "bytes": 102548,
+      "sha256": "ad3d6b002468964926209834bd48ba150ad6870719aa2e0fdb4b38e26632f261",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "ad3d6b002468964926209834bd48ba150ad6870719aa2e0fdb4b38e26632f261"
+    },
+    {
+      "url": "https://tableparty.io/assets/canyon-mine-v2-lod-mwOWkQ-i.glb",
+      "path": "assets/canyon-mine-v2-lod-mwOWkQ-i.glb",
+      "bytes": 401180,
+      "sha256": "d7e78230f3470cc73e6a7688aa1b313627003a574a79ead18b2c71497ffd83e6",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d7e78230f3470cc73e6a7688aa1b313627003a574a79ead18b2c71497ffd83e6"
+    },
+    {
+      "url": "https://tableparty.io/assets/canyon-mine-v2-shadow-Boxt6gqU.glb",
+      "path": "assets/canyon-mine-v2-shadow-Boxt6gqU.glb",
+      "bytes": 7740,
+      "sha256": "b7daceb0ee5f34995cf5b083121bc8e8b84c147dbf26c70982f436aeb8b3a189",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b7daceb0ee5f34995cf5b083121bc8e8b84c147dbf26c70982f436aeb8b3a189"
+    },
+    {
+      "url": "https://tableparty.io/assets/canyon-rock-lod-kkBs6hRc.glb",
+      "path": "assets/canyon-rock-lod-kkBs6hRc.glb",
+      "bytes": 139744,
+      "sha256": "c39c3347ae58b1520ce516074617e98ca3a26409d27fe95f8a7530a9bd4adb58",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "c39c3347ae58b1520ce516074617e98ca3a26409d27fe95f8a7530a9bd4adb58"
+    },
+    {
+      "url": "https://tableparty.io/assets/canyon-rock-shadow-DOz29Yom.glb",
+      "path": "assets/canyon-rock-shadow-DOz29Yom.glb",
+      "bytes": 4440,
+      "sha256": "d0c1b26c7696c50302cfd9e84d7a312748283e397ba25a6037267ebd5dbdc058",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d0c1b26c7696c50302cfd9e84d7a312748283e397ba25a6037267ebd5dbdc058"
+    },
+    {
+      "url": "https://tableparty.io/assets/circuit-castle-lod-DE05ihJo.glb",
+      "path": "assets/circuit-castle-lod-DE05ihJo.glb",
+      "bytes": 234192,
+      "sha256": "2b644036afeafce9dcfe70e30ec396547a6bb3de805a2cdcb9e9df3c06670874",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "2b644036afeafce9dcfe70e30ec396547a6bb3de805a2cdcb9e9df3c06670874"
+    },
+    {
+      "url": "https://tableparty.io/assets/circuit-castle-shadow-D1eaPV6E.glb",
+      "path": "assets/circuit-castle-shadow-D1eaPV6E.glb",
+      "bytes": 5392,
+      "sha256": "058fc6aa21d5cd5b4742804293a36c965646ab7beec86723ed83d18d6169ad43",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "058fc6aa21d5cd5b4742804293a36c965646ab7beec86723ed83d18d6169ad43"
+    },
+    {
+      "url": "https://tableparty.io/assets/circuit-grandstand-lod-Yv-Ot3MD.glb",
+      "path": "assets/circuit-grandstand-lod-Yv-Ot3MD.glb",
+      "bytes": 433540,
+      "sha256": "747667fedcc5b06bf9510dac2ff555b9694d23e6f4f07b0dede58fc5be09f4c2",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "747667fedcc5b06bf9510dac2ff555b9694d23e6f4f07b0dede58fc5be09f4c2"
+    },
+    {
+      "url": "https://tableparty.io/assets/circuit-grandstand-shadow-Bdm1QDRe.glb",
+      "path": "assets/circuit-grandstand-shadow-Bdm1QDRe.glb",
+      "bytes": 5916,
+      "sha256": "dbba6c0d9194bc095e86058a37f8be180b255256ff4b132b85316778ffa99411",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "dbba6c0d9194bc095e86058a37f8be180b255256ff4b132b85316778ffa99411"
+    },
+    {
+      "url": "https://tableparty.io/assets/circuit-windmill-v3-lod-BpQDR7UZ.glb",
+      "path": "assets/circuit-windmill-v3-lod-BpQDR7UZ.glb",
+      "bytes": 227096,
+      "sha256": "c1d98252278f5953170aee1ea397784de1d3f0a1e6fa22b3d1662415dd830b8c",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "c1d98252278f5953170aee1ea397784de1d3f0a1e6fa22b3d1662415dd830b8c"
+    },
+    {
+      "url": "https://tableparty.io/assets/circuit-windmill-v3-shadow-bqkQgjXy.glb",
+      "path": "assets/circuit-windmill-v3-shadow-bqkQgjXy.glb",
+      "bytes": 4992,
+      "sha256": "37850588dabe8a650240b8d11b51a95c2d6361d956edbe2ce4a96d3b8354b2a8",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "37850588dabe8a650240b8d11b51a95c2d6361d956edbe2ce4a96d3b8354b2a8"
+    },
+    {
+      "url": "https://tableparty.io/assets/cloud-airship-lod-D0uoT4RJ.glb",
+      "path": "assets/cloud-airship-lod-D0uoT4RJ.glb",
+      "bytes": 281004,
+      "sha256": "efde466885851c92119347bc2bba67baad105c3f144a32f59f3aac641746dddd",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "efde466885851c92119347bc2bba67baad105c3f144a32f59f3aac641746dddd"
+    },
+    {
+      "url": "https://tableparty.io/assets/cloud-airship-shadow-C09ws5ib.glb",
+      "path": "assets/cloud-airship-shadow-C09ws5ib.glb",
+      "bytes": 4712,
+      "sha256": "b53fb4e75490e9f618dfbbfd8e8eb98e2950dd1853254e27fe87d0fdfd80919a",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b53fb4e75490e9f618dfbbfd8e8eb98e2950dd1853254e27fe87d0fdfd80919a"
+    },
+    {
+      "url": "https://tableparty.io/assets/cloud-sky-island-far-BBNBENlA.glb",
+      "path": "assets/cloud-sky-island-far-BBNBENlA.glb",
+      "bytes": 14632,
+      "sha256": "6feb9c3eb95d19695b2ac6e3ab1ebb52ec1582aff366aebeea0752d17621b3c4",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "6feb9c3eb95d19695b2ac6e3ab1ebb52ec1582aff366aebeea0752d17621b3c4"
+    },
+    {
+      "url": "https://tableparty.io/assets/cloud-sky-island-lod-CO_AeH7S.glb",
+      "path": "assets/cloud-sky-island-lod-CO_AeH7S.glb",
+      "bytes": 109320,
+      "sha256": "59b2d459984a0bf3416e986ac0a4813f408df3259cae0ba65d19b44e0954bc0a",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "59b2d459984a0bf3416e986ac0a4813f408df3259cae0ba65d19b44e0954bc0a"
+    },
+    {
+      "url": "https://tableparty.io/assets/cloud-sky-shrine-far-BSzbNDx0.glb",
+      "path": "assets/cloud-sky-shrine-far-BSzbNDx0.glb",
+      "bytes": 14012,
+      "sha256": "28670d8b6e4bc29c85d32f01178fa0d6a209b38f109dadce1f3bd0b69d69ff4e",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "28670d8b6e4bc29c85d32f01178fa0d6a209b38f109dadce1f3bd0b69d69ff4e"
+    },
+    {
+      "url": "https://tableparty.io/assets/cloud-sky-shrine-lod-w5QhjSV4.glb",
+      "path": "assets/cloud-sky-shrine-lod-w5QhjSV4.glb",
+      "bytes": 102964,
+      "sha256": "5c642ce77d0c3f5ad44f6d086954bbadc28d9691922cdd0ad92007d9a1e656b3",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "5c642ce77d0c3f5ad44f6d086954bbadc28d9691922cdd0ad92007d9a1e656b3"
+    },
+    {
+      "url": "https://tableparty.io/assets/coast-house-lod-C2xRiMk6.glb",
+      "path": "assets/coast-house-lod-C2xRiMk6.glb",
+      "bytes": 209944,
+      "sha256": "d321abf7a516357c22f5c6c65e711f989256ad5212b16b931edbbc5339071bd4",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d321abf7a516357c22f5c6c65e711f989256ad5212b16b931edbbc5339071bd4"
+    },
+    {
+      "url": "https://tableparty.io/assets/coast-house-shadow-CkNHKg7K.glb",
+      "path": "assets/coast-house-shadow-CkNHKg7K.glb",
+      "bytes": 4212,
+      "sha256": "964797e73af1ab5e1911d7b3534a2ae2ee972544373c2164039a90aded091464",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "964797e73af1ab5e1911d7b3534a2ae2ee972544373c2164039a90aded091464"
+    },
+    {
+      "url": "https://tableparty.io/assets/cosmos-gate-lod-BRtnt_5R.glb",
+      "path": "assets/cosmos-gate-lod-BRtnt_5R.glb",
+      "bytes": 204688,
+      "sha256": "fcc2e48d972b74bebbb8be62517d516dbc7beaacec9bac6bf041c19d27d6e442",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "fcc2e48d972b74bebbb8be62517d516dbc7beaacec9bac6bf041c19d27d6e442"
+    },
+    {
+      "url": "https://tableparty.io/assets/cosmos-gate-shadow-BExA8-pr.glb",
+      "path": "assets/cosmos-gate-shadow-BExA8-pr.glb",
+      "bytes": 4256,
+      "sha256": "9ea79afe4c257506979bc038d2470e98dec9812983a55b74314e92bdf13110c1",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "9ea79afe4c257506979bc038d2470e98dec9812983a55b74314e92bdf13110c1"
+    },
+    {
+      "url": "https://tableparty.io/assets/cosmos-station-v2-lod-Bz9eHMNB.glb",
+      "path": "assets/cosmos-station-v2-lod-Bz9eHMNB.glb",
+      "bytes": 218532,
+      "sha256": "a1fdfada4dc5e45dd77b683677eb7e86eee63a6fad1eb9bd644e4b053b0e6f7f",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "a1fdfada4dc5e45dd77b683677eb7e86eee63a6fad1eb9bd644e4b053b0e6f7f"
+    },
+    {
+      "url": "https://tableparty.io/assets/cosmos-station-v2-shadow-CIqUG-Gu.glb",
+      "path": "assets/cosmos-station-v2-shadow-CIqUG-Gu.glb",
+      "bytes": 5156,
+      "sha256": "074fbe363a79ef03959a4d8c8d3f984700c73e6a290742264fc79d266ac77e12",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "074fbe363a79ef03959a4d8c8d3f984700c73e6a290742264fc79d266ac77e12"
+    },
+    {
+      "url": "https://tableparty.io/assets/dash-lod-C6L5qs_i.glb",
+      "path": "assets/dash-lod-C6L5qs_i.glb",
+      "bytes": 250088,
+      "sha256": "867f5c92fea45644e54bc096f3e91283d387da75c97c685e6e6dba799758158d",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "867f5c92fea45644e54bc096f3e91283d387da75c97c685e6e6dba799758158d"
+    },
+    {
+      "url": "https://tableparty.io/assets/dash-race-lod-2754GASD.glb",
+      "path": "assets/dash-race-lod-2754GASD.glb",
+      "bytes": 104836,
+      "sha256": "32ed3231b180a399f132bf95a566d0be2cf2ac7e5787fa039314ab2624ccb9ba",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "32ed3231b180a399f132bf95a566d0be2cf2ac7e5787fa039314ab2624ccb9ba"
+    },
+    {
+      "url": "https://tableparty.io/assets/de-xrGhTxj_.js",
+      "path": "assets/de-xrGhTxj_.js",
+      "bytes": 137787,
+      "sha256": "399361da299527ae2c539873df98a3f5ea2c551980d4638c3dbe6d66f6705711",
+      "content_type": "text/javascript",
+      "local_sha256": "399361da299527ae2c539873df98a3f5ea2c551980d4638c3dbe6d66f6705711"
+    },
+    {
+      "url": "https://tableparty.io/assets/es-Bj67uLLv.js",
+      "path": "assets/es-Bj67uLLv.js",
+      "bytes": 135383,
+      "sha256": "28304c56729f3e598d7d591b6ccf3701972cf127d79d0ccc1585155413687ae8",
+      "content_type": "text/javascript",
+      "local_sha256": "28304c56729f3e598d7d591b6ccf3701972cf127d79d0ccc1585155413687ae8"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-brazier-far-CT7FainR.glb",
+      "path": "assets/forge-brazier-far-CT7FainR.glb",
+      "bytes": 13420,
+      "sha256": "6adb016c31097622d98e78450206f98acd1fb0c87d9b09ad1649fecf89ec49e1",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "6adb016c31097622d98e78450206f98acd1fb0c87d9b09ad1649fecf89ec49e1"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-brazier-lod-aG-t33P_.glb",
+      "path": "assets/forge-brazier-lod-aG-t33P_.glb",
+      "bytes": 79244,
+      "sha256": "bb2dcdeb070a57f921201c6b24565603a8f906469157d96c614fc2ea1a2a46bc",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "bb2dcdeb070a57f921201c6b24565603a8f906469157d96c614fc2ea1a2a46bc"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-furnace-far-DTAk4AZJ.glb",
+      "path": "assets/forge-furnace-far-DTAk4AZJ.glb",
+      "bytes": 13504,
+      "sha256": "e851c661b670fd64ad3f664f798c0079065f71d0f1e3bb84dc948a64e47d6c34",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "e851c661b670fd64ad3f664f798c0079065f71d0f1e3bb84dc948a64e47d6c34"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-furnace-lod-DZDJZwkQ.glb",
+      "path": "assets/forge-furnace-lod-DZDJZwkQ.glb",
+      "bytes": 88240,
+      "sha256": "f6ecea54c4a87fcb9afb840845a981e7a1af6d143630059af97747cb48aef205",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "f6ecea54c4a87fcb9afb840845a981e7a1af6d143630059af97747cb48aef205"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-keep-lod-DO9lX4I5.glb",
+      "path": "assets/forge-keep-lod-DO9lX4I5.glb",
+      "bytes": 325044,
+      "sha256": "dbd535d7b8a5b6bf784c3ab18fbbec239e20018345eb91ff69e9360fb5384131",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "dbd535d7b8a5b6bf784c3ab18fbbec239e20018345eb91ff69e9360fb5384131"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-keep-shadow-BBpGLOXw.glb",
+      "path": "assets/forge-keep-shadow-BBpGLOXw.glb",
+      "bytes": 6872,
+      "sha256": "d5d11a2487eac7915e0e76cc8f2a2928aee7c6e976ce9b80590e1f8fd756d1f5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d5d11a2487eac7915e0e76cc8f2a2928aee7c6e976ce9b80590e1f8fd756d1f5"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-lava-spire-far-COC-p23K.glb",
+      "path": "assets/forge-lava-spire-far-COC-p23K.glb",
+      "bytes": 11124,
+      "sha256": "c1ae5affa2edec0661e81ac93c933b3951c8e4c65ba1dc627fe7bf3decba697f",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "c1ae5affa2edec0661e81ac93c933b3951c8e4c65ba1dc627fe7bf3decba697f"
+    },
+    {
+      "url": "https://tableparty.io/assets/forge-lava-spire-lod-4QgG5Q8N.glb",
+      "path": "assets/forge-lava-spire-lod-4QgG5Q8N.glb",
+      "bytes": 63324,
+      "sha256": "a8a55b1d923e686457155bffba14c3bd46fb1332946d5536857eb9403f6e093b",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "a8a55b1d923e686457155bffba14c3bd46fb1332946d5536857eb9403f6e093b"
+    },
+    {
+      "url": "https://tableparty.io/assets/fr-sijHrR1P.js",
+      "path": "assets/fr-sijHrR1P.js",
+      "bytes": 140773,
+      "sha256": "f4adc40f49146a0fad9c4038963e61e1faf40f21332e67ea3b2369c15a547498",
+      "content_type": "text/javascript",
+      "local_sha256": "f4adc40f49146a0fad9c4038963e61e1faf40f21332e67ea3b2369c15a547498"
+    },
+    {
+      "url": "https://tableparty.io/assets/game-settings-B4TkFRQX.js",
+      "path": "assets/game-settings-B4TkFRQX.js",
+      "bytes": 5512,
+      "sha256": "21eaca86d6c913f22d17d09ab8eb1547cbda838cdaf9333d62b064251ea8ab09",
+      "content_type": "text/javascript",
+      "local_sha256": "21eaca86d6c913f22d17d09ab8eb1547cbda838cdaf9333d62b064251ea8ab09"
+    },
+    {
+      "url": "https://tableparty.io/assets/garden-palace-v2-lod-CCkS_lPf.glb",
+      "path": "assets/garden-palace-v2-lod-CCkS_lPf.glb",
+      "bytes": 270716,
+      "sha256": "49d4d2d4a2ad7ca47af5827c47f27cf3cde0a64f4645b911c0edb4dfed07bbd6",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "49d4d2d4a2ad7ca47af5827c47f27cf3cde0a64f4645b911c0edb4dfed07bbd6"
+    },
+    {
+      "url": "https://tableparty.io/assets/garden-palace-v2-shadow-Bzs8OXmV.glb",
+      "path": "assets/garden-palace-v2-shadow-Bzs8OXmV.glb",
+      "bytes": 4272,
+      "sha256": "b491c10233dba0e419ad9f27f9f40a129f728b2b0908fd8de1ba45ea3bba0d48",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b491c10233dba0e419ad9f27f9f40a129f728b2b0908fd8de1ba45ea3bba0d48"
+    },
+    {
+      "url": "https://tableparty.io/assets/garden-pavilion-lod-DQGjB8ak.glb",
+      "path": "assets/garden-pavilion-lod-DQGjB8ak.glb",
+      "bytes": 252604,
+      "sha256": "5126a211851bddd7303ab1e0984f20251aebd61e61e32e7b189e70c8a8c5b05b",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "5126a211851bddd7303ab1e0984f20251aebd61e61e32e7b189e70c8a8c5b05b"
+    },
+    {
+      "url": "https://tableparty.io/assets/garden-pavilion-shadow-CqvpM7bk.glb",
+      "path": "assets/garden-pavilion-shadow-CqvpM7bk.glb",
+      "bytes": 4212,
+      "sha256": "0bca3e9bfc996bc2425935af84eda822e51576ff527082091c80af9217aa5537",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "0bca3e9bfc996bc2425935af84eda822e51576ff527082091c80af9217aa5537"
+    },
+    {
+      "url": "https://tableparty.io/assets/garden-tree-far-D02eqaqu.glb",
+      "path": "assets/garden-tree-far-D02eqaqu.glb",
+      "bytes": 31216,
+      "sha256": "b117c4283edc1a6d05fc8ceed4dbfcee33362a2963ba0503eeb33e43b9d4fe71",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b117c4283edc1a6d05fc8ceed4dbfcee33362a2963ba0503eeb33e43b9d4fe71"
+    },
+    {
+      "url": "https://tableparty.io/assets/garden-tree-lod-BBTFbNAC.glb",
+      "path": "assets/garden-tree-lod-BBTFbNAC.glb",
+      "bytes": 288684,
+      "sha256": "1998f45ac0c6c4874f4cbcec854eec6e9771ed5087e43d29b89f6b9097d3d101",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "1998f45ac0c6c4874f4cbcec854eec6e9771ed5087e43d29b89f6b9097d3d101"
+    },
+    {
+      "url": "https://tableparty.io/assets/grid-Dv7T3OLl.js",
+      "path": "assets/grid-Dv7T3OLl.js",
+      "bytes": 665,
+      "sha256": "48f6dcdb81e439e25bf701a8c4c0a140183cf0f7de1d3cc558e97b30840db876",
+      "content_type": "text/javascript",
+      "local_sha256": "48f6dcdb81e439e25bf701a8c4c0a140183cf0f7de1d3cc558e97b30840db876"
+    },
+    {
+      "url": "https://tableparty.io/assets/grid-KvmmP0wr.css",
+      "path": "assets/grid-KvmmP0wr.css",
+      "bytes": 24175,
+      "sha256": "2b7a7b0b29198e74eb1ffc1af63d908a54f645e46704dfdc956544fe31a5eec4",
+      "content_type": "text/css",
+      "local_sha256": "2b7a7b0b29198e74eb1ffc1af63d908a54f645e46704dfdc956544fe31a5eec4"
+    },
+    {
+      "url": "https://tableparty.io/assets/index-B9iNbHIH.js",
+      "path": "assets/index-B9iNbHIH.js",
+      "bytes": 305,
+      "sha256": "ae28f0ce1206776a532c26f19332dd6bf60fba632c12655c77ddd51c701bab33",
+      "content_type": "text/javascript",
+      "local_sha256": "ae28f0ce1206776a532c26f19332dd6bf60fba632c12655c77ddd51c701bab33"
+    },
+    {
+      "url": "https://tableparty.io/assets/index-QHYwp35q.js",
+      "path": "assets/index-QHYwp35q.js",
+      "bytes": 225951,
+      "sha256": "81c24011efa63dd60669b55f659d8e8a84e5e35e98dcd898343caded2c9da146",
+      "content_type": "text/javascript",
+      "local_sha256": "81c24011efa63dd60669b55f659d8e8a84e5e35e98dcd898343caded2c9da146"
+    },
+    {
+      "url": "https://tableparty.io/assets/it-CRD8uStp.js",
+      "path": "assets/it-CRD8uStp.js",
+      "bytes": 136091,
+      "sha256": "18a769d0222ec6a6aee9a2f24749e0fe1528d92a214c012e9a667a4b2ece6a49",
+      "content_type": "text/javascript",
+      "local_sha256": "18a769d0222ec6a6aee9a2f24749e0fe1528d92a214c012e9a667a4b2ece6a49"
+    },
+    {
+      "url": "https://tableparty.io/assets/kart-7vz70Zig.js",
+      "path": "assets/kart-7vz70Zig.js",
+      "bytes": 433021,
+      "sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa",
+      "content_type": "text/javascript",
+      "local_sha256": "106230e4bc1c13a039fa1e847f4ead672644e1fa1117e837ece15f4f8439acfa"
+    },
+    {
+      "url": "https://tableparty.io/assets/kart-CwD9PQC3.css",
+      "path": "assets/kart-CwD9PQC3.css",
+      "bytes": 92954,
+      "sha256": "606bcc2c32e252a7c0f479fa3437d42b7dcd62a656c10dc69a908177ff77b860",
+      "content_type": "text/css",
+      "local_sha256": "606bcc2c32e252a7c0f479fa3437d42b7dcd62a656c10dc69a908177ff77b860"
+    },
+    {
+      "url": "https://tableparty.io/assets/luma-lod-CegvcbLD.glb",
+      "path": "assets/luma-lod-CegvcbLD.glb",
+      "bytes": 195916,
+      "sha256": "f8e3fc582f6d78306f352ab07514261e1578733d2000f28faad0e38c46d5b754",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "f8e3fc582f6d78306f352ab07514261e1578733d2000f28faad0e38c46d5b754"
+    },
+    {
+      "url": "https://tableparty.io/assets/luma-race-lod-B6JKpgo_.glb",
+      "path": "assets/luma-race-lod-B6JKpgo_.glb",
+      "bytes": 82328,
+      "sha256": "7e3a33a99f8c4cc221373f24cf7354d1e2e62a1502358da432294e975e8a9b7b",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "7e3a33a99f8c4cc221373f24cf7354d1e2e62a1502358da432294e975e8a9b7b"
+    },
+    {
+      "url": "https://tableparty.io/assets/meshopt_decoder.module-O9a9x0ao.js",
+      "path": "assets/meshopt_decoder.module-O9a9x0ao.js",
+      "bytes": 73854,
+      "sha256": "f54e0d2b93a95d59cb17f6ab14486d2d18b66bd4957ae8c5c7ac4763de58b91d",
+      "content_type": "text/javascript",
+      "local_sha256": "f54e0d2b93a95d59cb17f6ab14486d2d18b66bd4957ae8c5c7ac4763de58b91d"
+    },
+    {
+      "url": "https://tableparty.io/assets/nl-DG0ZToIZ.js",
+      "path": "assets/nl-DG0ZToIZ.js",
+      "bytes": 133935,
+      "sha256": "db0a7cf20bc025c01448cefcc1bb5dde070f7652fe46ad5f7d9ad75cd6c0dd41",
+      "content_type": "text/javascript",
+      "local_sha256": "db0a7cf20bc025c01448cefcc1bb5dde070f7652fe46ad5f7d9ad75cd6c0dd41"
+    },
+    {
+      "url": "https://tableparty.io/assets/nova-lod-ngqYiOwB.glb",
+      "path": "assets/nova-lod-ngqYiOwB.glb",
+      "bytes": 248156,
+      "sha256": "fd90e7ab9d2bd0dd437e0a1b59016c82b449c99be8fd8f1f8a5f0390b5460327",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "fd90e7ab9d2bd0dd437e0a1b59016c82b449c99be8fd8f1f8a5f0390b5460327"
+    },
+    {
+      "url": "https://tableparty.io/assets/nova-race-lod-VbxDKMvM.glb",
+      "path": "assets/nova-race-lod-VbxDKMvM.glb",
+      "bytes": 106100,
+      "sha256": "b4225be21b413e3f43231ca2dc31944e26bec47f000ed0c162d7984a17e99ff7",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b4225be21b413e3f43231ca2dc31944e26bec47f000ed0c162d7984a17e99ff7"
+    },
+    {
+      "url": "https://tableparty.io/assets/pip-lod-PNGk034N.glb",
+      "path": "assets/pip-lod-PNGk034N.glb",
+      "bytes": 250452,
+      "sha256": "0e9d0b4e22dd4e740cc4a6a9f06a889e11bcc4c620a9503b26a2b47f7e5333dc",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "0e9d0b4e22dd4e740cc4a6a9f06a889e11bcc4c620a9503b26a2b47f7e5333dc"
+    },
+    {
+      "url": "https://tableparty.io/assets/pip-race-lod-hSpZUg4h.glb",
+      "path": "assets/pip-race-lod-hSpZUg4h.glb",
+      "bytes": 105448,
+      "sha256": "863d98ce4bf28079c8ead9391c44a3de88b17df48a5b84a0f851f300f85b74df",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "863d98ce4bf28079c8ead9391c44a3de88b17df48a5b84a0f851f300f85b74df"
+    },
+    {
+      "url": "https://tableparty.io/assets/pl-CUor5LWO.js",
+      "path": "assets/pl-CUor5LWO.js",
+      "bytes": 140264,
+      "sha256": "93d6bcfa66b18e6c12f548d746dec49bc476c36f5b1c9226e0bcf306e6c5476c",
+      "content_type": "text/javascript",
+      "local_sha256": "93d6bcfa66b18e6c12f548d746dec49bc476c36f5b1c9226e0bcf306e6c5476c"
+    },
+    {
+      "url": "https://tableparty.io/assets/poppy-lod-aROpcbnL.glb",
+      "path": "assets/poppy-lod-aROpcbnL.glb",
+      "bytes": 226080,
+      "sha256": "b0a0b3695a011762c0174fad7ea37cbe9948181ef235811a6c7ea2eece4dd63a",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b0a0b3695a011762c0174fad7ea37cbe9948181ef235811a6c7ea2eece4dd63a"
+    },
+    {
+      "url": "https://tableparty.io/assets/poppy-race-lod-dDXD7XkI.glb",
+      "path": "assets/poppy-race-lod-dDXD7XkI.glb",
+      "bytes": 95272,
+      "sha256": "d5cb26cd9b5bc45316506b50acb6e6687b05fbe299d0c5245e0b9dd2cf4257d2",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d5cb26cd9b5bc45316506b50acb6e6687b05fbe299d0c5245e0b9dd2cf4257d2"
+    },
+    {
+      "url": "https://tableparty.io/assets/pt-N3hmRyJ4.js",
+      "path": "assets/pt-N3hmRyJ4.js",
+      "bytes": 134554,
+      "sha256": "34a4ddf4800b93019d1f99e9f11d2adc27f28481d3b276d0fd8ddec4a5daaafa",
+      "content_type": "text/javascript",
+      "local_sha256": "34a4ddf4800b93019d1f99e9f11d2adc27f28481d3b276d0fd8ddec4a5daaafa"
+    },
+    {
+      "url": "https://tableparty.io/assets/ranked-DjJM4Tou.js",
+      "path": "assets/ranked-DjJM4Tou.js",
+      "bytes": 233917,
+      "sha256": "c7f62ed00f168656811d8f2ebf3b85dcc9d46b6d584fecda8d9b85e6baa64207",
+      "content_type": "text/javascript",
+      "local_sha256": "c7f62ed00f168656811d8f2ebf3b85dcc9d46b6d584fecda8d9b85e6baa64207"
+    },
+    {
+      "url": "https://tableparty.io/assets/rankedShield-CBfAy13e.js",
+      "path": "assets/rankedShield-CBfAy13e.js",
+      "bytes": 5355,
+      "sha256": "fafd6ced32768a9480571cf75f2f297dfcf27d504d19a6b1b3ed74b8bff563e6",
+      "content_type": "text/javascript",
+      "local_sha256": "fafd6ced32768a9480571cf75f2f297dfcf27d504d19a6b1b3ed74b8bff563e6"
+    },
+    {
+      "url": "https://tableparty.io/assets/rocco-lod-BOneUYh_.glb",
+      "path": "assets/rocco-lod-BOneUYh_.glb",
+      "bytes": 221104,
+      "sha256": "84905464e9d940d5869f25a1cc7fe4470f44a557211d4d1cc9f766546823f378",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "84905464e9d940d5869f25a1cc7fe4470f44a557211d4d1cc9f766546823f378"
+    },
+    {
+      "url": "https://tableparty.io/assets/rocco-race-lod-DhV6WcWd.glb",
+      "path": "assets/rocco-race-lod-DhV6WcWd.glb",
+      "bytes": 91980,
+      "sha256": "c9c6f4c74441e411c991cd2a142252dd44b02ca4ee9d17f0e98556b284254d63",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "c9c6f4c74441e411c991cd2a142252dd44b02ca4ee9d17f0e98556b284254d63"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-cabin-far-g8PcBBVR.glb",
+      "path": "assets/snow-cabin-far-g8PcBBVR.glb",
+      "bytes": 18012,
+      "sha256": "7dd31cf64800ca9046697ccce0cb53b49f4198f31f861b3368868758227ac7a6",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "7dd31cf64800ca9046697ccce0cb53b49f4198f31f861b3368868758227ac7a6"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-cabin-lod-BRldXflt.glb",
+      "path": "assets/snow-cabin-lod-BRldXflt.glb",
+      "bytes": 164088,
+      "sha256": "84f0df87a319dbe96780413dbaa448b81616b5259aaa21f2b9bbd511fc4cafc5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "84f0df87a319dbe96780413dbaa448b81616b5259aaa21f2b9bbd511fc4cafc5"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-ice-crystals-far-DwValjzk.glb",
+      "path": "assets/snow-ice-crystals-far-DwValjzk.glb",
+      "bytes": 8204,
+      "sha256": "c316cca150d88bfbf8e1a58af783f638dcd310fc0600649a56d0e356fc9e842d",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "c316cca150d88bfbf8e1a58af783f638dcd310fc0600649a56d0e356fc9e842d"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-ice-crystals-lod-DqeU-6zw.glb",
+      "path": "assets/snow-ice-crystals-lod-DqeU-6zw.glb",
+      "bytes": 44364,
+      "sha256": "18cbc786fa4f9202a3e8feaa796a1f7784fc51dfb46f9a43a7e527a876a182a3",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "18cbc786fa4f9202a3e8feaa796a1f7784fc51dfb46f9a43a7e527a876a182a3"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-lodge-lod-ZPxWmTVl.glb",
+      "path": "assets/snow-lodge-lod-ZPxWmTVl.glb",
+      "bytes": 230912,
+      "sha256": "61d0b8cb354be30ff2a676fca9cf7b7ff88b2ecf6273baf37b1dcb9e1ad9218e",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "61d0b8cb354be30ff2a676fca9cf7b7ff88b2ecf6273baf37b1dcb9e1ad9218e"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-lodge-shadow-BPHu5Mdh.glb",
+      "path": "assets/snow-lodge-shadow-BPHu5Mdh.glb",
+      "bytes": 4396,
+      "sha256": "2c8d9c216274e4f72206fde100e77f073163701c4da4870d66ca6e95ae4b74cd",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "2c8d9c216274e4f72206fde100e77f073163701c4da4870d66ca6e95ae4b74cd"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-pine-far-yLVtsCjR.glb",
+      "path": "assets/snow-pine-far-yLVtsCjR.glb",
+      "bytes": 15520,
+      "sha256": "786801035e79a0fb32077f92c77e7b3d94d3666a3982bd52899a4930c26c63f0",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "786801035e79a0fb32077f92c77e7b3d94d3666a3982bd52899a4930c26c63f0"
+    },
+    {
+      "url": "https://tableparty.io/assets/snow-pine-lod--qXSAihW.glb",
+      "path": "assets/snow-pine-lod--qXSAihW.glb",
+      "bytes": 116836,
+      "sha256": "66498d4a84f0173d9653dcac8c46adc95fd3e939b2edc391711a39ece833d165",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "66498d4a84f0173d9653dcac8c46adc95fd3e939b2edc391711a39ece833d165"
+    },
+    {
+      "url": "https://tableparty.io/assets/tess-lod-BCysEdAG.glb",
+      "path": "assets/tess-lod-BCysEdAG.glb",
+      "bytes": 203528,
+      "sha256": "96a09725257cf3a7a641f2c33358e6c544fe854f0a43be14b00de4824e187396",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "96a09725257cf3a7a641f2c33358e6c544fe854f0a43be14b00de4824e187396"
+    },
+    {
+      "url": "https://tableparty.io/assets/tess-race-lod-C6ztcf12.glb",
+      "path": "assets/tess-race-lod-C6ztcf12.glb",
+      "bytes": 85496,
+      "sha256": "da2fc5faec4af1aadfdcae801b6cf301335274ac990afe40b22d73d59657030a",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "da2fc5faec4af1aadfdcae801b6cf301335274ac990afe40b22d73d59657030a"
+    },
+    {
+      "url": "https://tableparty.io/assets/tr-Bx4vEMBW.js",
+      "path": "assets/tr-Bx4vEMBW.js",
+      "bytes": 133956,
+      "sha256": "0778c205ace9a8fbd6368f2704ae73751192ad9ee81b10a3f086c0522486ed7b",
+      "content_type": "text/javascript",
+      "local_sha256": "0778c205ace9a8fbd6368f2704ae73751192ad9ee81b10a3f086c0522486ed7b"
+    },
+    {
+      "url": "https://tableparty.io/assets/trackProtocol-OIX5LHKx.js",
+      "path": "assets/trackProtocol-OIX5LHKx.js",
+      "bytes": 498,
+      "sha256": "8b91e097770508d9576cdc0c47198c19bd1f00e7472c9a8665c9c1f50229799c",
+      "content_type": "text/javascript",
+      "local_sha256": "8b91e097770508d9576cdc0c47198c19bd1f00e7472c9a8665c9c1f50229799c"
+    },
+    {
+      "url": "https://tableparty.io/assets/web-BBtyBHP-.js",
+      "path": "assets/web-BBtyBHP-.js",
+      "bytes": 760,
+      "sha256": "c2caa92fd7bfc829498c2746523ba5b7511690007f6ed13d875c7883eee6f216",
+      "content_type": "text/javascript",
+      "local_sha256": "c2caa92fd7bfc829498c2746523ba5b7511690007f6ed13d875c7883eee6f216"
+    },
+    {
+      "url": "https://tableparty.io/assets/web-CPbsC21e.js",
+      "path": "assets/web-CPbsC21e.js",
+      "bytes": 975,
+      "sha256": "6647d8afc4b92d7780c0d4a4b8686086fdabd13550c6585921d7f8b54f40b2e5",
+      "content_type": "text/javascript",
+      "local_sha256": "6647d8afc4b92d7780c0d4a4b8686086fdabd13550c6585921d7f8b54f40b2e5"
+    },
+    {
+      "url": "https://tableparty.io/fonts/jakarta-500.woff2",
+      "path": "fonts/jakarta-500.woff2",
+      "bytes": 12300,
+      "sha256": "d49885abe6a93b02c9fdaa99c82531c069184403d2a1e1d13e481d05815459ae",
+      "content_type": "font/woff2",
+      "local_sha256": "d49885abe6a93b02c9fdaa99c82531c069184403d2a1e1d13e481d05815459ae"
+    },
+    {
+      "url": "https://tableparty.io/fonts/jakarta-800.woff2",
+      "path": "fonts/jakarta-800.woff2",
+      "bytes": 11980,
+      "sha256": "bfbc2121e1db00a856600ad088421fdf6e9c0e8b907c8c523ee8c1cfef75c76d",
+      "content_type": "font/woff2",
+      "local_sha256": "bfbc2121e1db00a856600ad088421fdf6e9c0e8b907c8c523ee8c1cfef75c76d"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/candy-v1.mp3",
+      "path": "kart/audio/candy-v1.mp3",
+      "bytes": 640776,
+      "sha256": "72403f5c2caec26ef5b56bf82ad37abd25c5151b9679ca50d240972b7eb7718f",
+      "content_type": "audio/mpeg",
+      "local_sha256": "72403f5c2caec26ef5b56bf82ad37abd25c5151b9679ca50d240972b7eb7718f"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/canyon-v1.mp3",
+      "path": "kart/audio/canyon-v1.mp3",
+      "bytes": 854352,
+      "sha256": "a8d22ffc828134a9e654b28a82d13372d01ad5c44812f5673ffee742f1beb471",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a8d22ffc828134a9e654b28a82d13372d01ad5c44812f5673ffee742f1beb471"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/cloud-v1.mp3",
+      "path": "kart/audio/cloud-v1.mp3",
+      "bytes": 640776,
+      "sha256": "67f54a338bc33ee09f5ede889942b40dc606f845acb531dbb2540123456a594d",
+      "content_type": "audio/mpeg",
+      "local_sha256": "67f54a338bc33ee09f5ede889942b40dc606f845acb531dbb2540123456a594d"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/coast-v1.mp3",
+      "path": "kart/audio/coast-v1.mp3",
+      "bytes": 854352,
+      "sha256": "ac5b657df2bbd66a48fc7dc956e61a2631697da21c3a2d0fc6564c40171affce",
+      "content_type": "audio/mpeg",
+      "local_sha256": "ac5b657df2bbd66a48fc7dc956e61a2631697da21c3a2d0fc6564c40171affce"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/cosmos-v1.mp3",
+      "path": "kart/audio/cosmos-v1.mp3",
+      "bytes": 854352,
+      "sha256": "1e9f14ef6b15dff8b0a4db18c676b30571ba77292b8e254f2c151faf7e03daf1",
+      "content_type": "audio/mpeg",
+      "local_sha256": "1e9f14ef6b15dff8b0a4db18c676b30571ba77292b8e254f2c151faf7e03daf1"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/forge-v1.mp3",
+      "path": "kart/audio/forge-v1.mp3",
+      "bytes": 640776,
+      "sha256": "071f841e7e8f612ef0aa15d405fa5308ae511d6a827d26069984e8742efe9dc0",
+      "content_type": "audio/mpeg",
+      "local_sha256": "071f841e7e8f612ef0aa15d405fa5308ae511d6a827d26069984e8742efe9dc0"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/garden-v1.mp3",
+      "path": "kart/audio/garden-v1.mp3",
+      "bytes": 854352,
+      "sha256": "1ef64f778fbde59b8c34947c0927c0d854af696866363a1e69520a97cda17398",
+      "content_type": "audio/mpeg",
+      "local_sha256": "1ef64f778fbde59b8c34947c0927c0d854af696866363a1e69520a97cda17398"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/menu-v2.mp3",
+      "path": "kart/audio/menu-v2.mp3",
+      "bytes": 854352,
+      "sha256": "60884b5c50f70e61307ea4948e0023ba8e8247bc522d2a2059e9e6f702cd9a98",
+      "content_type": "audio/mpeg",
+      "local_sha256": "60884b5c50f70e61307ea4948e0023ba8e8247bc522d2a2059e9e6f702cd9a98"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/back.mp3",
+      "path": "kart/audio/sfx/back.mp3",
+      "bytes": 8821,
+      "sha256": "b848384667de4a9600a57f1fb678703d2e67db014a126428b112da3b3e9bc380",
+      "content_type": "audio/mpeg",
+      "local_sha256": "b848384667de4a9600a57f1fb678703d2e67db014a126428b112da3b3e9bc380"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/block-v6b.mp3",
+      "path": "kart/audio/sfx/block-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "21d745fe449e2c7943d46557a36bababaa8d45dba4af9bdc3cd7a9ea259a0996",
+      "content_type": "audio/mpeg",
+      "local_sha256": "21d745fe449e2c7943d46557a36bababaa8d45dba4af9bdc3cd7a9ea259a0996"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/bomb.mp3",
+      "path": "kart/audio/sfx/bomb.mp3",
+      "bytes": 15926,
+      "sha256": "e238debb30f7ac28f3144713511456d0a790e9ec542069921a7fda4594bd00e1",
+      "content_type": "audio/mpeg",
+      "local_sha256": "e238debb30f7ac28f3144713511456d0a790e9ec542069921a7fda4594bd00e1"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/boost-loop.mp3",
+      "path": "kart/audio/sfx/boost-loop.mp3",
+      "bytes": 48945,
+      "sha256": "fd51b30d2bade969cc1d5e9fd5f5b80c4c80142dfd815738ca02ded547ff457c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "fd51b30d2bade969cc1d5e9fd5f5b80c4c80142dfd815738ca02ded547ff457c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/boost-v1.mp3",
+      "path": "kart/audio/sfx/boost-v1.mp3",
+      "bytes": 21359,
+      "sha256": "77ce74f784948457dd34de3c1aca7ccc6ffb17bd1d3da1f36e2faf91c41cafc3",
+      "content_type": "audio/mpeg",
+      "local_sha256": "77ce74f784948457dd34de3c1aca7ccc6ffb17bd1d3da1f36e2faf91c41cafc3"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/boost-v2.mp3",
+      "path": "kart/audio/sfx/boost-v2.mp3",
+      "bytes": 21359,
+      "sha256": "597b4b752cda56425c9363b96685e58cf1a1cfb57a13fe6151166817f26a16a5",
+      "content_type": "audio/mpeg",
+      "local_sha256": "597b4b752cda56425c9363b96685e58cf1a1cfb57a13fe6151166817f26a16a5"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/box-break.mp3",
+      "path": "kart/audio/sfx/box-break.mp3",
+      "bytes": 12164,
+      "sha256": "555bcd49025076ad2a9dd1872340604d6f49455cfc524e520e5f58059a56340d",
+      "content_type": "audio/mpeg",
+      "local_sha256": "555bcd49025076ad2a9dd1872340604d6f49455cfc524e520e5f58059a56340d"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/box-v6b.mp3",
+      "path": "kart/audio/sfx/box-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "daac3a6189c26c54f0205e0101728ae7bf0755b84aa035ccd838a248f6104b5f",
+      "content_type": "audio/mpeg",
+      "local_sha256": "daac3a6189c26c54f0205e0101728ae7bf0755b84aa035ccd838a248f6104b5f"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/bump-a.mp3",
+      "path": "kart/audio/sfx/bump-a.mp3",
+      "bytes": 8821,
+      "sha256": "d6ee975cd5681809f81e7cd743026414fb998af964171fdb404b75a1464ca183",
+      "content_type": "audio/mpeg",
+      "local_sha256": "d6ee975cd5681809f81e7cd743026414fb998af964171fdb404b75a1464ca183"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/bump-b.mp3",
+      "path": "kart/audio/sfx/bump-b.mp3",
+      "bytes": 5477,
+      "sha256": "1cfcdde6c8f48c45c19b20b414de1c866ea7daf60ba191b9e807f124e7015a96",
+      "content_type": "audio/mpeg",
+      "local_sha256": "1cfcdde6c8f48c45c19b20b414de1c866ea7daf60ba191b9e807f124e7015a96"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/bump-c.mp3",
+      "path": "kart/audio/sfx/bump-c.mp3",
+      "bytes": 8821,
+      "sha256": "b1210589df9f3efea1bf316d314664b84e6ddd693b5bc80942bd956b2ec56fc1",
+      "content_type": "audio/mpeg",
+      "local_sha256": "b1210589df9f3efea1bf316d314664b84e6ddd693b5bc80942bd956b2ec56fc1"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-bruno.mp3",
+      "path": "kart/audio/sfx/cheer-bruno.mp3",
+      "bytes": 13836,
+      "sha256": "a567d102f3d5e5158c10be08f55d4e6522dc8e8abc3b424d5277c7ccd2848887",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a567d102f3d5e5158c10be08f55d4e6522dc8e8abc3b424d5277c7ccd2848887"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-dash.mp3",
+      "path": "kart/audio/sfx/cheer-dash.mp3",
+      "bytes": 12164,
+      "sha256": "f2b534c5175a0b8664574bd69afbae70a4fc562ec40a3ce756204308b2f30f50",
+      "content_type": "audio/mpeg",
+      "local_sha256": "f2b534c5175a0b8664574bd69afbae70a4fc562ec40a3ce756204308b2f30f50"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-luma.mp3",
+      "path": "kart/audio/sfx/cheer-luma.mp3",
+      "bytes": 12164,
+      "sha256": "cbb2b6f570ac2086216f7db907b268566a9fe08ea6512ddbb3ea7986c71e20b4",
+      "content_type": "audio/mpeg",
+      "local_sha256": "cbb2b6f570ac2086216f7db907b268566a9fe08ea6512ddbb3ea7986c71e20b4"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-nova.mp3",
+      "path": "kart/audio/sfx/cheer-nova.mp3",
+      "bytes": 12164,
+      "sha256": "273de1dd0a568d9833bb6d3b7a2a7ca55c0d809b8267b3fb7772190e81510a2e",
+      "content_type": "audio/mpeg",
+      "local_sha256": "273de1dd0a568d9833bb6d3b7a2a7ca55c0d809b8267b3fb7772190e81510a2e"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-pip.mp3",
+      "path": "kart/audio/sfx/cheer-pip.mp3",
+      "bytes": 12164,
+      "sha256": "0d6ac81ece28bb32b4efe19b9a6f6dab69fe79e5c016a18affc68d22a3c15c5e",
+      "content_type": "audio/mpeg",
+      "local_sha256": "0d6ac81ece28bb32b4efe19b9a6f6dab69fe79e5c016a18affc68d22a3c15c5e"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-poppy.mp3",
+      "path": "kart/audio/sfx/cheer-poppy.mp3",
+      "bytes": 12164,
+      "sha256": "f0ac746524c241eaeef4bbe64f760a83146a51701a8d20b9bc008069b324b129",
+      "content_type": "audio/mpeg",
+      "local_sha256": "f0ac746524c241eaeef4bbe64f760a83146a51701a8d20b9bc008069b324b129"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-rocco.mp3",
+      "path": "kart/audio/sfx/cheer-rocco.mp3",
+      "bytes": 12164,
+      "sha256": "28aec394802ec7362b031902e3117fa26df87588d07be3a64da76849d7397404",
+      "content_type": "audio/mpeg",
+      "local_sha256": "28aec394802ec7362b031902e3117fa26df87588d07be3a64da76849d7397404"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/cheer-tess.mp3",
+      "path": "kart/audio/sfx/cheer-tess.mp3",
+      "bytes": 11746,
+      "sha256": "ff7d51d5ab7d4ac77f0fdf71036bf226472c083488568ea62d70ba19aa4b5ce1",
+      "content_type": "audio/mpeg",
+      "local_sha256": "ff7d51d5ab7d4ac77f0fdf71036bf226472c083488568ea62d70ba19aa4b5ce1"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/coin-v6b.mp3",
+      "path": "kart/audio/sfx/coin-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "05bc782c6063d76b1cb58734b454061767416a53e4b2a18816ab9ec722cdb25b",
+      "content_type": "audio/mpeg",
+      "local_sha256": "05bc782c6063d76b1cb58734b454061767416a53e4b2a18816ab9ec722cdb25b"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/confirm.mp3",
+      "path": "kart/audio/sfx/confirm.mp3",
+      "bytes": 13836,
+      "sha256": "fbcf67341aa56b5f95fff5fef97952163d4cea049a4aefbe7a55f7a5fdde5540",
+      "content_type": "audio/mpeg",
+      "local_sha256": "fbcf67341aa56b5f95fff5fef97952163d4cea049a4aefbe7a55f7a5fdde5540"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/crash-obstacle.mp3",
+      "path": "kart/audio/sfx/crash-obstacle.mp3",
+      "bytes": 15090,
+      "sha256": "27d87a124af68775046f09c92d9bca5fd200e101f90f90ec308d956d0a94c7cd",
+      "content_type": "audio/mpeg",
+      "local_sha256": "27d87a124af68775046f09c92d9bca5fd200e101f90f90ec308d956d0a94c7cd"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/crowd-loop-v1.mp3",
+      "path": "kart/audio/sfx/crowd-loop-v1.mp3",
+      "bytes": 95756,
+      "sha256": "68060e5627f9d4820d235db4a36bb3b4f96c48a243af48404f55809ef8291707",
+      "content_type": "audio/mpeg",
+      "local_sha256": "68060e5627f9d4820d235db4a36bb3b4f96c48a243af48404f55809ef8291707"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/crowd-roar.mp3",
+      "path": "kart/audio/sfx/crowd-roar.mp3",
+      "bytes": 40586,
+      "sha256": "bfc946c52ceeee6ad5a8e98d3f0faa3ef42c02026a7e300d018e48e2147b2a69",
+      "content_type": "audio/mpeg",
+      "local_sha256": "bfc946c52ceeee6ad5a8e98d3f0faa3ef42c02026a7e300d018e48e2147b2a69"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/drift-v6b.mp3",
+      "path": "kart/audio/sfx/drift-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "a7f7be8d514b5276ba7c592edbeafac0f7fb22faeb084db0d4b6b74b0b564028",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a7f7be8d514b5276ba7c592edbeafac0f7fb22faeb084db0d4b6b74b0b564028"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/drop-v6b.mp3",
+      "path": "kart/audio/sfx/drop-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "58f850670ea25dc1618d2c397eafc72e5ad58f4d5d0805d2343fbdd899d98b2f",
+      "content_type": "audio/mpeg",
+      "local_sha256": "58f850670ea25dc1618d2c397eafc72e5ad58f4d5d0805d2343fbdd899d98b2f"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/engine-high-loop.mp3",
+      "path": "kart/audio/sfx/engine-high-loop.mp3",
+      "bytes": 47691,
+      "sha256": "55c79919bbd870dc5adbd428376a6bb54e55c7cf2e464a157948d968c2fa2bb8",
+      "content_type": "audio/mpeg",
+      "local_sha256": "55c79919bbd870dc5adbd428376a6bb54e55c7cf2e464a157948d968c2fa2bb8"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/engine-loop.mp3",
+      "path": "kart/audio/sfx/engine-loop.mp3",
+      "bytes": 81128,
+      "sha256": "51cbbcd2ff852b879e16f24416d498b00340abfc196fdb4891e874e72c3928c9",
+      "content_type": "audio/mpeg",
+      "local_sha256": "51cbbcd2ff852b879e16f24416d498b00340abfc196fdb4891e874e72c3928c9"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/engine-low-loop.mp3",
+      "path": "kart/audio/sfx/engine-low-loop.mp3",
+      "bytes": 47691,
+      "sha256": "bcd3938745010307da1fe52aafdbbecf471fac5ccee8aceb1a2800ef33e32c4c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "bcd3938745010307da1fe52aafdbbecf471fac5ccee8aceb1a2800ef33e32c4c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/fall.mp3",
+      "path": "kart/audio/sfx/fall.mp3",
+      "bytes": 20106,
+      "sha256": "bcdebc51e39b5fe68f08c37c2771b176acd8f1f40e3005a48ef3bce616e60c62",
+      "content_type": "audio/mpeg",
+      "local_sha256": "bcdebc51e39b5fe68f08c37c2771b176acd8f1f40e3005a48ef3bce616e60c62"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/fanfare.mp3",
+      "path": "kart/audio/sfx/fanfare.mp3",
+      "bytes": 56886,
+      "sha256": "d9bd336126079f808473aedf5f26dda725b5e70fa5b3bc54280297a93c2003bc",
+      "content_type": "audio/mpeg",
+      "local_sha256": "d9bd336126079f808473aedf5f26dda725b5e70fa5b3bc54280297a93c2003bc"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/finish-low.mp3",
+      "path": "kart/audio/sfx/finish-low.mp3",
+      "bytes": 48945,
+      "sha256": "5146dd4cfb5ccbc98c7367d35ee46611c1ae84498aeebd10519caf735b565f22",
+      "content_type": "audio/mpeg",
+      "local_sha256": "5146dd4cfb5ccbc98c7367d35ee46611c1ae84498aeebd10519caf735b565f22"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/finish-mid.mp3",
+      "path": "kart/audio/sfx/finish-mid.mp3",
+      "bytes": 48945,
+      "sha256": "4e684fe7eb20587ca6cc9479fd5eb42e5efbd5469580ce690b74b089030f9b0c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "4e684fe7eb20587ca6cc9479fd5eb42e5efbd5469580ce690b74b089030f9b0c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/fireworks.mp3",
+      "path": "kart/audio/sfx/fireworks.mp3",
+      "bytes": 33062,
+      "sha256": "7aefe4b0661b3c8e6ad474b107d72df0bb1eb5742b41e3be1e33106fed198f08",
+      "content_type": "audio/mpeg",
+      "local_sha256": "7aefe4b0661b3c8e6ad474b107d72df0bb1eb5742b41e3be1e33106fed198f08"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/grass-loop.mp3",
+      "path": "kart/audio/sfx/grass-loop.mp3",
+      "bytes": 47691,
+      "sha256": "6503577b50436ce60072f1dd5d40eaf2e8e27f4b9f06ba70ac26a397e06a8d12",
+      "content_type": "audio/mpeg",
+      "local_sha256": "6503577b50436ce60072f1dd5d40eaf2e8e27f4b9f06ba70ac26a397e06a8d12"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/gravel-loop-v1.mp3",
+      "path": "kart/audio/sfx/gravel-loop-v1.mp3",
+      "bytes": 63991,
+      "sha256": "261df7a4d1940b2110799a8dc0df76c62ae557d6301aeac132beef9975fed935",
+      "content_type": "audio/mpeg",
+      "local_sha256": "261df7a4d1940b2110799a8dc0df76c62ae557d6301aeac132beef9975fed935"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hit-v1.mp3",
+      "path": "kart/audio/sfx/hit-v1.mp3",
+      "bytes": 17180,
+      "sha256": "bd0ff08d0eb9fcdf1af9faec5927712e5b9433e3fbc7661792835e1d4c9b8fc6",
+      "content_type": "audio/mpeg",
+      "local_sha256": "bd0ff08d0eb9fcdf1af9faec5927712e5b9433e3fbc7661792835e1d4c9b8fc6"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hit-v2.mp3",
+      "path": "kart/audio/sfx/hit-v2.mp3",
+      "bytes": 17180,
+      "sha256": "a3c01a34d44f69103e01238e19d25b0ca3aaa297dcb3ad385b27133310bce352",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a3c01a34d44f69103e01238e19d25b0ca3aaa297dcb3ad385b27133310bce352"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hit-v6-a.mp3",
+      "path": "kart/audio/sfx/hit-v6-a.mp3",
+      "bytes": 7149,
+      "sha256": "3692f7445588595e05da71246acc81537734775bb3e887807913206b0154d130",
+      "content_type": "audio/mpeg",
+      "local_sha256": "3692f7445588595e05da71246acc81537734775bb3e887807913206b0154d130"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hit-v6-b.mp3",
+      "path": "kart/audio/sfx/hit-v6-b.mp3",
+      "bytes": 11328,
+      "sha256": "67761605771631acc55dadbf9777bd615a8c1a2ad2c106a5c1791b137c956ea5",
+      "content_type": "audio/mpeg",
+      "local_sha256": "67761605771631acc55dadbf9777bd615a8c1a2ad2c106a5c1791b137c956ea5"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-bruno.mp3",
+      "path": "kart/audio/sfx/hurt-bruno.mp3",
+      "bytes": 12164,
+      "sha256": "8ac6f9dee0e64b841ecbfc02225f76221f3a76558ab259e3b5d8ae818f09e7a7",
+      "content_type": "audio/mpeg",
+      "local_sha256": "8ac6f9dee0e64b841ecbfc02225f76221f3a76558ab259e3b5d8ae818f09e7a7"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-dash.mp3",
+      "path": "kart/audio/sfx/hurt-dash.mp3",
+      "bytes": 12164,
+      "sha256": "9229dd9d707a013821c4e52d040dd3cb828c8d62a251a3e026e65bdee1802002",
+      "content_type": "audio/mpeg",
+      "local_sha256": "9229dd9d707a013821c4e52d040dd3cb828c8d62a251a3e026e65bdee1802002"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-luma.mp3",
+      "path": "kart/audio/sfx/hurt-luma.mp3",
+      "bytes": 12164,
+      "sha256": "67dd26b59573799ef07df3c992c5cbc42ff52cf76bee5ddc9dc7ff239388fa19",
+      "content_type": "audio/mpeg",
+      "local_sha256": "67dd26b59573799ef07df3c992c5cbc42ff52cf76bee5ddc9dc7ff239388fa19"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-nova.mp3",
+      "path": "kart/audio/sfx/hurt-nova.mp3",
+      "bytes": 12164,
+      "sha256": "7acf8241e1aa0b6894b066e8e98d7f3ba4a74fb8d42818936054b576578b533b",
+      "content_type": "audio/mpeg",
+      "local_sha256": "7acf8241e1aa0b6894b066e8e98d7f3ba4a74fb8d42818936054b576578b533b"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-pip.mp3",
+      "path": "kart/audio/sfx/hurt-pip.mp3",
+      "bytes": 12164,
+      "sha256": "0c9f50f525bca7499dec5d1795c7ce266dde8b2d598b69473ad6d798b7080e93",
+      "content_type": "audio/mpeg",
+      "local_sha256": "0c9f50f525bca7499dec5d1795c7ce266dde8b2d598b69473ad6d798b7080e93"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-poppy.mp3",
+      "path": "kart/audio/sfx/hurt-poppy.mp3",
+      "bytes": 12164,
+      "sha256": "d4f6f890d831d333dceb24b294f29e5e0d0669cc2b8906cd26187270dd590196",
+      "content_type": "audio/mpeg",
+      "local_sha256": "d4f6f890d831d333dceb24b294f29e5e0d0669cc2b8906cd26187270dd590196"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-rocco.mp3",
+      "path": "kart/audio/sfx/hurt-rocco.mp3",
+      "bytes": 12164,
+      "sha256": "18259140d019bcc479d451830961d64daa7cda8ff242e9b7f1faf8bb0708edd0",
+      "content_type": "audio/mpeg",
+      "local_sha256": "18259140d019bcc479d451830961d64daa7cda8ff242e9b7f1faf8bb0708edd0"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/hurt-tess.mp3",
+      "path": "kart/audio/sfx/hurt-tess.mp3",
+      "bytes": 12164,
+      "sha256": "54c954b0961301795a04000b9b0abc0cf9c8a75f57f74a6c3cbc74da7d9e0d71",
+      "content_type": "audio/mpeg",
+      "local_sha256": "54c954b0961301795a04000b9b0abc0cf9c8a75f57f74a6c3cbc74da7d9e0d71"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/ink-v6b.mp3",
+      "path": "kart/audio/sfx/ink-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "aa53ce0abfaac942ceb9b98c7164459087bd37a714567b8e3577dbab4eacdc92",
+      "content_type": "audio/mpeg",
+      "local_sha256": "aa53ce0abfaac942ceb9b98c7164459087bd37a714567b8e3577dbab4eacdc92"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/item-land.mp3",
+      "path": "kart/audio/sfx/item-land.mp3",
+      "bytes": 10493,
+      "sha256": "ca2cca4ed6f5a1a850b2b8a54d2e759cd136ebc6dc1a227c8db810df2e374623",
+      "content_type": "audio/mpeg",
+      "local_sha256": "ca2cca4ed6f5a1a850b2b8a54d2e759cd136ebc6dc1a227c8db810df2e374623"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/item-roll.mp3",
+      "path": "kart/audio/sfx/item-roll.mp3",
+      "bytes": 18434,
+      "sha256": "6f9e90ac6a6a5487f089cd764075f7d9b1146a867cf7ee7dba4ae9b336441694",
+      "content_type": "audio/mpeg",
+      "local_sha256": "6f9e90ac6a6a5487f089cd764075f7d9b1146a867cf7ee7dba4ae9b336441694"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/jump.mp3",
+      "path": "kart/audio/sfx/jump.mp3",
+      "bytes": 10493,
+      "sha256": "6a9b7ea295d3868620be1f75412c515811972dcf84a1949c128b3041b3f3f14f",
+      "content_type": "audio/mpeg",
+      "local_sha256": "6a9b7ea295d3868620be1f75412c515811972dcf84a1949c128b3041b3f3f14f"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/kart-crunch.mp3",
+      "path": "kart/audio/sfx/kart-crunch.mp3",
+      "bytes": 10493,
+      "sha256": "cb7f97139b75b67e3dea56d809ddfb5b1a5df2192db9b097080813800ef1587c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "cb7f97139b75b67e3dea56d809ddfb5b1a5df2192db9b097080813800ef1587c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/kerb-loop.mp3",
+      "path": "kart/audio/sfx/kerb-loop.mp3",
+      "bytes": 48945,
+      "sha256": "9916cf581c87b9c980db3ad1b2fd4cbbae958a781145af31c6975c477d41f140",
+      "content_type": "audio/mpeg",
+      "local_sha256": "9916cf581c87b9c980db3ad1b2fd4cbbae958a781145af31c6975c477d41f140"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/land.mp3",
+      "path": "kart/audio/sfx/land.mp3",
+      "bytes": 12164,
+      "sha256": "a72b0569fb7e5fe178bd371056eaf9436c5e6446fdf66f916c9edd2dd2f70742",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a72b0569fb7e5fe178bd371056eaf9436c5e6446fdf66f916c9edd2dd2f70742"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/lap.mp3",
+      "path": "kart/audio/sfx/lap.mp3",
+      "bytes": 23031,
+      "sha256": "9f0996d2ae953df91d2658f85ff6b7b79c731de92cf2aa17a8bafd3a5be3c4b1",
+      "content_type": "audio/mpeg",
+      "local_sha256": "9f0996d2ae953df91d2658f85ff6b7b79c731de92cf2aa17a8bafd3a5be3c4b1"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-bruno.mp3",
+      "path": "kart/audio/sfx/laugh-bruno.mp3",
+      "bytes": 13836,
+      "sha256": "a75022b9105e911a791f620ff3dfbcc2c8188cbf29584b761cc2accfd529a759",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a75022b9105e911a791f620ff3dfbcc2c8188cbf29584b761cc2accfd529a759"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-dash.mp3",
+      "path": "kart/audio/sfx/laugh-dash.mp3",
+      "bytes": 13836,
+      "sha256": "367ec242ac0b07607de918fb4b54f183b94ea156b38348cb5a9e4e7fafeac22d",
+      "content_type": "audio/mpeg",
+      "local_sha256": "367ec242ac0b07607de918fb4b54f183b94ea156b38348cb5a9e4e7fafeac22d"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-luma.mp3",
+      "path": "kart/audio/sfx/laugh-luma.mp3",
+      "bytes": 13836,
+      "sha256": "edd5698e18351acbd692a2947d6a4f15e993c612572665e6de9dcca4a370eeb5",
+      "content_type": "audio/mpeg",
+      "local_sha256": "edd5698e18351acbd692a2947d6a4f15e993c612572665e6de9dcca4a370eeb5"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-nova.mp3",
+      "path": "kart/audio/sfx/laugh-nova.mp3",
+      "bytes": 13836,
+      "sha256": "ac867de33f317f20f5fc5b3bea1c4c387365d99c2fff6ea1d248eda1c01c03b7",
+      "content_type": "audio/mpeg",
+      "local_sha256": "ac867de33f317f20f5fc5b3bea1c4c387365d99c2fff6ea1d248eda1c01c03b7"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-pip.mp3",
+      "path": "kart/audio/sfx/laugh-pip.mp3",
+      "bytes": 13836,
+      "sha256": "2991218b8fd3d53654a8502e869b9bcad94ea29f0b7db2c240be69fe6c0f436e",
+      "content_type": "audio/mpeg",
+      "local_sha256": "2991218b8fd3d53654a8502e869b9bcad94ea29f0b7db2c240be69fe6c0f436e"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-poppy.mp3",
+      "path": "kart/audio/sfx/laugh-poppy.mp3",
+      "bytes": 13836,
+      "sha256": "cad3ab68bc3267688f10c5f02381a551ecf1bc4d4a9790501a7925bd6eeffa2c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "cad3ab68bc3267688f10c5f02381a551ecf1bc4d4a9790501a7925bd6eeffa2c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-rocco.mp3",
+      "path": "kart/audio/sfx/laugh-rocco.mp3",
+      "bytes": 13836,
+      "sha256": "89039050619e9bac81d4ccc899f44b05297d5d414011a473f687057ea031184c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "89039050619e9bac81d4ccc899f44b05297d5d414011a473f687057ea031184c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/laugh-tess.mp3",
+      "path": "kart/audio/sfx/laugh-tess.mp3",
+      "bytes": 13836,
+      "sha256": "a4ca1d8756a08a27fde94f15bbda4a931ae89687bb7b5f0d2e093ab9a18c2c2c",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a4ca1d8756a08a27fde94f15bbda4a931ae89687bb7b5f0d2e093ab9a18c2c2c"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/launch.mp3",
+      "path": "kart/audio/sfx/launch.mp3",
+      "bytes": 13836,
+      "sha256": "ebb40f133b95fff09ad128e9665f279ffb7a8aa313db06dbc0ab17fd64ce9ecc",
+      "content_type": "audio/mpeg",
+      "local_sha256": "ebb40f133b95fff09ad128e9665f279ffb7a8aa313db06dbc0ab17fd64ce9ecc"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/lightning.mp3",
+      "path": "kart/audio/sfx/lightning.mp3",
+      "bytes": 21359,
+      "sha256": "0536893ca2aa8271b45f9b545fc69241a18d4ff2e66d0135ac15f1a65e834914",
+      "content_type": "audio/mpeg",
+      "local_sha256": "0536893ca2aa8271b45f9b545fc69241a18d4ff2e66d0135ac15f1a65e834914"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/metal-loop.mp3",
+      "path": "kart/audio/sfx/metal-loop.mp3",
+      "bytes": 47691,
+      "sha256": "be9ecda63141ef7f42ddee88b60b83f63eeba3f4d91b927598f9f35982f21334",
+      "content_type": "audio/mpeg",
+      "local_sha256": "be9ecda63141ef7f42ddee88b60b83f63eeba3f4d91b927598f9f35982f21334"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/ready-v6b.mp3",
+      "path": "kart/audio/sfx/ready-v6b.mp3",
+      "bytes": 8821,
+      "sha256": "dbe05f23cb6237d35da7b0ed8b70d68abd37d6e4c321dd5456fd84b67f4503fc",
+      "content_type": "audio/mpeg",
+      "local_sha256": "dbe05f23cb6237d35da7b0ed8b70d68abd37d6e4c321dd5456fd84b67f4503fc"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/recover-v6.mp3",
+      "path": "kart/audio/sfx/recover-v6.mp3",
+      "bytes": 9239,
+      "sha256": "8a609f03db343f895237e1aff0a31a470f0a6a3dab74c078fb855d6657aea878",
+      "content_type": "audio/mpeg",
+      "local_sha256": "8a609f03db343f895237e1aff0a31a470f0a6a3dab74c078fb855d6657aea878"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/ring-pass.mp3",
+      "path": "kart/audio/sfx/ring-pass.mp3",
+      "bytes": 15090,
+      "sha256": "945937b0b5bdc63232201823ec0bcb280ab5d993d122abcf44454478d4c41d67",
+      "content_type": "audio/mpeg",
+      "local_sha256": "945937b0b5bdc63232201823ec0bcb280ab5d993d122abcf44454478d4c41d67"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/roulette.mp3",
+      "path": "kart/audio/sfx/roulette.mp3",
+      "bytes": 24703,
+      "sha256": "43282e4be78ec4745ad5fd49373e4821cd470d94be6b37f52501b52df3b5e153",
+      "content_type": "audio/mpeg",
+      "local_sha256": "43282e4be78ec4745ad5fd49373e4821cd470d94be6b37f52501b52df3b5e153"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/scrape-loop.mp3",
+      "path": "kart/audio/sfx/scrape-loop.mp3",
+      "bytes": 48945,
+      "sha256": "484b408f2ecea617a0500b061ef192411157c02c9f8e3386989864da99a47a3e",
+      "content_type": "audio/mpeg",
+      "local_sha256": "484b408f2ecea617a0500b061ef192411157c02c9f8e3386989864da99a47a3e"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/select.mp3",
+      "path": "kart/audio/sfx/select.mp3",
+      "bytes": 8821,
+      "sha256": "e26d3737c2e527e3ea158120c3a3cbdc098957813ff70a43e52129d98ec3dfa6",
+      "content_type": "audio/mpeg",
+      "local_sha256": "e26d3737c2e527e3ea158120c3a3cbdc098957813ff70a43e52129d98ec3dfa6"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/shell-smash.mp3",
+      "path": "kart/audio/sfx/shell-smash.mp3",
+      "bytes": 12164,
+      "sha256": "4f0cc9cb589debedffad3a864cc304b5ea1760b3bba3095325b21c4b54103839",
+      "content_type": "audio/mpeg",
+      "local_sha256": "4f0cc9cb589debedffad3a864cc304b5ea1760b3bba3095325b21c4b54103839"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/skid-loop.mp3",
+      "path": "kart/audio/sfx/skid-loop.mp3",
+      "bytes": 48945,
+      "sha256": "6489f970c511c43f97319f21996f74e9776c03332119710a9354941e25c4f52e",
+      "content_type": "audio/mpeg",
+      "local_sha256": "6489f970c511c43f97319f21996f74e9776c03332119710a9354941e25c4f52e"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/slam-v6.mp3",
+      "path": "kart/audio/sfx/slam-v6.mp3",
+      "bytes": 9657,
+      "sha256": "14d98575352912beb3b7b39d0b5f09e7b7c11567b20246a853b260b272aaaa10",
+      "content_type": "audio/mpeg",
+      "local_sha256": "14d98575352912beb3b7b39d0b5f09e7b7c11567b20246a853b260b272aaaa10"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/smash-confirm.mp3",
+      "path": "kart/audio/sfx/smash-confirm.mp3",
+      "bytes": 9239,
+      "sha256": "80388c6cc60962b31ba08e92957ec77abd397a5aacdc3e9fa5ff9f7dc3a6a7f5",
+      "content_type": "audio/mpeg",
+      "local_sha256": "80388c6cc60962b31ba08e92957ec77abd397a5aacdc3e9fa5ff9f7dc3a6a7f5"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/snow-loop.mp3",
+      "path": "kart/audio/sfx/snow-loop.mp3",
+      "bytes": 47691,
+      "sha256": "32143d5da7c1e765565105405bdb88ceb6cb7fdbd52871c5aba8b25da59a6290",
+      "content_type": "audio/mpeg",
+      "local_sha256": "32143d5da7c1e765565105405bdb88ceb6cb7fdbd52871c5aba8b25da59a6290"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/spark-loop.mp3",
+      "path": "kart/audio/sfx/spark-loop.mp3",
+      "bytes": 41422,
+      "sha256": "e38570143a3f28e7eccb0fe4c36678cf9292ad64b6dbdacc83a06da24e956c6a",
+      "content_type": "audio/mpeg",
+      "local_sha256": "e38570143a3f28e7eccb0fe4c36678cf9292ad64b6dbdacc83a06da24e956c6a"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/spark-tier.mp3",
+      "path": "kart/audio/sfx/spark-tier.mp3",
+      "bytes": 10493,
+      "sha256": "5abb07830268bc4fe02bac3aec03a5d99c6a9b5017189fbd1836f2c3c5609fcd",
+      "content_type": "audio/mpeg",
+      "local_sha256": "5abb07830268bc4fe02bac3aec03a5d99c6a9b5017189fbd1836f2c3c5609fcd"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/spin-whoosh.mp3",
+      "path": "kart/audio/sfx/spin-whoosh.mp3",
+      "bytes": 12164,
+      "sha256": "c32cb5c8c8d5c0e00f748d171632f831892511570b7a2e13ed6d41a22ff10d42",
+      "content_type": "audio/mpeg",
+      "local_sha256": "c32cb5c8c8d5c0e00f748d171632f831892511570b7a2e13ed6d41a22ff10d42"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/stall.mp3",
+      "path": "kart/audio/sfx/stall.mp3",
+      "bytes": 15090,
+      "sha256": "d99298b741bb6be7ecef0e7d9641cdc21f938b6c383e056e63b0f0144da9461b",
+      "content_type": "audio/mpeg",
+      "local_sha256": "d99298b741bb6be7ecef0e7d9641cdc21f938b6c383e056e63b0f0144da9461b"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/star-loop-v1.mp3",
+      "path": "kart/audio/sfx/star-loop-v1.mp3",
+      "bytes": 63991,
+      "sha256": "dcce99baf969739a6c3912c740a12e01a9d8aea7fe056906f4dba514a7698946",
+      "content_type": "audio/mpeg",
+      "local_sha256": "dcce99baf969739a6c3912c740a12e01a9d8aea7fe056906f4dba514a7698946"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/star.mp3",
+      "path": "kart/audio/sfx/star.mp3",
+      "bytes": 40586,
+      "sha256": "66cc6173d204edaa3cc3e1da2d6bf1c09a928be1864c5eee84e796279151f053",
+      "content_type": "audio/mpeg",
+      "local_sha256": "66cc6173d204edaa3cc3e1da2d6bf1c09a928be1864c5eee84e796279151f053"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/turbo-burst.mp3",
+      "path": "kart/audio/sfx/turbo-burst.mp3",
+      "bytes": 17180,
+      "sha256": "a399099f6ef6128b9968354b921f4df4e8f458d6b94e819527f8f1de60c14473",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a399099f6ef6128b9968354b921f4df4e8f458d6b94e819527f8f1de60c14473"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/turbo-fire.mp3",
+      "path": "kart/audio/sfx/turbo-fire.mp3",
+      "bytes": 18434,
+      "sha256": "a7e0081e918c12a63ec0314a827cb153682e02fb243e7b9237b34553d2e11ce7",
+      "content_type": "audio/mpeg",
+      "local_sha256": "a7e0081e918c12a63ec0314a827cb153682e02fb243e7b9237b34553d2e11ce7"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/wall-a.mp3",
+      "path": "kart/audio/sfx/wall-a.mp3",
+      "bytes": 10493,
+      "sha256": "ffaafc318b82bad73d1c012024b363df951ce7a37afe961d3dd9864ce6968134",
+      "content_type": "audio/mpeg",
+      "local_sha256": "ffaafc318b82bad73d1c012024b363df951ce7a37afe961d3dd9864ce6968134"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/wall-b.mp3",
+      "path": "kart/audio/sfx/wall-b.mp3",
+      "bytes": 10493,
+      "sha256": "c193ad68892abd66ed94c7a4a3f3c0287fec3d12a04122938527c71712e70fd7",
+      "content_type": "audio/mpeg",
+      "local_sha256": "c193ad68892abd66ed94c7a4a3f3c0287fec3d12a04122938527c71712e70fd7"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-bruno.mp3",
+      "path": "kart/audio/sfx/whoop-bruno.mp3",
+      "bytes": 13836,
+      "sha256": "52527df13d7b232e065b0ce067fd11c3f3b6251b7509ffaea6c428fc50c47362",
+      "content_type": "audio/mpeg",
+      "local_sha256": "52527df13d7b232e065b0ce067fd11c3f3b6251b7509ffaea6c428fc50c47362"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-dash.mp3",
+      "path": "kart/audio/sfx/whoop-dash.mp3",
+      "bytes": 13836,
+      "sha256": "556fda1d9d15b6165d15cf5778d7f757ccb164bef2aae0a444a77115b3c71df2",
+      "content_type": "audio/mpeg",
+      "local_sha256": "556fda1d9d15b6165d15cf5778d7f757ccb164bef2aae0a444a77115b3c71df2"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-luma.mp3",
+      "path": "kart/audio/sfx/whoop-luma.mp3",
+      "bytes": 13836,
+      "sha256": "c7a996e56bc812b2025a5657f86f641ff19ec7e2acdebde9d04f7c201450e4f5",
+      "content_type": "audio/mpeg",
+      "local_sha256": "c7a996e56bc812b2025a5657f86f641ff19ec7e2acdebde9d04f7c201450e4f5"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-nova.mp3",
+      "path": "kart/audio/sfx/whoop-nova.mp3",
+      "bytes": 13836,
+      "sha256": "39141efc69190f2e02842855f06f7a56cdcbbcbb4af248ec4b9ddd4e452866fd",
+      "content_type": "audio/mpeg",
+      "local_sha256": "39141efc69190f2e02842855f06f7a56cdcbbcbb4af248ec4b9ddd4e452866fd"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-pip.mp3",
+      "path": "kart/audio/sfx/whoop-pip.mp3",
+      "bytes": 13836,
+      "sha256": "2b4426b539b084bad1320e68118ec65c8a01281db8e2ec127b97e5532ab41c23",
+      "content_type": "audio/mpeg",
+      "local_sha256": "2b4426b539b084bad1320e68118ec65c8a01281db8e2ec127b97e5532ab41c23"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-poppy.mp3",
+      "path": "kart/audio/sfx/whoop-poppy.mp3",
+      "bytes": 13836,
+      "sha256": "f593e93e8b64f94b1752eb267c2d6b4ab387f3798c521b991a78ef67ab17a009",
+      "content_type": "audio/mpeg",
+      "local_sha256": "f593e93e8b64f94b1752eb267c2d6b4ab387f3798c521b991a78ef67ab17a009"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-rocco.mp3",
+      "path": "kart/audio/sfx/whoop-rocco.mp3",
+      "bytes": 13836,
+      "sha256": "664a8d0488bd051dafdb8a276b801fd014051d5e799f03bbd66c40e4082417e1",
+      "content_type": "audio/mpeg",
+      "local_sha256": "664a8d0488bd051dafdb8a276b801fd014051d5e799f03bbd66c40e4082417e1"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/sfx/whoop-tess.mp3",
+      "path": "kart/audio/sfx/whoop-tess.mp3",
+      "bytes": 13836,
+      "sha256": "4a9b9e6ffb92e460fe7d1d00b845ac6a2e0bc70e8cb740e86bf834e70f63556e",
+      "content_type": "audio/mpeg",
+      "local_sha256": "4a9b9e6ffb92e460fe7d1d00b845ac6a2e0bc70e8cb740e86bf834e70f63556e"
+    },
+    {
+      "url": "https://tableparty.io/kart/audio/snow-v1.mp3",
+      "path": "kart/audio/snow-v1.mp3",
+      "bytes": 640776,
+      "sha256": "e7905663d19bc762a4b5a4b815ea7cc98a172d3e59ad12fe422c86552bb2fabb",
+      "content_type": "audio/mpeg",
+      "local_sha256": "e7905663d19bc762a4b5a4b815ea7cc98a172d3e59ad12fe422c86552bb2fabb"
+    },
+    {
+      "url": "https://tableparty.io/kart/bruno-portrait-v6.webp",
+      "path": "kart/bruno-portrait-v6.webp",
+      "bytes": 16246,
+      "sha256": "4bd8adc7645bbafbc212bc252c5baed8779853dc9ed98ccf6251b503a7824fe0",
+      "content_type": "image/webp",
+      "local_sha256": "4bd8adc7645bbafbc212bc252c5baed8779853dc9ed98ccf6251b503a7824fe0"
+    },
+    {
+      "url": "https://tableparty.io/kart/candy-cake-cliff-v1.webp",
+      "path": "kart/candy-cake-cliff-v1.webp",
+      "bytes": 64570,
+      "sha256": "94fa8791af5cb74f6006f16391cc25707557d2dcbaf06f5f386271c922bcf84d",
+      "content_type": "image/webp",
+      "local_sha256": "94fa8791af5cb74f6006f16391cc25707557d2dcbaf06f5f386271c922bcf84d"
+    },
+    {
+      "url": "https://tableparty.io/kart/candy-frosting-v1.webp",
+      "path": "kart/candy-frosting-v1.webp",
+      "bytes": 24574,
+      "sha256": "5d099c138e6b72b2a805f60a570a68de8f375e1ee9111dd1a8fe6117c0fff7f9",
+      "content_type": "image/webp",
+      "local_sha256": "5d099c138e6b72b2a805f60a570a68de8f375e1ee9111dd1a8fe6117c0fff7f9"
+    },
+    {
+      "url": "https://tableparty.io/kart/candy-waffle-road-v1.webp",
+      "path": "kart/candy-waffle-road-v1.webp",
+      "bytes": 91588,
+      "sha256": "628d4ae86333a0a297be9b5cb69108a44b519533754a1a5dd97a9bcb7b717041",
+      "content_type": "image/webp",
+      "local_sha256": "628d4ae86333a0a297be9b5cb69108a44b519533754a1a5dd97a9bcb7b717041"
+    },
+    {
+      "url": "https://tableparty.io/kart/cliff-natural-v3.webp",
+      "path": "kart/cliff-natural-v3.webp",
+      "bytes": 70964,
+      "sha256": "443a1451fd7b374140605dd5f86d817425b671699765281646cdcff98d21400c",
+      "content_type": "image/webp",
+      "local_sha256": "443a1451fd7b374140605dd5f86d817425b671699765281646cdcff98d21400c"
+    },
+    {
+      "url": "https://tableparty.io/kart/cloud-island-rock-v1.webp",
+      "path": "kart/cloud-island-rock-v1.webp",
+      "bytes": 74038,
+      "sha256": "1e056add959c666476e80e4855af51fe7667d4794e42735202c9e9cf864be1a0",
+      "content_type": "image/webp",
+      "local_sha256": "1e056add959c666476e80e4855af51fe7667d4794e42735202c9e9cf864be1a0"
+    },
+    {
+      "url": "https://tableparty.io/kart/cloud-stone-road-v1.webp",
+      "path": "kart/cloud-stone-road-v1.webp",
+      "bytes": 15894,
+      "sha256": "2301593436dde8f06b72bffcd96cf7d33ed2e0da533a048be5627e5e2c1a4fe7",
+      "content_type": "image/webp",
+      "local_sha256": "2301593436dde8f06b72bffcd96cf7d33ed2e0da533a048be5627e5e2c1a4fe7"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-candy.webp",
+      "path": "kart/course-candy.webp",
+      "bytes": 14072,
+      "sha256": "df3a61229adb33e6191d46111ea652821d72048e3088cd18c8d7c7366875a611",
+      "content_type": "image/webp",
+      "local_sha256": "df3a61229adb33e6191d46111ea652821d72048e3088cd18c8d7c7366875a611"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-canyon.webp",
+      "path": "kart/course-canyon.webp",
+      "bytes": 13188,
+      "sha256": "b035b1f4a13a10841dae84bb55fe2658ab5c09d1a84fb21709173b1dd25fc336",
+      "content_type": "image/webp",
+      "local_sha256": "b035b1f4a13a10841dae84bb55fe2658ab5c09d1a84fb21709173b1dd25fc336"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-cloud.webp",
+      "path": "kart/course-cloud.webp",
+      "bytes": 7580,
+      "sha256": "39c1de8f7c23b69ef9e047a70f75fe71551e0c233eed3812024d128bac0d9569",
+      "content_type": "image/webp",
+      "local_sha256": "39c1de8f7c23b69ef9e047a70f75fe71551e0c233eed3812024d128bac0d9569"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-coast.webp",
+      "path": "kart/course-coast.webp",
+      "bytes": 14470,
+      "sha256": "90e650f67af2078c690943110619f94bc925a65daa3f4b822196aa30b304f01e",
+      "content_type": "image/webp",
+      "local_sha256": "90e650f67af2078c690943110619f94bc925a65daa3f4b822196aa30b304f01e"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-cosmos.webp",
+      "path": "kart/course-cosmos.webp",
+      "bytes": 8508,
+      "sha256": "8ab9f29f7fc25742c3e4a5500a613f0bc4c1084a12f91492c4bdf6d9a47b94c3",
+      "content_type": "image/webp",
+      "local_sha256": "8ab9f29f7fc25742c3e4a5500a613f0bc4c1084a12f91492c4bdf6d9a47b94c3"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-forge.webp",
+      "path": "kart/course-forge.webp",
+      "bytes": 19888,
+      "sha256": "cc55a9b55e208eeb3c7140cb6661a4a0cfc4562dd2506ee6f45f0f597d63ad5a",
+      "content_type": "image/webp",
+      "local_sha256": "cc55a9b55e208eeb3c7140cb6661a4a0cfc4562dd2506ee6f45f0f597d63ad5a"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-garden.webp",
+      "path": "kart/course-garden.webp",
+      "bytes": 14096,
+      "sha256": "635e4e111f651982935839133ce2fac1374f4c70b16bc7733a80d90de727b1d9",
+      "content_type": "image/webp",
+      "local_sha256": "635e4e111f651982935839133ce2fac1374f4c70b16bc7733a80d90de727b1d9"
+    },
+    {
+      "url": "https://tableparty.io/kart/course-snow.webp",
+      "path": "kart/course-snow.webp",
+      "bytes": 14402,
+      "sha256": "2283e4aaf0623da53f963fc219c3d428bc678cb51dc0c876fe1e35ae402f3c29",
+      "content_type": "image/webp",
+      "local_sha256": "2283e4aaf0623da53f963fc219c3d428bc678cb51dc0c876fe1e35ae402f3c29"
+    },
+    {
+      "url": "https://tableparty.io/kart/crowd-v1.webp",
+      "path": "kart/crowd-v1.webp",
+      "bytes": 97316,
+      "sha256": "e7d7ad64dbcbc9bb2c48982a63636047ee8d48a2921510d12e363ae2a31f317b",
+      "content_type": "image/webp",
+      "local_sha256": "e7d7ad64dbcbc9bb2c48982a63636047ee8d48a2921510d12e363ae2a31f317b"
+    },
+    {
+      "url": "https://tableparty.io/kart/dash-portrait-v6.webp",
+      "path": "kart/dash-portrait-v6.webp",
+      "bytes": 18016,
+      "sha256": "af084d68d6e532884dff4d0010188bd60492fb180bd0b5548f23190ffd45634b",
+      "content_type": "image/webp",
+      "local_sha256": "af084d68d6e532884dff4d0010188bd60492fb180bd0b5548f23190ffd45634b"
+    },
+    {
+      "url": "https://tableparty.io/kart/forge-basalt-v1.webp",
+      "path": "kart/forge-basalt-v1.webp",
+      "bytes": 45976,
+      "sha256": "b97bac6f7e0b3a8c6b894c02298f03467d116bac8f683778c7198d73c4e1725c",
+      "content_type": "image/webp",
+      "local_sha256": "b97bac6f7e0b3a8c6b894c02298f03467d116bac8f683778c7198d73c4e1725c"
+    },
+    {
+      "url": "https://tableparty.io/kart/forge-iron-road-v1.webp",
+      "path": "kart/forge-iron-road-v1.webp",
+      "bytes": 67642,
+      "sha256": "5a9f5b99e39dab550dc9a6c781e8f4678bc0c61b9d4a4d779fe99fb8f3e86eea",
+      "content_type": "image/webp",
+      "local_sha256": "5a9f5b99e39dab550dc9a6c781e8f4678bc0c61b9d4a4d779fe99fb8f3e86eea"
+    },
+    {
+      "url": "https://tableparty.io/kart/garage-v6.webp",
+      "path": "kart/garage-v6.webp",
+      "bytes": 86520,
+      "sha256": "3b65316f388c83ae6d2e770ce884e80c7f1447b9d2f4bf97dbfb625789c1187d",
+      "content_type": "image/webp",
+      "local_sha256": "3b65316f388c83ae6d2e770ce884e80c7f1447b9d2f4bf97dbfb625789c1187d"
+    },
+    {
+      "url": "https://tableparty.io/kart/",
+      "path": "kart/index.html",
+      "bytes": 22761,
+      "sha256": "65cc3474c1c4c3860ffc7ee89ba7620213ba907ffee0bd0523c88f65a309ba84",
+      "content_type": "text/html",
+      "local_sha256": "65cc3474c1c4c3860ffc7ee89ba7620213ba907ffee0bd0523c88f65a309ba84"
+    },
+    {
+      "url": "https://tableparty.io/kart/intro/kart.webp",
+      "path": "kart/intro/kart.webp",
+      "bytes": 25672,
+      "sha256": "b0f45551087be64b7ad7531997099211f74cbc4ef145ece202741c3647b5e04b",
+      "content_type": "image/webp",
+      "local_sha256": "b0f45551087be64b7ad7531997099211f74cbc4ef145ece202741c3647b5e04b"
+    },
+    {
+      "url": "https://tableparty.io/kart/intro/logo.webp",
+      "path": "kart/intro/logo.webp",
+      "bytes": 46668,
+      "sha256": "fe2debf364b8ea7d5485d5d2dce773bdbec628e1aa8df9967ab854a7475437bc",
+      "content_type": "image/webp",
+      "local_sha256": "fe2debf364b8ea7d5485d5d2dce773bdbec628e1aa8df9967ab854a7475437bc"
+    },
+    {
+      "url": "https://tableparty.io/kart/intro/plate-land.webp",
+      "path": "kart/intro/plate-land.webp",
+      "bytes": 85034,
+      "sha256": "61c3dbe1035ae28e97623bce02657728c97f7dd8d50c623758f0fb86d9637189",
+      "content_type": "image/webp",
+      "local_sha256": "61c3dbe1035ae28e97623bce02657728c97f7dd8d50c623758f0fb86d9637189"
+    },
+    {
+      "url": "https://tableparty.io/kart/items-clear.webp",
+      "path": "kart/items-clear.webp",
+      "bytes": 215632,
+      "sha256": "303512aee8a6673faa66fc1398856e2edf0494da81ab6cd7c7144cd228e69abe",
+      "content_type": "image/webp",
+      "local_sha256": "303512aee8a6673faa66fc1398856e2edf0494da81ab6cd7c7144cd228e69abe"
+    },
+    {
+      "url": "https://tableparty.io/kart/luma-portrait-v6.webp",
+      "path": "kart/luma-portrait-v6.webp",
+      "bytes": 10236,
+      "sha256": "ba2560539fd045a4eeea275b8686dc18b2ac48b777037b31e51c23da5483e20f",
+      "content_type": "image/webp",
+      "local_sha256": "ba2560539fd045a4eeea275b8686dc18b2ac48b777037b31e51c23da5483e20f"
+    },
+    {
+      "url": "https://tableparty.io/kart/nova-portrait-v6.webp",
+      "path": "kart/nova-portrait-v6.webp",
+      "bytes": 11822,
+      "sha256": "e7d120c8e7a3be673afcb7d966d96d85a284018442b00605b51d62ed03dd422c",
+      "content_type": "image/webp",
+      "local_sha256": "e7d120c8e7a3be673afcb7d966d96d85a284018442b00605b51d62ed03dd422c"
+    },
+    {
+      "url": "https://tableparty.io/kart/pip-portrait-v6.webp",
+      "path": "kart/pip-portrait-v6.webp",
+      "bytes": 15560,
+      "sha256": "f08965d7b2e375d27666e5e5fd9aa09c1247e9e16454c4700d51c7992cf5dea4",
+      "content_type": "image/webp",
+      "local_sha256": "f08965d7b2e375d27666e5e5fd9aa09c1247e9e16454c4700d51c7992cf5dea4"
+    },
+    {
+      "url": "https://tableparty.io/kart/poppy-portrait-v6.webp",
+      "path": "kart/poppy-portrait-v6.webp",
+      "bytes": 14252,
+      "sha256": "18b9cfb8b999a35fb60956e1f63ee72cafce8f162d318a3ccfead8063894caca",
+      "content_type": "image/webp",
+      "local_sha256": "18b9cfb8b999a35fb60956e1f63ee72cafce8f162d318a3ccfead8063894caca"
+    },
+    {
+      "url": "https://tableparty.io/kart/quake.webp",
+      "path": "kart/quake.webp",
+      "bytes": 15414,
+      "sha256": "f3a0d8b032f7a89f50bf813c6e2518d6de0e97808b0f4461249945ee7d517bfd",
+      "content_type": "image/webp",
+      "local_sha256": "f3a0d8b032f7a89f50bf813c6e2518d6de0e97808b0f4461249945ee7d517bfd"
+    },
+    {
+      "url": "https://tableparty.io/kart/rocco-portrait-v6.webp",
+      "path": "kart/rocco-portrait-v6.webp",
+      "bytes": 14228,
+      "sha256": "eebd0cd8536ca0728c82b08115c9228a1cb525e8839b60bad377428e56bcf1ab",
+      "content_type": "image/webp",
+      "local_sha256": "eebd0cd8536ca0728c82b08115c9228a1cb525e8839b60bad377428e56bcf1ab"
+    },
+    {
+      "url": "https://tableparty.io/kart/sandstone-v3.webp",
+      "path": "kart/sandstone-v3.webp",
+      "bytes": 132374,
+      "sha256": "8d885a859909f4cbcdd8ba8928fb83110c61e4a44f931885a41b103acb8b157c",
+      "content_type": "image/webp",
+      "local_sha256": "8d885a859909f4cbcdd8ba8928fb83110c61e4a44f931885a41b103acb8b157c"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-candy.webp",
+      "path": "kart/sky-candy.webp",
+      "bytes": 36602,
+      "sha256": "1c949c9853f5dc85eefbb157a1ddb3a1537f3b7aacfc870c323d755e884b5ac5",
+      "content_type": "image/webp",
+      "local_sha256": "1c949c9853f5dc85eefbb157a1ddb3a1537f3b7aacfc870c323d755e884b5ac5"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-canyon.webp",
+      "path": "kart/sky-canyon.webp",
+      "bytes": 39422,
+      "sha256": "2c752ce095ba29315bc4fb6030134f86b9c77f8e462b8cd3aa50a3653371df04",
+      "content_type": "image/webp",
+      "local_sha256": "2c752ce095ba29315bc4fb6030134f86b9c77f8e462b8cd3aa50a3653371df04"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-cloud.webp",
+      "path": "kart/sky-cloud.webp",
+      "bytes": 58294,
+      "sha256": "3e66bb9cefd3040ee2b16aef3981505b10cfcd08a3d82c266dc1c7adc1acd6bd",
+      "content_type": "image/webp",
+      "local_sha256": "3e66bb9cefd3040ee2b16aef3981505b10cfcd08a3d82c266dc1c7adc1acd6bd"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-coast.webp",
+      "path": "kart/sky-coast.webp",
+      "bytes": 73788,
+      "sha256": "cfdcc0350abda0727f6168fac8038ea90f5cbcb3e76522fcb08d250bc38a0a2d",
+      "content_type": "image/webp",
+      "local_sha256": "cfdcc0350abda0727f6168fac8038ea90f5cbcb3e76522fcb08d250bc38a0a2d"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-cosmos.webp",
+      "path": "kart/sky-cosmos.webp",
+      "bytes": 108162,
+      "sha256": "d7b77cdf1bc20264ef49b06a55cf34bfc2187599be74eea2197bbf91d8722b93",
+      "content_type": "image/webp",
+      "local_sha256": "d7b77cdf1bc20264ef49b06a55cf34bfc2187599be74eea2197bbf91d8722b93"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-forge.webp",
+      "path": "kart/sky-forge.webp",
+      "bytes": 36088,
+      "sha256": "8ef6be96c5736a5d343ef4673a429e30b96ad7e816d3915890611ed4f2ae86dd",
+      "content_type": "image/webp",
+      "local_sha256": "8ef6be96c5736a5d343ef4673a429e30b96ad7e816d3915890611ed4f2ae86dd"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-garden.webp",
+      "path": "kart/sky-garden.webp",
+      "bytes": 46688,
+      "sha256": "34aee451a1b7f7c083a3466ec099a3feffdba45a83e153d9e176c8a57009ecc9",
+      "content_type": "image/webp",
+      "local_sha256": "34aee451a1b7f7c083a3466ec099a3feffdba45a83e153d9e176c8a57009ecc9"
+    },
+    {
+      "url": "https://tableparty.io/kart/sky-snow.webp",
+      "path": "kart/sky-snow.webp",
+      "bytes": 42038,
+      "sha256": "eb667639b9131b6c257e246617559bc7c51c6153f490026bd822340f9c2be098",
+      "content_type": "image/webp",
+      "local_sha256": "eb667639b9131b6c257e246617559bc7c51c6153f490026bd822340f9c2be098"
+    },
+    {
+      "url": "https://tableparty.io/kart/snow-granite-v1.webp",
+      "path": "kart/snow-granite-v1.webp",
+      "bytes": 37560,
+      "sha256": "a6a2057b1d2e42c113946e1a5317849b23e2dceefac7ba0bbecc02fd6dc0a9e6",
+      "content_type": "image/webp",
+      "local_sha256": "a6a2057b1d2e42c113946e1a5317849b23e2dceefac7ba0bbecc02fd6dc0a9e6"
+    },
+    {
+      "url": "https://tableparty.io/kart/snow-ground-v1.webp",
+      "path": "kart/snow-ground-v1.webp",
+      "bytes": 7950,
+      "sha256": "cecbab5ff524ef92e51e9ad40bc5d5a2bdc07bb5725b6a845a85f5a60ca0c694",
+      "content_type": "image/webp",
+      "local_sha256": "cecbab5ff524ef92e51e9ad40bc5d5a2bdc07bb5725b6a845a85f5a60ca0c694"
+    },
+    {
+      "url": "https://tableparty.io/kart/snow-road-v1.webp",
+      "path": "kart/snow-road-v1.webp",
+      "bytes": 114198,
+      "sha256": "5834654d9229b6b8c89055dfa4779b15ad5cc6a213c51a4601d45f8fe908f7eb",
+      "content_type": "image/webp",
+      "local_sha256": "5834654d9229b6b8c89055dfa4779b15ad5cc6a213c51a4601d45f8fe908f7eb"
+    },
+    {
+      "url": "https://tableparty.io/kart/sunsprint-share-v1.jpg",
+      "path": "kart/sunsprint-share-v1.jpg",
+      "bytes": 206440,
+      "sha256": "4052c7a124ecfe936e172bd4ecac369092c6de40c072886dcea4213f8944d4df",
+      "content_type": "image/jpeg",
+      "local_sha256": "4052c7a124ecfe936e172bd4ecac369092c6de40c072886dcea4213f8944d4df"
+    },
+    {
+      "url": "https://tableparty.io/kart/tess-portrait-v6.webp",
+      "path": "kart/tess-portrait-v6.webp",
+      "bytes": 15018,
+      "sha256": "6ef8e568fc7c8a89524e54e208a5ffb32e3052bad4d117b28ecad73bcd8ff7dd",
+      "content_type": "image/webp",
+      "local_sha256": "6ef8e568fc7c8a89524e54e208a5ffb32e3052bad4d117b28ecad73bcd8ff7dd"
+    },
+    {
+      "url": "https://tableparty.io/kart/trailer/sunsprint-trailer-v3-540.h264.mp4",
+      "path": "kart/trailer/sunsprint-trailer-v3-540.h264.mp4",
+      "bytes": 7622086,
+      "sha256": "7eab5ae0d61deaee43c4f1d26c6482b9a0cbdb55fdc3bd27523f68b7a1eed87d",
+      "content_type": "video/mp4",
+      "local_sha256": "7eab5ae0d61deaee43c4f1d26c6482b9a0cbdb55fdc3bd27523f68b7a1eed87d"
+    },
+    {
+      "url": "https://tableparty.io/kart/trailer/sunsprint-trailer-v3-720.av1.mp4",
+      "path": "kart/trailer/sunsprint-trailer-v3-720.av1.mp4",
+      "bytes": 6239979,
+      "sha256": "1bd0a78e3b0e7e0c60a2e977122ce9bc295acfdfabf633e600b70c2246197377",
+      "content_type": "video/mp4",
+      "local_sha256": "1bd0a78e3b0e7e0c60a2e977122ce9bc295acfdfabf633e600b70c2246197377",
+      "restored": "2026-09-27 playthrough 404"
+    },
+    {
+      "url": "https://tableparty.io/kart/trailer/sunsprint-trailer-v3-poster.webp",
+      "path": "kart/trailer/sunsprint-trailer-v3-poster.webp",
+      "bytes": 54166,
+      "sha256": "5b28f652e43f9a3ce14e839d2a1099aea085e6525bf0dad1b13da55ac2fa71c8",
+      "content_type": "image/webp",
+      "local_sha256": "5b28f652e43f9a3ce14e839d2a1099aea085e6525bf0dad1b13da55ac2fa71c8"
+    },
+    {
+      "url": "https://tableparty.io/kart/turf-v2.webp",
+      "path": "kart/turf-v2.webp",
+      "bytes": 100102,
+      "sha256": "38a79b8700b3451140ec1ae0e141d1503771d72d74708459e58bd19559ad2e30",
+      "content_type": "image/webp",
+      "local_sha256": "38a79b8700b3451140ec1ae0e141d1503771d72d74708459e58bd19559ad2e30"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-01.jpg",
+      "path": "opponents/grid-men-1-01.jpg",
+      "bytes": 10035,
+      "sha256": "33026b9ed2963270915288fc06418d84b6a4aff15c81775eee66b525cea8981b",
+      "content_type": "image/jpeg",
+      "local_sha256": "33026b9ed2963270915288fc06418d84b6a4aff15c81775eee66b525cea8981b"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-02.jpg",
+      "path": "opponents/grid-men-1-02.jpg",
+      "bytes": 11806,
+      "sha256": "0e7bb00b6efe8592f08628c4414e8e1c48a5caab5b6c70e39e8513497266bb2f",
+      "content_type": "image/jpeg",
+      "local_sha256": "0e7bb00b6efe8592f08628c4414e8e1c48a5caab5b6c70e39e8513497266bb2f"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-03.jpg",
+      "path": "opponents/grid-men-1-03.jpg",
+      "bytes": 8082,
+      "sha256": "2827d46e06d14fb89f810071f265c23db1b17b14de96eeed8ef45ef4b61ea84b",
+      "content_type": "image/jpeg",
+      "local_sha256": "2827d46e06d14fb89f810071f265c23db1b17b14de96eeed8ef45ef4b61ea84b"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-04.jpg",
+      "path": "opponents/grid-men-1-04.jpg",
+      "bytes": 8768,
+      "sha256": "339f9d2a3a9385da3a13f478b607180d471bd236d3972a04c9cb0867bee79a14",
+      "content_type": "image/jpeg",
+      "local_sha256": "339f9d2a3a9385da3a13f478b607180d471bd236d3972a04c9cb0867bee79a14"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-05.jpg",
+      "path": "opponents/grid-men-1-05.jpg",
+      "bytes": 8338,
+      "sha256": "e8585fdbb2964cc6c23ba2eaa4b97c7f2eed3f02e6135b06926c82fb15145c2c",
+      "content_type": "image/jpeg",
+      "local_sha256": "e8585fdbb2964cc6c23ba2eaa4b97c7f2eed3f02e6135b06926c82fb15145c2c"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-06.jpg",
+      "path": "opponents/grid-men-1-06.jpg",
+      "bytes": 12813,
+      "sha256": "8b3a4aeced8e7c71a70e72410b8416903340ec91a1cf188f1405918dd90a0c28",
+      "content_type": "image/jpeg",
+      "local_sha256": "8b3a4aeced8e7c71a70e72410b8416903340ec91a1cf188f1405918dd90a0c28"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-07.jpg",
+      "path": "opponents/grid-men-1-07.jpg",
+      "bytes": 9883,
+      "sha256": "3b6e82a595ff6485b6aedb595b92d48aa8f4c8baea87fdb22b47b83c675e3327",
+      "content_type": "image/jpeg",
+      "local_sha256": "3b6e82a595ff6485b6aedb595b92d48aa8f4c8baea87fdb22b47b83c675e3327"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-08.jpg",
+      "path": "opponents/grid-men-1-08.jpg",
+      "bytes": 10328,
+      "sha256": "2df906584a0d493512a6267b5817c11c548ca744ea0ef266fbff70e8b62c4151",
+      "content_type": "image/jpeg",
+      "local_sha256": "2df906584a0d493512a6267b5817c11c548ca744ea0ef266fbff70e8b62c4151"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-09.jpg",
+      "path": "opponents/grid-men-1-09.jpg",
+      "bytes": 9625,
+      "sha256": "be5e6be33e748d27f25f134c20f156f1adb8ffb85938110b771d0533772ed037",
+      "content_type": "image/jpeg",
+      "local_sha256": "be5e6be33e748d27f25f134c20f156f1adb8ffb85938110b771d0533772ed037"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-10.jpg",
+      "path": "opponents/grid-men-1-10.jpg",
+      "bytes": 9112,
+      "sha256": "4aa1bc09cee2b5e35e80cdffef539ef723d210c5afb65dffc6d43be7641ba44c",
+      "content_type": "image/jpeg",
+      "local_sha256": "4aa1bc09cee2b5e35e80cdffef539ef723d210c5afb65dffc6d43be7641ba44c"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-11.jpg",
+      "path": "opponents/grid-men-1-11.jpg",
+      "bytes": 6973,
+      "sha256": "06e42cb4a354ac6fa1fd4255c038a22a81dd4eecd383de1c80208d2710f0666c",
+      "content_type": "image/jpeg",
+      "local_sha256": "06e42cb4a354ac6fa1fd4255c038a22a81dd4eecd383de1c80208d2710f0666c"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-12.jpg",
+      "path": "opponents/grid-men-1-12.jpg",
+      "bytes": 9928,
+      "sha256": "2b2a07d789cd80caffe81aa0de3af115217962101272b87ed05e2c73ad0f52c0",
+      "content_type": "image/jpeg",
+      "local_sha256": "2b2a07d789cd80caffe81aa0de3af115217962101272b87ed05e2c73ad0f52c0"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-13.jpg",
+      "path": "opponents/grid-men-1-13.jpg",
+      "bytes": 12417,
+      "sha256": "b364540fa3a4eb99e5d0a654b6850405d45b5decaf5db967e4f5b1d746d6f5af",
+      "content_type": "image/jpeg",
+      "local_sha256": "b364540fa3a4eb99e5d0a654b6850405d45b5decaf5db967e4f5b1d746d6f5af"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-14.jpg",
+      "path": "opponents/grid-men-1-14.jpg",
+      "bytes": 7556,
+      "sha256": "c6bd1a2ba58304f68f8105ff322c766123d93555b492514e807861baea3add5a",
+      "content_type": "image/jpeg",
+      "local_sha256": "c6bd1a2ba58304f68f8105ff322c766123d93555b492514e807861baea3add5a"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-15.jpg",
+      "path": "opponents/grid-men-1-15.jpg",
+      "bytes": 8687,
+      "sha256": "cb76e03e801cb4b980f7f748591a1bddbd29fa83bd3145efed015e2e176649c3",
+      "content_type": "image/jpeg",
+      "local_sha256": "cb76e03e801cb4b980f7f748591a1bddbd29fa83bd3145efed015e2e176649c3"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-16.jpg",
+      "path": "opponents/grid-men-1-16.jpg",
+      "bytes": 8868,
+      "sha256": "5e5f46db894b9652b817c8b3ca78d48c45a39ba4ef98d472d5002f28a09d86c2",
+      "content_type": "image/jpeg",
+      "local_sha256": "5e5f46db894b9652b817c8b3ca78d48c45a39ba4ef98d472d5002f28a09d86c2"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-17.jpg",
+      "path": "opponents/grid-men-1-17.jpg",
+      "bytes": 10493,
+      "sha256": "70fc806a7316513d63cd0a738d0078ef156042a3158ffd6261a8cb1bf0bfbe02",
+      "content_type": "image/jpeg",
+      "local_sha256": "70fc806a7316513d63cd0a738d0078ef156042a3158ffd6261a8cb1bf0bfbe02"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-18.jpg",
+      "path": "opponents/grid-men-1-18.jpg",
+      "bytes": 10000,
+      "sha256": "e64655122973787a89fa1bc66b8754646d0483b3d3be12f35825bd7a9fb84384",
+      "content_type": "image/jpeg",
+      "local_sha256": "e64655122973787a89fa1bc66b8754646d0483b3d3be12f35825bd7a9fb84384"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-19.jpg",
+      "path": "opponents/grid-men-1-19.jpg",
+      "bytes": 9954,
+      "sha256": "0f57e380978d780bbe05ca55e319f13ac9a9f45c34099b19b0f9d1fa180982b9",
+      "content_type": "image/jpeg",
+      "local_sha256": "0f57e380978d780bbe05ca55e319f13ac9a9f45c34099b19b0f9d1fa180982b9"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-20.jpg",
+      "path": "opponents/grid-men-1-20.jpg",
+      "bytes": 10185,
+      "sha256": "3a5b1638f4431395dc7e3821be0a9bd18b45c59baf8df3b0b5eee70644a06ccc",
+      "content_type": "image/jpeg",
+      "local_sha256": "3a5b1638f4431395dc7e3821be0a9bd18b45c59baf8df3b0b5eee70644a06ccc"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-21.jpg",
+      "path": "opponents/grid-men-1-21.jpg",
+      "bytes": 7508,
+      "sha256": "aad7cb5496d66fb5146b2fdc8e8f1dfa2d1b9caa50100ed02bb8225d2f2194e7",
+      "content_type": "image/jpeg",
+      "local_sha256": "aad7cb5496d66fb5146b2fdc8e8f1dfa2d1b9caa50100ed02bb8225d2f2194e7"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-22.jpg",
+      "path": "opponents/grid-men-1-22.jpg",
+      "bytes": 9871,
+      "sha256": "b34da42b4ace902d67622ecd61bdebba34243fbcb5ecadbbc9409b0c0990a044",
+      "content_type": "image/jpeg",
+      "local_sha256": "b34da42b4ace902d67622ecd61bdebba34243fbcb5ecadbbc9409b0c0990a044"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-23.jpg",
+      "path": "opponents/grid-men-1-23.jpg",
+      "bytes": 8248,
+      "sha256": "02de632c6eb9d0e713b6947a90a6179b6c6cf8b824d800c047292856e7676d24",
+      "content_type": "image/jpeg",
+      "local_sha256": "02de632c6eb9d0e713b6947a90a6179b6c6cf8b824d800c047292856e7676d24"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-24.jpg",
+      "path": "opponents/grid-men-1-24.jpg",
+      "bytes": 10972,
+      "sha256": "eae1bb64fc96707b4fcd1d9a97bf977c27e06d5593cb88c0ff8de117d75df3c0",
+      "content_type": "image/jpeg",
+      "local_sha256": "eae1bb64fc96707b4fcd1d9a97bf977c27e06d5593cb88c0ff8de117d75df3c0"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-1-25.jpg",
+      "path": "opponents/grid-men-1-25.jpg",
+      "bytes": 7373,
+      "sha256": "8d496fb98ce001da0ed95a295874488bfa75962e6e9a0fb2fd328688d839bc32",
+      "content_type": "image/jpeg",
+      "local_sha256": "8d496fb98ce001da0ed95a295874488bfa75962e6e9a0fb2fd328688d839bc32"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-01.jpg",
+      "path": "opponents/grid-men-2-01.jpg",
+      "bytes": 11595,
+      "sha256": "0f226da56cbf5c94d3f1fe7f822e5deb2b3330e250cf16ef1577f93d61391668",
+      "content_type": "image/jpeg",
+      "local_sha256": "0f226da56cbf5c94d3f1fe7f822e5deb2b3330e250cf16ef1577f93d61391668"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-02.jpg",
+      "path": "opponents/grid-men-2-02.jpg",
+      "bytes": 11848,
+      "sha256": "1e9000457834667d4c80cbd1ed5cd4f8911e919ba55accf1e3a61cea261cee45",
+      "content_type": "image/jpeg",
+      "local_sha256": "1e9000457834667d4c80cbd1ed5cd4f8911e919ba55accf1e3a61cea261cee45"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-03.jpg",
+      "path": "opponents/grid-men-2-03.jpg",
+      "bytes": 10386,
+      "sha256": "06e46a9076064fd05cdcbb5ecad73ea87e899c2dae28fd5f328943dd58617a40",
+      "content_type": "image/jpeg",
+      "local_sha256": "06e46a9076064fd05cdcbb5ecad73ea87e899c2dae28fd5f328943dd58617a40"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-04.jpg",
+      "path": "opponents/grid-men-2-04.jpg",
+      "bytes": 10792,
+      "sha256": "5c4a7dc28a84cab9741ccd205f17c9623ddd0aa7990cccc09dd6a4e3ce3ba6b9",
+      "content_type": "image/jpeg",
+      "local_sha256": "5c4a7dc28a84cab9741ccd205f17c9623ddd0aa7990cccc09dd6a4e3ce3ba6b9"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-05.jpg",
+      "path": "opponents/grid-men-2-05.jpg",
+      "bytes": 9560,
+      "sha256": "dc21b6a5bc2c14381c42da0847e7bf3f7d6428fc1cfb8e1020e21dafdf50c1c5",
+      "content_type": "image/jpeg",
+      "local_sha256": "dc21b6a5bc2c14381c42da0847e7bf3f7d6428fc1cfb8e1020e21dafdf50c1c5"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-06.jpg",
+      "path": "opponents/grid-men-2-06.jpg",
+      "bytes": 9985,
+      "sha256": "c9675e23b7790e80e7ee5c91b175bd29aa4ae65e3737fb248b89af60f0cc84b1",
+      "content_type": "image/jpeg",
+      "local_sha256": "c9675e23b7790e80e7ee5c91b175bd29aa4ae65e3737fb248b89af60f0cc84b1"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-07.jpg",
+      "path": "opponents/grid-men-2-07.jpg",
+      "bytes": 12047,
+      "sha256": "836cd43cac044ae9f0e2a5d2185b0d5e74e300a28f75b277078a766388d97da0",
+      "content_type": "image/jpeg",
+      "local_sha256": "836cd43cac044ae9f0e2a5d2185b0d5e74e300a28f75b277078a766388d97da0"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-08.jpg",
+      "path": "opponents/grid-men-2-08.jpg",
+      "bytes": 9747,
+      "sha256": "f558c2fbaa6518829a3e3178d39448b81950a0b094f597536914f79f8e51e284",
+      "content_type": "image/jpeg",
+      "local_sha256": "f558c2fbaa6518829a3e3178d39448b81950a0b094f597536914f79f8e51e284"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-09.jpg",
+      "path": "opponents/grid-men-2-09.jpg",
+      "bytes": 7565,
+      "sha256": "bfaa26d9f09c162f1d7765556a32acefcb43cf790f6eea1d9db31a079b9d9a1b",
+      "content_type": "image/jpeg",
+      "local_sha256": "bfaa26d9f09c162f1d7765556a32acefcb43cf790f6eea1d9db31a079b9d9a1b"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-10.jpg",
+      "path": "opponents/grid-men-2-10.jpg",
+      "bytes": 12309,
+      "sha256": "c04f8ff277c008831fe78171823a49ce638d6f18d1823bd769f15363351cef78",
+      "content_type": "image/jpeg",
+      "local_sha256": "c04f8ff277c008831fe78171823a49ce638d6f18d1823bd769f15363351cef78"
+    },
+    {
+      "url": "https://tableparty.io/opponents/grid-men-2-11.jpg",
+      "path": "opponents/grid-men-2-11.jpg",
+      "bytes": 7636,
+      "sha256": "a17c26fff93137a9a5773757fac43436aaf8af331b165bbfcf9b25a0e736d6aa",
+      "content_type": "image/jpeg",
+      "local_sha256": "a17c26fff93137a9a5773757fac43436aaf8af331b165bbfcf9b25a0e736d6aa"
+    }
+  ],
+  "failed": {
+    "https://tableparty.io/kart/.webp": "HTTP 404; ",
+    "https://tableparty.io/kart/kart.webp": "HTTP 404; ",
+    "https://tableparty.io/kart/logo.webp": "HTTP 404; ",
+    "https://tableparty.io/assets/.css": "HTTP 404; ",
+    "https://tableparty.io/assets/.webp": "HTTP 404; ",
+    "https://tableparty.io/assets/crowd-v1.webp": "HTTP 404; ",
+    "https://tableparty.io/assets/garage-v6.webp": "HTTP 404; ",
+    "https://tableparty.io/assets/items-clear.webp": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/bruno-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/bruno-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-castle-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-castle-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-cupcake-house-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-cupcake-house-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-gumdrop-cluster-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-gumdrop-cluster-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-lollipop-tree-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/candy-lollipop-tree-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/canyon-mine-v2-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/canyon-mine-v2-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/canyon-rock-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/canyon-rock-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/circuit-castle-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/circuit-castle-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/circuit-grandstand-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/circuit-grandstand-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/circuit-windmill-v3-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/circuit-windmill-v3-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cloud-airship-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cloud-airship-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cloud-sky-island-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cloud-sky-island-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cloud-sky-shrine-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cloud-sky-shrine-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/coast-house-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/coast-house-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cosmos-gate-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cosmos-gate-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cosmos-station-v2-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/cosmos-station-v2-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/dash-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/dash-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-brazier-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-brazier-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-furnace-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-furnace-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-keep-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-keep-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-lava-spire-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/forge-lava-spire-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/garden-palace-v2-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/garden-palace-v2-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/garden-pavilion-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/garden-pavilion-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/garden-tree-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/garden-tree-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/luma-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/luma-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/nova-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/nova-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/pip-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/pip-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/poppy-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/poppy-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/rocco-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/rocco-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-cabin-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-cabin-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-ice-crystals-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-ice-crystals-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-lodge-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-lodge-shadow.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-pine-far.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/snow-pine-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/tess-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/meshes/tess-race-lod.glb": "HTTP 404; ",
+    "https://tableparty.io/assets/}.mp3": "HTTP ; curl: (3) unmatched close brace/bracket in URL position 30:\nhttps://tableparty.io/assets/}.mp3\n                             ^\n",
+    "https://tableparty.io/kart/assets/BufferGeometryUtils-Bu9JBDdd.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/PitLane-C72HRLPk.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/RankedMoments-BN3gvbjj.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/RankedTakeover-CoJK7flx.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/RankedTakeover-LI4KSvZ1.css": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/RoomEnvironment-xhUqicLX.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/RoundedBoxGeometry-Cp3JkDub.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/StartingGrid-Kt6Wgcbh.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/Trailer-BfFtlItL.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/Trailer-BmO4bbD6.css": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/game-settings-B4TkFRQX.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/grid-Dv7T3OLl.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/grid-KvmmP0wr.css": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/index-QHYwp35q.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/meshopt_decoder.module-O9a9x0ao.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/ranked-DjJM4Tou.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/rankedShield-CBfAy13e.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/trackProtocol-OIX5LHKx.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/index-B9iNbHIH.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/web-CPbsC21e.js": "HTTP 404; ",
+    "https://tableparty.io/kart/assets/web-BBtyBHP-.js": "HTTP 404; ",
+    "https://tableparty.io/kart/sky-arena.webp": "HTTP 404 on original; non-fatal arena prefetch uses spec.id while renderer uses theme=coast"
+  },
+  "missing_at_origin": [
+    {
+      "path": "kart/sky-arena.webp",
+      "url": "https://tableparty.io/kart/sky-arena.webp",
+      "checked_at": "2026-09-27T01:40:40Z",
+      "status": 404
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "source": "https://jev-spell.vercel.app/",
+  "entry_path": "/index.html",
+  "files": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "bytes": 1304820,
+      "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/environments/RoomEnvironment.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/environments/RoomEnvironment.js",
+      "bytes": 3606,
+      "sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "85869bdd22f7cf0b22e68dcefe6cb710480af0f5c901a76f7a7764fd07fc8014"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/geometries/RoundedBoxGeometry.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/geometries/RoundedBoxGeometry.js",
+      "bytes": 4625,
+      "sha256": "d20aeaf7077c459a8d952d215738d7b44fba028440bb862d84b622a34f0c80bb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d20aeaf7077c459a8d952d215738d7b44fba028440bb862d84b622a34f0c80bb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/math/SimplexNoise.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/math/SimplexNoise.js",
+      "bytes": 14351,
+      "sha256": "9b8d541b77b0ddc79afaa6a1de8941452c191b8b9006f04e7b8fc422e2b263f7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9b8d541b77b0ddc79afaa6a1de8941452c191b8b9006f04e7b8fc422e2b263f7"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/EffectComposer.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/EffectComposer.js",
+      "bytes": 4651,
+      "sha256": "d234e578618fa816955ebdc059c049c577e203e650e33cf22bde3f232c29e669",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d234e578618fa816955ebdc059c049c577e203e650e33cf22bde3f232c29e669"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/GTAOPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/GTAOPass.js",
+      "bytes": 16582,
+      "sha256": "980b036767c439cf2aadd0e869b2e51b2ec00736a75a5ad1bb69dddb03254fe8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "980b036767c439cf2aadd0e869b2e51b2ec00736a75a5ad1bb69dddb03254fe8"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/MaskPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/MaskPass.js",
+      "bytes": 2231,
+      "sha256": "328cf7db0da5d9be83ffe39d54b01d5ac1fddf108cc98182ddbb056f5c8b537f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "328cf7db0da5d9be83ffe39d54b01d5ac1fddf108cc98182ddbb056f5c8b537f"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/OutputPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/OutputPass.js",
+      "bytes": 2524,
+      "sha256": "32f879d2179087676631c799857a885586b3cdd13b9731bd3b13f06428bd58b7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "32f879d2179087676631c799857a885586b3cdd13b9731bd3b13f06428bd58b7"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/Pass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/Pass.js",
+      "bytes": 1706,
+      "sha256": "b3c6128340eaa37e40a6a2f1b738e894c855239417d50959759b34a2b5e89f92",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b3c6128340eaa37e40a6a2f1b738e894c855239417d50959759b34a2b5e89f92"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/RenderPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/RenderPass.js",
+      "bytes": 1941,
+      "sha256": "6c9b8a539ea16e898f65e4760f14937ef9ea94043bd9842c141e0301f41903e8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6c9b8a539ea16e898f65e4760f14937ef9ea94043bd9842c141e0301f41903e8"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/ShaderPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/ShaderPass.js",
+      "bytes": 1576,
+      "sha256": "3b28a1ee27e0eb96c0eab137a1f442ccf127a926904eced2d51e125ec44af781",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3b28a1ee27e0eb96c0eab137a1f442ccf127a926904eced2d51e125ec44af781"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "bytes": 12410,
+      "sha256": "3bd23a1097af75c7002d0ffc21a6c14f45c4dd701dbaf737030dfc61fb7c64d9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3bd23a1097af75c7002d0ffc21a6c14f45c4dd701dbaf737030dfc61fb7c64d9"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/CopyShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/CopyShader.js",
+      "bytes": 571,
+      "sha256": "4e3346db194db56a596cd074e9bdb39fb5eb52040c333e0d29dc4eb1324d3b1d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4e3346db194db56a596cd074e9bdb39fb5eb52040c333e0d29dc4eb1324d3b1d"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/GTAOShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/GTAOShader.js",
+      "bytes": 12990,
+      "sha256": "e1f5dd89bca4ee679a4aca50c3ef3513926be71f6860c38e31a62cc9d7120b39",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e1f5dd89bca4ee679a4aca50c3ef3513926be71f6860c38e31a62cc9d7120b39"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "bytes": 1147,
+      "sha256": "9f4866f9abb2d96fd83eec46ba4bf2165b22155a7a37ff425c0f60eba18007cb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9f4866f9abb2d96fd83eec46ba4bf2165b22155a7a37ff425c0f60eba18007cb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/OutputShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/OutputShader.js",
+      "bytes": 1490,
+      "sha256": "4944cecd49c0d4d1520a4d927bde8a590fd43f041ee913252b9451855a01d0f0",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4944cecd49c0d4d1520a4d927bde8a590fd43f041ee913252b9451855a01d0f0"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+      "bytes": 6614,
+      "sha256": "3dab419b23529f8fd59e2713458502f9f51d2dd3af3e1285dc671fcc451d49fb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3dab419b23529f8fd59e2713458502f9f51d2dd3af3e1285dc671fcc451d49fb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Barlow+Condensed:wght@500;600;700&family=Cinzel:wght@600;700;900&family=Noto+Sans+JP:wght@500;700;900&family=Noto+Serif+JP:wght@700;900&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-6394cc2f65d4",
+      "bytes": 3283,
+      "sha256": "56a29a6d8134058167046bc6c817c81c954269da3aa212c68a37f8585e729c24",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "1dc7d05fc1b3a78cd05d63435540b9f2f934d3ae3f0db827a4681faa37cf331a"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lw_3E.ttf",
+      "path": "_external/fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4-Lw_3E.ttf",
+      "bytes": 81448,
+      "sha256": "cc9fb2539cf27df48255982e896d28f544483537cdb41f9fabd741af8992d719",
+      "content_type": "font/ttf",
+      "local_sha256": "cc9fb2539cf27df48255982e896d28f544483537cdb41f9fabd741af8992d719"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2_3E.ttf",
+      "path": "_external/fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B46r2_3E.ttf",
+      "bytes": 87120,
+      "sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7",
+      "content_type": "font/ttf",
+      "local_sha256": "7dde307fa887fc65ff5830cfada77a7decc5dae8d3c816c9d39ba3f1af1c4ed7"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873_3E.ttf",
+      "path": "_external/fonts.gstatic.com/s/barlowcondensed/v13/HTxwL3I-JCGChYJ8VI-L6OO_au7B4873_3E.ttf",
+      "bytes": 86636,
+      "sha256": "0d85af813fc3ed87db0c6265515689b2eef5cbaf7aab17922528dfc95a2cd73f",
+      "content_type": "font/ttf",
+      "local_sha256": "0d85af813fc3ed87db0c6265515689b2eef5cbaf7aab17922528dfc95a2cd73f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIU7ww63mVu7gtR-kwKxNvkNOjw-gjgTYo.ttf",
+      "path": "_external/fonts.gstatic.com/s/cinzel/v26/8vIU7ww63mVu7gtR-kwKxNvkNOjw-gjgTYo.ttf",
+      "bytes": 46116,
+      "sha256": "5150b3609eeaaa9c6d7e093cb9b16ab8ec2f7110ddf0cbe751887e6f158398af",
+      "content_type": "font/ttf",
+      "local_sha256": "5150b3609eeaaa9c6d7e093cb9b16ab8ec2f7110ddf0cbe751887e6f158398af"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIU7ww63mVu7gtR-kwKxNvkNOjw-jHgTYo.ttf",
+      "path": "_external/fonts.gstatic.com/s/cinzel/v26/8vIU7ww63mVu7gtR-kwKxNvkNOjw-jHgTYo.ttf",
+      "bytes": 46124,
+      "sha256": "2c6b1ff0d368efb73636700b69dbef707fa5602a06d085a4e91e5125082651f0",
+      "content_type": "font/ttf",
+      "local_sha256": "2c6b1ff0d368efb73636700b69dbef707fa5602a06d085a4e91e5125082651f0"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIU7ww63mVu7gtR-kwKxNvkNOjw-n_gTYo.ttf",
+      "path": "_external/fonts.gstatic.com/s/cinzel/v26/8vIU7ww63mVu7gtR-kwKxNvkNOjw-n_gTYo.ttf",
+      "bytes": 46192,
+      "sha256": "f8da910da13890cb751df9a8ac0e2edfc30b01252fb6a3b3bb067ddeeb3d5990",
+      "content_type": "font/ttf",
+      "local_sha256": "f8da910da13890cb751df9a8ac0e2edfc30b01252fb6a3b3bb067ddeeb3d5990"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd5wDDOjw.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd5wDDOjw.ttf",
+      "bytes": 293244,
+      "sha256": "14efb9443652199ade5bc6ba8637b4084acce40a58368a3808f84f55667e3e90",
+      "content_type": "font/ttf",
+      "local_sha256": "14efb9443652199ade5bc6ba8637b4084acce40a58368a3808f84f55667e3e90"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_iE9GnM.ttf",
+      "bytes": 290392,
+      "sha256": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8",
+      "content_type": "font/ttf",
+      "local_sha256": "69e7ae35cba23d962227b86f99217c250e642e4c6f6104b4f3ec465039e4e2d8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+      "bytes": 290496,
+      "sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b",
+      "content_type": "font/ttf",
+      "local_sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFCMj75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFCMj75s.ttf",
+      "bytes": 5320828,
+      "sha256": "55ebddc0f968968851a4fd781512592c10f5ea248b77b1497f7b4de9a33fc469",
+      "content_type": "font/ttf",
+      "local_sha256": "55ebddc0f968968851a4fd781512592c10f5ea248b77b1497f7b4de9a33fc469"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFLgk75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFLgk75s.ttf",
+      "bytes": 5315052,
+      "sha256": "02977bcbdc09013b30983c597e5d4e219629746d41932bddf7cd2e5e4563e9a1",
+      "content_type": "font/ttf",
+      "local_sha256": "02977bcbdc09013b30983c597e5d4e219629746d41932bddf7cd2e5e4563e9a1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFPYk75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFPYk75s.ttf",
+      "bytes": 5319680,
+      "sha256": "a3910e15eea0451ffbea62e894e951ea9f7c812c8b4b5e947593b6ecc2d4b057",
+      "content_type": "font/ttf",
+      "local_sha256": "a3910e15eea0451ffbea62e894e951ea9f7c812c8b4b5e947593b6ecc2d4b057"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2byYPebA.ttf",
+      "path": "_external/fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2byYPebA.ttf",
+      "bytes": 7470624,
+      "sha256": "b621b2b29dfda2859eb359c483e5af41919ba49b288ee699ab9a101343534290",
+      "content_type": "font/ttf",
+      "local_sha256": "b621b2b29dfda2859eb359c483e5af41919ba49b288ee699ab9a101343534290"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzWPebA.ttf",
+      "path": "_external/fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzWPebA.ttf",
+      "bytes": 7472676,
+      "sha256": "1cbf95fb7f021b919b4bf43ba67479bc1b25094e1a567929e92bf4b7797ef102",
+      "content_type": "font/ttf",
+      "local_sha256": "1cbf95fb7f021b919b4bf43ba67479bc1b25094e1a567929e92bf4b7797ef102"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/audio/fantasy-spellcasting-boss-theme.mp3",
+      "path": "audio/fantasy-spellcasting-boss-theme.mp3",
+      "bytes": 3805952,
+      "sha256": "3ccf1f1206ce9a85a597bc99ffbd56bc133e360a38ce2f25a6dffc448815a4e5",
+      "content_type": "audio/mpeg",
+      "local_sha256": "3ccf1f1206ce9a85a597bc99ffbd56bc133e360a38ce2f25a6dffc448815a4e5"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/css/menu.css",
+      "path": "css/menu.css",
+      "bytes": 10888,
+      "sha256": "80cc18ef701c153864c43077a371d017d575b83630a6dd0f076649d9190cb036",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "80cc18ef701c153864c43077a371d017d575b83630a6dd0f076649d9190cb036"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/css/style.css",
+      "path": "css/style.css",
+      "bytes": 25826,
+      "sha256": "106e11507ab9094e1a0954b4f89d8d9b2ebddd73498db1c899269497a9a67b88",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "106e11507ab9094e1a0954b4f89d8d9b2ebddd73498db1c899269497a9a67b88"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/",
+      "path": "index.html",
+      "bytes": 13632,
+      "sha256": "837c8727d57fa9ef320fb27d3b79b8da834e8ced6195017ad01cc9276752f935",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "fe0bc2012fe53129dc62918ea4423874fe3ab22299f9495d0b66a5fe1ca32eab"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/audio.js",
+      "path": "js/audio.js",
+      "bytes": 24588,
+      "sha256": "127fe2fb2a6691c26369618a1092a3756848e5b4be24d618aff481d549447786",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "127fe2fb2a6691c26369618a1092a3756848e5b4be24d618aff481d549447786"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/bot.js",
+      "path": "js/bot.js",
+      "bytes": 9349,
+      "sha256": "637a554c43b8da7726c63f930b5ed343aecf889dd2d4da99260c09e7439a500f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "637a554c43b8da7726c63f930b5ed343aecf889dd2d4da99260c09e7439a500f"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/characters.js",
+      "path": "js/characters.js",
+      "bytes": 26972,
+      "sha256": "b8a7f08468924e435eb69a43c6365a742076a9ff332876abff34810560f0b883",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b8a7f08468924e435eb69a43c6365a742076a9ff332876abff34810560f0b883"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/circlePaint.js",
+      "path": "js/circlePaint.js",
+      "bytes": 3269,
+      "sha256": "3758ff9d1507c92ae2f40cb990e4ced48292f6f763989254c1dda8cd13b02563",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3758ff9d1507c92ae2f40cb990e4ced48292f6f763989254c1dda8cd13b02563"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/circleWorker.js",
+      "path": "js/circleWorker.js",
+      "bytes": 576,
+      "sha256": "9939640160f790d608ba8221ab3c68c96108a8fe0fac9264f7f890a1e2cae918",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9939640160f790d608ba8221ab3c68c96108a8fe0fac9264f7f890a1e2cae918"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/combat.js",
+      "path": "js/combat.js",
+      "bytes": 15111,
+      "sha256": "40ce31c76dbe55f93f1c31f9bee75c339796d383aec5d630aa125c18029fce24",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "40ce31c76dbe55f93f1c31f9bee75c339796d383aec5d630aa125c18029fce24"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/elements.js",
+      "path": "js/elements.js",
+      "bytes": 22931,
+      "sha256": "e6e13f9e8dbf8fb2a71b2680121cb44d49c70022b1da30739c03e5c25dcab1a6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e6e13f9e8dbf8fb2a71b2680121cb44d49c70022b1da30739c03e5c25dcab1a6"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/fx.js",
+      "path": "js/fx.js",
+      "bytes": 66186,
+      "sha256": "758b84b42dcb8dad3d7fb6bab64497109ad459fa85f8245d66eb4076f54704d9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "758b84b42dcb8dad3d7fb6bab64497109ad459fa85f8245d66eb4076f54704d9"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/hud.js",
+      "path": "js/hud.js",
+      "bytes": 25427,
+      "sha256": "dc98672a8dbd9eae1539f3a912af08e144e280f797972a43b12a4d3581522280",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "dc98672a8dbd9eae1539f3a912af08e144e280f797972a43b12a4d3581522280"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/i18n.js",
+      "path": "js/i18n.js",
+      "bytes": 19544,
+      "sha256": "c7228a951e978feab737147fd5dbeae8ea086641b4ca358889a61f972a8e49f6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c7228a951e978feab737147fd5dbeae8ea086641b4ca358889a61f972a8e49f6"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/language-picker.js",
+      "path": "js/language-picker.js",
+      "bytes": 4713,
+      "sha256": "77056da0a22b7f323951ecbb9192d6c2185e2bcd4f13e85f0e00dbbe6c25d2d8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "77056da0a22b7f323951ecbb9192d6c2185e2bcd4f13e85f0e00dbbe6c25d2d8"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/languages.js",
+      "path": "js/languages.js",
+      "bytes": 1858,
+      "sha256": "80bb1e5826964e78a53c4bdd4be1b974f9f10cde8b8326303a36297c74562b98",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "80bb1e5826964e78a53c4bdd4be1b974f9f10cde8b8326303a36297c74562b98"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/look.js",
+      "path": "js/look.js",
+      "bytes": 10258,
+      "sha256": "a6c42dcb54485291bbbb988724a3c0a95cdf633614f0cdfd4a2c844dbd5da70e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a6c42dcb54485291bbbb988724a3c0a95cdf633614f0cdfd4a2c844dbd5da70e"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/magicCircle.js",
+      "path": "js/magicCircle.js",
+      "bytes": 3315,
+      "sha256": "55678709a81eb6f135629b12749382320a136779723a6f8aa6b6b19e8cec305a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "55678709a81eb6f135629b12749382320a136779723a6f8aa6b6b19e8cec305a"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/main.js",
+      "path": "js/main.js",
+      "bytes": 67179,
+      "sha256": "2783a96413796ff99f069a1256b08ecb298f9e434d21d81e2a703ec247908df1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2783a96413796ff99f069a1256b08ecb298f9e434d21d81e2a703ec247908df1"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/more-locales.js",
+      "path": "js/more-locales.js",
+      "bytes": 22846,
+      "sha256": "3675b29fe3929b88c57ea65cc6de360ca6706f6a14439930ef709532e3b80390",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3675b29fe3929b88c57ea65cc6de360ca6706f6a14439930ef709532e3b80390"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/postfx.js",
+      "path": "js/postfx.js",
+      "bytes": 10640,
+      "sha256": "9498f8987132e2fb4a74789a66fd6ffd9c34599791dc9734cc729fe3c4951907",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9498f8987132e2fb4a74789a66fd6ffd9c34599791dc9734cc729fe3c4951907"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/shaders.js",
+      "path": "js/shaders.js",
+      "bytes": 20743,
+      "sha256": "1261f983a2b2545842287e314d18929658e0c0a99ea980f6c769c45412bcbaf1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1261f983a2b2545842287e314d18929658e0c0a99ea980f6c769c45412bcbaf1"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/spellbook.js",
+      "path": "js/spellbook.js",
+      "bytes": 33826,
+      "sha256": "5bb05de52d8fe4d233ad3c7d5c415b6a8dd4686bf8e36980cbe21361cf8db27d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5bb05de52d8fe4d233ad3c7d5c415b6a8dd4686bf8e36980cbe21361cf8db27d"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/spells.js",
+      "path": "js/spells.js",
+      "bytes": 211163,
+      "sha256": "354b1a7c08b396a9a182f1ab66e0fbc1d8d365c5d2ba1ecd7d87f356f7f4a05b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "354b1a7c08b396a9a182f1ab66e0fbc1d8d365c5d2ba1ecd7d87f356f7f4a05b"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/style.js",
+      "path": "js/style.js",
+      "bytes": 8941,
+      "sha256": "b7fca5c4791be64ae89ac597965e2166d714ae25353df2bceb07f704c5d8fc98",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b7fca5c4791be64ae89ac597965e2166d714ae25353df2bceb07f704c5d8fc98"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/util.js",
+      "path": "js/util.js",
+      "bytes": 1696,
+      "sha256": "5e38e1714d663dc541558638f2709f69f31eb0274fe36dccf29032adc5b8bdf2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5e38e1714d663dc541558638f2709f69f31eb0274fe36dccf29032adc5b8bdf2"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/vfxkit.js",
+      "path": "js/vfxkit.js",
+      "bytes": 14743,
+      "sha256": "8209b19fe8ff07868e935ab21cc631e1fc05eda09f96e79f5836f851a32e2a90",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8209b19fe8ff07868e935ab21cc631e1fc05eda09f96e79f5836f851a32e2a90"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/voice-download.js",
+      "path": "js/voice-download.js",
+      "bytes": 3386,
+      "sha256": "bfa7fa81d7af79ada633dd6b603a5d0b9b2a4a2c32080d22afa2c81c03529acf",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bfa7fa81d7af79ada633dd6b603a5d0b9b2a4a2c32080d22afa2c81c03529acf"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/voice-feedback.js",
+      "path": "js/voice-feedback.js",
+      "bytes": 526,
+      "sha256": "d8030e1fe19058bb5e3995df8aeaf5174db8afd31c374c8d7a38b42312501bca",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d8030e1fe19058bb5e3995df8aeaf5174db8afd31c374c8d7a38b42312501bca"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/voice.js",
+      "path": "js/voice.js",
+      "bytes": 16523,
+      "sha256": "67a0a460d9e782f09804f8bf3c7d88cfc5f68854e134fb2c8d710201a0c54a11",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "67a0a460d9e782f09804f8bf3c7d88cfc5f68854e134fb2c8d710201a0c54a11"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/warmup.js",
+      "path": "js/warmup.js",
+      "bytes": 6790,
+      "sha256": "98503afc958a7932f50759c649b950592bbc1a7710bb3db935944e262adcd6a3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "98503afc958a7932f50759c649b950592bbc1a7710bb3db935944e262adcd6a3"
+    },
+    {
+      "url": "https://jev-spell.vercel.app/js/world.js",
+      "path": "js/world.js",
+      "bytes": 120833,
+      "sha256": "9d57127c94c88172c552b0e83ae864d9d274086304fc87c42ab340ede17039a7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9d57127c94c88172c552b0e83ae864d9d274086304fc87c42ab340ede17039a7"
+    }
+  ],
+  "failed": {
+    "https://jev-spell.vercel.app/js/.txt": "HTTP 404; "
+  }
+}

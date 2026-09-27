@@ -1,0 +1,47 @@
+{
+  "project": "monolith-wilds",
+  "source": "https://monolithwilds.vercel.app/",
+  "scope": "Eight unchanged deployed modules. Original boot is restricted to terrain and controls through its existing module whitelist; worker computation, quadtree selection, morphing and allocation remain original.",
+  "files": [
+    {
+      "source": "monolith-wilds/assets/terrain-MmovLCQt.js",
+      "path": "examples/monolith-terrain/original/terrain-MmovLCQt.js",
+      "sha256": "065b7d588604cdc2e34baa2a1fca167c6e4d33d54cb823e6b02b1ace9dc8d1e0"
+    },
+    {
+      "source": "monolith-wilds/assets/terrain-worker-DVcr_hr3.js",
+      "path": "examples/monolith-terrain/original/terrain-worker-DVcr_hr3.js",
+      "sha256": "c3287ad56c3090fb33273eba359d794f92c9c867e5e5f9f73fe17ef9182278c8"
+    },
+    {
+      "source": "monolith-wilds/assets/index-DGqtqlWq.js",
+      "path": "examples/monolith-terrain/original/index-DGqtqlWq.js",
+      "sha256": "2996140e2396fedbb1b85d0ea9a5d74d567b9b1816f2daa5f031067a0ae709f4"
+    },
+    {
+      "source": "monolith-wilds/assets/biome-DstsBN7N.js",
+      "path": "examples/monolith-terrain/original/biome-DstsBN7N.js",
+      "sha256": "b77ac324e86000411a0cb9ea137da506b724f395ef744c58281524fd95166d6d"
+    },
+    {
+      "source": "monolith-wilds/assets/controls-DX7CeMlr.js",
+      "path": "examples/monolith-terrain/original/controls-DX7CeMlr.js",
+      "sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b"
+    },
+    {
+      "source": "monolith-wilds/assets/obstacles-DQBr1hBF.js",
+      "path": "examples/monolith-terrain/original/obstacles-DQBr1hBF.js",
+      "sha256": "1dbf1087bc7940235edb33796efda2042a3b30efed081d6381a0b5b1a40bcb3b"
+    },
+    {
+      "source": "monolith-wilds/assets/three.core-DtjtRha-.js",
+      "path": "examples/monolith-terrain/original/three.core-DtjtRha-.js",
+      "sha256": "c4a3f7fe78ed1015ff61dbf82b0a47e2ff9364fa2e110bda383ef9b2e20a78dc"
+    },
+    {
+      "source": "monolith-wilds/assets/three.module-e53_FFk2.js",
+      "path": "examples/monolith-terrain/original/three.module-e53_FFk2.js",
+      "sha256": "aa6cc936d5038dd1c319db4333181cead6de1eba422aa3d81ab7e74b2b57ef2b"
+    }
+  ]
+}

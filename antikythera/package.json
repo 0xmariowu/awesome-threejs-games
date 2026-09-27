@@ -1,0 +1,10 @@
+{
+  "name": "gameref-antikythera",
+  "private": true,
+  "scripts": {
+    "start": "node ../tools/server.mjs .",
+    "dev": "node ../tools/server.mjs .",
+    "build": "node build.mjs",
+    "test": "node --test *.test.mjs"
+  }
+}

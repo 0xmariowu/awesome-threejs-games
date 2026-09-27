@@ -1,0 +1,20 @@
+:root { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; color: #25443f; background: #e8eee8; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+#world { position: fixed; inset: 0; touch-action: none; }
+canvas { display: block; width: 100%; height: 100%; }
+header { position: fixed; top: 25px; left: 30px; pointer-events: none; }
+small { font-size: 10px; letter-spacing: .18em; }
+h1 { font-family: "Songti SC", serif; font-size: 30px; font-weight: 500; margin: 6px 0; }
+p { font-size: 12px; margin: 10px 0; }
+aside { position: fixed; top: 25px; right: 25px; width: 195px; padding: 16px; background: #fafbf3ed; border: 1px solid #d0dacf; border-radius: 6px; }
+label { display: block; font-size: 12px; margin-bottom: 8px; }
+button, select { width: 100%; font: inherit; font-size: 12px; padding: 9px; margin-bottom: 8px; border: 1px solid #afc1b3; border-radius: 4px; background: #fafbf5; color: inherit; cursor: pointer; }
+button:hover, button[aria-pressed="true"] { background: #d8e6d7; }
+:focus-visible { outline: 3px solid #a4682e; outline-offset: 2px; }
+progress { width: 100%; accent-color: #54775a; height: 7px; }
+.heartbeat { display: flex; gap: 8px; align-items: center; font-size: 11px; margin: 14px 0; }
+#pulse { display: inline-block; font-size: 22px; }
+output { font-size: 11px; font-variant-numeric: tabular-nums; line-height: 1.8; }
+footer { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); padding: 9px 14px; background: #fafbf3dc; border-radius: 4px; font-size: 12px; white-space: nowrap; pointer-events: none; }
+@media (max-width: 700px) { header { top: 15px; left: 15px; } h1 { font-size: 22px; } aside { top: 15px; right: 15px; width: 155px; padding: 10px; } footer { font-size: 10px; } }

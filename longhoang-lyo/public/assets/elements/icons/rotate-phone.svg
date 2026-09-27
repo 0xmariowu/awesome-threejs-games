@@ -1,0 +1,13 @@
+<svg width="48" height="72" viewBox="0 0 48 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="rotate_phone">
+    <rect x="2" y="2" width="44" height="68" rx="8" fill="#191B24" stroke="#C7FF72" stroke-width="1.8"/>
+    <rect x="4.5" y="4.5" width="39" height="63" rx="6" fill="#272935"/>
+    <rect x="6.5" y="10.5" width="35" height="51" rx="3.5" fill="#11121A"/>
+    <rect x="18" y="6.5" width="12" height="2" rx="1" fill="#8F92A0"/>
+    <rect x="17" y="64.5" width="14" height="2" rx="1" fill="#8F92A0"/>
+    <circle cx="24" cy="36" r="11" fill="#191B24" stroke="#393B49" stroke-width="1.5"/>
+    <path d="M21.5 30.5L29 36L21.5 41.5V30.5Z" fill="#C7FF72"/>
+    <circle cx="24" cy="20" r="1.5" fill="#393B49"/>
+    <circle cx="24" cy="52" r="1.5" fill="#393B49"/>
+  </g>
+</svg>

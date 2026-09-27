@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Elemental reactions · Vox Arcana</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">{"imports":{"three":"./original/three.module.js"}}</script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main>
+<header class="ui-panel ui-bar" data-demo-control=""><div></div><div class="actions"><button aria-pressed="false" id="pause">Pause time</button><button id="reset">Reset target</button></div></header>
+<section aria-label="Reaction arena" id="arena">
+<canvas aria-label="Casting area: hold left click to cast" data-demo-picture="" id="world" tabindex="0"></canvas>
+<div data-demo-readout="" id="readout"><span id="equation">Select an element to cast</span><strong id="reaction">Waiting for a hit</strong><span id="damage">Base damage 22</span></div>
+<div data-demo-readout="" id="target-state"><span id="health"></span><div class="health-track"><i id="health-fill"></i></div><span id="status"></span></div>
+<ol aria-label="Recent hits" data-demo-readout="" id="history"></ol>
+</section>
+<footer class="ui-panel"><div aria-label="Select element" data-demo-control="" data-demo-wide="" id="elements" role="group"></div><p data-demo-control="" data-demo-hint="" data-hint-keys="LMB · Hold to cast">Select an element · Hold left click in the scene to cast · Water → Ice freezes, then Earth shatters</p></footer>
+</main>
+<script src="./src/main.js" type="module"></script>
+</body>
+</html>

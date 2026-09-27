@@ -1,0 +1,92 @@
+{
+  "project": "moritsuki",
+  "source": "https://cda-social.github.io/moritsuki/",
+  "scope": "Unchanged character workers, geometry, assembly, procedural textures and archived Three.js. The original offers fixed designs, not seed-dependent characters.",
+  "files": [
+    {
+      "source": "moritsuki/public/moritsuki/src/town/assets/build.js",
+      "path": "examples/moritsuki-characters/original/assets/build.js",
+      "sha256": "e383784969bae68699922f82b989b5fee47886dea16f56001c2f90176d42a882"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/kid/hair.js",
+      "path": "examples/moritsuki-characters/original/kid/hair.js",
+      "sha256": "d200eec2ed83aa987c589a67a0bb27a1a8bd0dd047297d62d76cd3ce346544f7"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/kid/kid.worker.js",
+      "path": "examples/moritsuki-characters/original/kid/kid.worker.js",
+      "sha256": "4aee097f7f44eb5b908bc1733c7250e40c6232fdb382195759f17bef06dbe9d9"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/kid/model.js",
+      "path": "examples/moritsuki-characters/original/kid/model.js",
+      "sha256": "eb009471861d4c7f5b67c67d9af2ec7095deaa75f02e6792815b6961bc2c2fa6"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/kid/sdf.js",
+      "path": "examples/moritsuki-characters/original/kid/sdf.js",
+      "sha256": "8e7de6e092eb598c4da2286f69328ddbb89d2db54269e56b464c98ddee25c263"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/kid/shapes.js",
+      "path": "examples/moritsuki-characters/original/kid/shapes.js",
+      "sha256": "c7ab424d22a96fd5e27f19775a24cfaa19912a22a39997fbeb7f4c27d3c5bca6"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/kid/textures.js",
+      "path": "examples/moritsuki-characters/original/kid/textures.js",
+      "sha256": "cc52944194d80c2be70be603f76da8af4f2e51d4781b3200314bd4152a90ba70"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/face.js",
+      "path": "examples/moritsuki-characters/original/people/face.js",
+      "sha256": "9a1f00ff75d9ebb836291435c4a78876842bea79a78801a68d355852f08bd93a"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/human.js",
+      "path": "examples/moritsuki-characters/original/people/human.js",
+      "sha256": "ff4ce28d2f36490d8a5a4112c33b8ecd08da4f8ef2d94ff1aa31d1512658e25e"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/isogai.js",
+      "path": "examples/moritsuki-characters/original/people/isogai.js",
+      "sha256": "b275dbc5dc14e94cc14e3bae82f6af15639379a3293bad548efb870ffc424c91"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/model.js",
+      "path": "examples/moritsuki-characters/original/people/model.js",
+      "sha256": "b3eb32a33b31b7754d1bd4d5065f92e91df611c9bc443c1af208e8f8d1cf8872"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/natsumi.js",
+      "path": "examples/moritsuki-characters/original/people/natsumi.js",
+      "sha256": "61f64024523d533d22687d2cedc1c1c7aea63b1195c4250050ab41f7e1f6b348"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/people.worker.js",
+      "path": "examples/moritsuki-characters/original/people/people.worker.js",
+      "sha256": "07db22ee02d5d554ac00a4aa683ef808c00f52da4f7b49d0af5883eebe9ab021"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/prints.js",
+      "path": "examples/moritsuki-characters/original/people/prints.js",
+      "sha256": "5325547e5fe1dc196f1ef8e2ad665d0ad631e8d35a6fdaff2e2342fb6f49dce5"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/shoes.js",
+      "path": "examples/moritsuki-characters/original/people/shoes.js",
+      "sha256": "277498f0d6fc818d3a3e85004d854ee2fa1909c0ae1d83bcbfd459550a81c89d"
+    },
+    {
+      "source": "moritsuki/public/moritsuki/src/town/people/strands.js",
+      "path": "examples/moritsuki-characters/original/people/strands.js",
+      "sha256": "102f6eb4143d1050c7f5a460b3a75a51d27f6886b3e859a09db77713103a9d62"
+    },
+    {
+      "source": "moritsuki/public/_external/cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "path": "examples/moritsuki-characters/original/vendor/three.module.js",
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    }
+  ]
+}

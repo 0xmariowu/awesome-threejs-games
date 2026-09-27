@@ -1,0 +1,50 @@
+{
+  "name": "webgame-lab",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "capture": "tsx scripts/capture.ts",
+    "fetch-assets": "tsx scripts/fetch-assets.ts",
+    "report": "tsx scripts/report.ts"
+  },
+  "dependencies": {
+    "@dgreenheck/ez-tree": "1.1.0",
+    "@react-three/drei": "10.7.8",
+    "@react-three/fiber": "9.8.0",
+    "@react-three/postprocessing": "3.1.2",
+    "@react-three/rapier": "2.2.0",
+    "@sparkjsdev/spark": "2.2.0",
+    "@takram/three-atmosphere": "0.19.1",
+    "@takram/three-clouds": "0.7.6",
+    "@three.ez/instanced-mesh": "0.3.16",
+    "camera-controls": "3.1.2",
+    "ecctrl": "2.0.2",
+    "koota": "0.6.6",
+    "leva": "0.10.1",
+    "lil-gui": "0.21.0",
+    "navcat": "0.4.1",
+    "postprocessing": "6.39.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "0.186.0",
+    "three-bvh-csg": "0.0.17",
+    "three.quarks": "0.17.1",
+    "three.terrain.js": "3.1.1",
+    "yuka": "0.7.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@types/yuka": "0.7.4",
+    "@vitejs/plugin-react": "6.1.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "8.3.0",
+    "vitest": "5.0.1"
+  }
+}

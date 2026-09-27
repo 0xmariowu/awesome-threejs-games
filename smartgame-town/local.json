@@ -1,0 +1,5 @@
+{
+  "port": 8093,
+  "entry": "/town/index.html",
+  "root": "public"
+}

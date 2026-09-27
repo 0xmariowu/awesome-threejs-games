@@ -1,0 +1,479 @@
+{
+  "captured_at": "2026-09-26",
+  "games": [
+    {
+      "slug": "hanakawa",
+      "title": "Hanakawa",
+      "source": "https://hanakawa-boat-game.vercel.app/",
+      "port": 8082,
+      "entry": "/index.html",
+      "source_type": "verified-deployed-files",
+      "stack": [
+        "Three.js WebGPU / TSL",
+        "Boat simulation",
+        "Baked geographical channels",
+        "Procedural geometry and authored textures"
+      ],
+      "files": 214,
+      "bytes": 90613072,
+      "readme": "hanakawa/README.md",
+      "technical": "hanakawa/TECHNICAL.md",
+      "limitations": "All 214 original runtime files match the current source. Native Chrome startup stalled beyond 80 seconds and recorded an 11.925-second main-thread task. Hidden-tab frame suspension occurs on both original and local. A later local run reached readiness and isolated default-graphics gameplay ran at 60 fps, but a cold-start repair is not established. Original game code and graphics settings unchanged.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured-startup-issue",
+      "audit": "output/audit-2026-09-26/hanakawa/"
+    },
+    {
+      "slug": "monolith-wilds",
+      "title": "Monolith Wilds",
+      "source": "https://monolithwilds.vercel.app/",
+      "port": 8081,
+      "entry": "/index.html",
+      "source_type": "verified-deployed-files",
+      "stack": [
+        "Three.js WebGL",
+        "Procedural terrain",
+        "Web Workers",
+        "Procedural audio"
+      ],
+      "files": 49,
+      "bytes": 4257245,
+      "readme": "monolith-wilds/README.md",
+      "technical": "monolith-wilds/TECHNICAL.md",
+      "limitations": "All 40 pre-existing runtime files matched the current original. Original Google Fonts dependencies were subsequently localized; game JavaScript and CSS are unchanged. Full landmark coverage is not certified. Post-repair offline gameplay has zero external requests and zero HTTP/page errors.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "audit": "output/audit-2026-09-26/monolith-wilds/"
+    },
+    {
+      "slug": "inkwave",
+      "title": "INKWAVE — Turf Riot",
+      "source": "https://github.com/0xmariowu/inkwave",
+      "port": 8088,
+      "entry": "/index.html",
+      "source_type": "retained-git-import-original-site-unavailable",
+      "stack": [
+        "Three.js WebGL",
+        "GPU turf painting",
+        "Procedural characters",
+        "4v4 bots",
+        "Synthesized audio"
+      ],
+      "files": 70,
+      "bytes": 4565980,
+      "readme": "inkwave/README.md",
+      "technical": "inkwave/TECHNICAL.md",
+      "limitations": "The original external website is gone, confirmed by the user. The 70 original runtime/support files match retained origin/main at 11ce485. External-origin equivalence cannot be recertified.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "audit": "output/audit-2026-09-26/inkwave/",
+      "source_public": false,
+      "license_note": "MIT. Original LICENSE retained in inkwave/LICENSE."
+    },
+    {
+      "slug": "longhoang-lyo",
+      "title": "Long Hoang / Lyo",
+      "source": "https://longhoang-lyo.com/",
+      "port": 8090,
+      "entry": "/index.html",
+      "source_type": "deployed-bundles",
+      "stack": [
+        "Three.js rendering",
+        "Rapier physics",
+        "GSAP transitions",
+        "GLB models",
+        "KTX2 compressed textures"
+      ],
+      "files": 466,
+      "bytes": 19616014,
+      "readme": "longhoang-lyo/README.md",
+      "technical": "longhoang-lyo/TECHNICAL.md",
+      "limitations": "Entry, tutorial and movement were exercised with external network access blocked. Full combat progression, every portfolio panel and the contact submission backend are not exhaustively verified. Original development sources/source maps were not available; minified production bundles are retained.",
+      "license_note": "No project-wide license was found in the deployment. Preserve the author credits; rights remain with the author.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "audit": "output/audit-2026-09-26/longhoang-lyo/"
+    },
+    {
+      "slug": "vox-arcana",
+      "title": "Vox Arcana",
+      "source": "https://jev-spell.vercel.app/",
+      "port": 8091,
+      "entry": "/index.html",
+      "source_type": "readable-deployed-modules",
+      "stack": [
+        "Three.js",
+        "WebGL shaders",
+        "Web Audio",
+        "Web Speech API",
+        "Web Workers",
+        "Jev API boundary"
+      ],
+      "files": 65,
+      "bytes": 38218964,
+      "readme": "vox-arcana/README.md",
+      "technical": "vox-arcana/TECHNICAL.md",
+      "limitations": "Practice, movement and an actual fireball cast passed with external requests blocked. /api/status and /api/spell have no archived server implementation. Jev AI inference and the server-backed local-model option are unavailable. Browser voice recognition is not certified offline, and microphone input was not tested. This is a playable original client with a documented backend gap.",
+      "license_note": "No project-wide license was found in the deployed files.",
+      "parity": "not-certified",
+      "status": "client-only-backend-unavailable",
+      "browser_evidence": "output/playwright/vox-arcana/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [
+        {
+          "url": "http://127.0.0.1:8091/api/status",
+          "status": 404
+        }
+      ],
+      "smoke_steps": [
+        "practice",
+        "spell"
+      ],
+      "audit": "output/audit-2026-09-26/vox-arcana/"
+    },
+    {
+      "slug": "sakuragaoka-station",
+      "title": "Sakuragaoka Station",
+      "source": "https://github.com/Kenton-GMI/sakuragaoka-station/tree/main",
+      "port": 8092,
+      "entry": "/index.html",
+      "source_type": "source-repository-and-localized-snapshot",
+      "stack": [
+        "Three.js 0.170.0",
+        "Procedural geometry",
+        "Cel shading",
+        "Texture atlasing",
+        "Web Audio"
+      ],
+      "files": 155,
+      "bytes": 55209310,
+      "readme": "sakuragaoka-station/README.md",
+      "technical": "sakuragaoka-station/TECHNICAL.md",
+      "limitations": "Offline entry and walking passed. Upstream npm run check passed for the world modules. The original upstream index still uses CDN URLs; launch the localized public snapshot with npm start in this outer folder. Train timing, all interiors and touch controls are not exhaustively tested.",
+      "license_note": "MIT. Original LICENSE retained. CDN fonts/libraries retain their own licenses.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "audit": "output/audit-2026-09-26/sakuragaoka-station/"
+    },
+    {
+      "slug": "smartgame-town",
+      "title": "Smartgame Town",
+      "source": "https://smartgame.jp/town/",
+      "port": 8093,
+      "entry": "/town/index.html",
+      "source_type": "deployed-client-with-backend-gap",
+      "stack": [
+        "Three.js",
+        "Procedural town geometry",
+        "Layered avatar sprites",
+        "Web Audio synthesis",
+        "PHP service endpoints"
+      ],
+      "files": 1833,
+      "bytes": 34852129,
+      "readme": "smartgame-town/README.md",
+      "technical": "smartgame-town/TECHNICAL.md",
+      "limitations": "The scene, avatar editor and named-avatar town entry render locally with external requests blocked. Account, room registration, announcements, online players/chat, voice, cloud saves and payments need unavailable PHP services. The original client may display a connecting state. Individual arcade destinations and the separate farm are outside this town capture. No fake server responses or production proxy were added.",
+      "license_note": "No project-wide license was found. Original Smartgame/Gameline attribution retained.",
+      "parity": "not-certified",
+      "status": "client-only-backend-unavailable",
+      "browser_evidence": "output/playwright/smartgame-town/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [
+        {
+          "url": "http://127.0.0.1:8093/account/api.php?a=me",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8093/town/room-api.php",
+          "status": 405
+        },
+        {
+          "url": "http://127.0.0.1:8093/account/api.php?a=me",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:8093/town/announcements-api.php",
+          "status": 404
+        }
+      ],
+      "smoke_steps": [
+        "town",
+        "walk"
+      ],
+      "audit": "output/audit-2026-09-26/smartgame-town/"
+    },
+    {
+      "slug": "everdrift",
+      "title": "Everdrift",
+      "source": "https://everdrift.iliareingold.com/",
+      "port": 8094,
+      "entry": "/index.html",
+      "source_type": "godot-web-export-and-extracted-resources",
+      "stack": [
+        "Godot 4.7 export",
+        "WebAssembly",
+        "PCK v4",
+        "Godot shaders",
+        "AudioWorklet"
+      ],
+      "files": 11,
+      "bytes": 45404170,
+      "readme": "everdrift/README.md",
+      "technical": "everdrift/TECHNICAL.md",
+      "limitations": "Main menu, opening dialogue, the first village, movement/jump input and coin collection ran locally with external requests blocked. Both audio worklets and the runtime version.json were captured. Extracted GDC files are compiled bytecode, not editable GDScript source; no decompilation or source-equivalence claim is made. Full campaign completion has not been tested.",
+      "license_note": "No game-wide license was found in the deployment. Godot engine and third-party components retain their own licenses.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "browser_evidence": "output/playwright/everdrift/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [],
+      "smoke_steps": [
+        "menu",
+        "new-game",
+        "after-intro",
+        "move-jump"
+      ],
+      "audit": "output/audit-2026-09-26/everdrift/"
+    },
+    {
+      "slug": "scorch-podracer",
+      "title": "SCORCH — Desert Pod Racing",
+      "source": "https://scortch-podracer.netlify.app/",
+      "port": 8095,
+      "entry": "/index.html",
+      "source_type": "single-document-deployment",
+      "stack": [
+        "Embedded Three.js",
+        "WebGL",
+        "Procedural track and vehicles",
+        "Web Audio",
+        "DOM HUD"
+      ],
+      "files": 4,
+      "bytes": 1228636,
+      "readme": "scorch-podracer/README.md",
+      "technical": "scorch-podracer/TECHNICAL.md",
+      "limitations": "Selection, race movement and pause passed with zero external requests or HTTP failures. Netlify toolbar was removed; game code retained. Full three-lap finish, all six vehicles and touch controls are not exhaustively tested.",
+      "license_note": "No project-wide license was found. Original author/credits links remain in the page.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "browser_evidence": "output/playwright/scorch-podracer/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [],
+      "smoke_steps": [
+        "selected",
+        "racing",
+        "pause"
+      ],
+      "audit": "output/audit-2026-09-26/scorch-podracer/"
+    },
+    {
+      "slug": "moritsuki",
+      "title": "Moritsuki / なちゃっとの夏休み",
+      "source": "https://cda-social.github.io/moritsuki/",
+      "port": 8096,
+      "entry": "/moritsuki/index.html",
+      "source_type": "readable-deployed-modules",
+      "stack": [
+        "Three.js",
+        "Geographical heightfields",
+        "Procedural scenery",
+        "Shader patches",
+        "Shared minigame progression"
+      ],
+      "files": 398,
+      "bytes": 46671460,
+      "readme": "moritsuki/README.md",
+      "technical": "moritsuki/TECHNICAL.md",
+      "limitations": "Town rendering, fast-travel UI and entry/input in all five minigames were exercised with external requests blocked and no runtime HTTP failures. The hamaguri, gazami and kusafugu minigames show black 3D scenes after their intro fades finish in the tested Chrome environment, although HUD/input and requests work. The original hamaguri site reproduces the same black scene with both default Chrome graphics settings and ANGLE Metal; the cause is unresolved. Town, unagi and mori render visibly. Do not count these three minigames as visually passed. The original page explicitly says story content is unfinished. Public repository lookup did not resolve; readable deployed modules were archived. Geographic credit links are not game dependencies and were excluded from the runtime archive.",
+      "license_note": "Preserve original OpenStreetMap/GSI and sound credits in the game. A project-wide source license was not found.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured-visual-issue",
+      "browser_evidence": "output/playwright/moritsuki/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [],
+      "smoke_steps": [
+        "town",
+        "travel",
+        "hamaguri",
+        "hamaguri-playing",
+        "gazami",
+        "gazami-playing",
+        "kusafugu",
+        "kusafugu-playing",
+        "unagi",
+        "unagi-playing",
+        "mori",
+        "mori-playing"
+      ],
+      "visual_review": "output/playwright/moritsuki/visual-review.json",
+      "audit": "output/audit-2026-09-26/moritsuki/"
+    },
+    {
+      "slug": "tidewater",
+      "title": "Tidewater",
+      "source": "https://dgreenheck.github.io/tidewater/",
+      "port": 8097,
+      "entry": "/tidewater/index.html",
+      "source_type": "source-repository-and-deployment",
+      "stack": [
+        "Direct WebGPU",
+        "WGSL",
+        "Custom rendering engine",
+        "FFT ocean",
+        "Hillaire atmosphere",
+        "Vite 8"
+      ],
+      "files": 160,
+      "bytes": 61866273,
+      "readme": "tidewater/README.md",
+      "technical": "tidewater/TECHNICAL.md",
+      "limitations": "The original game-logic and engine-smoke tests passed. Offline browser exploration and inventory run with installed Chrome. Bundled headless Chromium fails on both upstream and local because it exposes only 16 sampled textures per shader stage; installed Chrome exposes 48. No engine or image-quality downgrade was applied. Boat trips, a complete caught-fish sale and all weather conditions remain unverified.",
+      "license_note": "MIT source; original LICENSE and CREDITS.md retained. Third-party assets retain the licenses identified there.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "browser_evidence": "output/playwright/tidewater/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [],
+      "smoke_steps": [
+        "explore",
+        "cast",
+        "inventory"
+      ],
+      "audit": "output/audit-2026-09-26/tidewater/"
+    },
+    {
+      "slug": "shabondama-biyori",
+      "title": "Shabondama Biyori / しゃぼん玉日和",
+      "source": "https://claude.ai/artifact/FozvXt7fcZ6ydzxndkRS1k",
+      "port": 8098,
+      "entry": "/_f/1790342986-3d06/index.html",
+      "source_type": "browser-recovered-readable-modules",
+      "stack": [
+        "Three.js 0.186.0",
+        "Procedural terrain and vegetation",
+        "Bubble shader",
+        "Wind simulation",
+        "Camera director",
+        "Web Audio"
+      ],
+      "files": 412,
+      "bytes": 16313108,
+      "readme": "shabondama-biyori/README.md",
+      "technical": "shabondama-biyori/TECHNICAL.md",
+      "limitations": "Scene readiness, bubble input, camera drag and menu passed with no external requests or HTTP failures. The Claude embedding runtime was removed from the local entry; original game modules remain intact. Development-only /api/video, /api/still and /api/log capture helpers do not have a local backend and are not used by normal play. A retina input sample recorded a 200 ms frame interval; later steady frames do not erase this input-sample observation.",
+      "license_note": "No explicit artifact-wide source license was found. Three.js and font licenses remain those of their upstream projects.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "browser_evidence": "output/playwright/shabondama-biyori/gameplay/browser.json",
+      "observed_external_requests": 0,
+      "observed_backend_errors": [],
+      "smoke_steps": [
+        "ready",
+        "blowing",
+        "bubbles",
+        "menu"
+      ],
+      "audit": "output/audit-2026-09-26/shabondama-biyori/"
+    },
+    {
+      "slug": "arkenfall",
+      "title": "Arkenfall",
+      "source": "https://www.arkenfall.site/",
+      "port": 8099,
+      "entry": "/index.html",
+      "source_type": "original-deployed-modules",
+      "stack": [
+        "Three.js r186 / WebGL 2",
+        "Procedural terrain and geometry",
+        "Web Workers for terrain, atlases, lighting and audio",
+        "LocalStorage saves and IndexedDB caches",
+        "Procedural combat and character animation"
+      ],
+      "files": 88,
+      "bytes": 7292228,
+      "readme": "arkenfall/README.md",
+      "technical": "arkenfall/TECHNICAL.md",
+      "limitations": "All 88 deployed files retain original bytes. Offline gameplay sampled: opening, movement, jump, attack, dodge, map, inventory, quest-triggered autosave and Continue after reload. Complete world, boss progression, gamepad and touch controls are not certified. No development source repository or project-wide license confirmed.",
+      "license_note": "No project-wide license confirmed in the deployment; preserve credits and included vendor notices.",
+      "parity": "not-certified",
+      "status": "local-client-verified",
+      "audit": "output/audit-2026-09-26/arkenfall/"
+    },
+    {
+      "slug": "tableparty-kart",
+      "title": "Sunsprint / Tableparty Kart",
+      "source": "https://tableparty.io/kart",
+      "port": 8100,
+      "entry": "/kart/index.html",
+      "source_type": "original-deployed-client-with-backend-gap",
+      "stack": [
+        "Three.js WebGL",
+        "React",
+        "Track-relative arcade kart simulation",
+        "Meshopt GLB assets",
+        "Web Audio",
+        "WebSocket server boundary"
+      ],
+      "limitations": "All 292 archived deployed files retain original bytes. Offline input and visible races sampled on all eight courses with all eight racers; pause passed. Local battle renders and responds, but a non-fatal sky-arena.webp prefetch returns 404 on both original and local; actual renderer loads sky-coast.webp via theme=coast. Online rooms/ranked features require unavailable /kart-room server. Full race/cup/battle completion, every item and touch controls remain unverified. No original authoring source maps/repository confirmed.",
+      "status": "client-only-backend-unavailable",
+      "license_note": "No project-wide reuse license confirmed in the deployment.",
+      "files": 292,
+      "bytes": 29951709,
+      "readme": "tableparty-kart/README.md",
+      "technical": "tableparty-kart/TECHNICAL.md",
+      "parity": "not-certified",
+      "audit": "output/library-research-2026-09-26/tableparty-kart/"
+    },
+    {
+      "slug": "cloudkeep",
+      "title": "Cloudkeep",
+      "source": "../cloudkeep",
+      "source_repository": "https://github.com/0xmariowu/cloudkeep",
+      "source_revision": "b28406d581bfbc3c905c200e552b669f4dd02a15",
+      "port": 8101,
+      "entry": "/index.html",
+      "source_type": "local-source-snapshot-and-independent-production-build",
+      "stack": [
+        "Three.js r186 WebGL",
+        "TypeScript / Vite",
+        "Renderer-independent flight and ecosystem simulation",
+        "Blender modeling pipeline"
+      ],
+      "limitations": "Exact original exploration release b28406d: 68 tracked source/art/test files and 25 production files. All 37 original tests and independent build passed. Offline flight/boost/pause/save/Continue and ignoring the excluded mode hash passed in installed Chrome, with no page or HTTP errors. A six-second input sample had 16.8 ms p95 frame intervals and no frames over 50 ms at 1280x800 DPR 1. Complete ecosystem progression, every upgrade and touch controls are not certified. The separate local working project remains unchanged.",
+      "status": "original-exploration-release",
+      "license_note": "MIT original repository; generated sky/cloud art provenance retained.",
+      "files": 25,
+      "bytes": 23836831,
+      "readme": "cloudkeep/README.md",
+      "technical": "cloudkeep/TECHNICAL.md",
+      "parity": "not-certified",
+      "audit": "output/library-development-2026-09-26/cloudkeep/"
+    },
+    {
+      "slug": "antikythera",
+      "title": "Antikythera",
+      "source": "https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs",
+      "author_post": "https://x.com/edwinarbus/status/2102463453176979794",
+      "port": 8104,
+      "entry": "/index.html",
+      "source_type": "public-claude-artifact-local-archive",
+      "stack": [
+        "Three.js r186 WebGL",
+        "Underwater exploration and sonar",
+        "Fragment brushing and gear assembly",
+        "Procedural animation and eclipse rendering"
+      ],
+      "files": 75,
+      "bytes": 6734320,
+      "readme": "antikythera/README.md",
+      "technical": "antikythera/TECHNICAL.md",
+      "limitations": "Complete discovery and natural air depletion verified offline with native keyboard and mouse input. Original artifact retained byte-for-byte; playable copy removes the host preamble and uses local Three.js and fonts. Touch controls are unverified.",
+      "license_note": "No license is stated in the original artifact. Archived here with full credit to its author for study; rights remain with the author. Preserve included vendor licenses.",
+      "parity": "not-certified",
+      "status": "local-playthrough-verified",
+      "audit": "output/playthrough/antikythera/"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; color: #f5eddb; background: #a8b3ad; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+#world, canvas { display: block; width: 100vw; height: 100vh; }
+header { position: fixed; top: 24px; left: 28px; display: grid; gap: 6px; pointer-events: none; text-shadow: 0 2px 8px #243b3c; }
+header span { font-size: 12px; letter-spacing: .12em; }
+header strong { font-size: 27px; font-weight: 500; }
+nav { position: fixed; top: 24px; right: 28px; display: flex; gap: 6px; }
+button { cursor: pointer; padding: 10px 13px; border: 1px solid #e9e3ce66; background: #263c3de0; border-radius: 3px; color: inherit; font: inherit; font-size: 12px; }
+button[aria-pressed="true"] { background: #ece2c7; color: #203334; border-color: #ece2c7; }
+button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+aside { position: fixed; bottom: 65px; left: 28px; display: flex; gap: 18px; font-size: 13px; text-shadow: 0 1px 5px #172f31; pointer-events: none; }
+#hint { position: fixed; bottom: 0; left: 0; right: 0; margin: 0; padding: 13px 28px; font-size: 12px; line-height: 1.6; background: #203435df; pointer-events: none; }
+#error { position: fixed; top: 40%; left: 10%; right: 10%; padding: 25px; background: #492e29; }
+@media (max-width: 760px) { header { top: 14px; left: 16px; } header strong { font-size: 21px; } nav { top: 82px; right: auto; left: 16px; } button { padding: 8px; } #hint { padding: 9px 16px; font-size: 10px; } aside { left: 16px; bottom: 72px; } }

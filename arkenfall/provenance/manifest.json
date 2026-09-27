@@ -1,0 +1,714 @@
+{
+  "source": "https://www.arkenfall.site/",
+  "entry_path": "/index.html",
+  "files": [
+    {
+      "url": "https://va.vercel-scripts.com/v1/script.debug.js",
+      "path": "_external/va.vercel-scripts.com/v1/script.debug.js",
+      "bytes": 5241,
+      "sha256": "adb73c24b0389402624a60db5f3528b741edbf88be6aab6b72aee3f70caa3ecd",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "adb73c24b0389402624a60db5f3528b741edbf88be6aab6b72aee3f70caa3ecd"
+    },
+    {
+      "url": "https://www.arkenfall.site/_vercel/insights/script.js",
+      "path": "_vercel/insights/script.js",
+      "bytes": 2054,
+      "sha256": "1b83b69280d464ee0fe1e0ceb2de95180deb1261b1002b3deae4598e69ee3d4d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1b83b69280d464ee0fe1e0ceb2de95180deb1261b1002b3deae4598e69ee3d4d"
+    },
+    {
+      "url": "https://www.arkenfall.site/apple-touch-icon.png",
+      "path": "apple-touch-icon.png",
+      "bytes": 17464,
+      "sha256": "221d8e7ebbf5e6cca5fb408843684c2a529614b248fc884cc3f3adb49a0eb4b2",
+      "content_type": "image/png",
+      "local_sha256": "221d8e7ebbf5e6cca5fb408843684c2a529614b248fc884cc3f3adb49a0eb4b2"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/Actor-CPc2Vruf.js",
+      "path": "assets/Actor-CPc2Vruf.js",
+      "bytes": 1458,
+      "sha256": "c17f6b77964a68e6eb7bbfa5ea313b77618e8540665e3dd4cac7e8742b373589",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c17f6b77964a68e6eb7bbfa5ea313b77618e8540665e3dd4cac7e8742b373589"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/Animator-CyW8ITDY.js",
+      "path": "assets/Animator-CyW8ITDY.js",
+      "bytes": 9675,
+      "sha256": "914366155794182f68af8eeb3b35eaabce19c554168144aabb59053f968926f7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "914366155794182f68af8eeb3b35eaabce19c554168144aabb59053f968926f7"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/BufferGeometryUtils-B9y1tCRt.js",
+      "path": "assets/BufferGeometryUtils-B9y1tCRt.js",
+      "bytes": 5153,
+      "sha256": "d2a14da1aa8b7773cf64cfbdb0ad3d792c1441100f571218ae9aecbfef0a61d8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d2a14da1aa8b7773cf64cfbdb0ad3d792c1441100f571218ae9aecbfef0a61d8"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/Debug-mAQ8BxhD.js",
+      "path": "assets/Debug-mAQ8BxhD.js",
+      "bytes": 3714,
+      "sha256": "53ec0256be18c8d9fe4e8b7b1a898899a28197e56379d5ceaf6378e40394ede9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "53ec0256be18c8d9fe4e8b7b1a898899a28197e56379d5ceaf6378e40394ede9"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/Game-BmRmdldn.js",
+      "path": "assets/Game-BmRmdldn.js",
+      "bytes": 55780,
+      "sha256": "184af5d470b8008326b645df2e6a1244a69ee6820e0609a92fa3d4e83d3b3d01",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "184af5d470b8008326b645df2e6a1244a69ee6820e0609a92fa3d4e83d3b3d01"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/Humanoid-Cjny6Mho.js",
+      "path": "assets/Humanoid-Cjny6Mho.js",
+      "bytes": 1128,
+      "sha256": "25f7aa8c637897372d48d5bb6c6bd9658a8076c90da1ad8aea10906bd47cedb6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "25f7aa8c637897372d48d5bb6c6bd9658a8076c90da1ad8aea10906bd47cedb6"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/Settings-Xp8ACwpw.js",
+      "path": "assets/Settings-Xp8ACwpw.js",
+      "bytes": 492,
+      "sha256": "2b00d7f9db2bc7df67f301ac0d7c207c9e34a7c373a71ea8d921cb2a1813f77d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2b00d7f9db2bc7df67f301ac0d7c207c9e34a7c373a71ea8d921cb2a1813f77d"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/ambientLife-ovtl7k1_.js",
+      "path": "assets/ambientLife-ovtl7k1_.js",
+      "bytes": 821,
+      "sha256": "27f0e32b57afcbfd348d5b46dffa728ef5653fb5ffc74834a3477f47b3712be2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "27f0e32b57afcbfd348d5b46dffa728ef5653fb5ffc74834a3477f47b3712be2"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/anim-exnbZ3yq.js",
+      "path": "assets/anim-exnbZ3yq.js",
+      "bytes": 370,
+      "sha256": "bd987938d0fa2b1cafb6e36e80eb8797ed4e8320a9cf078a79929cfd35b6887c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bd987938d0fa2b1cafb6e36e80eb8797ed4e8320a9cf078a79929cfd35b6887c"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/ao.worker-QL1rwCza.js",
+      "path": "assets/ao.worker-QL1rwCza.js",
+      "bytes": 3689,
+      "sha256": "e28ec2843d09f93cf02514522a86d2da1902f4965436c923a3e81e64a145712d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e28ec2843d09f93cf02514522a86d2da1902f4965436c923a3e81e64a145712d"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/atlas.worker-AhmGwHS8.js",
+      "path": "assets/atlas.worker-AhmGwHS8.js",
+      "bytes": 16083,
+      "sha256": "7d2c9c20c427320316b602ecf7f7fb39e02a89131a39772de63dfef150b81df6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7d2c9c20c427320316b602ecf7f7fb39e02a89131a39772de63dfef150b81df6"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/atlas.worker-DJtHxqfB.js",
+      "path": "assets/atlas.worker-DJtHxqfB.js",
+      "bytes": 22680,
+      "sha256": "7869324feb2c611c6f3c6af2c0a39dd14f93cc9aacb25c9395452b1374c93b80",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7869324feb2c611c6f3c6af2c0a39dd14f93cc9aacb25c9395452b1374c93b80"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/atmosphere-B5vObnbe.js",
+      "path": "assets/atmosphere-B5vObnbe.js",
+      "bytes": 19107,
+      "sha256": "fe232d12a8acbfb31d7401e805ce2850b4be19e421a6e173287ec9c86702c14e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fe232d12a8acbfb31d7401e805ce2850b4be19e421a6e173287ec9c86702c14e"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/audio-BdWOWCHp.js",
+      "path": "assets/audio-BdWOWCHp.js",
+      "bytes": 247487,
+      "sha256": "39cffff504e1487d7ae3dc9aa782b9bc14af419497757ae5a9cf02cd4d506afd",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "39cffff504e1487d7ae3dc9aa782b9bc14af419497757ae5a9cf02cd4d506afd"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/body-BdN9CY7z.js",
+      "path": "assets/body-BdN9CY7z.js",
+      "bytes": 7428,
+      "sha256": "639b2d76787d60b730e9a0116a7a0cdffaec2065338ca3cf3400d9c4b032c97e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "639b2d76787d60b730e9a0116a7a0cdffaec2065338ca3cf3400d9c4b032c97e"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/cache-DIhMlTLC.js",
+      "path": "assets/cache-DIhMlTLC.js",
+      "bytes": 970,
+      "sha256": "eb0926a458b395688e75f18e652d284aed409617756627dfb91cc1ef0696067f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "eb0926a458b395688e75f18e652d284aed409617756627dfb91cc1ef0696067f"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/camera-CsWg7FPD.js",
+      "path": "assets/camera-CsWg7FPD.js",
+      "bytes": 22256,
+      "sha256": "3c0d88088db1aa18eaec66d3f34e4fd36a92a3ee48686363fdb8f13980207e0a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3c0d88088db1aa18eaec66d3f34e4fd36a92a3ee48686363fdb8f13980207e0a"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/combat-DANZZ0C7.js",
+      "path": "assets/combat-DANZZ0C7.js",
+      "bytes": 98169,
+      "sha256": "324cf55415cffde0b48c3de9a6f83505427b4aa11a4a0c6723742754f8b5d493",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "324cf55415cffde0b48c3de9a6f83505427b4aa11a4a0c6723742754f8b5d493"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/contracts-CvM_HOZo.js",
+      "path": "assets/contracts-CvM_HOZo.js",
+      "bytes": 186,
+      "sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/enemies-q2EHvCzr.js",
+      "path": "assets/enemies-q2EHvCzr.js",
+      "bytes": 102082,
+      "sha256": "cc1900d4af3cde402e3d29a78a125997255a3c91c26dd411cdd7a04b3e9c3df9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "cc1900d4af3cde402e3d29a78a125997255a3c91c26dd411cdd7a04b3e9c3df9"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fog-BB9IhazH.js",
+      "path": "assets/fog-BB9IhazH.js",
+      "bytes": 8943,
+      "sha256": "2673d7bc42d0fa130ac0fa23a2bc6a3f1b3ba012d86d83e8ba82e58dfb7bf7e5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2673d7bc42d0fa130ac0fa23a2bc6a3f1b3ba012d86d83e8ba82e58dfb7bf7e5"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fraunces-latin-ext-full-italic-B8-t4Nou.woff2",
+      "path": "assets/fraunces-latin-ext-full-italic-B8-t4Nou.woff2",
+      "bytes": 130096,
+      "sha256": "356dfdbe2d7f1edde716c37ca63df364afeb058e7e180fc819214293a50a74f0",
+      "content_type": "font/woff2",
+      "local_sha256": "356dfdbe2d7f1edde716c37ca63df364afeb058e7e180fc819214293a50a74f0"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fraunces-latin-ext-full-normal-YHFkNujK.woff2",
+      "path": "assets/fraunces-latin-ext-full-normal-YHFkNujK.woff2",
+      "bytes": 105244,
+      "sha256": "e9521563d0935c9bda4277e242cc88c75993a77878f5f7eed537989e94f976c9",
+      "content_type": "font/woff2",
+      "local_sha256": "e9521563d0935c9bda4277e242cc88c75993a77878f5f7eed537989e94f976c9"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fraunces-latin-full-italic-D2JnYqd-.woff2",
+      "path": "assets/fraunces-latin-full-italic-D2JnYqd-.woff2",
+      "bytes": 149720,
+      "sha256": "04a14ea380db53a35a3ec651934b21061234685bb604d30aac82663b5d9e539b",
+      "content_type": "font/woff2",
+      "local_sha256": "04a14ea380db53a35a3ec651934b21061234685bb604d30aac82663b5d9e539b"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+      "path": "assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+      "bytes": 121016,
+      "sha256": "7e744849028e2219e2aa1bc467dc4032980dc4487c9c3da3010081cd72d3b103",
+      "content_type": "font/woff2",
+      "local_sha256": "7e744849028e2219e2aa1bc467dc4032980dc4487c9c3da3010081cd72d3b103"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fraunces-vietnamese-full-italic-BHALq22K.woff2",
+      "path": "assets/fraunces-vietnamese-full-italic-BHALq22K.woff2",
+      "bytes": 40232,
+      "sha256": "52cd2d19bead96d14326c55b6116fb81a79068e72a38140988438c0b39eab590",
+      "content_type": "font/woff2",
+      "local_sha256": "52cd2d19bead96d14326c55b6116fb81a79068e72a38140988438c0b39eab590"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fraunces-vietnamese-full-normal-7BpKI3vF.woff2",
+      "path": "assets/fraunces-vietnamese-full-normal-7BpKI3vF.woff2",
+      "bytes": 34308,
+      "sha256": "5847b622f5723ecdfb7e4087cdd97be7996e6002a25646b2b50f4177af8aa88a",
+      "content_type": "font/woff2",
+      "local_sha256": "5847b622f5723ecdfb7e4087cdd97be7996e6002a25646b2b50f4177af8aa88a"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/frayling-DqXUkWud.js",
+      "path": "assets/frayling-DqXUkWud.js",
+      "bytes": 10967,
+      "sha256": "bb0e59469d277fb3fe6c271a74ff37d7e7fce4a09719f79b879b0225ed16db86",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bb0e59469d277fb3fe6c271a74ff37d7e7fce4a09719f79b879b0225ed16db86"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/full-CV2xDXUz.css",
+      "path": "assets/full-CV2xDXUz.css",
+      "bytes": 1002,
+      "sha256": "c6b94f94690a7dc9d3fc2a37e3ce294461eaa1435ccaa0464ef61e25e9381618",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "c6b94f94690a7dc9d3fc2a37e3ce294461eaa1435ccaa0464ef61e25e9381618"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/full-italic-DE_QXbpF.css",
+      "path": "assets/full-italic-DE_QXbpF.css",
+      "bytes": 1002,
+      "sha256": "a8c4c6070c3e0af6ccdb4e8dcec172185e7c21b776f0d21f03253c3e9d700041",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "a8c4c6070c3e0af6ccdb4e8dcec172185e7c21b776f0d21f03253c3e9d700041"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/fx-CmEsiVdm.js",
+      "path": "assets/fx-CmEsiVdm.js",
+      "bytes": 168269,
+      "sha256": "f81ae397ab2507851366a66821850cbaa41c62ae77aea06724f8576b0d348fc7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f81ae397ab2507851366a66821850cbaa41c62ae77aea06724f8576b0d348fc7"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/gameplay-CAzCU-vf.js",
+      "path": "assets/gameplay-CAzCU-vf.js",
+      "bytes": 181881,
+      "sha256": "790f7819980e281e02eb6dbafc374aa2622cc8ee5e9c072c961aff029538a920",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "790f7819980e281e02eb6dbafc374aa2622cc8ee5e9c072c961aff029538a920"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/index-CycyvIDp.js",
+      "path": "assets/index-CycyvIDp.js",
+      "bytes": 14381,
+      "sha256": "b6b32fe642982ef40087db7523b4e3d7e37e034e94e3d82eccfca14935f2d97e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b6b32fe642982ef40087db7523b4e3d7e37e034e94e3d82eccfca14935f2d97e"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/knotguard-CSbrMN4y.js",
+      "path": "assets/knotguard-CSbrMN4y.js",
+      "bytes": 20535,
+      "sha256": "a79ecf1c277d05f39ad925da5a1d13d7049d91eb6d787aaee7c083ebf9446219",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a79ecf1c277d05f39ad925da5a1d13d7049d91eb6d787aaee7c083ebf9446219"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/loomhulk-BV0QvOiT.js",
+      "path": "assets/loomhulk-BV0QvOiT.js",
+      "bytes": 18725,
+      "sha256": "16a99864ec03fa32a45a316fcc696743661677c394f0a3b1953b8c50a02d9bc6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "16a99864ec03fa32a45a316fcc696743661677c394f0a3b1953b8c50a02d9bc6"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/manrope-Vqc6nbtd.css",
+      "path": "assets/manrope-Vqc6nbtd.css",
+      "bytes": 5112,
+      "sha256": "38a2a0995c27f585fd6371dd91f4f433015999dc1954c09a48fb38705d7aff4b",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "38a2a0995c27f585fd6371dd91f4f433015999dc1954c09a48fb38705d7aff4b"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2",
+      "path": "assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2",
+      "bytes": 14500,
+      "sha256": "c268b459a9329e59fecf39a17618efd44c71735532048d60b12aab76a8c14914",
+      "content_type": "font/woff2",
+      "local_sha256": "c268b459a9329e59fecf39a17618efd44c71735532048d60b12aab76a8c14914"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/manrope-greek-wght-normal-DL7QRZyv.woff2",
+      "path": "assets/manrope-greek-wght-normal-DL7QRZyv.woff2",
+      "bytes": 9444,
+      "sha256": "2fb2e8cbfd52ae46179a8b6024eb162f1f9c6de3d22d6e3a30d8f395de7220be",
+      "content_type": "font/woff2",
+      "local_sha256": "2fb2e8cbfd52ae46179a8b6024eb162f1f9c6de3d22d6e3a30d8f395de7220be"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+      "path": "assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2",
+      "bytes": 15120,
+      "sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb",
+      "content_type": "font/woff2",
+      "local_sha256": "3911b66d9f2e005a4b989223405d0e5032619c668597ba467cc76a23c8fffcfb"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+      "path": "assets/manrope-latin-wght-normal-DHIcAJRg.woff2",
+      "bytes": 24836,
+      "sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972",
+      "content_type": "font/woff2",
+      "local_sha256": "a30ddcd349703aff7464c34bef3fffdff405ee50c113440d7c8693c02d210972"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+      "path": "assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2",
+      "bytes": 8520,
+      "sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5",
+      "content_type": "font/woff2",
+      "local_sha256": "6bbb044ab420e07edb0a3042d2eb314b85e83a0182e945a15ab3b9092668dfd5"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/mapwash.worker-zoan_VuV.js",
+      "path": "assets/mapwash.worker-zoan_VuV.js",
+      "bytes": 13142,
+      "sha256": "b4bc5c10b1162323b55adcafcc73613e9d8ad4122474e663e70d5a4cf7c13c96",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b4bc5c10b1162323b55adcafcc73613e9d8ad4122474e663e70d5a4cf7c13c96"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/material-Di0Yd9td.js",
+      "path": "assets/material-Di0Yd9td.js",
+      "bytes": 4791,
+      "sha256": "da3a02db17e03bee6280895c5953791ce0f3b2f11a72dbaf85b3e6ea59b51416",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "da3a02db17e03bee6280895c5953791ce0f3b2f11a72dbaf85b3e6ea59b51416"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/math-CaZ96FWb.js",
+      "path": "assets/math-CaZ96FWb.js",
+      "bytes": 1340,
+      "sha256": "2318bd0bf3a7f42e8a33d60176b1be641a763ffd820fca71e44b4fae83857d67",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2318bd0bf3a7f42e8a33d60176b1be641a763ffd820fca71e44b4fae83857d67"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/noise-mHFAXQOi.js",
+      "path": "assets/noise-mHFAXQOi.js",
+      "bytes": 2262,
+      "sha256": "601b1ecf93a2b0a6b7872809c38808e2c8e0d21f5a7d48c6a066eddee47f0393",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "601b1ecf93a2b0a6b7872809c38808e2c8e0d21f5a7d48c6a066eddee47f0393"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/paint.worker-D4R3FaKS.js",
+      "path": "assets/paint.worker-D4R3FaKS.js",
+      "bytes": 9319,
+      "sha256": "88df5715341d8ff5d3ff420c518eeaea4d28736a4beeccb51de1e2db910e2669",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "88df5715341d8ff5d3ff420c518eeaea4d28736a4beeccb51de1e2db910e2669"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/player-Dy-PiEeW.js",
+      "path": "assets/player-Dy-PiEeW.js",
+      "bytes": 168236,
+      "sha256": "e4782e1e98d57f613bd9ccdc5e954e179b7a4151e5ea42bb71333e0e00df6ffe",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e4782e1e98d57f613bd9ccdc5e954e179b7a4151e5ea42bb71333e0e00df6ffe"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/poseScenario-NGf6-_UH.js",
+      "path": "assets/poseScenario-NGf6-_UH.js",
+      "bytes": 981,
+      "sha256": "90dd613fc3057cfe09e8751c59c3041c651474cf1c2ebac53a88e61cf6edced5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "90dd613fc3057cfe09e8751c59c3041c651474cf1c2ebac53a88e61cf6edced5"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/reedstalker-d8LJXZuH.js",
+      "path": "assets/reedstalker-d8LJXZuH.js",
+      "bytes": 19747,
+      "sha256": "4483e5573d599dda5e4599d87eaef4d83ac512b4ec31a082b576554462401c89",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4483e5573d599dda5e4599d87eaef4d83ac512b4ec31a082b576554462401c89"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/render-URpNNu8N.js",
+      "path": "assets/render-URpNNu8N.js",
+      "bytes": 61448,
+      "sha256": "9995daa47fd1db8687abec17ae0988bac4cd5eb36cd8eb6350c72fbbc3a6657e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9995daa47fd1db8687abec17ae0988bac4cd5eb36cd8eb6350c72fbbc3a6657e"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/rigKit-DgDvsNK6.js",
+      "path": "assets/rigKit-DgDvsNK6.js",
+      "bytes": 2101,
+      "sha256": "63852d101b870ba080e37d804c03023add14ec3b5409de68357fbf7121a049fb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "63852d101b870ba080e37d804c03023add14ec3b5409de68357fbf7121a049fb"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/rng-R5614gXl.js",
+      "path": "assets/rng-R5614gXl.js",
+      "bytes": 808,
+      "sha256": "e328f8ed087cc7b96c0ee7f9d8e843ec1d8e320e776a5c0f90aa9d4cd1667c01",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e328f8ed087cc7b96c0ee7f9d8e843ec1d8e320e776a5c0f90aa9d4cd1667c01"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/shuttlewing-DE_41vbc.js",
+      "path": "assets/shuttlewing-DE_41vbc.js",
+      "bytes": 24522,
+      "sha256": "89cd4e9a585535233cb2a5a7dacbaf2f5132e5dc7e0a41796cb395198816fede",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "89cd4e9a585535233cb2a5a7dacbaf2f5132e5dc7e0a41796cb395198816fede"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/sky-B1Z1zsnv.js",
+      "path": "assets/sky-B1Z1zsnv.js",
+      "bytes": 46781,
+      "sha256": "6f974ab9ddac08677d93b5f0962acb9a5f5b66bde6b576c35a5c94cba45ff85c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6f974ab9ddac08677d93b5f0962acb9a5f5b66bde6b576c35a5c94cba45ff85c"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/structures-DT8_T3DB.js",
+      "path": "assets/structures-DT8_T3DB.js",
+      "bytes": 225805,
+      "sha256": "e006ae16f8a1a58237228f58afbad2f66991dbd6c799908e7ade10c0557c027d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e006ae16f8a1a58237228f58afbad2f66991dbd6c799908e7ade10c0557c027d"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/swell-CGYFQCs6.js",
+      "path": "assets/swell-CGYFQCs6.js",
+      "bytes": 45584,
+      "sha256": "0cbf3bb1bf94ac5a805020de266ec979ce682aaf743416938d07a25e9e6b467d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0cbf3bb1bf94ac5a805020de266ec979ce682aaf743416938d07a25e9e6b467d"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/terrain-D3CrgdF0.js",
+      "path": "assets/terrain-D3CrgdF0.js",
+      "bytes": 94783,
+      "sha256": "335285982be4a1f077e607773a6365d6b4b763508e89dcb395e5edee76608a1c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "335285982be4a1f077e607773a6365d6b4b763508e89dcb395e5edee76608a1c"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/threadKit-C21piIKD.js",
+      "path": "assets/threadKit-C21piIKD.js",
+      "bytes": 63315,
+      "sha256": "3b0d85e482f31e94b3b99425ea43b7782209c1b41389c5cac1656288c85ebd5f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3b0d85e482f31e94b3b99425ea43b7782209c1b41389c5cac1656288c85ebd5f"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/three.core-_y2F91K_.js",
+      "path": "assets/three.core-_y2F91K_.js",
+      "bytes": 248080,
+      "sha256": "ec3d682180124403141cdac483b52850f39c1370765545f61ba754805b436e5b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ec3d682180124403141cdac483b52850f39c1370765545f61ba754805b436e5b"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/three.module-DGcYoYN8.js",
+      "path": "assets/three.module-DGcYoYN8.js",
+      "bytes": 352400,
+      "sha256": "392e914950e761c4b60477354d93975f0e153b5d16d36eb2593b02e4b0f4b20e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "392e914950e761c4b60477354d93975f0e153b5d16d36eb2593b02e4b0f4b20e"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/touch-BAgZcWwr.js",
+      "path": "assets/touch-BAgZcWwr.js",
+      "bytes": 26684,
+      "sha256": "415669c6b055cf7cf3ebd67c5a0db7718c4ac985f06501f26be100e8c6e8873d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "415669c6b055cf7cf3ebd67c5a0db7718c4ac985f06501f26be100e8c6e8873d"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/ui-CiP_B0YL.js",
+      "path": "assets/ui-CiP_B0YL.js",
+      "bytes": 265851,
+      "sha256": "0cc50694447fc0c1e718735c12e1713e102c3a4d397df4c055b153db13055fad",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0cc50694447fc0c1e718735c12e1713e102c3a4d397df4c055b153db13055fad"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/unwoven-C1jHppf0.js",
+      "path": "assets/unwoven-C1jHppf0.js",
+      "bytes": 47052,
+      "sha256": "733afa2f5c530d93311d886f97fc86378a8167f582bad3b0232e75ef10fee846",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "733afa2f5c530d93311d886f97fc86378a8167f582bad3b0232e75ef10fee846"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/vegetation-Dod90_4C.js",
+      "path": "assets/vegetation-Dod90_4C.js",
+      "bytes": 202012,
+      "sha256": "127c5258150ff9f5cb42ef0e097fca36385914b7428b7d10dcdf10d09ab86067",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "127c5258150ff9f5cb42ef0e097fca36385914b7428b7d10dcdf10d09ab86067"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/water-BxmmJRt-.js",
+      "path": "assets/water-BxmmJRt-.js",
+      "bytes": 41808,
+      "sha256": "7ace3676d724378174a9c724b8ba2f48ef77b0c97ee4220af4df81e5df5dc572",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7ace3676d724378174a9c724b8ba2f48ef77b0c97ee4220af4df81e5df5dc572"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/woolhorn-l7v7Cl_P.js",
+      "path": "assets/woolhorn-l7v7Cl_P.js",
+      "bytes": 11244,
+      "sha256": "ff0b0c25d8d162200062b086d5562de03d8276916d0af0ebd0cf4d1c3003f7e2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ff0b0c25d8d162200062b086d5562de03d8276916d0af0ebd0cf4d1c3003f7e2"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/worker-BzVIHQNM.js",
+      "path": "assets/worker-BzVIHQNM.js",
+      "bytes": 173848,
+      "sha256": "39983c993a8349ba92b379a5eaaa9bc08cb99fea44817b58d69eecc5a2bcbe31",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "39983c993a8349ba92b379a5eaaa9bc08cb99fea44817b58d69eecc5a2bcbe31"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/worker-DzA1hr53.js",
+      "path": "assets/worker-DzA1hr53.js",
+      "bytes": 7598,
+      "sha256": "3f0c1906779e51c25e45a5b65738e8be91169d297276d21f923a5a5f48901588",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3f0c1906779e51c25e45a5b65738e8be91169d297276d21f923a5a5f48901588"
+    },
+    {
+      "url": "https://www.arkenfall.site/assets/worker-lUMeUMxx.js",
+      "path": "assets/worker-lUMeUMxx.js",
+      "bytes": 52744,
+      "sha256": "9346bc1c967b8033e070f3040cc96b83e70fb44f8e5627566bc67bf54c871977",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9346bc1c967b8033e070f3040cc96b83e70fb44f8e5627566bc67bf54c871977"
+    },
+    {
+      "url": "https://www.arkenfall.site/favicon.svg",
+      "path": "favicon.svg",
+      "bytes": 9345,
+      "sha256": "b8e5e3250c72a324833fe5d325fb27f2ef0ce60d5339507bc28d22a4964034a6",
+      "content_type": "image/svg+xml",
+      "local_sha256": "b8e5e3250c72a324833fe5d325fb27f2ef0ce60d5339507bc28d22a4964034a6"
+    },
+    {
+      "url": "https://www.arkenfall.site/icon-192.png",
+      "path": "icon-192.png",
+      "bytes": 21791,
+      "sha256": "e360e35c177ca565d956df9fafc0accbb6c7d199ecd063d6f9e2357b21d66d16",
+      "content_type": "image/png",
+      "local_sha256": "e360e35c177ca565d956df9fafc0accbb6c7d199ecd063d6f9e2357b21d66d16"
+    },
+    {
+      "url": "https://www.arkenfall.site/icon-512.png",
+      "path": "icon-512.png",
+      "bytes": 110204,
+      "sha256": "17d52f515616a71148aadaed41b3ba2dd7fc0d9f65ff2b7cc5a8a050a07764e8",
+      "content_type": "image/png",
+      "local_sha256": "17d52f515616a71148aadaed41b3ba2dd7fc0d9f65ff2b7cc5a8a050a07764e8"
+    },
+    {
+      "url": "https://www.arkenfall.site/",
+      "path": "index.html",
+      "bytes": 27626,
+      "sha256": "13f38e449d3f1c10dfdee16982561dfe338d1c33f489f2c13e530fc06ac626a9",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "13f38e449d3f1c10dfdee16982561dfe338d1c33f489f2c13e530fc06ac626a9"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-02.webp",
+      "path": "loading/art-02.webp",
+      "bytes": 166078,
+      "sha256": "79b6dbdb8cd50b958e0c375df19f97168e0120c9be6aa72259bf22bedaaa312c",
+      "content_type": "image/webp",
+      "local_sha256": "79b6dbdb8cd50b958e0c375df19f97168e0120c9be6aa72259bf22bedaaa312c"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-03.webp",
+      "path": "loading/art-03.webp",
+      "bytes": 231718,
+      "sha256": "bebf14c6d33023860cb5a6395c3f68a2c6e382c5706ddf97a1954f9d1616950a",
+      "content_type": "image/webp",
+      "local_sha256": "bebf14c6d33023860cb5a6395c3f68a2c6e382c5706ddf97a1954f9d1616950a"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-04.webp",
+      "path": "loading/art-04.webp",
+      "bytes": 194338,
+      "sha256": "6cbe5b066aaa853ba191efaa1d47a0aedde14f59bbb64c2a268e31aaf463a1c9",
+      "content_type": "image/webp",
+      "local_sha256": "6cbe5b066aaa853ba191efaa1d47a0aedde14f59bbb64c2a268e31aaf463a1c9"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-05.webp",
+      "path": "loading/art-05.webp",
+      "bytes": 269378,
+      "sha256": "f1e41095f7da56e4f6d3a3a38a86b72ab0ab7837ab6d9daabd3233f6cdedb970",
+      "content_type": "image/webp",
+      "local_sha256": "f1e41095f7da56e4f6d3a3a38a86b72ab0ab7837ab6d9daabd3233f6cdedb970"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-06.webp",
+      "path": "loading/art-06.webp",
+      "bytes": 156380,
+      "sha256": "71291ab8d28c4dd14c0966d9311d9343b54ae1f8d81e6fe609124218f5fce254",
+      "content_type": "image/webp",
+      "local_sha256": "71291ab8d28c4dd14c0966d9311d9343b54ae1f8d81e6fe609124218f5fce254"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-07.webp",
+      "path": "loading/art-07.webp",
+      "bytes": 306018,
+      "sha256": "bef9206e783f08bd548d4d11a1d19c2b23298535f505c0701f90c739a6c6af4a",
+      "content_type": "image/webp",
+      "local_sha256": "bef9206e783f08bd548d4d11a1d19c2b23298535f505c0701f90c739a6c6af4a"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-08.webp",
+      "path": "loading/art-08.webp",
+      "bytes": 287662,
+      "sha256": "d058facd27d298b491eed9e9d1dd86a388a74d8610ef68f66f3880f91374c673",
+      "content_type": "image/webp",
+      "local_sha256": "d058facd27d298b491eed9e9d1dd86a388a74d8610ef68f66f3880f91374c673"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-09.webp",
+      "path": "loading/art-09.webp",
+      "bytes": 200620,
+      "sha256": "28a786819ba03cf2354118a5c5a141b5ae31a13511f9cff0f17c8fb0c75676b9",
+      "content_type": "image/webp",
+      "local_sha256": "28a786819ba03cf2354118a5c5a141b5ae31a13511f9cff0f17c8fb0c75676b9"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-10.webp",
+      "path": "loading/art-10.webp",
+      "bytes": 216482,
+      "sha256": "def860cb10463f9bd3d9c37a8a4f3998236006281fa4ca8098dc955ce4156d93",
+      "content_type": "image/webp",
+      "local_sha256": "def860cb10463f9bd3d9c37a8a4f3998236006281fa4ca8098dc955ce4156d93"
+    },
+    {
+      "url": "https://www.arkenfall.site/loading/art-11.webp",
+      "path": "loading/art-11.webp",
+      "bytes": 187014,
+      "sha256": "fac132a758f8bdb05e689cff835122ec065cb0b33f15a00bb4e28650e19e72d3",
+      "content_type": "image/webp",
+      "local_sha256": "fac132a758f8bdb05e689cff835122ec065cb0b33f15a00bb4e28650e19e72d3"
+    },
+    {
+      "url": "https://www.arkenfall.site/og.png",
+      "path": "og.png",
+      "bytes": 965549,
+      "sha256": "68d6e411e5bd7d8645bf66279b4ff2fb6ad991ddb38dd2d4a05c7fc5a0ef66f2",
+      "content_type": "image/png",
+      "local_sha256": "68d6e411e5bd7d8645bf66279b4ff2fb6ad991ddb38dd2d4a05c7fc5a0ef66f2"
+    },
+    {
+      "url": "https://www.arkenfall.site/site.webmanifest",
+      "path": "site.webmanifest",
+      "bytes": 399,
+      "sha256": "1c0cd82e14ac0164d004afe0873c2f2924938a7cf194a721febc35b1f4e3ed10",
+      "content_type": "application/manifest+json; charset=utf-8",
+      "local_sha256": "1c0cd82e14ac0164d004afe0873c2f2924938a7cf194a721febc35b1f4e3ed10"
+    }
+  ],
+  "failed": {
+    "https://www.arkenfall.site/.webp": "HTTP 404; ",
+    "https://www.arkenfall.site/assets/.css": "HTTP 404; "
+  }
+}

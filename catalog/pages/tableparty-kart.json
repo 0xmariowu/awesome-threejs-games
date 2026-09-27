@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "slug": "tableparty-kart",
+  "title": "Sunsprint / Tableparty Kart",
+  "tagline": "卡丁车竞速，展示赛道坐标模拟、漂移加速与电脑车手",
+  "category": "赛车",
+  "overview_video": "tableparty-kart/overview",
+  "examples": [],
+  "tagline_en": "Kart racing with track-coordinate simulation, drift boosts and computer drivers."
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 3,
+  "slug": "hanakawa",
+  "title": "Hanakawa",
+  "tagline": "河道驾船运输，展示船舶模拟与 WebGPU 水面渲染",
+  "category": "城镇与生活",
+  "overview_video": "hanakawa/overview",
+  "examples": [],
+  "tagline_en": "River cargo boating with boat simulation and WebGPU water rendering."
+}

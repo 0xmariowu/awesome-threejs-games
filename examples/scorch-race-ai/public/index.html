@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>SCORCH · Look-ahead racing AI</title><link href="data:," rel="icon"/><link href="./style.css" rel="stylesheet"/><link href="./ui.css" rel="stylesheet"/></head>
+<body>
+<aside class="ui-panel" data-demo-control=""><output class="ui-panel" data-demo-readout="" id="telemetry"></output><canvas aria-label="Full track positions" data-demo-readout="" height="150" id="map" width="220"></canvas><div aria-label="Select a pod to follow" id="pods"></div></aside><canvas aria-label="Six pods and look-ahead targets" data-demo-picture="" id="world" tabindex="0"></canvas>
+<nav aria-label="Demo controls" class="ui-panel" data-demo-control=""><button aria-pressed="false" id="slow">Slow motion</button><button aria-pressed="true" id="helpers">Target points</button><button aria-pressed="false" id="manual">Take control</button><button id="reset">Restart race</button></nav>
+<footer class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD / ↑↓←→ · Shift · R">Click a number to follow · When driving: W / ↑ accelerate, S / ↓ brake, A D / ← → steer, Shift / Space boost · R reset</footer>
+<script src="./three.js"></script><script src="./host.mjs" type="module"></script>
+</body></html>

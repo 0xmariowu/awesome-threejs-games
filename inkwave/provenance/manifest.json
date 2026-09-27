@@ -1,0 +1,499 @@
+{
+  "source": "https://github.com/0xmariowu/inkwave",
+  "entry_path": "/index.html",
+  "source_commit": "11ce48547980b70c26354b7d6b6bc8a15da87351",
+  "origin_limitation": "The original external website is no longer available (user-confirmed). This proves identity to the retained Git baseline only.",
+  "files": [
+    {
+      "path": "assets/fonts/Rubik-OFL.txt",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/fonts/Rubik-OFL.txt",
+      "bytes": 4384,
+      "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb",
+      "local_sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+    },
+    {
+      "path": "assets/fonts/Rubik-latin.woff2",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/fonts/Rubik-latin.woff2",
+      "bytes": 35324,
+      "sha256": "99ec7ccb40cf143f977c893649deece6cc2dcc7c0ff82ebf84b6584090f207ea",
+      "local_sha256": "99ec7ccb40cf143f977c893649deece6cc2dcc7c0ff82ebf84b6584090f207ea"
+    },
+    {
+      "path": "assets/fonts/TitanOne-OFL.txt",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/fonts/TitanOne-OFL.txt",
+      "bytes": 4418,
+      "sha256": "61be7c29f4835e2be7243db12213d75d53ff028f29f4b493212a1688b1d3a1ba",
+      "local_sha256": "61be7c29f4835e2be7243db12213d75d53ff028f29f4b493212a1688b1d3a1ba"
+    },
+    {
+      "path": "assets/fonts/TitanOne-latin.woff2",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/fonts/TitanOne-latin.woff2",
+      "bytes": 10732,
+      "sha256": "f5f3f60e9246f7e78242697ef18f1fa78467dc4135312208b693e33678e78c4c",
+      "local_sha256": "f5f3f60e9246f7e78242697ef18f1fa78467dc4135312208b693e33678e78c4c"
+    },
+    {
+      "path": "assets/lightmaps/kelpline.json",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/lightmaps/kelpline.json",
+      "bytes": 75,
+      "sha256": "155db8370b47f364bf269720eea4a43c609a4457b5c8c2fe8aa0c6770998c673",
+      "local_sha256": "155db8370b47f364bf269720eea4a43c609a4457b5c8c2fe8aa0c6770998c673"
+    },
+    {
+      "path": "assets/lightmaps/kelpline.png",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/lightmaps/kelpline.png",
+      "bytes": 153108,
+      "sha256": "21270dc2dc4fbb716b4632048ebcc8976d719889eeb2f984ba4cf862b509ee5e",
+      "local_sha256": "21270dc2dc4fbb716b4632048ebcc8976d719889eeb2f984ba4cf862b509ee5e"
+    },
+    {
+      "path": "assets/lightmaps/tidewater.json",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/lightmaps/tidewater.json",
+      "bytes": 77,
+      "sha256": "a26138eb581eb6abf3b6b7ff13c6e9c24fa8a246aa91bfe3c25e01e4d6945c70",
+      "local_sha256": "a26138eb581eb6abf3b6b7ff13c6e9c24fa8a246aa91bfe3c25e01e4d6945c70"
+    },
+    {
+      "path": "assets/lightmaps/tidewater.png",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/assets/lightmaps/tidewater.png",
+      "bytes": 149335,
+      "sha256": "c1e2c059760814deea11e9f7e55939856e7f6b7ddddf3a083cc8b3ae20e16306",
+      "local_sha256": "c1e2c059760814deea11e9f7e55939856e7f6b7ddddf3a083cc8b3ae20e16306"
+    },
+    {
+      "path": "index.html",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/index.html",
+      "bytes": 2290,
+      "sha256": "d4f64825ff4087eebc977a1b943dc9c7fcec3fcbca6e1bc1843505ed537f54ea",
+      "local_sha256": "d4f64825ff4087eebc977a1b943dc9c7fcec3fcbca6e1bc1843505ed537f54ea"
+    },
+    {
+      "path": "src/audio/audio.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/audio/audio.js",
+      "bytes": 53493,
+      "sha256": "55a816beb0b01c307c936457bc274f3c3b279090dc2d187890990ac5763fc3bf",
+      "local_sha256": "55a816beb0b01c307c936457bc274f3c3b279090dc2d187890990ac5763fc3bf"
+    },
+    {
+      "path": "src/audio/music.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/audio/music.js",
+      "bytes": 58532,
+      "sha256": "f6fc0ce83fdaa853dbd45c08b3b0c5efa4d9b8631e31269424f5c67e978138d6",
+      "local_sha256": "f6fc0ce83fdaa853dbd45c08b3b0c5efa4d9b8631e31269424f5c67e978138d6"
+    },
+    {
+      "path": "src/config.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/config.js",
+      "bytes": 10441,
+      "sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6",
+      "local_sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6"
+    },
+    {
+      "path": "src/core/ctx.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/core/ctx.js",
+      "bytes": 1928,
+      "sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04",
+      "local_sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04"
+    },
+    {
+      "path": "src/core/input.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/core/input.js",
+      "bytes": 5981,
+      "sha256": "17d1418379aded288cdfb965c297c20635ed54f44e533f95060d99f4d5b344e3",
+      "local_sha256": "17d1418379aded288cdfb965c297c20635ed54f44e533f95060d99f4d5b344e3"
+    },
+    {
+      "path": "src/core/renderer.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/core/renderer.js",
+      "bytes": 8927,
+      "sha256": "8aa98453e530eb91a08a37aebc2bf76755a1265808561ef448ed9be4847eaefc",
+      "local_sha256": "8aa98453e530eb91a08a37aebc2bf76755a1265808561ef448ed9be4847eaefc"
+    },
+    {
+      "path": "src/dev/stubs.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/dev/stubs.js",
+      "bytes": 2123,
+      "sha256": "49a19cec874c0c5b1799e4b581b350a4ee584a20bd1e73a30bdee34b05346c2f",
+      "local_sha256": "49a19cec874c0c5b1799e4b581b350a4ee584a20bd1e73a30bdee34b05346c2f"
+    },
+    {
+      "path": "src/fx/fx.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/fx/fx.js",
+      "bytes": 108205,
+      "sha256": "42229211c0ac69a627175ef80f2f21c6fe4b61636a1e50c78fa7f6df3ab0c904",
+      "local_sha256": "42229211c0ac69a627175ef80f2f21c6fe4b61636a1e50c78fa7f6df3ab0c904"
+    },
+    {
+      "path": "src/fx/fxHooks.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/fx/fxHooks.js",
+      "bytes": 30237,
+      "sha256": "3cd69a78018605456822f4685a58ecb477a65352bde4284bab11c41427d85d90",
+      "local_sha256": "3cd69a78018605456822f4685a58ecb477a65352bde4284bab11c41427d85d90"
+    },
+    {
+      "path": "src/fx/screenfx.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/fx/screenfx.js",
+      "bytes": 53896,
+      "sha256": "a6304cf371bbf117528ca1e63b223651ef78b7c02ecc38709d0a9cb6b8f980f5",
+      "local_sha256": "a6304cf371bbf117528ca1e63b223651ef78b7c02ecc38709d0a9cb6b8f980f5"
+    },
+    {
+      "path": "src/game/actor.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/actor.js",
+      "bytes": 43190,
+      "sha256": "e0fedbc7fc2b5df799223f2e77e3a795972eb4f779d822a43dea1a7e99a97074",
+      "local_sha256": "e0fedbc7fc2b5df799223f2e77e3a795972eb4f779d822a43dea1a7e99a97074"
+    },
+    {
+      "path": "src/game/bots.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/bots.js",
+      "bytes": 23435,
+      "sha256": "a3a5fea8c040eb4645643c16672bba23fd5d5cfc93475d067a10969ce2ac540d",
+      "local_sha256": "a3a5fea8c040eb4645643c16672bba23fd5d5cfc93475d067a10969ce2ac540d"
+    },
+    {
+      "path": "src/game/cameraRig.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/cameraRig.js",
+      "bytes": 19837,
+      "sha256": "9c2fd9f3ab67e9c349ba77c1423e23ebe237e8fce9338fb301ae3a6bee9f3fc4",
+      "local_sha256": "9c2fd9f3ab67e9c349ba77c1423e23ebe237e8fce9338fb301ae3a6bee9f3fc4"
+    },
+    {
+      "path": "src/game/character-geo.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/character-geo.js",
+      "bytes": 102479,
+      "sha256": "6494f29b533bb0346d09a95cbaa9b1e0b934bb20fdf88248ed4fc05a905b7627",
+      "local_sha256": "6494f29b533bb0346d09a95cbaa9b1e0b934bb20fdf88248ed4fc05a905b7627"
+    },
+    {
+      "path": "src/game/character-mats.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/character-mats.js",
+      "bytes": 63746,
+      "sha256": "53cf4fdd2db474eef730d7c447c7c07a0aa2bc94baae8c0f081759cdde4e95a1",
+      "local_sha256": "53cf4fdd2db474eef730d7c447c7c07a0aa2bc94baae8c0f081759cdde4e95a1"
+    },
+    {
+      "path": "src/game/character-weapons.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/character-weapons.js",
+      "bytes": 31071,
+      "sha256": "a75e15972dbce296fb5630358d570f1f206ed72c2626cb69a139f0fbf9451925",
+      "local_sha256": "a75e15972dbce296fb5630358d570f1f206ed72c2626cb69a139f0fbf9451925"
+    },
+    {
+      "path": "src/game/character.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/character.js",
+      "bytes": 143522,
+      "sha256": "e47f7f97b9fc7c413adc31812f4367fc9a6f2bcd7b66459d023ead326ea65d4d",
+      "local_sha256": "e47f7f97b9fc7c413adc31812f4367fc9a6f2bcd7b66459d023ead326ea65d4d"
+    },
+    {
+      "path": "src/game/match.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/match.js",
+      "bytes": 6394,
+      "sha256": "c4cc98dfe35c6e75d5e858ea9b45fc0f7f032f562488534a8c139084527aaf17",
+      "local_sha256": "c4cc98dfe35c6e75d5e858ea9b45fc0f7f032f562488534a8c139084527aaf17"
+    },
+    {
+      "path": "src/game/minimap.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/minimap.js",
+      "bytes": 23925,
+      "sha256": "dfeafa909fd2148744a45547e29bd324f54f4af38bb31eba22f5951f4a9d45bc",
+      "local_sha256": "dfeafa909fd2148744a45547e29bd324f54f4af38bb31eba22f5951f4a9d45bc"
+    },
+    {
+      "path": "src/game/nav.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/nav.js",
+      "bytes": 8156,
+      "sha256": "56d858e9a9fa8f3d556c074285cbe2cd75e78900be327d4fe158fdb48683f8a9",
+      "local_sha256": "56d858e9a9fa8f3d556c074285cbe2cd75e78900be327d4fe158fdb48683f8a9"
+    },
+    {
+      "path": "src/game/physics.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/physics.js",
+      "bytes": 16970,
+      "sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48",
+      "local_sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48"
+    },
+    {
+      "path": "src/game/player.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/player.js",
+      "bytes": 9664,
+      "sha256": "f532bbe5c19e038a8829b368d3cbf2d416c1405081df8f1681f75c5cbf123ef1",
+      "local_sha256": "f532bbe5c19e038a8829b368d3cbf2d416c1405081df8f1681f75c5cbf123ef1"
+    },
+    {
+      "path": "src/game/showcase.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/showcase.js",
+      "bytes": 66720,
+      "sha256": "bbc774826691f3638f34f9a819921f9510dda7d4c92167e4425c7becd4665b4b",
+      "local_sha256": "bbc774826691f3638f34f9a819921f9510dda7d4c92167e4425c7becd4665b4b"
+    },
+    {
+      "path": "src/game/weapons.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/game/weapons.js",
+      "bytes": 41810,
+      "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f",
+      "local_sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f"
+    },
+    {
+      "path": "src/main.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/main.js",
+      "bytes": 44614,
+      "sha256": "6d2019ab4d1bf38dda9177e190241e9cc3c8d55f19d4ea7dcda26f547226bd80",
+      "local_sha256": "6d2019ab4d1bf38dda9177e190241e9cc3c8d55f19d4ea7dcda26f547226bd80"
+    },
+    {
+      "path": "src/ui/hud.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/ui/hud.js",
+      "bytes": 76744,
+      "sha256": "2b9d29c89f04d6867dc8ef2d8dcb0523f5513a7e1bc9fd2ea16094a816524847",
+      "local_sha256": "2b9d29c89f04d6867dc8ef2d8dcb0523f5513a7e1bc9fd2ea16094a816524847"
+    },
+    {
+      "path": "src/ui/menu-art.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/ui/menu-art.js",
+      "bytes": 53598,
+      "sha256": "443d75f9c362885c80694a87f22656cc76981af6f3ff6a4aa38eca932b4eaa11",
+      "local_sha256": "443d75f9c362885c80694a87f22656cc76981af6f3ff6a4aa38eca932b4eaa11"
+    },
+    {
+      "path": "src/ui/menus.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/ui/menus.js",
+      "bytes": 99856,
+      "sha256": "7fd758be41825d5fed9350cb088b0a67c28e3b8e54285a16d58dbafaf441debe",
+      "local_sha256": "7fd758be41825d5fed9350cb088b0a67c28e3b8e54285a16d58dbafaf441debe"
+    },
+    {
+      "path": "src/ui/ui-icons.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/ui/ui-icons.js",
+      "bytes": 25721,
+      "sha256": "ab867b011215f544d745e6a161aa82952f42637b07f3813408a325717b10f892",
+      "local_sha256": "ab867b011215f544d745e6a161aa82952f42637b07f3813408a325717b10f892"
+    },
+    {
+      "path": "src/ui/ui-util.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/ui/ui-util.js",
+      "bytes": 10106,
+      "sha256": "5f1d3d4e32d8512bc04fb069533bd6389842bda79ccb7385230f0176b8dc3ad1",
+      "local_sha256": "5f1d3d4e32d8512bc04fb069533bd6389842bda79ccb7385230f0176b8dc3ad1"
+    },
+    {
+      "path": "src/world/decor.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/decor.js",
+      "bytes": 28133,
+      "sha256": "de3f0e4e7490c0d7f70be959a0fe95358c5eb6885414d9369d474149ed061d6f",
+      "local_sha256": "de3f0e4e7490c0d7f70be959a0fe95358c5eb6885414d9369d474149ed061d6f"
+    },
+    {
+      "path": "src/world/dressing.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/dressing.js",
+      "bytes": 12636,
+      "sha256": "f3af731135b45f71ab596647e5aff632e3ab0f715eee15634fc952100487fdda",
+      "local_sha256": "f3af731135b45f71ab596647e5aff632e3ab0f715eee15634fc952100487fdda"
+    },
+    {
+      "path": "src/world/environment.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/environment.js",
+      "bytes": 109347,
+      "sha256": "1c32d118fe11a7d3df95b2b979f5b2952110565988344ea99804d526a5bc1f8d",
+      "local_sha256": "1c32d118fe11a7d3df95b2b979f5b2952110565988344ea99804d526a5bc1f8d"
+    },
+    {
+      "path": "src/world/level.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/level.js",
+      "bytes": 19880,
+      "sha256": "fd8048cbcc207bebe9ad8111aadd5ac60c22c8ed96cdd61c0cabfd22c1f29980",
+      "local_sha256": "fd8048cbcc207bebe9ad8111aadd5ac60c22c8ed96cdd61c0cabfd22c1f29980"
+    },
+    {
+      "path": "src/world/levelMaterial.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/levelMaterial.js",
+      "bytes": 34265,
+      "sha256": "5263f93886cb9614f2e6fb0b2433e07a77f3d23d532e8c1b3b733c62fe29fbae",
+      "local_sha256": "5263f93886cb9614f2e6fb0b2433e07a77f3d23d532e8c1b3b733c62fe29fbae"
+    },
+    {
+      "path": "src/world/mapThumb.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/mapThumb.js",
+      "bytes": 5364,
+      "sha256": "194e524f3918b7a160340f28e089c1646677320d2adbd5b6dbee1e01e9a255b5",
+      "local_sha256": "194e524f3918b7a160340f28e089c1646677320d2adbd5b6dbee1e01e9a255b5"
+    },
+    {
+      "path": "src/world/maps.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/maps.js",
+      "bytes": 10949,
+      "sha256": "1a45e6df5119489a118b44871b846eefad15390b955670c042e5a61f005948c9",
+      "local_sha256": "1a45e6df5119489a118b44871b846eefad15390b955670c042e5a61f005948c9"
+    },
+    {
+      "path": "src/world/murals.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/murals.js",
+      "bytes": 5582,
+      "sha256": "274177b2693fe426f1a2dddaa2cf57b62966f1ea2fbc2b8d8b7b3acc419b119a",
+      "local_sha256": "274177b2693fe426f1a2dddaa2cf57b62966f1ea2fbc2b8d8b7b3acc419b119a"
+    },
+    {
+      "path": "src/world/paint.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/paint.js",
+      "bytes": 22169,
+      "sha256": "fd90c2ace5e1d46774b8c670c0662b260aeda619ea6ad7abd49cb43d96a8b91c",
+      "local_sha256": "fd90c2ace5e1d46774b8c670c0662b260aeda619ea6ad7abd49cb43d96a8b91c"
+    },
+    {
+      "path": "src/world/props.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/props.js",
+      "bytes": 228003,
+      "sha256": "87f099f298e4be854f0a1f85975d3036663e8e08d275c44d4486f5ce4be8dcd8",
+      "local_sha256": "87f099f298e4be854f0a1f85975d3036663e8e08d275c44d4486f5ce4be8dcd8"
+    },
+    {
+      "path": "src/world/texlib.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/src/world/texlib.js",
+      "bytes": 44969,
+      "sha256": "170c393b2d39c90728f6e6919175219bfed47d1b5405bb3e526065dc71e9f1f8",
+      "local_sha256": "170c393b2d39c90728f6e6919175219bfed47d1b5405bb3e526065dc71e9f1f8"
+    },
+    {
+      "path": "styles/hud.css",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/styles/hud.css",
+      "bytes": 59947,
+      "sha256": "e9856c6de65c4fa532f56cf4de7ebb6bcd39fb3d9d72d1bdc61608a2d69368a9",
+      "local_sha256": "e9856c6de65c4fa532f56cf4de7ebb6bcd39fb3d9d72d1bdc61608a2d69368a9"
+    },
+    {
+      "path": "styles/ui.css",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/styles/ui.css",
+      "bytes": 117292,
+      "sha256": "b107d3547fdce7de2f680cced26bfa495ae4b0dd9a7a1bf59e8a3ab73239bc18",
+      "local_sha256": "b107d3547fdce7de2f680cced26bfa495ae4b0dd9a7a1bf59e8a3ab73239bc18"
+    },
+    {
+      "path": "vendor/three/LICENSE",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "local_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "vendor/three/build/three.core.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/build/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "local_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "vendor/three/build/three.module.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/build/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "local_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "path": "vendor/three/jsm/math/SimplexNoise.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/math/SimplexNoise.js",
+      "bytes": 15148,
+      "sha256": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072",
+      "local_sha256": "4b1455617135e6b477de76244de07547d95570643379b72f4758e50161b06072"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/EffectComposer.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/EffectComposer.js",
+      "bytes": 8501,
+      "sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7",
+      "local_sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/GTAOPass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/GTAOPass.js",
+      "bytes": 19910,
+      "sha256": "a277f848d1035c751c54d9706e579aeb74689126ced25723e53d52ac3f26f445",
+      "local_sha256": "a277f848d1035c751c54d9706e579aeb74689126ced25723e53d52ac3f26f445"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/MaskPass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/MaskPass.js",
+      "bytes": 4694,
+      "sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3",
+      "local_sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/OutputPass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/OutputPass.js",
+      "bytes": 4184,
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272",
+      "local_sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/Pass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/Pass.js",
+      "bytes": 4218,
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5",
+      "local_sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/RenderPass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/RenderPass.js",
+      "bytes": 4280,
+      "sha256": "817f6c3cdcd0fd41515d112359ea0532568eefb5aabd3b33903957ebca1b8a6a",
+      "local_sha256": "817f6c3cdcd0fd41515d112359ea0532568eefb5aabd3b33903957ebca1b8a6a"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/ShaderPass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/ShaderPass.js",
+      "bytes": 3228,
+      "sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d",
+      "local_sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d"
+    },
+    {
+      "path": "vendor/three/jsm/postprocessing/UnrealBloomPass.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/postprocessing/UnrealBloomPass.js",
+      "bytes": 15397,
+      "sha256": "ba8f2fcadfa6588384c9473498f974d81d120f02f0e63a0e59c265202a006b5a",
+      "local_sha256": "ba8f2fcadfa6588384c9473498f974d81d120f02f0e63a0e59c265202a006b5a"
+    },
+    {
+      "path": "vendor/three/jsm/shaders/CopyShader.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/shaders/CopyShader.js",
+      "bytes": 729,
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718",
+      "local_sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718"
+    },
+    {
+      "path": "vendor/three/jsm/shaders/GTAOShader.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/shaders/GTAOShader.js",
+      "bytes": 12166,
+      "sha256": "cdea7be60452f61105375d2c18e4da2e8ce7b39a89246b1bb8fbf79319d58cfd",
+      "local_sha256": "cdea7be60452f61105375d2c18e4da2e8ce7b39a89246b1bb8fbf79319d58cfd"
+    },
+    {
+      "path": "vendor/three/jsm/shaders/LuminosityHighPassShader.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/shaders/LuminosityHighPassShader.js",
+      "bytes": 1291,
+      "sha256": "5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e",
+      "local_sha256": "5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e"
+    },
+    {
+      "path": "vendor/three/jsm/shaders/OutputShader.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/shaders/OutputShader.js",
+      "bytes": 1876,
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2",
+      "local_sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2"
+    },
+    {
+      "path": "vendor/three/jsm/shaders/PoissonDenoiseShader.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/shaders/PoissonDenoiseShader.js",
+      "bytes": 7080,
+      "sha256": "61da074a9ad8b2139dd164c96b8b62c299f056ce06c216e1f707c5151d997602",
+      "local_sha256": "61da074a9ad8b2139dd164c96b8b62c299f056ce06c216e1f707c5151d997602"
+    },
+    {
+      "path": "vendor/three/jsm/utils/BufferGeometryUtils.js",
+      "url": "https://github.com/0xmariowu/inkwave/blob/11ce48547980b70c26354b7d6b6bc8a15da87351/vendor/three/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "local_sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+    }
+  ],
+  "failed": {}
+}

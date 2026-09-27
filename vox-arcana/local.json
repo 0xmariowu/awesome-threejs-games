@@ -1,0 +1,5 @@
+{
+  "port": 8091,
+  "entry": "/index.html",
+  "root": "public"
+}

@@ -1,0 +1,10 @@
+{
+  "modified_files": [
+    "_external/fonts.googleapis.com/css2-a757a1f83c6a",
+    "index.html"
+  ],
+  "changes": [
+    "External library/font URLs rewritten to local copies; original text retained in original-text/.",
+    "Third-party hosting toolbar and Google analytics loader removed when matched."
+  ]
+}

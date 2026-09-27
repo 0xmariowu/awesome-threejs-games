@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>なちゃっとの夏休み</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233d8fe0'/%3E%3Cellipse cx='32' cy='38' rx='24' ry='6' fill='%23e6c66f'/%3E%3Cpath d='M18 38 Q32 14 46 38Z' fill='%23e6c66f'/%3E%3Crect x='19' y='33' width='26' height='4' fill='%23c8372d'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="/_external/fonts.googleapis.com/css2-4f512fc4b278" rel="stylesheet" />
+  <link rel="stylesheet" href="src/town/town.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/_external/cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "/_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="c"></canvas>
+  <div id="vignette"></div>
+  <div id="fence-glow"></div>
+  <div id="fps">-- FPS</div>
+
+  <section id="loading" class="screen show">
+    <div class="load-inner">
+      <div class="logo">なちゃっとの夏休み</div>
+      <div class="load-bar"><i></i></div>
+      <div id="load-msg">準備しています</div>
+      <p class="load-note">最初からすべてのゲームが遊べます。<br />ストーリーを進めたい場合は、定食屋と研究所に行ってみましょう！</p>
+    </div>
+  </section>
+
+  <section id="hud">
+    <div id="toast"></div>
+    <div id="fence-tip"><b>この先は進めません</b><span>Fでファストトラベルで移動してください</span></div>
+    <div id="keyhint">
+      <div class="kh"><kbd>F</kbd><span>ファストトラベル</span></div>
+      <dl class="kh-list">
+        <dt><kbd>WASD</kbd></dt><dd>歩く</dd>
+        <dt><kbd>Shift</kbd></dt><dd>走る</dd>
+        <dt><kbd>Space</kbd></dt><dd>ジャンプ</dd>
+        <dt><kbd>マウス</kbd></dt><dd>見まわす（ホイールで寄る・引く）</dd>
+        <dt><kbd>I</kbd></dt><dd>持ち物</dd>
+        <dt><kbd>Esc</kbd></dt><dd>メニュー・設定</dd>
+      </dl>
+    </div>
+    <div id="corner">
+      <div id="wallet" title="お小遣い"><i class="coin"></i><b>¥0</b></div>
+      <button id="bag-btn" title="持ち物（I）"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M9 4a3 3 0 0 1 6 0v1h3.2a1 1 0 0 1 1 .92l1 13A2 2 0 0 1 18.2 21H5.8a2 2 0 0 1-2-2.08l1-13A1 1 0 0 1 5.8 5H9zm2 1h2V4a1 1 0 0 0-2 0z"/></svg>持ち物</button>
+      <button id="menu-btn" title="メニュー（Esc）"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>メニュー</button>
+    </div>
+    <div id="quest-track"></div>
+    <div id="credit">地図データ © OpenStreetMap contributors ／ 標高: 国土地理院</div>
+  </section>
+
+  <section id="travel">
+    <div class="tv-head"><div class="tv-title">どこへ行こう？</div><div class="tv-sub">行きたい場所をクリック</div></div>
+    <div id="tv-pins"></div>
+    <div id="tv-tip"></div>
+    <!-- 遊んでいる人への注意書き（空の上のときだけ左上に） -->
+    <div class="tv-note"><i aria-hidden="true">⚠</i><p>ミニゲームは全部最後まで遊べます。<br />ストーリーは未調整です。</p></div>
+    <div class="tv-keys"><b>ドラッグ・WASD</b> 動かす　<b>ホイール</b> 高さ　<b>Q / E</b> 回す　<b>F・右クリック</b> 戻る</div>
+    <!-- 遊び場のピン（アヒル島のモリ突きなど）を押したとき -->
+    <div id="game-card">
+      <div class="gc-card">
+        <div class="gc-icon"></div>
+        <div class="gc-sub"></div>
+        <h3 class="gc-title"></h3>
+        <p class="gc-lead"></p>
+        <div class="gc-btns"><button class="gc-go primary"></button><button class="gc-no">やめる</button></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="pop"></div>
+
+  <!-- 持ち物（I） -->
+  <section id="bag" class="screen">
+    <div class="panel bag-panel">
+      <div class="panel-head"><h2>持ち物</h2><div class="bag-money"><i class="coin"></i>お小遣い<b>¥0</b></div><button class="close" data-act="bag-close">とじる <small>I</small></button></div>
+      <div class="bag-tabs"></div>
+      <div class="bag-body">
+        <div class="bag-grid"></div>
+        <div class="bag-detail"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="paused">クリックで戻る</div>
+
+  <!-- 一時停止メニュー -->
+  <section id="menu" class="screen">
+    <div class="panel narrow">
+      <h2>ひとやすみ</h2>
+      <nav class="menu-list">
+        <button data-act="resume" class="primary">つづける</button>
+        <button data-act="bag">持ち物 <small>I</small></button>
+        <button data-act="travel">ファストトラベル <small>F</small></button>
+        <button data-act="fence" id="fence-btn" class="toggle" aria-pressed="false">進入禁止を解除 <small>オフ</small></button>
+        <button data-act="settings">設定</button>
+        <button data-act="credits">クレジット</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- クレジット -->
+  <section id="credits" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>クレジット</h2><button class="close" data-act="back">もどる</button></div>
+      <div class="set-group">音</div>
+      <ul class="credit-list">
+        <li><b>効果音ラボ</b><a href="https://soundeffect-lab.info/" target="_blank" rel="noopener">soundeffect-lab.info</a>
+          <small>セミ・カエル・鳥の声、波、水路、風鈴、足音、知らせの音</small></li>
+        <li><b>Freesound</b><a href="https://freesound.org/" target="_blank" rel="noopener">freesound.org</a>
+          <small>風: <a href="https://freesound.org/people/cribbler/sounds/380379/" target="_blank" rel="noopener">Soft Wind Ambience</a>（cribbler）、<a href="https://freesound.org/people/felix.blume/sounds/167684/" target="_blank" rel="noopener">Strong wind blowing in the plain in Anatolia</a>（felix.blume）<br />いずれも CC0</small></li>
+      </ul>
+      <div class="set-group">地図</div>
+      <ul class="credit-list">
+        <li><b>地図データ</b><a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></li>
+        <li><b>標高</b><a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 設定 -->
+  <section id="settings" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>設定</h2><button class="close" data-act="back">もどる</button></div>
+      <div class="set-group">サウンド</div>
+      <div class="set-list">
+        <label><span>全体の音量</span><input type="range" min="0" max="1" step="0.01" data-set="master" /><output></output></label>
+        <label><span>生き物の声<small>セミ・カエル・鳥</small></span><input type="range" min="0" max="1" step="0.01" data-set="insects" /><output></output></label>
+        <label><span>環境音<small>波・風・水路・風鈴</small></span><input type="range" min="0" max="1" step="0.01" data-set="env" /><output></output></label>
+        <label><span>効果音<small>足音・知らせ・会話</small></span><input type="range" min="0" max="1" step="0.01" data-set="sfx" /><output></output></label>
+      </div>
+      <div class="set-group">操作</div>
+      <div class="set-list">
+        <label><span>マウス感度</span><input type="range" min="0.3" max="2.5" step="0.05" data-set="sens" /><output></output></label>
+      </div>
+      <div class="set-group">画面</div>
+      <div class="set-list">
+        <label><span>フレームレート<small>上限を下げると GPU が静かに</small></span>
+          <select data-set="fps"><option value="30">30 fps</option><option value="60">60 fps（おすすめ）</option><option value="120">120 fps</option><option value="0">上限なし</option></select><output></output>
+        </label>
+      </div>
+      <button class="set-reset" data-act="reset">はじめの設定にもどす</button>
+    </div>
+  </section>
+
+  <div id="fade"></div>
+  <script type="module" src="src/town/main.js"></script>
+</body>
+</html>

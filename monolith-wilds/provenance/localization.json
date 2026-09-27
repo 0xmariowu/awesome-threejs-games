@@ -1,0 +1,10 @@
+{
+  "modified_files": [
+    "index.html",
+    "_external/fonts.googleapis.com/css2-3bacf1a2cd0f.css"
+  ],
+  "changes": [
+    "Localized the original Google Fonts stylesheet and eight font binaries. The original 40 runtime files were compared to the live source before modification and all matched. Game JavaScript is unchanged."
+  ],
+  "backup": "local backup, not published"
+}

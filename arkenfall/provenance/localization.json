@@ -1,0 +1,15 @@
+{
+  "modified_files": [],
+  "changes": [
+    "No runtime localization needed. All 88 archived files retain original bytes. The original entry already disables Vercel analytics on localhost and 127.0.0.1."
+  ],
+  "restored_unused_analytics_files": [
+    "_vercel/insights/script.js",
+    "assets/index-CycyvIDp.js"
+  ],
+  "dynamic_assets": "Ten loading paintings listed explicitly in the original ART array were captured, including nine not found by literal URL extraction.",
+  "static_rejected_candidates": {
+    "https://www.arkenfall.site/.webp": "HTTP 404; ",
+    "https://www.arkenfall.site/assets/.css": "HTTP 404; "
+  }
+}

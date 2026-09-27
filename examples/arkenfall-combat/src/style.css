@@ -1,0 +1,24 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #18252a; color: #eaf0e9; font: 14px system-ui, sans-serif; }
+#world { position: absolute; inset: 0; outline: none; }
+canvas { display: block; width: 100%; height: 100%; }
+header { position: absolute; left: 28px; top: 25px; pointer-events: none; }
+small { color: #acbeb7; letter-spacing: .18em; font-size: 10px; }
+h1 { font-size: 27px; font-weight: 550; margin: 7px 0 10px; }
+#result { color: #e9c47c; }
+nav { position: absolute; top: 25px; right: 24px; display: flex; gap: 6px; }
+button { cursor: pointer; background: #213139e8; border: 1px solid #71847c; color: #eaf0e9; padding: 9px 12px; border-radius: 3px; font: inherit; }
+button[aria-pressed="true"] { background: #bbd3c6; border-color: #bbd3c6; color: #18352c; }
+button:focus-visible { outline: 2px solid #f6d88e; outline-offset: 3px; }
+#timing { position: absolute; left: 28px; bottom: 67px; width: 300px; padding: 16px; background: #142329e8; border-left: 2px solid #bdd8c8; }
+#timing > div:first-child { display: flex; justify-content: space-between; }
+#counter, .legend { color: #a7b9b4; font-size: 11px; }
+#track { height: 12px; margin: 14px 0 9px; background: #34474c; position: relative; }
+#track span { position: absolute; top: 0; height: 6px; }
+#active { background: #dfad58; }
+#track #cancel { top: 6px; background: #8edac7; }
+#cursor { position: absolute; width: 2px; height: 20px; top: -4px; background: white; }
+.legend { display: flex; justify-content: space-between; }
+#cue { display: block; margin-top: 12px; color: #d8e6df; }
+#hint { position: absolute; bottom: 14px; left: 0; width: 100%; text-align: center; pointer-events: none; color: #c8d8d0; font-size: 12px; }
+@media (max-width: 850px) { header { left: 18px; top: 16px; } h1 { font-size: 21px; } nav { top: 16px; right: 16px; gap: 4px; } button { font-size: 11px; padding: 7px; } #timing { left: 18px; bottom: 53px; width: 260px; padding: 10px; } #hint { font-size: 10px; bottom: 8px; } }

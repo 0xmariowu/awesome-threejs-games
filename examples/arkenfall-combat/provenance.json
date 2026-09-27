@@ -1,0 +1,84 @@
+{
+  "project": "arkenfall",
+  "source": "https://www.arkenfall.site/",
+  "scope": "Complete unchanged deployed combat, player action lifecycle, animator, Actor and vendor modules. Host rig and training target; import-map shims isolate world services and unused atlas initialization.",
+  "files": [
+    {
+      "source": "arkenfall/public/assets/combat-DANZZ0C7.js",
+      "sha256": "324cf55415cffde0b48c3de9a6f83505427b4aa11a4a0c6723742754f8b5d493",
+      "path": "examples/arkenfall-combat/original/combat-DANZZ0C7.js"
+    },
+    {
+      "source": "arkenfall/public/assets/player-Dy-PiEeW.js",
+      "sha256": "e4782e1e98d57f613bd9ccdc5e954e179b7a4151e5ea42bb71333e0e00df6ffe",
+      "path": "examples/arkenfall-combat/original/player-Dy-PiEeW.js"
+    },
+    {
+      "source": "arkenfall/public/assets/Actor-CPc2Vruf.js",
+      "sha256": "c17f6b77964a68e6eb7bbfa5ea313b77618e8540665e3dd4cac7e8742b373589",
+      "path": "examples/arkenfall-combat/original/Actor-CPc2Vruf.js"
+    },
+    {
+      "source": "arkenfall/public/assets/Animator-CyW8ITDY.js",
+      "sha256": "914366155794182f68af8eeb3b35eaabce19c554168144aabb59053f968926f7",
+      "path": "examples/arkenfall-combat/original/Animator-CyW8ITDY.js"
+    },
+    {
+      "source": "arkenfall/public/assets/Debug-mAQ8BxhD.js",
+      "sha256": "53ec0256be18c8d9fe4e8b7b1a898899a28197e56379d5ceaf6378e40394ede9",
+      "path": "examples/arkenfall-combat/original/Debug-mAQ8BxhD.js"
+    },
+    {
+      "source": "arkenfall/public/assets/contracts-CvM_HOZo.js",
+      "sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d",
+      "path": "examples/arkenfall-combat/original/contracts-CvM_HOZo.js"
+    },
+    {
+      "source": "arkenfall/public/assets/math-CaZ96FWb.js",
+      "sha256": "2318bd0bf3a7f42e8a33d60176b1be641a763ffd820fca71e44b4fae83857d67",
+      "path": "examples/arkenfall-combat/original/math-CaZ96FWb.js"
+    },
+    {
+      "source": "arkenfall/public/assets/noise-mHFAXQOi.js",
+      "sha256": "601b1ecf93a2b0a6b7872809c38808e2c8e0d21f5a7d48c6a066eddee47f0393",
+      "path": "examples/arkenfall-combat/original/noise-mHFAXQOi.js"
+    },
+    {
+      "source": "arkenfall/public/assets/three.core-_y2F91K_.js",
+      "sha256": "ec3d682180124403141cdac483b52850f39c1370765545f61ba754805b436e5b",
+      "path": "examples/arkenfall-combat/original/three.core-_y2F91K_.js"
+    },
+    {
+      "source": "arkenfall/public/assets/three.module-DGcYoYN8.js",
+      "sha256": "392e914950e761c4b60477354d93975f0e153b5d16d36eb2593b02e4b0f4b20e",
+      "path": "examples/arkenfall-combat/original/three.module-DGcYoYN8.js"
+    },
+    {
+      "source": "arkenfall/public/assets/rng-R5614gXl.js",
+      "path": "examples/arkenfall-combat/original/rng-R5614gXl.js",
+      "sha256": "e328f8ed087cc7b96c0ee7f9d8e843ec1d8e320e776a5c0f90aa9d4cd1667c01"
+    }
+  ],
+  "references": [
+    {
+      "source": "arkenfall/public/assets/anim-exnbZ3yq.js",
+      "sha256": "bd987938d0fa2b1cafb6e36e80eb8797ed4e8320a9cf078a79929cfd35b6887c"
+    },
+    {
+      "source": "arkenfall/public/assets/Game-BmRmdldn.js",
+      "sha256": "184af5d470b8008326b645df2e6a1244a69ee6820e0609a92fa3d4e83d3b3d01"
+    },
+    {
+      "source": "arkenfall/public/assets/cache-DIhMlTLC.js",
+      "sha256": "eb0926a458b395688e75f18e652d284aed409617756627dfb91cc1ef0696067f"
+    },
+    {
+      "source": "arkenfall/public/assets/Settings-Xp8ACwpw.js",
+      "sha256": "2b00d7f9db2bc7df67f301ac0d7c207c9e34a7c373a71ea8d921cb2a1813f77d"
+    },
+    {
+      "source": "arkenfall/public/assets/material-Di0Yd9td.js",
+      "sha256": "da3a02db17e03bee6280895c5953791ce0f3b2f11a72dbaf85b3e6ea59b51416"
+    }
+  ]
+}

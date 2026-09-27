@@ -1,0 +1,85 @@
+{
+  "project": "cloudkeep",
+  "source": "https://github.com/0xmariowu/cloudkeep",
+  "revision": "b28406d581bfbc3c905c200e552b669f4dd02a15",
+  "scope": "Unchanged ecosystem simulation, save reconstruction and input in a new compact scene. Initial homes and presentation are host fixtures.",
+  "files": [
+    {
+      "source": "cloudkeep/upstream/src/simulation.ts",
+      "path": "examples/cloudkeep-ecology/original/simulation.ts",
+      "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+    },
+    {
+      "source": "cloudkeep/upstream/src/storage.ts",
+      "path": "examples/cloudkeep-ecology/original/storage.ts",
+      "sha256": "1aba7eeef3d26ac3c9a05c9502c0fa276bcfc0dfd0ecb5bb72ab44703f15884f"
+    },
+    {
+      "source": "cloudkeep/upstream/src/input.ts",
+      "path": "examples/cloudkeep-ecology/original/input.ts",
+      "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff"
+    }
+  ],
+  "assets": [
+    {
+      "source": "cloudkeep/public/assets/airship.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/airship.glb",
+      "sha256": "a2b33e467bcbea3ef61d5205e426303f3633ce4de5d116d95fd81a53e5f45059",
+      "bytes": 1327516
+    },
+    {
+      "source": "cloudkeep/public/assets/ray.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/ray.glb",
+      "sha256": "8ed82ac6a1323b9128a7f05a6af5a19df4f66ed8c863aa628b860bd042cdd167",
+      "bytes": 866388
+    },
+    {
+      "source": "cloudkeep/public/assets/whale.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/whale.glb",
+      "sha256": "5b5aba36d5a4db8c99c40200a64acd8fa0ad27a56d51505e1b3f9692f3387e02",
+      "bytes": 399752
+    },
+    {
+      "source": "cloudkeep/public/assets/moth.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/moth.glb",
+      "sha256": "7d8179add5fe33270a098816b79b1b7468db2a81df4366b9ec4fdc4e958fb9cf",
+      "bytes": 407956
+    },
+    {
+      "source": "cloudkeep/public/assets/koi.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/koi.glb",
+      "sha256": "d7dfe7ee414e017771ed1d3ed239b17602905aed7d1ebfc5ca7ad9c594cce981",
+      "bytes": 287484
+    },
+    {
+      "source": "cloudkeep/public/assets/jelly.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/jelly.glb",
+      "sha256": "f8b0270836e213e55ec97051e2398b61088a11a1e8a231e2bf798da1ec6ac6d9",
+      "bytes": 401212
+    },
+    {
+      "source": "cloudkeep/public/assets/food.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/food.glb",
+      "sha256": "ea8492f87c2e81dede3a9646c5bb6231fca4d52ef504d33d9d0cd2c0167b3915",
+      "bytes": 13848
+    },
+    {
+      "source": "cloudkeep/public/assets/pearl.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/pearl.glb",
+      "sha256": "202c5d6eef2d6355b23abd12ebba7a3fe5808b856893e6ff73f42e43918ec9bc",
+      "bytes": 37224
+    },
+    {
+      "source": "cloudkeep/public/assets/island-distant.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/island-distant.glb",
+      "sha256": "3a39c310a8a0522cd4ee8ec1a2fe1a7948ed497158745635fa4a4f8e7aac28a9",
+      "bytes": 851068
+    },
+    {
+      "source": "cloudkeep/public/assets/lighthouse-distant.glb",
+      "path": "examples/cloudkeep-ecology/public/assets/lighthouse-distant.glb",
+      "sha256": "a2a0d4d34064d4ae605c3a3cfab13f2848e95306057696454b63e1c3412a240a",
+      "bytes": 901848
+    }
+  ]
+}

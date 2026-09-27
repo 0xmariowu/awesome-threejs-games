@@ -1,0 +1,1765 @@
+{
+  "source": "https://hanakawa-boat-game.vercel.app/",
+  "entry_path": "/index.html",
+  "verified_against_original_at": "2026-09-26",
+  "files": [
+    {
+      "path": "index.html",
+      "url": "https://hanakawa-boat-game.vercel.app/index.html",
+      "bytes": 22701,
+      "sha256": "e5096396a9ea5cc974fd3f1f853eaae1b879162b2e9f986f95cacd519e868076",
+      "local_sha256": "e5096396a9ea5cc974fd3f1f853eaae1b879162b2e9f986f95cacd519e868076",
+      "content_type": "text/html"
+    },
+    {
+      "path": "preload.json",
+      "url": "https://hanakawa-boat-game.vercel.app/preload.json",
+      "bytes": 8787,
+      "sha256": "985278de9abc2d36d3649075d84449e9408ad9f36f9c325d88cefaf223db973e",
+      "local_sha256": "985278de9abc2d36d3649075d84449e9408ad9f36f9c325d88cefaf223db973e",
+      "content_type": "application/json"
+    },
+    {
+      "path": "world/flowx.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/flowx.bin",
+      "bytes": 1048576,
+      "sha256": "6f2097bab137443f11cc07587a81cc2d46275033be36f41929e6d3acaac7d1a9",
+      "local_sha256": "6f2097bab137443f11cc07587a81cc2d46275033be36f41929e6d3acaac7d1a9",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/wet.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/wet.bin.gz",
+      "bytes": 8346,
+      "sha256": "270144b3be078ac48e119d83f51e1dabc0d633c5b26329e2ba41f7e00f37459e",
+      "local_sha256": "270144b3be078ac48e119d83f51e1dabc0d633c5b26329e2ba41f7e00f37459e",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/pebbles.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/pebbles.bin",
+      "bytes": 1048576,
+      "sha256": "2d4bc12474a390219a2c92bfb038d1bb8003904f6c1aec836876ea48a944633c",
+      "local_sha256": "2d4bc12474a390219a2c92bfb038d1bb8003904f6c1aec836876ea48a944633c",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/flowz.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/flowz.bin.gz",
+      "bytes": 10374,
+      "sha256": "951283b3ee32ad88f362fddcc29cf6c9f5b2bdae001339714792a1f0cf488ca6",
+      "local_sha256": "951283b3ee32ad88f362fddcc29cf6c9f5b2bdae001339714792a1f0cf488ca6",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/shrubs.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/shrubs.bin.gz",
+      "bytes": 376669,
+      "sha256": "72a4924a99d3eef3ace3150c47195248b74423afec6fb10a2ab45b6e84f02e90",
+      "local_sha256": "72a4924a99d3eef3ace3150c47195248b74423afec6fb10a2ab45b6e84f02e90",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/pebbles.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/pebbles.bin.gz",
+      "bytes": 20084,
+      "sha256": "425e8591794a18df49d693d2a6cbcc3c78c5749ba4727a98ad3e5f15a3b8938a",
+      "local_sha256": "425e8591794a18df49d693d2a6cbcc3c78c5749ba4727a98ad3e5f15a3b8938a",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/sand.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/sand.bin.gz",
+      "bytes": 16471,
+      "sha256": "301f6063aadf42607093b68d35cde1afdcb98de57255a7a8773790f71802938a",
+      "local_sha256": "301f6063aadf42607093b68d35cde1afdcb98de57255a7a8773790f71802938a",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/shore.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/shore.bin",
+      "bytes": 4194304,
+      "sha256": "6ebc7c3d4cb9612f93c4b1f24ef4551be1b0670fb760cff470cb5215c10a13e3",
+      "local_sha256": "6ebc7c3d4cb9612f93c4b1f24ef4551be1b0670fb760cff470cb5215c10a13e3",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/cherry.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/cherry.bin.gz",
+      "bytes": 21889,
+      "sha256": "79fa05731ca9741609b90db21922fea6590a6f004ce0727eb0f2dac4f01c51be",
+      "local_sha256": "79fa05731ca9741609b90db21922fea6590a6f004ce0727eb0f2dac4f01c51be",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/flowz.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/flowz.bin",
+      "bytes": 1048576,
+      "sha256": "5fe7dc79e19707768e58560d4f64ba0e997d3cfc9a14a22ccdd46f6285e20727",
+      "local_sha256": "5fe7dc79e19707768e58560d4f64ba0e997d3cfc9a14a22ccdd46f6285e20727",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/rock.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/rock.bin",
+      "bytes": 1048576,
+      "sha256": "26f390748a64dd797765618d875605099763c4bd9db8cc12b6491bb994f22d56",
+      "local_sha256": "26f390748a64dd797765618d875605099763c4bd9db8cc12b6491bb994f22d56",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/path.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/path.bin",
+      "bytes": 1048576,
+      "sha256": "33a8611966cd3064effba1cfebd478977051f776de62b417544adf6fc44da877",
+      "local_sha256": "33a8611966cd3064effba1cfebd478977051f776de62b417544adf6fc44da877",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/bamboo.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/bamboo.bin.gz",
+      "bytes": 11871,
+      "sha256": "750469e4f65d0e7ce3742f0e70ec3f4248e2b6d0c06b51d31e7ceee9470cff68",
+      "local_sha256": "750469e4f65d0e7ce3742f0e70ec3f4248e2b6d0c06b51d31e7ceee9470cff68",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/flowx.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/flowx.bin.gz",
+      "bytes": 10295,
+      "sha256": "0dd3c7f7db8789e8cf289b0437772f98e529ee8b74e31b7844d5e3330d9deda4",
+      "local_sha256": "0dd3c7f7db8789e8cf289b0437772f98e529ee8b74e31b7844d5e3330d9deda4",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/rocks.json",
+      "url": "https://hanakawa-boat-game.vercel.app/world/rocks.json",
+      "bytes": 80925,
+      "sha256": "4cde0033b9559fd36a0fdeb477ab8f13d4de780a325497d05d65c313c32389fd",
+      "local_sha256": "4cde0033b9559fd36a0fdeb477ab8f13d4de780a325497d05d65c313c32389fd",
+      "content_type": "application/json"
+    },
+    {
+      "path": "world/wavescale.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/wavescale.bin",
+      "bytes": 1048576,
+      "sha256": "3e56f5411eb726171e4315006eb8d52f619efecd21d567e6a6c103b147b40cc4",
+      "local_sha256": "3e56f5411eb726171e4315006eb8d52f619efecd21d567e6a6c103b147b40cc4",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/shore.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/shore.bin.gz",
+      "bytes": 64669,
+      "sha256": "3dc532fdbb25d7b7aca5424dbc5871dbdf964fa1d437303f9ea80b10d8f84115",
+      "local_sha256": "3dc532fdbb25d7b7aca5424dbc5871dbdf964fa1d437303f9ea80b10d8f84115",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/path.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/path.bin.gz",
+      "bytes": 2543,
+      "sha256": "5032b09972d87d5c2731c7e45c60abb312a3faa333fec018e682262c37328ed7",
+      "local_sha256": "5032b09972d87d5c2731c7e45c60abb312a3faa333fec018e682262c37328ed7",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/grass.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/grass.bin.gz",
+      "bytes": 471277,
+      "sha256": "bdfea0ace69e0cd15e1a99291e23eb1ca34b9b702a635393419eed6df9fa41d2",
+      "local_sha256": "bdfea0ace69e0cd15e1a99291e23eb1ca34b9b702a635393419eed6df9fa41d2",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/flowers.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/flowers.bin.gz",
+      "bytes": 140025,
+      "sha256": "e02954d95219db40b45e2e7dbeafdbfc338e8f08fd5a884e91804fc683bbc0b5",
+      "local_sha256": "e02954d95219db40b45e2e7dbeafdbfc338e8f08fd5a884e91804fc683bbc0b5",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/moss.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/moss.bin.gz",
+      "bytes": 608603,
+      "sha256": "1decc6fbd427e4cf0810fa8969c0a9cd9f0c294b035a67d050941aa4114dcccf",
+      "local_sha256": "1decc6fbd427e4cf0810fa8969c0a9cd9f0c294b035a67d050941aa4114dcccf",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/flowers.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/flowers.bin",
+      "bytes": 1048576,
+      "sha256": "d9b5e30e7face64a17acba3bafd38e16a03f59ffc8f8729684f93c46e5536eb8",
+      "local_sha256": "d9b5e30e7face64a17acba3bafd38e16a03f59ffc8f8729684f93c46e5536eb8",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/ao.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/ao.bin.gz",
+      "bytes": 336500,
+      "sha256": "13024ca0f52b152c5604db17e3af3d5db983dca9798bea326187c63b1408e7ee",
+      "local_sha256": "13024ca0f52b152c5604db17e3af3d5db983dca9798bea326187c63b1408e7ee",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/ao.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/ao.bin",
+      "bytes": 1048576,
+      "sha256": "6d611af18d7ddf8ffe90d4f249a101441a5bab61f44f57be199a9f9d9f133e48",
+      "local_sha256": "6d611af18d7ddf8ffe90d4f249a101441a5bab61f44f57be199a9f9d9f133e48",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/cliff.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/cliff.bin",
+      "bytes": 1048576,
+      "sha256": "e34b3e186ad4e3013ed440d63c5f08f94d4ba556ccc7d24a02788580a6b539e7",
+      "local_sha256": "e34b3e186ad4e3013ed440d63c5f08f94d4ba556ccc7d24a02788580a6b539e7",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/reeds.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/reeds.bin.gz",
+      "bytes": 6248,
+      "sha256": "c08c04f355bb42804c57d7a3a78562cb4ca77857bead4b34d2b02115130803c9",
+      "local_sha256": "c08c04f355bb42804c57d7a3a78562cb4ca77857bead4b34d2b02115130803c9",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/sand.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/sand.bin",
+      "bytes": 1048576,
+      "sha256": "6c21d90dbd05de60a9827be2bf08ca09b842d17971a7e9ac72688c4fb8fd6e25",
+      "local_sha256": "6c21d90dbd05de60a9827be2bf08ca09b842d17971a7e9ac72688c4fb8fd6e25",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/shrubs.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/shrubs.bin",
+      "bytes": 1048576,
+      "sha256": "88bb74e9685364bb711cdc371e9d24a665e4797e33e809e910277c775600edc5",
+      "local_sha256": "88bb74e9685364bb711cdc371e9d24a665e4797e33e809e910277c775600edc5",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/reeds.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/reeds.bin",
+      "bytes": 1048576,
+      "sha256": "5ae7090efdf06efcddbdbef84abd0b6236d931b74274a54f5457b491b238cdc3",
+      "local_sha256": "5ae7090efdf06efcddbdbef84abd0b6236d931b74274a54f5457b491b238cdc3",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/height.g16.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/height.g16.gz",
+      "bytes": 3149926,
+      "sha256": "2a16d7c342f5aa3c84b82accc2c69e6f15b5ca158734e452b5ccd5175a9a4efc",
+      "local_sha256": "2a16d7c342f5aa3c84b82accc2c69e6f15b5ca158734e452b5ccd5175a9a4efc",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/moss.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/moss.bin",
+      "bytes": 1048576,
+      "sha256": "a79f2015ef959bda08ce0247d8f939be2f44589d890997ab7c4f3d9b6fceed6d",
+      "local_sha256": "a79f2015ef959bda08ce0247d8f939be2f44589d890997ab7c4f3d9b6fceed6d",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/trees.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/trees.bin",
+      "bytes": 1048576,
+      "sha256": "b3264065a2d872b44880f46aced84ef0bc57defccec7e08e7ac01b77fe7a3fd6",
+      "local_sha256": "b3264065a2d872b44880f46aced84ef0bc57defccec7e08e7ac01b77fe7a3fd6",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/bamboo.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/bamboo.bin",
+      "bytes": 1048576,
+      "sha256": "237636b05c5d79bae421433a3f7a8689310b9c95fadd93e64d77f80f3945f0a0",
+      "local_sha256": "237636b05c5d79bae421433a3f7a8689310b9c95fadd93e64d77f80f3945f0a0",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/grass.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/grass.bin",
+      "bytes": 1048576,
+      "sha256": "0b3f1fcdb0f98ff0cfcf8230634f2a66df4204029247bcfe4db3fd8b5e4daf4e",
+      "local_sha256": "0b3f1fcdb0f98ff0cfcf8230634f2a66df4204029247bcfe4db3fd8b5e4daf4e",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/world.json",
+      "url": "https://hanakawa-boat-game.vercel.app/world/world.json",
+      "bytes": 3243,
+      "sha256": "e3a504d8ffdebb349aa898e219b03290018c585e48cd4114397db4bc93d0565c",
+      "local_sha256": "e3a504d8ffdebb349aa898e219b03290018c585e48cd4114397db4bc93d0565c",
+      "content_type": "application/json"
+    },
+    {
+      "path": "world/cherry.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/cherry.bin",
+      "bytes": 1048576,
+      "sha256": "f05225a669686d33d1cece55e7408573d322fa96040e66abf2ede97100ae5020",
+      "local_sha256": "f05225a669686d33d1cece55e7408573d322fa96040e66abf2ede97100ae5020",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/rock.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/rock.bin.gz",
+      "bytes": 221128,
+      "sha256": "7742eb5e272f6970fb626ee0687b009663f45fdb5fd4fd736ab162b3c952f4d5",
+      "local_sha256": "7742eb5e272f6970fb626ee0687b009663f45fdb5fd4fd736ab162b3c952f4d5",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/wavescale.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/wavescale.bin.gz",
+      "bytes": 22136,
+      "sha256": "b12e35e4f438327633aea9fc1a5eadf365a2223dead7562a84a44437405596d4",
+      "local_sha256": "b12e35e4f438327633aea9fc1a5eadf365a2223dead7562a84a44437405596d4",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/wet.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/wet.bin",
+      "bytes": 1048576,
+      "sha256": "08f5c232a232b45b153ff83ac631e837ea6b170f76c5ca176f4ceb4e8574c984",
+      "local_sha256": "08f5c232a232b45b153ff83ac631e837ea6b170f76c5ca176f4ceb4e8574c984",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/cliff.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/cliff.bin.gz",
+      "bytes": 56714,
+      "sha256": "6fbd443adf86bf17af9e5f7f5a4c713fe8450c6c2876c2f5c2050963b38c30e2",
+      "local_sha256": "6fbd443adf86bf17af9e5f7f5a4c713fe8450c6c2876c2f5c2050963b38c30e2",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/height.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/world/height.bin",
+      "bytes": 8388608,
+      "sha256": "d34066de3227ee808d4c239dc7daadbcfc30a7fcc7fc89ce46aa9b9d7296d145",
+      "local_sha256": "d34066de3227ee808d4c239dc7daadbcfc30a7fcc7fc89ce46aa9b9d7296d145",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "world/trees.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/world/trees.bin.gz",
+      "bytes": 263693,
+      "sha256": "39dd5b494d4b741a9843e89dc8557023692b55117c253416068b6c2a6a951e83",
+      "local_sha256": "39dd5b494d4b741a9843e89dc8557023692b55117c253416068b6c2a6a951e83",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/layout-DtbcdJal.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/layout-DtbcdJal.js",
+      "bytes": 255450,
+      "sha256": "3f2d02ebabf471cd633e45a1389ea733d710ecd0681581fbbc942535c8813916",
+      "local_sha256": "3f2d02ebabf471cd633e45a1389ea733d710ecd0681581fbbc942535c8813916",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/audio-C9IoOb-p.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio-C9IoOb-p.js",
+      "bytes": 48310,
+      "sha256": "a08ee3df8c9e0640c9af0115c132b74b4bb4d69337f39bf628e3be45f376b714",
+      "local_sha256": "a08ee3df8c9e0640c9af0115c132b74b4bb4d69337f39bf628e3be45f376b714",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/boat-DaKAMpSv.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat-DaKAMpSv.js",
+      "bytes": 21684,
+      "sha256": "75ca8c7f4a38557e4b1734b85e36b405e98272018a7d56697ace6eb7f56c6c10",
+      "local_sha256": "75ca8c7f4a38557e4b1734b85e36b405e98272018a7d56697ace6eb7f56c6c10",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/sites-ByNTCXHC.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/sites-ByNTCXHC.js",
+      "bytes": 9508,
+      "sha256": "acc31466d16a5707a41febb93cd406609bf688618154ecda63dc1410478d2586",
+      "local_sha256": "acc31466d16a5707a41febb93cd406609bf688618154ecda63dc1410478d2586",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/game-DXv9Pcsb.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game-DXv9Pcsb.js",
+      "bytes": 28566,
+      "sha256": "79d52eaef97677740e66fadd2dfcee55fb91083b6a518e040e865f39a8800c55",
+      "local_sha256": "79d52eaef97677740e66fadd2dfcee55fb91083b6a518e040e865f39a8800c55",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/vegetation-C2QfA5c6.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation-C2QfA5c6.js",
+      "bytes": 87916,
+      "sha256": "0457189d10ffb4fe72638453bb3677ad19dbb8ad8a16c8f76917d990fbaf5ff7",
+      "local_sha256": "0457189d10ffb4fe72638453bb3677ad19dbb8ad8a16c8f76917d990fbaf5ff7",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/bridges-DD_vepsy.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges-DD_vepsy.js",
+      "bytes": 47902,
+      "sha256": "daaae8b67b51d4979fc2f33fc67fc57627efcc2bea04fe5dddd668e971bb8aef",
+      "local_sha256": "daaae8b67b51d4979fc2f33fc67fc57627efcc2bea04fe5dddd668e971bb8aef",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/render-BbLvNM6z.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/render-BbLvNM6z.js",
+      "bytes": 145802,
+      "sha256": "00f4b12e8fc4db795b59982a74a2d6d672084be793db757f136a6ed75e4bd90c",
+      "local_sha256": "00f4b12e8fc4db795b59982a74a2d6d672084be793db757f136a6ed75e4bd90c",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/palette-DnW6LeTQ.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/palette-DnW6LeTQ.js",
+      "bytes": 2952,
+      "sha256": "9f5ab194762785941c28422d78abad89084d37245ceac5bdd0f229e0230f93c0",
+      "local_sha256": "9f5ab194762785941c28422d78abad89084d37245ceac5bdd0f229e0230f93c0",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/model-Dg7Wwvrf.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/model-Dg7Wwvrf.js",
+      "bytes": 38127,
+      "sha256": "09793bf65d337e9563783566a8bf345d9a5abcfee20f9aefae8a00b9085bd482",
+      "local_sha256": "09793bf65d337e9563783566a8bf345d9a5abcfee20f9aefae8a00b9085bd482",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/water-BpetgGmD.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/water-BpetgGmD.js",
+      "bytes": 42101,
+      "sha256": "b6585277b4fd6289e10c0a0c7238d0d4e7582a7aae827705253dafed080bd047",
+      "local_sha256": "b6585277b4fd6289e10c0a0c7238d0d4e7582a7aae827705253dafed080bd047",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/index-jy0zn12G.css",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/index-jy0zn12G.css",
+      "bytes": 25669,
+      "sha256": "13edcb6952e09a67778198c663f2702ef0336b6fa55b7fe367eaedf92e673935",
+      "local_sha256": "13edcb6952e09a67778198c663f2702ef0336b6fa55b7fe367eaedf92e673935",
+      "content_type": "text/css"
+    },
+    {
+      "path": "assets/ui-Baa9W2Z_.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui-Baa9W2Z_.js",
+      "bytes": 36714,
+      "sha256": "6fedc6477052d6b275735fc1dc7b4574c5b51f6c9696faf4c8c244c7914ff99e",
+      "local_sha256": "6fedc6477052d6b275735fc1dc7b4574c5b51f6c9696faf4c8c244c7914ff99e",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/camera-BZCFS0Jb.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/camera-BZCFS0Jb.js",
+      "bytes": 7720,
+      "sha256": "918ba0effedd2892ca3dcbc793b123269dc39d8d2e1d331d4adb9094252746c2",
+      "local_sha256": "918ba0effedd2892ca3dcbc793b123269dc39d8d2e1d331d4adb9094252746c2",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/structures-Do1kl22b.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures-Do1kl22b.js",
+      "bytes": 150391,
+      "sha256": "2a013af8e56a1d87efc83c7515fd3f1678011e6e986cd8a21bdcf0d36bcb1a38",
+      "local_sha256": "2a013af8e56a1d87efc83c7515fd3f1678011e6e986cd8a21bdcf0d36bcb1a38",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/night-Bl-3x8Nl.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/night-Bl-3x8Nl.js",
+      "bytes": 619,
+      "sha256": "579fe8c7346100a39ac7151ddd4610323731327018d24443a93336ab6678ed15",
+      "local_sha256": "579fe8c7346100a39ac7151ddd4610323731327018d24443a93336ab6678ed15",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/index-BeXmJqZW.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/index-BeXmJqZW.js",
+      "bytes": 2947957,
+      "sha256": "9fa11e2f998dd4d2d062268ee9d408b4dd71494e3ca401174bc10a8b97f82e40",
+      "local_sha256": "9fa11e2f998dd4d2d062268ee9d408b4dd71494e3ca401174bc10a8b97f82e40",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/caustics-z3XIo9mD.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/caustics-z3XIo9mD.js",
+      "bytes": 5494,
+      "sha256": "47a51eb028d40da6f3ec8f24f1be7205692ee52f9d9675742669f7efac7d9fce",
+      "local_sha256": "47a51eb028d40da6f3ec8f24f1be7205692ee52f9d9675742669f7efac7d9fce",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/terrain-BWUlj9KC.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain-BWUlj9KC.js",
+      "bytes": 17668,
+      "sha256": "70882f0860049eb39e0b3f8b8e1433a4d338416d8a3161d3a6ccddd3b4670670",
+      "local_sha256": "70882f0860049eb39e0b3f8b8e1433a4d338416d8a3161d3a6ccddd3b4670670",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/three.webgpu-D7sqgfgO.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/three.webgpu-D7sqgfgO.js",
+      "bytes": 677596,
+      "sha256": "c45feedbf17b7cd4c78a21577725f68bd15c8bc236d5d3625f784daf19281846",
+      "local_sha256": "c45feedbf17b7cd4c78a21577725f68bd15c8bc236d5d3625f784daf19281846",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/hullSpec-CNwDzYD8.js",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/hullSpec-CNwDzYD8.js",
+      "bytes": 1992,
+      "sha256": "ce65d71373183f8070159532186afa8dbd516e0cc93f840a68e8cf94f4fdc6ba",
+      "local_sha256": "ce65d71373183f8070159532186afa8dbd516e0cc93f840a68e8cf94f4fdc6ba",
+      "content_type": "text/javascript"
+    },
+    {
+      "path": "assets/ui/fonts/cormorant-500-italic.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/cormorant-500-italic.woff2",
+      "bytes": 23924,
+      "sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f",
+      "local_sha256": "4fb55a7a6d564d428061fe12c82c896264bcc8b7f0b52840bf88e0db5b91256f",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/ui/fonts/geist-500.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/geist-500.woff2",
+      "bytes": 13296,
+      "sha256": "6145bf6706dbc1b6686f04f871489cf724951f00b752745896ccdcac07639a53",
+      "local_sha256": "6145bf6706dbc1b6686f04f871489cf724951f00b752745896ccdcac07639a53",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/ui/fonts/cormorant-600.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/cormorant-600.woff2",
+      "bytes": 23396,
+      "sha256": "ae062b6d5ae308e7edf61b28b07b9984bbb6e961b1f34d9b2c2f4389c33f21ea",
+      "local_sha256": "ae062b6d5ae308e7edf61b28b07b9984bbb6e961b1f34d9b2c2f4389c33f21ea",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/ui/fonts/seal-noto-serif-jp.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/seal-noto-serif-jp.woff2",
+      "bytes": 1164,
+      "sha256": "5a2786ef47323dd66a08a2544b95f4085915ed3a8f5a201500ef5db691f1e67d",
+      "local_sha256": "5a2786ef47323dd66a08a2544b95f4085915ed3a8f5a201500ef5db691f1e67d",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/ui/fonts/geist-400.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/geist-400.woff2",
+      "bytes": 12956,
+      "sha256": "ead637fd0b6b887d829b3ce3f25fdc242b1de0cfb69c0d97987933675d1315ba",
+      "local_sha256": "ead637fd0b6b887d829b3ce3f25fdc242b1de0cfb69c0d97987933675d1315ba",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/ui/fonts/geist-600.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/geist-600.woff2",
+      "bytes": 13372,
+      "sha256": "edde7cc4e2719898f981a6d970a756030fff75a8ed36dd6a457a60181b889ebf",
+      "local_sha256": "edde7cc4e2719898f981a6d970a756030fff75a8ed36dd6a457a60181b889ebf",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/ui/fonts/cormorant-500.woff2",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/ui/fonts/cormorant-500.woff2",
+      "bytes": 23312,
+      "sha256": "8197bf53615ddc8c423f444c7f0eec63b7fa0ba093fcfbec60dfdd28429b0fc8",
+      "local_sha256": "8197bf53615ddc8c423f444c7f0eec63b7fa0ba093fcfbec60dfdd28429b0fc8",
+      "content_type": "font/woff2"
+    },
+    {
+      "path": "assets/structures/rock_surface/rock_surface_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/rock_surface/rock_surface_nor_gl_1k.jpg",
+      "bytes": 109474,
+      "sha256": "716b4c57796eaac1f4e224b2192309b833a55ea4629dadfe519d56d95bc8460c",
+      "local_sha256": "716b4c57796eaac1f4e224b2192309b833a55ea4629dadfe519d56d95bc8460c",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/rock_surface/rock_surface_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/rock_surface/rock_surface_diffuse_1k.jpg",
+      "bytes": 212127,
+      "sha256": "5f6d6a913578f10d93a06b1564f8d1b64ae35b7e2eab669b1b5edcd2a6973422",
+      "local_sha256": "5f6d6a913578f10d93a06b1564f8d1b64ae35b7e2eab669b1b5edcd2a6973422",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/rock_surface/rock_surface_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/rock_surface/rock_surface_arm_1k.jpg",
+      "bytes": 25838,
+      "sha256": "b90a442545447141da3585e14baacad96fc84bd49351bb467ab9be0fc75d3145",
+      "local_sha256": "b90a442545447141da3585e14baacad96fc84bd49351bb467ab9be0fc75d3145",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wood_planks_grey/wood_planks_grey_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wood_planks_grey/wood_planks_grey_arm_2k.jpg",
+      "bytes": 28127,
+      "sha256": "f48ce8b6cace396045639cff3ce68b564877d669e80693fd3f8e726552522e49",
+      "local_sha256": "f48ce8b6cace396045639cff3ce68b564877d669e80693fd3f8e726552522e49",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wood_planks_grey/wood_planks_grey_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wood_planks_grey/wood_planks_grey_diffuse_2k.jpg",
+      "bytes": 194055,
+      "sha256": "aa21e884c88f12a3b5cb6ec13a1fe70b4eb2b6ddde664a484b2a888306ae0442",
+      "local_sha256": "aa21e884c88f12a3b5cb6ec13a1fe70b4eb2b6ddde664a484b2a888306ae0442",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wood_planks_grey/wood_planks_grey_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wood_planks_grey/wood_planks_grey_nor_gl_2k.jpg",
+      "bytes": 44744,
+      "sha256": "7d5330f9e492cb7a813795160fc5a1a23fd8135387290460cbda9de894783ed0",
+      "local_sha256": "7d5330f9e492cb7a813795160fc5a1a23fd8135387290460cbda9de894783ed0",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/japanese_stone_wall/japanese_stone_wall_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/japanese_stone_wall/japanese_stone_wall_arm_2k.jpg",
+      "bytes": 31840,
+      "sha256": "74a1683972be7713bc9d9adb8931197f2438e28e082dacafa034312d69baa691",
+      "local_sha256": "74a1683972be7713bc9d9adb8931197f2438e28e082dacafa034312d69baa691",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/japanese_stone_wall/japanese_stone_wall_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/japanese_stone_wall/japanese_stone_wall_diffuse_2k.jpg",
+      "bytes": 323917,
+      "sha256": "7c07dbb8f5a85c3ea576d8dd63ddd1d735757a8fe28919fef27f0ec5c419a432",
+      "local_sha256": "7c07dbb8f5a85c3ea576d8dd63ddd1d735757a8fe28919fef27f0ec5c419a432",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/japanese_stone_wall/japanese_stone_wall_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/japanese_stone_wall/japanese_stone_wall_nor_gl_2k.jpg",
+      "bytes": 146276,
+      "sha256": "7b7fb915668f924a2d505abbc9b070df1af330bd1cd3a7f318390ce6ca075311",
+      "local_sha256": "7b7fb915668f924a2d505abbc9b070df1af330bd1cd3a7f318390ce6ca075311",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/painted_plaster_wall/painted_plaster_wall_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/painted_plaster_wall/painted_plaster_wall_arm_2k.jpg",
+      "bytes": 5951,
+      "sha256": "40f1116df3e70329e4c8520e7015c4ff7378a5365b2ac13169b875f4f3ae6521",
+      "local_sha256": "40f1116df3e70329e4c8520e7015c4ff7378a5365b2ac13169b875f4f3ae6521",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/painted_plaster_wall/painted_plaster_wall_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/painted_plaster_wall/painted_plaster_wall_nor_gl_2k.jpg",
+      "bytes": 40851,
+      "sha256": "4cc8eb747d72f89ef34e52dc50f5566cfa3a10c772d3d0634aebd411b7a01522",
+      "local_sha256": "4cc8eb747d72f89ef34e52dc50f5566cfa3a10c772d3d0634aebd411b7a01522",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/painted_plaster_wall/painted_plaster_wall_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/painted_plaster_wall/painted_plaster_wall_diffuse_2k.jpg",
+      "bytes": 148432,
+      "sha256": "157c9762800bb5bb98ad428c03e187fe2fb4c8daed39973dedbc853d06519f21",
+      "local_sha256": "157c9762800bb5bb98ad428c03e187fe2fb4c8daed39973dedbc853d06519f21",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/rough_linen/rough_linen_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/rough_linen/rough_linen_arm_1k.jpg",
+      "bytes": 46277,
+      "sha256": "e147ed3de89730eb29fa5525892aff387b25c380de98b2c4161e9983201aabbc",
+      "local_sha256": "e147ed3de89730eb29fa5525892aff387b25c380de98b2c4161e9983201aabbc",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/rough_linen/rough_linen_nor_gl_1k.jpg",
+      "bytes": 40939,
+      "sha256": "cd7e22eb4cda33d015cd32f6df1ea4c59db8d676aca746e945117713ab8b0202",
+      "local_sha256": "cd7e22eb4cda33d015cd32f6df1ea4c59db8d676aca746e945117713ab8b0202",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/rough_linen/rough_linen_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/rough_linen/rough_linen_diffuse_1k.jpg",
+      "bytes": 196686,
+      "sha256": "1e3252e01c10491841fefc8be6fedf8470707322c414740052e1e0e055d8fe4b",
+      "local_sha256": "1e3252e01c10491841fefc8be6fedf8470707322c414740052e1e0e055d8fe4b",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/japanese_cedar_planks/japanese_cedar_planks_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/japanese_cedar_planks/japanese_cedar_planks_diffuse_2k.jpg",
+      "bytes": 153738,
+      "sha256": "4424e09e2fcab38fd5bda3492780d34d0215b2db29edc8284042339b7554de39",
+      "local_sha256": "4424e09e2fcab38fd5bda3492780d34d0215b2db29edc8284042339b7554de39",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/japanese_cedar_planks/japanese_cedar_planks_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/japanese_cedar_planks/japanese_cedar_planks_arm_2k.jpg",
+      "bytes": 22415,
+      "sha256": "00112a38c29b0344db2f96f02ce3e12b468e786d364db6ba9c3782c0c290f84d",
+      "local_sha256": "00112a38c29b0344db2f96f02ce3e12b468e786d364db6ba9c3782c0c290f84d",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/japanese_cedar_planks/japanese_cedar_planks_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/japanese_cedar_planks/japanese_cedar_planks_nor_gl_2k.jpg",
+      "bytes": 27742,
+      "sha256": "ba9899107544f1f03b29cbe11d0f26c870fe8a0c55527574f035492e04d1caa9",
+      "local_sha256": "ba9899107544f1f03b29cbe11d0f26c870fe8a0c55527574f035492e04d1caa9",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/weathered_planks/weathered_planks_nor_gl_1k.jpg",
+      "bytes": 42762,
+      "sha256": "eff80787342ca7a3fec82230eb869a38bc516c207aa677e782b42ce68388f14b",
+      "local_sha256": "eff80787342ca7a3fec82230eb869a38bc516c207aa677e782b42ce68388f14b",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/weathered_planks/weathered_planks_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/weathered_planks/weathered_planks_arm_1k.jpg",
+      "bytes": 20581,
+      "sha256": "a0b24c8825aa00cbee2253b722b03b694ae94838407f311d1bb2a5731867382a",
+      "local_sha256": "a0b24c8825aa00cbee2253b722b03b694ae94838407f311d1bb2a5731867382a",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/weathered_planks/weathered_planks_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/weathered_planks/weathered_planks_diffuse_1k.jpg",
+      "bytes": 123334,
+      "sha256": "6295f4e397770b217b36240c1ee9e026b6f7caa8826b7c8a21f37accaeba8deb",
+      "local_sha256": "6295f4e397770b217b36240c1ee9e026b6f7caa8826b7c8a21f37accaeba8deb",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/bamboo_wall/bamboo_wall_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/bamboo_wall/bamboo_wall_diffuse_1k.jpg",
+      "bytes": 176302,
+      "sha256": "959be356ca4bef1d674bcd04a2d61318463faf267015c39614cdf2580dcf5905",
+      "local_sha256": "959be356ca4bef1d674bcd04a2d61318463faf267015c39614cdf2580dcf5905",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/bamboo_wall/bamboo_wall_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/bamboo_wall/bamboo_wall_arm_1k.jpg",
+      "bytes": 34709,
+      "sha256": "58d1bd03f4421489af1e4a4d8ebfba9c634fc435315c802ad6846ff892c6f343",
+      "local_sha256": "58d1bd03f4421489af1e4a4d8ebfba9c634fc435315c802ad6846ff892c6f343",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/bamboo_wall/bamboo_wall_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/bamboo_wall/bamboo_wall_nor_gl_1k.jpg",
+      "bytes": 89911,
+      "sha256": "31b3df13ade2a347cae27fba79bcabad8e9fddd2ba82062ad9470610e04c2782",
+      "local_sha256": "31b3df13ade2a347cae27fba79bcabad8e9fddd2ba82062ad9470610e04c2782",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wooden_bucket_01/wooden_bucket_01_1k.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wooden_bucket_01/wooden_bucket_01_1k.gltf",
+      "bytes": 4248,
+      "sha256": "f5338d760391b1f6183f09cbb3dfcb0d6b5d954d9a1d388e7debabce46fd999d",
+      "local_sha256": "f5338d760391b1f6183f09cbb3dfcb0d6b5d954d9a1d388e7debabce46fd999d",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/structures/wooden_bucket_01/wooden_bucket_01.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wooden_bucket_01/wooden_bucket_01.bin",
+      "bytes": 114831,
+      "sha256": "21e03380520435dc55ac8b1c18e11f8350164c38821a156602ca40b1ba5134a9",
+      "local_sha256": "21e03380520435dc55ac8b1c18e11f8350164c38821a156602ca40b1ba5134a9",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/structures/wooden_bucket_01/textures/wooden_bucket_01_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wooden_bucket_01/textures/wooden_bucket_01_diff_1k.jpg",
+      "bytes": 164455,
+      "sha256": "f68d2e966c207e7f98359e3a8c2f1ce704b9b30c87a6a8f2241eb604e21d0057",
+      "local_sha256": "f68d2e966c207e7f98359e3a8c2f1ce704b9b30c87a6a8f2241eb604e21d0057",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wooden_bucket_01/textures/wooden_bucket_01_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wooden_bucket_01/textures/wooden_bucket_01_nor_gl_1k.jpg",
+      "bytes": 64305,
+      "sha256": "79eb906a93e2a57234efa7bc55f5a84d257346a2b6d5e3620d002f3db0607e5f",
+      "local_sha256": "79eb906a93e2a57234efa7bc55f5a84d257346a2b6d5e3620d002f3db0607e5f",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wooden_bucket_01/textures/wooden_bucket_01_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wooden_bucket_01/textures/wooden_bucket_01_arm_1k.jpg",
+      "bytes": 54858,
+      "sha256": "90b4045b1c3c94e94936781b955c4a505d510737119ec4e2acaa3101f90fbdd6",
+      "local_sha256": "90b4045b1c3c94e94936781b955c4a505d510737119ec4e2acaa3101f90fbdd6",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wicker_basket_02/wicker_basket_02.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wicker_basket_02/wicker_basket_02.bin",
+      "bytes": 342532,
+      "sha256": "e1a9fc511fcd1338967ec20f1826b409f4a8fc4eee39f9c138f23c3a3b464856",
+      "local_sha256": "e1a9fc511fcd1338967ec20f1826b409f4a8fc4eee39f9c138f23c3a3b464856",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/structures/wicker_basket_02/wicker_basket_02_1k.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wicker_basket_02/wicker_basket_02_1k.gltf",
+      "bytes": 4497,
+      "sha256": "78c7a3bdd7025eb092b3ac744e9d83e9a75fbb242696b5dce87ec215af617768",
+      "local_sha256": "78c7a3bdd7025eb092b3ac744e9d83e9a75fbb242696b5dce87ec215af617768",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/structures/wicker_basket_02/textures/wicker_basket_02_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wicker_basket_02/textures/wicker_basket_02_arm_1k.jpg",
+      "bytes": 40162,
+      "sha256": "91ee674f590ae142c619daa1fce3d128dbb9741325a8ff136e595820fd43469b",
+      "local_sha256": "91ee674f590ae142c619daa1fce3d128dbb9741325a8ff136e595820fd43469b",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wicker_basket_02/textures/wicker_basket_02_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wicker_basket_02/textures/wicker_basket_02_nor_gl_1k.jpg",
+      "bytes": 131071,
+      "sha256": "6e68708a2e43b764a4452e2ca7e42a4e94187d30c339f0b7f287d2b5b53122bf",
+      "local_sha256": "6e68708a2e43b764a4452e2ca7e42a4e94187d30c339f0b7f287d2b5b53122bf",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/structures/wicker_basket_02/textures/wicker_basket_02_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/structures/wicker_basket_02/textures/wicker_basket_02_diff_1k.jpg",
+      "bytes": 238452,
+      "sha256": "4dafe0877b019f8656f765209faddef5d68729610ab36f06ec5b92b6e56bb346",
+      "local_sha256": "4dafe0877b019f8656f765209faddef5d68729610ab36f06ec5b92b6e56bb346",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/hessian_380/hessian_380_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/hessian_380/hessian_380_nor_gl_1k.jpg",
+      "bytes": 267455,
+      "sha256": "4a526b81caed4abdbac7551cbf7ccf9dec462e9720de7cddcfd48bab28540fc2",
+      "local_sha256": "4a526b81caed4abdbac7551cbf7ccf9dec462e9720de7cddcfd48bab28540fc2",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/hessian_380/hessian_380_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/hessian_380/hessian_380_diffuse_1k.jpg",
+      "bytes": 254544,
+      "sha256": "5be52c82cf9c7a07a5d69fdcb1f01baed904254c34ba99e28f662f83137a4818",
+      "local_sha256": "5be52c82cf9c7a07a5d69fdcb1f01baed904254c34ba99e28f662f83137a4818",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/brown_planks_03/brown_planks_03_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/brown_planks_03/brown_planks_03_nor_gl_2k.jpg",
+      "bytes": 117791,
+      "sha256": "55e16940830c676a34967992bf8f7341d918005a41404fca1d6fed23389043c9",
+      "local_sha256": "55e16940830c676a34967992bf8f7341d918005a41404fca1d6fed23389043c9",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/brown_planks_03/brown_planks_03_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/brown_planks_03/brown_planks_03_diffuse_2k.jpg",
+      "bytes": 257266,
+      "sha256": "c5e6383814b74926dc9adc3f4bdf4c6bbf8d45ff317fba6d8d3bc93809c70ab4",
+      "local_sha256": "c5e6383814b74926dc9adc3f4bdf4c6bbf8d45ff317fba6d8d3bc93809c70ab4",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/brown_planks_03/brown_planks_03_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/brown_planks_03/brown_planks_03_arm_2k.jpg",
+      "bytes": 24621,
+      "sha256": "784f2bbeaa678323808a657220cc559d3cf28a5a6ba81f47c6a8674f73088c7d",
+      "local_sha256": "784f2bbeaa678323808a657220cc559d3cf28a5a6ba81f47c6a8674f73088c7d",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/thatch_roof_angled/thatch_roof_angled_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/thatch_roof_angled/thatch_roof_angled_diffuse_1k.jpg",
+      "bytes": 240595,
+      "sha256": "d96d93e4f1147ae1bf77518284659354bad5c945e9be4f784fa830da3b0f1188",
+      "local_sha256": "d96d93e4f1147ae1bf77518284659354bad5c945e9be4f784fa830da3b0f1188",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/thatch_roof_angled/thatch_roof_angled_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/thatch_roof_angled/thatch_roof_angled_nor_gl_1k.jpg",
+      "bytes": 373658,
+      "sha256": "6bde66019b3245cc3e57d8a9f574db34b7e55a137ced44189e6314b9d3b43d86",
+      "local_sha256": "6bde66019b3245cc3e57d8a9f574db34b7e55a137ced44189e6314b9d3b43d86",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/tatami_mat/tatami_mat_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/tatami_mat/tatami_mat_nor_gl_2k.jpg",
+      "bytes": 35016,
+      "sha256": "f0c93dec7fd495595273264c3ef780bf35bd5d4058dce0e1b7e54edefe09353f",
+      "local_sha256": "f0c93dec7fd495595273264c3ef780bf35bd5d4058dce0e1b7e54edefe09353f",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/tatami_mat/tatami_mat_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/tatami_mat/tatami_mat_arm_2k.jpg",
+      "bytes": 11541,
+      "sha256": "4b86f278fac3432f31857dfb850cac54e83d0765eff36bef38be20371bb5a5f2",
+      "local_sha256": "4b86f278fac3432f31857dfb850cac54e83d0765eff36bef38be20371bb5a5f2",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/boat/tatami_mat/tatami_mat_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/boat/tatami_mat/tatami_mat_diffuse_2k.jpg",
+      "bytes": 146582,
+      "sha256": "f06b9ad8f7dd3ca994be5c20ece11fd5c5773fd350439aa31e4e9595fd7f2489",
+      "local_sha256": "f06b9ad8f7dd3ca994be5c20ece11fd5c5773fd350439aa31e4e9595fd7f2489",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/render/kloofendal_48d_partly_cloudy_puresky/kloofendal_48d_partly_cloudy_puresky_4k.hdr",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/render/kloofendal_48d_partly_cloudy_puresky/kloofendal_48d_partly_cloudy_puresky_4k.hdr",
+      "bytes": 3930189,
+      "sha256": "e373d07eed9c50931966b64f74587eefe0f9f092bfde0a51e1a0fce7b329faf3",
+      "local_sha256": "e373d07eed9c50931966b64f74587eefe0f9f092bfde0a51e1a0fce7b329faf3",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/render/bounce/bounce.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/render/bounce/bounce.bin.gz",
+      "bytes": 28792,
+      "sha256": "3413740e2eab136134051dfdb91943abf0f1efa486baa31e60a47a6bf59277d1",
+      "local_sha256": "3413740e2eab136134051dfdb91943abf0f1efa486baa31e60a47a6bf59277d1",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/render/bounce/manifest.json",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/render/bounce/manifest.json",
+      "bytes": 704,
+      "sha256": "58219010e45e368b79adf92e847657af8c42372fee25a53d9ba2e0c28ad9405f",
+      "local_sha256": "58219010e45e368b79adf92e847657af8c42372fee25a53d9ba2e0c28ad9405f",
+      "content_type": "application/json"
+    },
+    {
+      "path": "assets/game/wicker_basket_02/wicker_basket_02.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wicker_basket_02/wicker_basket_02.bin",
+      "bytes": 342532,
+      "sha256": "e1a9fc511fcd1338967ec20f1826b409f4a8fc4eee39f9c138f23c3a3b464856",
+      "local_sha256": "e1a9fc511fcd1338967ec20f1826b409f4a8fc4eee39f9c138f23c3a3b464856",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/game/wicker_basket_02/wicker_basket_02_1k.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wicker_basket_02/wicker_basket_02_1k.gltf",
+      "bytes": 4497,
+      "sha256": "78c7a3bdd7025eb092b3ac744e9d83e9a75fbb242696b5dce87ec215af617768",
+      "local_sha256": "78c7a3bdd7025eb092b3ac744e9d83e9a75fbb242696b5dce87ec215af617768",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/game/wicker_basket_02/textures/wicker_basket_02_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wicker_basket_02/textures/wicker_basket_02_arm_1k.jpg",
+      "bytes": 40162,
+      "sha256": "91ee674f590ae142c619daa1fce3d128dbb9741325a8ff136e595820fd43469b",
+      "local_sha256": "91ee674f590ae142c619daa1fce3d128dbb9741325a8ff136e595820fd43469b",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/game/wicker_basket_02/textures/wicker_basket_02_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wicker_basket_02/textures/wicker_basket_02_nor_gl_1k.jpg",
+      "bytes": 131071,
+      "sha256": "6e68708a2e43b764a4452e2ca7e42a4e94187d30c339f0b7f287d2b5b53122bf",
+      "local_sha256": "6e68708a2e43b764a4452e2ca7e42a4e94187d30c339f0b7f287d2b5b53122bf",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/game/wicker_basket_02/textures/wicker_basket_02_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wicker_basket_02/textures/wicker_basket_02_diff_1k.jpg",
+      "bytes": 238452,
+      "sha256": "4dafe0877b019f8656f765209faddef5d68729610ab36f06ec5b92b6e56bb346",
+      "local_sha256": "4dafe0877b019f8656f765209faddef5d68729610ab36f06ec5b92b6e56bb346",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/grey_roof_01/grey_roof_01_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/grey_roof_01/grey_roof_01_diffuse_1k.jpg",
+      "bytes": 197944,
+      "sha256": "0b9c56326b3f1faa5f05d819e517c963538493d422dfecda0a7214d15d9e0103",
+      "local_sha256": "0b9c56326b3f1faa5f05d819e517c963538493d422dfecda0a7214d15d9e0103",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/grey_roof_01/grey_roof_01_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/grey_roof_01/grey_roof_01_nor_gl_1k.jpg",
+      "bytes": 113818,
+      "sha256": "4799cc5424bd06eea0febb0b5469a7d19b035aba0401f61d2e23585d43aab30d",
+      "local_sha256": "4799cc5424bd06eea0febb0b5469a7d19b035aba0401f61d2e23585d43aab30d",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/grey_roof_01/grey_roof_01_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/grey_roof_01/grey_roof_01_arm_1k.jpg",
+      "bytes": 63579,
+      "sha256": "a1b7090942d447dae7bd428aa393ca915c8c187eb290a02deffe364aedba0e49",
+      "local_sha256": "a1b7090942d447dae7bd428aa393ca915c8c187eb290a02deffe364aedba0e49",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/rough_wood/rough_wood_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/rough_wood/rough_wood_nor_gl_2k.jpg",
+      "bytes": 74797,
+      "sha256": "e91c77b9ec6a3719f7dd0896164dddd2c65fe809485be35c37334dfba5033ac6",
+      "local_sha256": "e91c77b9ec6a3719f7dd0896164dddd2c65fe809485be35c37334dfba5033ac6",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/rough_wood/rough_wood_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/rough_wood/rough_wood_arm_2k.jpg",
+      "bytes": 26797,
+      "sha256": "56d16b74e8d9e24dba1112f0655e3b8eefcfaab546c092e23bbd32860bb9a183",
+      "local_sha256": "56d16b74e8d9e24dba1112f0655e3b8eefcfaab546c092e23bbd32860bb9a183",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/rough_wood/rough_wood_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/rough_wood/rough_wood_diffuse_2k.jpg",
+      "bytes": 237585,
+      "sha256": "9c6b0e34f82a98627530df65b13fad1d7c9b42675815535f485881427d94b5f3",
+      "local_sha256": "9c6b0e34f82a98627530df65b13fad1d7c9b42675815535f485881427d94b5f3",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/rock_boulder_dry/rock_boulder_dry_nor_gl_2k.jpg",
+      "bytes": 73389,
+      "sha256": "10b838b43b901bb9c21c6caa252b3b5b940bb33f5d8635d8c4a006bac5b08634",
+      "local_sha256": "10b838b43b901bb9c21c6caa252b3b5b940bb33f5d8635d8c4a006bac5b08634",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/rock_boulder_dry/rock_boulder_dry_arm_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/rock_boulder_dry/rock_boulder_dry_arm_2k.jpg",
+      "bytes": 38236,
+      "sha256": "991db5597d82e90729bdbd26734a3f322819d10303f307028adfad0287542e1f",
+      "local_sha256": "991db5597d82e90729bdbd26734a3f322819d10303f307028adfad0287542e1f",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/bridges/rock_boulder_dry/rock_boulder_dry_diffuse_2k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/bridges/rock_boulder_dry/rock_boulder_dry_diffuse_2k.jpg",
+      "bytes": 231445,
+      "sha256": "0514d8a81369b0a7454397354259f4c6dd6bbc26816ec1b9de561d56b11d8853",
+      "local_sha256": "0514d8a81369b0a7454397354259f4c6dd6bbc26816ec1b9de561d56b11d8853",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/audio/tit/tit-a.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/tit/tit-a.mp3",
+      "bytes": 15926,
+      "sha256": "b70ed8276b6ef4c4f9653514526981e0fa33b7b528c64d63f3372a0c770e20f2",
+      "local_sha256": "b70ed8276b6ef4c4f9653514526981e0fa33b7b528c64d63f3372a0c770e20f2",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/river-stony/river-rapids.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/river-stony/river-rapids.mp3",
+      "bytes": 210696,
+      "sha256": "6ea46ab76f6ca8375444e9c827c4c3ea1cd6c01767c9bd929b9bed1de3187d19",
+      "local_sha256": "6ea46ab76f6ca8375444e9c827c4c3ea1cd6c01767c9bd929b9bed1de3187d19",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/bank-trickle/bank-trickle.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/bank-trickle/bank-trickle.mp3",
+      "bytes": 336882,
+      "sha256": "ec8250e80daecf5c24b9c007a0d90a89b8cd2d996ed8b975e7bb290ea7bbed07",
+      "local_sha256": "ec8250e80daecf5c24b9c007a0d90a89b8cd2d996ed8b975e7bb290ea7bbed07",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/wren/wren-a.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/wren/wren-a.mp3",
+      "bytes": 42257,
+      "sha256": "3371087aeb7b576a2ec6d4e857aceb34b34dab3cbaf87f655fa932b8052b4cea",
+      "local_sha256": "3371087aeb7b576a2ec6d4e857aceb34b34dab3cbaf87f655fa932b8052b4cea",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/river-bach/river-babble.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/river-bach/river-babble.mp3",
+      "bytes": 313086,
+      "sha256": "de6d888a2936a47d0a5d205e941692a98c396c7c26c3b82a26de8f4df713f4ad",
+      "local_sha256": "de6d888a2936a47d0a5d205e941692a98c396c7c26c3b82a26de8f4df713f4ad",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/river-rinnsal/river-calm.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/river-rinnsal/river-calm.mp3",
+      "bytes": 330914,
+      "sha256": "c0cc710db191260abc581f71a997f1038c897cf669de5ab600b8426514525adc",
+      "local_sha256": "c0cc710db191260abc581f71a997f1038c897cf669de5ab600b8426514525adc",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/uguisu/uguisu-b.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/uguisu/uguisu-b.mp3",
+      "bytes": 14672,
+      "sha256": "bebad462754ac2817cdf0d10d645338982afe1940d0591d45b5196fc0125a45f",
+      "local_sha256": "bebad462754ac2817cdf0d10d645338982afe1940d0591d45b5196fc0125a45f",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/uguisu/uguisu-c.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/uguisu/uguisu-c.mp3",
+      "bytes": 15090,
+      "sha256": "9b18957a81eec0204a53bc97540f39d61f1a9227074c7b689020b1cbe164c7f6",
+      "local_sha256": "9b18957a81eec0204a53bc97540f39d61f1a9227074c7b689020b1cbe164c7f6",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/uguisu/uguisu-a.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/uguisu/uguisu-a.mp3",
+      "bytes": 14463,
+      "sha256": "77b473d9c6dc3f18e64c68e6ee6e487c4d98457f7aa4f7f2bc41856ec75b0e57",
+      "local_sha256": "77b473d9c6dc3f18e64c68e6ee6e487c4d98457f7aa4f7f2bc41856ec75b0e57",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/uguisu/uguisu-d.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/uguisu/uguisu-d.mp3",
+      "bytes": 13209,
+      "sha256": "1010f3af8756eb7756b5c8980cc57b23860adcfcecca5fc17a5e9bf238b06245",
+      "local_sha256": "1010f3af8756eb7756b5c8980cc57b23860adcfcecca5fc17a5e9bf238b06245",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/uguisu/uguisu-e.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/uguisu/uguisu-e.mp3",
+      "bytes": 14045,
+      "sha256": "145cb3bb8c09bd9a00e1908466009a799c9f7ac9c5a31011ddad529747c7952e",
+      "local_sha256": "145cb3bb8c09bd9a00e1908466009a799c9f7ac9c5a31011ddad529747c7952e",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/audio/uguisu/uguisu-f.mp3",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/audio/uguisu/uguisu-f.mp3",
+      "bytes": 14672,
+      "sha256": "078e76f9f6f3b262a38de640f336fee0eb1c6d7ce1d62f1a38e083b64b2dd0c7",
+      "local_sha256": "078e76f9f6f3b262a38de640f336fee0eb1c6d7ce1d62f1a38e083b64b2dd0c7",
+      "content_type": "audio/mpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/island_tree_02_lod1.glb",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/island_tree_02_lod1.glb",
+      "bytes": 622368,
+      "sha256": "cf8456aabf658c64b47b68ede55ee34a663b1a2ccd7d188cf05727e317bbf8d0",
+      "local_sha256": "cf8456aabf658c64b47b68ede55ee34a663b1a2ccd7d188cf05727e317bbf8d0",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/island_tree_02.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/island_tree_02.bin",
+      "bytes": 1455105,
+      "sha256": "735629c9a85aba88d6755fc139e2fce262e8b0efa2f24d2fc0b0fec0eb7ad7b3",
+      "local_sha256": "735629c9a85aba88d6755fc139e2fce262e8b0efa2f24d2fc0b0fec0eb7ad7b3",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/island_tree_02_leaves_diff_1k.png",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/island_tree_02_leaves_diff_1k.png",
+      "bytes": 655590,
+      "sha256": "e3ba1a1faabfe76967e201ceee7a74fcf86ef01b2389a476a4411c358eb4d3d4",
+      "local_sha256": "e3ba1a1faabfe76967e201ceee7a74fcf86ef01b2389a476a4411c358eb4d3d4",
+      "content_type": "image/png"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/island_tree_02.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/island_tree_02.gltf",
+      "bytes": 7739,
+      "sha256": "d6f69bb798e96c7046cd8d173a679f814747e9dcdeecfa4d8d000deb1ca5558e",
+      "local_sha256": "d6f69bb798e96c7046cd8d173a679f814747e9dcdeecfa4d8d000deb1ca5558e",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/textures/island_tree_02_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/textures/island_tree_02_nor_gl_1k.jpg",
+      "bytes": 149292,
+      "sha256": "f8849767c70e1df5e254c508e0397ab182b2319e568346fa531e26ce5db011c9",
+      "local_sha256": "f8849767c70e1df5e254c508e0397ab182b2319e568346fa531e26ce5db011c9",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/textures/island_tree_02_branches_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/textures/island_tree_02_branches_diff_1k.jpg",
+      "bytes": 156364,
+      "sha256": "5c7bb6e9fe06ad3ac9d458b11cdb6a6e273124e21942e60b635820237ad83638",
+      "local_sha256": "5c7bb6e9fe06ad3ac9d458b11cdb6a6e273124e21942e60b635820237ad83638",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/textures/island_tree_02_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/textures/island_tree_02_arm_1k.jpg",
+      "bytes": 44268,
+      "sha256": "8c249f5104ce51f6191ed991d981a7d3e32f2dbd7a0a7d585ce7fcc9239c5dc9",
+      "local_sha256": "8c249f5104ce51f6191ed991d981a7d3e32f2dbd7a0a7d585ce7fcc9239c5dc9",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/textures/island_tree_02_branches_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/textures/island_tree_02_branches_arm_1k.jpg",
+      "bytes": 27886,
+      "sha256": "0474aa0b4576e4762f371f4c9eb7474f7cdac957df1d304b5c988664d34baee0",
+      "local_sha256": "0474aa0b4576e4762f371f4c9eb7474f7cdac957df1d304b5c988664d34baee0",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/textures/island_tree_02_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/textures/island_tree_02_diff_1k.jpg",
+      "bytes": 205583,
+      "sha256": "0ced689567932eb3d448ce0c5b73dc0c212c38c2c3303828164c4d4680e66f4e",
+      "local_sha256": "0ced689567932eb3d448ce0c5b73dc0c212c38c2c3303828164c4d4680e66f4e",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_02/textures/island_tree_02_branches_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_02/textures/island_tree_02_branches_nor_gl_1k.jpg",
+      "bytes": 122100,
+      "sha256": "73dd3c77f865d8272990281d8477c59125f77bbde90040b73b6ecb56bd5acfcb",
+      "local_sha256": "73dd3c77f865d8272990281d8477c59125f77bbde90040b73b6ecb56bd5acfcb",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/impostors/cherry-1.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/cherry-1.bin.gz",
+      "bytes": 1720727,
+      "sha256": "d4441a3b55c5c27afa2613d1e75f576c994fc3636d60cccb4d9490b62d969d43",
+      "local_sha256": "d4441a3b55c5c27afa2613d1e75f576c994fc3636d60cccb4d9490b62d969d43",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/impostors/cedar-0.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/cedar-0.bin.gz",
+      "bytes": 1570302,
+      "sha256": "56c0dac2898285ef9b9391cfd828730c4012689b60ab26768c18ada7136ebc39",
+      "local_sha256": "56c0dac2898285ef9b9391cfd828730c4012689b60ab26768c18ada7136ebc39",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/impostors/cedar-2.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/cedar-2.bin.gz",
+      "bytes": 2022189,
+      "sha256": "9d5aa416d2385665a74bc504cc2c96abfc129d3e14708460a8e39e808a4cbaf2",
+      "local_sha256": "9d5aa416d2385665a74bc504cc2c96abfc129d3e14708460a8e39e808a4cbaf2",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/impostors/maple-0.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/maple-0.bin.gz",
+      "bytes": 1775134,
+      "sha256": "055f5d2bd1b4840014223edb02a7c2a7e27f7b6c4781c06220eb685da27eaeb1",
+      "local_sha256": "055f5d2bd1b4840014223edb02a7c2a7e27f7b6c4781c06220eb685da27eaeb1",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/impostors/cherry-0.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/cherry-0.bin.gz",
+      "bytes": 1818453,
+      "sha256": "342bc800388ec342229e923925743b768a47ce987c97e4fd51385775fabc3800",
+      "local_sha256": "342bc800388ec342229e923925743b768a47ce987c97e4fd51385775fabc3800",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/impostors/manifest.json",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/manifest.json",
+      "bytes": 3216,
+      "sha256": "c2836d57f3015d8008743481fd70a4ed8deb41e2fd594313118bfd4915e51e18",
+      "local_sha256": "c2836d57f3015d8008743481fd70a4ed8deb41e2fd594313118bfd4915e51e18",
+      "content_type": "application/json"
+    },
+    {
+      "path": "assets/vegetation/impostors/broadleaf-0.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/broadleaf-0.bin.gz",
+      "bytes": 1657847,
+      "sha256": "0faaa07b0ccd018cd825ce40fc03d185fc882f4b8f671665201cc54ac64804b2",
+      "local_sha256": "0faaa07b0ccd018cd825ce40fc03d185fc882f4b8f671665201cc54ac64804b2",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/impostors/cedar-1.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/impostors/cedar-1.bin.gz",
+      "bytes": 1315530,
+      "sha256": "474b902dfa30a4850d4b61cfd7a366a068baad299096c2bbd74960dd40611e3f",
+      "local_sha256": "474b902dfa30a4850d4b61cfd7a366a068baad299096c2bbd74960dd40611e3f",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/island_tree_01.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/island_tree_01.gltf",
+      "bytes": 7768,
+      "sha256": "68eb566d6fceb85006c2fd4e278b717e95f819fc40dd8e8b2a6152111d4fa7a6",
+      "local_sha256": "68eb566d6fceb85006c2fd4e278b717e95f819fc40dd8e8b2a6152111d4fa7a6",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/island_tree_01.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/island_tree_01.bin",
+      "bytes": 2128624,
+      "sha256": "e1a1dce53a1e5146e690a35d391d6de832b95bacf0001199d2cc94e2b769c7ca",
+      "local_sha256": "e1a1dce53a1e5146e690a35d391d6de832b95bacf0001199d2cc94e2b769c7ca",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/island_tree_01_lod1.glb",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/island_tree_01_lod1.glb",
+      "bytes": 910496,
+      "sha256": "810aad05309c15a292659130f46ae40095d57720fa114ae5346a8b21a9166ef8",
+      "local_sha256": "810aad05309c15a292659130f46ae40095d57720fa114ae5346a8b21a9166ef8",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/island_tree_01_leaves_diff_1k.png",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/island_tree_01_leaves_diff_1k.png",
+      "bytes": 655590,
+      "sha256": "e3ba1a1faabfe76967e201ceee7a74fcf86ef01b2389a476a4411c358eb4d3d4",
+      "local_sha256": "e3ba1a1faabfe76967e201ceee7a74fcf86ef01b2389a476a4411c358eb4d3d4",
+      "content_type": "image/png"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/textures/island_tree_01_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/textures/island_tree_01_nor_gl_1k.jpg",
+      "bytes": 167582,
+      "sha256": "58ec0f2834059a5850149c24e3b47257424c848b31729aa6f20c50fa02c573c3",
+      "local_sha256": "58ec0f2834059a5850149c24e3b47257424c848b31729aa6f20c50fa02c573c3",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/textures/island_tree_01_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/textures/island_tree_01_arm_1k.jpg",
+      "bytes": 50876,
+      "sha256": "39e9415c387e90f91a9b53d6977d16ca6582df977f007d14d6c2d0f35734c8dd",
+      "local_sha256": "39e9415c387e90f91a9b53d6977d16ca6582df977f007d14d6c2d0f35734c8dd",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/textures/island_tree_01_branches_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/textures/island_tree_01_branches_nor_gl_1k.jpg",
+      "bytes": 122100,
+      "sha256": "73dd3c77f865d8272990281d8477c59125f77bbde90040b73b6ecb56bd5acfcb",
+      "local_sha256": "73dd3c77f865d8272990281d8477c59125f77bbde90040b73b6ecb56bd5acfcb",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/textures/island_tree_01_branches_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/textures/island_tree_01_branches_arm_1k.jpg",
+      "bytes": 27886,
+      "sha256": "0474aa0b4576e4762f371f4c9eb7474f7cdac957df1d304b5c988664d34baee0",
+      "local_sha256": "0474aa0b4576e4762f371f4c9eb7474f7cdac957df1d304b5c988664d34baee0",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/textures/island_tree_01_branches_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/textures/island_tree_01_branches_diff_1k.jpg",
+      "bytes": 156364,
+      "sha256": "5c7bb6e9fe06ad3ac9d458b11cdb6a6e273124e21942e60b635820237ad83638",
+      "local_sha256": "5c7bb6e9fe06ad3ac9d458b11cdb6a6e273124e21942e60b635820237ad83638",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/island_tree_01/textures/island_tree_01_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/island_tree_01/textures/island_tree_01_diff_1k.jpg",
+      "bytes": 224259,
+      "sha256": "7d7134cd65891f2842dda11c9efe5be30fd772776548153a99fc94d00b5b0471",
+      "local_sha256": "7d7134cd65891f2842dda11c9efe5be30fd772776548153a99fc94d00b5b0471",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/fir_sapling_medium.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/fir_sapling_medium.gltf",
+      "bytes": 14342,
+      "sha256": "ed813935f40ee473fb299d3083b74ebf8fbf1944504a080d11ba4d2f743e4189",
+      "local_sha256": "ed813935f40ee473fb299d3083b74ebf8fbf1944504a080d11ba4d2f743e4189",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/fir_sapling_medium_lod1.glb",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/fir_sapling_medium_lod1.glb",
+      "bytes": 1161052,
+      "sha256": "acd6af96d733b33c7f397b4464837dfa31e3e68e02f8f78a0a9ba58ba7dd4f7b",
+      "local_sha256": "acd6af96d733b33c7f397b4464837dfa31e3e68e02f8f78a0a9ba58ba7dd4f7b",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/fir_sapling_medium_twigs_diff_1k.png",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/fir_sapling_medium_twigs_diff_1k.png",
+      "bytes": 769465,
+      "sha256": "d2481e21adf30b543e5add7f8a79fd74b82947d54e192df28b7fdea38b5ccebf",
+      "local_sha256": "d2481e21adf30b543e5add7f8a79fd74b82947d54e192df28b7fdea38b5ccebf",
+      "content_type": "image/png"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/fir_sapling_medium.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/fir_sapling_medium.bin",
+      "bytes": 2948130,
+      "sha256": "be0a8ce7dc0d46c91af0f7768ff63d0b87367997199a04da6cf99eec43b3c47b",
+      "local_sha256": "be0a8ce7dc0d46c91af0f7768ff63d0b87367997199a04da6cf99eec43b3c47b",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/textures/fir_sapling_medium_branches_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/textures/fir_sapling_medium_branches_arm_1k.jpg",
+      "bytes": 38364,
+      "sha256": "414f412d3409588a2433a9a596f66004a8d8b76f8b5c8baadf8edda0daeee4e7",
+      "local_sha256": "414f412d3409588a2433a9a596f66004a8d8b76f8b5c8baadf8edda0daeee4e7",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/textures/fir_sapling_medium_branches_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/textures/fir_sapling_medium_branches_nor_gl_1k.jpg",
+      "bytes": 149910,
+      "sha256": "67cce7d546cf14ece85af2396394b4de8677d2adbbcd79a758c26840bb46ed38",
+      "local_sha256": "67cce7d546cf14ece85af2396394b4de8677d2adbbcd79a758c26840bb46ed38",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/fir_sapling_medium/textures/fir_sapling_medium_branches_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/fir_sapling_medium/textures/fir_sapling_medium_branches_diff_1k.jpg",
+      "bytes": 210239,
+      "sha256": "4f5008d725b54db1d792292dfc6f449f5ee84f641219983ec8c98fe728f98c93",
+      "local_sha256": "4f5008d725b54db1d792292dfc6f449f5ee84f641219983ec8c98fe728f98c93",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/vegetation/baked/field.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/baked/field.bin.gz",
+      "bytes": 4443821,
+      "sha256": "6f82b72d56a57ed0629beda9878f3fe618e32b6b6187ec5b52f474afc29c333c",
+      "local_sha256": "6f82b72d56a57ed0629beda9878f3fe618e32b6b6187ec5b52f474afc29c333c",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/baked/atlas-garden.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/baked/atlas-garden.bin.gz",
+      "bytes": 382747,
+      "sha256": "fa4b1d034d6f9a9fd06d2bba205753a2d8b6a4c126d518be12d9cf1dd6fbe0c5",
+      "local_sha256": "fa4b1d034d6f9a9fd06d2bba205753a2d8b6a4c126d518be12d9cf1dd6fbe0c5",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/baked/atlas-maple.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/baked/atlas-maple.bin.gz",
+      "bytes": 73509,
+      "sha256": "2efe065b88e96315069415d4afadd373c50301c4fa71a9d23624507a6f1bb861",
+      "local_sha256": "2efe065b88e96315069415d4afadd373c50301c4fa71a9d23624507a6f1bb861",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/vegetation/baked/manifest.json",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/baked/manifest.json",
+      "bytes": 452,
+      "sha256": "18bf8ce20e45330f91a74151525c4524472e215befca5b0816e2f9e2e58c7930",
+      "local_sha256": "18bf8ce20e45330f91a74151525c4524472e215befca5b0816e2f9e2e58c7930",
+      "content_type": "application/json"
+    },
+    {
+      "path": "assets/vegetation/baked/atlas-blossom.bin.gz",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/vegetation/baked/atlas-blossom.bin.gz",
+      "bytes": 734053,
+      "sha256": "edea03ed73a2625aae9938aa527b1ff48864913b65a87f32bf1211b5856679ec",
+      "local_sha256": "edea03ed73a2625aae9938aa527b1ff48864913b65a87f32bf1211b5856679ec",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/terrain/forrest_ground_03/forrest_ground_03_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/forrest_ground_03/forrest_ground_03_diffuse_1k.jpg",
+      "bytes": 414723,
+      "sha256": "ce62b6022890d45bfdc3881287f7347c9a8bcd186516b6f967cdc96e149e2bbc",
+      "local_sha256": "ce62b6022890d45bfdc3881287f7347c9a8bcd186516b6f967cdc96e149e2bbc",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/forrest_ground_03/forrest_ground_03_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/forrest_ground_03/forrest_ground_03_nor_gl_1k.jpg",
+      "bytes": 171693,
+      "sha256": "bd0bbb2e0d16d8a84ab80a62373aefbbd33dae2d2d354b68f31da4a578c3c2d7",
+      "local_sha256": "bd0bbb2e0d16d8a84ab80a62373aefbbd33dae2d2d354b68f31da4a578c3c2d7",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/forrest_ground_03/forrest_ground_03_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/forrest_ground_03/forrest_ground_03_arm_1k.jpg",
+      "bytes": 46929,
+      "sha256": "f020fb17582d60a0c89e11cfa40df9f4606a5e588241863b1bafa3c5bd5b1457",
+      "local_sha256": "f020fb17582d60a0c89e11cfa40df9f4606a5e588241863b1bafa3c5bd5b1457",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/mossy_rock/mossy_rock_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/mossy_rock/mossy_rock_nor_gl_1k.jpg",
+      "bytes": 97520,
+      "sha256": "8936b9ac60ae7ad3301a053144a5a8fc7f59e93024bffcd8466913561e40e750",
+      "local_sha256": "8936b9ac60ae7ad3301a053144a5a8fc7f59e93024bffcd8466913561e40e750",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/mossy_rock/mossy_rock_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/mossy_rock/mossy_rock_arm_1k.jpg",
+      "bytes": 47509,
+      "sha256": "1ab6dbc1557b04846b5337e481a0ba2f8d7907f05a127942287c3ef8e28a9819",
+      "local_sha256": "1ab6dbc1557b04846b5337e481a0ba2f8d7907f05a127942287c3ef8e28a9819",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/mossy_rock/mossy_rock_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/mossy_rock/mossy_rock_diffuse_1k.jpg",
+      "bytes": 333765,
+      "sha256": "83c52bb5c3170941b3020672218551945a4ed4b8b817e170de08e4100ce1e8a4",
+      "local_sha256": "83c52bb5c3170941b3020672218551945a4ed4b8b817e170de08e4100ce1e8a4",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/brown_mud_rocks_01/brown_mud_rocks_01_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/brown_mud_rocks_01/brown_mud_rocks_01_arm_1k.jpg",
+      "bytes": 116412,
+      "sha256": "e992747510251deee757652019998da48f97029f91b760916d7b47a38994d5f5",
+      "local_sha256": "e992747510251deee757652019998da48f97029f91b760916d7b47a38994d5f5",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/brown_mud_rocks_01/brown_mud_rocks_01_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/brown_mud_rocks_01/brown_mud_rocks_01_nor_gl_1k.jpg",
+      "bytes": 227748,
+      "sha256": "37a1287e3651dce6bea04deefb527fb107567ff04713b9867cc39a23d27e10e6",
+      "local_sha256": "37a1287e3651dce6bea04deefb527fb107567ff04713b9867cc39a23d27e10e6",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/brown_mud_rocks_01/brown_mud_rocks_01_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/brown_mud_rocks_01/brown_mud_rocks_01_diffuse_1k.jpg",
+      "bytes": 413516,
+      "sha256": "76f979b7a0cb7fa9c5db66b9cb84a341ef8bdcd2127df823050926c96c5f62ae",
+      "local_sha256": "76f979b7a0cb7fa9c5db66b9cb84a341ef8bdcd2127df823050926c96c5f62ae",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/dark_rock_02/dark_rock_02_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/dark_rock_02/dark_rock_02_arm_1k.jpg",
+      "bytes": 29324,
+      "sha256": "9904a7e8db9fc26dd8f79e99a81a20b9b52be2c0651867c647c34d773033c62e",
+      "local_sha256": "9904a7e8db9fc26dd8f79e99a81a20b9b52be2c0651867c647c34d773033c62e",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/dark_rock_02/dark_rock_02_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/dark_rock_02/dark_rock_02_diffuse_1k.jpg",
+      "bytes": 109272,
+      "sha256": "348e24a03e9bd611a9099edbcd62e2b5b93dda643f0f8e240a0fbf47b6b95529",
+      "local_sha256": "348e24a03e9bd611a9099edbcd62e2b5b93dda643f0f8e240a0fbf47b6b95529",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/dark_rock_02/dark_rock_02_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/dark_rock_02/dark_rock_02_nor_gl_1k.jpg",
+      "bytes": 111131,
+      "sha256": "224e02c8ad1c0b407c5e38ce062285fb21eace9205cb423fad59260feefb5818",
+      "local_sha256": "224e02c8ad1c0b407c5e38ce062285fb21eace9205cb423fad59260feefb5818",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/ganges_river_pebbles/ganges_river_pebbles_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/ganges_river_pebbles/ganges_river_pebbles_nor_gl_1k.jpg",
+      "bytes": 173154,
+      "sha256": "75a562c18f26a71ded79b9165fe4e0a51e7dad52dd078d174b66a2363c8131c1",
+      "local_sha256": "75a562c18f26a71ded79b9165fe4e0a51e7dad52dd078d174b66a2363c8131c1",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/ganges_river_pebbles/ganges_river_pebbles_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/ganges_river_pebbles/ganges_river_pebbles_diffuse_1k.jpg",
+      "bytes": 233428,
+      "sha256": "b7a290a4d436fa1cb95563bd7e47606e65faf59600ab6474fbc18cb9f8e50a47",
+      "local_sha256": "b7a290a4d436fa1cb95563bd7e47606e65faf59600ab6474fbc18cb9f8e50a47",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/ganges_river_pebbles/ganges_river_pebbles_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/ganges_river_pebbles/ganges_river_pebbles_arm_1k.jpg",
+      "bytes": 51955,
+      "sha256": "8e0b734c7ff7812ba85a98a3b3de8f9ae45e1467027d7a1ecab89c4d29418e0a",
+      "local_sha256": "8e0b734c7ff7812ba85a98a3b3de8f9ae45e1467027d7a1ecab89c4d29418e0a",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/dirt_floor/dirt_floor_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/dirt_floor/dirt_floor_arm_1k.jpg",
+      "bytes": 20715,
+      "sha256": "7e2fc90ecec328c20c7735022d4fc59e4c25730b4fc0fb38878451b6fdd33966",
+      "local_sha256": "7e2fc90ecec328c20c7735022d4fc59e4c25730b4fc0fb38878451b6fdd33966",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/dirt_floor/dirt_floor_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/dirt_floor/dirt_floor_diffuse_1k.jpg",
+      "bytes": 235294,
+      "sha256": "b33f8310829b4bf85e4444b15f89b2015dda0e4c5c61aa92af903e820157dad7",
+      "local_sha256": "b33f8310829b4bf85e4444b15f89b2015dda0e4c5c61aa92af903e820157dad7",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/dirt_floor/dirt_floor_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/dirt_floor/dirt_floor_nor_gl_1k.jpg",
+      "bytes": 103593,
+      "sha256": "d57f48c2fcc8f067dab9ebaf82296105042b9f6a7c87fb4cbeb8e5347083726b",
+      "local_sha256": "d57f48c2fcc8f067dab9ebaf82296105042b9f6a7c87fb4cbeb8e5347083726b",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/leafy_grass/leafy_grass_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/leafy_grass/leafy_grass_arm_1k.jpg",
+      "bytes": 45911,
+      "sha256": "a699d6ca55cfb560620dd4cf9d7950bb5d53868ed5848252038a18fe87c2afd2",
+      "local_sha256": "a699d6ca55cfb560620dd4cf9d7950bb5d53868ed5848252038a18fe87c2afd2",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/leafy_grass/leafy_grass_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/leafy_grass/leafy_grass_nor_gl_1k.jpg",
+      "bytes": 169220,
+      "sha256": "14c26d07865dd7db0fa53167e9d1f5ae870afeaa63445ff467abb52052200b91",
+      "local_sha256": "14c26d07865dd7db0fa53167e9d1f5ae870afeaa63445ff467abb52052200b91",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/leafy_grass/leafy_grass_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/leafy_grass/leafy_grass_diffuse_1k.jpg",
+      "bytes": 341762,
+      "sha256": "2e85536b5c4d043d5c90fb76a4a8c85d60dca55051487cf37a1dac8c418a02ef",
+      "local_sha256": "2e85536b5c4d043d5c90fb76a4a8c85d60dca55051487cf37a1dac8c418a02ef",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/river_small_rocks/river_small_rocks_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/river_small_rocks/river_small_rocks_nor_gl_1k.jpg",
+      "bytes": 193161,
+      "sha256": "3758f64d09743fa7f4be92a5f5d7e21f8f7be187a83b885eaabaeb988ecd0cb6",
+      "local_sha256": "3758f64d09743fa7f4be92a5f5d7e21f8f7be187a83b885eaabaeb988ecd0cb6",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/river_small_rocks/river_small_rocks_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/river_small_rocks/river_small_rocks_diffuse_1k.jpg",
+      "bytes": 300467,
+      "sha256": "c8012f0f422354392db60c9870eed9ba98cb2cf8befdaf2e6263b63cc16c3cd9",
+      "local_sha256": "c8012f0f422354392db60c9870eed9ba98cb2cf8befdaf2e6263b63cc16c3cd9",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/river_small_rocks/river_small_rocks_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/river_small_rocks/river_small_rocks_arm_1k.jpg",
+      "bytes": 56410,
+      "sha256": "21a6cbb42a63880147021d20837a1870bdbc6e80e4eed743fa519c292b6c6884",
+      "local_sha256": "21a6cbb42a63880147021d20837a1870bdbc6e80e4eed743fa519c292b6c6884",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/rocks/rocks.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/rocks/rocks.bin",
+      "bytes": 771218,
+      "sha256": "c22d057ac05d6517357f2aa5e6b6ebd4448726af71a35da31bd7e20cdfb28a2e",
+      "local_sha256": "c22d057ac05d6517357f2aa5e6b6ebd4448726af71a35da31bd7e20cdfb28a2e",
+      "content_type": "application/octet-stream"
+    },
+    {
+      "path": "assets/terrain/rocks/rocks.json",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/rocks/rocks.json",
+      "bytes": 7129,
+      "sha256": "447d75dbc1bb6efb9aa543c9f79e52352bf99ba6cb5af06616f4670513683768",
+      "local_sha256": "447d75dbc1bb6efb9aa543c9f79e52352bf99ba6cb5af06616f4670513683768",
+      "content_type": "application/json"
+    },
+    {
+      "path": "assets/terrain/forest_leaves_02/forest_leaves_02_diffuse_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/forest_leaves_02/forest_leaves_02_diffuse_1k.jpg",
+      "bytes": 415049,
+      "sha256": "3180b0468c111c8eb02a9cafd9fff8e5d3d40fe8f3c3170f4849fb4bf92c1a47",
+      "local_sha256": "3180b0468c111c8eb02a9cafd9fff8e5d3d40fe8f3c3170f4849fb4bf92c1a47",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/forest_leaves_02/forest_leaves_02_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/forest_leaves_02/forest_leaves_02_arm_1k.jpg",
+      "bytes": 66689,
+      "sha256": "58be568792b2b1bb2024b927fc7391bdec47ad72b21b900d93caf963e0fd6df0",
+      "local_sha256": "58be568792b2b1bb2024b927fc7391bdec47ad72b21b900d93caf963e0fd6df0",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/terrain/forest_leaves_02/forest_leaves_02_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/terrain/forest_leaves_02/forest_leaves_02_nor_gl_1k.jpg",
+      "bytes": 211689,
+      "sha256": "b075122e30211d8afa46b20e7c4b554c5376e03cce402ac15a37902f2275a3db",
+      "local_sha256": "b075122e30211d8afa46b20e7c4b554c5376e03cce402ac15a37902f2275a3db",
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/game/wooden_crate_02/textures/wooden_crate_02_arm_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wooden_crate_02/textures/wooden_crate_02_arm_1k.jpg",
+      "bytes": 55145,
+      "sha256": "1974e401933b8c001d703f7b3e6e1f65f9e7da7184dfd5025e2a925b2c287bcc",
+      "local_sha256": "1974e401933b8c001d703f7b3e6e1f65f9e7da7184dfd5025e2a925b2c287bcc",
+      "content_type": "image/jpeg",
+      "restored": "2026-09-27 playthrough 404"
+    },
+    {
+      "path": "assets/game/wooden_crate_02/textures/wooden_crate_02_diff_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wooden_crate_02/textures/wooden_crate_02_diff_1k.jpg",
+      "bytes": 176156,
+      "sha256": "381127081974cecf2764e3f1885ca2dba53cd4af230def12e1a72a4673b8145c",
+      "local_sha256": "381127081974cecf2764e3f1885ca2dba53cd4af230def12e1a72a4673b8145c",
+      "content_type": "image/jpeg",
+      "restored": "2026-09-27 playthrough 404"
+    },
+    {
+      "path": "assets/game/wooden_crate_02/textures/wooden_crate_02_nor_gl_1k.jpg",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wooden_crate_02/textures/wooden_crate_02_nor_gl_1k.jpg",
+      "bytes": 55455,
+      "sha256": "ea64b76efc62329c9b9e435e7e867e137871ea8809fe1f97202ffb067f870fc6",
+      "local_sha256": "ea64b76efc62329c9b9e435e7e867e137871ea8809fe1f97202ffb067f870fc6",
+      "content_type": "image/jpeg",
+      "restored": "2026-09-27 playthrough 404"
+    },
+    {
+      "path": "assets/game/wooden_crate_02/wooden_crate_02.bin",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wooden_crate_02/wooden_crate_02.bin",
+      "bytes": 92977,
+      "sha256": "0ee6bfed8c53eaa093ddd6c5c24398dd8034d2c499de2493bcd8933db1a630f7",
+      "local_sha256": "0ee6bfed8c53eaa093ddd6c5c24398dd8034d2c499de2493bcd8933db1a630f7",
+      "content_type": "application/octet-stream",
+      "restored": "2026-09-27 playthrough 404"
+    },
+    {
+      "path": "assets/game/wooden_crate_02/wooden_crate_02_1k.gltf",
+      "url": "https://hanakawa-boat-game.vercel.app/assets/game/wooden_crate_02/wooden_crate_02_1k.gltf",
+      "bytes": 4150,
+      "sha256": "e90985d317664668988cb95ce707784c94ab0ccc6d13c980ca789fa69a5cf7b6",
+      "local_sha256": "e90985d317664668988cb95ce707784c94ab0ccc6d13c980ca789fa69a5cf7b6",
+      "content_type": "model/gltf+json",
+      "restored": "2026-09-27 playthrough 404"
+    }
+  ],
+  "failed": {}
+}

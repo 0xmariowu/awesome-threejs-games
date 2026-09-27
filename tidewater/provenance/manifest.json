@@ -1,0 +1,1352 @@
+{
+  "source": "https://dgreenheck.github.io/tidewater/",
+  "entry_path": "/tidewater/index.html",
+  "files": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat+Brush&family=Kalam:wght@400;700&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-1b28234ca5bf",
+      "bytes": 2007,
+      "sha256": "780c81e4da19d576b2c5888b016cb2edf975e799c5611c0d33107633d6057bc8",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "081b5e895d45349be87a0e144c962ed7a2ae4ad18fc7f55c34ad91ecbf830c5e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/caveatbrush/v12/EYq0maZfwr9S9-ETZc3fKXtMWw.ttf",
+      "path": "_external/fonts.gstatic.com/s/caveatbrush/v12/EYq0maZfwr9S9-ETZc3fKXtMWw.ttf",
+      "bytes": 294916,
+      "sha256": "719563de0b82980a30f998539ab14a8a0521b3d70a622aa7d2374b2f8d1c9386",
+      "content_type": "font/ttf",
+      "local_sha256": "719563de0b82980a30f998539ab14a8a0521b3d70a622aa7d2374b2f8d1c9386"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYMZg.ttf",
+      "bytes": 326468,
+      "sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c",
+      "content_type": "font/ttf",
+      "local_sha256": "b37284b5701b6b168dfc770aa1a4ac492106422fd3ba76bc7641e37434e8019c"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYMZg.ttf",
+      "bytes": 326048,
+      "sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7",
+      "content_type": "font/ttf",
+      "local_sha256": "e7a1aaf7eda9f2fad4131725fa556265ec75ca7b2d756260173a040363e8d4f7"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "bytes": 325304,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "content_type": "font/ttf",
+      "local_sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "content_type": "font/ttf",
+      "local_sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8-qxjPQ.ttf",
+      "path": "_external/fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8-qxjPQ.ttf",
+      "bytes": 112204,
+      "sha256": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160",
+      "content_type": "font/ttf",
+      "local_sha256": "3386a05f6ece969e4537de6be894170d20558e82f7d56c8c5d332972ef172160"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf",
+      "path": "_external/fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf",
+      "bytes": 112172,
+      "sha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3",
+      "content_type": "font/ttf",
+      "local_sha256": "44ce4a84f20d60f24539bd0cef11f79c29e38609e0f8adf18551c9794a5d9dc3"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/kalam/v18/YA9Qr0Wd4kDdMtDqHQLL.ttf",
+      "path": "_external/fonts.gstatic.com/s/kalam/v18/YA9Qr0Wd4kDdMtDqHQLL.ttf",
+      "bytes": 460024,
+      "sha256": "7463b42e3630f003f355b3f37e1cf8e2c0b0855374d483aef580ff45fdac3ba4",
+      "content_type": "font/ttf",
+      "local_sha256": "7463b42e3630f003f355b3f37e1cf8e2c0b0855374d483aef580ff45fdac3ba4"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/kalam/v18/YA9dr0Wd4kDdMuhW.ttf",
+      "path": "_external/fonts.gstatic.com/s/kalam/v18/YA9dr0Wd4kDdMuhW.ttf",
+      "bytes": 426488,
+      "sha256": "f20e9de66ca054e1d1376b3c811d2240b1b5ef831474bda9fbbaf28d67e67902",
+      "content_type": "font/ttf",
+      "local_sha256": "f20e9de66ca054e1d1376b3c811d2240b1b5ef831474bda9fbbaf28d67e67902"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/assets/Bench-Bz7ZSM9S.js",
+      "path": "tidewater/assets/Bench-Bz7ZSM9S.js",
+      "bytes": 5287,
+      "sha256": "541c797deb468d032743bca346ca0921380cb4ac9f27a2092e3b2cbcb061f632",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "541c797deb468d032743bca346ca0921380cb4ac9f27a2092e3b2cbcb061f632"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/assets/Frame-Baeda3sr.js",
+      "path": "tidewater/assets/Frame-Baeda3sr.js",
+      "bytes": 67108,
+      "sha256": "abe20f10a9bd5cc2b5650839c40793448f6e74345482aa255d9fec61536d6fe8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "abe20f10a9bd5cc2b5650839c40793448f6e74345482aa255d9fec61536d6fe8"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/assets/GPU-CCgDO5fU.js",
+      "path": "tidewater/assets/GPU-CCgDO5fU.js",
+      "bytes": 5691,
+      "sha256": "8e424cad13ddab6411464605ff8a9c53cffed08cae8310e635f341042fda51cf",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8e424cad13ddab6411464605ff8a9c53cffed08cae8310e635f341042fda51cf"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/assets/index-BLPDbtK3.css",
+      "path": "tidewater/assets/index-BLPDbtK3.css",
+      "bytes": 45866,
+      "sha256": "4c2eaac7de99f019beb4c2b40416bccf3e2c66aa6886c81e1b2124fe5d8fadeb",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "4c2eaac7de99f019beb4c2b40416bccf3e2c66aa6886c81e1b2124fe5d8fadeb"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/assets/index-DYix_jF0.js",
+      "path": "tidewater/assets/index-DYix_jF0.js",
+      "bytes": 1800790,
+      "sha256": "b2aba10f43e3cd0093c3e978990ac46743186f79effa2c65325e56d081fb63a2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b2aba10f43e3cd0093c3e978990ac46743186f79effa2c65325e56d081fb63a2"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/CREDITS.md",
+      "path": "tidewater/audio/CREDITS.md",
+      "bytes": 10394,
+      "sha256": "1ce3b28a2a36237bb3ab101bd0e7e2accff37475e95d16f8e27d420b11605207",
+      "content_type": "text/markdown; charset=utf-8",
+      "local_sha256": "1ce3b28a2a36237bb3ab101bd0e7e2accff37475e95d16f8e27d420b11605207"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/bail_click.ogg",
+      "path": "tidewater/audio/bail_click.ogg",
+      "bytes": 13369,
+      "sha256": "42236eb210ce7a0cc54b28c13e5d5dd00e0782ecde3b3a61561a177bb0f5cabc",
+      "content_type": "audio/ogg",
+      "local_sha256": "42236eb210ce7a0cc54b28c13e5d5dd00e0782ecde3b3a61561a177bb0f5cabc"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/big_splash.ogg",
+      "path": "tidewater/audio/big_splash.ogg",
+      "bytes": 31718,
+      "sha256": "b3401965c8536d93dffa62a793ca45a34b185d0d0bb28f58f16b35a19990c38e",
+      "content_type": "audio/ogg",
+      "local_sha256": "b3401965c8536d93dffa62a793ca45a34b185d0d0bb28f58f16b35a19990c38e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/bird_dove.ogg",
+      "path": "tidewater/audio/bird_dove.ogg",
+      "bytes": 128894,
+      "sha256": "156f11da57c25ab4ee05af27a2d38f01195bad8283f1ee2424c0e6e185f7b6c9",
+      "content_type": "audio/ogg",
+      "local_sha256": "156f11da57c25ab4ee05af27a2d38f01195bad8283f1ee2424c0e6e185f7b6c9"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/bird_forest.ogg",
+      "path": "tidewater/audio/bird_forest.ogg",
+      "bytes": 159596,
+      "sha256": "a5368bcbbaae5b7521322f225cab99f644abab975c6c5db1a17b9232ada6f032",
+      "content_type": "audio/ogg",
+      "local_sha256": "a5368bcbbaae5b7521322f225cab99f644abab975c6c5db1a17b9232ada6f032"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/birds_dawn.ogg",
+      "path": "tidewater/audio/birds_dawn.ogg",
+      "bytes": 378131,
+      "sha256": "4647b53f1409faab746a18f946e76b4f4002ec6821c2be62e6f9a4f40da694a4",
+      "content_type": "audio/ogg",
+      "local_sha256": "4647b53f1409faab746a18f946e76b4f4002ec6821c2be62e6f9a4f40da694a4"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/boat_engine.ogg",
+      "path": "tidewater/audio/boat_engine.ogg",
+      "bytes": 411828,
+      "sha256": "9ae124875c9290c1f3b57f5fe4504b640e0f131949ddc7f278b3725d616137d9",
+      "content_type": "audio/ogg",
+      "local_sha256": "9ae124875c9290c1f3b57f5fe4504b640e0f131949ddc7f278b3725d616137d9"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/boat_lap.ogg",
+      "path": "tidewater/audio/boat_lap.ogg",
+      "bytes": 293262,
+      "sha256": "90c0b619f22842e8625520e36d6da6cad6d3cf21ade49c36a77d03ddcbde9bb8",
+      "content_type": "audio/ogg",
+      "local_sha256": "90c0b619f22842e8625520e36d6da6cad6d3cf21ade49c36a77d03ddcbde9bb8"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/boat_rush.ogg",
+      "path": "tidewater/audio/boat_rush.ogg",
+      "bytes": 318170,
+      "sha256": "c5ea66614be5bce2787ba4ee8478433c18fd3e80e7b2bafa5365664ecf72ca5e",
+      "content_type": "audio/ogg",
+      "local_sha256": "c5ea66614be5bce2787ba4ee8478433c18fd3e80e7b2bafa5365664ecf72ca5e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/coins.ogg",
+      "path": "tidewater/audio/coins.ogg",
+      "bytes": 15872,
+      "sha256": "caf26599903959eb27f5b3660e8c6f3c9d317917848a86174e16f4b465ab5e92",
+      "content_type": "audio/ogg",
+      "local_sha256": "caf26599903959eb27f5b3660e8c6f3c9d317917848a86174e16f4b465ab5e92"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/crickets.ogg",
+      "path": "tidewater/audio/crickets.ogg",
+      "bytes": 341489,
+      "sha256": "01b41d7e8fc719373f77f41f3936e8ccfdfee4aadea1a1dd1120206b2115d76c",
+      "content_type": "audio/ogg",
+      "local_sha256": "01b41d7e8fc719373f77f41f3936e8ccfdfee4aadea1a1dd1120206b2115d76c"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/emerge.ogg",
+      "path": "tidewater/audio/emerge.ogg",
+      "bytes": 9254,
+      "sha256": "6b06f80b49a1dc03daa0ec0bc02e6a0b68c8d36c2af16cbaf0a9874bb4320759",
+      "content_type": "audio/ogg",
+      "local_sha256": "6b06f80b49a1dc03daa0ec0bc02e6a0b68c8d36c2af16cbaf0a9874bb4320759"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/fish_flop.ogg",
+      "path": "tidewater/audio/fish_flop.ogg",
+      "bytes": 25121,
+      "sha256": "c1425bfbd966e387409f83c8c1aa16c8a553703957b24af46b4c863776eb0c87",
+      "content_type": "audio/ogg",
+      "local_sha256": "c1425bfbd966e387409f83c8c1aa16c8a553703957b24af46b4c863776eb0c87"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/fish_splash.ogg",
+      "path": "tidewater/audio/fish_splash.ogg",
+      "bytes": 38203,
+      "sha256": "7c3b51bdf54b08bd53364aceb603c19e6e6c7f961f9d8f7385fac65d269e5897",
+      "content_type": "audio/ogg",
+      "local_sha256": "7c3b51bdf54b08bd53364aceb603c19e6e6c7f961f9d8f7385fac65d269e5897"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/gull.ogg",
+      "path": "tidewater/audio/gull.ogg",
+      "bytes": 55921,
+      "sha256": "467dd8e48f66c5b497f051c622ca7f753b9bf30eaf1ca7b9162b8e234bb674bb",
+      "content_type": "audio/ogg",
+      "local_sha256": "467dd8e48f66c5b497f051c622ca7f753b9bf30eaf1ca7b9162b8e234bb674bb"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/hull_slap.ogg",
+      "path": "tidewater/audio/hull_slap.ogg",
+      "bytes": 27436,
+      "sha256": "a0d74ee5d1dc174de4a2806090bfa4005999dfa9a038cb2067bd85f1ec1ef0f9",
+      "content_type": "audio/ogg",
+      "local_sha256": "a0d74ee5d1dc174de4a2806090bfa4005999dfa9a038cb2067bd85f1ec1ef0f9"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/line_out.ogg",
+      "path": "tidewater/audio/line_out.ogg",
+      "bytes": 5795,
+      "sha256": "5fdf20746905ed2a1ca8a9dc2ca58cfa1e74762922413f6f0fa12bc1f5875409",
+      "content_type": "audio/ogg",
+      "local_sha256": "5fdf20746905ed2a1ca8a9dc2ca58cfa1e74762922413f6f0fa12bc1f5875409"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/line_snap.ogg",
+      "path": "tidewater/audio/line_snap.ogg",
+      "bytes": 20929,
+      "sha256": "2a312b716065f7c676d56ed3b31b6ffef8194cbb00159337b2a65b9a998c860d",
+      "content_type": "audio/ogg",
+      "local_sha256": "2a312b716065f7c676d56ed3b31b6ffef8194cbb00159337b2a65b9a998c860d"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/line_strain.ogg",
+      "path": "tidewater/audio/line_strain.ogg",
+      "bytes": 9264,
+      "sha256": "4f7e9604609b4d2daed797d85894f0c1f68b0242f34c980e4687664686a965d1",
+      "content_type": "audio/ogg",
+      "local_sha256": "4f7e9604609b4d2daed797d85894f0c1f68b0242f34c980e4687664686a965d1"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/palms.ogg",
+      "path": "tidewater/audio/palms.ogg",
+      "bytes": 357078,
+      "sha256": "33c89a41d0e0592cb2b6fd5592fab4e7333b090dace7fd755334cc145ef51820",
+      "content_type": "audio/ogg",
+      "local_sha256": "33c89a41d0e0592cb2b6fd5592fab4e7333b090dace7fd755334cc145ef51820"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/pier_lap.ogg",
+      "path": "tidewater/audio/pier_lap.ogg",
+      "bytes": 287231,
+      "sha256": "e020be075543b148dfb2b47540a605c1a30d25e5d18206b945b949b96a32079a",
+      "content_type": "audio/ogg",
+      "local_sha256": "e020be075543b148dfb2b47540a605c1a30d25e5d18206b945b949b96a32079a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/plop.ogg",
+      "path": "tidewater/audio/plop.ogg",
+      "bytes": 11220,
+      "sha256": "b648df37071652a2335aa34f3a73e03aeb3bd8201c26d65951ebac0779b6c6f7",
+      "content_type": "audio/ogg",
+      "local_sha256": "b648df37071652a2335aa34f3a73e03aeb3bd8201c26d65951ebac0779b6c6f7"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/reel_drag.ogg",
+      "path": "tidewater/audio/reel_drag.ogg",
+      "bytes": 38165,
+      "sha256": "e22d713852e49557b535b9e08cb35911a696935eb87e67ee7b1e9490d0ed3085",
+      "content_type": "audio/ogg",
+      "local_sha256": "e22d713852e49557b535b9e08cb35911a696935eb87e67ee7b1e9490d0ed3085"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/reel_wind.ogg",
+      "path": "tidewater/audio/reel_wind.ogg",
+      "bytes": 70632,
+      "sha256": "6783e26b193865bf0c143e61c0b1c63a18f554fd21e9ef6f4b9f5997fde0d61f",
+      "content_type": "audio/ogg",
+      "local_sha256": "6783e26b193865bf0c143e61c0b1c63a18f554fd21e9ef6f4b9f5997fde0d61f"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/rod_swish.ogg",
+      "path": "tidewater/audio/rod_swish.ogg",
+      "bytes": 24086,
+      "sha256": "5637f21cc6d11e6e16f1806997267117bb34e0a190277f2569c5ba8f1f234184",
+      "content_type": "audio/ogg",
+      "local_sha256": "5637f21cc6d11e6e16f1806997267117bb34e0a190277f2569c5ba8f1f234184"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/splash.ogg",
+      "path": "tidewater/audio/splash.ogg",
+      "bytes": 63034,
+      "sha256": "9de4dab53ab34891dcfe14be3160c5cb6770364e007c83cec8d0d79065a49ee0",
+      "content_type": "audio/ogg",
+      "local_sha256": "9de4dab53ab34891dcfe14be3160c5cb6770364e007c83cec8d0d79065a49ee0"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/step_grass.ogg",
+      "path": "tidewater/audio/step_grass.ogg",
+      "bytes": 19268,
+      "sha256": "31be902e1ddf2530867d447cc3ae602a03c9aa60293d515f27359dbafd5ceb87",
+      "content_type": "audio/ogg",
+      "local_sha256": "31be902e1ddf2530867d447cc3ae602a03c9aa60293d515f27359dbafd5ceb87"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/step_rock.ogg",
+      "path": "tidewater/audio/step_rock.ogg",
+      "bytes": 21541,
+      "sha256": "82b0a1bb6344b982c789988d99d9d324493ea0a1e7fd1668c0ca2081e8895157",
+      "content_type": "audio/ogg",
+      "local_sha256": "82b0a1bb6344b982c789988d99d9d324493ea0a1e7fd1668c0ca2081e8895157"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/step_sand.ogg",
+      "path": "tidewater/audio/step_sand.ogg",
+      "bytes": 22902,
+      "sha256": "3128efca52668d0aad8ec243963a691b969e2327c5c740f41c71fe624c96242e",
+      "content_type": "audio/ogg",
+      "local_sha256": "3128efca52668d0aad8ec243963a691b969e2327c5c740f41c71fe624c96242e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/step_water.ogg",
+      "path": "tidewater/audio/step_water.ogg",
+      "bytes": 37998,
+      "sha256": "e8b03fa5acd8d09286e1b3907b5c86dbcfaa6064afe59cb375a37b4abac7636e",
+      "content_type": "audio/ogg",
+      "local_sha256": "e8b03fa5acd8d09286e1b3907b5c86dbcfaa6064afe59cb375a37b4abac7636e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/step_wetsand.ogg",
+      "path": "tidewater/audio/step_wetsand.ogg",
+      "bytes": 17584,
+      "sha256": "c48ebf1ee3124be44d5348689b0e2c32513370c6975d27bde509d6a42a05c9b4",
+      "content_type": "audio/ogg",
+      "local_sha256": "c48ebf1ee3124be44d5348689b0e2c32513370c6975d27bde509d6a42a05c9b4"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/step_wood.ogg",
+      "path": "tidewater/audio/step_wood.ogg",
+      "bytes": 22476,
+      "sha256": "90cb5daf01a8f122bf0a08504f2216869008b0943e588c4bc637f1bd187210d8",
+      "content_type": "audio/ogg",
+      "local_sha256": "90cb5daf01a8f122bf0a08504f2216869008b0943e588c4bc637f1bd187210d8"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/submerge.ogg",
+      "path": "tidewater/audio/submerge.ogg",
+      "bytes": 15989,
+      "sha256": "56b2f265bb453da7daf1775ca9d2a9c3e6366758d0c0d906b791c4996bdd36c2",
+      "content_type": "audio/ogg",
+      "local_sha256": "56b2f265bb453da7daf1775ca9d2a9c3e6366758d0c0d906b791c4996bdd36c2"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/surf_backwash.ogg",
+      "path": "tidewater/audio/surf_backwash.ogg",
+      "bytes": 108825,
+      "sha256": "9e771de117448c7d672c888a472777a9074b63ab904a5c121f5624f4f4fa4b81",
+      "content_type": "audio/ogg",
+      "local_sha256": "9e771de117448c7d672c888a472777a9074b63ab904a5c121f5624f4f4fa4b81"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/surf_crash.ogg",
+      "path": "tidewater/audio/surf_crash.ogg",
+      "bytes": 132426,
+      "sha256": "9e09d4ec25c4b31114f7c44c1a2a57e8d84589caa64592817df5b79d8174e6ea",
+      "content_type": "audio/ogg",
+      "local_sha256": "9e09d4ec25c4b31114f7c44c1a2a57e8d84589caa64592817df5b79d8174e6ea"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/surf_far.ogg",
+      "path": "tidewater/audio/surf_far.ogg",
+      "bytes": 365150,
+      "sha256": "a4c0068c83ae7752c0b666cf06548ac917aefd61bb49f970d9f19d52b4f7eaa4",
+      "content_type": "audio/ogg",
+      "local_sha256": "a4c0068c83ae7752c0b666cf06548ac917aefd61bb49f970d9f19d52b4f7eaa4"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/surf_wash.ogg",
+      "path": "tidewater/audio/surf_wash.ogg",
+      "bytes": 75291,
+      "sha256": "cad02b8c23a584290da4a7e73742e9477d4088d927aae19c1b852f1cf53619c7",
+      "content_type": "audio/ogg",
+      "local_sha256": "cad02b8c23a584290da4a7e73742e9477d4088d927aae19c1b852f1cf53619c7"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/swim.ogg",
+      "path": "tidewater/audio/swim.ogg",
+      "bytes": 29543,
+      "sha256": "cf45000f1b0ad2b0f330b2dde654a53ea64ce3484301d024c32bd57dd32bffdc",
+      "content_type": "audio/ogg",
+      "local_sha256": "cf45000f1b0ad2b0f330b2dde654a53ea64ce3484301d024c32bd57dd32bffdc"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/tern.ogg",
+      "path": "tidewater/audio/tern.ogg",
+      "bytes": 108719,
+      "sha256": "981c538c1db50380f3a7afe04656f7b08d60ebd1c1be84fcc6052f70d7175559",
+      "content_type": "audio/ogg",
+      "local_sha256": "981c538c1db50380f3a7afe04656f7b08d60ebd1c1be84fcc6052f70d7175559"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/under_reef.ogg",
+      "path": "tidewater/audio/under_reef.ogg",
+      "bytes": 412371,
+      "sha256": "121952cc2e09a3a30712e2d1038a00366e2cbad3dccf1fa2388261487028249f",
+      "content_type": "audio/ogg",
+      "local_sha256": "121952cc2e09a3a30712e2d1038a00366e2cbad3dccf1fa2388261487028249f"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/uw_swim.ogg",
+      "path": "tidewater/audio/uw_swim.ogg",
+      "bytes": 37646,
+      "sha256": "b52eae0e40747edb6f84e12f0bf62674e667004204cc35929182c73abd98b00f",
+      "content_type": "audio/ogg",
+      "local_sha256": "b52eae0e40747edb6f84e12f0bf62674e667004204cc35929182c73abd98b00f"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/whale_blow.ogg",
+      "path": "tidewater/audio/whale_blow.ogg",
+      "bytes": 37617,
+      "sha256": "549b6b6c1fcba1617d30b632332d21a168e48cde7f1cfad5906b64096d057e0f",
+      "content_type": "audio/ogg",
+      "local_sha256": "549b6b6c1fcba1617d30b632332d21a168e48cde7f1cfad5906b64096d057e0f"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/whale_song.ogg",
+      "path": "tidewater/audio/whale_song.ogg",
+      "bytes": 373991,
+      "sha256": "5452f85dda448630503eacee842737b72a6731bfa4989edd7e4df7e6eb8de45f",
+      "content_type": "audio/ogg",
+      "local_sha256": "5452f85dda448630503eacee842737b72a6731bfa4989edd7e4df7e6eb8de45f"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/audio/wind.ogg",
+      "path": "tidewater/audio/wind.ogg",
+      "bytes": 415921,
+      "sha256": "3e5d45f75364bf797f375061ed0232724e0570c1ff8f64c4c97498093e1789ec",
+      "content_type": "audio/ogg",
+      "local_sha256": "3e5d45f75364bf797f375061ed0232724e0570c1ff8f64c4c97498093e1789ec"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/clouds/LICENSING.md",
+      "path": "tidewater/clouds/LICENSING.md",
+      "bytes": 1123,
+      "sha256": "49a92b94c0037891fd16910ee4110b2ca8f3d2cdee7216ef1e48e646f5e7b384",
+      "content_type": "text/markdown; charset=utf-8",
+      "local_sha256": "49a92b94c0037891fd16910ee4110b2ca8f3d2cdee7216ef1e48e646f5e7b384"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/clouds/baseShape64.bin",
+      "path": "tidewater/clouds/baseShape64.bin",
+      "bytes": 908287,
+      "sha256": "1e11118d70768aaeb0050ff3dd19d0c9f4321e5dc02eda8c6805e838f89c35c4",
+      "content_type": "application/octet-stream",
+      "local_sha256": "1e11118d70768aaeb0050ff3dd19d0c9f4321e5dc02eda8c6805e838f89c35c4"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/clouds/blueNoise.bin",
+      "path": "tidewater/clouds/blueNoise.bin",
+      "bytes": 4096,
+      "sha256": "982b0312f19ed4a737f55be30d965d85ec05d63bee679ea28c488cc8db323cc0",
+      "content_type": "application/octet-stream",
+      "local_sha256": "982b0312f19ed4a737f55be30d965d85ec05d63bee679ea28c488cc8db323cc0"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/",
+      "path": "tidewater/index.html",
+      "bytes": 3805,
+      "sha256": "62fa70d9e19bd266caef3933a18f8b92e95cc68d91e49b6e2666d6ff9776baa1",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "0b6df2e436fb5d95caf8d371ade965db6e7044caa02095647f0986a39d399e34"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/characters/LICENSE-Rocketbox.md",
+      "path": "tidewater/models/characters/LICENSE-Rocketbox.md",
+      "bytes": 1066,
+      "sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352",
+      "content_type": "text/markdown; charset=utf-8",
+      "local_sha256": "17474e386e0b9e1a700cc3d06b2b0882a2c376d9c6b49c7f8274409b8f8d2352"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/characters/joe.glb",
+      "path": "tidewater/models/characters/joe.glb",
+      "bytes": 4743204,
+      "sha256": "da3efce5a452d3c17f40b8d33bf449f565c0a6bef93602dc3e74364fb64081ca",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "da3efce5a452d3c17f40b8d33bf449f565c0a6bef93602dc3e74364fb64081ca"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/characters/marta.glb",
+      "path": "tidewater/models/characters/marta.glb",
+      "bytes": 5507076,
+      "sha256": "2b5eb048c75d37a6815cfc2770ca87dcaba1729b72779f1557c4f4d13b3ba75a",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "2b5eb048c75d37a6815cfc2770ca87dcaba1729b72779f1557c4f4d13b3ba75a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/CREDITS.md",
+      "path": "tidewater/models/debris/CREDITS.md",
+      "bytes": 1390,
+      "sha256": "97798436efce4cb6302d6fd4c508b064c39a2095e4642b87fb0380b3360f168e",
+      "content_type": "text/markdown; charset=utf-8",
+      "local_sha256": "97798436efce4cb6302d6fd4c508b064c39a2095e4642b87fb0380b3360f168e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_01.glb",
+      "path": "tidewater/models/debris/dead_quiver_branch_01.glb",
+      "bytes": 107568,
+      "sha256": "223c1325855bb5428bef0ed94729b38b19f48933512c67a10c62197dd1a6a328",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "223c1325855bb5428bef0ed94729b38b19f48933512c67a10c62197dd1a6a328"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_01_albedo.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_01_albedo.jpg",
+      "bytes": 720703,
+      "sha256": "2da1b4bdd5ea430d7ad1ba2fb547bf4f18d9def6f711781be89972e004757d2a",
+      "content_type": "image/jpeg",
+      "local_sha256": "2da1b4bdd5ea430d7ad1ba2fb547bf4f18d9def6f711781be89972e004757d2a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_01_arm.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_01_arm.jpg",
+      "bytes": 595028,
+      "sha256": "9fc47d37b740a409fea889edc7f2d7bedac3d970a3a506092e18cfca10d2ed82",
+      "content_type": "image/jpeg",
+      "local_sha256": "9fc47d37b740a409fea889edc7f2d7bedac3d970a3a506092e18cfca10d2ed82"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_01_normal.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_01_normal.jpg",
+      "bytes": 1023490,
+      "sha256": "1d6603df36d0dd711d73e0ae2f067cd96f63d5e3ab0681d4a85bcb8df2049388",
+      "content_type": "image/jpeg",
+      "local_sha256": "1d6603df36d0dd711d73e0ae2f067cd96f63d5e3ab0681d4a85bcb8df2049388"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_01_{albedo,normal,arm}.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_01_{albedo,normal,arm}.jpg",
+      "bytes": 595028,
+      "sha256": "9fc47d37b740a409fea889edc7f2d7bedac3d970a3a506092e18cfca10d2ed82",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "9fc47d37b740a409fea889edc7f2d7bedac3d970a3a506092e18cfca10d2ed82"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_02.glb",
+      "path": "tidewater/models/debris/dead_quiver_branch_02.glb",
+      "bytes": 106644,
+      "sha256": "5dfac308be9c9c8f8e362e5e2596b000ae706d37afebf4ab9f68ff3b69fa0134",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "5dfac308be9c9c8f8e362e5e2596b000ae706d37afebf4ab9f68ff3b69fa0134"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_02_albedo.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_02_albedo.jpg",
+      "bytes": 617273,
+      "sha256": "6519bf7082bb3849c94a43a1f615a4a94547edd59217e05ab1351205eafd88da",
+      "content_type": "image/jpeg",
+      "local_sha256": "6519bf7082bb3849c94a43a1f615a4a94547edd59217e05ab1351205eafd88da"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_02_arm.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_02_arm.jpg",
+      "bytes": 501350,
+      "sha256": "4cc11b6d5ffd457280ffc2652f40f27c25352447f03afaa0f3e8920b5f597280",
+      "content_type": "image/jpeg",
+      "local_sha256": "4cc11b6d5ffd457280ffc2652f40f27c25352447f03afaa0f3e8920b5f597280"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_02_normal.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_02_normal.jpg",
+      "bytes": 737343,
+      "sha256": "27007d93991058dcead6a52b877d86bc7f5b27a13e397d5a99e8f00562166533",
+      "content_type": "image/jpeg",
+      "local_sha256": "27007d93991058dcead6a52b877d86bc7f5b27a13e397d5a99e8f00562166533"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_branch_02_{albedo,normal,arm}.jpg",
+      "path": "tidewater/models/debris/dead_quiver_branch_02_{albedo,normal,arm}.jpg",
+      "bytes": 501350,
+      "sha256": "4cc11b6d5ffd457280ffc2652f40f27c25352447f03afaa0f3e8920b5f597280",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "4cc11b6d5ffd457280ffc2652f40f27c25352447f03afaa0f3e8920b5f597280"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_trunk.glb",
+      "path": "tidewater/models/debris/dead_quiver_trunk.glb",
+      "bytes": 128644,
+      "sha256": "19a89e0b97270d816555cfe39f3c45a8cfd1452e77c41822219f0947b7d96f3c",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "19a89e0b97270d816555cfe39f3c45a8cfd1452e77c41822219f0947b7d96f3c"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_trunk_albedo.jpg",
+      "path": "tidewater/models/debris/dead_quiver_trunk_albedo.jpg",
+      "bytes": 768713,
+      "sha256": "53015f7dc3cc9a5ad360439b63c72d90402314201255495684bf6a6499aef7e0",
+      "content_type": "image/jpeg",
+      "local_sha256": "53015f7dc3cc9a5ad360439b63c72d90402314201255495684bf6a6499aef7e0"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_trunk_arm.jpg",
+      "path": "tidewater/models/debris/dead_quiver_trunk_arm.jpg",
+      "bytes": 514214,
+      "sha256": "7aa714956b606c2d4a929d4ab76490db4a45f23a1ec24c66f088867ef363f37a",
+      "content_type": "image/jpeg",
+      "local_sha256": "7aa714956b606c2d4a929d4ab76490db4a45f23a1ec24c66f088867ef363f37a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_trunk_normal.jpg",
+      "path": "tidewater/models/debris/dead_quiver_trunk_normal.jpg",
+      "bytes": 573241,
+      "sha256": "b3d987eba87112005529664455a82809da2325420021d494832dd8ba860eb62c",
+      "content_type": "image/jpeg",
+      "local_sha256": "b3d987eba87112005529664455a82809da2325420021d494832dd8ba860eb62c"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/dead_quiver_trunk_{albedo,normal,arm}.jpg",
+      "path": "tidewater/models/debris/dead_quiver_trunk_{albedo,normal,arm}.jpg",
+      "bytes": 514214,
+      "sha256": "7aa714956b606c2d4a929d4ab76490db4a45f23a1ec24c66f088867ef363f37a",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "7aa714956b606c2d4a929d4ab76490db4a45f23a1ec24c66f088867ef363f37a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/lambis_shell.glb",
+      "path": "tidewater/models/debris/lambis_shell.glb",
+      "bytes": 64276,
+      "sha256": "46228f0775fc1e6bea37595d72c8b3080f8adf68fbb522264c6fbab21df15579",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "46228f0775fc1e6bea37595d72c8b3080f8adf68fbb522264c6fbab21df15579"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/lambis_shell_albedo.jpg",
+      "path": "tidewater/models/debris/lambis_shell_albedo.jpg",
+      "bytes": 785669,
+      "sha256": "0b9296a51b8a157fff2245fced2a7723db9db4c7ea3e976802e1f9d3f93b7cc8",
+      "content_type": "image/jpeg",
+      "local_sha256": "0b9296a51b8a157fff2245fced2a7723db9db4c7ea3e976802e1f9d3f93b7cc8"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/lambis_shell_arm.jpg",
+      "path": "tidewater/models/debris/lambis_shell_arm.jpg",
+      "bytes": 567463,
+      "sha256": "360e5e637404cd8999914ba679d4bcc726b73016b69697631ba7ab33b31b4d2c",
+      "content_type": "image/jpeg",
+      "local_sha256": "360e5e637404cd8999914ba679d4bcc726b73016b69697631ba7ab33b31b4d2c"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/lambis_shell_normal.jpg",
+      "path": "tidewater/models/debris/lambis_shell_normal.jpg",
+      "bytes": 582208,
+      "sha256": "285344a5bd1ea5710fdd0447be0fb7b86bd2b5a8d67f1c93d01d4201d8f3e369",
+      "content_type": "image/jpeg",
+      "local_sha256": "285344a5bd1ea5710fdd0447be0fb7b86bd2b5a8d67f1c93d01d4201d8f3e369"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/debris/lambis_shell_{albedo,normal,arm}.jpg",
+      "path": "tidewater/models/debris/lambis_shell_{albedo,normal,arm}.jpg",
+      "bytes": 567463,
+      "sha256": "360e5e637404cd8999914ba679d4bcc726b73016b69697631ba7ab33b31b4d2c",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "360e5e637404cd8999914ba679d4bcc726b73016b69697631ba7ab33b31b4d2c"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/CREDITS.md",
+      "path": "tidewater/models/props/CREDITS.md",
+      "bytes": 3608,
+      "sha256": "7477484e351f5592808f86f0569d6d3db08d5c82b9bcfe5e1fe9fecbdc352f40",
+      "content_type": "text/markdown; charset=utf-8",
+      "local_sha256": "7477484e351f5592808f86f0569d6d3db08d5c82b9bcfe5e1fe9fecbdc352f40"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_WoodenTable_03_0_a.jpg",
+      "path": "tidewater/models/props/p_WoodenTable_03_0_a.jpg",
+      "bytes": 48049,
+      "sha256": "941155536ebc3c00fd62035cab642b7061f72477ef824a573612de5175985363",
+      "content_type": "image/jpeg",
+      "local_sha256": "941155536ebc3c00fd62035cab642b7061f72477ef824a573612de5175985363"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_WoodenTable_03_0_n.jpg",
+      "path": "tidewater/models/props/p_WoodenTable_03_0_n.jpg",
+      "bytes": 50552,
+      "sha256": "80c38ffd9f72b54d840ff8d278dc382ba84e2eb8511a7c896e19ea9109fb94cc",
+      "content_type": "image/jpeg",
+      "local_sha256": "80c38ffd9f72b54d840ff8d278dc382ba84e2eb8511a7c896e19ea9109fb94cc"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_WoodenTable_03_0_r.jpg",
+      "path": "tidewater/models/props/p_WoodenTable_03_0_r.jpg",
+      "bytes": 76840,
+      "sha256": "f0b7052ace0b9827afbe7d26beefa5009a4da0a0060e897dfcd0b7a6ea13a6f7",
+      "content_type": "image/jpeg",
+      "local_sha256": "f0b7052ace0b9827afbe7d26beefa5009a4da0a0060e897dfcd0b7a6ea13a6f7"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_fish_knife_0_a.jpg",
+      "path": "tidewater/models/props/p_fish_knife_0_a.jpg",
+      "bytes": 62747,
+      "sha256": "71c6f06f04fd039367e3825e728fe5b27f9cc4a4702a9429361ccab06f70f8fa",
+      "content_type": "image/jpeg",
+      "local_sha256": "71c6f06f04fd039367e3825e728fe5b27f9cc4a4702a9429361ccab06f70f8fa"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_fish_knife_0_n.jpg",
+      "path": "tidewater/models/props/p_fish_knife_0_n.jpg",
+      "bytes": 71662,
+      "sha256": "fdf758fd9c115f6b22711f1636a1b2c0fb45dcc99285d646d14dfc3ad16dc0cd",
+      "content_type": "image/jpeg",
+      "local_sha256": "fdf758fd9c115f6b22711f1636a1b2c0fb45dcc99285d646d14dfc3ad16dc0cd"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_fish_knife_0_r.jpg",
+      "path": "tidewater/models/props/p_fish_knife_0_r.jpg",
+      "bytes": 98754,
+      "sha256": "5497058bfb56aedeee74b86504bca9e52e5b2415cbed29117c2933df432e79d1",
+      "content_type": "image/jpeg",
+      "local_sha256": "5497058bfb56aedeee74b86504bca9e52e5b2415cbed29117c2933df432e79d1"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_fishermans_hat_0_a.jpg",
+      "path": "tidewater/models/props/p_fishermans_hat_0_a.jpg",
+      "bytes": 36296,
+      "sha256": "40da7f194859ef0a52bd154cf0e8cffb2b097170c55e689a4606bd548e33f0c9",
+      "content_type": "image/jpeg",
+      "local_sha256": "40da7f194859ef0a52bd154cf0e8cffb2b097170c55e689a4606bd548e33f0c9"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_fishermans_hat_0_n.jpg",
+      "path": "tidewater/models/props/p_fishermans_hat_0_n.jpg",
+      "bytes": 71097,
+      "sha256": "d42ff8830693639131ea90dcc234bcd4b7d63afed1799ea16ae08fd942a75567",
+      "content_type": "image/jpeg",
+      "local_sha256": "d42ff8830693639131ea90dcc234bcd4b7d63afed1799ea16ae08fd942a75567"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_fishermans_hat_0_r.jpg",
+      "path": "tidewater/models/props/p_fishermans_hat_0_r.jpg",
+      "bytes": 66174,
+      "sha256": "4ba768ea5737f0999a49e6799bc882289c9b54a7a1a27bf1d55e04a320f5419e",
+      "content_type": "image/jpeg",
+      "local_sha256": "4ba768ea5737f0999a49e6799bc882289c9b54a7a1a27bf1d55e04a320f5419e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_life_jacket_0_a.jpg",
+      "path": "tidewater/models/props/p_life_jacket_0_a.jpg",
+      "bytes": 51197,
+      "sha256": "43cb5560344cedb38d1db497e28432c6f646833571290cda9c8cf00db1965362",
+      "content_type": "image/jpeg",
+      "local_sha256": "43cb5560344cedb38d1db497e28432c6f646833571290cda9c8cf00db1965362"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_life_jacket_0_n.jpg",
+      "path": "tidewater/models/props/p_life_jacket_0_n.jpg",
+      "bytes": 62218,
+      "sha256": "5f36803c8a2fce1999951d29693a509319d70c01b68075cf81fa9946c502b28a",
+      "content_type": "image/jpeg",
+      "local_sha256": "5f36803c8a2fce1999951d29693a509319d70c01b68075cf81fa9946c502b28a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_life_jacket_0_r.jpg",
+      "path": "tidewater/models/props/p_life_jacket_0_r.jpg",
+      "bytes": 69860,
+      "sha256": "fb496c385a6b31e509f84f00d75c3b4fb5d5acad16f76c95463a71dbd98d665e",
+      "content_type": "image/jpeg",
+      "local_sha256": "fb496c385a6b31e509f84f00d75c3b4fb5d5acad16f76c95463a71dbd98d665e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_lifebuoy_0_a.jpg",
+      "path": "tidewater/models/props/p_lifebuoy_0_a.jpg",
+      "bytes": 77135,
+      "sha256": "b9dba33c840e6cca357eedc15b5f1daac756d6aac713255623ff1b04f3e38f26",
+      "content_type": "image/jpeg",
+      "local_sha256": "b9dba33c840e6cca357eedc15b5f1daac756d6aac713255623ff1b04f3e38f26"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_lifebuoy_0_n.jpg",
+      "path": "tidewater/models/props/p_lifebuoy_0_n.jpg",
+      "bytes": 90349,
+      "sha256": "b5d46416427b8ed92b1a2369e9838b4eb77db77735ad558c46e227810c05f7a9",
+      "content_type": "image/jpeg",
+      "local_sha256": "b5d46416427b8ed92b1a2369e9838b4eb77db77735ad558c46e227810c05f7a9"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_lifebuoy_0_r.jpg",
+      "path": "tidewater/models/props/p_lifebuoy_0_r.jpg",
+      "bytes": 59734,
+      "sha256": "7a292cf89446d3b137dccf70daa570bd7ce98b6a092be94ef21defb664213f97",
+      "content_type": "image/jpeg",
+      "local_sha256": "7a292cf89446d3b137dccf70daa570bd7ce98b6a092be94ef21defb664213f97"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_metal_jerrycan_green_0_a.jpg",
+      "path": "tidewater/models/props/p_metal_jerrycan_green_0_a.jpg",
+      "bytes": 44244,
+      "sha256": "04a2b977dc8221ea5a980f902ea752cb846e1cca6f1340741bae9f553a7541e2",
+      "content_type": "image/jpeg",
+      "local_sha256": "04a2b977dc8221ea5a980f902ea752cb846e1cca6f1340741bae9f553a7541e2"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_metal_jerrycan_green_0_n.jpg",
+      "path": "tidewater/models/props/p_metal_jerrycan_green_0_n.jpg",
+      "bytes": 73176,
+      "sha256": "8ae04a5561e63c5c87cd1fabb2082f9be86b9adcdf65abc1730d533cb86d1de7",
+      "content_type": "image/jpeg",
+      "local_sha256": "8ae04a5561e63c5c87cd1fabb2082f9be86b9adcdf65abc1730d533cb86d1de7"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_metal_jerrycan_green_0_r.jpg",
+      "path": "tidewater/models/props/p_metal_jerrycan_green_0_r.jpg",
+      "bytes": 116307,
+      "sha256": "0659a22d506ad1355b9931600b10b56f5cb6c3762c27240b8f7dbdf31c51001b",
+      "content_type": "image/jpeg",
+      "local_sha256": "0659a22d506ad1355b9931600b10b56f5cb6c3762c27240b8f7dbdf31c51001b"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_metal_toolbox_0_a.jpg",
+      "path": "tidewater/models/props/p_metal_toolbox_0_a.jpg",
+      "bytes": 44712,
+      "sha256": "5da452bc8438355894d6ecc108e46c31a4ed3c28b1731e66146c02f257a78fe0",
+      "content_type": "image/jpeg",
+      "local_sha256": "5da452bc8438355894d6ecc108e46c31a4ed3c28b1731e66146c02f257a78fe0"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_metal_toolbox_0_n.jpg",
+      "path": "tidewater/models/props/p_metal_toolbox_0_n.jpg",
+      "bytes": 50139,
+      "sha256": "4c1b20de645e04ed2068f3dda9fbf418a444cd661ef3803e023d2606203e3be8",
+      "content_type": "image/jpeg",
+      "local_sha256": "4c1b20de645e04ed2068f3dda9fbf418a444cd661ef3803e023d2606203e3be8"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_metal_toolbox_0_r.jpg",
+      "path": "tidewater/models/props/p_metal_toolbox_0_r.jpg",
+      "bytes": 96223,
+      "sha256": "d143b83b93261e086a24c550c91492ccb34ddf740e9cd607b958b2069b044785",
+      "content_type": "image/jpeg",
+      "local_sha256": "d143b83b93261e086a24c550c91492ccb34ddf740e9cd607b958b2069b044785"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_plastic_jerrycan_0_a.jpg",
+      "path": "tidewater/models/props/p_plastic_jerrycan_0_a.jpg",
+      "bytes": 55495,
+      "sha256": "4ed9d3df47d9e94ef295e185c59ae4b4628c2de7333526bec03ffdb0c40aac20",
+      "content_type": "image/jpeg",
+      "local_sha256": "4ed9d3df47d9e94ef295e185c59ae4b4628c2de7333526bec03ffdb0c40aac20"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_plastic_jerrycan_0_n.jpg",
+      "path": "tidewater/models/props/p_plastic_jerrycan_0_n.jpg",
+      "bytes": 51105,
+      "sha256": "592905dc7584bf9ba014cce495a034f0f3135d712128184429980eb1bee9c020",
+      "content_type": "image/jpeg",
+      "local_sha256": "592905dc7584bf9ba014cce495a034f0f3135d712128184429980eb1bee9c020"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_plastic_jerrycan_0_r.jpg",
+      "path": "tidewater/models/props/p_plastic_jerrycan_0_r.jpg",
+      "bytes": 108159,
+      "sha256": "79402265b9bba83b52172b6eab82b95f3b4109962994c7db8ef53a57246c45c5",
+      "content_type": "image/jpeg",
+      "local_sha256": "79402265b9bba83b52172b6eab82b95f3b4109962994c7db8ef53a57246c45c5"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_bucket_01_0_a.jpg",
+      "path": "tidewater/models/props/p_wooden_bucket_01_0_a.jpg",
+      "bytes": 59261,
+      "sha256": "fc1fd6aed5f36bf8f48cd9d39e2029a4151cb2a5194b31cc1b2c2c7d4ecb979b",
+      "content_type": "image/jpeg",
+      "local_sha256": "fc1fd6aed5f36bf8f48cd9d39e2029a4151cb2a5194b31cc1b2c2c7d4ecb979b"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_bucket_01_0_n.jpg",
+      "path": "tidewater/models/props/p_wooden_bucket_01_0_n.jpg",
+      "bytes": 58439,
+      "sha256": "e8a4d8b703d244186cad2102734a4e925630f706405d00563b423e4ce5dc5bf9",
+      "content_type": "image/jpeg",
+      "local_sha256": "e8a4d8b703d244186cad2102734a4e925630f706405d00563b423e4ce5dc5bf9"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_bucket_01_0_r.jpg",
+      "path": "tidewater/models/props/p_wooden_bucket_01_0_r.jpg",
+      "bytes": 81071,
+      "sha256": "0527e1d74bef548a815bb85851ccfd3a64b0fe52e164e9c87caecd983ae0b0b2",
+      "content_type": "image/jpeg",
+      "local_sha256": "0527e1d74bef548a815bb85851ccfd3a64b0fe52e164e9c87caecd983ae0b0b2"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_crate_01_0_a.jpg",
+      "path": "tidewater/models/props/p_wooden_crate_01_0_a.jpg",
+      "bytes": 59591,
+      "sha256": "253dc7afd546525f6ca2f7547c001b4e5e3e5c97286ebd8b554a6d8d754b33ce",
+      "content_type": "image/jpeg",
+      "local_sha256": "253dc7afd546525f6ca2f7547c001b4e5e3e5c97286ebd8b554a6d8d754b33ce"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_crate_01_0_n.jpg",
+      "path": "tidewater/models/props/p_wooden_crate_01_0_n.jpg",
+      "bytes": 50512,
+      "sha256": "fd66fac342b21272db2c0ceff8935ab661099653d974f7037643b60830ca30f4",
+      "content_type": "image/jpeg",
+      "local_sha256": "fd66fac342b21272db2c0ceff8935ab661099653d974f7037643b60830ca30f4"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_crate_01_0_r.jpg",
+      "path": "tidewater/models/props/p_wooden_crate_01_0_r.jpg",
+      "bytes": 75542,
+      "sha256": "352460ee351df1ad2ad649157718b2687aabb880ee17fcb1de949943fc659b27",
+      "content_type": "image/jpeg",
+      "local_sha256": "352460ee351df1ad2ad649157718b2687aabb880ee17fcb1de949943fc659b27"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_crate_02_0_a.jpg",
+      "path": "tidewater/models/props/p_wooden_crate_02_0_a.jpg",
+      "bytes": 63008,
+      "sha256": "b0492b57d1bf940c9c36c54b562b473ea48c28e634dcb336cb03e95ed4ba18a3",
+      "content_type": "image/jpeg",
+      "local_sha256": "b0492b57d1bf940c9c36c54b562b473ea48c28e634dcb336cb03e95ed4ba18a3"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_crate_02_0_n.jpg",
+      "path": "tidewater/models/props/p_wooden_crate_02_0_n.jpg",
+      "bytes": 49803,
+      "sha256": "e547d3e9753ad185b8877296066c8ae59b236d3b6d9b6ed5a29621340c5108a3",
+      "content_type": "image/jpeg",
+      "local_sha256": "e547d3e9753ad185b8877296066c8ae59b236d3b6d9b6ed5a29621340c5108a3"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_crate_02_0_r.jpg",
+      "path": "tidewater/models/props/p_wooden_crate_02_0_r.jpg",
+      "bytes": 82037,
+      "sha256": "70c59a9849d791506db4454d31f609f73ea033b50ea0f48b152bc496988d47a4",
+      "content_type": "image/jpeg",
+      "local_sha256": "70c59a9849d791506db4454d31f609f73ea033b50ea0f48b152bc496988d47a4"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_cutting_board_0_a.jpg",
+      "path": "tidewater/models/props/p_wooden_cutting_board_0_a.jpg",
+      "bytes": 67101,
+      "sha256": "c06d3d0fbc5c9e00f754d82f676fe1be1053530310cdf5ce624b7c84ff8ecf75",
+      "content_type": "image/jpeg",
+      "local_sha256": "c06d3d0fbc5c9e00f754d82f676fe1be1053530310cdf5ce624b7c84ff8ecf75"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_cutting_board_0_n.jpg",
+      "path": "tidewater/models/props/p_wooden_cutting_board_0_n.jpg",
+      "bytes": 48647,
+      "sha256": "82a0190810e8e13dbd5156cf058dbb3b0d0120df1aa07ed3dc994fddfe6f97e2",
+      "content_type": "image/jpeg",
+      "local_sha256": "82a0190810e8e13dbd5156cf058dbb3b0d0120df1aa07ed3dc994fddfe6f97e2"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_cutting_board_0_r.jpg",
+      "path": "tidewater/models/props/p_wooden_cutting_board_0_r.jpg",
+      "bytes": 27151,
+      "sha256": "767c3f44efefbee5ce0835bd5fb04e41b903576aa81d9e3fdefb960957af7a67",
+      "content_type": "image/jpeg",
+      "local_sha256": "767c3f44efefbee5ce0835bd5fb04e41b903576aa81d9e3fdefb960957af7a67"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_display_shelves_01_0_a.jpg",
+      "path": "tidewater/models/props/p_wooden_display_shelves_01_0_a.jpg",
+      "bytes": 47132,
+      "sha256": "1bb3878ca01ccde52e8d051368dee7a67d905431547e218bb10d49d88d7cbb33",
+      "content_type": "image/jpeg",
+      "local_sha256": "1bb3878ca01ccde52e8d051368dee7a67d905431547e218bb10d49d88d7cbb33"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_display_shelves_01_0_n.jpg",
+      "path": "tidewater/models/props/p_wooden_display_shelves_01_0_n.jpg",
+      "bytes": 19738,
+      "sha256": "809b37bade4475cbc3c93c30b82fbe71194aa8b15e50f0b1dcc79e2c4c0f78cf",
+      "content_type": "image/jpeg",
+      "local_sha256": "809b37bade4475cbc3c93c30b82fbe71194aa8b15e50f0b1dcc79e2c4c0f78cf"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_display_shelves_01_0_r.jpg",
+      "path": "tidewater/models/props/p_wooden_display_shelves_01_0_r.jpg",
+      "bytes": 58584,
+      "sha256": "43d487b561ecd31da8fea819e48f895a711c5045665fc3e1d78bdaa10b143b14",
+      "content_type": "image/jpeg",
+      "local_sha256": "43d487b561ecd31da8fea819e48f895a711c5045665fc3e1d78bdaa10b143b14"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_lantern_01_0_a.jpg",
+      "path": "tidewater/models/props/p_wooden_lantern_01_0_a.jpg",
+      "bytes": 60530,
+      "sha256": "f4d25f09192b2ad096609ec7917a74e88fc536d37b2f764872f18aa30c9e7cd7",
+      "content_type": "image/jpeg",
+      "local_sha256": "f4d25f09192b2ad096609ec7917a74e88fc536d37b2f764872f18aa30c9e7cd7"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_lantern_01_0_n.jpg",
+      "path": "tidewater/models/props/p_wooden_lantern_01_0_n.jpg",
+      "bytes": 70640,
+      "sha256": "f0a2d553099e285a47271002808aaf5a672cb57c6d1f5d5601f80da924118a88",
+      "content_type": "image/jpeg",
+      "local_sha256": "f0a2d553099e285a47271002808aaf5a672cb57c6d1f5d5601f80da924118a88"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_lantern_01_0_r.jpg",
+      "path": "tidewater/models/props/p_wooden_lantern_01_0_r.jpg",
+      "bytes": 84421,
+      "sha256": "803bd9da03c87b73b66ff3ef00e8a7c6e9a76b335ffb3aac4df0919d3ea847bd",
+      "content_type": "image/jpeg",
+      "local_sha256": "803bd9da03c87b73b66ff3ef00e8a7c6e9a76b335ffb3aac4df0919d3ea847bd"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_lantern_01_1_a.jpg",
+      "path": "tidewater/models/props/p_wooden_lantern_01_1_a.jpg",
+      "bytes": 27242,
+      "sha256": "ffab51509e7d89a0f07e763cb663fac7d72e007d8727f394958ca6a5a64ef701",
+      "content_type": "image/jpeg",
+      "local_sha256": "ffab51509e7d89a0f07e763cb663fac7d72e007d8727f394958ca6a5a64ef701"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_lantern_01_1_n.jpg",
+      "path": "tidewater/models/props/p_wooden_lantern_01_1_n.jpg",
+      "bytes": 10665,
+      "sha256": "4fdf1b374deb5e9f32ca32d581ad7b83b38519e0a27fb9c2b97d895932bf0754",
+      "content_type": "image/jpeg",
+      "local_sha256": "4fdf1b374deb5e9f32ca32d581ad7b83b38519e0a27fb9c2b97d895932bf0754"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/p_wooden_lantern_01_1_r.jpg",
+      "path": "tidewater/models/props/p_wooden_lantern_01_1_r.jpg",
+      "bytes": 40594,
+      "sha256": "51952435ccc51447b137d116fb717c6539548ab3b1a34056041604af568b530e",
+      "content_type": "image/jpeg",
+      "local_sha256": "51952435ccc51447b137d116fb717c6539548ab3b1a34056041604af568b530e"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/props.bin",
+      "path": "tidewater/models/props/props.bin",
+      "bytes": 1988532,
+      "sha256": "f6dbe1c53a94a330f1aae852964aec1d8e4bcd57b04b145df9b1552aa899d486",
+      "content_type": "application/octet-stream",
+      "local_sha256": "f6dbe1c53a94a330f1aae852964aec1d8e4bcd57b04b145df9b1552aa899d486"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/props.json",
+      "path": "tidewater/models/props/props.json",
+      "bytes": 3386,
+      "sha256": "858b5910c9df36e70d9667e005df080eb0e508484e45ba081fd8aba6fb37ccb5",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "858b5910c9df36e70d9667e005df080eb0e508484e45ba081fd8aba6fb37ccb5"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_brown_planks_a.jpg",
+      "path": "tidewater/models/props/s_weathered_brown_planks_a.jpg",
+      "bytes": 235038,
+      "sha256": "09c4942b3b03b022be607f04ac05d1b832cbb0b32a1faaffe7624be6b1d44df8",
+      "content_type": "image/jpeg",
+      "local_sha256": "09c4942b3b03b022be607f04ac05d1b832cbb0b32a1faaffe7624be6b1d44df8"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_brown_planks_n.jpg",
+      "path": "tidewater/models/props/s_weathered_brown_planks_n.jpg",
+      "bytes": 246956,
+      "sha256": "1bcae3fa86c68a4d9ce82bf90e1cf6cbf9af7fe6a1c15aef09fa79c18f9308ff",
+      "content_type": "image/jpeg",
+      "local_sha256": "1bcae3fa86c68a4d9ce82bf90e1cf6cbf9af7fe6a1c15aef09fa79c18f9308ff"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_brown_planks_r.jpg",
+      "path": "tidewater/models/props/s_weathered_brown_planks_r.jpg",
+      "bytes": 224089,
+      "sha256": "f562c608e9ea0a9efda3a08c2e3109f496ecd9d2c15f3d9286ba3c0e12e27afa",
+      "content_type": "image/jpeg",
+      "local_sha256": "f562c608e9ea0a9efda3a08c2e3109f496ecd9d2c15f3d9286ba3c0e12e27afa"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_brown_planks_{a,n,r}.jpg",
+      "path": "tidewater/models/props/s_weathered_brown_planks_{a,n,r}.jpg",
+      "bytes": 224089,
+      "sha256": "f562c608e9ea0a9efda3a08c2e3109f496ecd9d2c15f3d9286ba3c0e12e27afa",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "f562c608e9ea0a9efda3a08c2e3109f496ecd9d2c15f3d9286ba3c0e12e27afa"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_peeling_timber_a.jpg",
+      "path": "tidewater/models/props/s_weathered_peeling_timber_a.jpg",
+      "bytes": 322180,
+      "sha256": "8021a167f79461bf3edff76d277b0770bb55bc56e75a33321a40eaff0014253f",
+      "content_type": "image/jpeg",
+      "local_sha256": "8021a167f79461bf3edff76d277b0770bb55bc56e75a33321a40eaff0014253f"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_peeling_timber_n.jpg",
+      "path": "tidewater/models/props/s_weathered_peeling_timber_n.jpg",
+      "bytes": 220254,
+      "sha256": "885759fd46ad21bdb72fd21460f07ba448865207b3fd2cc39ab4fbc91b24232d",
+      "content_type": "image/jpeg",
+      "local_sha256": "885759fd46ad21bdb72fd21460f07ba448865207b3fd2cc39ab4fbc91b24232d"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_peeling_timber_r.jpg",
+      "path": "tidewater/models/props/s_weathered_peeling_timber_r.jpg",
+      "bytes": 217262,
+      "sha256": "69b9b3d1ffda28e6824f2e5cac0c4f361c54d343d206b861d37e19234b30f9fc",
+      "content_type": "image/jpeg",
+      "local_sha256": "69b9b3d1ffda28e6824f2e5cac0c4f361c54d343d206b861d37e19234b30f9fc"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_peeling_timber_{a,n,r}.jpg",
+      "path": "tidewater/models/props/s_weathered_peeling_timber_{a,n,r}.jpg",
+      "bytes": 217262,
+      "sha256": "69b9b3d1ffda28e6824f2e5cac0c4f361c54d343d206b861d37e19234b30f9fc",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "69b9b3d1ffda28e6824f2e5cac0c4f361c54d343d206b861d37e19234b30f9fc"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_planks_a.jpg",
+      "path": "tidewater/models/props/s_weathered_planks_a.jpg",
+      "bytes": 166512,
+      "sha256": "0517c5c7e79c378bb03bd35e44f3e2216cdd184a085599e7effb1371b7c8845a",
+      "content_type": "image/jpeg",
+      "local_sha256": "0517c5c7e79c378bb03bd35e44f3e2216cdd184a085599e7effb1371b7c8845a"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_planks_n.jpg",
+      "path": "tidewater/models/props/s_weathered_planks_n.jpg",
+      "bytes": 206585,
+      "sha256": "2205263952e3f58d4d1736afa0b884dc506f223641bbe10ee613d49f830e6cf6",
+      "content_type": "image/jpeg",
+      "local_sha256": "2205263952e3f58d4d1736afa0b884dc506f223641bbe10ee613d49f830e6cf6"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_planks_r.jpg",
+      "path": "tidewater/models/props/s_weathered_planks_r.jpg",
+      "bytes": 125165,
+      "sha256": "404a5ad3a39b45036f405d48859248e5c60cce12ee6c62396cd26a20f4cd6f52",
+      "content_type": "image/jpeg",
+      "local_sha256": "404a5ad3a39b45036f405d48859248e5c60cce12ee6c62396cd26a20f4cd6f52"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_weathered_planks_{a,n,r}.jpg",
+      "path": "tidewater/models/props/s_weathered_planks_{a,n,r}.jpg",
+      "bytes": 125165,
+      "sha256": "404a5ad3a39b45036f405d48859248e5c60cce12ee6c62396cd26a20f4cd6f52",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "404a5ad3a39b45036f405d48859248e5c60cce12ee6c62396cd26a20f4cd6f52"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_worn_corrugated_iron_a.jpg",
+      "path": "tidewater/models/props/s_worn_corrugated_iron_a.jpg",
+      "bytes": 277831,
+      "sha256": "19c86b80696d51760acc3d4e542401c1c5c66ee7e7f128e4c9454cb0d47578c6",
+      "content_type": "image/jpeg",
+      "local_sha256": "19c86b80696d51760acc3d4e542401c1c5c66ee7e7f128e4c9454cb0d47578c6"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_worn_corrugated_iron_n.jpg",
+      "path": "tidewater/models/props/s_worn_corrugated_iron_n.jpg",
+      "bytes": 413288,
+      "sha256": "c4296e5fc64d702243e66367ccbab9b22a408ad46d19fddf39542eaffc4681d2",
+      "content_type": "image/jpeg",
+      "local_sha256": "c4296e5fc64d702243e66367ccbab9b22a408ad46d19fddf39542eaffc4681d2"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_worn_corrugated_iron_r.jpg",
+      "path": "tidewater/models/props/s_worn_corrugated_iron_r.jpg",
+      "bytes": 195035,
+      "sha256": "baa6ab87bfc3bfb4fea34d415e69ba742d89956a627e8f203afb64f187fa1524",
+      "content_type": "image/jpeg",
+      "local_sha256": "baa6ab87bfc3bfb4fea34d415e69ba742d89956a627e8f203afb64f187fa1524"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/s_worn_corrugated_iron_{a,n,r}.jpg",
+      "path": "tidewater/models/props/s_worn_corrugated_iron_{a,n,r}.jpg",
+      "bytes": 195035,
+      "sha256": "baa6ab87bfc3bfb4fea34d415e69ba742d89956a627e8f203afb64f187fa1524",
+      "content_type": "image/jpeg200\nimage/jpeg200\nimage/jpeg",
+      "local_sha256": "baa6ab87bfc3bfb4fea34d415e69ba742d89956a627e8f203afb64f187fa1524"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/props/signs.png",
+      "path": "tidewater/models/props/signs.png",
+      "bytes": 222251,
+      "sha256": "94036b301f674db2df33b001dc00f76ef540d3156f7b16492fe7ff2dfbf66431",
+      "content_type": "image/png",
+      "local_sha256": "94036b301f674db2df33b001dc00f76ef540d3156f7b16492fe7ff2dfbf66431"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/whale/humpback.bin",
+      "path": "tidewater/models/whale/humpback.bin",
+      "bytes": 3469416,
+      "sha256": "b3a31801a393489331bc3dd4fd5be64cbad32ac4e159f5180e0eb028d489a92d",
+      "content_type": "application/octet-stream",
+      "local_sha256": "b3a31801a393489331bc3dd4fd5be64cbad32ac4e159f5180e0eb028d489a92d"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/whale/humpback.json",
+      "path": "tidewater/models/whale/humpback.json",
+      "bytes": 4106,
+      "sha256": "c47390c365da1c8c6fa73bea4996bf51073a973770c1942e8993f545e283a354",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "c47390c365da1c8c6fa73bea4996bf51073a973770c1942e8993f545e283a354"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/whale/humpback_albedo.png",
+      "path": "tidewater/models/whale/humpback_albedo.png",
+      "bytes": 4289686,
+      "sha256": "5daaa6727f5304aaa3b6f6ef86cedcebc7cf922376a5c0e7caad66c4f4a5efe1",
+      "content_type": "image/png",
+      "local_sha256": "5daaa6727f5304aaa3b6f6ef86cedcebc7cf922376a5c0e7caad66c4f4a5efe1"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/models/whale/humpback_height.png",
+      "path": "tidewater/models/whale/humpback_height.png",
+      "bytes": 12896017,
+      "sha256": "5e18fbff0aa0034519d149c245d515f75011e7dd4f626dbd1a5e97eea79b66b5",
+      "content_type": "image/png",
+      "local_sha256": "5e18fbff0aa0034519d149c245d515f75011e7dd4f626dbd1a5e97eea79b66b5"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/textures/smaa/area.png",
+      "path": "tidewater/textures/smaa/area.png",
+      "bytes": 33203,
+      "sha256": "b5a8e3bb3fbf11136d1411c6b7454f4469358559352987a074e22047582c0625",
+      "content_type": "image/png",
+      "local_sha256": "b5a8e3bb3fbf11136d1411c6b7454f4469358559352987a074e22047582c0625"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/textures/smaa/search.png",
+      "path": "tidewater/textures/smaa/search.png",
+      "bytes": 113,
+      "sha256": "025eb54fb8c4c2858a7d6d9743b88919fe5f9c661329c447a8f1e28971ae7403",
+      "content_type": "image/png",
+      "local_sha256": "025eb54fb8c4c2858a7d6d9743b88919fe5f9c661329c447a8f1e28971ae7403"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/ui/keyart-720.jpg",
+      "path": "tidewater/ui/keyart-720.jpg",
+      "bytes": 161268,
+      "sha256": "51d0c22f6699acfe3e0d0e2d93d397e4912de207230a87506f241063d6a3b1c1",
+      "content_type": "image/jpeg",
+      "local_sha256": "51d0c22f6699acfe3e0d0e2d93d397e4912de207230a87506f241063d6a3b1c1"
+    },
+    {
+      "url": "https://dgreenheck.github.io/tidewater/ui/keyart.jpg",
+      "path": "tidewater/ui/keyart.jpg",
+      "bytes": 630621,
+      "sha256": "98b2446bc1faa3cd594fa0d469d388dea9441ed5de2a9f5bbf612c38712dec6a",
+      "content_type": "image/jpeg",
+      "local_sha256": "98b2446bc1faa3cd594fa0d469d388dea9441ed5de2a9f5bbf612c38712dec6a"
+    }
+  ],
+  "failed": {
+    "https://dgreenheck.github.io/tidewater/assets/.css": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/.glb": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/.jpg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/.png": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/area.png": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/bail_click.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/baseShape64.bin": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/big_splash.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/bird_dove.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/bird_forest.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/birds_dawn.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/blueNoise.bin": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/boat_engine.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/boat_lap.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/boat_rush.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/coins.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/crickets.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/emerge.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/fish_flop.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/fish_splash.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/gull.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/hull_slap.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/humpback.bin": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/humpback.json": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/line_out.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/line_snap.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/line_strain.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/palms.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/pier_lap.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/plop.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/props.bin": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/props.json": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/reel_drag.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/reel_wind.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/rod_swish.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/search.png": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/signs.png": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/splash.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/step_grass.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/step_rock.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/step_sand.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/step_water.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/step_wetsand.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/step_wood.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/submerge.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/surf_backwash.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/surf_crash.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/surf_far.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/surf_wash.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/swim.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/tern.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/under_reef.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/uw_swim.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/whale_blow.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/whale_song.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/wind.ogg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/assets/.json": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/audio/130723_Brela_HarborJump_F_4824.wav": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/audio/src/audio/soundBank.js": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/clouds/clouds/cirrus.jpg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/clouds/sky/starmap_4k.jpg": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/models/debris/src/world/debris/ScannedDebris.js": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/models/props/src/game/StallKit.js": "HTTP 404; ",
+    "https://dgreenheck.github.io/tidewater/models/props/tools/props/build.mjs": "HTTP 404; "
+  }
+}

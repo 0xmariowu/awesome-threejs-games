@@ -1,0 +1,73 @@
+{
+  "date": "2026-09-26",
+  "checks": [
+    {
+      "command": "python3 -m unittest discover -s tools -p 'test_*.py'",
+      "result": "passed",
+      "tests": 14
+    },
+    {
+      "command": "node --test tools/server.test.mjs",
+      "result": "passed"
+    },
+    {
+      "cwd": "sakuragaoka-station/upstream",
+      "command": "npm run check",
+      "result": "RESULT: OK",
+      "note": "Original npm ci reported three high-severity advisories in the upstream development toolchain. The archived runtime does not require installing these dependencies; no upstream versions were forcibly changed."
+    },
+    {
+      "cwd": "tidewater/upstream",
+      "command": "npm test",
+      "result": "game logic all passed; engine smoke passed",
+      "engine_stats": {
+        "draws": 12,
+        "triangles": 7386,
+        "pipelines": 8
+      }
+    },
+    {
+      "command": "python3 tools/audit.py --all",
+      "result": "passed",
+      "unique_files": 3925
+    },
+    {
+      "command": "python3 tools/audit.py --all --runtime",
+      "result": "failed-known-startup-and-visual-issues",
+      "failures": {
+        "hanakawa": [
+          "Unresolved native Chrome startup stall"
+        ],
+        "moritsuki": [
+          "Unresolved black minigame scenes"
+        ]
+      }
+    },
+    {
+      "command": "HTTP GET all thirteen local entry URLs",
+      "result": "All thirteen returned 200 with exact archived entry bytes; conditional repeat requests returned 304."
+    },
+    {
+      "command": "python3 output/audit-2026-09-26/verify_legacy_servers.py",
+      "result": "passed for both wrappers: exact entry bytes, malformed-path survival, suffix ranges and occupied-port refusal"
+    },
+    {
+      "command": "python3 output/audit-2026-09-26/performance_probe.py arkenfall --seconds 12 [--retina] [--reference]",
+      "result": "Local DPR 1, local DPR 2 and source DPR 2 entered actual gameplay with zero page or HTTP errors. Local tests attempted zero external requests. Three runs recorded approximately 60 Hz frame callbacks."
+    },
+    {
+      "command": "python3 output/audit-2026-09-26/arkenfall/explore.py",
+      "result": "passed: actual movement, jump, attack state, dodge state, map, inventory, quest-triggered autosave, page reload and Continue with preserved progress; zero external requests, HTTP errors or page errors."
+    }
+  ],
+  "limitations": [
+    "Smoke checks are not full campaign/feature coverage.",
+    "Online backend implementations for Smartgame and Vox Arcana were not available.",
+    "No 100% pixel identity certification is made.",
+    "Moritsuki has three unresolved black-scene minigames in the tested Chrome environment; original hamaguri reproduces the problem.",
+    "Hanakawa native Chrome startup stalled for more than 80 seconds in one observation. Later successful gameplay is not a cold-start repair."
+  ],
+  "visual_review_notes": [
+    "The hamaguri, gazami and kusafugu minigames show black 3D scenes after their intro fades finish in the tested Chrome environment, although HUD/input and requests work. The original hamaguri site reproduces the same black scene with both default Chrome graphics settings and ANGLE Metal; the cause is unresolved. Town, unagi and mori render visibly. Do not count these three minigames as visually passed."
+  ]
+}

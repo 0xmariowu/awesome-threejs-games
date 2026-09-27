@@ -1,0 +1,81 @@
+{
+  "project": "inkwave",
+  "scope": "Unchanged painting, surface material, level geometry, projectile and collision modules; host-owned scene, stationary shooter fixture and pointer aiming.",
+  "files": [
+    {
+      "source": "inkwave/src/world/paint.js",
+      "path": "examples/inkwave-paint/original/world/paint.js",
+      "sha256": "fd90c2ace5e1d46774b8c670c0662b260aeda619ea6ad7abd49cb43d96a8b91c"
+    },
+    {
+      "source": "inkwave/src/world/levelMaterial.js",
+      "path": "examples/inkwave-paint/original/world/levelMaterial.js",
+      "sha256": "5263f93886cb9614f2e6fb0b2433e07a77f3d23d532e8c1b3b733c62fe29fbae"
+    },
+    {
+      "source": "inkwave/src/world/level.js",
+      "path": "examples/inkwave-paint/original/world/level.js",
+      "sha256": "fd8048cbcc207bebe9ad8111aadd5ac60c22c8ed96cdd61c0cabfd22c1f29980"
+    },
+    {
+      "source": "inkwave/src/world/maps.js",
+      "path": "examples/inkwave-paint/original/world/maps.js",
+      "sha256": "1a45e6df5119489a118b44871b846eefad15390b955670c042e5a61f005948c9"
+    },
+    {
+      "source": "inkwave/src/world/texlib.js",
+      "path": "examples/inkwave-paint/original/world/texlib.js",
+      "sha256": "170c393b2d39c90728f6e6919175219bfed47d1b5405bb3e526065dc71e9f1f8"
+    },
+    {
+      "source": "inkwave/src/core/ctx.js",
+      "path": "examples/inkwave-paint/original/core/ctx.js",
+      "sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04"
+    },
+    {
+      "source": "inkwave/src/game/weapons.js",
+      "path": "examples/inkwave-paint/original/game/weapons.js",
+      "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f"
+    },
+    {
+      "source": "inkwave/src/game/physics.js",
+      "path": "examples/inkwave-paint/original/game/physics.js",
+      "sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48"
+    },
+    {
+      "source": "inkwave/src/config.js",
+      "path": "examples/inkwave-paint/original/config.js",
+      "sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6"
+    }
+  ],
+  "assets": [
+    {
+      "source": "inkwave/LICENSE",
+      "path": "examples/inkwave-paint/LICENSE",
+      "sha256": "8c09ee40d72139720037d3f640541f79e5be39f23ea8359eb02bf3b7d9d243b0"
+    },
+    {
+      "source": "inkwave/node_modules/three/LICENSE",
+      "path": "examples/inkwave-paint/THREE-LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "inkwave/node_modules/three/build/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    },
+    {
+      "source": "inkwave/node_modules/three/build/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "source": "inkwave/node_modules/three/package.json",
+      "sha256": "ab4ff6950aab522dfe6980f19914a5eb2cadb689a36c6c44f4d3869c5e46dc89"
+    },
+    {
+      "source": "inkwave/node_modules/vite/package.json",
+      "sha256": "0a75f2254630e11aa4fde386a2f883e2acc8430acc3fb5a833f25da264c62a16"
+    }
+  ]
+}

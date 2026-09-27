@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+    <meta name="theme-color" content="#153b48" />
+    <!-- Out of beta (2026-09-24): findable, and a shared link unfurls as a
+         card (Sunsprint wordmark over the pack in the Sugar Loop, 1200x630,
+         made from the trailer footage) on X, Reddit, iMessage and Discord. -->
+    <meta
+      name="description"
+      content="A free kart racer that runs in your browser. Upside-down loops, sky gliders, secret cannon shortcuts and 20 ruthless items. Race friends with one link: no download, phone or desktop."
+    />
+    <link rel="canonical" href="https://tableparty.io/kart" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Table Party" />
+    <meta property="og:title" content="Sunsprint: free kart racing in your browser" />
+    <meta
+      property="og:description"
+      content="Upside-down loops, sky gliders, secret shortcuts and 20 ruthless items. Race your friends with one link. No download, phone or desktop."
+    />
+    <meta property="og:url" content="https://tableparty.io/kart" />
+    <meta property="og:image" content="https://tableparty.io/kart/sunsprint-share-v1.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sunsprint: a pack of animal karts racing upside down around a candy loop-the-loop" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sunsprint: free kart racing in your browser" />
+    <meta
+      name="twitter:description"
+      content="Upside-down loops, sky gliders, secret shortcuts and 20 ruthless items. Race your friends with one link. No download, phone or desktop."
+    />
+    <meta name="twitter:image" content="https://tableparty.io/kart/sunsprint-share-v1.jpg" />
+    <meta name="twitter:image:alt" content="Sunsprint: a pack of animal karts racing upside down around a candy loop-the-loop" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Sunsprint",
+        "url": "https://tableparty.io/kart",
+        "image": "https://tableparty.io/kart/sunsprint-share-v1.jpg",
+        "description": "A free kart racer that runs in your browser: eight courses with loops, gliders and secret shortcuts, 20 items, Balloon Battle and ranked cups. Race friends with one link.",
+        "genre": ["Racing", "Kart racing"],
+        "gamePlatform": ["Web browser", "iPhone", "Android", "PC", "Mac"],
+        "applicationCategory": "Game",
+        "operatingSystem": "Any",
+        "playMode": ["SinglePlayer", "MultiPlayer"],
+        "numberOfPlayers": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 12 },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "publisher": { "@id": "https://tableparty.io/#org" },
+        "trailer": {
+          "@type": "VideoObject",
+          "name": "Sunsprint trailer",
+          "description": "61 seconds of real Sunsprint gameplay: loops, gliders, shortcuts, items and ranked.",
+          "thumbnailUrl": "https://tableparty.io/kart/trailer/sunsprint-trailer-v3-poster.webp",
+          "contentUrl": "https://tableparty.io/kart/trailer/sunsprint-trailer-v3-540.h264.mp4",
+          "uploadDate": "2026-09-24",
+          "duration": "PT1M1S"
+        }
+      }
+    </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self' blob: https://tableparty.io wss://tableparty.io https://cloudflareinsights.com http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*; media-src 'self' blob:; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Sunsprint" />
+    <link rel="icon" type="image/png" href="/art/icon-192.png" />
+    <link rel="apple-touch-icon" href="/art/apple-touch-icon.png" />
+    <title>Sunsprint: Free Kart Racing in Your Browser · Table Party</title>
+    <style>
+      /* The intro (2026-09-24): Max, "an animation of a kart driving into the
+         background, then everything slides in, ONLY when the assets haven't
+         loaded", and of the first cut, "it needs to be in the graphics of the
+         game". Everything here is the game itself: the Sunbreak start
+         straight rendered by the engine (a landscape and a portrait plate),
+         Pip's kart rendered from the same camera and matted, the wordmark.
+         Pip drives up to the line, the gantry's start lamps fill in red as
+         the game loads, go green when it's ready, and Pip launches under the
+         gantry as the camera flies after it into the grid screen.
+         It shows after 180 ms (a fast load never sees it), is skipped when
+         this build already loaded here, and its ~145 kB of images are only
+         requested when it shows. Every animation is transform or opacity, so
+         it stays smooth while the game's code is still parsing. */
+      html, body { background: #0b1a2e; margin: 0; }
+      /* Opaque from the first paint, so the page never shows through while
+         the art fades in; only the art waits 180 ms. */
+      #kart-intro { position: fixed; inset: 0; z-index: 100; overflow: hidden; display: none; background: #0b1a2e; container-type: size; }
+      #kart-intro.is-armed { display: block; }
+      .ki-all { position: absolute; inset: 0; opacity: 0; }
+      #kart-intro.is-armed .ki-all { animation: ki-in .25s ease-out .18s forwards; }
+      #kart-intro img { display: block; user-select: none; -webkit-user-drag: none; }
+      .ki-blur { position: absolute; inset: 0; background: center / cover no-repeat; }
+      /* The plate covers the screen like background-size: cover; everything
+         placed on it uses its percentages, so the kart and the lamps land on
+         the rendered road and gantry at every window size. */
+      .ki-stage { position: absolute; left: 50%; top: 50%; aspect-ratio: 16 / 9; width: max(100vw, 177.78vh); width: max(100cqw, 177.78cqh); transform: translate(-50%, -50%); }
+      .ki-push, .ki-cam { position: absolute; inset: 0; transform-origin: 50% 62.2%; }
+      #kart-intro.is-live .ki-push { animation: ki-push 9s linear both; }
+      .ki-plate { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .45s ease-out; }
+      .ki-plate.is-loaded { opacity: 1; }
+      .ki-lamp { position: absolute; top: 37.5%; width: 1.49%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; opacity: 0; transition: opacity .1s; background: radial-gradient(circle at 50% 42%, #fff4ee 0 14%, #ff5a3c 34%, #e3160b 60%, #8a0a02 74%, #8a0a0200 76%); }
+      .ki-lamp::after { content: ""; position: absolute; inset: -130%; border-radius: 50%; background: radial-gradient(closest-side, #ff3a1ea6, #ff3a1e00); }
+      .ki-lamp:nth-of-type(1) { left: 47.03%; } .ki-lamp:nth-of-type(2) { left: 49.01%; } .ki-lamp:nth-of-type(3) { left: 50.99%; } .ki-lamp:nth-of-type(4) { left: 52.97%; }
+      .ki-lamp.on { opacity: 1; }
+      #kart-intro.is-go .ki-lamp { opacity: 1; background: radial-gradient(circle at 50% 42%, #f2fff4 0 14%, #52ff8a 34%, #11c94f 60%, #056b27 74%, #056b2700 76%); }
+      #kart-intro.is-go .ki-lamp::after { background: radial-gradient(closest-side, #3dff7fb3, #3dff7f00); }
+      .ki-kart { position: absolute; left: 40.4%; top: 59.48%; width: 19.19%; transform-origin: 50% 100%; opacity: 0; }
+      .ki-body { position: relative; }
+      .ki-car { position: relative; width: 100%; height: auto; }
+      .ki-shadow { position: absolute; left: 2%; right: 2%; bottom: -5%; height: 17%; border-radius: 50%; background: radial-gradient(closest-side, #0a1420a6, #0a142000); }
+      .ki-kart em, .ki-kart b { position: absolute; top: 61%; width: 20%; aspect-ratio: 1; border-radius: 50%; transform: translate(-50%, -50%); }
+      .ki-kart em:nth-of-type(1), .ki-kart b:nth-of-type(1) { left: 21%; } .ki-kart em:nth-of-type(2), .ki-kart b:nth-of-type(2) { left: 79%; }
+      .ki-kart em { background: radial-gradient(closest-side, #f4f6fbd9, #f4f6fb00); opacity: 0; }
+      .ki-kart b { width: 30%; background: radial-gradient(closest-side, #fffbe6 0 22%, #ffc14a 46%, #ff6a1f99 70%, #ff6a1f00); opacity: 0; }
+      #kart-intro.is-live .ki-kart { animation: ki-drive .8s cubic-bezier(.16,.78,.3,1) .12s both; }
+      #kart-intro.is-live .ki-body { animation: ki-idle .11s linear .9s infinite alternate; }
+      #kart-intro.is-live .ki-kart em { animation: ki-puff 1.05s ease-out .95s infinite; }
+      #kart-intro.is-live .ki-kart em:nth-of-type(2) { animation-delay: 1.45s; }
+      .ki-rush { position: absolute; inset: -10%; opacity: 0; pointer-events: none; background: repeating-conic-gradient(from 0deg at 50% 58%, #fff0 0deg 3deg, #fff9 3.4deg 3.9deg, #fff0 4.3deg 9deg); -webkit-mask: radial-gradient(circle at 50% 58%, #0000 24%, #000 72%); mask: radial-gradient(circle at 50% 58%, #0000 24%, #000 72%); }
+      .ki-shade { position: absolute; inset: 0; background: linear-gradient(#08142a59, #08142a00 34%), radial-gradient(ellipse 80% 70% at 50% 58%, #0000 60%, #08142a4d); }
+      .ki-logo { position: absolute; left: 50%; top: max(16px, 3.4vh); width: clamp(260px, min(44vw, 70vh), 640px); transform: translateX(-50%); opacity: 0; }
+      .ki-logo img { width: 100%; height: auto; filter: drop-shadow(0 6px 14px #06122a73); }
+      .ki-shine { position: absolute; inset: 0; overflow: hidden; -webkit-mask: center / 100% 100% no-repeat; mask: center / 100% 100% no-repeat; }
+      .ki-shine i { position: absolute; top: -20%; bottom: -20%; left: 0; width: 26%; background: linear-gradient(100deg, #fff0, #fffbe8d9 50%, #fff0); transform: translateX(-120%) skewX(-18deg); }
+      .ki-logo.is-in { animation: ki-logo .7s cubic-bezier(.2,1.35,.4,1) .3s both; }
+      .ki-logo.is-in .ki-shine i { animation: ki-shine 1s cubic-bezier(.5,0,.3,1) 1.05s both; }
+      .ki-bar { position: absolute; left: 50%; bottom: calc(env(safe-area-inset-bottom) + 26px); width: min(200px, 46vw); height: 4px; transform: translateX(-50%); border-radius: 2px; background: #ffffff38; overflow: hidden; opacity: 0; transition: opacity .4s; }
+      .ki-bar.show { opacity: 1; }
+      .ki-bar i { position: absolute; inset: 0; transform-origin: left; transform: scaleX(0); transition: transform .45s ease-out; background: linear-gradient(90deg, #ffd23f, #ff9f2e); }
+      /* GO: green lamps, flames, Pip launches under the gantry and the camera follows. */
+      #kart-intro.is-go .ki-kart { animation: ki-launch .66s cubic-bezier(.5,0,.75,.45) both; }
+      #kart-intro.is-go .ki-body { animation: none; }
+      #kart-intro.is-go .ki-kart em { animation: none; opacity: 0; }
+      #kart-intro.is-go .ki-kart b { animation: ki-fire .07s linear infinite alternate; opacity: 1; }
+      #kart-intro.is-go .ki-rush { animation: ki-rush .6s ease-out .08s both; }
+      #kart-intro.is-leaving .ki-cam { animation: ki-fly .55s cubic-bezier(.55,0,.85,.4) both; }
+      #kart-intro.is-leaving .ki-logo.is-in { animation: ki-logo-out .3s ease-in both; }
+      #kart-intro.is-leaving { animation: ki-out .3s ease-in .2s both; opacity: 1; }
+      @media (max-aspect-ratio: 1/1) {
+        .ki-stage { aspect-ratio: 9 / 16; width: max(100vw, 56.25vh); width: max(100cqw, 56.25cqh); }
+        .ki-push, .ki-cam { transform-origin: 50% 60.9%; }
+        .ki-lamp { top: 48.48%; width: 2.33%; }
+        .ki-lamp:nth-of-type(1) { left: 45.33%; } .ki-lamp:nth-of-type(2) { left: 48.44%; } .ki-lamp:nth-of-type(3) { left: 51.56%; } .ki-lamp:nth-of-type(4) { left: 54.67%; }
+        .ki-kart { left: 26.05%; top: 62.43%; width: 47.9%; }
+        #kart-intro.is-go .ki-kart { animation-name: ki-launch-port; }
+        .ki-logo { top: calc(env(safe-area-inset-top) + 16vh); width: min(84vw, 520px); }
+      }
+      @keyframes ki-in { to { opacity: 1; } }
+      @keyframes ki-out { from { opacity: 1; } to { opacity: 0; } }
+      @keyframes ki-push { from { transform: scale(1); } to { transform: scale(1.06); } }
+      @keyframes ki-drive { 0% { opacity: 1; transform: translateY(95%) scale(2.1); } 72% { opacity: 1; transform: translateY(-1.5%) scale(.985); } 100% { opacity: 1; transform: none; } }
+      @keyframes ki-idle { from { transform: translateY(0); } to { transform: translateY(-.9%); } }
+      @keyframes ki-puff { 0% { opacity: .75; transform: translate(-50%, -50%) scale(.35); } 100% { opacity: 0; transform: translate(-50%, -150%) scale(1.7); } }
+      @keyframes ki-fire { from { transform: translate(-50%, -50%) scale(.85); } to { transform: translate(-50%, -50%) scale(1.15); } }
+      /* To the gantry (Pip is 10 m ahead of the camera, the gantry 26 m), then on out of sight. */
+      @keyframes ki-launch { 0% { opacity: 1; transform: none; } 14% { opacity: 1; transform: translateY(2%) scale(1.04, .95); } 78% { opacity: 1; transform: translateY(-91.4%) scale(.385); } 100% { opacity: 0; transform: translateY(-104%) scale(.2); } }
+      @keyframes ki-launch-port { 0% { opacity: 1; transform: none; } 14% { opacity: 1; transform: translateY(2%) scale(1.04, .95); } 78% { opacity: 1; transform: translateY(-105.9%) scale(.25); } 100% { opacity: 0; transform: translateY(-114%) scale(.14); } }
+      @keyframes ki-rush { 0% { opacity: 0; transform: scale(1.25); } 30% { opacity: .55; } 100% { opacity: 0; transform: scale(1); } }
+      @keyframes ki-fly { from { transform: scale(1); } to { transform: scale(1.5); } }
+      @keyframes ki-logo { from { opacity: 0; transform: translateX(-50%) translateY(-18px) scale(.8); } to { opacity: 1; transform: translateX(-50%); } }
+      @keyframes ki-logo-out { from { opacity: 1; transform: translateX(-50%); } to { opacity: 0; transform: translateX(-50%) translateY(-26px) scale(.94); } }
+      @keyframes ki-shine { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(520%) skewX(-18deg); } }
+      @media (prefers-reduced-motion: reduce) {
+        #kart-intro .ki-push, #kart-intro .ki-cam, #kart-intro .ki-body, #kart-intro .ki-rush, #kart-intro .ki-shine i, #kart-intro em { animation: none !important; }
+        #kart-intro.is-live .ki-kart { animation: ki-in .3s both; opacity: 0; }
+        #kart-intro.is-go .ki-kart { animation: ki-out .3s both; }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/kart-7vz70Zig.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/ranked-DjJM4Tou.js">
+    <link rel="modulepreload" crossorigin href="/assets/BufferGeometryUtils-Bu9JBDdd.js">
+    <link rel="modulepreload" crossorigin href="/assets/meshopt_decoder.module-O9a9x0ao.js">
+    <link rel="modulepreload" crossorigin href="/assets/RoundedBoxGeometry-Cp3JkDub.js">
+    <link rel="modulepreload" crossorigin href="/assets/RankedMoments-BN3gvbjj.js">
+    <link rel="modulepreload" crossorigin href="/assets/game-settings-B4TkFRQX.js">
+    <link rel="modulepreload" crossorigin href="/assets/RoomEnvironment-xhUqicLX.js">
+    <link rel="modulepreload" crossorigin href="/assets/trackProtocol-OIX5LHKx.js">
+    <link rel="stylesheet" crossorigin href="/assets/kart-CwD9PQC3.css">
+  </head>
+  <body>
+    <div id="kart-intro" aria-hidden="true">
+      <div class="ki-all">
+      <div class="ki-blur"></div>
+      <div class="ki-stage"><div class="ki-push"><div class="ki-cam">
+        <img class="ki-plate" alt="" />
+        <i class="ki-lamp"></i><i class="ki-lamp"></i><i class="ki-lamp"></i><i class="ki-lamp"></i>
+        <div class="ki-kart"><div class="ki-body"><span class="ki-shadow"></span><img class="ki-car" alt="" /><em></em><em></em><b></b><b></b></div></div>
+      </div></div></div>
+      <div class="ki-rush"></div>
+      <div class="ki-shade"></div>
+      <div class="ki-logo"><img alt="" /><span class="ki-shine"><i></i></span></div>
+      <div class="ki-bar"><i></i></div>
+      </div>
+    </div>
+    <script>
+      (function () {
+        var el = document.getElementById("kart-intro"), html = document.documentElement, src = "", noop = function () {};
+        try { var m = document.querySelector('script[type="module"][src]'); src = m ? m.getAttribute("src") : ""; } catch (e) {}
+        var warm = false;
+        try { warm = !!src && localStorage.getItem("tableparty.kart.warm") === src && !/[?&]intro\b/.test(location.search); } catch (e) {}
+        // This build already loaded here: everything is cached, go straight in.
+        if (warm) { el.parentNode.removeChild(el); window.__kartIntro = { progress: noop, done: noop }; return; }
+        var ART = "/kart/intro/", LQIP = {
+          land: "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBQCdASogABIAPu1kqU2ppaOjMAgBMB2JbACsM2Wv/gPQgIuDTlA4KO+KIBinPkgAAP3gLCTH08aWoTuhdijUyK44GooQ9Qy6D5HT0xT07J7mZPRrB0m1sYzFR1Coy0XCMW3T86dGlSgMGSSsDpNXidpcZAZbH6JSEYXggAAAAA==",
+          port: "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBQCdASoSACAAPu1qrVCppaQiqAqpMB2JbACdMuIzPn/AKqVrchSfVp/tNt9av6BGFOZAAP36JQZUyhLdoIoglcFlrYYQOv3UC2M8VdNtF9NOsdjok15v+7/vsA78g/eSniM2Ga8ZecO8wAcTJzL9+x5SvvQt97YNzs+IwvXvKf2pYYeQHp8ivoK6hgpHzYM9Tk/zjNyueAvJJNi8Ka2T+hR/hYCugAA="
+        };
+        var q = function (s) { return el.querySelector(s); }, plate = q(".ki-plate"), car = q(".ki-car"), logo = q(".ki-logo img"),
+          lamps = el.querySelectorAll(".ki-lamp"), bar = q(".ki-bar"), fill = q(".ki-bar i"), blur = q(".ki-blur"),
+          tall = window.matchMedia ? window.matchMedia("(max-aspect-ratio: 1/1)") : { matches: false };
+        function frame() {
+          var k = tall.matches ? "port" : "land";
+          blur.style.backgroundImage = "url(" + LQIP[k] + ")";
+          plate.classList.remove("is-loaded");
+          plate.src = ART + "plate-" + k + ".webp";
+        }
+        plate.onload = function () { plate.classList.add("is-loaded"); };
+        frame();
+        if (tall.addEventListener) tall.addEventListener("change", frame);
+        car.src = ART + "kart.webp";
+        logo.src = ART + "logo.webp";
+        el.className = "is-armed";
+        var start = performance.now(), shownAt = 0, liveAt = 0, finished = false, last = 0, lit = 0, want = 0, lampWait = 0,
+          shown = setTimeout(function () { shownAt = performance.now(); }, 180),
+          slow = setTimeout(function () { bar.className = "ki-bar show"; }, 2600);
+        function remember() { try { if (src) localStorage.setItem("tableparty.kart.warm", src); } catch (e) {} }
+        function remove() { clearTimeout(slow); if (el.parentNode) el.parentNode.removeChild(el); }
+        // The start lamps are the progress: one more red at least 380 ms apart.
+        function lamp() {
+          if (lampWait || !liveAt || finished) return;
+          if (lit < Math.min(3, want)) { lamps[lit++].className = "ki-lamp on"; lampWait = setTimeout(function () { lampWait = 0; lamp(); }, 380); }
+        }
+        function live() {
+          if (liveAt || finished) return;
+          // Never before the art has faded in, or Pip arrives unseen.
+          var early = 260 - (performance.now() - start);
+          if (early > 0) { setTimeout(live, early); return; }
+          liveAt = performance.now();
+          el.className = "is-armed is-live";
+          landMark();
+          setTimeout(function () { want = Math.max(want, 1); lamp(); }, 760);
+        }
+        // Pip drives in once the plate and the kart can be drawn (or after
+        // 1.6 s over the soft placeholder, on a very slow line); the mark
+        // lands on its own when it arrives.
+        function drawn(i) { return i.decode ? i.decode().catch(noop) : null; }
+        var mark = q(".ki-logo"), logoReady = false;
+        function landMark() {
+          if (!logoReady || !liveAt || finished || mark.className !== "ki-logo") return;
+          // The shine is masked by the mark, set once it's in the memory cache.
+          var shine = q(".ki-shine").style;
+          shine.webkitMaskImage = shine.maskImage = "url(" + logo.src + ")";
+          mark.className = "ki-logo is-in";
+        }
+        if (window.Promise) {
+          Promise.all([drawn(plate), drawn(car)]).then(live);
+          Promise.resolve(drawn(logo)).then(function () { logoReady = true; landMark(); });
+        } else logoReady = true;
+        setTimeout(live, Math.max(0, 1600 - (performance.now() - start)));
+        function go() {
+          // Green: Pip launches under the gantry and the camera flies after it
+          // into the grid screen, which slides in behind.
+          for (var i = 0; i < lamps.length; i++) lamps[i].className = "ki-lamp on";
+          el.className = "is-armed is-live is-go";
+          setTimeout(function () { el.className = "is-armed is-live is-go is-leaving"; }, 240);
+          setTimeout(function () { html.classList.add("kart-entering"); }, 380);
+          setTimeout(remove, 780);
+          setTimeout(function () { html.classList.remove("kart-entering"); }, 1700);
+        }
+        window.__kartIntro = {
+          progress: function (p) {
+            if (p <= last) return;
+            last = Math.min(1, p);
+            fill.style.transform = "scaleX(" + last + ")";
+            want = Math.max(want, last >= .5 ? 3 : last >= .4 ? 2 : 1);
+            lamp();
+          },
+          done: function () {
+            if (finished) return;
+            window.__kartIntro.progress(1);
+            finished = true;
+            remember();
+            // Ready before it ever showed: no intro, no entrance.
+            if (!shownAt) { clearTimeout(shown); remove(); return; }
+            // Shown, but the art never arrived: just clear the way.
+            if (!liveAt) { el.className = "is-armed is-leaving"; html.classList.add("kart-entering"); setTimeout(remove, 520); setTimeout(function () { html.classList.remove("kart-entering"); }, 1500); return; }
+            // Let Pip reach the line first.
+            setTimeout(go, Math.max(0, liveAt + 900 - performance.now()));
+          },
+        };
+        setTimeout(function () { window.__kartIntro.done(); }, 12000);
+      })();
+    </script>
+    <div id="root"></div>
+    <!-- Hidden door for device testing: five taps on the Start screen's title
+         open this page. Solo races only; the friends room server is dev-only. -->
+  </body>
+</html>

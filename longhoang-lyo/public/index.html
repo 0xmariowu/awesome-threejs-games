@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en" data-ui-theme="light">
+  <head>
+        <script>
+          (function() {
+            const w = console.warn
+            console.warn = (...a) => {
+              if (
+                typeof a[0] === "string" &&
+                a[0].includes("using deprecated parameters for the initialization function")
+              ) return
+              w.apply(console, a)
+            }
+          })()
+        </script>
+      
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Long Hoang (Lyo) – Designer & Developer</title>
+    <link rel="canonical" href="https://longhoang-lyo.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://longhoang-lyo.com/" />
+    <link rel="alternate" hreflang="en" href="https://longhoang-lyo.com/" />
+    <meta name="description" content="Long Hoang (Lyo) is a designer and developer from Hanoi, Vietnam. Building digital products from scratch, giving pixels feelings, and pushing 3D experiences to the edge of your GPU." />
+    <meta name="author" content="Long Hoang" />
+    <meta name="keywords" content="Developer, Product Designer, UI/UX Designer, WebGL, WebGPU, Three.js, Game Design, Portfolio" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="google-site-verification" content="google7dbbbe643b465dba" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- OpenGraph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://longhoang-lyo.com/" />
+    <meta property="og:title" content="Long Hoang (Lyo) – Designer & Developer" />
+    <meta property="og:description" content="Long Hoang (Lyo) is a designer and developer from Hanoi, Vietnam. Building digital products from scratch, giving pixels feelings, and pushing 3D experiences to the edge of your GPU." />
+    <meta property="og:image" content="https://longhoang-lyo.com/assets/meta/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Long Hoang Interactive 3D Portfolio Preview" />
+    <meta property="og:site_name" content="Long Hoang Portfolio" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@longhoang_lyo" />
+    <meta name="twitter:creator" content="@longhoang_lyo" />
+    <meta name="twitter:title" content="Long Hoang (Lyo) – Designer & Developer" />
+    <meta name="twitter:description" content="Long Hoang (Lyo) is a designer and developer from Hanoi, Vietnam. Building digital products from scratch, giving pixels feelings, and pushing 3D experiences to the edge of your GPU." />
+    <meta name="twitter:image" content="https://longhoang-lyo.com/assets/meta/og-preview.png" />
+
+    <!-- Favicon & Manifest Suite -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/assets/elements/app-icon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/elements/icon-192.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" as="image" href="/assets/elements/hud/title-intro.svg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/elements/icons/secondary-settings.svg" />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://longhoang-lyo.com/#person",
+          "name": "Long Hoang",
+          "alternateName": "Lyo",
+          "jobTitle": "Designer & Developer",
+          "url": "https://longhoang-lyo.com",
+          "image": "https://longhoang-lyo.com/assets/meta/og-preview.png",
+          "email": "mailto:longhoang.0816@gmail.com",
+          "knowsAbout": [
+            "3D WebGL",
+            "Creative Development",
+            "Product Design",
+            "Three.js",
+            "WebGPU",
+            "GSAP",
+            "UI/UX Architecture"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/longhoang0816/",
+            "https://x.com/longhoang_lyo",
+            "https://www.instagram.com/longhoang.0816",
+            "https://www.behance.net/lyo0816"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://longhoang-lyo.com/#website",
+          "url": "https://longhoang-lyo.com",
+          "name": "Long Hoang Portfolio",
+          "publisher": { "@id": "https://longhoang-lyo.com/#person" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfilePage",
+          "@id": "https://longhoang-lyo.com/#profilepage",
+          "url": "https://longhoang-lyo.com",
+          "name": "Long Hoang (Lyo) – Designer & Developer",
+          "isPartOf": { "@id": "https://longhoang-lyo.com/#website" },
+          "mainEntity": { "@id": "https://longhoang-lyo.com/#person" }
+        },
+        {
+          "@type": "CreativeWork",
+          "@id": "https://longhoang-lyo.com/#portfolio",
+          "name": "3D Interactive WebGL Portfolio",
+          "url": "https://longhoang-lyo.com",
+          "author": { "@id": "https://longhoang-lyo.com/#person" },
+          "creator": { "@id": "https://longhoang-lyo.com/#person" },
+          "description": "Explore immersive 3D WebGL experiences, interactive game design, and digital craft by Long Hoang."
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://longhoang-lyo.com/#site-nav",
+          "name": "Main Navigation",
+          "itemListElement": [
+            {
+              "@type": "SiteNavigationElement",
+              "position": 1,
+              "name": "Work",
+              "description": "Selected work, design systems, and digital product case studies by Long Hoang.",
+              "url": "https://longhoang-lyo.com/work"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 2,
+              "name": "About",
+              "description": "Product designer and developer with 3.5+ years in EdTech, specializing in interactive 3D WebGL experiences and UI design.",
+              "url": "https://longhoang-lyo.com/about"
+            },
+            {
+              "@type": "SiteNavigationElement",
+              "position": 3,
+              "name": "Contact",
+              "description": "Let's collaborate and make good things together. Get in touch for 3D WebGL development, interactive experiences, and product design.",
+              "url": "https://longhoang-lyo.com/contact"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: "Crocante";
+        src:
+          url("/assets/fonts/Crocante-Medium.woff2") format("woff2"),
+          url("/assets/fonts/Crocante-Medium.woff") format("woff");
+        font-weight: 400 900;
+        font-style: normal;
+        font-display: swap;
+        ascent-override: 115%;
+        descent-override: 23%;
+        line-gap-override: 0%;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: clamp(62.5%, 0.3125vw + 34.375%, 95%);
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        height: 100dvh;
+        overflow: hidden !important;
+        position: fixed;
+        inset: 0;
+        touch-action: none;
+        -webkit-overflow-scrolling: touch;
+        background-color: #ffffff;
+      }
+
+      #webgl {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        touch-action: none;
+      }
+
+      .sr-only,
+      .visually-hidden,
+      .u-visually-hidden {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        clip-path: inset(50%) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+
+      .fonts-loader {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .startup-intro {
+        position: fixed;
+        inset: 0;
+        z-index: 999;
+        pointer-events: none;
+        background-color: transparent;
+      }
+
+      .startup-intro__title {
+        position: absolute;
+        bottom: 3rem;
+        left: 3rem;
+        width: clamp(48rem, 36vw, 60rem);
+        aspect-ratio: 569 / 213;
+        background: url("/assets/elements/hud/title-intro.svg") no-repeat left bottom / contain;
+        margin: 0;
+        z-index: 1;
+        pointer-events: none;
+        opacity: 1;
+      }
+
+      @media (orientation: portrait) {
+        .startup-intro__title {
+          position: absolute;
+          top: max(2rem, var(--layout-safe-top, 2rem));
+          bottom: auto;
+          left: max(2rem, var(--layout-safe-left, 2rem));
+          width: min(calc(100vw - 4rem), 44rem);
+        }
+      }
+
+      .startup-intro__stage--loading {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        z-index: 2;
+        background-color: #ffffff;
+        pointer-events: auto;
+      }
+
+      .startup-intro__loader-shell {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+        width: min(31.5rem, calc(100vw - 4rem));
+        box-sizing: border-box;
+      }
+
+      .startup-intro__label-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.2rem;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .startup-intro__label {
+        margin: 0;
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: "Crocante", display, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #11121a;
+      }
+
+      .startup-intro__spinner {
+        position: relative;
+        width: 3.5rem;
+        height: 2.6rem;
+        flex: 0 0 auto;
+      }
+
+      .startup-intro__spinner-icon {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        object-fit: contain;
+      }
+
+      .startup-intro__spinner-icon--left {
+        top: 0;
+        left: 0;
+        transform-origin: 50% 50%;
+        animation: startup-intro-spin-left 6s linear infinite;
+      }
+
+      .startup-intro__spinner-icon--right {
+        right: 0;
+        bottom: 0;
+        transform-origin: 50% 50%;
+        animation: startup-intro-spin-right 6s linear infinite;
+      }
+
+      @keyframes startup-intro-spin-left {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(-360deg); }
+      }
+
+      @keyframes startup-intro-spin-right {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+
+      .startup-intro__progress {
+        position: relative;
+        width: 100%;
+        height: 2.8rem;
+        box-sizing: border-box;
+      }
+
+      .startup-intro__progress-svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .startup-intro__progress-svg use[id^="bar_"] {
+        display: none;
+      }
+
+      @media (max-width: 48rem) {
+        .startup-intro__loader-shell {
+          width: min(30rem, calc(100vw - 4rem));
+          gap: 1.2rem;
+        }
+
+        .startup-intro__label {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/Crocante-Medium.woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="/_external/fonts.googleapis.com/css2-203237de0b5e"
+    />
+    <link
+      href="/_external/fonts.googleapis.com/css2-203237de0b5e"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="/_external/fonts.googleapis.com/css2-203237de0b5e"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!-- Cloudflare Web Analytics -->
+    <script>
+      const host = window.location.hostname
+      const isLocal =
+        host === "localhost" ||
+        host === "127.0.0.1" ||
+        host === "[::1]" ||
+        host.endsWith(".local") ||
+        /^10\.\d+\.\d+\.\d+$/.test(host) ||
+        /^192\.168\.\d+\.\d+$/.test(host) ||
+        /^172\.(1[6-9]|2\d|3[0-1])\.\d+\.\d+$/.test(host)
+      const isPreview =
+        host.endsWith(".pages.dev") && host !== "long-hoang-portfolio.pages.dev"
+
+      if (!isLocal && !isPreview) {
+        const s = document.createElement("script")
+        s.defer = true
+        s.src = "/_external/static.cloudflareinsights.com/beacon.min.js"
+        s.setAttribute(
+          "data-cf-beacon",
+          '{"token": "ac46163c5b574a99a1c7b91dee848b37", "spa": true}',
+        )
+        document.head.appendChild(s)
+      }
+    </script>
+    <!-- End Cloudflare Web Analytics -->
+    <script type="module" crossorigin src="/assets/BUq3XE3I.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/C0xwqhbh.js">
+    <link rel="modulepreload" crossorigin href="/assets/DrDnj3Lb.js">
+    <link rel="modulepreload" crossorigin href="/assets/BW6YWG0R.js">
+    <link rel="modulepreload" crossorigin href="/assets/ClujFw2l.js">
+    <link rel="modulepreload" crossorigin href="/assets/BeAPK0YT.js">
+    <link rel="modulepreload" crossorigin href="/assets/D9JAKPuk.js">
+    <link rel="modulepreload" crossorigin href="/assets/DLabtpBR.js">
+    <link rel="modulepreload" crossorigin href="/assets/DyQ9Z0p5.js">
+    <link rel="stylesheet" crossorigin href="/assets/PwVGdLWP.css">
+  </head>
+
+  <body>
+    <div class="js-fonts-loader fonts-loader">
+      <div class="font crocante" data-font="800 20px Crocante">&nbsp;</div>
+      <div class="font barlow" data-font="400 20px Barlow">&nbsp;</div>
+    </div>
+    <div id="startup-intro" class="startup-intro" data-state="LOADING">
+      <div class="startup-intro__title" role="img" aria-label="LYOOO PORTFOLIO"></div>
+      <div class="startup-intro__stage startup-intro__stage--loading">
+        <div class="startup-intro__loader-shell">
+          <div class="startup-intro__label-row">
+            <p id="startup-loader-label" class="startup-intro__label" aria-live="polite">PREPARING RENDERER...</p>
+            <div class="startup-intro__spinner">
+              <img class="startup-intro__spinner-icon startup-intro__spinner-icon--left" src="/assets/elements/icons/secondary-settings.svg" alt="" aria-hidden="true" width="24" height="24" />
+              <img class="startup-intro__spinner-icon startup-intro__spinner-icon--right" src="/assets/elements/icons/secondary-settings.svg" alt="" aria-hidden="true" width="24" height="24" />
+            </div>
+          </div>
+          <div class="startup-intro__progress" role="progressbar" aria-labelledby="startup-loader-label" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <svg width="350" height="31" viewBox="0 0 350 31" fill="none" xmlns="http://www.w3.org/2000/svg" class="startup-intro__progress-svg">
+              <g id="progress_bar">
+                <use href="/assets/elements/hud/progress-bar.svg#overlay" />
+                <use id="bar_1" href="/assets/elements/hud/progress-bar.svg#bar_1" style="display: none;" />
+                <use id="bar_2" href="/assets/elements/hud/progress-bar.svg#bar_2" style="display: none;" />
+                <use id="bar_3" href="/assets/elements/hud/progress-bar.svg#bar_3" style="display: none;" />
+                <use id="bar_4" href="/assets/elements/hud/progress-bar.svg#bar_4" style="display: none;" />
+                <use id="bar_5" href="/assets/elements/hud/progress-bar.svg#bar_5" style="display: none;" />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="app-root" role="main" aria-label="3D Interactive Portfolio Application">
+      <h1 class="u-visually-hidden">Long Hoang (Lyo) – Designer & Developer</h1>
+      
+      <!-- Crawlable Static Semantic Outline for Search Engines -->
+      <section class="u-visually-hidden" aria-label="Portfolio Summary and Index">
+        <header>
+          <h2>Long Hoang (Lyo)</h2>
+          <p>Designer and Developer based in Hanoi, Vietnam. Specialized in 3D WebGL experiences, interactive game design, UI/UX architecture, and frontend engineering.</p>
+          <nav aria-label="Primary site navigation">
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/work">Work</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <section id="work" aria-label="Work">
+          <h2><a href="/work">Work</a></h2>
+          <p>Selected work, design systems, and digital product case studies including Hanzii Dict, Mazii, Todaii, and Niubii.</p>
+          <ul>
+            <li>
+              <article>
+                <h3><a href="/work/hanzii">Hanzii Dict - Smart Chinese Learning Superapp</a></h3>
+                <p>Product Design and Gamified Learning Experience serving over 5,000,000 global language learners with AI HSK preparation and character recognition.</p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3><a href="/work/mazii">Mazii - Japanese Dictionary & Learning Ecosystem</a></h3>
+                <p>Design Systems and UX overhaul for the world's leading Japanese learning platform with 10M+ community members.</p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3><a href="/work/todaii">Todaii - Fast News & Language Acquisition</a></h3>
+                <p>Multi-language reading and news learning app with bilingual audio syncing and adaptive comprehension testing.</p>
+              </article>
+            </li>
+            <li>
+              <article>
+                <h3><a href="/work/niubii">Niubii - Conversational Language Learning</a></h3>
+                <p>Interactive bite-sized situational language dialogue and pronunciation evaluation product.</p>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <section id="about" aria-label="About">
+          <h2><a href="/about">About</a></h2>
+          <p>Product designer and developer with 3.5+ years in EdTech, one failed startup alongside incredible people, and a fresh commitment to breaking out of my comfort zone to push interactive 3D WebGL experiences.</p>
+        </section>
+
+        <section id="contact" aria-label="Contact">
+          <h2><a href="/contact">Contact</a></h2>
+          <p>Let's collaborate and make good things together. Available for creative development, 3D WebGL experiences, and product design inquiries.</p>
+          <p>Connect: <a href="/contact">Send Message</a> or email <a href="mailto:longhoang.0816@gmail.com">longhoang.0816@gmail.com</a>.</p>
+        </section>
+
+        <h2>Core Technology Stack & Principles</h2>
+        <p>Crafting high-performance digital experiences utilizing Three.js, WebGPU, Rapier physics, GSAP, TSL shaders, and semantic accessible web standards.</p>
+      </section>
+
+      <canvas
+        id="webgl"
+        role="img"
+        tabindex="0"
+        aria-label="3D Interactive Portfolio World featuring interactive projects, characters, and environment"
+      >
+        <p>Your browser does not support WebGL. Please enable WebGL or access the portfolio details in text mode.</p>
+      </canvas>
+    </main>
+    <noscript>
+      <div style="padding: 2rem; color: #11121a; background: #ffffff; font-family: sans-serif; max-width: 800px; margin: 0 auto;">
+        <h1>Long Hoang (Lyo) – Designer & Developer</h1>
+        <p>Long Hoang (Lyo) is a designer and developer from Hanoi, Vietnam crafting interactive 3D WebGL experiences, game design experiments, and digital products from scratch.</p>
+        <h2>Featured Projects</h2>
+        <ul>
+          <li><strong>Hanzii:</strong> Chinese Dictionary & AI Exam Preparation Superapp (5M+ Users).</li>
+          <li><strong>Mazii:</strong> Comprehensive Japanese Language Learning Ecosystem (10M+ Users).</li>
+          <li><strong>Todaii:</strong> Bilingual Multi-Language Reading & Listening News App.</li>
+          <li><strong>Niubii:</strong> Interactive Conversational Language Product.</li>
+        </ul>
+        <h2>Contact & Socials</h2>
+        <p>Email: <!--email_off--><a href="mailto:longhoang.0816@gmail.com">longhoang.0816@gmail.com</a><!--/email_off--></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/longhoang0816/">longhoang0816</a> | X (Twitter): <a href="https://x.com/longhoang_lyo">@longhoang_lyo</a> | Behance: <a href="https://www.behance.net/lyo0816">lyo0816</a></p>
+      </div>
+    </noscript>
+  </body>
+</html>

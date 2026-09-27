@@ -1,0 +1,8 @@
+{
+  "name": "gameref-shabondama-biyori",
+  "private": true,
+  "scripts": {
+    "start": "node ../tools/server.mjs .",
+    "dev": "node ../tools/server.mjs ."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "cedar:0": {
+    "file": "cedar-0.bin.gz",
+    "size": 1280,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"cedar\",\"asset\":\"fir_sapling_medium\",\"nodes\":[\"fir_sapling_medium_a_LOD0\",\"fir_sapling_medium_b_LOD0\",\"fir_sapling_medium_c_LOD0\"],\"leafTint\":[0.72,0.8,0.62],\"barkTint\":[0.62,0.55,0.5],\"cardScale\":1.08,\"translucency\":0.25,\"frames\":8,\"framePx\":160},\"index\":0,\"center\":[-0.12441837787628174,4.442247733473778,-0.07256662845611572],\"radius\":4.84263577890873}"
+  },
+  "cedar:1": {
+    "file": "cedar-1.bin.gz",
+    "size": 1280,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"cedar\",\"asset\":\"fir_sapling_medium\",\"nodes\":[\"fir_sapling_medium_a_LOD0\",\"fir_sapling_medium_b_LOD0\",\"fir_sapling_medium_c_LOD0\"],\"leafTint\":[0.72,0.8,0.62],\"barkTint\":[0.62,0.55,0.5],\"cardScale\":1.08,\"translucency\":0.25,\"frames\":8,\"framePx\":160},\"index\":1,\"center\":[-0.027250051498413086,3.792224194854498,0.1692923903465271],\"radius\":4.169089630399943}"
+  },
+  "cedar:2": {
+    "file": "cedar-2.bin.gz",
+    "size": 1280,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"cedar\",\"asset\":\"fir_sapling_medium\",\"nodes\":[\"fir_sapling_medium_a_LOD0\",\"fir_sapling_medium_b_LOD0\",\"fir_sapling_medium_c_LOD0\"],\"leafTint\":[0.72,0.8,0.62],\"barkTint\":[0.62,0.55,0.5],\"cardScale\":1.08,\"translucency\":0.25,\"frames\":8,\"framePx\":160},\"index\":2,\"center\":[0.10281574726104736,3.011956916190684,0.13203400373458862],\"radius\":3.2162878198823335}"
+  },
+  "broadleaf:0": {
+    "file": "broadleaf-0.bin.gz",
+    "size": 896,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"broadleaf\",\"asset\":\"island_tree_01\",\"nodes\":[],\"leafTint\":[0.8,0.95,0.66],\"barkTint\":[0.75,0.72,0.68],\"cardScale\":1,\"translucency\":0.5,\"frames\":8,\"framePx\":112},\"index\":0,\"center\":[0.03609156608581543,2.471863342449069,-0.17485010623931885],\"radius\":2.591878891736269}"
+  },
+  "cherry:0": {
+    "file": "cherry-0.bin.gz",
+    "size": 1024,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"cherry\",\"asset\":\"island_tree_01\",\"nodes\":[],\"leafTint\":[1,1,1],\"barkTint\":[0.42,0.34,0.31],\"cardScale\":1.55,\"translucency\":0.3,\"frames\":8,\"framePx\":128},\"index\":0,\"center\":[0.03609156608581543,2.471863342449069,-0.17485010623931885],\"radius\":3.090815578395501}"
+  },
+  "cherry:1": {
+    "file": "cherry-1.bin.gz",
+    "size": 1024,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"cherry\",\"asset\":\"island_tree_02\",\"nodes\":[],\"leafTint\":[1,1,1],\"barkTint\":[0.42,0.34,0.31],\"cardScale\":1.55,\"translucency\":0.3,\"frames\":8,\"framePx\":128,\"variantOffset\":1},\"index\":1,\"center\":[0.05153477191925049,1.6884101247414947,0.9169172644615173],\"radius\":2.609222868990898}"
+  },
+  "maple:0": {
+    "file": "maple-0.bin.gz",
+    "size": 896,
+    "signature": "{\"version\":2,\"settings\":{\"id\":\"maple\",\"asset\":\"island_tree_02\",\"nodes\":[],\"leafTint\":[1,1,1],\"barkTint\":[0.55,0.5,0.46],\"cardScale\":1.15,\"translucency\":0.65,\"frames\":8,\"framePx\":112},\"index\":0,\"center\":[0.05153477191925049,1.6884101247414947,0.9169172644615173],\"radius\":2.3028990101575855}"
+  }
+}

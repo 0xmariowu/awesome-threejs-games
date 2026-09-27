@@ -1,0 +1,8 @@
+<svg width="212" height="59" viewBox="0 0 212 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="release_overlay">
+<foreignObject x="-29.8525" y="-29.9805" width="271.424" height="118.9"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(15px);clip-path:url(#bgblur_0_7181_284_clip_path);height:100%;width:100%"></div></foreignObject><path id="overlay" data-figma-bg-blur-radius="30" d="M0.156581 57.7583L7.35588 4.35092C7.43052 3.79722 7.94811 3.34608 8.50674 3.33691L210.555 0.0190043C211.165 0.00898726 211.641 0.542795 211.563 1.14778L204.165 58.0488C204.101 58.5471 203.676 58.9199 203.174 58.9199H1.14384C0.538476 58.9199 0.0757086 58.3583 0.156581 57.7583Z" fill="black" fill-opacity="0.3"/>
+</g>
+<defs>
+<clipPath id="bgblur_0_7181_284_clip_path" transform="translate(29.8525 29.9805)"><path d="M0.156581 57.7583L7.35588 4.35092C7.43052 3.79722 7.94811 3.34608 8.50674 3.33691L210.555 0.0190043C211.165 0.00898726 211.641 0.542795 211.563 1.14778L204.165 58.0488C204.101 58.5471 203.676 58.9199 203.174 58.9199H1.14384C0.538476 58.9199 0.0757086 58.3583 0.156581 57.7583Z"/>
+</clipPath></defs>
+</svg>

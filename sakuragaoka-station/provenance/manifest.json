@@ -1,0 +1,1249 @@
+{
+  "source": "http://127.0.0.1:8192/",
+  "entry_path": "/index.html",
+  "files": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "bytes": 1314681,
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/geometries/RoundedBoxGeometry.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/geometries/RoundedBoxGeometry.js",
+      "bytes": 4625,
+      "sha256": "d20aeaf7077c459a8d952d215738d7b44fba028440bb862d84b622a34f0c80bb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d20aeaf7077c459a8d952d215738d7b44fba028440bb862d84b622a34f0c80bb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@700&family=Zen+Maru+Gothic:wght@500;700;900&family=Yusei+Magic&family=Yuji+Syuku&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-a757a1f83c6a",
+      "bytes": 2280,
+      "sha256": "ed40d0939f3d0088a1a21e14dd41de9a82be74942f6e18432a71c004fe5b19cd",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "3c600dcfdde6e89b28cc15a6119265762c938da4f7fe670f32e5886d18ba1ab8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj75s.ttf",
+      "bytes": 5324144,
+      "sha256": "4593dfcdc70ee68852606c90d75dfc6e022feda12780a55615239c53c54ef086",
+      "content_type": "font/ttf",
+      "local_sha256": "4593dfcdc70ee68852606c90d75dfc6e022feda12780a55615239c53c54ef086"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFCMj75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFCMj75s.ttf",
+      "bytes": 5320828,
+      "sha256": "55ebddc0f968968851a4fd781512592c10f5ea248b77b1497f7b4de9a33fc469",
+      "content_type": "font/ttf",
+      "local_sha256": "55ebddc0f968968851a4fd781512592c10f5ea248b77b1497f7b4de9a33fc469"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFLgk75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFLgk75s.ttf",
+      "bytes": 5315052,
+      "sha256": "02977bcbdc09013b30983c597e5d4e219629746d41932bddf7cd2e5e4563e9a1",
+      "content_type": "font/ttf",
+      "local_sha256": "02977bcbdc09013b30983c597e5d4e219629746d41932bddf7cd2e5e4563e9a1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFPYk75s.ttf",
+      "path": "_external/fonts.gstatic.com/s/notosansjp/v56/-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFPYk75s.ttf",
+      "bytes": 5319680,
+      "sha256": "a3910e15eea0451ffbea62e894e951ea9f7c812c8b4b5e947593b6ecc2d4b057",
+      "content_type": "font/ttf",
+      "local_sha256": "a3910e15eea0451ffbea62e894e951ea9f7c812c8b4b5e947593b6ecc2d4b057"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzWPebA.ttf",
+      "path": "_external/fonts.gstatic.com/s/notoserifjp/v33/xn71YHs72GKoTvER4Gn3b5eMRtWGkp6o7MjQ2bzWPebA.ttf",
+      "bytes": 7472676,
+      "sha256": "1cbf95fb7f021b919b4bf43ba67479bc1b25094e1a567929e92bf4b7797ef102",
+      "content_type": "font/ttf",
+      "local_sha256": "1cbf95fb7f021b919b4bf43ba67479bc1b25094e1a567929e92bf4b7797ef102"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/yujisyuku/v8/BngNUXdTV3vO6Lw5ApOPqPc.ttf",
+      "path": "_external/fonts.gstatic.com/s/yujisyuku/v8/BngNUXdTV3vO6Lw5ApOPqPc.ttf",
+      "bytes": 7779308,
+      "sha256": "23814ddf8f3c8ef8a979f286314453f6ae6110db22bbb3f214bc0e6bdcd47a15",
+      "content_type": "font/ttf",
+      "local_sha256": "23814ddf8f3c8ef8a979f286314453f6ae6110db22bbb3f214bc0e6bdcd47a15"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/yuseimagic/v17/yYLt0hbAyuCmoo5wlhPkpjHR.ttf",
+      "path": "_external/fonts.gstatic.com/s/yuseimagic/v17/yYLt0hbAyuCmoo5wlhPkpjHR.ttf",
+      "bytes": 3129936,
+      "sha256": "941f2e8484c81297c9e971ac741664eb60aee15534b3a4a5439b18c35b262f3d",
+      "content_type": "font/ttf",
+      "local_sha256": "941f2e8484c81297c9e971ac741664eb60aee15534b3a4a5439b18c35b262f3d"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenmarugothic/v19/o-0XIpIxzW5b-RxT-6A8jWAtCp-cGWtCPA.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenmarugothic/v19/o-0XIpIxzW5b-RxT-6A8jWAtCp-cGWtCPA.ttf",
+      "bytes": 3808412,
+      "sha256": "cb3caeaf186d6aaa5d551847faeb5b23639af62f0e85b839e2352a040fe36c31",
+      "content_type": "font/ttf",
+      "local_sha256": "cb3caeaf186d6aaa5d551847faeb5b23639af62f0e85b839e2352a040fe36c31"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenmarugothic/v19/o-0XIpIxzW5b-RxT-6A8jWAtCp-cUW1CPA.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenmarugothic/v19/o-0XIpIxzW5b-RxT-6A8jWAtCp-cUW1CPA.ttf",
+      "bytes": 3776544,
+      "sha256": "cd35e29918e3b485606211f7f8e7fac943a2e46422868f55fcadb45e1011ddb8",
+      "content_type": "font/ttf",
+      "local_sha256": "cd35e29918e3b485606211f7f8e7fac943a2e46422868f55fcadb45e1011ddb8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenmarugothic/v19/o-0XIpIxzW5b-RxT-6A8jWAtCp-caW9CPA.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenmarugothic/v19/o-0XIpIxzW5b-RxT-6A8jWAtCp-caW9CPA.ttf",
+      "bytes": 3707752,
+      "sha256": "063367e350e7c8221e0e12ed590910a7814f84bb2826e284db0505317ef4b6e6",
+      "content_type": "font/ttf",
+      "local_sha256": "063367e350e7c8221e0e12ed590910a7814f84bb2826e284db0505317ef4b6e6"
+    },
+    {
+      "url": "http://127.0.0.1:8192/",
+      "path": "index.html",
+      "bytes": 8739,
+      "sha256": "5b1bb8580b3044abae45478a307fc6eaaeff4453813cc16418e1c1c0d6ea0ad6",
+      "content_type": "text/html",
+      "local_sha256": "e794732f7d88dd3524a86be717ebf420db6461c9f780be3af23c8cad22efe474"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/audio.js",
+      "path": "src/core/audio.js",
+      "bytes": 70947,
+      "sha256": "3cccce60c3dd86d603b2918dcc70daa83d8d7c65a46d3c855988d8ab8c0728b4",
+      "content_type": "text/javascript",
+      "local_sha256": "3cccce60c3dd86d603b2918dcc70daa83d8d7c65a46d3c855988d8ab8c0728b4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/batch.js",
+      "path": "src/core/batch.js",
+      "bytes": 4614,
+      "sha256": "55f6e1b6f487b0bde83dc672252102d490dcb3cb92897735565b122d75264921",
+      "content_type": "text/javascript",
+      "local_sha256": "55f6e1b6f487b0bde83dc672252102d490dcb3cb92897735565b122d75264921"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/batch2.js",
+      "path": "src/core/batch2.js",
+      "bytes": 11814,
+      "sha256": "cc224240ab1ac2d61af1d3ad96136cc2559c5af29d912da1c167f5a0e69a6c7d",
+      "content_type": "text/javascript",
+      "local_sha256": "cc224240ab1ac2d61af1d3ad96136cc2559c5af29d912da1c167f5a0e69a6c7d"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/ctx.js",
+      "path": "src/core/ctx.js",
+      "bytes": 2899,
+      "sha256": "3c4e8e1a9f8db612eb2648f0b7c78d9f0d52b45b86d4b53d0e98c6d96b4d078a",
+      "content_type": "text/javascript",
+      "local_sha256": "3c4e8e1a9f8db612eb2648f0b7c78d9f0d52b45b86d4b53d0e98c6d96b4d078a"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/geo.js",
+      "path": "src/core/geo.js",
+      "bytes": 9771,
+      "sha256": "3b64528e783e433d7651a1e5dc6924e98b3b9173870875e511573c820abbc234",
+      "content_type": "text/javascript",
+      "local_sha256": "3b64528e783e433d7651a1e5dc6924e98b3b9173870875e511573c820abbc234"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/materials.js",
+      "path": "src/core/materials.js",
+      "bytes": 10516,
+      "sha256": "167c859795e828dd281f7628ffadfc5342bae4ef16c307d0eb7188816358733b",
+      "content_type": "text/javascript",
+      "local_sha256": "167c859795e828dd281f7628ffadfc5342bae4ef16c307d0eb7188816358733b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/physics.js",
+      "path": "src/core/physics.js",
+      "bytes": 6505,
+      "sha256": "484edf5e19595224f3fb26dbddfcd6033e96c37ee5dbf04e6b0e216b7397d811",
+      "content_type": "text/javascript",
+      "local_sha256": "484edf5e19595224f3fb26dbddfcd6033e96c37ee5dbf04e6b0e216b7397d811"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/player.js",
+      "path": "src/core/player.js",
+      "bytes": 7088,
+      "sha256": "343495b618a834a542c0177d92eef1c0f3b8dc6581e8607e07f58d9e49e396db",
+      "content_type": "text/javascript",
+      "local_sha256": "343495b618a834a542c0177d92eef1c0f3b8dc6581e8607e07f58d9e49e396db"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/renderer.js",
+      "path": "src/core/renderer.js",
+      "bytes": 11504,
+      "sha256": "6a3f871fa17ef2be4fd003d621744a8dcd891582b553dd3ac4d8a89620526640",
+      "content_type": "text/javascript",
+      "local_sha256": "6a3f871fa17ef2be4fd003d621744a8dcd891582b553dd3ac4d8a89620526640"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/sky.js",
+      "path": "src/core/sky.js",
+      "bytes": 6003,
+      "sha256": "ca9bd33602f6487dab11b2bb81f2d0302448f32e99aafc3a17994ea2aca1eec8",
+      "content_type": "text/javascript",
+      "local_sha256": "ca9bd33602f6487dab11b2bb81f2d0302448f32e99aafc3a17994ea2aca1eec8"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/core/textures.js",
+      "path": "src/core/textures.js",
+      "bytes": 4960,
+      "sha256": "a4a4ff1e887eb6098a05b978c69db8e8d2f6947b363d1a3506f11ef30df0a390",
+      "content_type": "text/javascript",
+      "local_sha256": "a4a4ff1e887eb6098a05b978c69db8e8d2f6947b363d1a3506f11ef30df0a390"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/main.js",
+      "path": "src/main.js",
+      "bytes": 13893,
+      "sha256": "978f97cbed597f2e0f61d16b2187401824754b946ed81999c01cab77d1b1af95",
+      "content_type": "text/javascript",
+      "local_sha256": "978f97cbed597f2e0f61d16b2187401824754b946ed81999c01cab77d1b1af95"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/_ground.js",
+      "path": "src/world/_ground.js",
+      "bytes": 3228,
+      "sha256": "ff48bce39089469ef9326590a596f16af4f0c661022d0bec3bd69ea342a2a4dc",
+      "content_type": "text/javascript",
+      "local_sha256": "ff48bce39089469ef9326590a596f16af4f0c661022d0bec3bd69ea342a2a4dc"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters.js",
+      "path": "src/world/characters.js",
+      "bytes": 1588,
+      "sha256": "b5a78540132b7f5b77e4de7a7dcfd9836d388cf9fbe8ce68850a78184427f328",
+      "content_type": "text/javascript",
+      "local_sha256": "b5a78540132b7f5b77e4de7a7dcfd9836d388cf9fbe8ce68850a78184427f328"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/anim.js",
+      "path": "src/world/characters/anim.js",
+      "bytes": 8275,
+      "sha256": "458db7aaf6e4a4491e346accaebdd580e2c0683f500363230d3f50fb317b76cf",
+      "content_type": "text/javascript",
+      "local_sha256": "458db7aaf6e4a4491e346accaebdd580e2c0683f500363230d3f50fb317b76cf"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/animals.js",
+      "path": "src/world/characters/animals.js",
+      "bytes": 27262,
+      "sha256": "0fcd9d20239efab31df6bbe96558dce0c6029e942162c1335a3b90ea29575609",
+      "content_type": "text/javascript",
+      "local_sha256": "0fcd9d20239efab31df6bbe96558dce0c6029e942162c1335a3b90ea29575609"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/atlas.js",
+      "path": "src/world/characters/atlas.js",
+      "bytes": 11651,
+      "sha256": "a788e1b10e1708738934ca2f2099f7cfc3a79cb7d67ec1a6997764093637b2cd",
+      "content_type": "text/javascript",
+      "local_sha256": "a788e1b10e1708738934ca2f2099f7cfc3a79cb7d67ec1a6997764093637b2cd"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/cast.js",
+      "path": "src/world/characters/cast.js",
+      "bytes": 39471,
+      "sha256": "ea5d961b2b7537cfde9f1231d862a4b0d375196c3f2a217eb44cdc1c6c6ee718",
+      "content_type": "text/javascript",
+      "local_sha256": "ea5d961b2b7537cfde9f1231d862a4b0d375196c3f2a217eb44cdc1c6c6ee718"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/devprops.js",
+      "path": "src/world/characters/devprops.js",
+      "bytes": 3101,
+      "sha256": "177fa4d1110707c318134df5552473eb04fc2239f0e48ca9587119f1b231a510",
+      "content_type": "text/javascript",
+      "local_sha256": "177fa4d1110707c318134df5552473eb04fc2239f0e48ca9587119f1b231a510"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/gear.js",
+      "path": "src/world/characters/gear.js",
+      "bytes": 10575,
+      "sha256": "2e7a22566ca2e4c745c5c88ab71d770087fb0187e7e35b26dfb70f84e4e514be",
+      "content_type": "text/javascript",
+      "local_sha256": "2e7a22566ca2e4c745c5c88ab71d770087fb0187e7e35b26dfb70f84e4e514be"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/human.js",
+      "path": "src/world/characters/human.js",
+      "bytes": 48811,
+      "sha256": "de5bb2f7a45749c7fdf175cb4e22cf9d15a888b0c31f2fa651c71f6fb25378ed",
+      "content_type": "text/javascript",
+      "local_sha256": "de5bb2f7a45749c7fdf175cb4e22cf9d15a888b0c31f2fa651c71f6fb25378ed"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/characters/skin.js",
+      "path": "src/world/characters/skin.js",
+      "bytes": 15053,
+      "sha256": "7738680c10c7d86868b35c0170b40760ab862ab8779ae7fb0483f16b8b3e067e",
+      "content_type": "text/javascript",
+      "local_sha256": "7738680c10c7d86868b35c0170b40760ab862ab8779ae7fb0483f16b8b3e067e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/crossing.js",
+      "path": "src/world/crossing.js",
+      "bytes": 45784,
+      "sha256": "38c68c71d4d358b2e00b6b09fa93228b98194e8fbe176ca122aae5a7e461eec2",
+      "content_type": "text/javascript",
+      "local_sha256": "38c68c71d4d358b2e00b6b09fa93228b98194e8fbe176ca122aae5a7e461eec2"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/crossing/glow.js",
+      "path": "src/world/crossing/glow.js",
+      "bytes": 7073,
+      "sha256": "7767016a482da08e06e4d4ca5510d898886f3867c1c3937b8bc91238affb163d",
+      "content_type": "text/javascript",
+      "local_sha256": "7767016a482da08e06e4d4ca5510d898886f3867c1c3937b8bc91238affb163d"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/crossing/tex.js",
+      "path": "src/world/crossing/tex.js",
+      "bytes": 22763,
+      "sha256": "56843d50bf1c92aa16dea6c33ae73b447a930e7b9422501e1c1107078a55533e",
+      "content_type": "text/javascript",
+      "local_sha256": "56843d50bf1c92aa16dea6c33ae73b447a930e7b9422501e1c1107078a55533e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment.js",
+      "path": "src/world/environment.js",
+      "bytes": 2272,
+      "sha256": "f5899ed58584b1035c220cdb542923b5925dfbaa003fd3b1dc271c8e36d70cab",
+      "content_type": "text/javascript",
+      "local_sha256": "f5899ed58584b1035c220cdb542923b5925dfbaa003fd3b1dc271c8e36d70cab"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/common.js",
+      "path": "src/world/environment/common.js",
+      "bytes": 12253,
+      "sha256": "fdaceac6b191109e0fb1c3bfdca092d770ae9058c84db45052ba6ed16c2dff37",
+      "content_type": "text/javascript",
+      "local_sha256": "fdaceac6b191109e0fb1c3bfdca092d770ae9058c84db45052ba6ed16c2dff37"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/far.js",
+      "path": "src/world/environment/far.js",
+      "bytes": 30198,
+      "sha256": "94801d4d5148a9b8b8427dd1cfbf5b0cb38e87030d331accf405089317c9df63",
+      "content_type": "text/javascript",
+      "local_sha256": "94801d4d5148a9b8b8427dd1cfbf5b0cb38e87030d331accf405089317c9df63"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/flora.js",
+      "path": "src/world/environment/flora.js",
+      "bytes": 13673,
+      "sha256": "8ac53cf34e368cf81c8e0d5bb9d32247e8dfb3c3d0716b8123eaf099db434cf4",
+      "content_type": "text/javascript",
+      "local_sha256": "8ac53cf34e368cf81c8e0d5bb9d32247e8dfb3c3d0716b8123eaf099db434cf4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/levee.js",
+      "path": "src/world/environment/levee.js",
+      "bytes": 14654,
+      "sha256": "081fe78e81d7aec92130a1859d2a8657e7d22b36db37694eaba54ca84e9f1329",
+      "content_type": "text/javascript",
+      "local_sha256": "081fe78e81d7aec92130a1859d2a8657e7d22b36db37694eaba54ca84e9f1329"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/park.js",
+      "path": "src/world/environment/park.js",
+      "bytes": 15806,
+      "sha256": "da34ecaab114f19122a7b8c6e49dae28b8745adefa40a0f5909f07cb2beef6c4",
+      "content_type": "text/javascript",
+      "local_sha256": "da34ecaab114f19122a7b8c6e49dae28b8745adefa40a0f5909f07cb2beef6c4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/shaders.js",
+      "path": "src/world/environment/shaders.js",
+      "bytes": 17397,
+      "sha256": "240f69bd594e320150109691324e6cae0872d4fd10700b137bff9dc36b812ca6",
+      "content_type": "text/javascript",
+      "local_sha256": "240f69bd594e320150109691324e6cae0872d4fd10700b137bff9dc36b812ca6"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/terrain.js",
+      "path": "src/world/environment/terrain.js",
+      "bytes": 14378,
+      "sha256": "bce5ed82a6caab37f7d19c498487389ec1dd7c5432c0304068016003257e6031",
+      "content_type": "text/javascript",
+      "local_sha256": "bce5ed82a6caab37f7d19c498487389ec1dd7c5432c0304068016003257e6031"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/textures.js",
+      "path": "src/world/environment/textures.js",
+      "bytes": 24001,
+      "sha256": "bb7ebce17498f854d15714626ba97dea6b26e0e7184ed788b6dac9ec81ee4d09",
+      "content_type": "text/javascript",
+      "local_sha256": "bb7ebce17498f854d15714626ba97dea6b26e0e7184ed788b6dac9ec81ee4d09"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/environment/water.js",
+      "path": "src/world/environment/water.js",
+      "bytes": 10928,
+      "sha256": "bff0a31540b2f64340aa4ddfde0a560a4ce255623341170171f63bc7c34c1989",
+      "content_type": "text/javascript",
+      "local_sha256": "bff0a31540b2f64340aa4ddfde0a560a4ce255623341170171f63bc7c34c1989"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses.js",
+      "path": "src/world/houses.js",
+      "bytes": 31238,
+      "sha256": "972e8f31a58e56ba915f32cdf6fb7354682aa0210063eef102b0c46f1d106cd4",
+      "content_type": "text/javascript",
+      "local_sha256": "972e8f31a58e56ba915f32cdf6fb7354682aa0210063eef102b0c46f1d106cd4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/apartment.js",
+      "path": "src/world/houses/apartment.js",
+      "bytes": 11701,
+      "sha256": "279eed59a4708b66ec3ba098c91a60e2bbbe2e72d849efa900aae211a8949556",
+      "content_type": "text/javascript",
+      "local_sha256": "279eed59a4708b66ec3ba098c91a60e2bbbe2e72d849efa900aae211a8949556"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/far.js",
+      "path": "src/world/houses/far.js",
+      "bytes": 11991,
+      "sha256": "ef7bc4859f956b7f15ccdc1f138f2258cfb2d25b42d397219c726d7cc1b17841",
+      "content_type": "text/javascript",
+      "local_sha256": "ef7bc4859f956b7f15ccdc1f138f2258cfb2d25b42d397219c726d7cc1b17841"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/gb.js",
+      "path": "src/world/houses/gb.js",
+      "bytes": 13294,
+      "sha256": "1eff740f7c981529cfbdf4dd070309905d147cf4d9897a5bffcda5040ea2c1c5",
+      "content_type": "text/javascript",
+      "local_sha256": "1eff740f7c981529cfbdf4dd070309905d147cf4d9897a5bffcda5040ea2c1c5"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/house.js",
+      "path": "src/world/houses/house.js",
+      "bytes": 38438,
+      "sha256": "9d1713efe5670432938cfa05d96c6ef6acc75be6f3586674df62d9af77b91d4b",
+      "content_type": "text/javascript",
+      "local_sha256": "9d1713efe5670432938cfa05d96c6ef6acc75be6f3586674df62d9af77b91d4b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/laundry.js",
+      "path": "src/world/houses/laundry.js",
+      "bytes": 10043,
+      "sha256": "528293a90362a60d763b4103fa873b596d34f3e1aa58556c79a2396dd7883f56",
+      "content_type": "text/javascript",
+      "local_sha256": "528293a90362a60d763b4103fa873b596d34f3e1aa58556c79a2396dd7883f56"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/lot.js",
+      "path": "src/world/houses/lot.js",
+      "bytes": 27855,
+      "sha256": "53098c01453e67db3e21d410212c7ab7a332675abe79ce1b94e51c531af04327",
+      "content_type": "text/javascript",
+      "local_sha256": "53098c01453e67db3e21d410212c7ab7a332675abe79ce1b94e51c531af04327"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/props.js",
+      "path": "src/world/houses/props.js",
+      "bytes": 30739,
+      "sha256": "9dec02c33081cfefa6d302dd5d91a3f1b05ff618c0dcf2c3000d198df127f4f2",
+      "content_type": "text/javascript",
+      "local_sha256": "9dec02c33081cfefa6d302dd5d91a3f1b05ff618c0dcf2c3000d198df127f4f2"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/houses/tex.js",
+      "path": "src/world/houses/tex.js",
+      "bytes": 46928,
+      "sha256": "8d654174fa705a74554b5dccfa12638dd55430e662407910a88a434eb4a71b85",
+      "content_type": "text/javascript",
+      "local_sha256": "8d654174fa705a74554b5dccfa12638dd55430e662407910a88a434eb4a71b85"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/layout.js",
+      "path": "src/world/layout.js",
+      "bytes": 21571,
+      "sha256": "ca3acd3248e3fc48f8ce58f9bacabfe0fc893e633c58bb385822918deca97b7c",
+      "content_type": "text/javascript",
+      "local_sha256": "ca3acd3248e3fc48f8ce58f9bacabfe0fc893e633c58bb385822918deca97b7c"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/lib/foliage.js",
+      "path": "src/world/lib/foliage.js",
+      "bytes": 32586,
+      "sha256": "6c54386dfe6daa83960800a3e443fe4fccf3268aeac3c69fbcbf50b6d1676016",
+      "content_type": "text/javascript",
+      "local_sha256": "6c54386dfe6daa83960800a3e443fe4fccf3268aeac3c69fbcbf50b6d1676016"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals.js",
+      "path": "src/world/petals.js",
+      "bytes": 29789,
+      "sha256": "38e7e83e08817302255109c1a5ee34dd2c6c9215deedaeb633efb8e10ac751f4",
+      "content_type": "text/javascript",
+      "local_sha256": "38e7e83e08817302255109c1a5ee34dd2c6c9215deedaeb633efb8e10ac751f4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals/ground.js",
+      "path": "src/world/petals/ground.js",
+      "bytes": 9178,
+      "sha256": "48d59757de8d669d5e473fd6d61ce34008cb6d23ae17550d17d58f481c456d2f",
+      "content_type": "text/javascript",
+      "local_sha256": "48d59757de8d669d5e473fd6d61ce34008cb6d23ae17550d17d58f481c456d2f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals/plan.js",
+      "path": "src/world/petals/plan.js",
+      "bytes": 18127,
+      "sha256": "e78ee90513d1b9be74f5d787be6780aa62848cef0bbc58385bbffe71dca30257",
+      "content_type": "text/javascript",
+      "local_sha256": "e78ee90513d1b9be74f5d787be6780aa62848cef0bbc58385bbffe71dca30257"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals/shaders.js",
+      "path": "src/world/petals/shaders.js",
+      "bytes": 17729,
+      "sha256": "6bea5ab51da18c288a7cbdd7b48f967978568f567dffd8603162d34b0b100e83",
+      "content_type": "text/javascript",
+      "local_sha256": "6bea5ab51da18c288a7cbdd7b48f967978568f567dffd8603162d34b0b100e83"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals/surface.js",
+      "path": "src/world/petals/surface.js",
+      "bytes": 6206,
+      "sha256": "dd691399c3b53557997596ed3943b4e7e602494beb1951ce41e2a894d7aa3736",
+      "content_type": "text/javascript",
+      "local_sha256": "dd691399c3b53557997596ed3943b4e7e602494beb1951ce41e2a894d7aa3736"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals/textures.js",
+      "path": "src/world/petals/textures.js",
+      "bytes": 13171,
+      "sha256": "89794abf5de706c7d61953629924b6ac7cef9df1a77c76fd9da41fb149f0acce",
+      "content_type": "text/javascript",
+      "local_sha256": "89794abf5de706c7d61953629924b6ac7cef9df1a77c76fd9da41fb149f0acce"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/petals/trains.js",
+      "path": "src/world/petals/trains.js",
+      "bytes": 3639,
+      "sha256": "3d960e6e8529ed7df29a635c65db2152617971e979974f32420f560742c526cb",
+      "content_type": "text/javascript",
+      "local_sha256": "3d960e6e8529ed7df29a635c65db2152617971e979974f32420f560742c526cb"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza.js",
+      "path": "src/world/plaza.js",
+      "bytes": 6462,
+      "sha256": "902087f253fc859c6af911c6efcfa063f6ec77089c6f70b24987b89ffaeb015e",
+      "content_type": "text/javascript",
+      "local_sha256": "902087f253fc859c6af911c6efcfa063f6ec77089c6f70b24987b89ffaeb015e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/furniture.js",
+      "path": "src/world/plaza/furniture.js",
+      "bytes": 34551,
+      "sha256": "88cb993643be9b5529d519abcc8e65fdc0cb8a44a6d10c3f2bd9f2386ebae7ab",
+      "content_type": "text/javascript",
+      "local_sha256": "88cb993643be9b5529d519abcc8e65fdc0cb8a44a6d10c3f2bd9f2386ebae7ab"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/ground.js",
+      "path": "src/world/plaza/ground.js",
+      "bytes": 7465,
+      "sha256": "1fcccdeef23b5f744f289f184be9afdd88c39bd02b0a23ff710402a5ebf8fed9",
+      "content_type": "text/javascript",
+      "local_sha256": "1fcccdeef23b5f744f289f184be9afdd88c39bd02b0a23ff710402a5ebf8fed9"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/plants.js",
+      "path": "src/world/plaza/plants.js",
+      "bytes": 16088,
+      "sha256": "84087d105fd6454214b3f11c5010c8c9b8a46fe2ed350f45fb835da6d5ed13db",
+      "content_type": "text/javascript",
+      "local_sha256": "84087d105fd6454214b3f11c5010c8c9b8a46fe2ed350f45fb835da6d5ed13db"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/signs.js",
+      "path": "src/world/plaza/signs.js",
+      "bytes": 41656,
+      "sha256": "7ad5b2936e3a0b42edda957ae59a4e50d07a841f017ee0b7196db8053a5a103e",
+      "content_type": "text/javascript",
+      "local_sha256": "7ad5b2936e3a0b42edda957ae59a4e50d07a841f017ee0b7196db8053a5a103e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/textures.js",
+      "path": "src/world/plaza/textures.js",
+      "bytes": 20772,
+      "sha256": "ecc2c5cc4417957d00c6c69961d3affe76a1e688d48179f00ae0b8f54a992620",
+      "content_type": "text/javascript",
+      "local_sha256": "ecc2c5cc4417957d00c6c69961d3affe76a1e688d48179f00ae0b8f54a992620"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/tree.js",
+      "path": "src/world/plaza/tree.js",
+      "bytes": 16078,
+      "sha256": "ab6442d7a31f332a1737691850111a3484046b34bd31071b6409504ecf612b0b",
+      "content_type": "text/javascript",
+      "local_sha256": "ab6442d7a31f332a1737691850111a3484046b34bd31071b6409504ecf612b0b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/plaza/util.js",
+      "path": "src/world/plaza/util.js",
+      "bytes": 11630,
+      "sha256": "11c44c6847ed35727321fb63f18f99df5549c8d78e0cbff06b64feff58cdd6a4",
+      "content_type": "text/javascript",
+      "local_sha256": "11c44c6847ed35727321fb63f18f99df5549c8d78e0cbff06b64feff58cdd6a4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/poles.js",
+      "path": "src/world/poles.js",
+      "bytes": 49172,
+      "sha256": "7dfa0cb8d41b30c55809f8c5152c77a4990d8c7d99be86d16361c4ad5489bb7c",
+      "content_type": "text/javascript",
+      "local_sha256": "7dfa0cb8d41b30c55809f8c5152c77a4990d8c7d99be86d16361c4ad5489bb7c"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/poles/acc.js",
+      "path": "src/world/poles/acc.js",
+      "bytes": 2408,
+      "sha256": "1a3d3f899c1a9c7fbff877cadfea85bf6772ead69769a9d8751a80470e6c1b53",
+      "content_type": "text/javascript",
+      "local_sha256": "1a3d3f899c1a9c7fbff877cadfea85bf6772ead69769a9d8751a80470e6c1b53"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/poles/atlas.js",
+      "path": "src/world/poles/atlas.js",
+      "bytes": 29988,
+      "sha256": "d49b3a51aba573a3cdcba9b4e5b3c2895bbe3f464528b7faeb71fd01be71a889",
+      "content_type": "text/javascript",
+      "local_sha256": "d49b3a51aba573a3cdcba9b4e5b3c2895bbe3f464528b7faeb71fd01be71a889"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/poles/facade.js",
+      "path": "src/world/poles/facade.js",
+      "bytes": 8112,
+      "sha256": "5610b5f3657e92c07f7394f56c9680cf61d94b8c66c5ab44d161e6ad86701dde",
+      "content_type": "text/javascript",
+      "local_sha256": "5610b5f3657e92c07f7394f56c9680cf61d94b8c66c5ab44d161e6ad86701dde"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props.js",
+      "path": "src/world/props.js",
+      "bytes": 1602,
+      "sha256": "655334b043d62a513d7c0da92435b4a56c4cdf194a2c7c4a67ad425ed3f667ef",
+      "content_type": "text/javascript",
+      "local_sha256": "655334b043d62a513d7c0da92435b4a56c4cdf194a2c7c4a67ad425ed3f667ef"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/common.js",
+      "path": "src/world/props/common.js",
+      "bytes": 9634,
+      "sha256": "bf36b3c0b059882efb5a50b8c120f11639e4d4bfa96a878a381719e5e3c5f5a5",
+      "content_type": "text/javascript",
+      "local_sha256": "bf36b3c0b059882efb5a50b8c120f11639e4d4bfa96a878a381719e5e3c5f5a5"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/optimize.js",
+      "path": "src/world/props/optimize.js",
+      "bytes": 10225,
+      "sha256": "53dad6d1ff7add5ea350b7293d22ee453625a2ae1c5a819a05b7ee537c070bd1",
+      "content_type": "text/javascript",
+      "local_sha256": "53dad6d1ff7add5ea350b7293d22ee453625a2ae1c5a819a05b7ee537c070bd1"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/scatter.js",
+      "path": "src/world/props/scatter.js",
+      "bytes": 28133,
+      "sha256": "b7cc6434c659f11d18bd0a9a2af7322d8bf8f3179c86c3ff679c7274009263ed",
+      "content_type": "text/javascript",
+      "local_sha256": "b7cc6434c659f11d18bd0a9a2af7322d8bf8f3179c86c3ff679c7274009263ed"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/shrine.js",
+      "path": "src/world/props/shrine.js",
+      "bytes": 35561,
+      "sha256": "4cd8b1da34a017b159eb4d332f0b5926003d4cabb8ccbb9c0bf827138ed909de",
+      "content_type": "text/javascript",
+      "local_sha256": "4cd8b1da34a017b159eb4d332f0b5926003d4cabb8ccbb9c0bf827138ed909de"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/shrinetex.js",
+      "path": "src/world/props/shrinetex.js",
+      "bytes": 19775,
+      "sha256": "702336bf0980218755079bb2d3c699ae331757ea30fd8aac25aa013745059777",
+      "content_type": "text/javascript",
+      "local_sha256": "702336bf0980218755079bb2d3c699ae331757ea30fd8aac25aa013745059777"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/vending.js",
+      "path": "src/world/props/vending.js",
+      "bytes": 14913,
+      "sha256": "f5917bcaa77cfe46d657735387be8b1722a61c69f496ce1ef75b174594e7a9d6",
+      "content_type": "text/javascript",
+      "local_sha256": "f5917bcaa77cfe46d657735387be8b1722a61c69f496ce1ef75b174594e7a9d6"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/props/vendtex.js",
+      "path": "src/world/props/vendtex.js",
+      "bytes": 36452,
+      "sha256": "39556ecaf911ee558b6eaa7ca7ecec2bcafaa2caa05000f41d70b12221c6bf01",
+      "content_type": "text/javascript",
+      "local_sha256": "39556ecaf911ee558b6eaa7ca7ecec2bcafaa2caa05000f41d70b12221c6bf01"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway.js",
+      "path": "src/world/railway.js",
+      "bytes": 4170,
+      "sha256": "1fc5643d8263c5c2dce211c5312f14cb8a890151666b5f1ce3d209250d8bb91a",
+      "content_type": "text/javascript",
+      "local_sha256": "1fc5643d8263c5c2dce211c5312f14cb8a890151666b5f1ce3d209250d8bb91a"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway/catenary.js",
+      "path": "src/world/railway/catenary.js",
+      "bytes": 12642,
+      "sha256": "fe3b08b7c8205ebf18ca57e87336540df46cad4b88e2565bc3614d546258189a",
+      "content_type": "text/javascript",
+      "local_sha256": "fe3b08b7c8205ebf18ca57e87336540df46cad4b88e2565bc3614d546258189a"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway/merge.js",
+      "path": "src/world/railway/merge.js",
+      "bytes": 3851,
+      "sha256": "fca5311d545e0ac330746ae5a2d6cd66e098757230b2daee52d6f35faffc8f7f",
+      "content_type": "text/javascript",
+      "local_sha256": "fca5311d545e0ac330746ae5a2d6cd66e098757230b2daee52d6f35faffc8f7f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway/tex.js",
+      "path": "src/world/railway/tex.js",
+      "bytes": 33307,
+      "sha256": "5ded261a9c66b1f09b4fa635103da44537beaef8d26463d42616cce8ef1925c1",
+      "content_type": "text/javascript",
+      "local_sha256": "5ded261a9c66b1f09b4fa635103da44537beaef8d26463d42616cce8ef1925c1"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway/track.js",
+      "path": "src/world/railway/track.js",
+      "bytes": 26706,
+      "sha256": "fdb74db539fc2e4c77095b69191e902db54d6579dacec6f69f92a2da54ee7ffc",
+      "content_type": "text/javascript",
+      "local_sha256": "fdb74db539fc2e4c77095b69191e902db54d6579dacec6f69f92a2da54ee7ffc"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway/trackside.js",
+      "path": "src/world/railway/trackside.js",
+      "bytes": 19541,
+      "sha256": "81ce2d31c4a56ff7706089416d48bb7a8761762c63a3fda302257406c56ea39f",
+      "content_type": "text/javascript",
+      "local_sha256": "81ce2d31c4a56ff7706089416d48bb7a8761762c63a3fda302257406c56ea39f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/railway/weeds.js",
+      "path": "src/world/railway/weeds.js",
+      "bytes": 8735,
+      "sha256": "eb94b0806095ef9abb43e7e0a0b1685a385e45623bdd5b722402e2a3020babaa",
+      "content_type": "text/javascript",
+      "local_sha256": "eb94b0806095ef9abb43e7e0a0b1685a385e45623bdd5b722402e2a3020babaa"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura.js",
+      "path": "src/world/sakura.js",
+      "bytes": 4669,
+      "sha256": "e8535e798d38cd41d95aa291ab744ea8be7fc46fe88a906dc9f995f6cac5d68e",
+      "content_type": "text/javascript",
+      "local_sha256": "e8535e798d38cd41d95aa291ab744ea8be7fc46fe88a906dc9f995f6cac5d68e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/bases.js",
+      "path": "src/world/sakura/bases.js",
+      "bytes": 9814,
+      "sha256": "2d2f25e952cfdb131fe301eb4e6cafe3e0142d1d7184f3e2fc1f3ccd545b37a3",
+      "content_type": "text/javascript",
+      "local_sha256": "2d2f25e952cfdb131fe301eb4e6cafe3e0142d1d7184f3e2fc1f3ccd545b37a3"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/canopy.js",
+      "path": "src/world/sakura/canopy.js",
+      "bytes": 19458,
+      "sha256": "160d5e8b902a533ddd4c282bf2d3697b0250fc8c830e910a6534afc2f0dbed5b",
+      "content_type": "text/javascript",
+      "local_sha256": "160d5e8b902a533ddd4c282bf2d3697b0250fc8c830e910a6534afc2f0dbed5b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/materials.js",
+      "path": "src/world/sakura/materials.js",
+      "bytes": 11750,
+      "sha256": "fa5cb76f4c3ad8230e153295d0cf6ef0d622a185e096e635014d6502be749478",
+      "content_type": "text/javascript",
+      "local_sha256": "fa5cb76f4c3ad8230e153295d0cf6ef0d622a185e096e635014d6502be749478"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/placements.js",
+      "path": "src/world/sakura/placements.js",
+      "bytes": 12829,
+      "sha256": "9a214e46ee3e9553a4348a6fd037c17471ff6d3bf209e32db6927bdf2fc2d6f1",
+      "content_type": "text/javascript",
+      "local_sha256": "9a214e46ee3e9553a4348a6fd037c17471ff6d3bf209e32db6927bdf2fc2d6f1"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/textures.js",
+      "path": "src/world/sakura/textures.js",
+      "bytes": 17937,
+      "sha256": "67d343801b0812f9d2afeb03e82bf6368818bbf822185a722f87cc5f3f494055",
+      "content_type": "text/javascript",
+      "local_sha256": "67d343801b0812f9d2afeb03e82bf6368818bbf822185a722f87cc5f3f494055"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/tree.js",
+      "path": "src/world/sakura/tree.js",
+      "bytes": 37421,
+      "sha256": "5e646fea7337a7d0fde7f95ec7c261596ee887c5f9cd4770b47f9ccac37c915e",
+      "content_type": "text/javascript",
+      "local_sha256": "5e646fea7337a7d0fde7f95ec7c261596ee887c5f9cd4770b47f9ccac37c915e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/sakura/util.js",
+      "path": "src/world/sakura/util.js",
+      "bytes": 7142,
+      "sha256": "35c4978e9941ce0f4888a284b68592fd6baaf7a74be4d2ad24b0a3d14194fbb4",
+      "content_type": "text/javascript",
+      "local_sha256": "35c4978e9941ce0f4888a284b68592fd6baaf7a74be4d2ad24b0a3d14194fbb4"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA.js",
+      "path": "src/world/shopsA.js",
+      "bytes": 1538,
+      "sha256": "771de38ca9388f9296cda93c26407fe5336cda2d26ef0f7dab9ba2826722d57a",
+      "content_type": "text/javascript",
+      "local_sha256": "771de38ca9388f9296cda93c26407fe5336cda2d26ef0f7dab9ba2826722d57a"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/books.js",
+      "path": "src/world/shopsA/books.js",
+      "bytes": 23905,
+      "sha256": "454ae9fc030046f385d91dad13583b29b823718fb691f3f0bf42b0672ea815ec",
+      "content_type": "text/javascript",
+      "local_sha256": "454ae9fc030046f385d91dad13583b29b823718fb691f3f0bf42b0672ea815ec"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/cafe.js",
+      "path": "src/world/shopsA/cafe.js",
+      "bytes": 34539,
+      "sha256": "3df2f60f091577cbaba453fb2b078215a08f3e3d3f454b4539b2cf73f2fe0166",
+      "content_type": "text/javascript",
+      "local_sha256": "3df2f60f091577cbaba453fb2b078215a08f3e3d3f454b4539b2cf73f2fe0166"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/common.js",
+      "path": "src/world/shopsA/common.js",
+      "bytes": 40541,
+      "sha256": "552b5ee6f6ab4ffb5f0c1703e06c9cea4d4e624ee5528114c6fad486511b8306",
+      "content_type": "text/javascript",
+      "local_sha256": "552b5ee6f6ab4ffb5f0c1703e06c9cea4d4e624ee5528114c6fad486511b8306"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/flower.js",
+      "path": "src/world/shopsA/flower.js",
+      "bytes": 27808,
+      "sha256": "1767258c82c79b4c27d6c752f757d2a0815a91a76427a90a996f0fc658d431fc",
+      "content_type": "text/javascript",
+      "local_sha256": "1767258c82c79b4c27d6c752f757d2a0815a91a76427a90a996f0fc658d431fc"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/goods.js",
+      "path": "src/world/shopsA/goods.js",
+      "bytes": 45571,
+      "sha256": "40fdc245dc1e00c79b421089cd6d81a81a6d3a9d99fa377a5e4159e5e2db7418",
+      "content_type": "text/javascript",
+      "local_sha256": "40fdc245dc1e00c79b421089cd6d81a81a6d3a9d99fa377a5e4159e5e2db7418"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/intBooks.js",
+      "path": "src/world/shopsA/intBooks.js",
+      "bytes": 25926,
+      "sha256": "0cf35367a168acfa02f9b87e29a824b58a578255f7d79db27e6d6f97829c95ec",
+      "content_type": "text/javascript",
+      "local_sha256": "0cf35367a168acfa02f9b87e29a824b58a578255f7d79db27e6d6f97829c95ec"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/intCafe.js",
+      "path": "src/world/shopsA/intCafe.js",
+      "bytes": 37008,
+      "sha256": "6108afb9cec5cbffe9256f2cfb32ef9c183d86115635ea1b4b34057b225eb4e9",
+      "content_type": "text/javascript",
+      "local_sha256": "6108afb9cec5cbffe9256f2cfb32ef9c183d86115635ea1b4b34057b225eb4e9"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/intFlower.js",
+      "path": "src/world/shopsA/intFlower.js",
+      "bytes": 26130,
+      "sha256": "f5c6400626937b779d70ee84f55b2cdf965296685b9fd3219f32ce2214ddfbdf",
+      "content_type": "text/javascript",
+      "local_sha256": "f5c6400626937b779d70ee84f55b2cdf965296685b9fd3219f32ce2214ddfbdf"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/intKonbini.js",
+      "path": "src/world/shopsA/intKonbini.js",
+      "bytes": 50157,
+      "sha256": "3fb122d19f1c11889f9cbe62dc53b5a1388dbfc0f1e71c508a7c9054b6cb8244",
+      "content_type": "text/javascript",
+      "local_sha256": "3fb122d19f1c11889f9cbe62dc53b5a1388dbfc0f1e71c508a7c9054b6cb8244"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsA/konbini.js",
+      "path": "src/world/shopsA/konbini.js",
+      "bytes": 37666,
+      "sha256": "fd575217e6a8e64f44ea5c5d718f94ab71134ae6e58cd856c08d6339954eade8",
+      "content_type": "text/javascript",
+      "local_sha256": "fd575217e6a8e64f44ea5c5d718f94ab71134ae6e58cd856c08d6339954eade8"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB.js",
+      "path": "src/world/shopsB.js",
+      "bytes": 2711,
+      "sha256": "bc1b5c68997e5a3bedc8b5c0e5d84a6f7754a8cce40c75ab467b37929b2855e1",
+      "content_type": "text/javascript",
+      "local_sha256": "bc1b5c68997e5a3bedc8b5c0e5d84a6f7754a8cce40c75ab467b37929b2855e1"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/bike.js",
+      "path": "src/world/shopsB/bike.js",
+      "bytes": 20946,
+      "sha256": "3ec8189fff82e677bbc02f299a3764705300cea48b9d1875bc2889375af388ef",
+      "content_type": "text/javascript",
+      "local_sha256": "3ec8189fff82e677bbc02f299a3764705300cea48b9d1875bc2889375af388ef"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/bikeInt.js",
+      "path": "src/world/shopsB/bikeInt.js",
+      "bytes": 31644,
+      "sha256": "4f446f762812861582a0f69d8400738a8ee6e3b26c78181ca56c5d91430f0b8f",
+      "content_type": "text/javascript",
+      "local_sha256": "4f446f762812861582a0f69d8400738a8ee6e3b26c78181ca56c5d91430f0b8f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/common.js",
+      "path": "src/world/shopsB/common.js",
+      "bytes": 53522,
+      "sha256": "115a1b6c49b93dbb5d57c886f99db3c837d704df44e02d833a1e166f16d8a08d",
+      "content_type": "text/javascript",
+      "local_sha256": "115a1b6c49b93dbb5d57c886f99db3c837d704df44e02d833a1e166f16d8a08d"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/general.js",
+      "path": "src/world/shopsB/general.js",
+      "bytes": 34740,
+      "sha256": "d9089476cb751928ba32de834f309a1067493a24cb3befc5d6e5f45f838dc5ec",
+      "content_type": "text/javascript",
+      "local_sha256": "d9089476cb751928ba32de834f309a1067493a24cb3befc5d6e5f45f838dc5ec"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/generalInt.js",
+      "path": "src/world/shopsB/generalInt.js",
+      "bytes": 38209,
+      "sha256": "399e9da7642646fd15e024d521225bc2bda1db614db11f426c9b4ce013fbcf79",
+      "content_type": "text/javascript",
+      "local_sha256": "399e9da7642646fd15e024d521225bc2bda1db614db11f426c9b4ce013fbcf79"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/inst.js",
+      "path": "src/world/shopsB/inst.js",
+      "bytes": 6343,
+      "sha256": "742885cf5d76a475514bea3a550a7b338eb7ac18c959cdad9705d6c24aeff3cd",
+      "content_type": "text/javascript",
+      "local_sha256": "742885cf5d76a475514bea3a550a7b338eb7ac18c959cdad9705d6c24aeff3cd"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/optimize.js",
+      "path": "src/world/shopsB/optimize.js",
+      "bytes": 3661,
+      "sha256": "95c0c8484756b3f8ab84c3df832750236c827af9b8daaff284f3ac4d0aa77fff",
+      "content_type": "text/javascript",
+      "local_sha256": "95c0c8484756b3f8ab84c3df832750236c827af9b8daaff284f3ac4d0aa77fff"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/props.js",
+      "path": "src/world/shopsB/props.js",
+      "bytes": 24836,
+      "sha256": "41425741d90de5f56f06f222b3b793a38599fabde89e5c00519826b5af79131c",
+      "content_type": "text/javascript",
+      "local_sha256": "41425741d90de5f56f06f222b3b793a38599fabde89e5c00519826b5af79131c"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/ramen.js",
+      "path": "src/world/shopsB/ramen.js",
+      "bytes": 25398,
+      "sha256": "10d93e321f2f75b21cd156c60e66174bba6b9bafc56a6f570b709db082cd3580",
+      "content_type": "text/javascript",
+      "local_sha256": "10d93e321f2f75b21cd156c60e66174bba6b9bafc56a6f570b709db082cd3580"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/ramenInt.js",
+      "path": "src/world/shopsB/ramenInt.js",
+      "bytes": 32854,
+      "sha256": "9e82b58ebcb2148cd8edb01e4f39ac693e9294ace057ab66c25c24bed0c8d115",
+      "content_type": "text/javascript",
+      "local_sha256": "9e82b58ebcb2148cd8edb01e4f39ac693e9294ace057ab66c25c24bed0c8d115"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/sweets.js",
+      "path": "src/world/shopsB/sweets.js",
+      "bytes": 7474,
+      "sha256": "ae427cf1701f1e74fef8e2dc45507b8f4874029d1667689fdc2c79fd47ddfc22",
+      "content_type": "text/javascript",
+      "local_sha256": "ae427cf1701f1e74fef8e2dc45507b8f4874029d1667689fdc2c79fd47ddfc22"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/wagashi.js",
+      "path": "src/world/shopsB/wagashi.js",
+      "bytes": 39540,
+      "sha256": "94ff636f7b99e0ae2f06831139221d07cbbdc03d95100dc60d41ccf5e54e0ae0",
+      "content_type": "text/javascript",
+      "local_sha256": "94ff636f7b99e0ae2f06831139221d07cbbdc03d95100dc60d41ccf5e54e0ae0"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/shopsB/wagashiInt.js",
+      "path": "src/world/shopsB/wagashiInt.js",
+      "bytes": 36051,
+      "sha256": "633a4de4bc90b2baa8cf711a6aa25f37009cb233cc4400630554c9567e634287",
+      "content_type": "text/javascript",
+      "local_sha256": "633a4de4bc90b2baa8cf711a6aa25f37009cb233cc4400630554c9567e634287"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station.js",
+      "path": "src/world/station.js",
+      "bytes": 7934,
+      "sha256": "5d57310779a690cf9a0027f39baf4176215484d9a47032ca09faf76dbfd84c7f",
+      "content_type": "text/javascript",
+      "local_sha256": "5d57310779a690cf9a0027f39baf4176215484d9a47032ca09faf76dbfd84c7f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/building.js",
+      "path": "src/world/station/building.js",
+      "bytes": 28304,
+      "sha256": "eb97d221b489ecdbf97fd8af53471c4d6ac07ac3cda6378c007102f4089f2505",
+      "content_type": "text/javascript",
+      "local_sha256": "eb97d221b489ecdbf97fd8af53471c4d6ac07ac3cda6378c007102f4089f2505"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/interior.js",
+      "path": "src/world/station/interior.js",
+      "bytes": 29339,
+      "sha256": "eb6d512539ae18d21e417c5515fe26504969e141beee16f738738129c6130297",
+      "content_type": "text/javascript",
+      "local_sha256": "eb6d512539ae18d21e417c5515fe26504969e141beee16f738738129c6130297"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/mats.js",
+      "path": "src/world/station/mats.js",
+      "bytes": 7638,
+      "sha256": "1b5c0197e9869aa121fb568f0b63ea8fa3b97179f2a81d2fe01c9a1c870ac53f",
+      "content_type": "text/javascript",
+      "local_sha256": "1b5c0197e9869aa121fb568f0b63ea8fa3b97179f2a81d2fe01c9a1c870ac53f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/office.js",
+      "path": "src/world/station/office.js",
+      "bytes": 29299,
+      "sha256": "8d91cb4d51c4804e8adb097996dfc1e614a80ed0ee5ddaf730cd0f5cb2c73919",
+      "content_type": "text/javascript",
+      "local_sha256": "8d91cb4d51c4804e8adb097996dfc1e614a80ed0ee5ddaf730cd0f5cb2c73919"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/platforms.js",
+      "path": "src/world/station/platforms.js",
+      "bytes": 33796,
+      "sha256": "fd24963c6eaa62b078fc54c392b3819bc820c7c6cfd37baaeecaf6f30ff8bc3d",
+      "content_type": "text/javascript",
+      "local_sha256": "fd24963c6eaa62b078fc54c392b3819bc820c7c6cfd37baaeecaf6f30ff8bc3d"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/props3d.js",
+      "path": "src/world/station/props3d.js",
+      "bytes": 44585,
+      "sha256": "ded912c91a7c0fce99fc9c06a1f8fe9e852591181a860945fb88ef96a2cc517a",
+      "content_type": "text/javascript",
+      "local_sha256": "ded912c91a7c0fce99fc9c06a1f8fe9e852591181a860945fb88ef96a2cc517a"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/tex.js",
+      "path": "src/world/station/tex.js",
+      "bytes": 74202,
+      "sha256": "8b5c7603dafa77eddd6deba2a825b77c0b516cdfb1d547b94d49e039d479a1a1",
+      "content_type": "text/javascript",
+      "local_sha256": "8b5c7603dafa77eddd6deba2a825b77c0b516cdfb1d547b94d49e039d479a1a1"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/tex2.js",
+      "path": "src/world/station/tex2.js",
+      "bytes": 24997,
+      "sha256": "576bfd8110192d3ba496487c577ef5bbb609489761ed65df17c826ff2ce45b9b",
+      "content_type": "text/javascript",
+      "local_sha256": "576bfd8110192d3ba496487c577ef5bbb609489761ed65df17c826ff2ce45b9b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/util.js",
+      "path": "src/world/station/util.js",
+      "bytes": 10324,
+      "sha256": "86a010675026f3c1379f675db6e0bc6fbf0b0ed9af6d249b805e4d529b3d3e8b",
+      "content_type": "text/javascript",
+      "local_sha256": "86a010675026f3c1379f675db6e0bc6fbf0b0ed9af6d249b805e4d529b3d3e8b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/station/yards.js",
+      "path": "src/world/station/yards.js",
+      "bytes": 21247,
+      "sha256": "ee033e1e585104cfa0ecf810fe6c6cbd3eb8a8b9c9af7af9d3dd386a39525508",
+      "content_type": "text/javascript",
+      "local_sha256": "ee033e1e585104cfa0ecf810fe6c6cbd3eb8a8b9c9af7af9d3dd386a39525508"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/street.js",
+      "path": "src/world/street.js",
+      "bytes": 45991,
+      "sha256": "c8bf81bea57fe23c6803ed246e3e178d1851b210ab4983bf68cd280b0a2199df",
+      "content_type": "text/javascript",
+      "local_sha256": "c8bf81bea57fe23c6803ed246e3e178d1851b210ab4983bf68cd280b0a2199df"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/street/ditch.js",
+      "path": "src/world/street/ditch.js",
+      "bytes": 7734,
+      "sha256": "b829ee7de383458e43b6c2bdec9cc660bae458879e7761dc9a0ac5d109cc9660",
+      "content_type": "text/javascript",
+      "local_sha256": "b829ee7de383458e43b6c2bdec9cc660bae458879e7761dc9a0ac5d109cc9660"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/street/furniture.js",
+      "path": "src/world/street/furniture.js",
+      "bytes": 16884,
+      "sha256": "d3033c38d17b2877a942014349ae25d54ace55c4c7ed355205d53906712f592f",
+      "content_type": "text/javascript",
+      "local_sha256": "d3033c38d17b2877a942014349ae25d54ace55c4c7ed355205d53906712f592f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/street/mesh.js",
+      "path": "src/world/street/mesh.js",
+      "bytes": 4735,
+      "sha256": "cb2df575e36094f3a7c25833cc348c39359894ea604b89b633015734caa46c6f",
+      "content_type": "text/javascript",
+      "local_sha256": "cb2df575e36094f3a7c25833cc348c39359894ea604b89b633015734caa46c6f"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/street/textures.js",
+      "path": "src/world/street/textures.js",
+      "bytes": 46285,
+      "sha256": "0844b9903cc29d359ec6361a9cba4be1791963c0eb9740a8848ca24891c4f598",
+      "content_type": "text/javascript",
+      "local_sha256": "0844b9903cc29d359ec6361a9cba4be1791963c0eb9740a8848ca24891c4f598"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/trains.js",
+      "path": "src/world/trains.js",
+      "bytes": 15661,
+      "sha256": "5758c12a585e079d21ab42e9e7d11dd97d9944e9fa885cc0504446fb3f4cf1ac",
+      "content_type": "text/javascript",
+      "local_sha256": "5758c12a585e079d21ab42e9e7d11dd97d9944e9fa885cc0504446fb3f4cf1ac"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/trains/builder.js",
+      "path": "src/world/trains/builder.js",
+      "bytes": 13033,
+      "sha256": "7afd999ae51445b0649f54b1d0729667bfd00af25c3378a147b91ed01d881ab2",
+      "content_type": "text/javascript",
+      "local_sha256": "7afd999ae51445b0649f54b1d0729667bfd00af25c3378a147b91ed01d881ab2"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/trains/car.js",
+      "path": "src/world/trains/car.js",
+      "bytes": 41774,
+      "sha256": "58a684a01c9c6f675e3e21f241fd447dddfb0db7a0b1492012de34ebb4e9d409",
+      "content_type": "text/javascript",
+      "local_sha256": "58a684a01c9c6f675e3e21f241fd447dddfb0db7a0b1492012de34ebb4e9d409"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/trains/people.js",
+      "path": "src/world/trains/people.js",
+      "bytes": 6245,
+      "sha256": "42f09d0714d747a47af99cc37febf1a6cda0079bac1936ab939ff4289db8b477",
+      "content_type": "text/javascript",
+      "local_sha256": "42f09d0714d747a47af99cc37febf1a6cda0079bac1936ab939ff4289db8b477"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/trains/schedule.js",
+      "path": "src/world/trains/schedule.js",
+      "bytes": 6245,
+      "sha256": "debfb8c0506120c103dc4ef9055ca32993455c2cd9e0026e7b9c88381d9ba3f9",
+      "content_type": "text/javascript",
+      "local_sha256": "debfb8c0506120c103dc4ef9055ca32993455c2cd9e0026e7b9c88381d9ba3f9"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/trains/textures.js",
+      "path": "src/world/trains/textures.js",
+      "bytes": 22033,
+      "sha256": "c7ca0a1bea3ab4da5b26da3ccb4f02da51ecf51248da9357b2310789004bab76",
+      "content_type": "text/javascript",
+      "local_sha256": "c7ca0a1bea3ab4da5b26da3ccb4f02da51ecf51248da9357b2310789004bab76"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/vehicles.js",
+      "path": "src/world/vehicles.js",
+      "bytes": 10074,
+      "sha256": "e278770ddc720111ff566bc98654e225969275ad7e3ef7cb536205c98abba66b",
+      "content_type": "text/javascript",
+      "local_sha256": "e278770ddc720111ff566bc98654e225969275ad7e3ef7cb536205c98abba66b"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/vehicles/atlas.js",
+      "path": "src/world/vehicles/atlas.js",
+      "bytes": 16253,
+      "sha256": "755371bc0edb1a6e85e8370303b83a5f5b23a157bab097245302da9c4d606e7e",
+      "content_type": "text/javascript",
+      "local_sha256": "755371bc0edb1a6e85e8370303b83a5f5b23a157bab097245302da9c4d606e7e"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/vehicles/bike.js",
+      "path": "src/world/vehicles/bike.js",
+      "bytes": 19331,
+      "sha256": "3954ae1db01ee74c1a019450cb8ad18debcb35c5fddf6de93d4b981d86606dd0",
+      "content_type": "text/javascript",
+      "local_sha256": "3954ae1db01ee74c1a019450cb8ad18debcb35c5fddf6de93d4b981d86606dd0"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/vehicles/cars.js",
+      "path": "src/world/vehicles/cars.js",
+      "bytes": 25315,
+      "sha256": "496acb05356eb41281f057642d396042dcc9c05def26b8450c69ef0079bb0677",
+      "content_type": "text/javascript",
+      "local_sha256": "496acb05356eb41281f057642d396042dcc9c05def26b8450c69ef0079bb0677"
+    },
+    {
+      "url": "http://127.0.0.1:8192/src/world/vehicles/vb.js",
+      "path": "src/world/vehicles/vb.js",
+      "bytes": 9437,
+      "sha256": "ec9a923e0196c4132c4354443571d0f4134352a44eef97627cf605d774cb1199",
+      "content_type": "text/javascript",
+      "local_sha256": "ec9a923e0196c4132c4354443571d0f4134352a44eef97627cf605d774cb1199"
+    }
+  ],
+  "failed": {
+    "http://127.0.0.1:8192/src/world/lib/lib/foliage.js": "HTTP 404; "
+  }
+}

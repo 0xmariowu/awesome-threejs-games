@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+
+        <script type="text/javascript" src="../js/lib/base.js"></script>
+        <script type="text/javascript" src="../js/host/host.js"></script>
+        <script type="text/javascript" src="../js/lib/boot.js"></script>
+        <script type="text/javascript">
+            /**
+            * Initialize a new SafeFrames publisher configuration
+            */
+            (function() {
+                var conf = new $sf.host.Config({
+                    renderFile:	"r.html",
+                    positions: {}
+                });
+            })();
+        </script>
+	</head>
+	<body>
+		<div id="ad_div">
+		</div>
+
+        <script type="text/javascript">
+            (function() {
+                function createSafeframeTag(id, width, height, html, src, native) {
+                    if (!html && !src && !native) {
+                        return;
+                    }
+                    html = html ? html.replace(/"/g, '\\"') : html;
+                    native = native ? `\x3Cscript type="text/javascript">${native.replace(/"/g, '\\"')}\x3C/script>` : native;
+                    const content = html ? `"html": \`${html}\`` : (native ? `"html": \`${native}\`` : `"src": "${src}"`);
+                    const tag = document.createElement("script");
+                    tag.type = "text/x-safeframe";
+                    tag.className = "sf_data";
+                    tag.innerHTML = `{
+                        "id": "sf-${id}",
+                        ${content},
+                        "conf" : {
+                            "size" : "${width}x${height}",
+                            "dest" : "ad_div",
+                            "supports" : {
+                                "exp-push" : "1"
+                            }
+                        }
+                    }`;
+                    return tag;
+                }
+                
+                function renderAd(data) {
+                    const id = data.id;
+                    const html = data.html;
+                    const url = data.url;
+                    const native = data.native;
+                    const width = data.width;
+                    const height = data.height;
+                    const tag = createSafeframeTag(id, width, height, html, url, native);
+                    if (tag) {
+                        document.body.appendChild(tag);
+                    }
+                    return [width, height];
+                }
+
+                if (parent.window.Criteo !== undefined) {
+                    const json = location.hash.substring(1);
+                    const adData = JSON.parse(decodeURIComponent(json));
+                    renderAd(adData);
+                }
+            })();
+        </script>
+	</body>
+</html>

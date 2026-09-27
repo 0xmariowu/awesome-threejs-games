@@ -1,0 +1,8 @@
+node_modules/
+shots/
+dist/
+.claude/
+*.mp4
+*.log
+.DS_Store
+Thumbs.db

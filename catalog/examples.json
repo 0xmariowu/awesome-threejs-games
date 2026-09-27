@@ -1,0 +1,1827 @@
+{
+  "schema_version": 1,
+  "examples": [
+    {
+      "id": "tidewater-fishing",
+      "project": "tidewater",
+      "title": "Tidewater · Fishing rules",
+      "scope": "Exact original fishing and economy modules with a small standalone host. Demonstrates tension, terminal outcomes, hold capacity, selling and isolated saves; not a recreation of the original 3D scene.",
+      "category": [
+        "gameplay",
+        "persistence"
+      ],
+      "maturity": "extracted-verified",
+      "candidates": [
+        "tidewater.fishing",
+        "tidewater.economy"
+      ],
+      "dependencies": [
+        "Browser ES modules",
+        "No renderer or external network",
+        "Original FishTable and Gear data"
+      ],
+      "limitations": "The pure core is unchanged. The example host runs fixed 60 Hz with seeded RNG and its own storage namespace. Fish encounters, 3D presentation, boat integration and all upgrades are outside this example. Original GameState.spend assumes a valid nonnegative amount; do not expose it to untrusted input. No claim of complete original-game parity.",
+      "verify": "node --test examples/tidewater-fishing/*.test.mjs",
+      "files": [
+        {
+          "path": "examples/tidewater-fishing/original/CatchMinigame.js",
+          "sha256": "d1d0d6e4db854bdefa5a5b40a7a4ddc210ac52f8fd2396e1c8389cca0619a4d2"
+        },
+        {
+          "path": "examples/tidewater-fishing/original/FishTable.js",
+          "sha256": "d57d3df458aed23488b2d5b15c3ac369009afeb7f9b53d95f646b4ab50ed4b03"
+        },
+        {
+          "path": "examples/tidewater-fishing/original/GameState.js",
+          "sha256": "685f094a70be6b576ee2e8d50ff500922a494da27a60444d3915ec2cb91b0c4e"
+        },
+        {
+          "path": "examples/tidewater-fishing/original/Gear.js",
+          "sha256": "e6f013e20ff37e7031bc6c83ffb80b590b786a6ba109093b579e0789825b4284"
+        },
+        {
+          "path": "examples/tidewater-fishing/session.mjs",
+          "sha256": "15534b895bdc668eb127d1f06b6f506d17b37b047e1e3f1055ca4f59b9d57d49"
+        },
+        {
+          "path": "examples/tidewater-fishing/app.js",
+          "sha256": "7e1d880420393e78b7033f12fd7d80ae53beb444410d61cff7e847467db8d420"
+        },
+        {
+          "path": "examples/tidewater-fishing/simulation.test.mjs",
+          "sha256": "127748c737fff46322348a863f772df9cdcdb7a6191f89185da54a72719a9e3d"
+        },
+        {
+          "path": "examples/tidewater-fishing/README.md",
+          "sha256": "0d817be8fcbbeb444c5656f3d7d25f87f8fe04383b64bf8f2b96626545a64228"
+        },
+        {
+          "path": "examples/tidewater-fishing/provenance.json",
+          "sha256": "26c75f495f013d7ffba3a63baefe3cb4205588015113f419023b14da9784c9ae"
+        }
+      ],
+      "port": 8102,
+      "evidence": [
+        "examples/tidewater-fishing/provenance.json",
+        "output/library-development-2026-09-26/verification.txt",
+        "output/library-development-2026-09-26/browser.json"
+      ]
+    },
+    {
+      "id": "cloudkeep-flight",
+      "project": "cloudkeep",
+      "title": "Cloudkeep · Flight and camera lab",
+      "scope": "Original Cloudkeep flight simulation, chase camera and input modules running unchanged in a small host with slow motion, camera helpers and an original-vs-direct follow comparison.",
+      "category": [
+        "3c",
+        "physics"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "cloudkeep.flight"
+      ],
+      "dependencies": [
+        "Three.js r186 WebGL (bundled from the archive's node_modules)",
+        "Original simulation.ts, flight-camera.ts, input.ts",
+        "Original GLB assets copied by build.mjs"
+      ],
+      "limitations": "The host renders islands, the airship and a flat cloud floor only: no creatures, atmosphere shaders, effects or audio, although the original simulation still runs its ecosystem internally. The camera occlusion rig is adapted from scene.ts lines 273-289, not an original file. Browser behaviour checks are added in a separate step.",
+      "verify": "node examples/cloudkeep-flight/build.mjs && node --test examples/cloudkeep-flight/provenance.test.mjs",
+      "port": 8103,
+      "files": [
+        {
+          "path": "examples/cloudkeep-flight/original/simulation.ts",
+          "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+        },
+        {
+          "path": "examples/cloudkeep-flight/original/flight-camera.ts",
+          "sha256": "11e5bacfa297e09c45facbb11df63d9efcb120ef5ccba8ad2f5d29eeb301b24f"
+        },
+        {
+          "path": "examples/cloudkeep-flight/original/input.ts",
+          "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff"
+        }
+      ],
+      "evidence": []
+    },
+    {
+      "id": "cloudkeep-models",
+      "project": "cloudkeep",
+      "folder": "cloudkeep-flight",
+      "entry": "/models.html",
+      "title": "Cloudkeep · Model turntable",
+      "scope": "A standalone turntable for all 18 archived Cloudkeep GLB assets, with mesh, triangle, vertex, material and file-size statistics, wireframe and vertex-color toggles, and base/distant model comparisons.",
+      "category": [
+        "assets",
+        "rendering"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "cloudkeep.asset-build"
+      ],
+      "dependencies": [
+        "Three.js r186 WebGL 2, GLTFLoader and OrbitControls (bundled from the archive's node_modules)",
+        "Vite from cloudkeep/upstream/node_modules for building the TypeScript host",
+        "18 original GLB assets and their pinned provenance manifest, copied by build.mjs"
+      ],
+      "limitations": "The viewer inspects archived Blender outputs; it does not run Blender, rebuild assets or demonstrate the full authoring pipeline. Assets are centered and scaled to fit, so original world sizes cannot be compared. Base/distant switching is available only for island, lighthouse, orchard and ruins. Geometry counts sum across mesh instances. WebGL 2 is required; browser behaviour is not certified by the provenance tests.",
+      "verify": "node examples/cloudkeep-flight/build.mjs && node --test examples/cloudkeep-flight/provenance.test.mjs",
+      "port": 8103,
+      "files": [
+        {
+          "path": "examples/cloudkeep-flight/models.html",
+          "sha256": "0536fb8df3855977aca4ec2c7fb1b350e709523c7d5cb2e7f478357ff90405d2"
+        },
+        {
+          "path": "examples/cloudkeep-flight/src/models.ts",
+          "sha256": "9acb63a8159c0b887a294cfa74974d3c26540051663204bf01bc4b0c47ed527e"
+        },
+        {
+          "path": "examples/cloudkeep-flight/src/style.css",
+          "sha256": "5d091b4cb2a6120f5913c730d3094a719a6c114819e0cbd8a8ba431a4910d6f2"
+        },
+        {
+          "path": "examples/cloudkeep-flight/build.mjs",
+          "sha256": "e8b0ceefbd2d51b18d958a555ccca528c3cac516ff70b21a815ae5ac406fbd13"
+        },
+        {
+          "path": "examples/cloudkeep-flight/provenance.json",
+          "sha256": "1019a01551116898ac1648187083dab0436ae8d5f26087f52a28b87169ec17c8"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/airship.glb",
+          "sha256": "a2b33e467bcbea3ef61d5205e426303f3633ce4de5d116d95fd81a53e5f45059"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/bird.glb",
+          "sha256": "e9f97598ce64da967bffec0bdf0f959a55f00c4913d5820202759fbebe297a48"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/cloud.glb",
+          "sha256": "c12534675fe2d2fa200ae19beea523c8b5b1fc6c15e68a23f39e455df5e3da3b"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/food.glb",
+          "sha256": "ea8492f87c2e81dede3a9646c5bb6231fca4d52ef504d33d9d0cd2c0167b3915"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/island-distant.glb",
+          "sha256": "3a39c310a8a0522cd4ee8ec1a2fe1a7948ed497158745635fa4a4f8e7aac28a9"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/island.glb",
+          "sha256": "ed0f24d081e3d4fbd3864e1df2306d06e8c93557731563d3c7aecda530d23e15"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/jelly.glb",
+          "sha256": "f8b0270836e213e55ec97051e2398b61088a11a1e8a231e2bf798da1ec6ac6d9"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/koi.glb",
+          "sha256": "d7dfe7ee414e017771ed1d3ed239b17602905aed7d1ebfc5ca7ad9c594cce981"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/lighthouse-distant.glb",
+          "sha256": "a2a0d4d34064d4ae605c3a3cfab13f2848e95306057696454b63e1c3412a240a"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/lighthouse.glb",
+          "sha256": "22ecf3dfcaae9d4716a14672f81fe88723e5aecad7f47ce8070ec361a1fd0071"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/moth.glb",
+          "sha256": "7d8179add5fe33270a098816b79b1b7468db2a81df4366b9ec4fdc4e958fb9cf"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/orchard-distant.glb",
+          "sha256": "60c2619d47f3656cd64a1ceb0524b57cb05a4799d2959b212e7963320504b284"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/orchard.glb",
+          "sha256": "32b286a561a2de23498cc4f4c33a9c7063bad4c86f70b80664e4e11107e1fa78"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/pearl.glb",
+          "sha256": "202c5d6eef2d6355b23abd12ebba7a3fe5808b856893e6ff73f42e43918ec9bc"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/ray.glb",
+          "sha256": "8ed82ac6a1323b9128a7f05a6af5a19df4f66ed8c863aa628b860bd042cdd167"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/ruins-distant.glb",
+          "sha256": "612a3a41fa7bd14a95d235e2124248051290fec2ef0785bb0b787005de56c9ce"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/ruins.glb",
+          "sha256": "523d990d8bd9adb8ee460d0907c2fb59e7891d459c4a6b23b4fdaebff0bcb724"
+        },
+        {
+          "path": "examples/cloudkeep-flight/public/assets/whale.glb",
+          "sha256": "5b5aba36d5a4db8c99c40200a64acd8fa0ad27a56d51505e1b3f9692f3387e02"
+        }
+      ],
+      "evidence": []
+    },
+    {
+      "id": "cloudkeep-ecology",
+      "project": "cloudkeep",
+      "title": "Cloudkeep · Creature ecology",
+      "scope": "Original Simulation ecosystem and storage running unchanged: roaming, flocking, seed foraging, boost-triggered flight, cancellable capture, coin rewards and delayed respawns in a compact playable scene.",
+      "category": [
+        "ai",
+        "gameplay",
+        "persistence"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "cloudkeep.ecology"
+      ],
+      "dependencies": [
+        "Original simulation.ts, storage.ts and input.ts (species tuning, seeded RNG, food/coin state and save reconstruction)",
+        "Three.js r186 WebGL and Vite from cloudkeep/upstream/node_modules",
+        "Ten original GLBs copied and hash-verified by build.mjs",
+        "Browser localStorage on the dedicated example origin"
+      ],
+      "limitations": "Initial homes are arranged by the host to make nine creatures immediately reachable. The host supplies a wider camera, labels and simple capture visuals; full atmosphere, articulated creature animation, audio, upgrades and missions are omitted. Browser checks cover this isolated fixture, not complete game parity. Saves use the original key on the separate port 8110 origin.",
+      "verify": "node --test examples/cloudkeep-ecology/*.test.mjs && python3 examples/cloudkeep-ecology/test_browser.py",
+      "port": 8110,
+      "files": [
+        {
+          "path": "examples/cloudkeep-ecology/original/simulation.ts",
+          "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+        },
+        {
+          "path": "examples/cloudkeep-ecology/original/storage.ts",
+          "sha256": "1aba7eeef3d26ac3c9a05c9502c0fa276bcfc0dfd0ecb5bb72ab44703f15884f"
+        },
+        {
+          "path": "examples/cloudkeep-ecology/original/input.ts",
+          "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff"
+        }
+      ],
+      "evidence": [
+        "examples/cloudkeep-ecology/provenance.json",
+        "examples/cloudkeep-ecology/screenshots/foraging.png",
+        "examples/cloudkeep-ecology/screenshots/capturing.png"
+      ]
+    },
+    {
+      "id": "cloudkeep-atmosphere",
+      "project": "cloudkeep",
+      "title": "Cloudkeep · Cloud banks and fog immersion",
+      "scope": "Original ray-marched lower cloud layer, cirrus and six cloud banks, with the scene.ts fog immersion blend adapted in a free-camera host.",
+      "category": [
+        "rendering",
+        "vfx"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "cloudkeep.atmosphere"
+      ],
+      "dependencies": [
+        "Original atmosphere.ts and input.ts; simulation.ts supplies IDLE to Controls",
+        "Three.js r186 WebGL 2 and Vite from cloudkeep/upstream/node_modules",
+        "One original island-distant.glb landmark, copied and hash-verified by build.mjs",
+        "Half-float render targets and the original RenderPass / OutputPass color pipeline"
+      ],
+      "limitations": "Free-camera movement and landmark placements are host fixtures; the original game movement boundary cannot reach every bank. scene.ts is pinned as a reference, not imported; only its fog immersion block is adapted. Materials, effects pools, cloud sprites, AO, bloom and full gameplay are outside this example. Mouse and keyboard required. Browser checks verify this isolated fixture, not full-game parity.",
+      "verify": "node --test examples/cloudkeep-atmosphere/*.test.mjs && python3 examples/cloudkeep-atmosphere/test_browser.py",
+      "port": 8111,
+      "files": [
+        {
+          "path": "examples/cloudkeep-atmosphere/original/atmosphere.ts",
+          "sha256": "f48447285d1f559bc8017c2ee949a0ed8f1330e44c6f754f40164b4b827ffc17"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/original/scene.ts",
+          "sha256": "e593b494661af90441cbca0f0605fe4847a044ace462e3910de12128bf2de1d8"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/original/input.ts",
+          "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/original/simulation.ts",
+          "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/src/host.ts",
+          "sha256": "b38f5091844bbaf5f6f453641dcf0cdceb21b9c17abcd7ac3a0490ab53fbdc0b"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/src/fog.mjs",
+          "sha256": "75e53fddbcdde29ec053c2268924ed890a7dd2b5ccd3a5e8e328c7420f7663c1"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/src/style.css",
+          "sha256": "b0d2f2f991915107e4684f4e7ae8f927723671c5ed6fa753acb8341cdb81f562"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/index.html",
+          "sha256": "4e217526374ca4381115b9949180bbd4eb0060368c7f2dce68bfbbf25b2133a5"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/build.mjs",
+          "sha256": "b4daf505f4c4b306ddaf143b06ad679f2b7afd6105f9cace1163a6974de12352"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/local.json",
+          "sha256": "4975b3a525a7488bb9b13167e3942d0c2eb1bcf39235a474b7c40de9566f1852"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/provenance.json",
+          "sha256": "bb72159fceeb22c9fb7394c3983d07cc78210cd5a177e3926fc6a2a81606fe7f"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/provenance.test.mjs",
+          "sha256": "26242dc05a22d2b418f7d0d0796ea1623f00f2dd66442b2ca1910158d240fccf"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/test_browser.py",
+          "sha256": "c7a6e550f0d8a05f9f96ca0ce821459af309f33b3fec22a094a8cbf0c238eab5"
+        },
+        {
+          "path": "examples/cloudkeep-atmosphere/README.md",
+          "sha256": "131103b76e340468183c69b0692fb7087c8f9fffa0f6219fbef29cd319367fa3"
+        }
+      ],
+      "evidence": [
+        "examples/cloudkeep-atmosphere/provenance.json",
+        "examples/cloudkeep-atmosphere/screenshots/outside.png",
+        "examples/cloudkeep-atmosphere/screenshots/inside.png"
+      ]
+    },
+    {
+      "id": "arkenfall-camera",
+      "project": "arkenfall",
+      "title": "Arkenfall · Lock-on camera and obstruction recovery",
+      "scope": "Unchanged deployed camera with a single target, wall and tree fixture. Runs lock tracking, original wall-ray retraction, trunk angular avoidance and smooth recovery.",
+      "category": [
+        "camera",
+        "3c"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "arkenfall.camera"
+      ],
+      "dependencies": [
+        "Archived Three.js core and WebGL renderer (browser ES modules; no build)",
+        "Original camera, math and update-order modules",
+        "Host target pose, wall raycasts and camera-disabled trunk query",
+        "Host shims for original mouse sensitivity and player fade uniform"
+      ],
+      "limitations": "Single target and player movement are host fixtures. Combat target scoring/cycling, combat, boss/cave/swim framing, cutscene handoff, gamepad and touch are outside this example. No full-game parity or project-wide reuse license is claimed.",
+      "verify": "node --test examples/arkenfall-camera/*.test.mjs && python3 examples/arkenfall-camera/test_browser.py",
+      "port": 8112,
+      "files": [
+        {
+          "path": "examples/arkenfall-camera/README.md",
+          "sha256": "a7574bf0e3fe05915af032895a479f53505872b487b6cc202419a346825568c9"
+        },
+        {
+          "path": "examples/arkenfall-camera/index.html",
+          "sha256": "dd0e8c06ecee0abd66e9318e62f1fee587d21b8adbf02c22eef25d3577d82a05"
+        },
+        {
+          "path": "examples/arkenfall-camera/local.json",
+          "sha256": "2494954d3b5b387deefbba30117537ea4ac4a35301bf4f25120517aa0b9216b1"
+        },
+        {
+          "path": "examples/arkenfall-camera/original/camera-CsWg7FPD.js",
+          "sha256": "3c0d88088db1aa18eaec66d3f34e4fd36a92a3ee48686363fdb8f13980207e0a"
+        },
+        {
+          "path": "examples/arkenfall-camera/original/contracts-CvM_HOZo.js",
+          "sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d"
+        },
+        {
+          "path": "examples/arkenfall-camera/original/math-CaZ96FWb.js",
+          "sha256": "2318bd0bf3a7f42e8a33d60176b1be641a763ffd820fca71e44b4fae83857d67"
+        },
+        {
+          "path": "examples/arkenfall-camera/original/three.core-_y2F91K_.js",
+          "sha256": "ec3d682180124403141cdac483b52850f39c1370765545f61ba754805b436e5b"
+        },
+        {
+          "path": "examples/arkenfall-camera/original/three.module-DGcYoYN8.js",
+          "sha256": "392e914950e761c4b60477354d93975f0e153b5d16d36eb2593b02e4b0f4b20e"
+        },
+        {
+          "path": "examples/arkenfall-camera/provenance.json",
+          "sha256": "19d8c02dd68c795bb37b3a31a53a8a702ec79788f56cd1462bf9982eca869c7f"
+        },
+        {
+          "path": "examples/arkenfall-camera/provenance.test.mjs",
+          "sha256": "c5c40bc1f5e61ad041a206cf3bea238ab316bd59825804bdb233ed599c123249"
+        },
+        {
+          "path": "examples/arkenfall-camera/src/game-shim.js",
+          "sha256": "9596055bd0773b2a9e67d12623163d1853b58bd841655a535b4814440f941fd0"
+        },
+        {
+          "path": "examples/arkenfall-camera/src/host.js",
+          "sha256": "ce1bf6727b064a5f060dbc6c05ec0d079703398b70216e7d918f86aeaf83364d"
+        },
+        {
+          "path": "examples/arkenfall-camera/src/material-shim.js",
+          "sha256": "82749fc0e3379782fba94a038b9df0f62218dd9f1bf8f8d97ae907e05c9b3985"
+        },
+        {
+          "path": "examples/arkenfall-camera/src/style.css",
+          "sha256": "44e99fe82cbd2c3b6191cd5b8a0ee95144ffd12ade6d88fff98b91ea3b558a90"
+        },
+        {
+          "path": "examples/arkenfall-camera/src/three.js",
+          "sha256": "85b466f868d999e6e6e5df718ae43c922a0324363241cf1e587e0c205c421cbd"
+        },
+        {
+          "path": "examples/arkenfall-camera/test_browser.py",
+          "sha256": "4a6cff8a415f5882db6d3366e1d4da55986aac95996fd956c50ce662abfd1cae"
+        }
+      ],
+      "evidence": [
+        "examples/arkenfall-camera/provenance.json",
+        "examples/arkenfall-camera/screenshots/locked.png",
+        "examples/arkenfall-camera/screenshots/wall.png",
+        "examples/arkenfall-camera/screenshots/tree.png"
+      ]
+    },
+    {
+      "id": "shabondama-director",
+      "project": "shabondama-biyori",
+      "title": "Shabondama · Cinematic bubble director",
+      "scope": "Unmodified camera director: blow, follow into a drifting bubble, manual gaze handoff, idle return, pop and faded scene cuts in a small garden fixture.",
+      "category": [
+        "camera",
+        "3c"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "shabondama-biyori.director"
+      ],
+      "dependencies": [
+        "Original director.js, flight.js, wind.js, layout.js and noise.js",
+        "Archived Three.js r186 browser ES modules; no build or node_modules needed",
+        "Host launch spots, gaze landmarks, flat ground and trunk obstacle queries",
+        "Host display adapters for bubbles, wand, film, flash and fade outputs"
+      ],
+      "limitations": "Three host viewing spots replace the authored landscape. Bubble display radii are enlarged 4x and main life is 28 seconds; original physics and camera logic remain unchanged. Simple rendering omits original thin-film shaders, depth of field, audio and menu. FOV is fixed per viewport orientation. No full-game parity or project-wide reuse license is claimed.",
+      "verify": "node --test examples/shabondama-director/*.test.mjs && python3 examples/shabondama-director/test_browser.py",
+      "port": 8113,
+      "files": [
+        {
+          "path": "examples/shabondama-director/README.md",
+          "sha256": "ef7d27c458ac26af48eaeba0d95e5b555aab82653a9a7c50181d5a079147cd82"
+        },
+        {
+          "path": "examples/shabondama-director/index.html",
+          "sha256": "30b95b9430ee4940dccaaf0ae2159a729698687e4d60193a64f5f525f1b1336b"
+        },
+        {
+          "path": "examples/shabondama-director/local.json",
+          "sha256": "dda508f4b9dde49c3dd49a67d49130ebd0f51fbdc8a644c70580e5a5a1c99b34"
+        },
+        {
+          "path": "examples/shabondama-director/original/sim/director.js",
+          "sha256": "b907f4f176d5ddf2ea574c8abe7d0435d95e2e441f1abf91b591998f9c4936cc"
+        },
+        {
+          "path": "examples/shabondama-director/original/sim/flight.js",
+          "sha256": "30a4d4321ebcc73f22aa61d396406d47930830658a0bc3026883d0429e827690"
+        },
+        {
+          "path": "examples/shabondama-director/original/sim/wind.js",
+          "sha256": "4fc385c1400aac069e7979d155c9f7107c21e72bf4690ba8c54955c2ff672e95"
+        },
+        {
+          "path": "examples/shabondama-director/original/util/noise.js",
+          "sha256": "6424fdb07a4fdbe8a003070394b58c4dfa47aee7e235b4c47c9f35dea63a2f2b"
+        },
+        {
+          "path": "examples/shabondama-director/original/vendor/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "path": "examples/shabondama-director/original/vendor/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        },
+        {
+          "path": "examples/shabondama-director/original/world/layout.js",
+          "sha256": "663db32db8aa3b68656dd739f88a443267c2a1170b7cc5d2a79c476d0abdf07d"
+        },
+        {
+          "path": "examples/shabondama-director/provenance.json",
+          "sha256": "4ae138502b64d04db328a4a9a780c4e7f4e37c8d9e78b031e70d9cf44ff8d295"
+        },
+        {
+          "path": "examples/shabondama-director/provenance.test.mjs",
+          "sha256": "97b7fde82259a43a6629d42672965cf80caede37a7f463f2469e63365d4dd50d"
+        },
+        {
+          "path": "examples/shabondama-director/src/host.js",
+          "sha256": "6cd5511a7b122363796063aea30f2e34e6eb58618602f053f77620bda5bce5b0"
+        },
+        {
+          "path": "examples/shabondama-director/src/style.css",
+          "sha256": "37663875953ec7726960408e7faff4e7d4e6f35975e908051017b99c77275d14"
+        },
+        {
+          "path": "examples/shabondama-director/test/iframe.html",
+          "sha256": "0d6003ff1338d0ab7a971c9f5a7c5e84ee5934b48edae7c170c42c53eb79a395"
+        },
+        {
+          "path": "examples/shabondama-director/test_browser.py",
+          "sha256": "461688b2935fee6785013c22e3b69425cb2f68445bdc4a2df908d6397efe941a"
+        }
+      ],
+      "evidence": [
+        "examples/shabondama-director/provenance.json",
+        "examples/shabondama-director/screenshots/follow.png",
+        "examples/shabondama-director/screenshots/ride.png",
+        "examples/shabondama-director/screenshots/manual.png"
+      ]
+    },
+    {
+      "id": "scorch-racing",
+      "project": "scorch-podracer",
+      "title": "SCORCH · Arcade racing forces",
+      "scope": "Original arcade pod forces, procedural desert track and banking in a one-pod host. Complete source blocks are selected verbatim from the byte-identical archived HTML.",
+      "category": [
+        "physics",
+        "vehicle"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "scorch-podracer.racing"
+      ],
+      "dependencies": [
+        "Embedded original Three.js r158 (local, no packages)",
+        "Original track tables, vehicle stats, collision/barrier queries",
+        "Original procedural pod, track, terrain and shader assets"
+      ],
+      "limitations": "One KRAKEN pod with original controls and forces. New chase camera, soft fill light and fixed 120 Hz host; audio, HUD effects and particles are shimmed. No opponents, pickups or full race flow; no full-game parity claim. Archive has no project-wide license.",
+      "verify": "node --test examples/scorch-racing/*.test.mjs && python3 examples/scorch-racing/test_browser.py",
+      "port": 8115,
+      "files": [
+        {
+          "path": "examples/scorch-racing/README.md",
+          "sha256": "b90c7c43fd131148636a66590f475c06839899967d4c1b9a520bc7187add3bfc"
+        },
+        {
+          "path": "examples/scorch-racing/build.mjs",
+          "sha256": "be699cfdf9ff4b33652215f29a3bf5f1ea42287838f63ae04a0ce77b7795781b"
+        },
+        {
+          "path": "examples/scorch-racing/local.json",
+          "sha256": "3699b04333c31bbc34665a92b39b24824c2c2e9f9ad534b4e213f12ffd0c1035"
+        },
+        {
+          "path": "examples/scorch-racing/original/index.html",
+          "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+        },
+        {
+          "path": "examples/scorch-racing/provenance.json",
+          "sha256": "992a8afdbc1df52149354922943133e32b9a8ca6d56ba36729d4fe56040e73aa"
+        },
+        {
+          "path": "examples/scorch-racing/provenance.test.mjs",
+          "sha256": "c31c1088ff60009246c3a75d1964b5c0f23565970f0a88b7f85efa5a12943207"
+        },
+        {
+          "path": "examples/scorch-racing/public/host.mjs",
+          "sha256": "6b4f57d811a501bb852c31c4b20ebe7f18b6491c77462d5bf8c8f86b244f3f91"
+        },
+        {
+          "path": "examples/scorch-racing/public/index.html",
+          "sha256": "a15bc84893eac5b7470b146a6573b7975f82482837b11f0c602b3fb0c36bcf42"
+        },
+        {
+          "path": "examples/scorch-racing/public/runtime.mjs",
+          "sha256": "ea79ac0757c55a3d3a7ecac3d387ca6df40bce75c7ec18a6adb0d323e95a516e"
+        },
+        {
+          "path": "examples/scorch-racing/public/shims.mjs",
+          "sha256": "342bb3582aef529e96faf368d34d4bef8f8e9e1645dabc11e8da6cdb042dfc80"
+        },
+        {
+          "path": "examples/scorch-racing/public/style.css",
+          "sha256": "05005b8ba31341c70b82f13e6e94223cb8e51ff24393ae49d6d325491ce9e8fa"
+        },
+        {
+          "path": "examples/scorch-racing/public/three.js",
+          "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
+        },
+        {
+          "path": "examples/scorch-racing/src/host.mjs",
+          "sha256": "6b4f57d811a501bb852c31c4b20ebe7f18b6491c77462d5bf8c8f86b244f3f91"
+        },
+        {
+          "path": "examples/scorch-racing/src/index.html",
+          "sha256": "a15bc84893eac5b7470b146a6573b7975f82482837b11f0c602b3fb0c36bcf42"
+        },
+        {
+          "path": "examples/scorch-racing/src/shims.mjs",
+          "sha256": "342bb3582aef529e96faf368d34d4bef8f8e9e1645dabc11e8da6cdb042dfc80"
+        },
+        {
+          "path": "examples/scorch-racing/src/style.css",
+          "sha256": "05005b8ba31341c70b82f13e6e94223cb8e51ff24393ae49d6d325491ce9e8fa"
+        },
+        {
+          "path": "examples/scorch-racing/test_browser.py",
+          "sha256": "b658ab308d89228ca578388401adde05d49efde586c59e9e8eafde5d8486cb79"
+        }
+      ]
+    },
+    {
+      "id": "arkenfall-combat",
+      "project": "arkenfall",
+      "title": "Arkenfall · Melee combos, sweeps and parry timing",
+      "scope": "Complete unchanged combat, player action lifecycle, Animator and Actor modules running in a small training fixture. Original four-hit combos, input/cancel windows, procedural weapon poses, swept hits, heavy charge, parry and riposte.",
+      "category": [
+        "combat",
+        "animation"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "arkenfall.combat"
+      ],
+      "dependencies": [
+        "Archived Three.js WebGL 2 and browser ES modules; no build",
+        "Original combat, PlayerImpl action methods, Animator, Actor registry and math modules",
+        "Host standard humanoid rig, anchored target, ground queries and fixed 120 Hz clock",
+        "Import-map shims for full-world exports and unused atlas/settings/material initialization"
+      ],
+      "limitations": "Host meshes, anchored training target and periodic practice strikes; no extracted enemy AI. Original hit logic, animation poses and action windows remain unchanged. Flat-ground root motion only; no free movement, dodge/plunge/lash/burst controls, original character artwork, cloth, audio or hitstop/camera effects. No full-game parity or project-wide reuse license is claimed.",
+      "verify": "node --test examples/arkenfall-combat/*.test.mjs && python3 examples/arkenfall-combat/test_browser.py",
+      "port": 8116,
+      "files": [
+        {
+          "path": "examples/arkenfall-combat/README.md",
+          "sha256": "c253217af3929dfc63f11fe3de9ec18a1ab913b9642165c98126345c9ed980d8"
+        },
+        {
+          "path": "examples/arkenfall-combat/index.html",
+          "sha256": "795a5a1a3967c1e702b4e793ef2e4f54403b6fb5cf1569b210f6dd85cb2fac75"
+        },
+        {
+          "path": "examples/arkenfall-combat/local.json",
+          "sha256": "701e82728665b31409d2af5eeea69f268f5ae2ccbe7ae58d0ea8315ebcf427ff"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/Actor-CPc2Vruf.js",
+          "sha256": "c17f6b77964a68e6eb7bbfa5ea313b77618e8540665e3dd4cac7e8742b373589"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/Animator-CyW8ITDY.js",
+          "sha256": "914366155794182f68af8eeb3b35eaabce19c554168144aabb59053f968926f7"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/Debug-mAQ8BxhD.js",
+          "sha256": "53ec0256be18c8d9fe4e8b7b1a898899a28197e56379d5ceaf6378e40394ede9"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/combat-DANZZ0C7.js",
+          "sha256": "324cf55415cffde0b48c3de9a6f83505427b4aa11a4a0c6723742754f8b5d493"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/contracts-CvM_HOZo.js",
+          "sha256": "bbb06fa4573577b62e4fc35668d26eb627c37b136acecd37f31301ba5008a22d"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/math-CaZ96FWb.js",
+          "sha256": "2318bd0bf3a7f42e8a33d60176b1be641a763ffd820fca71e44b4fae83857d67"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/noise-mHFAXQOi.js",
+          "sha256": "601b1ecf93a2b0a6b7872809c38808e2c8e0d21f5a7d48c6a066eddee47f0393"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/player-Dy-PiEeW.js",
+          "sha256": "e4782e1e98d57f613bd9ccdc5e954e179b7a4151e5ea42bb71333e0e00df6ffe"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/rng-R5614gXl.js",
+          "sha256": "e328f8ed087cc7b96c0ee7f9d8e843ec1d8e320e776a5c0f90aa9d4cd1667c01"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/three.core-_y2F91K_.js",
+          "sha256": "ec3d682180124403141cdac483b52850f39c1370765545f61ba754805b436e5b"
+        },
+        {
+          "path": "examples/arkenfall-combat/original/three.module-DGcYoYN8.js",
+          "sha256": "392e914950e761c4b60477354d93975f0e153b5d16d36eb2593b02e4b0f4b20e"
+        },
+        {
+          "path": "examples/arkenfall-combat/provenance.json",
+          "sha256": "796c473aa5dddf59b564b041cc043e6cfae9ad252dc4bbf84ac4a554254b3780"
+        },
+        {
+          "path": "examples/arkenfall-combat/provenance.test.mjs",
+          "sha256": "1be55658a855a5ac20d38142807ef9336cbaa2c3cfb7f72639cba90a5f279497"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/cache-shim.js",
+          "sha256": "8c08b8f3c723e8b2a888f686b76896243bcb421386449062db6e50ce9e19f2aa"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/game-shim.js",
+          "sha256": "21ba7cbd72be1952ab2d111d66d6321dc9f743051fa88555e963918e521eadf0"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/host.js",
+          "sha256": "2d2a8f4f4b9ef08e9c4c05a9eb15942c5971432fe5cc4daff8e049ffaf61c5c1"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/material-shim.js",
+          "sha256": "482c911e2e254600ae8f9cc45265eb3800b6f2e272a4a0571aa30a1e8c1705f2"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/settings-shim.js",
+          "sha256": "1714b95df6aa1558658cff9be0bb18dd44fa785775d781b862aef0866c0af11d"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/style.css",
+          "sha256": "c59dde7c72bdb7a7696e53bd101c18b35b0361f22e9f71783cae4de6dc605e3a"
+        },
+        {
+          "path": "examples/arkenfall-combat/src/three.js",
+          "sha256": "665ad0bf41a957278d0d2bacfd7bfee99810af4ae06cff9462ca5e82877643a3"
+        },
+        {
+          "path": "examples/arkenfall-combat/test/iframe.html",
+          "sha256": "693dc78b2743743a46a30c9cb371452bb842f4a436571ebe0b364d26a63b47df"
+        },
+        {
+          "path": "examples/arkenfall-combat/test_browser.py",
+          "sha256": "433d28472c1fe5296ffabb3c35e4def802058e27d9ef2946389d7d6d15c15a11"
+        }
+      ],
+      "evidence": [
+        "examples/arkenfall-combat/provenance.json",
+        "examples/arkenfall-combat/screenshots/combo.png",
+        "examples/arkenfall-combat/screenshots/parry.png",
+        "examples/arkenfall-combat/screenshots/iframe.png"
+      ]
+    },
+    {
+      "id": "vox-reactions",
+      "project": "vox-arcana",
+      "title": "Vox Arcana · Element reactions",
+      "scope": "Unchanged reaction and combat modules in a single-target canvas lab: directional damage, aura refresh, freeze/shatter, burning, shock and status expiry.",
+      "category": [
+        "combat",
+        "gameplay"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "vox-arcana.reactions"
+      ],
+      "dependencies": [
+        "Browser ES modules with import map; no build or external requests",
+        "Original combat.js, elements.js and their localization/math dependencies",
+        "Archived Three.js r169 for vectors and colors"
+      ],
+      "limitations": "New canvas presentation with six elements and fixed basic-hit inputs (damage 22, magnitude 0.5). Single stationary target; no original renderer, projectile collision, movement, audio, mana costs, seed mines, deferred sky strikes, chain finishers or multiplayer. Original knockback is calculated but not integrated; splash has no secondary targets.",
+      "verify": "node --test examples/vox-reactions/*.test.mjs && python3 examples/vox-reactions/test_browser.py",
+      "port": 8117,
+      "files": [
+        {
+          "path": "examples/vox-reactions/README.md",
+          "sha256": "dc224b041b30b37a9cda60967df0c468d3774ac8a90becf04769117300d9a956"
+        },
+        {
+          "path": "examples/vox-reactions/index.html",
+          "sha256": "251d925d80905b667a10bbe76e7e0a1e18e0b719a2313b5287c786fdbf52a3b8"
+        },
+        {
+          "path": "examples/vox-reactions/local.json",
+          "sha256": "0974241b5bc4b46f94282ebb071e59d5ed8add4ba34008b767f2d18ebc9512c6"
+        },
+        {
+          "path": "examples/vox-reactions/original/combat.js",
+          "sha256": "40ce31c76dbe55f93f1c31f9bee75c339796d383aec5d630aa125c18029fce24"
+        },
+        {
+          "path": "examples/vox-reactions/original/elements.js",
+          "sha256": "e6e13f9e8dbf8fb2a71b2680121cb44d49c70022b1da30739c03e5c25dcab1a6"
+        },
+        {
+          "path": "examples/vox-reactions/original/i18n.js",
+          "sha256": "c7228a951e978feab737147fd5dbeae8ea086641b4ca358889a61f972a8e49f6"
+        },
+        {
+          "path": "examples/vox-reactions/original/languages.js",
+          "sha256": "80bb1e5826964e78a53c4bdd4be1b974f9f10cde8b8326303a36297c74562b98"
+        },
+        {
+          "path": "examples/vox-reactions/original/more-locales.js",
+          "sha256": "3675b29fe3929b88c57ea65cc6de360ca6706f6a14439930ef709532e3b80390"
+        },
+        {
+          "path": "examples/vox-reactions/original/three.module.js",
+          "sha256": "0a3368c165eea773490aec7b77c22de70e3eac288503409256fdbf4d12578416"
+        },
+        {
+          "path": "examples/vox-reactions/original/util.js",
+          "sha256": "5e38e1714d663dc541558638f2709f69f31eb0274fe36dccf29032adc5b8bdf2"
+        },
+        {
+          "path": "examples/vox-reactions/package.json",
+          "sha256": "a90fc33418afa2b9cbf4768524b021135b965ecdf993457505bfae3ac44a8428"
+        },
+        {
+          "path": "examples/vox-reactions/provenance.json",
+          "sha256": "2b4d08caff8a4e1768dafc9499fd126d6f192506576c143cf27b0c840c7a2145"
+        },
+        {
+          "path": "examples/vox-reactions/provenance.test.mjs",
+          "sha256": "5e66a3f0babd7d5db1b4fdb79b19db087e48e5c49f46032f2fc4ad65b325e97a"
+        },
+        {
+          "path": "examples/vox-reactions/reactions.test.mjs",
+          "sha256": "0220e6fba6bca5d6d7579d1e9f039d7ccb31a10b5e229dcedfe38050fd55a914"
+        },
+        {
+          "path": "examples/vox-reactions/src/main.js",
+          "sha256": "bb64bf745acfead65b8c75494e67686e8df104fa2d5fd509d2822c04507d9df8"
+        },
+        {
+          "path": "examples/vox-reactions/src/session.js",
+          "sha256": "62687e4b818124379b5390b0bdfe625e21c6f64c87a502d8dd2f250e84031c7d"
+        },
+        {
+          "path": "examples/vox-reactions/src/style.css",
+          "sha256": "765d86465060fd9da9f3a385a694a8522ebb1228ea509d6e746a208c5ccff9b1"
+        },
+        {
+          "path": "examples/vox-reactions/test/iframe.html",
+          "sha256": "54ea6d1c4f553c5a881c88c2f33b02d8936bf1f3eb58b4bac3dbf50e9c19a9dc"
+        },
+        {
+          "path": "examples/vox-reactions/test_browser.py",
+          "sha256": "f47dcb40e4296b3e90140929ed6161360290f4ac5419787971eef34b5a6f3db4"
+        }
+      ],
+      "evidence": [
+        "examples/vox-reactions/provenance.json",
+        "examples/vox-reactions/screenshots/iframe.png",
+        "examples/vox-reactions/screenshots/burn.png",
+        "examples/vox-reactions/screenshots/shock.png"
+      ]
+    },
+    {
+      "id": "scorch-race-ai",
+      "project": "scorch-podracer",
+      "title": "SCORCH · Look-ahead racing AI",
+      "scope": "Six original AI pods race the procedural desert track with visible look-ahead targets, nearby-racer avoidance, corner-speed decisions and optional original player input.",
+      "category": [
+        "ai",
+        "vehicle"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "scorch-podracer.race-ai"
+      ],
+      "dependencies": [
+        "Embedded original Three.js r158 (local, no packages)",
+        "Original track curvature and narrow-section queries, vehicle yaw/speed limits and nearby racers",
+        "Original procedural pod, track, terrain and shader assets"
+      ],
+      "limitations": "Complete original aiInput, stepRacer and collide declarations run unchanged. Display-only target reconstruction is checked against actual AI target arguments. New elevated camera, map and fixed 120 Hz host; speed caps stay at 1 without player-relative catch-up. Audio, particles and postprocessing are shimmed; no pickups or results flow. Gamepad and touch are not certified. No project-wide archive license.",
+      "verify": "node --test examples/scorch-race-ai/*.test.mjs && python3 examples/scorch-race-ai/test_browser.py",
+      "port": 8118,
+      "files": [
+        {
+          "path": "examples/scorch-race-ai/README.md",
+          "sha256": "4bfba3380333be3ff4d59660912ec8a9e432a274214c21bc747c5c79c8658c6d"
+        },
+        {
+          "path": "examples/scorch-race-ai/build.mjs",
+          "sha256": "4b7f3548a0118c106271b66010888adf7b3a83b175f2bed5a37244efd4c099a2"
+        },
+        {
+          "path": "examples/scorch-race-ai/local.json",
+          "sha256": "864f3e5c895b72b9b8f90c943ea24338bb0dbb97e42b3dbd828d838c33cba58d"
+        },
+        {
+          "path": "examples/scorch-race-ai/original/index.html",
+          "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+        },
+        {
+          "path": "examples/scorch-race-ai/provenance.json",
+          "sha256": "7f9b48f58a047d6eea0561d6186e90de7d3089aa7fb320a1e116521eb6a83285"
+        },
+        {
+          "path": "examples/scorch-race-ai/provenance.test.mjs",
+          "sha256": "073fde11a7a574ad963427f934697134f49b46f398e9b00ca5832ad0be068ade"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/host.mjs",
+          "sha256": "06bd5f0c719fb3da63394f7b626c1d033bdcfaf0f8937b4c301f84ad8820d690"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/index.html",
+          "sha256": "b308461fa476496a19797dd49642dccee0f55f4177ab11350883ebb433e069ad"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/runtime.mjs",
+          "sha256": "63f7cb1d91d3cdde300234980e1b0c919eca0475d73d0e402c2e68e6614cf2dd"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/shims.mjs",
+          "sha256": "342bb3582aef529e96faf368d34d4bef8f8e9e1645dabc11e8da6cdb042dfc80"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/style.css",
+          "sha256": "6bb6294ac67ab38f569bee28ee0522c6b2798ace872a6711171f93993083929e"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/targets.mjs",
+          "sha256": "945aace1b77cdcb3191a4142d46d964c4d994f54d2814ce7e4c363c86904f266"
+        },
+        {
+          "path": "examples/scorch-race-ai/public/three.js",
+          "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
+        },
+        {
+          "path": "examples/scorch-race-ai/simulation.test.mjs",
+          "sha256": "225694db47b73db86303743d6ec03c87d8c116f0518544505eb2aeb5afdfea6c"
+        },
+        {
+          "path": "examples/scorch-race-ai/src/host.mjs",
+          "sha256": "06bd5f0c719fb3da63394f7b626c1d033bdcfaf0f8937b4c301f84ad8820d690"
+        },
+        {
+          "path": "examples/scorch-race-ai/src/index.html",
+          "sha256": "b308461fa476496a19797dd49642dccee0f55f4177ab11350883ebb433e069ad"
+        },
+        {
+          "path": "examples/scorch-race-ai/src/shims.mjs",
+          "sha256": "342bb3582aef529e96faf368d34d4bef8f8e9e1645dabc11e8da6cdb042dfc80"
+        },
+        {
+          "path": "examples/scorch-race-ai/src/style.css",
+          "sha256": "6bb6294ac67ab38f569bee28ee0522c6b2798ace872a6711171f93993083929e"
+        },
+        {
+          "path": "examples/scorch-race-ai/src/targets.mjs",
+          "sha256": "945aace1b77cdcb3191a4142d46d964c4d994f54d2814ce7e4c363c86904f266"
+        },
+        {
+          "path": "examples/scorch-race-ai/test_browser.py",
+          "sha256": "989164a908c70c25fab1f518442403b1b54fd118b0c65b9d3823dc5fbf2e001b"
+        }
+      ]
+    },
+    {
+      "id": "inkwave-paint",
+      "project": "inkwave",
+      "title": "INKWAVE · Surface painting",
+      "scope": "Original Spritzer ballistics, surface collisions, GPU ink atlas and wet-ink material with CPU ownership maps in a small floor-and-wall fixture.",
+      "category": [
+        "rendering",
+        "gameplay"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "inkwave.paint"
+      ],
+      "dependencies": [
+        "Three.js r186 WebGL 2 and Vite from inkwave/node_modules",
+        "Original PaintSystem render target, Level atlas UVs and CPU ownership grid",
+        "Original WeaponRunner, Projectiles, Physics and Spritzer settings"
+      ],
+      "limitations": "Stationary shooter with host pointer aiming and unlimited ink; no player movement, roller, combat targets, audio or full match. Uses original procedural material fallback. Ground coverage excludes vertical walls. GPU decorative drips and droplets exceed the coarse CPU main-blob ownership boundary. No full-game parity claim.",
+      "verify": "node --test examples/inkwave-paint/*.test.mjs && python3 examples/inkwave-paint/test_browser.py",
+      "port": 8119,
+      "files": [
+        {
+          "path": "examples/inkwave-paint/original/world/paint.js",
+          "sha256": "fd90c2ace5e1d46774b8c670c0662b260aeda619ea6ad7abd49cb43d96a8b91c"
+        },
+        {
+          "path": "examples/inkwave-paint/original/world/levelMaterial.js",
+          "sha256": "5263f93886cb9614f2e6fb0b2433e07a77f3d23d532e8c1b3b733c62fe29fbae"
+        },
+        {
+          "path": "examples/inkwave-paint/original/world/level.js",
+          "sha256": "fd8048cbcc207bebe9ad8111aadd5ac60c22c8ed96cdd61c0cabfd22c1f29980"
+        },
+        {
+          "path": "examples/inkwave-paint/original/world/maps.js",
+          "sha256": "1a45e6df5119489a118b44871b846eefad15390b955670c042e5a61f005948c9"
+        },
+        {
+          "path": "examples/inkwave-paint/original/world/texlib.js",
+          "sha256": "170c393b2d39c90728f6e6919175219bfed47d1b5405bb3e526065dc71e9f1f8"
+        },
+        {
+          "path": "examples/inkwave-paint/original/core/ctx.js",
+          "sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04"
+        },
+        {
+          "path": "examples/inkwave-paint/original/game/weapons.js",
+          "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f"
+        },
+        {
+          "path": "examples/inkwave-paint/original/game/physics.js",
+          "sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48"
+        },
+        {
+          "path": "examples/inkwave-paint/original/config.js",
+          "sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6"
+        }
+      ],
+      "evidence": [
+        "examples/inkwave-paint/provenance.json",
+        "examples/inkwave-paint/screenshots/paint.png"
+      ]
+    },
+    {
+      "id": "shabondama-bubble",
+      "project": "shabondama-biyori",
+      "title": "Shabondama · Thin-film bubble",
+      "scope": "Original thin-film bubble renderer in an orbitable scene: flowing interference colors, adjustable thickness, front/back reflections, overlapping instances and foreground depth occlusion.",
+      "category": [
+        "rendering",
+        "vfx"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "shabondama-biyori.bubble"
+      ],
+      "dependencies": [
+        "Archived Three.js r186 / WebGL 2 (local ES modules, no build)",
+        "Original BubbleRenderer, shader import closure, sky bake and procedural environment noise",
+        "Original 3D film noise, environment probe, depth texture and transparent instance ordering"
+      ],
+      "limitations": "Stationary bubble with fixed age and no focus blur; host orbit/zoom and thickness controls. Flat environment fixture, clear clouds, no full landscape, bloom, director, flight or popping. Original object-level sorting is retained. No project-wide game license found; no full-game parity claim.",
+      "verify": "node --test examples/shabondama-bubble/*.test.mjs && python3 examples/shabondama-bubble/test_browser.py",
+      "port": 8120,
+      "files": [
+        {
+          "path": "examples/shabondama-bubble/README.md",
+          "sha256": "3795c1cb639df38cc7635dc162c332b763b358df37e539129ffaf2d3912ab387"
+        },
+        {
+          "path": "examples/shabondama-bubble/index.html",
+          "sha256": "74e2418d2b10d4857487b9fb7ba343465c39481d663ed4a75dcc9eef7c06b7ec"
+        },
+        {
+          "path": "examples/shabondama-bubble/local.json",
+          "sha256": "baf6f8c6bb2c7926e2398f1bad9423e9f91ee161e4f02d561cc7e890f347864c"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/bubbles.js",
+          "sha256": "365e44287413b9a1c424b241e1aa2bcd5838743b06e7dfdf61a1f4103ce62dee"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/glsl.js",
+          "sha256": "c228036bfe8fbb21fb9ec469926f6caa7f9cb7e8654b97fab470f6eb316f2fe3"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/post.js",
+          "sha256": "f8a7033e6137c44e815cc717b6cae751a22c795398977434fd34d5c3acdc9376"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/sky.js",
+          "sha256": "948f7efe0e0be4cdea706da51739990e28470602ab01e795002254aaf61a274c"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/terrain.js",
+          "sha256": "e2a2d425c4514cdb145987de52b2c693b0b75c63142d1d9a3bf8400a7eea20e4"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/water.js",
+          "sha256": "df5e36c8d1a7ffe78e1f563021c7e2578362933eb7ec86bf5d6f316a8eeedbd5"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/render/worldtex.js",
+          "sha256": "0fa56768f33418f685f7e77f015370af9cab78db53a008ae6e1bfd88dda61d40"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/util/noise.js",
+          "sha256": "6424fdb07a4fdbe8a003070394b58c4dfa47aee7e235b4c47c9f35dea63a2f2b"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/vendor/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/vendor/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/world/gen.js",
+          "sha256": "73a407f4e8df34686ed235e34f435783508afee4db06cb7c4893b84ef7142d86"
+        },
+        {
+          "path": "examples/shabondama-bubble/original/world/layout.js",
+          "sha256": "663db32db8aa3b68656dd739f88a443267c2a1170b7cc5d2a79c476d0abdf07d"
+        },
+        {
+          "path": "examples/shabondama-bubble/provenance.json",
+          "sha256": "f06ff3c854040e51e0563abe2dfc912102db6894fef059683174fd8c6561484a"
+        },
+        {
+          "path": "examples/shabondama-bubble/provenance.test.mjs",
+          "sha256": "f70c11e8ccea5a79dd5e424482a55e8d2c0a684c86807073dbc0c8121b249164"
+        },
+        {
+          "path": "examples/shabondama-bubble/src/host.js",
+          "sha256": "6cabe102a2ade31dc543828b22bdac69450be100483197065cd4ecadc0a5b445"
+        },
+        {
+          "path": "examples/shabondama-bubble/src/style.css",
+          "sha256": "225d333e13e1b1d29affabefa71583834c5878e58465b50f5659a2fb0deac43a"
+        },
+        {
+          "path": "examples/shabondama-bubble/test_browser.py",
+          "sha256": "41bba02439fe7bc7825fda63cf187b201f15d300cd8a1db355854cc84534b33b"
+        }
+      ],
+      "evidence": [
+        "examples/shabondama-bubble/provenance.json",
+        "examples/shabondama-bubble/screenshots/bubble.png"
+      ]
+    },
+    {
+      "id": "monolith-tour",
+      "project": "monolith-wilds",
+      "title": "Monolith Wilds · Camera handoff",
+      "scope": "Unchanged original walk/fly controls and cinematic-tour planner in a flat host scene: smooth landing, obstacle-aware tour paths, five camera moves, input interruption and velocity handoff.",
+      "category": [
+        "3c",
+        "camera"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "monolith-wilds.tour"
+      ],
+      "dependencies": [
+        "Archived Three.js r186 WebGL 2 modules",
+        "Original controls, tour, obstacles and biome modules",
+        "Flat terrain queries, landmark bounds/viewpoints and host event bus",
+        "Browser ES modules/import map; optional pointer lock"
+      ],
+      "limitations": "Flat ground and new landmark geometry only; no original terrain, world rendering, audio or walking collision against decorative meshes. Only the biome world-entry import is mapped to a flat-ground shim; camera and path logic remain unchanged. Gamepad, touch and attract-mode tours are untested. No build is required.",
+      "verify": "node --test examples/monolith-tour/*.test.mjs && python3 examples/monolith-tour/test_browser.py",
+      "port": 8122,
+      "files": [
+        {
+          "path": "examples/monolith-tour/original/controls-DX7CeMlr.js",
+          "sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b"
+        },
+        {
+          "path": "examples/monolith-tour/original/tour-Do76daLD.js",
+          "sha256": "5849bab548c1339af00d7ba6f9f1e89cc9a147fb56b2af8dd731646d0b00ab34"
+        },
+        {
+          "path": "examples/monolith-tour/original/obstacles-DQBr1hBF.js",
+          "sha256": "1dbf1087bc7940235edb33796efda2042a3b30efed081d6381a0b5b1a40bcb3b"
+        },
+        {
+          "path": "examples/monolith-tour/original/biome-DstsBN7N.js",
+          "sha256": "b77ac324e86000411a0cb9ea137da506b724f395ef744c58281524fd95166d6d"
+        },
+        {
+          "path": "examples/monolith-tour/original/three.core-DtjtRha-.js",
+          "sha256": "c4a3f7fe78ed1015ff61dbf82b0a47e2ff9364fa2e110bda383ef9b2e20a78dc"
+        },
+        {
+          "path": "examples/monolith-tour/original/three.module-e53_FFk2.js",
+          "sha256": "aa6cc936d5038dd1c319db4333181cead6de1eba422aa3d81ab7e74b2b57ef2b"
+        }
+      ]
+    },
+    {
+      "id": "monolith-terrain",
+      "project": "monolith-wilds",
+      "title": "Monolith Wilds · Terrain streaming",
+      "scope": "Original terrain quadtree, worker pool, chunk geometry allocation and LOD morphing in a terrain-only scene with original flight controls, live chunk footprints and worker-job counts.",
+      "category": [
+        "world",
+        "performance"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "monolith-wilds.terrain"
+      ],
+      "dependencies": [
+        "Eight unchanged archived ES modules including Three.js WebGL 2",
+        "Original entry height/noise/layout exports and terrain/controls module whitelist",
+        "Web Workers and transferable geometry buffers",
+        "Original biome, flight controls and obstacle queries"
+      ],
+      "limitations": "Original entry bootstrap is configured to load terrain and controls only; no sky mesh, water, landmarks, vegetation, audio, HUD or postprocessing. Optional host delay affects chunk dispatch only. Worker counters exclude original main-thread startup work. No arbitrary injected height function, long-route memory guarantee, full seam audit or touch/gamepad certification. No build is required.",
+      "verify": "node --test examples/monolith-terrain/*.test.mjs && python3 examples/monolith-terrain/test_browser.py",
+      "port": 8123,
+      "files": [
+        {
+          "path": "examples/monolith-terrain/README.md",
+          "sha256": "322c1446a1cd353f14ee4799bf358ac8918e76447a89249b1abeecf7dab3d959"
+        },
+        {
+          "path": "examples/monolith-terrain/index.html",
+          "sha256": "bfc375e1f63dd628a2c5d0a24d3ded9c4899d295c7ae33b505797e360fc795cc"
+        },
+        {
+          "path": "examples/monolith-terrain/local.json",
+          "sha256": "c44de9c2978613ff978d3eac1ebc9e31e2fadd417628670e8a022aed0685ee04"
+        },
+        {
+          "path": "examples/monolith-terrain/original/biome-DstsBN7N.js",
+          "sha256": "b77ac324e86000411a0cb9ea137da506b724f395ef744c58281524fd95166d6d"
+        },
+        {
+          "path": "examples/monolith-terrain/original/controls-DX7CeMlr.js",
+          "sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b"
+        },
+        {
+          "path": "examples/monolith-terrain/original/index-DGqtqlWq.js",
+          "sha256": "2996140e2396fedbb1b85d0ea9a5d74d567b9b1816f2daa5f031067a0ae709f4"
+        },
+        {
+          "path": "examples/monolith-terrain/original/obstacles-DQBr1hBF.js",
+          "sha256": "1dbf1087bc7940235edb33796efda2042a3b30efed081d6381a0b5b1a40bcb3b"
+        },
+        {
+          "path": "examples/monolith-terrain/original/terrain-MmovLCQt.js",
+          "sha256": "065b7d588604cdc2e34baa2a1fca167c6e4d33d54cb823e6b02b1ace9dc8d1e0"
+        },
+        {
+          "path": "examples/monolith-terrain/original/terrain-worker-DVcr_hr3.js",
+          "sha256": "c3287ad56c3090fb33273eba359d794f92c9c867e5e5f9f73fe17ef9182278c8"
+        },
+        {
+          "path": "examples/monolith-terrain/original/three.core-DtjtRha-.js",
+          "sha256": "c4a3f7fe78ed1015ff61dbf82b0a47e2ff9364fa2e110bda383ef9b2e20a78dc"
+        },
+        {
+          "path": "examples/monolith-terrain/original/three.module-e53_FFk2.js",
+          "sha256": "aa6cc936d5038dd1c319db4333181cead6de1eba422aa3d81ab7e74b2b57ef2b"
+        },
+        {
+          "path": "examples/monolith-terrain/provenance.json",
+          "sha256": "fd368c3132ef04342182787daacf515216908a2683a646d402b251519d696264"
+        },
+        {
+          "path": "examples/monolith-terrain/provenance.test.mjs",
+          "sha256": "55b712354ce7f1c7f028f5ce4971b3d8162561f83cc81ed1880f2e2bfe8d6441"
+        },
+        {
+          "path": "examples/monolith-terrain/src/host.js",
+          "sha256": "7798809b6beb51dd8262470ee83a429ebe661cc7460685617e6ebd82d94e0dab"
+        },
+        {
+          "path": "examples/monolith-terrain/src/style.css",
+          "sha256": "1f980eb5ec229cf22f82ee7d15eecb72783ac6a4498e846849b049609f5e86a8"
+        },
+        {
+          "path": "examples/monolith-terrain/test_browser.py",
+          "sha256": "bb13638ce6a424312ddf45ccd40bcd3c2b8df374b6e3d0b5c165f159cea396b4"
+        }
+      ],
+      "evidence": [
+        "examples/monolith-terrain/provenance.json",
+        "examples/monolith-terrain/screenshots/streaming.png"
+      ]
+    },
+    {
+      "id": "inkwave-3c",
+      "project": "inkwave",
+      "title": "INKWAVE · Locomotion and follow camera",
+      "scope": "Original actor locomotion, procedural character, input/controller, collision and follow camera in a small practice scene: run, jump, dry squid and own-ink swimming.",
+      "category": [
+        "3c",
+        "animation"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "inkwave.3c"
+      ],
+      "dependencies": [
+        "Archived Three.js WebGL modules and BufferGeometryUtils",
+        "Original Actor, Character, PlayerController, Input, Physics and CameraRig",
+        "Host-owned practice geometry and fixed own-ink surface samples",
+        "Browser ES modules/import map and pointer lock"
+      ],
+      "limitations": "Fixed ink lane and new practice geometry. Combat intents are suppressed; no painting, projectiles, audio, bots or full match. Gamepad, wall climbing, super jumps and specials are unverified. No claim of full-game parity. No build is required.",
+      "verify": "node --test examples/inkwave-3c/*.test.mjs && python3 examples/inkwave-3c/test_browser.py",
+      "port": 8124,
+      "files": [
+        {
+          "path": "examples/inkwave-3c/original/config.js",
+          "sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6"
+        },
+        {
+          "path": "examples/inkwave-3c/original/core/ctx.js",
+          "sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04"
+        },
+        {
+          "path": "examples/inkwave-3c/original/core/input.js",
+          "sha256": "17d1418379aded288cdfb965c297c20635ed54f44e533f95060d99f4d5b344e3"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/actor.js",
+          "sha256": "e0fedbc7fc2b5df799223f2e77e3a795972eb4f779d822a43dea1a7e99a97074"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/character.js",
+          "sha256": "e47f7f97b9fc7c413adc31812f4367fc9a6f2bcd7b66459d023ead326ea65d4d"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/cameraRig.js",
+          "sha256": "9c2fd9f3ab67e9c349ba77c1423e23ebe237e8fce9338fb301ae3a6bee9f3fc4"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/player.js",
+          "sha256": "f532bbe5c19e038a8829b368d3cbf2d416c1405081df8f1681f75c5cbf123ef1"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/physics.js",
+          "sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/weapons.js",
+          "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/character-geo.js",
+          "sha256": "6494f29b533bb0346d09a95cbaa9b1e0b934bb20fdf88248ed4fc05a905b7627"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/character-mats.js",
+          "sha256": "53cf4fdd2db474eef730d7c447c7c07a0aa2bc94baae8c0f081759cdde4e95a1"
+        },
+        {
+          "path": "examples/inkwave-3c/original/game/character-weapons.js",
+          "sha256": "a75e15972dbce296fb5630358d570f1f206ed72c2626cb69a139f0fbf9451925"
+        },
+        {
+          "path": "examples/inkwave-3c/vendor/three/build/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        },
+        {
+          "path": "examples/inkwave-3c/vendor/three/build/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "path": "examples/inkwave-3c/vendor/three/jsm/utils/BufferGeometryUtils.js",
+          "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797"
+        }
+      ],
+      "evidence": [
+        "examples/inkwave-3c/provenance.json",
+        "examples/inkwave-3c/screenshots/swim.png"
+      ]
+    },
+    {
+      "id": "moritsuki-characters",
+      "project": "moritsuki",
+      "title": "Moritsuki · Character workers",
+      "scope": "Unchanged character worker pipelines and original model assembly in a standalone scene. Switch between three fixed designs, regenerate, rotate, zoom and inspect wireframes with worker progress.",
+      "category": [
+        "assets",
+        "performance"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "moritsuki.characters"
+      ],
+      "dependencies": [
+        "Archived Three.js r170 / WebGL 2",
+        "Native ES modules and module workers",
+        "Original procedural geometry, textures and material assembly"
+      ],
+      "limitations": "Original designs are fixed: no random-seed character API. Heavy mesh generation runs in workers; textures, skeletons, materials and accessories are assembled on the main thread. No town, animation, dialogue or full-game visual parity. Archive has no identified project-wide source license.",
+      "verify": "node --test examples/moritsuki-characters/*.test.mjs && python3 examples/moritsuki-characters/test_browser.py",
+      "port": 8127,
+      "files": [
+        {
+          "path": "examples/moritsuki-characters/README.md",
+          "sha256": "1e6cb4c4eeee50fd9e89de729b11a1c3ccf6d7ad56468eb1b59fdca2aca8f09b"
+        },
+        {
+          "path": "examples/moritsuki-characters/index.html",
+          "sha256": "10745a746deede4a2f268833d24b7854432affa2411d0a243f2d538b4736b984"
+        },
+        {
+          "path": "examples/moritsuki-characters/local.json",
+          "sha256": "0c8a8068f7742926a43ed12bad0b2fb249a2364b333446b7b71f415373241e38"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/assets/build.js",
+          "sha256": "e383784969bae68699922f82b989b5fee47886dea16f56001c2f90176d42a882"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/kid/hair.js",
+          "sha256": "d200eec2ed83aa987c589a67a0bb27a1a8bd0dd047297d62d76cd3ce346544f7"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/kid/kid.worker.js",
+          "sha256": "4aee097f7f44eb5b908bc1733c7250e40c6232fdb382195759f17bef06dbe9d9"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/kid/model.js",
+          "sha256": "eb009471861d4c7f5b67c67d9af2ec7095deaa75f02e6792815b6961bc2c2fa6"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/kid/sdf.js",
+          "sha256": "8e7de6e092eb598c4da2286f69328ddbb89d2db54269e56b464c98ddee25c263"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/kid/shapes.js",
+          "sha256": "c7ab424d22a96fd5e27f19775a24cfaa19912a22a39997fbeb7f4c27d3c5bca6"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/kid/textures.js",
+          "sha256": "cc52944194d80c2be70be603f76da8af4f2e51d4781b3200314bd4152a90ba70"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/face.js",
+          "sha256": "9a1f00ff75d9ebb836291435c4a78876842bea79a78801a68d355852f08bd93a"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/human.js",
+          "sha256": "ff4ce28d2f36490d8a5a4112c33b8ecd08da4f8ef2d94ff1aa31d1512658e25e"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/isogai.js",
+          "sha256": "b275dbc5dc14e94cc14e3bae82f6af15639379a3293bad548efb870ffc424c91"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/model.js",
+          "sha256": "b3eb32a33b31b7754d1bd4d5065f92e91df611c9bc443c1af208e8f8d1cf8872"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/natsumi.js",
+          "sha256": "61f64024523d533d22687d2cedc1c1c7aea63b1195c4250050ab41f7e1f6b348"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/people.worker.js",
+          "sha256": "07db22ee02d5d554ac00a4aa683ef808c00f52da4f7b49d0af5883eebe9ab021"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/prints.js",
+          "sha256": "5325547e5fe1dc196f1ef8e2ad665d0ad631e8d35a6fdaff2e2342fb6f49dce5"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/shoes.js",
+          "sha256": "277498f0d6fc818d3a3e85004d854ee2fa1909c0ae1d83bcbfd459550a81c89d"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/people/strands.js",
+          "sha256": "102f6eb4143d1050c7f5a460b3a75a51d27f6886b3e859a09db77713103a9d62"
+        },
+        {
+          "path": "examples/moritsuki-characters/original/vendor/three.module.js",
+          "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+        },
+        {
+          "path": "examples/moritsuki-characters/provenance.json",
+          "sha256": "7205636f7a95812ef597ade42c7d311e15183b2f481ea3dd39a4e4f99d59063b"
+        },
+        {
+          "path": "examples/moritsuki-characters/provenance.test.mjs",
+          "sha256": "3751db96a770a8f82f207ed3b319ca6e8b791964745fdd4cd04cd1fdcecef1f8"
+        },
+        {
+          "path": "examples/moritsuki-characters/src/host.js",
+          "sha256": "374956b3c4ee67fdfbe631024345b314b769578461bd4065c2fed58708f39201"
+        },
+        {
+          "path": "examples/moritsuki-characters/src/style.css",
+          "sha256": "947e20f4710261c467a3aa77b01a92bc771995a635ae8419f6c05fd22bf572fe"
+        },
+        {
+          "path": "examples/moritsuki-characters/src/workers.js",
+          "sha256": "c58158044db095c97feaeb898ed2008255b296f1b86708db22a714210ec5d9ba"
+        },
+        {
+          "path": "examples/moritsuki-characters/test_browser.py",
+          "sha256": "d601c9a8660adfbb2a001f20b5051dcffa85d46a729f7e31ad9b77ff7664c6d2"
+        }
+      ]
+    },
+    {
+      "id": "tidewater-ocean",
+      "project": "tidewater",
+      "title": "Tidewater · FFT ocean and surface queries",
+      "scope": "Original GPU FFT, asynchronous surface queries and boat buoyancy run unchanged in a standalone deep-water scene. Change sea state, inspect hull samples, and steer the original procedural boat among five query-driven buoys.",
+      "category": [
+        "water",
+        "physics"
+      ],
+      "maturity": "extracted-unverified",
+      "candidates": [
+        "tidewater.ocean-query"
+      ],
+      "dependencies": [
+        "WebGPU-capable browser",
+        "Original custom WebGPU engine and WGSL compute/readback modules",
+        "Original procedural BoatModel, buoy geometry and hull settings",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "limitations": "New host camera, water grid and shading call the original surface query shader. Buoys follow query heights/normals directly; the boat uses original rigid-body buoyancy. No shore, wake, terrain collisions, refraction, underwater rendering, fishing or full-game parity. Sea-state changes regenerate the spectrum immediately. Original query latency uses simulation time, not wall-clock GPU timing.",
+      "verify": "node --test examples/tidewater-ocean/*.test.mjs && python3 examples/tidewater-ocean/test_browser.py",
+      "port": 8128,
+      "files": [
+        {
+          "path": "examples/tidewater-ocean/original/core/Input.js",
+          "sha256": "837aede0dd64ed6e8bea9aa885e6e034e7d810740561a02edfdee9b8b828f646"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/Engine.js",
+          "sha256": "e0ab1f2893204c5996b409931357de0b1429e502a73f2c61f9f058a69e4617bb"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/constants.js",
+          "sha256": "4610679066f55da362c10a896fea17058ee646affff3981d6e2aede118f2947f"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/core/EventDispatcher.js",
+          "sha256": "3225f116d0407a8b603917ab8bbe8656f1cbfe97fc1165028bf7420093ae70f3"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/BufferAttribute.js",
+          "sha256": "48cc710ca8029bc15b3c03533b13c478ae55cf52a453543e10d7ffc933580a41"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/BufferGeometry.js",
+          "sha256": "ef3e8470f6cc0745bc50e354c3145da8e470ea1de0e056d33f3f0501901e7376"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/BufferGeometryUtils.js",
+          "sha256": "c7ab418b86ddd4b623eb7fa6b037c800c141f9f444772d604658961d2d623d4c"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/PolyhedronGeometry.js",
+          "sha256": "6b5e756688f3ea962c012d7e06c595d1fd5730fba9e44b1cccc5455013b45473"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/PrimitiveGeometries.js",
+          "sha256": "cbde738b33b5e0c67d729825c7d8620b2d819c7aa70bf680b15d94d265732ceb"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/RoundedBoxGeometry.js",
+          "sha256": "f4c05c55362ff68a2fe2eeae21e9d783344243265e1e18567154fe95b3971413"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/TubeGeometry.js",
+          "sha256": "f493cb4de35444a9adfedf2b7a57994f59cba823e9768b5102080b750b9ef5a2"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/geometry/index.js",
+          "sha256": "7aa336e8ff7d01675b375fbb499ae9820952595f9bac9b169df22d6b1de5538c"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/Compute.js",
+          "sha256": "bd64385e6d5de7e9a1a7986eb71c7a032d5ed7763568f47285437c9f185a9aa8"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/GPU.js",
+          "sha256": "708e0fd59edea32349b5c372f14cc6e09b20dd1e24f536868106ad2a8330428d"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/Mipmaps.js",
+          "sha256": "c3262f6f22cb30275847666ab6f7ed543f0c77b5d06f1d9aa84611cadc7070c6"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/Readback.js",
+          "sha256": "d16b3a3ecc588e5743534cfb10129428666d4114fb7e3372af51cb068529148d"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/Shader.js",
+          "sha256": "b45b50583a6525aa4aa9a26ae5be699032e5c5ae57780daf99ed2a6402860bd6"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/Texture.js",
+          "sha256": "4e446d488ee36c88c7ae03552995544559ad4ada2f41320dd206fd4f99f95453"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/gpu/Uniforms.js",
+          "sha256": "51bf60e5da6bbab612cc1405cce5dcb7a759a3732bd0fd7cdfe5e1df73105940"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/index.js",
+          "sha256": "239f0f1370717789618b0094b983717ca501ad957eaa02bdf3e2b872a66dc454"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/loaders/GLTF.js",
+          "sha256": "b8a2c3666fa27ea504e62d315ed9c125e178007a27d151eb59c9d1ea5ac210d1"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Box3.js",
+          "sha256": "170c606467f859c5a3f6dae1b32256711f61b927aaec42fe3cbcfb4a51c16356"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/CatmullRomCurve3.js",
+          "sha256": "b21bae1708947c35819fce3dbe97f90f893c36d7db42392fbd5b63de05991f5f"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Color.js",
+          "sha256": "ad9a0110fd607695522c17dce08aa5eacee017e1160fce3aa5ba37704b893d25"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/DataUtils.js",
+          "sha256": "f94e4a385baae53868d2e334b31d04c5ac42ca7d382b5f9effcc6ada9060db38"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Euler.js",
+          "sha256": "5bf51c4b93fffc1cb9c24d4ba75af7b00bc1520880e18353d4f69cddea7e37c7"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Frustum.js",
+          "sha256": "cd6eba21f91122150afc973be49a215a0620c4ae1aea7f3ef0ff65d34d1b3bd9"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/MathUtils.js",
+          "sha256": "8adcc4743bf966b097bd25057abeb50b313ec9b9030e457825a5da209e1f9534"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Matrix3.js",
+          "sha256": "32fa721dfd326e1c0a53695b68938d4f2a5e85903c9b56c7b5f69e80456382da"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Matrix4.js",
+          "sha256": "c5c1dc971d61cbd21efcb083fdbdfb1e9fb0c6a56c9422266cfdc8b8353d57cc"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Plane.js",
+          "sha256": "523139ba4761b0f89cb4154e55b90ef6cf79f8c684fa5c50a67dffc4ad8a3d0d"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Quaternion.js",
+          "sha256": "040b4dd121db6effed1fbb8f2c5a6fb8d96d9523cf91ddde5105dc48c41fb3ce"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Ray.js",
+          "sha256": "88e40df102d8ca15bf36395883937d1d903541a932d2293cca0690d72373cdcd"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/ShapeUtils.js",
+          "sha256": "f560e483842a6ba7e9c73dc6e66614099faf6f4a342c23a83ced82de7cc39976"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Sphere.js",
+          "sha256": "9bf98f3c0ff69bd68a0fa1dedd8a19a6abdb37dc2c2979a27ab89def1f94f71c"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Spherical.js",
+          "sha256": "b0388ee43a1feea9c31d184af0f3b4746261667bfe3d5a3a548cb257862a7772"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Timer.js",
+          "sha256": "065eccbebb840beed5481ccf60f09bd50969d5965aac394f8858d136a4d1ec31"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Vector2.js",
+          "sha256": "195d0d4cc60dca87b7386464dca3fcfc6c76c852a3ef3dab95e3556ce7947b54"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Vector3.js",
+          "sha256": "af1252233ab373aeb9bb8f3514c8fdc3f00e8d2d9d71cdf16536f475a54bcb54"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/Vector4.js",
+          "sha256": "84deef94dbf6a335ed53aeaa2d6e65cd1f2d90687fb0fd37d18c4fdbf5e25710"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/math/index.js",
+          "sha256": "96a474ebaf2666dc51217e3d8224254794a5576db3d0acb2ce4a56e00911a2cf"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/Frame.js",
+          "sha256": "664f0ecfc0fb4b52d19bca4b1278e8dd0bd979d57e27f3e749e87b7fbc76a398"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/FullscreenPass.js",
+          "sha256": "21c7d6014158f76ce8d0b7c4674a1a76c6750d6934db3e327adc5dca1c0bd552"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/Material.js",
+          "sha256": "a84b1a3363c954ca4e3c7a5e0bfa0995a3f1e385506f3b05de2dea6b50713d22"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/MeshRenderer.js",
+          "sha256": "7efb3ddb9ad751be89416e301ffdfe3e6613c5b011f9f134c42b35d62b3c6782"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/MeshShader.js",
+          "sha256": "610c72bfd72494d8302e776c46afdc2e4b982aaf9068106d5041571efc8b6cd6"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/SceneRenderer.js",
+          "sha256": "1ad99e121c8f09ccbd4d411f31f4fccc50e749c41429d6131e6be6c80370d5ca"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/Shadows.js",
+          "sha256": "3d70ceacbb25505533ce4f47779ba5d97bc5834e2b1e01d0eb659a26c7b8dc91"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/Skinning.js",
+          "sha256": "14fbc0224cfcad6ee18af4911c6e290a4d495c0dc094e89be1cf8e3de3bdc25d"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/wgsl/common.js",
+          "sha256": "502580bf3c7d684833f2ce622f0f1d34425b0aa3842aedb2106816f5fbbd91c5"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/render/wgsl/lighting.js",
+          "sha256": "6f8ed6fa5198ace6c5131429ea356acc8eb2c3de2dbf8761b7954e4c9795f38b"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/Camera.js",
+          "sha256": "041f492248dc5425e89c6e207009a6d8ae19264e68cc8638027fd3de4466a160"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/Group.js",
+          "sha256": "c9837f1c2dd612cf94e1a7b7aac46c1f0fe84573b40ddfc21e75cca333dee2a1"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/Layers.js",
+          "sha256": "b4f9be617a8ebf912561da0414681b06f9dd4179af60bdce16cfa8de49717977"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/Mesh.js",
+          "sha256": "2ca60839273eca616fb98582aa78f75205ae922a2aafc22bd14c27faad75c2c0"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/Object3D.js",
+          "sha256": "6bf8eb3d3ddc95c3e919cfaf91d62e2761b1dcd97b1c769383dab74a94cc34e0"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/Scene.js",
+          "sha256": "45b6080a68d116088ee45c024216f9d4c7eaa0b33cdd83cadb80ce196d3cb7c3"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/scene/index.js",
+          "sha256": "80fa84e958bb59d407f080aaa0c43ad6a9b6432fe948733b25707467e02b4ee1"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/engine/webgpu.js",
+          "sha256": "f5bef1ce79dababfe5e838d77042293102dad18737b144c872867f36e7fdd461"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/materials/Materials.js",
+          "sha256": "b730faeb06d578e4f505ed29f0baa493d32cd250111e8209cbaed0efcbf8a58d"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/ocean/OceanFFT.js",
+          "sha256": "0b49481bdd7aaad20d0cadf4ae5a079f6fca71d712f46b281bde44ab0d03f208"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/ocean/WaterQuery.js",
+          "sha256": "6d00c2638c137bf763782c1930477b7a09c94ef4dac08f980200eabb9f46bf76"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/ocean/WaterSurface.js",
+          "sha256": "ca52b7c33a90f1539a6f613ebf1d73f3b90b56cffcea0a87bf953d109b690487"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/player/BoatController.js",
+          "sha256": "8e63f7858d86493f89ff228373f4a327380eda2b0735e3858651b1e4f999534b"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/BoatModel.js",
+          "sha256": "52a8997b5d12b2147a026af929e5d5656c6a5a0ba2709cc52c5ebb3a92de9401"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/WorldLayout.js",
+          "sha256": "1b25b7df2fe82a66c9656d185ba5871322d6dfa3507ab9034c1c2133f8b97230"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/BoatMaterials.js",
+          "sha256": "9234e169c2eaa34e8331285ddce6916ddb6b17fa9ec8ea84834da2559207da3c"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/DeckGear.js",
+          "sha256": "87ef89c6f8ea82b91a0abdef26d354a4a3d2253773aba8f9d7de743eeb29880c"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/GeoKit.js",
+          "sha256": "aea6fdc8c3576c7d8ff03a7e75ccd3e6fef0ce227c24432b95a04e684874fae7"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/HullBuilder.js",
+          "sha256": "a4d2b5e1f815688805bf22a6af7c9fd963962fe826dae276ae9e17aea008497b"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/HullLines.js",
+          "sha256": "091fd3469f626e3891de60f4e9806a4da89336b245b227aa6227ab4d110ad993"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/Running.js",
+          "sha256": "05c461c66c30af336daea58d782f74856fd774019547dba068ccfd3ed4d97cb9"
+        },
+        {
+          "path": "examples/tidewater-ocean/original/world/boat/Wheelhouse.js",
+          "sha256": "05051b16f5f65fb1b27b5a96cafedbf23421e1e739255b2251630b10eff4afc7"
+        }
+      ]
+    }
+  ]
+}

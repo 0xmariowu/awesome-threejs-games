@@ -1,0 +1,173 @@
+html[data-lab-embed][data-lab-theme="dark"] { background: #0E141F; }
+html[data-lab-embed][data-lab-theme="light"] { background: #F5F7FA; }
+html[data-lab-embed], html[data-lab-embed] body, html[data-lab-embed] #root {
+  height: auto;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.lab-frame {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 12px;
+  width: 100%;
+  background: var(--frame-bg);
+  color: var(--frame-ink);
+  font: 13px/1.5 system-ui, "PingFang SC", sans-serif;
+}
+.lab-frame *, .lab-frame *::before, .lab-frame *::after { box-sizing: border-box; }
+.lab-picture-column { min-width: 0; }
+#lab-picture, #lab-console { border: 1px solid var(--frame-line); border-radius: 10px; }
+#lab-picture { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; outline: none; }
+#lab-picture:focus-visible { outline: 2px solid var(--frame-link); outline-offset: -2px; }
+.lab-frame-hint { margin: 6px 0 0; color: var(--frame-muted); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#lab-console {
+  min-width: 260px;
+  max-height: var(--picture-height);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  background: var(--frame-panel);
+  padding: 10px;
+}
+.lab-console-title, .lab-performance-group h3 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--frame-muted);
+}
+#lab-controls { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; }
+#lab-controls > *, #lab-controls label { min-width: 0; }
+/* Leva returns null for scenes without controls. Readouts can still own a console. */
+.lab-frame:not(:has(#lab-controls input, #lab-controls button, #lab-controls select, #lab-controls textarea, .lab-frame-legend, [role="alert"], #lab-performance > *)) { grid-template-columns: minmax(0, 1fr); }
+#lab-console:not(:has(input, button, select, textarea, .lab-frame-legend, [role="alert"], #lab-performance > *)) { display: none; }
+.lab-performance-group { border-top: 1px solid var(--frame-line); margin-top: 10px; padding-top: 8px; }
+.lab-performance-group:not(:has(#lab-performance > *)) { display: none; }
+.lab-readouts { margin: 0; font-size: 12px; }
+.lab-readouts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; min-height: 22px; align-items: baseline; }
+.lab-readouts dt { color: var(--frame-muted); }
+.lab-readouts dd { margin: 0; text-align: right; }
+.lab-readouts :is(dt, dd) { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lab-readouts dd, .lab-frame-telemetry, .lab-embed-panel input[class*="levaType-number"], .ink-metrics b {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-variant-numeric: tabular-nums;
+}
+.lab-frame-telemetry { font-size: 12px; }
+.lab-embed-panel { min-width: 0; }
+.lab-embed-panel:empty, .lab-embed-panel[hidden] { display: none; }
+.lab-embed-panel > div { font-family: inherit; background: transparent; }
+/* Leva 0.10 tree/folder markers: expand folders as compact section labels. */
+.lab-embed-panel [class*="-toggled-"] { display: block; opacity: 1; pointer-events: auto; transition: none; }
+.lab-embed-panel [class*="-toggled-"] > div { break-inside: avoid; margin: 0; padding: 0; border: 0; }
+.lab-embed-panel [class*="-isRoot-false"] { height: auto !important; overflow: visible !important; padding-left: 0; }
+.lab-embed-panel [class*="-isRoot-false"]::after { display: none; }
+.lab-embed-panel [style*="--leva-colors-folderWidgetColor"] > div:first-child {
+  height: 24px;
+  font-size: 11px;
+  color: var(--frame-muted);
+  text-transform: none;
+  letter-spacing: normal;
+  cursor: default;
+  pointer-events: none;
+}
+.lab-embed-panel [style*="--leva-colors-folderWidgetColor"] > div:first-child > svg { display: none; }
+.lab-embed-panel [class*="-toggled-"] > div > div:has(> div > label[title]) {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  margin: 0;
+  min-height: 30px;
+}
+.lab-embed-panel [class*="-toggled-"] > div > div > div { min-width: 0; }
+.lab-embed-panel div:has(> button) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.lab-embed-panel button { min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lab-embed-panel input[type="checkbox"] + label { border: 1px solid var(--frame-line); border-radius: 6px; }
+.lab-embed-panel input[type="checkbox"]:checked + label svg { stroke: var(--frame-bg); }
+#lab-controls :is(button, input, select) { border-radius: 6px; }
+#lab-controls :is(button, input, select):focus-visible { outline: 2px solid var(--frame-link); outline-offset: 2px; }
+/* Only host UI is restyled; the source game's menu retains its own artwork. */
+#lab-controls :is(.lab-inline-html, .ink-overlay, .ink-panel, .ink-ui-workbench, .ink-ui-toolbar) { display: contents; }
+#lab-controls .ink-overlay { color: inherit; font: inherit; pointer-events: auto; }
+#lab-controls .ink-ui-toolbar { font: inherit; }
+#lab-controls :is(.ink-controls, .ink-ui-tools) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+#lab-controls :is(.ink-controls, .ink-ui-tools) > :not(button) { grid-column: 1 / -1; }
+#lab-controls .ink-actions { display: contents; }
+#lab-controls .ink-overlay button { order: 2; }
+#lab-controls :is(.ink-controls, .ink-ui-tools)::after {
+  content: '';
+  grid-column: 1 / -1;
+  order: 1;
+}
+#lab-controls .ink-panel small { order: 1; }
+#lab-controls .lab-control-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#lab-controls .ink-toggle { white-space: nowrap; }
+#lab-controls :is(.ink-controls, .ink-ui-tools) label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 30px;
+  font: inherit;
+}
+#lab-controls :is(.ink-controls, .ink-ui-tools) label.ink-toggle { display: flex; justify-content: space-between; }
+#lab-controls .ink-toggle input { order: 1; flex-shrink: 0; }
+#lab-controls .ink-overlay :is(button, select) {
+  min-width: 0;
+  width: 100%;
+  height: 30px;
+  padding: 3px 6px;
+  font: inherit;
+  color: var(--frame-ink);
+  background: var(--frame-bg);
+  border: 1px solid var(--frame-line);
+  border-radius: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#lab-controls .ink-overlay button:hover { border-color: var(--frame-accent); }
+#lab-controls .ink-overlay input { min-width: 0; width: 100%; accent-color: var(--frame-accent); }
+#lab-controls .ink-overlay input[type="checkbox"] { width: 16px; height: 16px; }
+#lab-controls .ink-overlay input[type="range"] { margin: 0; height: 28px; }
+#lab-controls .ink-status { font: inherit; color: var(--frame-muted); letter-spacing: normal; }
+#lab-controls .ink-panel :is(p, small), #lab-controls .ink-ui-tools > span, .lab-frame-legend {
+  margin: 0;
+  color: var(--frame-muted);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#lab-controls .ink-panel pre[role="alert"] { white-space: normal; overflow-wrap: anywhere; }
+#lab-picture > .ink-ui-stage { inset: 0; border-radius: 0; box-shadow: none; }
+@media (max-width: 759px) {
+  .lab-frame { grid-template-columns: minmax(0, 1fr); }
+  #lab-console { min-width: 0; width: 100%; }
+  /* Root rows or the single enclosing folder fill two balanced control columns. */
+  .lab-embed-panel > div > div:last-child > div,
+  .lab-embed-panel > div > div:last-child > div > [style*="--leva-colors-folderWidgetColor"]:only-child > div:last-child > div {
+    columns: 2;
+    column-gap: 12px;
+  }
+  .lab-embed-panel > div > div:last-child > div > [style*="--leva-colors-folderWidgetColor"]:only-child { column-span: all; }
+  #lab-controls :is(.ink-controls, .ink-ui-tools) { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; }
+  #lab-controls :is(.ink-controls, .ink-ui-tools) > label { grid-column: auto; }
+  .lab-readouts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .lab-embed-panel * { transition: none !important; } }
+/* Leva's body portal is confined to the console, including after responsive resize. */
+html[data-lab-embed] body > div:has(> div > .react-colorful) {
+  position: fixed;
+  left: var(--console-left);
+  top: var(--console-top);
+  width: var(--console-width);
+  contain: layout;
+  z-index: 10000;
+}
+html[data-lab-embed] body > div > div:has(> .react-colorful) {
+  top: 40px !important;
+  left: 12px !important;
+  bottom: auto !important;
+}
+/* Parameter names wrap onto a second line instead of being cut off. */
+.lab-embed-panel label[title] { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.2; overflow-wrap: anywhere; }
+#lab-controls .lab-control-label { white-space: normal; overflow: visible; text-overflow: clip; line-height: 1.2; }

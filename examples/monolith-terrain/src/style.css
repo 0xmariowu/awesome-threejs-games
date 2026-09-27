@@ -1,0 +1,25 @@
+:root { font-family: system-ui, sans-serif; color: #f3f0de; background: #8a99a8; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+#world { display: block; width: 100vw; height: 100vh; touch-action: none; }
+header, nav, aside, #hint, #error { position: fixed; z-index: 1; }
+header { top: 20px; left: 24px; display: grid; gap: 7px; text-shadow: 0 1px 5px #172b32; }
+header span { font-size: 13px; letter-spacing: .08em; }
+header strong { font-size: 17px; font-weight: 500; }
+nav { top: 20px; right: 20px; display: flex; gap: 6px; }
+button { font: inherit; font-size: 13px; color: inherit; background: #172b32d9; border: 1px solid #b7c5bc66; border-radius: 3px; padding: 9px 12px; cursor: pointer; }
+button[aria-pressed="true"] { background: #d7dfc6; color: #172b32; }
+button:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+aside { right: 20px; bottom: 60px; background: #172b32d9; border: 1px solid #b7c5bc66; }
+#chunks { display: block; width: 190px; height: 190px; }
+aside p { margin: 0; padding: 4px 10px 9px; font-size: 11px; line-height: 1.6; }
+#hint { bottom: 12px; left: 24px; right: 24px; margin: 0; font-size: 12px; text-shadow: 0 1px 5px #172b32; }
+#error { inset: 40% 15% auto; padding: 20px; background: #38261e; }
+@media (max-width: 760px) {
+  header { top: 14px; left: 14px; }
+  header strong { font-size: 13px; }
+  nav { top: 72px; left: 14px; right: auto; }
+  #chunks { width: 130px; height: 130px; }
+  aside { right: 12px; bottom: 62px; }
+  #hint { left: 14px; right: 14px; font-size: 11px; }
+}

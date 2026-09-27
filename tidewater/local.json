@@ -1,0 +1,5 @@
+{
+  "port": 8097,
+  "entry": "/tidewater/index.html",
+  "root": "public"
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>広告</title>
+<!--
+  スマートゲーム 共通フッターバナー広告
+  （i-mobile → MicroAd → Ad Generation → 自社広告 のウォーターフォール）
+
+  各ゲームページから同一オリジンの iframe として読み込まれる専用ページ。
+  広告タグは外部スクリプト・インラインスクリプト・任意ドメインの
+  クリエイティブ読み込みを必要とするため、この配下に隔離することで
+  各ゲーム本体の CSP（default-src 'self'）を一切ゆるめずに済ませている。
+
+  このページ自体は広告タグを持たず、広告タグ本体（ad/slot.html）を
+  iframe として抱える「枠」であり、frame.js が一定時間ごとに
+  slot.html を読み込み直して広告を差し替える。
+  広告タグを差し替えるときは ad/slot.html を更新すればよい。
+
+  slot.html の iframe は sandbox（allow-same-origin 無し）で読み込む。
+  広告タグは別オリジン（opaque origin）として動くので、ゲームページや
+  このページの localStorage・Cookie・DOM には触れない（タウンの uid/key など）。
+  このページ（frame.js）だけがゲームページと同一オリジンで、高さの中継だけを行う。
+-->
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+  body {
+    line-height: 0;
+  }
+  /* 広告枠。表示中の広告と読み込み中の広告をここに重ねる */
+  #ad-stage {
+    position: relative;
+    width: 100%;
+    height: 50px;   /* 最初の広告の高さが判るまでの仮の高さ */
+    overflow: hidden;
+  }
+  #ad-stage iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    opacity: 0;
+    transition: opacity .2s linear;
+  }
+  #ad-stage iframe.is-current {
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    #ad-stage iframe { transition: none; }
+  }
+</style>
+</head>
+<body>
+<!-- 最初の1枠は HTML に直接置く（frame.js を待たずに広告の読み込みを始めるため） -->
+<div id="ad-stage">
+  <iframe class="is-current" src="slot.html" title="広告" scrolling="no" frameborder="0" sandbox="allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"></iframe>
+</div>
+<script src="frame.js?ver=20260907-1"></script>
+</body>
+</html>

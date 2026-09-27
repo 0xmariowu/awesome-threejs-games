@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "slug": "arkenfall",
+  "title": "Arkenfall",
+  "tagline": "开放世界动作冒险，展示程序化地形、角色动画与后台生成",
+  "category": "开放世界动作",
+  "overview_video": "arkenfall/overview",
+  "examples": [
+    {
+      "id": "arkenfall-camera",
+      "title": "锁定与镜头避障",
+      "one_liner": "锁定目标绕行，观察镜头避开墙壁和树干后恢复",
+      "candidate": "arkenfall.camera",
+      "title_en": "Lock-on and camera collision",
+      "one_liner_en": "Circle a locked target and watch the camera avoid walls and tree trunks, then recover."
+    },
+    {
+      "id": "arkenfall-combat",
+      "title": "连击与招架时机",
+      "one_liner": "挥击训练靶，体验连击窗口、刀刃扫掠和瞬间招架",
+      "candidate": "arkenfall.combat",
+      "title_en": "Combos and parry timing",
+      "one_liner_en": "Strike training targets to try combo windows, blade sweeps and instant parries."
+    }
+  ],
+  "tagline_en": "Open-world action adventure with procedural terrain, character animation and background generation."
+}

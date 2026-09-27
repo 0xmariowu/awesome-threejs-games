@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>SCORCH · Driving physics</title><link href="data:," rel="icon"/><link href="./style.css" rel="stylesheet"/><link href="./ui.css" rel="stylesheet"/></head>
+<body>
+<canvas aria-label="SCORCH driving scene" data-demo-picture="" id="world" tabindex="0"></canvas>
+<aside class="ui-panel" data-demo-readout=""><output id="speed">0</output><span>km / h</span><label>Boost energy <meter id="energy" max="1" min="0" value="0.4"></meter></label><p id="motion">Ready</p></aside>
+<nav aria-label="Demo controls" class="ui-panel" data-demo-control=""><button aria-pressed="false" id="slow">Slow motion</button><button aria-pressed="false" id="helpers">Show direction</button><button id="reset">Restart race</button></nav>
+<footer class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD / ↑↓←→ · Shift · R">Click scene · W / ↑ accelerate · S / ↓ brake and reverse · A D / ← → steer · Shift / Space boost · R reset</footer>
+<script src="./three.js"></script><script src="./host.mjs" type="module"></script>
+</body></html>

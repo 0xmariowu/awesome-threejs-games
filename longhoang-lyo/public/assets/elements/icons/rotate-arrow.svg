@@ -1,0 +1,8 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="rotate_arrow">
+    <path d="M78 48C78 64.5685 64.5685 78 48 78C31.4315 78 18 64.5685 18 48C18 34.6286 26.7584 23.3039 39 19.5" stroke="#C7FF72" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 6"/>
+    <path d="M35 12L42 20L33 26" fill="#C7FF72"/>
+    <circle cx="78" cy="48" r="3" fill="#C7FF72"/>
+    <circle cx="18" cy="48" r="3" fill="#C7FF72"/>
+  </g>
+</svg>

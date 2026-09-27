@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Monolith Wilds · Terrain streaming</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<canvas aria-label="Original terrain flight" data-demo-picture="" id="world"></canvas>
+<header class="ui-panel" data-demo-readout=""><strong id="status">Generating terrain…</strong></header>
+<nav aria-label="Terrain helpers" class="ui-panel" data-demo-control="">
+<button aria-pressed="false" id="wireframe">Terrain wireframe</button>
+<button aria-pressed="false" id="slow">Slow tasks</button>
+<button id="reset">Back to start</button>
+</nav>
+<aside class="ui-panel" data-demo-readout=""><canvas aria-label="Actual terrain chunks around the camera" height="240" id="chunks" width="240"></canvas><p data-demo-note="">White: displayed · Orange: in progress<br/>Center: camera · Range: 6 km</p></aside>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD · Space/Q · Shift · Esc" id="hint">WASD to fly · Drag mouse to steer · Space / Q up/down · Shift to boost · Wheel to adjust speed · Esc to unlock</p>
+<p data-demo-readout="" hidden="" id="error" role="alert"></p>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

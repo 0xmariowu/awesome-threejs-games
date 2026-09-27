@@ -1,0 +1,8 @@
+{
+  "video": {
+    "vast": {
+      "maxWrapperDepth": 5,
+      "timeout": 1000
+    }
+  }
+}

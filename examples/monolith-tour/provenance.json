@@ -1,0 +1,38 @@
+{
+  "project": "monolith-wilds",
+  "source": "https://monolithwilds.vercel.app/",
+  "scope": "Unchanged deployed camera controls, cinematic tour, obstacle paths, biome helper and Three.js modules. An import map replaces only the biome helper world-entry dependency with a flat-world host shim; no camera or path logic is replaced.",
+  "files": [
+    {
+      "source": "monolith-wilds/assets/controls-DX7CeMlr.js",
+      "path": "examples/monolith-tour/original/controls-DX7CeMlr.js",
+      "sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b"
+    },
+    {
+      "source": "monolith-wilds/assets/tour-Do76daLD.js",
+      "path": "examples/monolith-tour/original/tour-Do76daLD.js",
+      "sha256": "5849bab548c1339af00d7ba6f9f1e89cc9a147fb56b2af8dd731646d0b00ab34"
+    },
+    {
+      "source": "monolith-wilds/assets/obstacles-DQBr1hBF.js",
+      "path": "examples/monolith-tour/original/obstacles-DQBr1hBF.js",
+      "sha256": "1dbf1087bc7940235edb33796efda2042a3b30efed081d6381a0b5b1a40bcb3b"
+    },
+    {
+      "source": "monolith-wilds/assets/biome-DstsBN7N.js",
+      "path": "examples/monolith-tour/original/biome-DstsBN7N.js",
+      "sha256": "b77ac324e86000411a0cb9ea137da506b724f395ef744c58281524fd95166d6d"
+    },
+    {
+      "source": "monolith-wilds/assets/three.core-DtjtRha-.js",
+      "path": "examples/monolith-tour/original/three.core-DtjtRha-.js",
+      "sha256": "c4a3f7fe78ed1015ff61dbf82b0a47e2ff9364fa2e110bda383ef9b2e20a78dc"
+    },
+    {
+      "source": "monolith-wilds/assets/three.module-e53_FFk2.js",
+      "path": "examples/monolith-tour/original/three.module-e53_FFk2.js",
+      "sha256": "aa6cc936d5038dd1c319db4333181cead6de1eba422aa3d81ab7e74b2b57ef2b"
+    }
+  ],
+  "assets": []
+}

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>ガザミ拾い — 内の浜の夜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="いてっ、ときたら、そこにいる。夜の浅瀬の砂を両手でなでて、タイワンガザミを拾いまくる3Dゲーム。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081428'/%3E%3Cpath d='M6 34 L20 30 Q32 18 44 30 L58 34 L44 36 Q32 46 20 36Z' fill='%232f56a8' stroke='%239fc0f0' stroke-width='2'/%3E%3Cpath d='M22 28 L14 16 M42 28 L50 16' stroke='%239fc0f0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/gazami/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <!-- ロード画面 -->
+  <section id="loading" class="screen show">
+    <div class="load-inner">
+      <div class="load-logo">ガザミ拾い</div>
+      <div class="load-bar"><i></i></div>
+      <div class="load-msg">浜の砂をならしています</div>
+    </div>
+    <div class="load-stars"></div>
+  </section>
+
+  <!-- タイトル -->
+  <section id="title" class="screen">
+    <div class="title-shade"></div>
+    <div class="title-block">
+      <div class="title-sub">内の浜 夜の浅瀬</div>
+      <h1 class="title-logo"><small>タイワン</small>ガザミ<span>拾</span>い</h1>
+      <div class="title-en">GAZAMI&nbsp;HIROI</div>
+      <div class="hanko">夜</div>
+    </div>
+    <div class="title-copy">いてっ、ときたら、<br />そこにいる。<span class="title-cta">砂の中にいるガザミを、<br />手のひらで見つけろ！</span></div>
+    <nav class="menu">
+      <button data-act="start" class="primary"><span class="k">一</span>浜に出る</button>
+      <button data-act="zukan"><span class="k">二</span>カニ図鑑</button>
+      <button data-act="howto"><span class="k">三</span>遊び方</button>
+      <button data-act="settings"><span class="k">四</span>設定</button>
+      <button data-act="credits"><span class="k">五</span>クレジット</button>
+    </nav>
+    <div class="title-record"></div>
+  </section>
+
+  <!-- ナレーション -->
+  <section id="intro" class="screen">
+    <div class="intro-lines"></div>
+    <div class="intro-skip">クリックでスキップ</div>
+  </section>
+
+  <!-- HUD -->
+  <section id="hud">
+    <div id="hurt"></div>
+    <div id="tide">
+      <div class="t-row"><svg viewBox="0 0 24 24" class="moon"><path d="M15.5 3.2a8.6 8.6 0 1 0 5.3 13.4A7.2 7.2 0 0 1 15.5 3.2z"/></svg><span class="t-time">20:30</span><span class="t-left"></span></div>
+      <div class="t-bar"><i></i></div>
+    </div>
+
+    <div id="ouch">
+      <div class="o-lbl">いてー</div>
+      <div class="o-row"></div>
+      <div class="o-sub">5回で帰る</div>
+    </div>
+
+    <div id="bag">
+      <div class="bag-count"><b class="bag-n">0</b><span>匹</span><em class="bag-plus">+1</em></div>
+      <div class="bag-row sub"><span class="bag-kg">0.0kg</span><span class="bag-best"></span></div>
+      <div class="bag-row total"><span class="lbl">浜値</span><b class="tot">¥0</b></div>
+    </div>
+
+    <div id="combo"><b>0</b><span>連続</span></div>
+    <div id="words"></div>
+    <div id="prompt"></div>
+    <div id="feed"></div>
+    <div id="warn"></div>
+    <div id="telop"></div>
+    <div id="shake">
+      <div class="s-title">振りほどけ！</div>
+      <div class="s-bar"><i></i></div>
+      <div class="s-sub">マウスを<b>左右</b>にぶんぶん振る（<b>A</b>・<b>D</b> を交互でも）</div>
+    </div>
+    <div id="hint"></div>
+    <div id="lockhint">クリックで視点操作を再開</div>
+    <div id="controls">
+      <div class="c-row"><svg viewBox="0 0 20 28" class="ms l"><rect x="1.5" y="1.5" width="17" height="25" rx="8.5"/><path d="M10 1.5v10"/><path class="btn" d="M10 2 H9 A7.5 7.5 0 0 0 2 9.5 V11 H10 Z"/></svg><span><b>左クリック</b>（押したまま）　砂をなでる</span></div>
+      <div class="c-row"><svg viewBox="0 0 20 28" class="ms r"><rect x="1.5" y="1.5" width="17" height="25" rx="8.5"/><path d="M10 1.5v10"/><path class="btn" d="M10 2 H11 A7.5 7.5 0 0 1 18 9.5 V11 H10 Z"/></svg><span><b>右クリック</b>　砂の中をつかむ</span></div>
+    </div>
+    <div id="esckey"><kbd>Esc</kbd><span>メニュー</span></div>
+  </section>
+
+  <!-- ポーズ -->
+  <section id="pause" class="screen">
+    <div class="panel narrow">
+      <h2>一時停止</h2>
+      <nav class="menu vertical">
+        <button data-act="resume" class="primary">再開する</button>
+        <button data-act="zukan">カニ図鑑</button>
+        <button data-act="settings">設定</button>
+        <button data-act="howto">遊び方</button>
+        <button data-act="quit">浜から上がる</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 結果 -->
+  <section id="results" class="screen">
+    <div class="res-card">
+      <div class="res-head">
+        <div class="res-day"></div>
+        <h2>今夜の漁果</h2>
+        <div class="res-why"></div>
+      </div>
+      <div class="res-big">
+        <div class="rb-n"><b>0</b><span>匹</span></div>
+        <div class="rb-kg"></div>
+      </div>
+      <div class="res-list"></div>
+      <div class="res-stats"></div>
+      <div class="res-foot">
+        <div class="res-total"><span>浜値</span><b>¥0</b></div>
+        <div class="res-rank"><div class="stamp"></div><div class="rank-title"></div><div class="rank-sub"></div></div>
+      </div>
+      <div class="res-news"></div>
+      <nav class="menu row">
+        <button data-act="again" class="primary">次の夜も、浜に出る</button>
+        <button data-act="toTitle">タイトルへ</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 図鑑 -->
+  <section id="zukan" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>カニ図鑑</h2><div class="zk-count"></div><button class="close" data-act="back">閉じる</button></div>
+      <div class="zk-body">
+        <div class="zk-grid"></div>
+        <div class="zk-detail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 遊び方 -->
+  <section id="howto" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>遊び方</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="howto-grid">
+        <div class="ht-keys">
+          <h3>操作</h3>
+          <ul>
+            <li><kbd>マウス</kbd><span>見回す・手を突っ込む所をねらう</span></li>
+            <li><kbd>W A S D</kbd><span>浅瀬を歩く</span></li>
+            <li><kbd>左クリック長押し</kbd><span>しゃがんで、両手のひらで砂をなでる（押したまま歩ける）</span></li>
+            <li><kbd>右クリック</kbd><kbd>Space</kbd><span>ねらいの輪の所に手を突っ込んで、つかむ</span></li>
+            <li><kbd>マウス左右</kbd><kbd>A D</kbd><span>（挟まれたら）手を振って振りほどく</span></li>
+            <li><kbd>Esc</kbd><span>一時停止</span></li>
+          </ul>
+        </div>
+        <div class="ht-tips">
+          <h3>夜の浅瀬のコツ</h3>
+          <ol>
+            <li><b>砂をなでまくれ。</b>両手のひらで、右手は時計回り、左手はその反対に。カニは砂にもぐって休んでいる。</li>
+            <li><b>「いてっ」がしるし。</b>甲羅の横の長いとげが、手のひらにチクッとささる。その瞬間、砂の中のカニの<b>青い輪郭</b>が見える。</li>
+            <li><b>すぐ突っ込め。</b>輪郭にねらいの輪を合わせて、右クリック。もたもたしていると、カニは横歩きで逃げていく。</li>
+            <li><b>ハサミは前にある。</b>輪郭のハサミの側から手を出すと挟まれる。<b>後ろから</b>つかむのが基本。</li>
+            <li><b>いる所には、いたるところにいる。</b>一匹いたら、まわりもなでよう。いい場所を見つけたら、とにかく大量に拾える。</li>
+            <li><b>コツは石、ザリは貝殻。</b>いてっ、じゃなければカニじゃない。</li>
+            <li><b>イシガニは小さいけれど、痛い。</b>ハサミの力がつよく、挟まれやすい。</li>
+            <li><b>「いてー」が5回で、もう帰る。</b>潮も満ちてくる。深い所は、先に。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- クレジット -->
+  <section id="credits" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>クレジット</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-group">音</div>
+      <ul class="credit-list">
+        <li><b>効果音ラボ</b><a href="https://soundeffect-lab.info/" target="_blank" rel="noopener">soundeffect-lab.info</a>
+          <small>波</small></li>
+        <li><b>Freesound</b><a href="https://freesound.org/" target="_blank" rel="noopener">freesound.org</a>
+          <small>風: <a href="https://freesound.org/people/cribbler/sounds/380379/" target="_blank" rel="noopener">Soft Wind Ambience</a>（cribbler）CC0</small></li>
+      </ul>
+      <div class="set-group">そのほか</div>
+      <ul class="credit-list">
+        <li><b>効果音・音楽</b><span>虫の声・手ざわりの音・挟まれた音・音楽は WebAudio で合成</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 設定 -->
+  <section id="settings" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>設定</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-list">
+        <label><span>マウス感度</span><input type="range" min="0.3" max="2.5" step="0.05" data-set="sens" /><output></output></label>
+        <label><span>視野角</span><input type="range" min="60" max="95" step="1" data-set="fov" /><output></output></label>
+        <label><span>全体の音量</span><input type="range" min="0" max="1" step="0.01" data-set="master" /><output></output></label>
+        <label><span>音楽</span><input type="range" min="0" max="1" step="0.01" data-set="music" /><output></output></label>
+        <label><span>効果音</span><input type="range" min="0" max="1" step="0.01" data-set="sfx" /><output></output></label>
+        <label><span>波・虫の音</span><input type="range" min="0" max="1" step="0.01" data-set="amb" /><output></output></label>
+        <label class="toggle"><span>上下反転</span><input type="checkbox" data-set="invertY" /><i></i></label>
+        <label><span>画質</span>
+          <select data-set="quality">
+            <option value="low">軽量</option>
+            <option value="medium">標準</option>
+            <option value="high">高画質</option>
+          </select><output></output>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <div id="fade"></div>
+  <script type="module" src="../src/gazami/main.js"></script>
+</body>
+</html>

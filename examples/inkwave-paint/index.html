@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="data:," rel="icon"/>
+<title>Inkwave · Surface painting</title>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main aria-label="Floor and wall painting scene" data-demo-picture="" id="world"></main>
+<aside aria-label="Paint settings and coverage maps" class="ui-panel" data-demo-control="">
+<div class="teams">
+<button aria-pressed="true" data-team="0">Orange team</button>
+<button aria-pressed="false" data-team="1">Blue team</button>
+</div>
+<div class="scores" data-demo-readout=""><strong id="orange">0.0%</strong><strong id="blue">0.0%</strong></div>
+<div class="bar" data-demo-readout=""><i id="orange-bar"></i><i id="blue-bar"></i></div>
+<button id="clear">Clear paint</button>
+</aside><div data-demo-readout=""><h2>Wall coverage · Excluded from score</h2><canvas aria-label="Wall coverage map" id="wall-map"></canvas></div><div data-demo-readout=""><h2>Floor coverage · CPU grid</h2><canvas aria-label="Floor coverage map" id="map"></canvas></div>
+<p class="hint ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="LMB · ↔">Mouse to aim · Hold left click to fire · Switch teams to cover the opposing ink</p>
+<script src="./src/main.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+:root { font-family: system-ui, sans-serif; color: #f1efe7; background: #202b33; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+#world { position: fixed; inset: 0; }
+#world canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: crosshair; }
+header { position: absolute; top: 26px; left: 30px; pointer-events: none; }
+header span { font-size: 12px; letter-spacing: 2px; color: #aebdc3; }
+h1 { font-size: clamp(18px, 2.4vw, 28px); margin: 8px 0; font-weight: 650; }
+aside { position: absolute; right: 24px; top: 24px; width: 204px; padding: 16px; background: #142029ed; border: 1px solid #52606a; border-radius: 10px; }
+.teams, .scores { display: flex; gap: 8px; }
+button { color: inherit; background: #2c3942; border: 1px solid #63727c; border-radius: 5px; padding: 8px 12px; cursor: pointer; font: inherit; font-size: 12px; }
+button:focus-visible { outline: 2px solid white; outline-offset: 3px; }
+.teams button { flex: 1; }
+[data-team="0"][aria-pressed="true"] { background: #e26e09; border-color: #ffb768; }
+[data-team="1"][aria-pressed="true"] { background: #305bea; border-color: #90a9ff; }
+.scores { justify-content: space-between; margin-top: 16px; font-size: 24px; font-variant-numeric: tabular-nums; }
+#orange { color: #ffa149; } #blue { color: #87a7ff; }
+.bar { display: flex; height: 5px; background: #49535a; margin-top: 9px; }
+.bar i { display: block; } #orange-bar { background: #ff8a14; } #blue-bar { background: #2f5bff; }
+h2 { font-size: 11px; font-weight: 450; color: #b8c5cb; margin: 16px 0 7px; }
+aside canvas { width: 100%; image-rendering: pixelated; display: block; background: #4d555c; }
+#clear { width: 100%; margin-top: 14px; }
+.hint { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); margin: 0; padding: 10px 16px; background: #142029ed; border-radius: 5px; font-size: 12px; white-space: nowrap; pointer-events: none; }
+@media (max-width: 850px) {
+  header { top: 14px; left: 16px; }
+  aside { right: 12px; top: 12px; width: 158px; padding: 10px; }
+  .scores { font-size: 19px; margin-top: 9px; } h2 { margin-top: 10px; font-size: 9px; }
+  button { padding: 6px 8px; } .hint { font-size: 10px; padding: 7px; }
+}
+/* Leave room for the hint and all controls in an embedded 16:9 viewport. */
+aside canvas { width: min(100%, 200px); margin-inline: auto; }
+.hint { max-width: calc(100% - 32px); width: max-content; text-align: center; }
+html[data-theme="light"] #orange { color: #B64C00; }
+html[data-theme="light"] #blue { color: #305BEA; }
+html[data-theme] [data-team="0"][aria-pressed="true"] { color: var(--ui-ink); border-color: #E26E09; background: color-mix(in srgb, #E26E09 18%, var(--ui-panel)); }
+html[data-theme] [data-team="1"][aria-pressed="true"] { color: var(--ui-ink); border-color: #305BEA; background: color-mix(in srgb, #305BEA 18%, var(--ui-panel)); }

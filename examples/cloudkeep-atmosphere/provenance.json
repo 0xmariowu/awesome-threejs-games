@@ -1,0 +1,40 @@
+{
+  "project": "cloudkeep",
+  "source": "https://github.com/0xmariowu/cloudkeep",
+  "revision": "b28406d581bfbc3c905c200e552b669f4dd02a15",
+  "scope": "Unchanged Atmosphere and Controls, with scene.ts fog immersion adapted in the host. Free camera and island placements are host fixtures.",
+  "files": [
+    {
+      "source": "cloudkeep/upstream/src/atmosphere.ts",
+      "path": "examples/cloudkeep-atmosphere/original/atmosphere.ts",
+      "sha256": "f48447285d1f559bc8017c2ee949a0ed8f1330e44c6f754f40164b4b827ffc17",
+      "role": "runtime module"
+    },
+    {
+      "source": "cloudkeep/upstream/src/scene.ts",
+      "path": "examples/cloudkeep-atmosphere/original/scene.ts",
+      "sha256": "e593b494661af90441cbca0f0605fe4847a044ace462e3910de12128bf2de1d8",
+      "role": "reference for host fog adaptation; not imported"
+    },
+    {
+      "source": "cloudkeep/upstream/src/input.ts",
+      "path": "examples/cloudkeep-atmosphere/original/input.ts",
+      "sha256": "512df9053e0ee77145382452f4f56e66bdf706ecb161db86764bfa9a546f6bff",
+      "role": "runtime module"
+    },
+    {
+      "source": "cloudkeep/upstream/src/simulation.ts",
+      "path": "examples/cloudkeep-atmosphere/original/simulation.ts",
+      "sha256": "ae15a8a46e6babf1283c599e2e3cf86afb2cb781b99346e9d1c0c27646faf0c3",
+      "role": "input dependency (IDLE); Simulation is not instantiated"
+    }
+  ],
+  "assets": [
+    {
+      "source": "cloudkeep/public/assets/island-distant.glb",
+      "path": "examples/cloudkeep-atmosphere/public/assets/island-distant.glb",
+      "sha256": "3a39c310a8a0522cd4ee8ec1a2fe1a7948ed497158745635fa4a4f8e7aac28a9",
+      "bytes": 851068
+    }
+  ]
+}

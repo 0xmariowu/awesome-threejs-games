@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: #182c2b; color: #213e3b; font: 13px/1.5 system-ui, sans-serif; }
+#stage { position: relative; width: 100%; height: 100%; overflow: hidden; }
+#world { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; outline: none; }
+#world.dragging { cursor: grabbing; }
+header, aside, footer { position: absolute; z-index: 3; }
+header { top: 22px; left: 26px; display: grid; gap: 4px; pointer-events: none; }
+header span { font-size: 12px; letter-spacing: .15em; }
+header strong { font-size: clamp(18px, 2.2vw, 28px); font-weight: 600; }
+aside { top: 22px; right: 22px; display: flex; gap: 6px; align-items: center; }
+#ownership { margin-right: 9px; font-size: 12px; }
+button { font: inherit; color: inherit; border: 1px solid #34564c35; border-radius: 4px; background: #fffdf0db; padding: 7px 10px; cursor: pointer; }
+button[aria-pressed="true"] { background: #244f48; color: #fffdf0; }
+button:focus-visible { outline: 2px solid #244f48; outline-offset: 3px; }
+footer { bottom: 18px; left: 50%; transform: translateX(-50%); width: max-content; max-width: 95%; text-align: center; padding: 6px 14px; background: #fffdf0de; border-radius: 4px; pointer-events: none; font-size: 12px; }
+#film, #fade, #guides { position: absolute; inset: 0; pointer-events: none; }
+#film { opacity: 0; box-shadow: inset 0 0 50px 8px #d48cba66; background: radial-gradient(ellipse, transparent 60%, #c7eaf33b 78%, #edbada66 100%); }
+#fade { background: #f2f4ed; opacity: 0; }
+#guides i { position: absolute; background: #fffdf078; }
+#guides i:nth-child(1), #guides i:nth-child(2) { top: 0; bottom: 0; width: 1px; left: 33.333%; }
+#guides i:nth-child(2) { left: 66.666%; }
+#guides i:nth-child(3), #guides i:nth-child(4) { left: 0; right: 0; height: 1px; top: 33.333%; }
+#guides i:nth-child(4) { top: 66.666%; }
+#target { position: absolute; width: 38px; height: 38px; border: 1px solid #214e47; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+#target span { position: absolute; left: 43px; top: 6px; white-space: nowrap; font-size: 11px; background: #fffdf0b8; padding: 2px 5px; }
+@media (max-width: 750px) {
+  header { top: 12px; left: 14px; }
+  aside { top: auto; bottom: 46px; right: 12px; }
+  button { padding: 5px 8px; }
+  footer { bottom: 10px; font-size: 10px; }
+}

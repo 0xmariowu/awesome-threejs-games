@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Cloudkeep · Sky ecology</title><link href="data:," rel="icon"/>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<div aria-label="Interactive sky ecology" data-demo-picture="" id="world" tabindex="0"></div>
+<div aria-hidden="true" data-demo-readout="" id="labels"></div>
+<header class="ui-panel" data-demo-readout=""><p id="counts">Loading original models…</p></header>
+<aside aria-label="Observation options" class="ui-panel" data-demo-control="">
+<button aria-pressed="false" id="slow">Slow motion</button>
+<button aria-pressed="true" id="helpers">Show states</button>
+<button id="reset">Restart</button>
+</aside>
+<p class="ui-panel" data-demo-readout="" id="status" role="status">Loading…</p>
+<footer class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD · R/F · Space · Q · Shift">WASD to move · R/F up/down · Drag to steer · Space to feed · Shift to boost and startle · Hold Q to capture</footer>
+<script src="./src/ecology.ts" type="module"></script>
+</body>
+</html>

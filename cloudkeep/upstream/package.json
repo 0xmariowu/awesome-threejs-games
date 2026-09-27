@@ -1,0 +1,35 @@
+{
+  "name": "cloudkeep",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "vitest run",
+    "assets": "node scripts/build-assets.mjs"
+  },
+  "dependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.186.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0",
+    "vitest": "^4.1.11"
+  },
+  "description": "A handcrafted 3D sky exploration and creature-capture game built with Blender and Three.js.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xmariowu/cloudkeep.git"
+  },
+  "homepage": "https://github.com/0xmariowu/cloudkeep#readme",
+  "bugs": {
+    "url": "https://github.com/0xmariowu/cloudkeep/issues"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

@@ -1,0 +1,401 @@
+{
+  "source": "https://monolithwilds.vercel.app/",
+  "entry_path": "/index.html",
+  "files": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-3bacf1a2cd0f.css",
+      "bytes": 1963,
+      "sha256": "f3b48b83c4ef06fb59dfeff3cfb274761e4e40b2a93206e48ae2cb643528865a",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "4065a89899c3db774be9e2bb3bca74148b2c741db71f9f49df0f377436cb88d6"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jDOjw.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jDOjw.ttf",
+      "bytes": 293036,
+      "sha256": "0b9a8a33cfaa624d30f70f9b6686da769b319b8c37a55af16e29fef690108bbf",
+      "content_type": "font/ttf",
+      "local_sha256": "0b9a8a33cfaa624d30f70f9b6686da769b319b8c37a55af16e29fef690108bbf"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd5rDDOjw.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd5rDDOjw.ttf",
+      "bytes": 292904,
+      "sha256": "b13a316f34ce9c69f634b729bc733ab21512e823e6f801f1e427ac4be7364979",
+      "content_type": "font/ttf",
+      "local_sha256": "b13a316f34ce9c69f634b729bc733ab21512e823e6f801f1e427ac4be7364979"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_qE6GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_qE6GnM.ttf",
+      "bytes": 289788,
+      "sha256": "63e313fb9c65b6b2e177222010bbea911bfc5c79bee0fb69f8246fcc4e08c93a",
+      "content_type": "font/ttf",
+      "local_sha256": "63e313fb9c65b6b2e177222010bbea911bfc5c79bee0fb69f8246fcc4e08c93a"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+      "bytes": 290496,
+      "sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b",
+      "content_type": "font/ttf",
+      "local_sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86GnM.ttf",
+      "bytes": 290236,
+      "sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7",
+      "content_type": "font/ttf",
+      "local_sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+      "bytes": 325304,
+      "sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63",
+      "content_type": "font/ttf",
+      "local_sha256": "8c883f63b2c4157d997319f2c8bc6995ed4357ef371940d31ca159004a4aae63"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+      "bytes": 324820,
+      "sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba",
+      "content_type": "font/ttf",
+      "local_sha256": "1b08e7fc267a5c7e1d614100f604b83e7e8a0be241f0f288faa2b3ac93a683ba"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg.ttf",
+      "path": "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg.ttf",
+      "bytes": 325748,
+      "sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4",
+      "content_type": "font/ttf",
+      "local_sha256": "d0f4bc7faca468376e3db9b5e57afcdc2192134c9ac82a9511f32767b56853a4"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/BufferGeometryUtils-CaAdgu8h.js",
+      "path": "assets/BufferGeometryUtils-CaAdgu8h.js",
+      "bytes": 5153,
+      "sha256": "0c4f740903c9eb53f0da206155c62bd5a5bb891d3ad2898a1040c413e1581ddc",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0c4f740903c9eb53f0da206155c62bd5a5bb891d3ad2898a1040c413e1581ddc"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/ambience-5HBUcntn.js",
+      "path": "assets/ambience-5HBUcntn.js",
+      "bytes": 15118,
+      "sha256": "c13652d075233f770100b1f2fefe6a1772f2550293b1fe310d3c26c76503a1ab",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c13652d075233f770100b1f2fefe6a1772f2550293b1fe310d3c26c76503a1ab"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/biome-DstsBN7N.js",
+      "path": "assets/biome-DstsBN7N.js",
+      "bytes": 612,
+      "sha256": "b77ac324e86000411a0cb9ea137da506b724f395ef744c58281524fd95166d6d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b77ac324e86000411a0cb9ea137da506b724f395ef744c58281524fd95166d6d"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/builder-BZhEe_8v.js",
+      "path": "assets/builder-BZhEe_8v.js",
+      "bytes": 1953,
+      "sha256": "44ac78ed84d449b8866c33708e11f3b67ab9e9eb3f9dc59538215b1a01babd2c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "44ac78ed84d449b8866c33708e11f3b67ab9e9eb3f9dc59538215b1a01babd2c"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/choir-U40p8af6.js",
+      "path": "assets/choir-U40p8af6.js",
+      "bytes": 25998,
+      "sha256": "479785ffd1a4950ff37f80e44b5a9b143aee0b6a8a7fbe85872f3e4071238011",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "479785ffd1a4950ff37f80e44b5a9b143aee0b6a8a7fbe85872f3e4071238011"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/controls-DX7CeMlr.js",
+      "path": "assets/controls-DX7CeMlr.js",
+      "bytes": 16582,
+      "sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a84812fee6a6a16349391bc6aef3b559d9c657929232ed118bda534b94497c1b"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/debug-B-iF4Wio.js",
+      "path": "assets/debug-B-iF4Wio.js",
+      "bytes": 1984,
+      "sha256": "60382ffeec25876b1a480c64eb828efb93f08cd23aa5b0575ca9af055b5826e3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "60382ffeec25876b1a480c64eb828efb93f08cd23aa5b0575ca9af055b5826e3"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/hud-Cb6XWf9n.css",
+      "path": "assets/hud-Cb6XWf9n.css",
+      "bytes": 27073,
+      "sha256": "3013497f3d4eddef995d9408e4c77d868324728f26f31f7218ce78bd5bd63bac",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "3013497f3d4eddef995d9408e4c77d868324728f26f31f7218ce78bd5bd63bac"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/hud-D2WSdXqL.js",
+      "path": "assets/hud-D2WSdXqL.js",
+      "bytes": 34929,
+      "sha256": "6e19892fbeea08e2738340458a95ab02460a604bbff40aa749a0794021382067",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6e19892fbeea08e2738340458a95ab02460a604bbff40aa749a0794021382067"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/index-Cbv-XPAD.css",
+      "path": "assets/index-Cbv-XPAD.css",
+      "bytes": 3226,
+      "sha256": "b90a3dc191f0646bd5c33aecd851658111fc0b94588961820710a95c14d6dee6",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "b90a3dc191f0646bd5c33aecd851658111fc0b94588961820710a95c14d6dee6"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/index-DGqtqlWq.js",
+      "path": "assets/index-DGqtqlWq.js",
+      "bytes": 50557,
+      "sha256": "2996140e2396fedbb1b85d0ea9a5d74d567b9b1816f2daa5f031067a0ae709f4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2996140e2396fedbb1b85d0ea9a5d74d567b9b1816f2daa5f031067a0ae709f4"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/isles-CVDs_3uq.js",
+      "path": "assets/isles-CVDs_3uq.js",
+      "bytes": 52153,
+      "sha256": "e41a08a3365d490c4b11f137a569c4d27f213fb79025f4e24a19a3f35ccd0532",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e41a08a3365d490c4b11f137a569c4d27f213fb79025f4e24a19a3f35ccd0532"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/life-CWlZKeiu.js",
+      "path": "assets/life-CWlZKeiu.js",
+      "bytes": 41637,
+      "sha256": "87ec5497a67ee1aa3bcb2add85649b33ab3349010c72dc225e4f795a49380833",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "87ec5497a67ee1aa3bcb2add85649b33ab3349010c72dc225e4f795a49380833"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/loom-BcDD2JU2.js",
+      "path": "assets/loom-BcDD2JU2.js",
+      "bytes": 39147,
+      "sha256": "490f2e806e08ff760cb55718b11bf960e1378fc815675fe8354ae1638e2c1f15",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "490f2e806e08ff760cb55718b11bf960e1378fc815675fe8354ae1638e2c1f15"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/monastery-DxUwLzKx.js",
+      "path": "assets/monastery-DxUwLzKx.js",
+      "bytes": 42126,
+      "sha256": "9274af923db4af99cb1ea903908d807e46203e8577a4b588756733e2c913de76",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9274af923db4af99cb1ea903908d807e46203e8577a4b588756733e2c913de76"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/needles-By8wR9R5.js",
+      "path": "assets/needles-By8wR9R5.js",
+      "bytes": 38193,
+      "sha256": "6c21b4031a9bff2ef6277b0449ece8f87c2e91e895f8a7ee9c7ef794f09e3af5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6c21b4031a9bff2ef6277b0449ece8f87c2e91e895f8a7ee9c7ef794f09e3af5"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/observatory-Yis9EN5I.js",
+      "path": "assets/observatory-Yis9EN5I.js",
+      "bytes": 37364,
+      "sha256": "8f5ef74742b3b094440586521ab9c96443d0f3aa412eb8ea9d221379715f62b8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8f5ef74742b3b094440586521ab9c96443d0f3aa412eb8ea9d221379715f62b8"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/obstacles-DQBr1hBF.js",
+      "path": "assets/obstacles-DQBr1hBF.js",
+      "bytes": 5663,
+      "sha256": "1dbf1087bc7940235edb33796efda2042a3b30efed081d6381a0b5b1a40bcb3b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1dbf1087bc7940235edb33796efda2042a3b30efed081d6381a0b5b1a40bcb3b"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/orrery-CxcAC3Ep.js",
+      "path": "assets/orrery-CxcAC3Ep.js",
+      "bytes": 36724,
+      "sha256": "f00c5a50741d875129537d6903691024f68ea9041b276180c3a1ccd783dc386a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f00c5a50741d875129537d6903691024f68ea9041b276180c3a1ccd783dc386a"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/postfx-v_2vlSiK.js",
+      "path": "assets/postfx-v_2vlSiK.js",
+      "bytes": 35486,
+      "sha256": "362ec1c333cb2b762a497b084707b028e5823892feae596ceedfb09cd221a264",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "362ec1c333cb2b762a497b084707b028e5823892feae596ceedfb09cd221a264"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/reference-NztVQ6cf.js",
+      "path": "assets/reference-NztVQ6cf.js",
+      "bytes": 9253,
+      "sha256": "0be2ae5c379db0f212b7931bbb08e82a86552da905467edca07a012d0c258fc4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0be2ae5c379db0f212b7931bbb08e82a86552da905467edca07a012d0c258fc4"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/rocks-BVN54SFT.js",
+      "path": "assets/rocks-BVN54SFT.js",
+      "bytes": 46230,
+      "sha256": "23a56a526913faad399557e51475638074d118bbc829eba69ef2361b8741eb4b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "23a56a526913faad399557e51475638074d118bbc829eba69ef2361b8741eb4b"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/ruins-CgovKSWO.js",
+      "path": "assets/ruins-CgovKSWO.js",
+      "bytes": 62878,
+      "sha256": "15319148e329674a49478a3ab25bc6bbab2e4e77fd3e1139a5451542fb578801",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "15319148e329674a49478a3ab25bc6bbab2e4e77fd3e1139a5451542fb578801"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/shapes-B-ACjQtl.js",
+      "path": "assets/shapes-B-ACjQtl.js",
+      "bytes": 1875,
+      "sha256": "75f1c75782fddf4d0565d0154a288c5e2fa6fcc633c7edce4841418145670dc5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "75f1c75782fddf4d0565d0154a288c5e2fa6fcc633c7edce4841418145670dc5"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/sky-DNwnE_Sh.js",
+      "path": "assets/sky-DNwnE_Sh.js",
+      "bytes": 30559,
+      "sha256": "69be61a64df0d38a43a65381629fdc5ed6985ba50a5187ef32e82039e974bc2f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "69be61a64df0d38a43a65381629fdc5ed6985ba50a5187ef32e82039e974bc2f"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/sky-basic-FzHgmwST.js",
+      "path": "assets/sky-basic-FzHgmwST.js",
+      "bytes": 1281,
+      "sha256": "7f7d0296c4539adb4f8b4ef629d1de811984e3fd23befd77b660fd86c18de4ff",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7f7d0296c4539adb4f8b4ef629d1de811984e3fd23befd77b660fd86c18de4ff"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/span-CH3M2RzM.js",
+      "path": "assets/span-CH3M2RzM.js",
+      "bytes": 41678,
+      "sha256": "c195d4aab7eb7fcff7b3487457b251f09ec81b171d008e2a133cdf75d32850f0",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c195d4aab7eb7fcff7b3487457b251f09ec81b171d008e2a133cdf75d32850f0"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/stair-D4fHMrKv.js",
+      "path": "assets/stair-D4fHMrKv.js",
+      "bytes": 38831,
+      "sha256": "8d8f943b8c45f78e5ecc02e8bb60eeb82265aa8d9952da8eb4039b3ea22aaa18",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8d8f943b8c45f78e5ecc02e8bb60eeb82265aa8d9952da8eb4039b3ea22aaa18"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/temple-BUB7d4Jj.js",
+      "path": "assets/temple-BUB7d4Jj.js",
+      "bytes": 46333,
+      "sha256": "1873389e869258afafc81e34ac3346d90b562cd81f8767746bedb52d968153b8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1873389e869258afafc81e34ac3346d90b562cd81f8767746bedb52d968153b8"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/terrain-MmovLCQt.js",
+      "path": "assets/terrain-MmovLCQt.js",
+      "bytes": 43222,
+      "sha256": "065b7d588604cdc2e34baa2a1fca167c6e4d33d54cb823e6b02b1ace9dc8d1e0",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "065b7d588604cdc2e34baa2a1fca167c6e4d33d54cb823e6b02b1ace9dc8d1e0"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/terrain-basic-CvkGhQuN.js",
+      "path": "assets/terrain-basic-CvkGhQuN.js",
+      "bytes": 797,
+      "sha256": "4149d96529ec33abd6af5227d4bfb0cefc296aa54002a1653280bb200a7d1305",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4149d96529ec33abd6af5227d4bfb0cefc296aa54002a1653280bb200a7d1305"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/terrain-worker-DVcr_hr3.js",
+      "path": "assets/terrain-worker-DVcr_hr3.js",
+      "bytes": 19509,
+      "sha256": "c3287ad56c3090fb33273eba359d794f92c9c867e5e5f9f73fe17ef9182278c8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c3287ad56c3090fb33273eba359d794f92c9c867e5e5f9f73fe17ef9182278c8"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/three.core-DtjtRha-.js",
+      "path": "assets/three.core-DtjtRha-.js",
+      "bytes": 377376,
+      "sha256": "c4a3f7fe78ed1015ff61dbf82b0a47e2ff9364fa2e110bda383ef9b2e20a78dc",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c4a3f7fe78ed1015ff61dbf82b0a47e2ff9364fa2e110bda383ef9b2e20a78dc"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/three.module-e53_FFk2.js",
+      "path": "assets/three.module-e53_FFk2.js",
+      "bytes": 365189,
+      "sha256": "aa6cc936d5038dd1c319db4333181cead6de1eba422aa3d81ab7e74b2b57ef2b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "aa6cc936d5038dd1c319db4333181cead6de1eba422aa3d81ab7e74b2b57ef2b"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/tour-Do76daLD.js",
+      "path": "assets/tour-Do76daLD.js",
+      "bytes": 13455,
+      "sha256": "5849bab548c1339af00d7ba6f9f1e89cc9a147fb56b2af8dd731646d0b00ab34",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5849bab548c1339af00d7ba6f9f1e89cc9a147fb56b2af8dd731646d0b00ab34"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/vegetation-DHj5D2pv.js",
+      "path": "assets/vegetation-DHj5D2pv.js",
+      "bytes": 72593,
+      "sha256": "5d4265c5e70e3b13be16d0ebd3c9da01a493317e634d974ef627a345d0c2b729",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5d4265c5e70e3b13be16d0ebd3c9da01a493317e634d974ef627a345d0c2b729"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/wardens-OO_Xuu5U.js",
+      "path": "assets/wardens-OO_Xuu5U.js",
+      "bytes": 53495,
+      "sha256": "761e0ac35b6ff99c40cab31ecc39c25bf24b387979cc0d8ba7da75769cf7aef4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "761e0ac35b6ff99c40cab31ecc39c25bf24b387979cc0d8ba7da75769cf7aef4"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/water-CMdFOwUw.js",
+      "path": "assets/water-CMdFOwUw.js",
+      "bytes": 69264,
+      "sha256": "c557b8e6e0f79e67ebdc5114d05b6b4d55b9b3fe85ce2ee905fe06880a236e20",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c557b8e6e0f79e67ebdc5114d05b6b4d55b9b3fe85ce2ee905fe06880a236e20"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/assets/water-bake-worker-DfGbNK0h.js",
+      "path": "assets/water-bake-worker-DfGbNK0h.js",
+      "bytes": 15850,
+      "sha256": "34ef4a07ddfbb9091f2c23fdba1b7d43b760b9a37223fb717151df0008e45dc3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "34ef4a07ddfbb9091f2c23fdba1b7d43b760b9a37223fb717151df0008e45dc3"
+    },
+    {
+      "url": "https://monolithwilds.vercel.app/",
+      "path": "index.html",
+      "bytes": 1669,
+      "sha256": "a04e92c871dfe66992c54261cadf2b0cbf4f896fe1aeab71a836544a2ce680c6",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "53c6af67a347b5b9e05b09a8186909d33768323abf7fd6f945169f2b7c708a5a"
+    }
+  ],
+  "failed": {
+    "https://monolithwilds.vercel.app/assets/.css": "HTTP 404; "
+  }
+}

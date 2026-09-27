@@ -1,0 +1,1 @@
+function e(e){for(let t in e)e[t]=0}function t(e,t,n,r){let i=e.base;for(let a in t){if(!(t[a]>0))continue;let o=!1;for(let e=0;e<i.length;e++)if(i[e].clip.name===a){o=!0;break}if(!o){e.setBase(t,n,r);return}}let a=n<=0?1/0:1/n;for(let e=0;e<i.length;e++){let n=i[e],o=n.clip.name;if(n.target=t[o]??0,n.fadeRate=a,r){let e=r[o];e!==void 0&&(n.rate=e)}}}export{e as n,t};

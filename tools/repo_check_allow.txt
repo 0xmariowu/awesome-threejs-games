@@ -1,0 +1,4 @@
+longhoang-lyo/public/assets/DjQoCJ1T.js:aws-access-key:2 # 2026-09-27 reviewed: pattern falls inside a base64-embedded WASM blob, not a credential
+longhoang-lyo/provenance/original-text/assets/DjQoCJ1T.js:aws-access-key:2 # 2026-09-27 reviewed: byte copy of the same base64 WASM blob
+longhoang-lyo/public/index.html:generic-assignment:1 # 2026-09-27 reviewed: Cloudflare Web Analytics beacon token shipped publicly in the original site's HTML
+longhoang-lyo/provenance/original-text/index.html:generic-assignment:1 # 2026-09-27 reviewed: byte copy of the original public HTML beacon token

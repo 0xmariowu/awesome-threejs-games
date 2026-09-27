@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="data:," rel="icon"/>
+<title>Cloudkeep · Flight lab</title>  <script type="module" crossorigin src="./bundles/index-fZmh51GB.js"></script>
+  <link rel="modulepreload" crossorigin href="./bundles/style-Bzoimb90.js">
+  <link rel="stylesheet" crossorigin href="./bundles/style-CzEjpXX9.css">
+</head>
+<body class="flight-page">
+<div aria-label="Flight scene" data-demo-picture="" id="world"></div>
+<aside aria-label="Flight lab settings" class="flight-controls panel ui-panel" data-demo-control="">
+<fieldset><legend>Slow motion</legend><div class="button-row">
+<button aria-pressed="true" data-time-scale="1" type="button">1×</button>
+<button aria-pressed="false" data-time-scale="0.25" type="button">0.25×</button>
+<button aria-pressed="false" data-time-scale="0.1" type="button">0.1×</button>
+</div></fieldset>
+<button aria-pressed="false" id="helpers" type="button">Show guides</button>
+<p data-demo-note="" hidden="" id="helper-legend">Cyan dot: follow center · Gold dot: aim point<br/>Cyan line: camera arm · Red line: island obstruction</p>
+<a href="./models.html">View models →</a></aside><fieldset data-demo-control=""><legend>Camera mode</legend><div class="button-row">
+<button aria-pressed="true" data-camera-mode="smooth" data-console-en="Smooth follow" data-console-zh="平滑跟随" type="button">Original smoothing</button>
+<button aria-pressed="false" data-camera-mode="direct" type="button">Direct follow</button>
+</div></fieldset>
+<section aria-label="Live flight data" class="readout panel" data-demo-readout="">
+<span class="eyebrow">Flight telemetry</span>
+<dl id="telemetry"></dl>
+</section>
+<p class="key-hints panel" data-demo-control="" data-demo-hint="" data-hint-keys="W/S · A/D · R/F · Shift · C · ↔">Drag to steer <span>Right drag / Alt+drag to orbit</span> <span>W/S forward/back</span> <span>A/D strafe</span> <span>R/F up/down</span> <span>Shift to boost</span> <span>C to recenter</span> <span>Wheel to zoom</span></p>
+<p class="status panel ui-panel" data-demo-readout="" id="status" role="status">Loading airship and islands…</p>
+</body>
+</html>

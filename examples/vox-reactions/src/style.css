@@ -1,0 +1,13 @@
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:#10191e;color:#edf4ec}
+*{box-sizing:border-box}body{margin:0}main{height:100dvh;min-height:340px;display:grid;grid-template-rows:auto 1fr auto;overflow:hidden}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid #324048}h1{font-size:22px;letter-spacing:.12em;margin:2px 0 0}.eyebrow{font-size:10px;letter-spacing:.24em;color:#a7b9b9}.actions{display:flex;gap:8px}
+button{font:inherit;color:inherit;background:#1c2a31;border:1px solid #405158;border-radius:4px;padding:9px 14px;cursor:pointer}button:hover{background:#30434a}button:focus-visible,canvas:focus-visible{outline:2px solid #ecce88;outline-offset:-3px}button[aria-pressed=true]{border-color:#e7d59e;background:#334147}
+#arena{position:relative;min-height:0;overflow:hidden}canvas{width:100%;height:100%;display:block;cursor:crosshair;touch-action:none}#readout{position:absolute;left:28px;top:22px;display:grid;gap:7px;pointer-events:none}#equation{font-size:13px;color:#bac8c9}#reaction{font-size:clamp(22px,3.3vw,42px);font-weight:550;letter-spacing:.08em}#damage{font-size:14px;font-variant-numeric:tabular-nums;color:#e0cb98}
+#target-state{position:absolute;top:18px;left:54%;width:28%;text-align:center;font-size:12px;font-variant-numeric:tabular-nums;pointer-events:none}.health-track{height:5px;background:#3f4b4b;margin:8px 0 10px}#health-fill{display:block;height:100%;background:#b9d9ae}#status{color:#bcced2;line-height:1.6}
+#history{position:absolute;left:28px;bottom:14px;margin:0;padding:0;list-style:none;display:grid;gap:5px;font-size:12px;color:#acbcbc;pointer-events:none}#history li:first-child{color:#e9eee1}
+footer{padding:14px 28px 12px;border-top:1px solid #324048;background:#142026}#elements{display:flex;gap:8px}#elements button{flex:1;max-width:150px;border-bottom:3px solid var(--element);padding:10px 12px}#elements button[aria-pressed=true]{background:var(--element);border-color:var(--element);color:#10191e;font-weight:700}footer p{font-size:12px;color:#a7b9b9;margin:10px 0 0}
+@media(max-height:470px){header{padding:10px 20px}h1{font-size:18px}.eyebrow{display:none}footer{padding:9px 20px}#readout{top:14px;left:20px}#history{left:20px;font-size:11px;bottom:8px}#elements button{padding:7px}footer p{margin-top:7px;font-size:11px}}
+html[data-theme] header { border-radius: 0; border-width: 0 0 1px; box-shadow: none; }
+html[data-theme] #equation, html[data-theme] footer p, html[data-theme] #status { color: var(--ui-muted); }
+html[data-theme] #damage { color: var(--ui-accent); }
+html[data-theme] #reaction { color: var(--ui-ink); }

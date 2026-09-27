@@ -1,0 +1,26 @@
+
+:root{--bg:#fbfbfd;--surface:#ffffff;--sidebar:#f5f5f7;--fill:rgba(118,118,128,.12);--fill2:rgba(118,118,128,.07);--seg:#ffffff;--ink:#1d1d1f;--ink2:#6e6e73;--ink3:#86868b;--line:rgba(0,0,0,.09);--accent:#0071e3;--accent-h:#0077ed;--link:#0066cc;--ring:rgba(0,113,227,.3);--nav:rgba(251,251,253,.78);--code-bg:#ffffff;--mark:rgba(0,113,227,.09);--tok-kw:#9b2393;--tok-str:#c41a16;--tok-num:#1c00cf;--tok-com:#5d6c79;--tok-punct:#5d6c79;--tok-fn:#326d74;--tok-attr:#836c28;--tok-type:#0b4f79;--tok-tag:#9b2393;--tok-plain:#1d1d1f;--mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;color-scheme:light}
+:root[data-theme="dark"]{--bg:#000000;--surface:#1c1c1e;--sidebar:#111112;--fill:rgba(118,118,128,.24);--fill2:rgba(118,118,128,.14);--seg:#636366;--ink:#f5f5f7;--ink2:#a1a1a6;--ink3:#8d8d93;--line:rgba(255,255,255,.12);--accent:#0a84ff;--accent-h:#339dff;--link:#2997ff;--ring:rgba(10,132,255,.4);--nav:rgba(22,22,23,.78);--code-bg:#1c1c1e;--mark:rgba(10,132,255,.18);--tok-kw:#fc5fa3;--tok-str:#fc6a5d;--tok-num:#d0bf69;--tok-com:#7f8c98;--tok-punct:#a1a1a6;--tok-fn:#67b7a4;--tok-attr:#fd8f3f;--tok-type:#5dd8ff;--tok-tag:#fc5fa3;--tok-plain:#f5f5f7;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Hiragino Sans GB","Helvetica Neue",Helvetica,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.47}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+button,input{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input::placeholder{color:var(--ink3)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+.state-39-hover:hover{transform:scale(1.035) !important}
+.state-49-hover:hover{background:var(--accent-h) !important;text-decoration:none !important}
+.state-63-hover:hover{background:var(--accent-h) !important;text-decoration:none !important}
+.state-65-hover:hover{background:var(--fill2) !important;text-decoration:none !important}
+.state-111-focus:focus{box-shadow:0 0 0 3px var(--ring) !important}
+.state-242-focus:focus{box-shadow:0 0 0 3px var(--ring) !important}
+/* The prototype overflows to 409px at 390px in English. Keep every control
+   visible by tightening only mobile header spacing. All type and sizes match. */
+@media(max-width:519px){
+  html[lang="en"] .topbar>div{gap:8px!important}
+  html[lang="en"] .topbar nav{gap:14px!important}
+  html[lang="en"] .topbar>div>div{gap:6px!important}
+}

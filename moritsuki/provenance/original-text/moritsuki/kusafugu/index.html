@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>クサフグ拾い — 外の浜の夜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="赤く光るのは、眼か、石か。夜の波打ち際で、砂にもぐったクサフグを手づかみで拾いまくる3Dゲーム。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23081428'/%3E%3Cellipse cx='32' cy='36' rx='22' ry='17' fill='%234f5236'/%3E%3Cpath d='M12 40 Q32 58 52 40 Q32 50 12 40Z' fill='%23f1efe6'/%3E%3Ccircle cx='24' cy='28' r='4' fill='%23ff3a1a'/%3E%3Ccircle cx='40' cy='28' r='4' fill='%23ff3a1a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/kusafugu/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <!-- ロード画面 -->
+  <section id="loading" class="screen show">
+    <div class="load-inner">
+      <div class="load-logo">クサフグ拾い</div>
+      <div class="load-bar"><i></i></div>
+      <div class="load-msg">浜の砂をならしています</div>
+    </div>
+    <div class="load-stars"></div>
+  </section>
+
+  <!-- タイトル -->
+  <section id="title" class="screen">
+    <div class="title-shade"></div>
+    <div class="title-block">
+      <div class="title-sub">外の浜 夜の波打ち際</div>
+      <h1 class="title-logo">クサフグ<span>拾</span>い</h1>
+      <div class="title-en">KUSAFUGU&nbsp;HIROI</div>
+      <div class="hanko">夜</div>
+    </div>
+    <div class="title-copy">赤く光るのは、<br />眼か、石か。<span class="title-cta">砂にもぐったクサフグを、<br />手づかみで拾いまくれ！</span></div>
+    <nav class="menu">
+      <button data-act="start" class="primary"><span class="k">一</span>浜に出る</button>
+      <button data-act="zukan"><span class="k">二</span>フグ図鑑</button>
+      <button data-act="howto"><span class="k">三</span>遊び方</button>
+      <button data-act="settings"><span class="k">四</span>設定</button>
+      <button data-act="credits"><span class="k">五</span>クレジット</button>
+    </nav>
+    <div class="title-record"></div>
+  </section>
+
+  <!-- ナレーション -->
+  <section id="intro" class="screen">
+    <div class="intro-lines"></div>
+    <div class="intro-skip">クリックでスキップ</div>
+  </section>
+
+  <!-- HUD -->
+  <section id="hud">
+    <div id="hurt"></div>
+    <div id="tide">
+      <div class="t-row"><svg viewBox="0 0 24 24" class="moon"><path d="M15.5 3.2a8.6 8.6 0 1 0 5.3 13.4A7.2 7.2 0 0 1 15.5 3.2z"/></svg><span class="t-time">20:30</span><span class="t-left"></span></div>
+      <div class="t-bar"><i></i></div>
+    </div>
+
+    <div id="bucket">
+      <div class="bk-lbl">バケツ</div>
+      <div class="bk-row"><svg viewBox="0 0 60 56" class="bk-ic"><defs><clipPath id="bkc"><path d="M8 10 L52 10 L46 52 L14 52 Z"/></clipPath></defs><g clip-path="url(#bkc)"><rect class="bk-fill" x="0" y="52" width="60" height="0"/></g><path class="bk-out" d="M8 10 L52 10 L46 52 L14 52 Z"/><path class="bk-hd" d="M8 10 Q30 -8 52 10"/></svg><b class="bk-n">0</b><span class="bk-max">/ 30</span></div>
+      <div class="bk-sub">いっぱいで帰る</div>
+    </div>
+
+    <div id="bag">
+      <div class="bag-count"><b class="bag-n">0</b><span>匹</span><em class="bag-plus">+1</em></div>
+      <div class="bag-row sub"><span class="bag-kg"></span><span class="bag-best"></span></div>
+      <div class="bag-row total"><span class="lbl">見分け</span><b class="tot">—</b></div>
+    </div>
+
+    <div id="combo"><b>0</b><span>連続</span></div>
+    <div id="words"></div>
+    <div id="prompt"></div>
+    <div id="feed"></div>
+    <div id="warn"></div>
+    <div id="telop"></div>
+    <div id="hint"></div>
+    <div id="lockhint">クリックで視点操作を再開</div>
+    <div id="controls">
+      <div class="c-row"><svg viewBox="0 0 20 28" class="ms l"><rect x="1.5" y="1.5" width="17" height="25" rx="8.5"/><path d="M10 1.5v10"/><path class="btn" d="M10 2 H9 A7.5 7.5 0 0 0 2 9.5 V11 H10 Z"/></svg><span><b>左クリック</b>　手をずぼっと突っ込む</span></div>
+      <div class="c-row"><svg viewBox="0 0 20 28" class="ms r"><rect x="1.5" y="1.5" width="17" height="25" rx="8.5"/><path d="M10 1.5v10"/><path class="btn" d="M10 2 H11 A7.5 7.5 0 0 1 18 9.5 V11 H10 Z"/></svg><span><b>右クリック</b>（押したまま）　しゃがんでよく見る</span></div>
+    </div>
+    <div id="shiftkey"><kbd>Shift</kbd><span>そっと歩く</span></div>
+    <div id="esckey"><kbd>Esc</kbd><span>メニュー</span></div>
+  </section>
+
+  <!-- ポーズ -->
+  <section id="pause" class="screen">
+    <div class="panel narrow">
+      <h2>一時停止</h2>
+      <nav class="menu vertical">
+        <button data-act="resume" class="primary">再開する</button>
+        <button data-act="zukan">フグ図鑑</button>
+        <button data-act="settings">設定</button>
+        <button data-act="howto">遊び方</button>
+        <button data-act="quit">浜から上がる</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 結果 -->
+  <section id="results" class="screen">
+    <div class="res-card">
+      <div class="res-head">
+        <div class="res-day"></div>
+        <h2>今夜のバケツ</h2>
+        <div class="res-why"></div>
+      </div>
+      <div class="res-big">
+        <div class="rb-n"><b>0</b><span>匹</span></div>
+        <div class="rb-kg"></div>
+      </div>
+      <div class="res-list"></div>
+      <div class="res-stats"></div>
+      <div class="res-foot">
+        <div class="res-total"><span>見分け</span><b>—</b></div>
+        <div class="res-rank"><div class="stamp"></div><div class="rank-title"></div><div class="rank-sub"></div></div>
+      </div>
+      <div class="res-news"></div>
+      <nav class="menu row">
+        <button data-act="again" class="primary">次の夜も、浜に出る</button>
+        <button data-act="toTitle">タイトルへ</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 図鑑 -->
+  <section id="zukan" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>フグ図鑑</h2><div class="zk-count"></div><button class="close" data-act="back">閉じる</button></div>
+      <div class="zk-body">
+        <div class="zk-grid"></div>
+        <div class="zk-detail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 遊び方 -->
+  <section id="howto" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>遊び方</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="howto-grid">
+        <div class="ht-keys">
+          <h3>操作</h3>
+          <ul>
+            <li><kbd>マウス</kbd><span>見回す（ヘッドライトも同じ向き）・手を突っ込む所をねらう</span></li>
+            <li><kbd>W A S D</kbd><span>波打ち際を歩く</span></li>
+            <li><kbd>Shift</kbd><span>押しながら歩くと、そっと歩く（フグが驚かない）</span></li>
+            <li><kbd>左クリック</kbd><kbd>Space</kbd><span>ねらいの輪の所に、手をずぼっと突っ込んでつかむ</span></li>
+            <li><kbd>右クリック長押し</kbd><span>しゃがんで、近くでよく見る</span></li>
+            <li><kbd>Esc</kbd><span>一時停止</span></li>
+          </ul>
+        </div>
+        <div class="ht-tips">
+          <h3>夜の波打ち際のコツ</h3>
+          <ol>
+            <li><b>クサフグは、夜は砂にもぐって眠る。</b>出しているのは、眼だけ。</li>
+            <li><b>ライトを当てると、眼が赤く光る。</b>眼の奥の鏡のような膜が、光をこちらへ返してくる。</li>
+            <li><b>でも、赤く光るのは眼だけじゃない。</b>濡れた赤い小石、茶色いびんのかけら、貝殻のかけら。どれも、ほとんど同じに光る。</li>
+            <li><b>見分けは、ほんのちょっとのちがい。</b>頭を動かしたり、しゃがんだりして、光り方をよく見よう。</li>
+            <li><b>手を突っ込んだら、もう獲れたも同然。</b>フグは寝ぼけているので、つかめば逃げない。</li>
+            <li><b>石をつかむと、水音でまわりのフグが逃げる。</b>ばしゃばしゃ歩いても逃げる。近くでは、そっと。</li>
+            <li><b>小石まじりの所は、フグも光る物も多い。</b>砂だけの所は見分けやすいけれど、フグはまばら。</li>
+            <li><b>バケツが30匹でいっぱい。</b>潮が満ちるまで（5分）か、いっぱいになったら帰る。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- クレジット -->
+  <section id="credits" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>クレジット</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-group">音</div>
+      <ul class="credit-list">
+        <li><b>効果音ラボ</b><a href="https://soundeffect-lab.info/" target="_blank" rel="noopener">soundeffect-lab.info</a>
+          <small>波</small></li>
+        <li><b>Freesound</b><a href="https://freesound.org/" target="_blank" rel="noopener">freesound.org</a>
+          <small>風: <a href="https://freesound.org/people/cribbler/sounds/380379/" target="_blank" rel="noopener">Soft Wind Ambience</a>（cribbler）CC0</small></li>
+      </ul>
+      <div class="set-group">そのほか</div>
+      <ul class="credit-list">
+        <li><b>効果音・音楽</b><span>虫の声・水の音・フグの鳴き声・音楽は WebAudio で合成</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 設定 -->
+  <section id="settings" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>設定</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-list">
+        <label><span>マウス感度</span><input type="range" min="0.3" max="2.5" step="0.05" data-set="sens" /><output></output></label>
+        <label><span>視野角</span><input type="range" min="60" max="95" step="1" data-set="fov" /><output></output></label>
+        <label><span>全体の音量</span><input type="range" min="0" max="1" step="0.01" data-set="master" /><output></output></label>
+        <label><span>音楽</span><input type="range" min="0" max="1" step="0.01" data-set="music" /><output></output></label>
+        <label><span>効果音</span><input type="range" min="0" max="1" step="0.01" data-set="sfx" /><output></output></label>
+        <label><span>波・虫の音</span><input type="range" min="0" max="1" step="0.01" data-set="amb" /><output></output></label>
+        <label class="toggle"><span>上下反転</span><input type="checkbox" data-set="invertY" /><i></i></label>
+        <label><span>画質</span>
+          <select data-set="quality">
+            <option value="low">軽量</option>
+            <option value="medium">標準</option>
+            <option value="high">高画質</option>
+          </select><output></output>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <div id="fade"></div>
+  <script type="module" src="../src/kusafugu/main.js"></script>
+</body>
+</html>

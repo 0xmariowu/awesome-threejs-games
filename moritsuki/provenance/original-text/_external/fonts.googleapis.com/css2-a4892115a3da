@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Dela Gothic One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/delagothicone/v19/hESp6XxvMDRA-2eD0lXpDa6QkBAGRQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Yuji Syuku';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/yujisyuku/v8/BngNUXdTV3vO6Lw5ApOPqPc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMYW2drQpDw0GjzrVNFf_valaDBcznOkjs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Old Mincho';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb4vrVla.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Old Mincho';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrlla.ttf) format('truetype');
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>広告</title>
+<!--
+  スマートゲーム 共通フッターバナー広告 — 広告タグ本体（1枠ぶん）
+
+  このページは ad/banner.html の中に iframe として読み込まれる。
+  banner.html は一定時間ごとにこのページを新しく読み込み直すことで
+  広告を差し替えている（＝1回の読み込み＝1枠の表示）。
+
+  広告タグを差し替えるときは、このファイルと slot.js の NETWORKS だけを
+  更新すればよい。読み込みのたびに広告タグが素の状態から実行されるため、
+  タグ側が差し替え（リフレッシュ）に対応している必要はない。
+
+  配信は優先順位つきのウォーターフォール（slot.js が制御する）：
+    1. i-mobile   … このファイルに直接書く（読み込みを最速で始めるため）
+    2. MicroAd    … slot.js が動的に差し込む
+    3. Ad Generation … 同上
+    4. 自社アプリのバナー（img/house-*.webp）
+  上位が一定時間内に描画されなかったときだけ、その枠を捨てて次へ進む。
+
+  枠だけの入れ物（配信の有無に関わらず存在する div）には data-ad-box を付ける。
+  slot.js はこの印が付いた要素を「広告が出た」の判定から除外する。
+
+  このページは sandbox（allow-same-origin 無し）の iframe の中で動く（banner.html / frame.js）。
+  広告タグはゲームページの localStorage・Cookie・DOM に触れない。
+-->
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+  #ad-slot {
+    max-width: 100%;
+  }
+  /* 広告事業者1社ぶんの入れ物（slot.js が差し替える単位） */
+  .ad-net {
+    max-width: 100%;
+    line-height: 0;
+  }
+  #ad-slot img,
+  #ad-slot iframe {
+    max-width: 100%;
+    vertical-align: top;
+  }
+  /* 広告が配信されなかったときに出す自社広告（slot.js が差し込む） */
+  /* 他社の 320x50 と同じ大きさに固定する（画面幅いっぱいに伸ばすと、横向きのスマホで高さが 100px を超えて
+     ゲーム画面を大きく削り、20 秒ごとの差し替えで他社広告と入れ替わるたびに枠の高さも変わってしまうため） */
+  .house-ad {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    line-height: 0;
+  }
+  .house-ad img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+<div id="ad-slot">
+  <!-- 優先順位1：i-mobile（2社目以降は slot.js が差し込む） -->
+  <div class="ad-net" id="ad-net-imobile">
+    <div id="im-e3b00be372e04b3292d5b8d1fe804b60" data-ad-box>
+      <script async src="/_external/imp-adedge.i-mobile.co.jp/script/v1/spot-b91a17173865.js"></script>
+      <script>(window.adsbyimobile=window.adsbyimobile||[]).push({pid:42118,mid:594692,asid:1937600,type:"banner",display:"inline",elementid:"im-e3b00be372e04b3292d5b8d1fe804b60"})</script>
+    </div>
+  </div>
+</div>
+<script src="slot.js?ver=20260914-1"></script>
+</body>
+</html>

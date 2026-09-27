@@ -1,0 +1,96 @@
+{
+  "native_render_resolution": [
+    3840,
+    2160
+  ],
+  "fixed_simulation_hz": 60,
+  "frames_rendered_and_encoded": 2640,
+  "first_timestamp_us": 0,
+  "last_timestamp_us": 43983333,
+  "incorrect_frame_timestamps": 0,
+  "capture_errors": [],
+  "audio_event_timeline_matches_video": true,
+  "captures": 3,
+  "collection_events": 10,
+  "feed_events": 3,
+  "exploration_seconds": 26,
+  "capture_sequence_seconds": 18,
+  "full_decode_passed": [
+    "Cloudkeep-4K60-Gameplay.mp4",
+    "Cloudkeep-1080p60-Share.mp4"
+  ],
+  "frame_checks": {
+    "4k": {
+      "seconds_checked": 42,
+      "decoded_frames": 2520,
+      "distinct_frames": 2520,
+      "consecutive_duplicates": 0
+    },
+    "1080p": {
+      "seconds_checked": 42,
+      "decoded_frames": 2520,
+      "distinct_frames": 2520,
+      "consecutive_duplicates": 0
+    }
+  },
+  "files": {
+    "4k": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 3840,
+          "height": 2160,
+          "avg_frame_rate": "60/1",
+          "start_time": "0.000000",
+          "duration": "44.000000",
+          "nb_frames": "2640"
+        },
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 2,
+          "avg_frame_rate": "0/0",
+          "start_time": "0.000000",
+          "duration": "44.000000",
+          "nb_frames": "2064"
+        }
+      ],
+      "format": {
+        "duration": "44.000000",
+        "size": "166171194"
+      }
+    },
+    "1080p": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "width": 1920,
+          "height": 1080,
+          "avg_frame_rate": "60/1",
+          "start_time": "0.000000",
+          "duration": "44.000000",
+          "nb_frames": "2640"
+        },
+        {
+          "codec_name": "aac",
+          "sample_rate": "48000",
+          "channels": 2,
+          "avg_frame_rate": "0/0",
+          "start_time": "0.000000",
+          "duration": "44.000000",
+          "nb_frames": "2064"
+        }
+      ],
+      "format": {
+        "duration": "44.000000",
+        "size": "32080462"
+      }
+    }
+  },
+  "audio_integrated_lufs": -18.1,
+  "audio_true_peak_dbfs": -6.2
+}

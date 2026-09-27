@@ -1,0 +1,27 @@
+{
+  "project": "tidewater",
+  "source": "https://github.com/dgreenheck/tidewater",
+  "scope": "Exact original pure modules; separate host UI and lifecycle adapter. Does not reproduce the 3D fishing scene.",
+  "files": [
+    {
+      "source": "tidewater/upstream/src/game/CatchMinigame.js",
+      "path": "examples/tidewater-fishing/original/CatchMinigame.js",
+      "sha256": "d1d0d6e4db854bdefa5a5b40a7a4ddc210ac52f8fd2396e1c8389cca0619a4d2"
+    },
+    {
+      "source": "tidewater/upstream/src/game/FishTable.js",
+      "path": "examples/tidewater-fishing/original/FishTable.js",
+      "sha256": "d57d3df458aed23488b2d5b15c3ac369009afeb7f9b53d95f646b4ab50ed4b03"
+    },
+    {
+      "source": "tidewater/upstream/src/game/GameState.js",
+      "path": "examples/tidewater-fishing/original/GameState.js",
+      "sha256": "685f094a70be6b576ee2e8d50ff500922a494da27a60444d3915ec2cb91b0c4e"
+    },
+    {
+      "source": "tidewater/upstream/src/game/Gear.js",
+      "path": "examples/tidewater-fishing/original/Gear.js",
+      "sha256": "e6f013e20ff37e7031bc6c83ffb80b590b786a6ba109093b579e0789825b4284"
+    }
+  ]
+}

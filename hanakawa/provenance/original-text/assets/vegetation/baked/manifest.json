@@ -1,0 +1,21 @@
+{
+  "field": {
+    "file": "field.bin.gz",
+    "signature": "field:1:4226488463:1024:cb9f3457"
+  },
+  "atlas:blossom": {
+    "file": "atlas-blossom.bin.gz",
+    "signature": "atlas:1:blossom:1024",
+    "size": 1024
+  },
+  "atlas:maple": {
+    "file": "atlas-maple.bin.gz",
+    "signature": "atlas:1:maple:1024",
+    "size": 1024
+  },
+  "atlas:garden": {
+    "file": "atlas-garden.bin.gz",
+    "signature": "atlas:1:garden:1024",
+    "size": 1024
+  }
+}

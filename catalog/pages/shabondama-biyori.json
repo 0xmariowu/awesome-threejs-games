@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "slug": "shabondama-biyori",
+  "title": "Shabondama Biyori / しゃぼん玉日和",
+  "tagline": "春日风景中吹泡泡，展示泡泡着色、风场模拟与自动镜头",
+  "category": "风景与氛围",
+  "overview_video": "shabondama-biyori/overview",
+  "examples": [
+    {
+      "id": "shabondama-director",
+      "title": "泡泡镜头导演",
+      "one_liner": "跟随泡泡漂流，拖动接管视线，松手后自动接回",
+      "candidate": "shabondama-biyori.director",
+      "title_en": "Bubble camera director",
+      "one_liner_en": "Follow drifting bubbles, drag to take control of the view, and release to resume automatic following."
+    },
+    {
+      "id": "shabondama-bubble",
+      "title": "泡泡薄膜虹彩",
+      "one_liner": "环绕泡泡，调节膜厚，看虹彩随视角和薄膜流动变化",
+      "candidate": "shabondama-biyori.bubble",
+      "title_en": "Bubble film iridescence",
+      "one_liner_en": "Orbit a bubble and adjust film thickness to see colors change with the view and flowing film."
+    }
+  ],
+  "tagline_en": "Blow bubbles in spring scenery, with bubble shading, wind simulation and an automatic camera."
+}

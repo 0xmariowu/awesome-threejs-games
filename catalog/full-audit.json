@@ -1,0 +1,3224 @@
+{
+  "date": "2026-09-26",
+  "projects_count": 13,
+  "unique_manifest_files": 3925,
+  "hardware": {
+    "machine_model": "Mac16,9",
+    "chip_type": "Apple M4 Max",
+    "physical_memory": "128 GB",
+    "number_processors": "proc 16:12:4",
+    "graphics": [
+      {
+        "sppci_model": "Apple M4 Max",
+        "spdisplays_vendor": "sppci_vendor_Apple"
+      }
+    ]
+  },
+  "full_parity_certified": false,
+  "scope": "Original code/assets, local serving, sampled gameplay, startup and frame cadence. No full campaign, all-device or exact pixel certification.",
+  "projects": [
+    {
+      "slug": "hanakawa",
+      "title": "Hanakawa",
+      "source": "https://hanakawa-boat-game.vercel.app/",
+      "local_url": "http://127.0.0.1:8082/",
+      "status": "startup-issue",
+      "finding": "214 个原运行文件与原站逐字节一致；已进入河道、离泊和驾驶。普通 Chrome 首次加载仍复现长卡顿，后台刷新暂停也已在原站复现。",
+      "source_type": "verified-deployed-files",
+      "files": 214,
+      "bytes": 90613072,
+      "hash_errors": [],
+      "source_differences": [],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/hanakawa/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 440,
+              "height": 40,
+              "cssWidth": 440,
+              "cssHeight": 40
+            },
+            {
+              "width": 300,
+              "height": 150,
+              "cssWidth": 0,
+              "cssHeight": 0
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15002.700000047684,
+                "frames": 900,
+                "raf_hz": 59.98920194345948,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000109,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15014.299999952316,
+                "frames": 900,
+                "raf_hz": 59.94285447892065,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 9528.899999976158,
+            "frames": 233,
+            "raf_hz": 24.451930443239302,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 83.29999999999973,
+            "max_ms": 3199.9000000000005,
+            "frames_over_50ms": 15,
+            "frames_over_100ms": 5,
+            "long_tasks": 12,
+            "long_task_total_ms": 4919,
+            "long_task_max_ms": 3003
+          },
+          "script_ready_seconds": 9.514629291,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/hanakawa/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1600,
+              "height": 1000,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 880,
+              "height": 80,
+              "cssWidth": 440,
+              "cssHeight": 40
+            },
+            {
+              "width": 300,
+              "height": 150,
+              "cssWidth": 0,
+              "cssHeight": 0
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003.5,
+                "frames": 719,
+                "raf_hz": 59.899196067813556,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12017.799999952316,
+                "frames": 720,
+                "raf_hz": 59.9111318213697,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 9555.799999952316,
+            "frames": 239,
+            "raf_hz": 25.01098809112713,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 66.69999999999982,
+            "max_ms": 3266.5000000000005,
+            "frames_over_50ms": 15,
+            "frames_over_100ms": 6,
+            "long_tasks": 13,
+            "long_task_total_ms": 4998,
+            "long_task_max_ms": 3024
+          },
+          "script_ready_seconds": 9.542792833,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": {
+              "stats": {
+                "backend": "webgpu",
+                "quality": "balanced",
+                "fps": 60,
+                "frameMs": 16.66,
+                "frames": 1827,
+                "calls": 49209,
+                "triangles": 11215430,
+                "failed": [],
+                "sim": 31.27,
+                "paused": false,
+                "boat": {
+                  "x": -87.83,
+                  "y": 0.036,
+                  "z": 656.63,
+                  "speed": 7.37,
+                  "docked": false
+                },
+                "camera": "follow"
+              },
+              "startup": {
+                "phases": {
+                  "renderer": 40,
+                  "world": 127,
+                  "render": 180,
+                  "terrain": 511,
+                  "water": 201,
+                  "boat": 160,
+                  "camera": 2,
+                  "game": 5,
+                  "ui": 1,
+                  "vegetation": 635,
+                  "structures": 721,
+                  "bridges": 474,
+                  "audio": 188,
+                  "background": 3026,
+                  "settle": 93,
+                  "warm": 20,
+                  "firstFrame": 103
+                },
+                "firstPaintMs": 72,
+                "firstViewMs": 6805,
+                "firstPlayableMs": 6805,
+                "transferredBytes": 59447028,
+                "warmMs": 20,
+                "warmPipelines": 0,
+                "warmSteps": [
+                  625,
+                  3024,
+                  20
+                ],
+                "settleMs": 0
+              }
+            },
+            "inkwave": null
+          }
+        },
+        "reference-retina": {
+          "evidence": "output/audit-2026-09-26/hanakawa/reference-retina/browser.json",
+          "completed": true,
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002.700000047684,
+                "frames": 719,
+                "raf_hz": 59.9031884490276,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.79999999998836,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12013.299999952316,
+                "frames": 720,
+                "raf_hz": 59.933573622806215,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.70000000001164,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 91123.30000007153,
+            "frames": 402,
+            "raf_hz": 4.411604935287511,
+            "median_ms": 16.69999999999709,
+            "p95_ms": 33.29999999999973,
+            "max_ms": 42714.899999999994,
+            "frames_over_50ms": 10,
+            "frames_over_100ms": 8,
+            "long_tasks": 13,
+            "long_task_total_ms": 27769,
+            "long_task_max_ms": 25615
+          },
+          "errors": [],
+          "http_errors": [],
+          "game_metrics": {
+            "sakuragaoka": null,
+            "hanakawa": {
+              "stats": {
+                "backend": "webgpu",
+                "quality": "balanced",
+                "fps": 60,
+                "frameMs": 16.66,
+                "frames": 1782,
+                "calls": 48549,
+                "triangles": 11231836,
+                "failed": [],
+                "sim": 30.08,
+                "paused": false,
+                "boat": {
+                  "x": -87.64,
+                  "y": 0.035,
+                  "z": 656.21,
+                  "speed": 7.37,
+                  "docked": false
+                },
+                "camera": "follow"
+              },
+              "startup": {
+                "phases": {
+                  "renderer": 22,
+                  "world": 608,
+                  "render": 1947,
+                  "terrain": 1446,
+                  "water": 202,
+                  "boat": 310,
+                  "camera": 2,
+                  "game": 6,
+                  "ui": 1,
+                  "vegetation": 664,
+                  "structures": 1091,
+                  "bridges": 2003,
+                  "audio": 248,
+                  "background": 3661,
+                  "settle": 119,
+                  "warm": 31718,
+                  "firstFrame": 42836
+                },
+                "firstPaintMs": 180,
+                "firstViewMs": 87439,
+                "firstPlayableMs": 87439,
+                "transferredBytes": 53786069,
+                "warmMs": 25614,
+                "warmPipelines": 370,
+                "warmSteps": [
+                  655,
+                  25614
+                ],
+                "settleMs": 58
+              }
+            },
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "All 214 original runtime files match the current source. Native Chrome startup stalled beyond 80 seconds and recorded an 11.925-second main-thread task. Hidden-tab frame suspension occurs on both original and local. A later local run reached readiness and isolated default-graphics gameplay ran at 60 fps, but a cold-start repair is not established. Original game code and graphics settings unchanged.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "monolith-wilds",
+      "title": "Monolith Wilds",
+      "source": "https://monolithwilds.vercel.app/",
+      "local_url": "http://127.0.0.1:8081/",
+      "status": "local-client-verified",
+      "finding": "40 个原有运行文件与原站一致；补齐原版字体样式表及 8 个字体文件。进入世界和移动通过断网检查。",
+      "source_type": "verified-deployed-files",
+      "files": 49,
+      "bytes": 4257245,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-3bacf1a2cd0f.css",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/monolith-wilds/_external/fonts.googleapis.com/css2-3bacf1a2cd0f.css.diff",
+          "diff_bytes": 3220
+        },
+        {
+          "path": "index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/monolith-wilds/index.html.diff",
+          "diff_bytes": 762
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/monolith-wilds/local/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "cssWidth": 0,
+              "cssHeight": 0
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002.400000095367,
+                "frames": 719,
+                "raf_hz": 59.90468572904478,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12007.700000047684,
+                "frames": 720,
+                "raf_hz": 59.961524688086875,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 5626.300000071526,
+            "frames": 244,
+            "raf_hz": 43.36775500718022,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 33.40000000000009,
+            "max_ms": 666.5999999999999,
+            "frames_over_50ms": 6,
+            "frames_over_100ms": 4,
+            "long_tasks": 10,
+            "long_task_total_ms": 1495,
+            "long_task_max_ms": 610
+          },
+          "script_ready_seconds": 5.617732875,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/monolith-wilds/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1920,
+              "height": 1200,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 1024,
+              "height": 1024,
+              "cssWidth": 0,
+              "cssHeight": 0
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12006.699999928474,
+                "frames": 720,
+                "raf_hz": 59.96651869408657,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12003.5,
+                "frames": 719,
+                "raf_hz": 59.899196067813556,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 5506.700000047684,
+            "frames": 243,
+            "raf_hz": 44.128062178418254,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 33.40000000000009,
+            "max_ms": 633.2000000000003,
+            "frames_over_50ms": 5,
+            "frames_over_100ms": 4,
+            "long_tasks": 9,
+            "long_task_total_ms": 1400,
+            "long_task_max_ms": 588
+          },
+          "script_ready_seconds": 5.494219958000002,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "reference-retina": {
+          "evidence": "output/audit-2026-09-26/monolith-wilds/reference-retina/browser.json",
+          "completed": true,
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12014.400000095367,
+                "frames": 720,
+                "raf_hz": 59.92808629596857,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12004.199999928474,
+                "frames": 719,
+                "raf_hz": 59.895703170913855,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 5805.200000047684,
+            "frames": 251,
+            "raf_hz": 43.237097774054,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 33.30000000000018,
+            "max_ms": 600,
+            "frames_over_50ms": 6,
+            "frames_over_100ms": 4,
+            "long_tasks": 9,
+            "long_task_total_ms": 1346,
+            "long_task_max_ms": 557
+          },
+          "errors": [],
+          "http_errors": [],
+          "game_metrics": {
+            "sakuragaoka": null,
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "All 40 pre-existing runtime files matched the current original. Original Google Fonts dependencies were subsequently localized; game JavaScript and CSS are unchanged. Full landmark coverage is not certified. Post-repair offline gameplay has zero external requests and zero HTTP/page errors.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "inkwave",
+      "title": "INKWAVE — Turf Riot",
+      "source": "https://github.com/0xmariowu/inkwave",
+      "local_url": "http://127.0.0.1:8088/",
+      "status": "retained-baseline-verified",
+      "finding": "70 个原版运行及支持文件与保留的 origin/main 基线一致。已进入 4v4 对局。",
+      "source_type": "retained-git-import-original-site-unavailable",
+      "files": 70,
+      "bytes": 4565980,
+      "hash_errors": [],
+      "source_differences": [],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/inkwave/local/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 768,
+              "height": 480,
+              "cssWidth": 0,
+              "cssHeight": 0
+            },
+            {
+              "width": 18,
+              "height": 76,
+              "cssWidth": 18,
+              "cssHeight": 76
+            },
+            {
+              "width": 350,
+              "height": 616,
+              "cssWidth": 106,
+              "cssHeight": 186
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003.899999976158,
+                "frames": 696,
+                "raf_hz": 57.98115612437478,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 166.6999999999989,
+                "frames_over_50ms": 3,
+                "frames_over_100ms": 3,
+                "long_tasks": 2,
+                "long_task_total_ms": 282,
+                "long_task_max_ms": 143
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12002.199999928474,
+                "frames": 719,
+                "raf_hz": 59.90568395829804,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 11997.600000023842,
+            "frames": 629,
+            "raf_hz": 52.4271520969819,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.800000000000182,
+            "max_ms": 433.29999999999995,
+            "frames_over_50ms": 12,
+            "frames_over_100ms": 3,
+            "long_tasks": 9,
+            "long_task_total_ms": 1208,
+            "long_task_max_ms": 430
+          },
+          "script_ready_seconds": 11.995975334,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": {
+              "mode": "match",
+              "fps": 60,
+              "perf": {
+                "sim": 0.9050069094742359,
+                "render": 1.4130276996187598,
+                "calls": 207,
+                "tris": 1275412
+              },
+              "quality": "high",
+              "match": "playing"
+            }
+          }
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/inkwave/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1920,
+              "height": 1200,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 1920,
+              "height": 1200,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 768,
+              "height": 480,
+              "cssWidth": 0,
+              "cssHeight": 0
+            },
+            {
+              "width": 36,
+              "height": 152,
+              "cssWidth": 18,
+              "cssHeight": 76
+            },
+            {
+              "width": 350,
+              "height": 616,
+              "cssWidth": 106,
+              "cssHeight": 186
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12011.5,
+                "frames": 720,
+                "raf_hz": 59.942555051409066,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12005.5,
+                "frames": 720,
+                "raf_hz": 59.972512598392406,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 12169.100000023842,
+            "frames": 661,
+            "raf_hz": 54.317903542472735,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.800000000000182,
+            "max_ms": 416.69999999999993,
+            "frames_over_50ms": 6,
+            "frames_over_100ms": 3,
+            "long_tasks": 9,
+            "long_task_total_ms": 1205,
+            "long_task_max_ms": 425
+          },
+          "script_ready_seconds": 12.149477458000007,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": {
+              "mode": "match",
+              "fps": 60,
+              "perf": {
+                "sim": 0.49652490513153646,
+                "render": 1.5300702919567308,
+                "calls": 235,
+                "tris": 1172720
+              },
+              "quality": "high",
+              "match": "playing"
+            }
+          }
+        }
+      },
+      "limitations": "The original external website is gone, confirmed by the user. The 70 original runtime/support files match retained origin/main at 11ce485. External-origin equivalence cannot be recertified.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "longhoang-lyo",
+      "title": "Long Hoang / Lyo",
+      "source": "https://longhoang-lyo.com/",
+      "local_url": "http://127.0.0.1:8090/",
+      "status": "local-client-verified",
+      "finding": "保留部署后的原始压缩代码及模型、纹理、音频。入口、教程和移动已测试；全部战斗和作品面板未穷尽。",
+      "source_type": "deployed-bundles",
+      "files": 466,
+      "bytes": 19616014,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-203237de0b5e",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/longhoang-lyo/_external/fonts.googleapis.com/css2-203237de0b5e.diff",
+          "diff_bytes": 1335
+        },
+        {
+          "path": "index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/longhoang-lyo/index.html.diff",
+          "diff_bytes": 1193
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/longhoang-lyo/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 0,
+              "cssHeight": 0
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15002.200000047684,
+                "frames": 899,
+                "raf_hz": 59.92454439996418,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15003.599999904633,
+                "frames": 898,
+                "raf_hz": 59.85230211453971,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 50,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 1,
+                "long_task_total_ms": 59,
+                "long_task_max_ms": 59
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 27960.900000095367,
+            "frames": 550,
+            "raf_hz": 19.67032534711415,
+            "median_ms": 16.700000000000728,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 8149.6,
+            "frames_over_50ms": 9,
+            "frames_over_100ms": 8,
+            "long_tasks": 9,
+            "long_task_total_ms": 18627,
+            "long_task_max_ms": 8152
+          },
+          "script_ready_seconds": 27.958352208000008,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/longhoang-lyo/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 2240,
+              "height": 1400,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 0,
+              "cssHeight": 0
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003.399999976158,
+                "frames": 719,
+                "raf_hz": 59.899695086511166,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12004.799999952316,
+                "frames": 720,
+                "raf_hz": 59.97600959639976,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 13191.099999904633,
+            "frames": 590,
+            "raf_hz": 44.72712662357692,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 949.9000000000001,
+            "frames_over_50ms": 8,
+            "frames_over_100ms": 6,
+            "long_tasks": 7,
+            "long_task_total_ms": 3308,
+            "long_task_max_ms": 948
+          },
+          "script_ready_seconds": 13.188799958999994,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "reference-retina": {
+          "evidence": "output/audit-2026-09-26/longhoang-lyo/reference-retina/browser.json",
+          "completed": true,
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002.399999976158,
+                "frames": 719,
+                "raf_hz": 59.90468572963976,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12005.599999904633,
+                "frames": 720,
+                "raf_hz": 59.97201306104812,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 14268.299999952316,
+            "frames": 636,
+            "raf_hz": 44.57433611587403,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 916.6000000000004,
+            "frames_over_50ms": 8,
+            "frames_over_100ms": 7,
+            "long_tasks": 7,
+            "long_task_total_ms": 3199,
+            "long_task_max_ms": 917
+          },
+          "errors": [],
+          "http_errors": [],
+          "game_metrics": {
+            "sakuragaoka": null,
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Entry, tutorial and movement were exercised with external network access blocked. Full combat progression, every portfolio panel and the contact submission backend are not exhaustively verified. Original development sources/source maps were not available; minified production bundles are retained.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "vox-arcana",
+      "title": "Vox Arcana",
+      "source": "https://jev-spell.vercel.app/",
+      "local_url": "http://127.0.0.1:8091/",
+      "status": "backend-unavailable",
+      "finding": "练习场、移动及实际火球施法已验证。测试关闭原版 Jev 选项，使用原游戏已有的本地规则；AI 推理和麦克风功能不算离线通过。",
+      "source_type": "readable-deployed-modules",
+      "files": 65,
+      "bytes": 38225458,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-6394cc2f65d4",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/vox-arcana/_external/fonts.googleapis.com/css2-6394cc2f65d4.diff",
+          "diff_bytes": 5255
+        },
+        {
+          "path": "index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/vox-arcana/index.html.diff",
+          "diff_bytes": 1074
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/vox-arcana/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 180,
+              "height": 180,
+              "cssWidth": 176,
+              "cssHeight": 176
+            },
+            {
+              "width": 460,
+              "height": 74,
+              "cssWidth": 460,
+              "cssHeight": 74
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15003,
+                "frames": 899,
+                "raf_hz": 59.92134906352063,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15001.899999976158,
+                "frames": 899,
+                "raf_hz": 59.925742739348266,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 11630.100000023842,
+            "frames": 255,
+            "raf_hz": 21.925864781857186,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 50,
+            "max_ms": 5849.8,
+            "frames_over_50ms": 10,
+            "frames_over_100ms": 6,
+            "long_tasks": 11,
+            "long_task_total_ms": 7166,
+            "long_task_max_ms": 5857
+          },
+          "script_ready_seconds": 11.628963959000004,
+          "errors": [],
+          "http_errors": [
+            {
+              "url": "http://127.0.0.1:8091/api/status",
+              "status": 404
+            }
+          ],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/vox-arcana/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1600,
+              "height": 1000,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 180,
+              "height": 180,
+              "cssWidth": 176,
+              "cssHeight": 176
+            },
+            {
+              "width": 920,
+              "height": 148,
+              "cssWidth": 460,
+              "cssHeight": 74
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12005.800000071526,
+                "frames": 719,
+                "raf_hz": 59.88772093452469,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12005.100000023842,
+                "frames": 719,
+                "raf_hz": 59.89121290106472,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 6083.399999976158,
+            "frames": 285,
+            "raf_hz": 46.84880165715175,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.800000000000182,
+            "max_ms": 1033.3,
+            "frames_over_50ms": 2,
+            "frames_over_100ms": 2,
+            "long_tasks": 3,
+            "long_task_total_ms": 1262,
+            "long_task_max_ms": 1048
+          },
+          "script_ready_seconds": 6.082853,
+          "errors": [],
+          "http_errors": [
+            {
+              "url": "http://127.0.0.1:8091/api/status",
+              "status": 404
+            }
+          ],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Practice, movement and an actual fireball cast passed with external requests blocked. /api/status and /api/spell have no archived server implementation. Jev AI inference and the server-backed local-model option are unavailable. Browser voice recognition is not certified offline, and microphone input was not tested. This is a playable original client with a documented backend gap.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "sakuragaoka-station",
+      "title": "Sakuragaoka Station",
+      "source": "https://github.com/Kenton-GMI/sakuragaoka-station/tree/main",
+      "local_url": "http://127.0.0.1:8092/",
+      "status": "local-client-verified",
+      "finding": "保留原 Git 源码和本地化运行副本，原项目检查通过。已点击 Start walking 进入场景；列车全周期、所有室内和触屏未穷尽。",
+      "source_type": "source-repository-and-localized-snapshot",
+      "files": 155,
+      "bytes": 55209310,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-a757a1f83c6a",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/sakuragaoka-station/_external/fonts.googleapis.com/css2-a757a1f83c6a.diff",
+          "diff_bytes": 3656
+        },
+        {
+          "path": "index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/sakuragaoka-station/index.html.diff",
+          "diff_bytes": 1081
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/sakuragaoka-station/local/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12001.200000047684,
+                "frames": 719,
+                "raf_hz": 59.910675598868714,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12002.5,
+                "frames": 719,
+                "raf_hz": 59.904186627785876,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 14128.699999928474,
+            "frames": 293,
+            "raf_hz": 20.737930595276513,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 133.4000000000001,
+            "max_ms": 4783.099999999999,
+            "frames_over_50ms": 20,
+            "frames_over_100ms": 17,
+            "long_tasks": 22,
+            "long_task_total_ms": 9818,
+            "long_task_max_ms": 4331
+          },
+          "script_ready_seconds": 14.107395167,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/sakuragaoka-station/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12008.899999976158,
+                "frames": 720,
+                "raf_hz": 59.95553297982575,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12002.400000095367,
+                "frames": 719,
+                "raf_hz": 59.90468572904478,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 13614.300000071526,
+            "frames": 273,
+            "raf_hz": 20.052444855671297,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 150,
+            "max_ms": 4766.499999999999,
+            "frames_over_50ms": 20,
+            "frames_over_100ms": 15,
+            "long_tasks": 22,
+            "long_task_total_ms": 9586,
+            "long_task_max_ms": 4306
+          },
+          "script_ready_seconds": 13.60631875,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "sakuragaoka": {
+              "position": [
+                -0.9798213363966156,
+                0,
+                -2.8931639337522497
+              ],
+              "errors": []
+            },
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "reference-retina": {
+          "evidence": "output/audit-2026-09-26/sakuragaoka-station/reference-retina/browser.json",
+          "completed": true,
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002.5,
+                "frames": 720,
+                "raf_hz": 59.98750260362424,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12001.699999928474,
+                "frames": 719,
+                "raf_hz": 59.90817967490314,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 16319.699999928474,
+            "frames": 353,
+            "raf_hz": 21.630299576680155,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 133.4000000000001,
+            "max_ms": 4533.200000000001,
+            "frames_over_50ms": 21,
+            "frames_over_100ms": 18,
+            "long_tasks": 22,
+            "long_task_total_ms": 10775,
+            "long_task_max_ms": 4095
+          },
+          "errors": [],
+          "http_errors": [],
+          "game_metrics": {
+            "sakuragaoka": {
+              "position": [
+                -0.9798304222551827,
+                0,
+                -2.8932938675833992
+              ],
+              "errors": []
+            },
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Offline entry and walking passed. Upstream npm run check passed for the world modules. The original upstream index still uses CDN URLs; launch the localized public snapshot with npm start in this outer folder. Train timing, all interiors and touch controls are not exhaustively tested.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "smartgame-town",
+      "title": "Smartgame Town",
+      "source": "https://smartgame.jp/town/",
+      "local_url": "http://127.0.0.1:8093/",
+      "status": "backend-unavailable",
+      "finding": "头像编辑、昵称入场和小镇移动已验证。账号、房间、聊天、语音、支付和云端存档依赖未公开 PHP 服务；可能保持“连接中”。",
+      "source_type": "deployed-client-with-backend-gap",
+      "files": 1833,
+      "bytes": 34852129,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/101405.gsspcln.jp/t/004/252/a1004252.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/101405.gsspcln.jp/t/004/252/a1004252.js.diff",
+          "diff_bytes": 68344
+        },
+        {
+          "path": "_external/cdn.microad.jp/compass/compass2.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/cdn.microad.jp/compass/compass2.js.diff",
+          "diff_bytes": 195924
+        },
+        {
+          "path": "_external/i.socdm.com/sdk/js/adg-browser-m.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/i.socdm.com/sdk/js/adg-browser-m.js.diff",
+          "diff_bytes": 238539
+        },
+        {
+          "path": "_external/i.socdm.com/sdk/js/adg-script-loader-41c213910cc3.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/i.socdm.com/sdk/js/adg-script-loader-41c213910cc3.js.diff",
+          "diff_bytes": 67617
+        },
+        {
+          "path": "_external/imp-adedge.i-mobile.co.jp/script/imp_spot_define.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/imp-adedge.i-mobile.co.jp/script/imp_spot_define.js.diff",
+          "diff_bytes": 153427
+        },
+        {
+          "path": "_external/imp-adedge.i-mobile.co.jp/script/v1/spot-b91a17173865.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/imp-adedge.i-mobile.co.jp/script/v1/spot-b91a17173865.js.diff",
+          "diff_bytes": 368803
+        },
+        {
+          "path": "_external/j.microad.net/js/compass.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/j.microad.net/js/compass.js.diff",
+          "diff_bytes": 172747
+        },
+        {
+          "path": "_external/static.criteo.net/js/ld/publishertag.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/static.criteo.net/js/ld/publishertag.js.diff",
+          "diff_bytes": 253890
+        },
+        {
+          "path": "_external/supership-jp.github.io/ADGBrowser-m/adg-browser-m.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/_external/supership-jp.github.io/ADGBrowser-m/adg-browser-m.js.diff",
+          "diff_bytes": 218515
+        },
+        {
+          "path": "ad/slot.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/ad/slot.html.diff",
+          "diff_bytes": 674
+        },
+        {
+          "path": "ad/slot.js",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/ad/slot.js.diff",
+          "diff_bytes": 789
+        },
+        {
+          "path": "index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/index.html.diff",
+          "diff_bytes": 514
+        },
+        {
+          "path": "town/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/smartgame-town/town/index.html.diff",
+          "diff_bytes": 607
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/smartgame-town/local/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 746,
+              "cssWidth": 1280,
+              "cssHeight": 746
+            },
+            {
+              "width": 150,
+              "height": 150,
+              "cssWidth": 150,
+              "cssHeight": 150
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002,
+                "frames": 720,
+                "raf_hz": 59.990001666388935,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12001.100000023842,
+                "frames": 719,
+                "raf_hz": 59.91117480885682,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 13414.700000047684,
+            "frames": 551,
+            "raf_hz": 41.074343816711625,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 3466.5,
+            "frames_over_50ms": 7,
+            "frames_over_100ms": 7,
+            "long_tasks": 10,
+            "long_task_total_ms": 4207,
+            "long_task_max_ms": 3037
+          },
+          "script_ready_seconds": 13.412798750000007,
+          "errors": [],
+          "http_errors": [
+            {
+              "url": "http://127.0.0.1:8093/account/api.php?a=me",
+              "status": 404
+            },
+            {
+              "url": "http://127.0.0.1:8093/town/room-api.php",
+              "status": 405
+            },
+            {
+              "url": "http://127.0.0.1:8093/account/api.php?a=me",
+              "status": 404
+            },
+            {
+              "url": "http://127.0.0.1:8093/town/announcements-api.php",
+              "status": 404
+            },
+            {
+              "url": "http://127.0.0.1:8093/town/announcements-api.php",
+              "status": 404
+            }
+          ],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/smartgame-town/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 2268,
+              "height": 1322,
+              "cssWidth": 1280,
+              "cssHeight": 746
+            },
+            {
+              "width": 300,
+              "height": 300,
+              "cssWidth": 150,
+              "cssHeight": 150
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12008,
+                "frames": 719,
+                "raf_hz": 59.87674883411059,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12004.800000071526,
+                "frames": 719,
+                "raf_hz": 59.89270958247669,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 13708.299999952316,
+            "frames": 565,
+            "raf_hz": 41.21590569231526,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 3366.6000000000004,
+            "frames_over_50ms": 7,
+            "frames_over_100ms": 7,
+            "long_tasks": 10,
+            "long_task_total_ms": 4216,
+            "long_task_max_ms": 3064
+          },
+          "script_ready_seconds": 13.700790000000012,
+          "errors": [],
+          "http_errors": [
+            {
+              "url": "http://127.0.0.1:8093/account/api.php?a=me",
+              "status": 404
+            },
+            {
+              "url": "http://127.0.0.1:8093/town/room-api.php",
+              "status": 405
+            },
+            {
+              "url": "http://127.0.0.1:8093/account/api.php?a=me",
+              "status": 404
+            },
+            {
+              "url": "http://127.0.0.1:8093/town/announcements-api.php",
+              "status": 404
+            },
+            {
+              "url": "http://127.0.0.1:8093/town/announcements-api.php",
+              "status": 404
+            }
+          ],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "The scene, avatar editor and named-avatar town entry render locally with external requests blocked. Account, room registration, announcements, online players/chat, voice, cloud saves and payments need unavailable PHP services. The original client may display a connecting state. Individual arcade destinations and the separate farm are outside this town capture. No fake server responses or production proxy were added.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "everdrift",
+      "title": "Everdrift",
+      "source": "https://everdrift.iliareingold.com/",
+      "local_url": "http://127.0.0.1:8094/",
+      "status": "local-client-verified",
+      "finding": "Godot 原始 Web 导出包可运行；开场对话、移动、跳跃和金币收集已验证。提取了 325 项 PCK 资源，GDC 仍是编译后的程序，未声称还原成开发源码。",
+      "source_type": "godot-web-export-and-extracted-resources",
+      "files": 11,
+      "bytes": 45404170,
+      "hash_errors": [],
+      "source_differences": [],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/everdrift/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15003,
+                "frames": 899,
+                "raf_hz": 59.92134906352063,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.79999999998836,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15006.5,
+                "frames": 900,
+                "raf_hz": 59.97401126178656,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.70000000001164,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 94310.5,
+            "frames": 5366,
+            "raf_hz": 56.89716415457452,
+            "median_ms": 16.69999999999709,
+            "p95_ms": 16.79999999998836,
+            "max_ms": 1883.2999999999997,
+            "frames_over_50ms": 11,
+            "frames_over_100ms": 8,
+            "long_tasks": 13,
+            "long_task_total_ms": 5050,
+            "long_task_max_ms": 1880
+          },
+          "script_ready_seconds": 94.29551545899994,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/everdrift/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 2560,
+              "height": 1600,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12024.5,
+                "frames": 721,
+                "raf_hz": 59.96091313568132,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.70000000001164,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12002.899999976158,
+                "frames": 719,
+                "raf_hz": 59.90219030412885,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.70000000001164,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 94482.40000009537,
+            "frames": 5236,
+            "raf_hz": 55.41772859278252,
+            "median_ms": 16.69999999999709,
+            "p95_ms": 16.79999999998836,
+            "max_ms": 2466.5,
+            "frames_over_50ms": 14,
+            "frames_over_100ms": 8,
+            "long_tasks": 14,
+            "long_task_total_ms": 7417,
+            "long_task_max_ms": 2452
+          },
+          "script_ready_seconds": 94.44907912499997,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Main menu, opening dialogue, the first village, movement/jump input and coin collection ran locally with external requests blocked. Both audio worklets and the runtime version.json were captured. Extracted GDC files are compiled bytecode, not editable GDScript source; no decompilation or source-equivalence claim is made. Full campaign completion has not been tested.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "scorch-podracer",
+      "title": "SCORCH — Desert Pod Racing",
+      "source": "https://scortch-podracer.netlify.app/",
+      "local_url": "http://127.0.0.1:8095/",
+      "status": "local-client-verified",
+      "finding": "原游戏脚本保留，仅移除部署平台工具条并本地化字体。尚未穷尽全部车辆、三圈完赛和触屏操作。",
+      "source_type": "single-document-deployment",
+      "files": 4,
+      "bytes": 1228636,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-0ab808b00f90",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/scorch-podracer/_external/fonts.googleapis.com/css2-0ab808b00f90.diff",
+          "diff_bytes": 733
+        },
+        {
+          "path": "index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/scorch-podracer/index.html.diff",
+          "diff_bytes": 2565
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/scorch-podracer/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 380,
+              "height": 380,
+              "cssWidth": 190,
+              "cssHeight": 190
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15003,
+                "frames": 899,
+                "raf_hz": 59.92134906352063,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15019.599999904633,
+                "frames": 900,
+                "raf_hz": 59.921702309363404,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 9966.399999976158,
+            "frames": 449,
+            "raf_hz": 45.051372612084016,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.700000000000728,
+            "max_ms": 2366.5,
+            "frames_over_50ms": 2,
+            "frames_over_100ms": 2,
+            "long_tasks": 2,
+            "long_task_total_ms": 2482,
+            "long_task_max_ms": 2357
+          },
+          "script_ready_seconds": 9.96493433300003,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/scorch-podracer/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1649,
+              "height": 1030,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 380,
+              "height": 380,
+              "cssWidth": 190,
+              "cssHeight": 190
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003.100000023842,
+                "frames": 719,
+                "raf_hz": 59.90119219189808,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12003.200000047684,
+                "frames": 719,
+                "raf_hz": 59.900693148255776,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 10297.599999904633,
+            "frames": 449,
+            "raf_hz": 43.60239279095695,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 2633.2,
+            "frames_over_50ms": 3,
+            "frames_over_100ms": 2,
+            "long_tasks": 2,
+            "long_task_total_ms": 2717,
+            "long_task_max_ms": 2616
+          },
+          "script_ready_seconds": 10.296221375000016,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Selection, race movement and pause passed with zero external requests or HTTP failures. Netlify toolbar was removed; game code retained. Full three-lap finish, all six vehicles and touch controls are not exhaustively tested.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "moritsuki",
+      "title": "Moritsuki / なちゃっとの夏休み",
+      "source": "https://cda-social.github.io/moritsuki/",
+      "local_url": "http://127.0.0.1:8096/",
+      "status": "visual-issue",
+      "finding": "城镇、鳗鱼和鱼叉场景可见；蛤蜊、梭子蟹、河豚的 3D 场景黑屏。原站蛤蜊也复现，不能因 HUD 正常或无报错而算通过。",
+      "source_type": "readable-deployed-modules",
+      "files": 398,
+      "bytes": 46671457,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-4f512fc4b278",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/_external/fonts.googleapis.com/css2-4f512fc4b278.diff",
+          "diff_bytes": 1922
+        },
+        {
+          "path": "_external/fonts.googleapis.com/css2-a4892115a3da",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/_external/fonts.googleapis.com/css2-a4892115a3da.diff",
+          "diff_bytes": 2967
+        },
+        {
+          "path": "moritsuki/gazami/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/moritsuki/gazami/index.html.diff",
+          "diff_bytes": 1429
+        },
+        {
+          "path": "moritsuki/hamaguri/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/moritsuki/hamaguri/index.html.diff",
+          "diff_bytes": 1407
+        },
+        {
+          "path": "moritsuki/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/moritsuki/index.html.diff",
+          "diff_bytes": 1319
+        },
+        {
+          "path": "moritsuki/kusafugu/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/moritsuki/kusafugu/index.html.diff",
+          "diff_bytes": 1444
+        },
+        {
+          "path": "moritsuki/mori/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/moritsuki/mori/index.html.diff",
+          "diff_bytes": 1467
+        },
+        {
+          "path": "moritsuki/unagi/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/moritsuki/moritsuki/unagi/index.html.diff",
+          "diff_bytes": 1379
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/moritsuki/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15002.299999952316,
+                "frames": 899,
+                "raf_hz": 59.92414496462925,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15018.399999976158,
+                "frames": 900,
+                "raf_hz": 59.92649017215074,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 15186.200000047684,
+            "frames": 629,
+            "raf_hz": 41.41918320567522,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.800000000000182,
+            "max_ms": 2083.3,
+            "frames_over_50ms": 11,
+            "frames_over_100ms": 10,
+            "long_tasks": 14,
+            "long_task_total_ms": 4869,
+            "long_task_max_ms": 2098
+          },
+          "script_ready_seconds": 15.172415084000022,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/moritsuki/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 2560,
+              "height": 1600,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003.300000071526,
+                "frames": 720,
+                "raf_hz": 59.9835045358951,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12011,
+                "frames": 719,
+                "raf_hz": 59.86179335609025,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 15418.899999976158,
+            "frames": 628,
+            "raf_hz": 40.72923490008827,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 2166.6,
+            "frames_over_50ms": 13,
+            "frames_over_100ms": 10,
+            "long_tasks": 15,
+            "long_task_total_ms": 5038,
+            "long_task_max_ms": 2177
+          },
+          "script_ready_seconds": 15.404186832999983,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Town rendering, fast-travel UI and entry/input in all five minigames were exercised with external requests blocked and no runtime HTTP failures. The hamaguri, gazami and kusafugu minigames show black 3D scenes after their intro fades finish in the tested Chrome environment, although HUD/input and requests work. The original hamaguri site reproduces the same black scene with both default Chrome graphics settings and ANGLE Metal; the cause is unresolved. Town, unagi and mori render visibly. Do not count these three minigames as visually passed. The original page explicitly says story content is unfinished. Public repository lookup did not resolve; readable deployed modules were archived. Geographic credit links are not game dependencies and were excluded from the runtime archive.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "tidewater",
+      "title": "Tidewater",
+      "source": "https://dgreenheck.github.io/tidewater/",
+      "local_url": "http://127.0.0.1:8097/",
+      "status": "local-client-verified",
+      "finding": "原项目逻辑和引擎检查通过；本地探索和背包可用。随测试工具附带的 Chromium 因 WebGPU 纹理上限不足失败，已用本机 Chrome 复核；没有降低画质或替换引擎。",
+      "source_type": "source-repository-and-deployment",
+      "files": 160,
+      "bytes": 61866273,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-1b28234ca5bf",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/tidewater/_external/fonts.googleapis.com/css2-1b28234ca5bf.diff",
+          "diff_bytes": 3254
+        },
+        {
+          "path": "tidewater/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/tidewater/tidewater/index.html.diff",
+          "diff_bytes": 1176
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/tidewater/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 98,
+              "height": 27,
+              "cssWidth": 98,
+              "cssHeight": 27
+            },
+            {
+              "width": 300,
+              "height": 150,
+              "cssWidth": 47,
+              "cssHeight": 212
+            },
+            {
+              "width": 640,
+              "height": 640,
+              "cssWidth": 640,
+              "cssHeight": 640
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15001.799999952316,
+                "frames": 899,
+                "raf_hz": 59.926142196460255,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15002.099999904633,
+                "frames": 899,
+                "raf_hz": 59.92494384157651,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 9893.399999976158,
+            "frames": 365,
+            "raf_hz": 36.8932823903693,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.800000000000182,
+            "max_ms": 816.5,
+            "frames_over_50ms": 10,
+            "frames_over_100ms": 9,
+            "long_tasks": 12,
+            "long_task_total_ms": 3477,
+            "long_task_max_ms": 834
+          },
+          "script_ready_seconds": 9.890727000000027,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/tidewater/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 196,
+              "height": 54,
+              "cssWidth": 98,
+              "cssHeight": 27
+            },
+            {
+              "width": 300,
+              "height": 150,
+              "cssWidth": 47,
+              "cssHeight": 212
+            },
+            {
+              "width": 640,
+              "height": 640,
+              "cssWidth": 640,
+              "cssHeight": 640
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002,
+                "frames": 720,
+                "raf_hz": 59.990001666388935,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12001.600000023842,
+                "frames": 719,
+                "raf_hz": 59.908678842701946,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 10138.800000071526,
+            "frames": 357,
+            "raf_hz": 35.2112676053854,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 16.800000000000182,
+            "max_ms": 866.6999999999998,
+            "frames_over_50ms": 12,
+            "frames_over_100ms": 9,
+            "long_tasks": 12,
+            "long_task_total_ms": 3687,
+            "long_task_max_ms": 864
+          },
+          "script_ready_seconds": 10.137270124999986,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "The original game-logic and engine-smoke tests passed. Offline browser exploration and inventory run with installed Chrome. Bundled headless Chromium fails on both upstream and local because it exposes only 16 sampled textures per shader stage; installed Chrome exposes 48. No engine or image-quality downgrade was applied. Boat trips, a complete caught-fish sale and all weather conditions remain unverified.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "shabondama-biyori",
+      "title": "Shabondama Biyori / しゃぼん玉日和",
+      "source": "https://claude.ai/artifact/FozvXt7fcZ6ydzxndkRS1k",
+      "local_url": "http://127.0.0.1:8098/",
+      "status": "local-client-verified",
+      "finding": "从 Claude 原页面恢复原始游戏模块和依赖；仅移除平台嵌入代码。场景、吹泡泡、视角和菜单通过；开发用录制接口不属于已恢复的本地服务。",
+      "source_type": "browser-recovered-readable-modules",
+      "files": 412,
+      "bytes": 16313108,
+      "hash_errors": [],
+      "source_differences": [
+        {
+          "path": "_external/fonts.googleapis.com/css2-68b4c34fb412",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/shabondama-biyori/_external/fonts.googleapis.com/css2-68b4c34fb412.diff",
+          "diff_bytes": 388841
+        },
+        {
+          "path": "_f/1790342986-3d06/index.html",
+          "classification": "text-diff",
+          "diff": "output/audit-2026-09-26/diffs/shabondama-biyori/_f/1790342986-3d06/index.html.diff",
+          "diff_bytes": 39211
+        }
+      ],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/shabondama-biyori/local/browser.json",
+          "browser": "installed Chrome, headless, ANGLE Metal, WebGPU enabled",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 15003.099999904633,
+                "frames": 900,
+                "raf_hz": 59.98760256251847,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.700000000000728,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 15001.600000023842,
+                "frames": 899,
+                "raf_hz": 59.92694112618462,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 5824.299999952316,
+            "frames": 50,
+            "raf_hz": 8.584722627682185,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 749.9000000000001,
+            "max_ms": 1616.6,
+            "frames_over_50ms": 8,
+            "frames_over_100ms": 7,
+            "long_tasks": 8,
+            "long_task_total_ms": 4921,
+            "long_task_max_ms": 1607
+          },
+          "script_ready_seconds": 5.814991874999976,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": null
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/shabondama-biyori/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1408,
+              "height": 880,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003.5,
+                "frames": 719,
+                "raf_hz": 59.899196067813556,
+                "median_ms": 16.69999999999891,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12003.5,
+                "frames": 692,
+                "raf_hz": 57.64985212646312,
+                "median_ms": 16.700000000000728,
+                "p95_ms": 16.799999999999272,
+                "max_ms": 200,
+                "frames_over_50ms": 4,
+                "frames_over_100ms": 2,
+                "long_tasks": 3,
+                "long_task_total_ms": 482,
+                "long_task_max_ms": 214
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 5760.899999976158,
+            "frames": 76,
+            "raf_hz": 13.192383134634264,
+            "median_ms": 16.699999999999818,
+            "p95_ms": 566.7000000000003,
+            "max_ms": 1650.1,
+            "frames_over_50ms": 6,
+            "frames_over_100ms": 5,
+            "long_tasks": 7,
+            "long_task_total_ms": 4594,
+            "long_task_max_ms": 1652
+          },
+          "script_ready_seconds": 5.750275457999976,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "Scene readiness, bubble input, camera drag and menu passed with no external requests or HTTP failures. The Claude embedding runtime was removed from the local entry; original game modules remain intact. Development-only /api/video, /api/still and /api/log capture helpers do not have a local backend and are not used by normal play. A retina input sample recorded a 200 ms frame interval; later steady frames do not erase this input-sample observation.",
+      "full_parity_certified": false
+    },
+    {
+      "slug": "arkenfall",
+      "title": "Arkenfall",
+      "source": "https://www.arkenfall.site/",
+      "local_url": "http://127.0.0.1:8099/",
+      "status": "local-client-verified",
+      "finding": "88 个文件保留原始字节，含 10 张加载插画；开场、移动、跳跃、攻击、闪避、地图、背包和刷新后继续存档已验证。完整地图、Boss 流程和触屏未穷尽。",
+      "source_type": "original-deployed-modules",
+      "files": 88,
+      "bytes": 7292228,
+      "hash_errors": [],
+      "source_differences": [],
+      "runtime": {
+        "local": {
+          "evidence": "output/audit-2026-09-26/arkenfall/local/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 1,
+          "canvas": [
+            {
+              "width": 1280,
+              "height": 800,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 300,
+              "height": 150,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12003,
+                "frames": 719,
+                "raf_hz": 59.9016912438557,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12002.600000023842,
+                "frames": 719,
+                "raf_hz": 59.90368753424856,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 38906.700000047684,
+            "frames": 2271,
+            "raf_hz": 58.37040920965327,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999999272,
+            "max_ms": 216.7,
+            "frames_over_50ms": 9,
+            "frames_over_100ms": 4,
+            "long_tasks": 7,
+            "long_task_total_ms": 719,
+            "long_task_max_ms": 234
+          },
+          "script_ready_seconds": 38.882048208,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "arkenfall": {
+              "ready": true,
+              "started": true,
+              "failed": [],
+              "control": true,
+              "position": [
+                -82.58723848092802,
+                9.64497660418304,
+                259.7993282944915
+              ],
+              "ui": {
+                "hud": true,
+                "menu": false,
+                "screens": 0,
+                "title": false,
+                "death": false,
+                "victory": false,
+                "boss": false,
+                "mapPainted": true,
+                "inventory": false,
+                "mapPaintMs": 29,
+                "mapPhases": "idle:0.0 cache:0.2 worker:1.0 sample:28.2 adopt:0.0",
+                "cards": false,
+                "flight": "0/0/0/0 0/0/0/0 0/0/0/0 0/0/0/0",
+                "intro": "0/0/0/0 0/0/0/0",
+                "titleGrade": 0,
+                "costMedMs": 0.1,
+                "costMaxMs": 0.2
+              },
+              "render": {
+                "frame": 52676,
+                "calls": 157,
+                "triangles": 1601702,
+                "points": 0,
+                "lines": 0
+              }
+            },
+            "sakuragaoka": null,
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "local-retina": {
+          "evidence": "output/audit-2026-09-26/arkenfall/local-retina/browser.json",
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "canvas": [
+            {
+              "width": 1833,
+              "height": 1145,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            },
+            {
+              "width": 300,
+              "height": 150,
+              "cssWidth": 1280,
+              "cssHeight": 800
+            }
+          ],
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002.899999976158,
+                "frames": 719,
+                "raf_hz": 59.90219030412885,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12005,
+                "frames": 719,
+                "raf_hz": 59.89171178675552,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 38832.60000002384,
+            "frames": 2271,
+            "raf_hz": 58.48179107241353,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999995634,
+            "max_ms": 199.99999999999994,
+            "frames_over_50ms": 8,
+            "frames_over_100ms": 4,
+            "long_tasks": 6,
+            "long_task_total_ms": 648,
+            "long_task_max_ms": 217
+          },
+          "script_ready_seconds": 38.820400875,
+          "errors": [],
+          "http_errors": [],
+          "external_requests": [],
+          "game_metrics": {
+            "arkenfall": {
+              "ready": true,
+              "started": true,
+              "failed": [],
+              "control": true,
+              "position": [
+                -82.58744878817,
+                9.644988832817548,
+                259.8005113443753
+              ],
+              "ui": {
+                "hud": true,
+                "menu": false,
+                "screens": 0,
+                "title": false,
+                "death": false,
+                "victory": false,
+                "boss": false,
+                "mapPainted": true,
+                "inventory": false,
+                "mapPaintMs": 28,
+                "mapPhases": "idle:0.0 cache:0.0 worker:1.3 sample:26.9 adopt:0.0",
+                "cards": false,
+                "flight": "0/0/0/0 0/0/0/0 0/0/0/0 0/0/0/0",
+                "intro": "0/0/0/0 0/0/0/0",
+                "titleGrade": 0,
+                "costMedMs": 0.1,
+                "costMaxMs": 0.2
+              },
+              "render": {
+                "frame": 52685,
+                "calls": 130,
+                "triangles": 1318782,
+                "points": 0,
+                "lines": 0
+              }
+            },
+            "sakuragaoka": null,
+            "hanakawa": null,
+            "inkwave": null
+          }
+        },
+        "reference-retina": {
+          "evidence": "output/audit-2026-09-26/arkenfall/reference-retina/browser.json",
+          "completed": true,
+          "browser": "installed Chrome, headless, default graphics backend",
+          "viewport": [
+            1280,
+            800
+          ],
+          "dpr": 2,
+          "stages": [
+            {
+              "name": "stationary",
+              "performance": {
+                "duration_ms": 12002.5,
+                "frames": 719,
+                "raf_hz": 59.904186627785876,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.700000000004366,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            },
+            {
+              "name": "moving",
+              "performance": {
+                "duration_ms": 12003.199999928474,
+                "frames": 720,
+                "raf_hz": 59.98400426588663,
+                "median_ms": 16.69999999999709,
+                "p95_ms": 16.799999999995634,
+                "max_ms": 16.80000000000291,
+                "frames_over_50ms": 0,
+                "frames_over_100ms": 0,
+                "long_tasks": 0,
+                "long_task_total_ms": 0,
+                "long_task_max_ms": 0
+              }
+            }
+          ],
+          "boot": {
+            "duration_ms": 39694.40000009537,
+            "frames": 2324,
+            "raf_hz": 58.54730138242212,
+            "median_ms": 16.69999999999891,
+            "p95_ms": 16.799999999995634,
+            "max_ms": 150,
+            "frames_over_50ms": 6,
+            "frames_over_100ms": 4,
+            "long_tasks": 6,
+            "long_task_total_ms": 585,
+            "long_task_max_ms": 162
+          },
+          "errors": [],
+          "http_errors": [],
+          "game_metrics": {
+            "arkenfall": {
+              "ready": true,
+              "started": true,
+              "failed": [],
+              "control": true,
+              "position": [
+                -82.58734018481809,
+                9.64498251791044,
+                259.79990041352175
+              ],
+              "ui": {
+                "hud": true,
+                "menu": false,
+                "screens": 0,
+                "title": false,
+                "death": false,
+                "victory": false,
+                "boss": false,
+                "mapPainted": true,
+                "inventory": false,
+                "mapPaintMs": 28,
+                "mapPhases": "idle:0.0 cache:0.1 worker:1.4 sample:26.8 adopt:0.0",
+                "cards": false,
+                "flight": "0/0/0/0 0/0/0/0 0/0/0/0 0/0/0/0",
+                "intro": "0/0/0/0 0/0/0/0",
+                "titleGrade": 0,
+                "costMedMs": 0.1,
+                "costMaxMs": 0.2
+              },
+              "render": {
+                "frame": 52701,
+                "calls": 156,
+                "triangles": 1599450,
+                "points": 0,
+                "lines": 0
+              }
+            },
+            "sakuragaoka": null,
+            "hanakawa": null,
+            "inkwave": null
+          }
+        }
+      },
+      "limitations": "All 88 deployed files retain original bytes. Offline gameplay sampled: opening, movement, jump, attack, dodge, map, inventory, quest-triggered autosave and Continue after reload. Complete world, boss progression, gamepad and touch controls are not certified. No development source repository or project-wide license confirmed.",
+      "full_parity_certified": false
+    }
+  ],
+  "repairs": [
+    {
+      "slug": "monolith-wilds",
+      "problem": "Font CSS and font binaries depended on Google network access. Offline mode substituted fonts.",
+      "change": "Archived the original requested fonts and localized their URLs. Game JS/CSS unchanged.",
+      "added_files": [
+        "_external/fonts.googleapis.com/css2-3bacf1a2cd0f.css",
+        "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jDOjw.ttf",
+        "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd5rDDOjw.ttf",
+        "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_qE6GnM.ttf",
+        "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+        "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86GnM.ttf",
+        "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fMZg.ttf",
+        "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfMZg.ttf",
+        "_external/fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfMZg.ttf"
+      ],
+      "modified": [
+        "index.html"
+      ],
+      "backup": "local backup, not published",
+      "verification": "Post-repair offline Chrome probe: completed gameplay, zero external requests, zero HTTP or page errors. Evidence: monolith-wilds/local/browser.json."
+    },
+    {
+      "slug": "moritsuki",
+      "problem": "GSI attribution hyperlink had been localized to a deliberately excluded page, producing a broken credit link.",
+      "change": "Restored the exact original external attribution URL. No gameplay changes.",
+      "modified": [
+        "public/moritsuki/index.html"
+      ],
+      "backup": "local backup, not published",
+      "verification": "Original href compared directly to provenance/original-text/moritsuki/index.html"
+    },
+    {
+      "slug": "vox-arcana",
+      "problem": "Capture rewriting had normalized CRLF line endings in otherwise untouched source files.",
+      "change": "Restored original bytes for text-identical files; fixed the capture tool to preserve line endings. No gameplay changes.",
+      "modified": [
+        "css/menu.css",
+        "js/audio.js",
+        "js/bot.js",
+        "js/characters.js",
+        "js/circlePaint.js",
+        "js/combat.js",
+        "js/fx.js",
+        "js/hud.js",
+        "js/i18n.js",
+        "js/look.js",
+        "js/magicCircle.js",
+        "js/main.js",
+        "js/shaders.js",
+        "js/spellbook.js",
+        "js/voice-download.js",
+        "js/voice.js",
+        "js/world.js"
+      ],
+      "verification": "Raw original SHA-256 equality; capture regression test passes."
+    },
+    {
+      "slug": "hanakawa",
+      "problem": "Legacy local HTTP wrapper crashes on malformed request paths; occupied ports silently fall through into other reserved game ports.",
+      "change": "Reuse the tested shared static server with loopback binding, validated paths and ranges, and explicit occupied-port failure. Upstream game files unchanged.",
+      "modified": [
+        "server.js"
+      ],
+      "backup": "local backup, not published",
+      "verification": "legacy-server-before.json reproduces process exit 1; legacy-server-after.json verifies original entry bytes, HTTP 400 without crash, suffix ranges and no occupied-port fallback."
+    },
+    {
+      "slug": "monolith-wilds",
+      "problem": "Legacy local HTTP wrapper crashes on malformed request paths; occupied ports silently fall through into other reserved game ports.",
+      "change": "Reuse the tested shared static server with loopback binding, validated paths and ranges, and explicit occupied-port failure. Upstream game files unchanged.",
+      "modified": [
+        "server.js"
+      ],
+      "backup": "local backup, not published",
+      "verification": "legacy-server-before.json reproduces process exit 1; legacy-server-after.json verifies original entry bytes, HTTP 400 without crash, suffix ranges and no occupied-port fallback."
+    },
+    {
+      "slug": "shared-server",
+      "problem": "The upstream serves ETags, but the local server lacks validators and retransmits complete files on repeat GETs.",
+      "change": "Added weak file-metadata ETags and conditional GET/HEAD responses. Changed files invalidate the validator. Original game bytes and graphics settings are unchanged.",
+      "modified": [
+        "tools/server.mjs",
+        "tools/server.test.mjs"
+      ],
+      "verification": "Regression failed on missing ETag, then passed for HTTP 304, HEAD and changed-file invalidation. No cold-start or FPS improvement claim."
+    }
+  ],
+  "unresolved": [
+    "Hanakawa native Chrome startup stalls",
+    "Moritsuki three black minigame scenes",
+    "Unavailable Smartgame and Vox Arcana server implementations",
+    "INKWAVE original public website no longer available"
+  ]
+}

@@ -1,0 +1,10 @@
+import{Rt as e,do as t,ro as n,ta as r,tr as i}from"./three.core-DtjtRha-.js";var a=96,o=54,s=`
+uniform sampler2D tIn;
+uniform sampler2D tDepth;
+uniform float uExposure;
+varying vec2 vUv;
+void main() {
+  vec3 c = texture(tIn, vUv).rgb * uExposure;
+  float d = texture(tDepth, vUv).x;
+  gl_FragColor = vec4(c, d >= 0.999995 ? 1.0 : 0.0);
+}`;function c({renderer:c,quad:l,sceneTexture:u,depthTexture:d,camera:f,env:p,vertexShader:m}){let h=new t(a,o,{type:e,depthBuffer:!1}),g=new r({vertexShader:m,fragmentShader:s,uniforms:{tIn:{value:u},tDepth:{value:d},uExposure:{value:1}},depthTest:!1,depthWrite:!1,toneMapped:!1}),_=new Float32Array(20736),v=new n,y=new n,b=[1,3,6,12,25,50,180],x=``,S=0;return function(e){let t=f.position,n=`${t.x.toFixed(0)},${t.y.toFixed(0)},${t.z.toFixed(0)},h${p.hour.toFixed(2)}`;if(n!==x&&(x=n,S=2),S<=0||--S>0)return;g.uniforms.uExposure.value=e,l.material=g,c.setRenderTarget(h),l.render(c),c.readRenderTargetPixels(h,0,0,a,o,_),c.setRenderTarget(null);let r=f.projectionMatrix.elements;v.copy(p.sunDir).transformDirection(f.matrixWorldInverse);let s=[],u=[],d=new Float32Array(b.length),m=new Float32Array(b.length),C=0;for(let e=0;e<o;e++)for(let t=0;t<a;t++){let n=(e*a+t)*4,c=_[n]*.2126+_[n+1]*.7152+_[n+2]*.0722;if(!Number.isFinite(c)){C++;continue}if(_[n+3]<.5){s.push(c);continue}u.push(c);let l=(t+.5)/a*2-1,f=(e+.5)/o*2-1;y.set((l+r[8])/r[0],(f+r[9])/r[5],-1).normalize();let p=i.radToDeg(Math.acos(i.clamp(y.dot(v),-1,1))),h=0;for(;h<b.length-1&&p>b[h];)h++;d[h]+=c,m[h]++}let w=(e,t)=>e.length?e[Math.min(e.length-1,Math.floor(t*e.length))].toFixed(3):`-`;s.sort((e,t)=>e-t),u.sort((e,t)=>e-t);let T=b.map((e,t)=>`<${e}°:${m[t]?(d[t]/m[t]).toFixed(2):`-`}`).join(` `);console.warn(`[post] ${n} exp=${e.toFixed(2)} elev=${p.sunElevation.toFixed(1)} geo(n=${s.length}) p50=${w(s,.5)} p90=${w(s,.9)} p99=${w(s,.99)} max=${w(s,1)} | sky(n=${u.length}) p50=${w(u,.5)} max=${w(u,1)} | sun-angle ${T} | non-finite=${C}`)}}export{c as createStats};

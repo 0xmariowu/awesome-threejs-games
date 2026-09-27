@@ -1,0 +1,1 @@
+var e={input:0,player:10,combat:20,enemies:30,gameplay:40,structures:45,vegetation:50,terrain:55,water:56,sky:60,atmosphere:62,camera:70,fx:80,audio:90,ui:100,render:1e3};export{e as t};

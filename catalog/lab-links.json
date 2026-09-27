@@ -1,0 +1,42 @@
+{
+  "lab_root": "../webgame-lab",
+  "path_base": "Gameref root for lab_root; lab root for demo paths",
+  "scene_modules": 45,
+  "links": [
+    {
+      "candidate": "cloudkeep.flight",
+      "demo": "src/scenes/cloudkeep-cam.tsx",
+      "relationship": "Adapted camera math; fox-relative input policy and scale differ from the original airship. Not a general flight-controller package.",
+      "sha256": "5118eb1e517af7750b12faa76280a81bb1608e6e6edf5d5f2c24eba1bdfc919c",
+      "evidence_status": "Source relationship inspected; lab production build and all 169 tests passed during library development. This demo launch was also exercised in installed Chrome."
+    },
+    {
+      "candidate": "inkwave.3c",
+      "demo": "src/scenes/inkwave-3c.tsx",
+      "relationship": "Existing source-derived world factories and locomotion integration; follow the separate lab provenance and QA.",
+      "sha256": "3a08f9c06c4eceb3e81dc52acfc9dba3e535275518564779105aea6ef7f01799",
+      "evidence_status": "Source relationship inspected; lab production build and all 169 tests passed during library development. This demo was not individually re-exercised in this phase."
+    },
+    {
+      "candidate": "inkwave.paint",
+      "demo": "src/scenes/inkwave-paint.tsx",
+      "relationship": "Existing GPU appearance plus CPU surface ownership demo; adapted training scene.",
+      "sha256": "37a3c052a6e7f053b99a380e9d6936ecd5d49e238b72bc46a5285117b3d60e45",
+      "evidence_status": "Source relationship inspected; lab production build and all 169 tests passed during library development. This demo was not individually re-exercised in this phase."
+    },
+    {
+      "candidate": "inkwave.weapons",
+      "demo": "src/scenes/inkwave-combat.tsx",
+      "relationship": "Existing adapted combat demo; separate damage rules from presentation-only recipes.",
+      "sha256": "ac298c728880cea8cf00747b0122510755c707da018a0575118d192073f2e06d",
+      "evidence_status": "Source relationship inspected; lab production build and all 169 tests passed during library development. This demo was not individually re-exercised in this phase."
+    },
+    {
+      "candidate": "inkwave.bots",
+      "demo": "src/scenes/inkwave-ai.tsx",
+      "relationship": "Existing bot/navigation adaptation with its own world and host contracts.",
+      "sha256": "08416f5900b1bc0939f98af90514d5aa3afb66a554e83f84f18ffca322028cdc",
+      "evidence_status": "Source relationship inspected; lab production build and all 169 tests passed during library development. This demo was not individually re-exercised in this phase."
+    }
+  ]
+}

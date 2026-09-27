@@ -1,0 +1,25 @@
+I want to make a new game called "Cloudkeep". It is an Insaniquarium-style creature-feeding game set in a floating sanctuary above the clouds. You pilot a small airship and feed the creatures that live in the sky.
+
+The game should be fully 3D, with free movement through the environment and a third-person camera following behind the airship. Flying should feel smooth, gentle, and slightly buoyant, with satisfying acceleration, turning, climbing, and descending. Think of the freedom of movement in Subnautica, adapted to flying through a sea of clouds.
+
+Instead of clicking on creatures to feed them, you release food from your airship. The food floats briefly, drifts with the wind, and slowly sinks into the clouds. Hungry creatures notice nearby food, approach it, and eat it. This should make positioning and flying around them an enjoyable part of the game.
+
+The creatures could include cloud rays, small sky whales, and lantern birds. Give them distinct silhouettes, movement patterns, and personalities. They should feel alive: wandering, gathering around food, reacting to the airship, and visibly growing as you care for them.
+
+Happy, well-fed creatures occasionally produce sky pearls. Fly close to collect them, then spend them on better food, airship upgrades, and new creatures. Build a satisfying loop of flying, feeding, collecting, and helping the sanctuary grow.
+
+The environment should be a compact, carefully designed area with floating islands, layered clouds, hanging gardens, and a few memorable landmarks. Flying between islands and through gaps in the clouds should create a strong sense of depth and scale.
+
+For the visual direction, I want a cozy, handcrafted fantasy world: soft blue skies, warm sunlight, cream-colored clouds, weathered wood, brass details, and colorful creatures. The airship should be small and charming, with a fabric balloon, a wooden gondola, little propellers, and moving parts. Keep the interface light so the world remains the main focus.
+
+This is a new project. Build it from scratch with a stable, reliable core. Put particular care into flight controls, camera behavior, creature AI, and the feeding loop. I want a small, complete game that feels good to play.
+
+Also:
+- Please ONLY read code from the current project directory. Do not look for other game implementations elsewhere on this machine.
+- Use whatever technologies you think are best for the task.
+- You can create your own assets.
+- Blender is available for modeling, and I strongly recommend using it for the airship, creatures, and environment props.
+- Keep gameplay, rendering, and interface code clearly organized.
+- Include a short introduction to the controls, pause and restart, and local progress saving.
+- Run the game and test the full gameplay loop.
+- Deliver a playable build with clear instructions for launching it locally.

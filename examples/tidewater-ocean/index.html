@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Tidewater · Waves and buoyancy</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main aria-label="Waves and buoyancy scene" data-demo-picture="" id="world"></main>
+<section aria-label="Ocean controls" class="ui-panel" data-demo-control="" id="panel">
+<label>Sea state <select aria-label="Sea state" id="sea">
+<option value="calm">Calm</option><option selected="" value="breezy">Breezy</option><option value="choppy">Choppy</option>
+</select></label>
+<label><input checked="" id="helpers" type="checkbox"/> Show sample points</label>
+<label><input id="slow" type="checkbox"/> Slow motion</label>
+</section>
+<output aria-live="polite" class="ui-panel" data-demo-readout="" id="status">Preparing the ocean…</output>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="W/S · A/D · Shift · Drag" id="hint">W / S forward/back · A / D steer · Shift to boost · Drag to look · Wheel to zoom</p>
+<script src="./src/main.js" type="module"></script>
+</body>
+</html>

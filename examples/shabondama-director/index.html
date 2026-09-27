@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Bubble camera director</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">{"imports":{"three":"./original/vendor/three.module.js"}}</script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<main data-demo-picture="" id="stage">
+<canvas aria-label="Bubble camera scene" id="world" tabindex="0"></canvas>
+<div aria-hidden="true" id="film"></div>
+<div aria-hidden="true" id="fade"></div>
+<header class="ui-panel" data-demo-readout=""><strong id="shot">Ready to blow bubbles</strong></header>
+<aside aria-label="Demo controls" class="ui-panel" data-demo-control="">
+<span data-demo-readout="" id="ownership">Automatic framing</span>
+<button id="restart" type="button">Restart</button>
+<button aria-pressed="false" id="slow" type="button">Slow motion</button>
+<button aria-pressed="false" data-console-en="Framing guides" data-console-zh="取景辅助线" id="helpers" type="button">Show framing guides</button>
+</aside>
+<div aria-hidden="true" hidden="" id="guides"><i></i><i></i><i></i><i></i></div>
+<div aria-hidden="true" hidden="" id="target"><span data-demo-readout="">Follow the bubble</span></div>
+<footer class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="Space · ↑↓←→ · Drag">Click / Space to blow bubbles · Drag / arrows to look around · Release for automatic handoff</footer>
+</main>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

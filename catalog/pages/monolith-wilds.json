@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "slug": "monolith-wilds",
+  "title": "Monolith Wilds",
+  "tagline": "可步行或飞行的荒原探索，展示程序化地形与电影导览镜头",
+  "category": "飞行探索",
+  "overview_video": "monolith-wilds/overview",
+  "examples": [
+    {
+      "id": "monolith-tour",
+      "title": "步行飞行与镜头交接",
+      "one_liner": "切换步行、飞行和自动导览，体验原版平滑镜头交接",
+      "candidate": "monolith-wilds.tour",
+      "title_en": "Walking, flying and camera handoffs",
+      "one_liner_en": "Switch between walking, flying and automatic tours with the original smooth camera handoffs."
+    },
+    {
+      "id": "monolith-terrain",
+      "title": "地形流式加载",
+      "one_liner": "飞越荒原，观察后台任务生成地形分块并随相机加载",
+      "candidate": "monolith-wilds.terrain",
+      "title_en": "Terrain streaming",
+      "one_liner_en": "Fly over the wasteland and watch background tasks generate terrain chunks that load around the camera."
+    }
+  ],
+  "tagline_en": "Explore a wasteland on foot or in flight, with procedural terrain and cinematic tour cameras."
+}

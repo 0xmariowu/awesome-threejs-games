@@ -1,0 +1,980 @@
+{
+  "source_path_note": "local ../webgame-lab (no remote)",
+  "source_commit": "c582289d71ef11b2ddbfa9664aa9ff62accd613c",
+  "dirty": true,
+  "dirty_files": [
+    "LICENSES.md",
+    "docs/catalog.md",
+    "index.html",
+    "scripts/inkwave-check.mjs",
+    "src/App.tsx",
+    "src/EmbedFrame.tsx",
+    "src/Menu.tsx",
+    "src/catalog.test.ts",
+    "src/catalog.ts",
+    "src/embed.css",
+    "src/embed.test.ts",
+    "src/embed.ts",
+    "src/inkwave/3C-DESIGN.md",
+    "src/inkwave/InkScene.tsx",
+    "src/inkwave/LICENSE",
+    "src/inkwave/PROVENANCE.json",
+    "src/inkwave/QA.md",
+    "src/inkwave/README.md",
+    "src/inkwave/UIGallery.tsx",
+    "src/inkwave/UPSTREAM-NOTICES.md",
+    "src/inkwave/assets/fonts/Rubik-OFL.txt",
+    "src/inkwave/assets/fonts/Rubik-latin.woff2",
+    "src/inkwave/assets/fonts/TitanOne-OFL.txt",
+    "src/inkwave/assets/fonts/TitanOne-latin.woff2",
+    "src/inkwave/content.ts",
+    "src/inkwave/inkwave.css",
+    "src/inkwave/reference-ui.css",
+    "src/inkwave/runtime/audio/audio.js",
+    "src/inkwave/runtime/audio/music.js",
+    "src/inkwave/runtime/config.js",
+    "src/inkwave/runtime/core/math.js",
+    "src/inkwave/runtime/demo.d.ts",
+    "src/inkwave/runtime/demo.js",
+    "src/inkwave/runtime/frameStats.js",
+    "src/inkwave/runtime/fx/fx.js",
+    "src/inkwave/runtime/fx/fxHooks.js",
+    "src/inkwave/runtime/game/actor.js",
+    "src/inkwave/runtime/game/bots.js",
+    "src/inkwave/runtime/game/cameraRig.js",
+    "src/inkwave/runtime/game/character-geo.js",
+    "src/inkwave/runtime/game/character-mats.js",
+    "src/inkwave/runtime/game/character-weapons.js",
+    "src/inkwave/runtime/game/character.js",
+    "src/inkwave/runtime/game/clipCharacter.js",
+    "src/inkwave/runtime/game/nav.js",
+    "src/inkwave/runtime/game/physics.js",
+    "src/inkwave/runtime/game/player.js",
+    "src/inkwave/runtime/game/weapons.js",
+    "src/inkwave/runtime/grade.js",
+    "src/inkwave/runtime/input.js",
+    "src/inkwave/runtime/motion/locomotion.js",
+    "src/inkwave/runtime/motion/springs.js",
+    "src/inkwave/runtime/skillSequence.js",
+    "src/inkwave/runtime/ui/menu-art.d.ts",
+    "src/inkwave/runtime/ui/menu-art.js",
+    "src/inkwave/runtime/ui/menus.d.ts",
+    "src/inkwave/runtime/ui/menus.js",
+    "src/inkwave/runtime/ui/ui-icons.js",
+    "src/inkwave/runtime/ui/ui-util.js",
+    "src/inkwave/runtime/world/bakeAO.js",
+    "src/inkwave/runtime/world/environment.js",
+    "src/inkwave/runtime/world/level.js",
+    "src/inkwave/runtime/world/levelMaterial.js",
+    "src/inkwave/runtime/world/paint.js",
+    "src/inkwave/runtime/world/props.js",
+    "src/inkwave/runtime/world/texlib.js",
+    "src/inkwave/source.test.js",
+    "src/inkwave/systems.test.ts",
+    "src/inkwave/systems.ts",
+    "src/inkwave/toolkit.test.js",
+    "src/scenes/flames.tsx",
+    "src/scenes/inkwave-3c.tsx",
+    "src/scenes/inkwave-ai.tsx",
+    "src/scenes/inkwave-audio.tsx",
+    "src/scenes/inkwave-combat.tsx",
+    "src/scenes/inkwave-diagnostics.tsx",
+    "src/scenes/inkwave-materials.tsx",
+    "src/scenes/inkwave-paint.tsx",
+    "src/scenes/inkwave-ui.tsx",
+    "src/scenes/inkwave-world.tsx",
+    "src/scenes/navcrowd.tsx",
+    "src/scenes/npc.tsx"
+  ],
+  "synced_at": "2026-09-27T14:28:59.133Z",
+  "excluded_files": [
+    "scripts/inkwave-audit.mjs"
+  ],
+  "files": [
+    {
+      "path": "LICENSES.md",
+      "bytes": 11477,
+      "sha256": "c7ba90c9bef9a080332060857b3b86973c40cc716e573e7b76fc36618e439037"
+    },
+    {
+      "path": "docs/catalog.md",
+      "bytes": 20425,
+      "sha256": "89d69c10f737806e74e465fb571d34a720f292baef10be25b4b71bf23ee87071"
+    },
+    {
+      "path": "index.html",
+      "bytes": 617,
+      "sha256": "2cf412384065fb04098f3566bfb60c51a947838c40c3ac98053d17a2b4b76e18"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 135950,
+      "sha256": "091af167e70721f42df5453a0dad92ab6527b3cc36059c954a7390f041e6d605"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1352,
+      "sha256": "9a07407a8e17c3186a07c4e4189f0173202818d6acebb8714529831a6d12522a"
+    },
+    {
+      "path": "public/assets/Fox.glb",
+      "bytes": 162852,
+      "sha256": "d97044e701822bac5a62696459b27d7b375aada5de8574ed4362edbba94771f7"
+    },
+    {
+      "path": "public/assets/ground/Ground037_1K-JPG_AmbientOcclusion.jpg",
+      "bytes": 612112,
+      "sha256": "8afe189ae915888551076cb279f6282c84255e4b2bdb2c4ce8c1c891074245ef"
+    },
+    {
+      "path": "public/assets/ground/Ground037_1K-JPG_Color.jpg",
+      "bytes": 2187764,
+      "sha256": "d92bec8a35b9cb16ec79b421ca0f572a7400286eae109beafa266629ef49a6cf"
+    },
+    {
+      "path": "public/assets/ground/Ground037_1K-JPG_NormalGL.jpg",
+      "bytes": 2474236,
+      "sha256": "ea59dbdcfa5bf2f28bdd4aa896d4e5f96c4cce5939100dcc6db4bbbcdebfe38d"
+    },
+    {
+      "path": "public/assets/ground/Ground037_1K-JPG_Roughness.jpg",
+      "bytes": 694944,
+      "sha256": "3786b088e981aae562f06b6477972d379cffd09a5cc542ab42f9ffd94f9bcb0e"
+    },
+    {
+      "path": "public/assets/kloofendal_48d_partly_cloudy_puresky_2k.hdr",
+      "bytes": 5451493,
+      "sha256": "5244534e9cf5b606f2ff513aa00ddb161b0a4826ffd88a0d3bd03ac29247d198"
+    },
+    {
+      "path": "public/assets/tree_default.glb",
+      "bytes": 9428,
+      "sha256": "562d29638c902de3c7bee465d3a53bb77117efbc392ae04ed894faf6b5dc691d"
+    },
+    {
+      "path": "scripts/capture-args.test.ts",
+      "bytes": 8665,
+      "sha256": "141638485f6eea3904fab2b39dcce58d30392f938698e2e85331969e07000006"
+    },
+    {
+      "path": "scripts/capture-args.ts",
+      "bytes": 6804,
+      "sha256": "e51caa43e3d8b108705c62f769bc22c229700c8e9e85bd67a2ab4df2a4f46e67"
+    },
+    {
+      "path": "scripts/capture.ts",
+      "bytes": 12225,
+      "sha256": "c88dc769539ca7714eb89f9e1e62e69d59c1aa6fa06bc30bbbc5916ba4a17a50"
+    },
+    {
+      "path": "scripts/fetch-assets.ts",
+      "bytes": 9689,
+      "sha256": "1539cfbf2b84fe5f93cc09befe77dfa5b2c1b1c8218cb7dac257aa8ba4f343be"
+    },
+    {
+      "path": "scripts/inkwave-check.mjs",
+      "bytes": 20629,
+      "sha256": "ced9163306110c197e9a77f29a8cb7b00c370db1db52dc1626fff6506ba3734b"
+    },
+    {
+      "path": "scripts/report.test.ts",
+      "bytes": 5505,
+      "sha256": "e1acae5012f089e4c1ef611c057652f46c5a6dff60ebc1ffb77872c6f61af77b"
+    },
+    {
+      "path": "scripts/report.ts",
+      "bytes": 17452,
+      "sha256": "1b90015c9bbba63a571d30d9a25352a9ade1734897623ff1c4d027f13f001c56"
+    },
+    {
+      "path": "src/App.tsx",
+      "bytes": 10724,
+      "sha256": "516c5f6c4663f20bf5be3bfa64afd4a02335792bc814d5eb60ec15fec9efc716"
+    },
+    {
+      "path": "src/EmbedFrame.tsx",
+      "bytes": 3416,
+      "sha256": "1b490f17f3fbcd9ffc496b84b49aa615189da10fa5094e288d98567cc2631bc2"
+    },
+    {
+      "path": "src/Menu.tsx",
+      "bytes": 5686,
+      "sha256": "655ec62dfc8b8ed963113ce44ea9828f95e412aaf690b072bdb4f7e4c3ebb96c"
+    },
+    {
+      "path": "src/catalog.test.ts",
+      "bytes": 2889,
+      "sha256": "712d9c4ff13098e893de977d938c906c877f92fd414e77bcd00228534bbde3f0"
+    },
+    {
+      "path": "src/catalog.ts",
+      "bytes": 14453,
+      "sha256": "85888870e46f58c5b3eb08bc7a30f49b94defd64e0c267383fd404dc23b04c7f"
+    },
+    {
+      "path": "src/embed.css",
+      "bytes": 8849,
+      "sha256": "e6c15905fa428e7bdaac51cf5ed4bc7a33108b201d21c4dfff089197a90c1331"
+    },
+    {
+      "path": "src/embed.test.ts",
+      "bytes": 4627,
+      "sha256": "ecffe0c7eb931b1a208ad4dd497c87f02435412fa4227568f413eda347f6dca2"
+    },
+    {
+      "path": "src/embed.ts",
+      "bytes": 4172,
+      "sha256": "5bd7642dd348d796cbe52f34636852af4e8d3cec66f430f5ad9ec5d4320d324e"
+    },
+    {
+      "path": "src/inkwave/3C-DESIGN.md",
+      "bytes": 7550,
+      "sha256": "8a192dda7d6ba8d52c1ebdc2e5dac9a677b492387bd3eae6e82a9d0235f03658"
+    },
+    {
+      "path": "src/inkwave/InkScene.tsx",
+      "bytes": 30044,
+      "sha256": "9ddc6547db988bc1c3515943bf0b8691af584a17839908835183a37497875c88"
+    },
+    {
+      "path": "src/inkwave/LICENSE",
+      "bytes": 1066,
+      "sha256": "8c09ee40d72139720037d3f640541f79e5be39f23ea8359eb02bf3b7d9d243b0"
+    },
+    {
+      "path": "src/inkwave/PROVENANCE.json",
+      "bytes": 8227,
+      "sha256": "b78f8fef8f8b4aa1cb9598702d15144bbe8d05ddb6ea9a451607bbd2ae0b8d64"
+    },
+    {
+      "path": "src/inkwave/QA.md",
+      "bytes": 16656,
+      "sha256": "d4b77897a2da480a10d6871a26669c94a6c0244cfae73aca2e581bb462cab39a"
+    },
+    {
+      "path": "src/inkwave/README.md",
+      "bytes": 15530,
+      "sha256": "c9d74216e54f617313e35cf1a2ee19a3190f3b341a43e68a8aba7fe8a32742b9"
+    },
+    {
+      "path": "src/inkwave/UIGallery.tsx",
+      "bytes": 5267,
+      "sha256": "f08df02fbc4999b87baae91a40717cee33c3a2add1b36b26eed2e4e1bc685a14"
+    },
+    {
+      "path": "src/inkwave/UPSTREAM-NOTICES.md",
+      "bytes": 1439,
+      "sha256": "6952b83822e4963dfe0da455d79ded902214598375058e8963e35ca34eaabbec"
+    },
+    {
+      "path": "src/inkwave/assets/fonts/Rubik-OFL.txt",
+      "bytes": 4384,
+      "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb"
+    },
+    {
+      "path": "src/inkwave/assets/fonts/Rubik-latin.woff2",
+      "bytes": 35324,
+      "sha256": "99ec7ccb40cf143f977c893649deece6cc2dcc7c0ff82ebf84b6584090f207ea"
+    },
+    {
+      "path": "src/inkwave/assets/fonts/TitanOne-OFL.txt",
+      "bytes": 4418,
+      "sha256": "61be7c29f4835e2be7243db12213d75d53ff028f29f4b493212a1688b1d3a1ba"
+    },
+    {
+      "path": "src/inkwave/assets/fonts/TitanOne-latin.woff2",
+      "bytes": 10732,
+      "sha256": "f5f3f60e9246f7e78242697ef18f1fa78467dc4135312208b693e33678e78c4c"
+    },
+    {
+      "path": "src/inkwave/content.ts",
+      "bytes": 4657,
+      "sha256": "e8d27800341e57b2489a8131ca59f0d1fa4a85d937f217ca633858a88c616c40"
+    },
+    {
+      "path": "src/inkwave/inkwave.css",
+      "bytes": 9010,
+      "sha256": "301ca328eb0e874b5b3c37b5dd7199397a4098738669b9b274f063a5f58128bd"
+    },
+    {
+      "path": "src/inkwave/reference-ui.css",
+      "bytes": 129192,
+      "sha256": "6c7e1286ad0e9929c00fba184ab94fcacc67ef2273c516c0d9c9e120718888ab"
+    },
+    {
+      "path": "src/inkwave/runtime/audio/audio.js",
+      "bytes": 54099,
+      "sha256": "f96d42d8d2181cf3cb341e4b15248375255a6503fa864c9dd854a99750660dd9"
+    },
+    {
+      "path": "src/inkwave/runtime/audio/music.js",
+      "bytes": 58592,
+      "sha256": "318eb1f8739840f84844c910fe601bc69f9ce413ec9c7b0431424d75023456bc"
+    },
+    {
+      "path": "src/inkwave/runtime/config.js",
+      "bytes": 10540,
+      "sha256": "e24469eeab1cc7451eb779b9a2072456b8c6b0845b69fa09ac129309801fa8dc"
+    },
+    {
+      "path": "src/inkwave/runtime/core/math.js",
+      "bytes": 1121,
+      "sha256": "a702350e5ed9bb91563379baf65598c6a17b3c937f8f506c9bba5bde5c231c1f"
+    },
+    {
+      "path": "src/inkwave/runtime/demo.d.ts",
+      "bytes": 479,
+      "sha256": "92c6c3b2d8d337f0f8e6791daf748254af7d5c3cac896fb6ded1861a25bf7b05"
+    },
+    {
+      "path": "src/inkwave/runtime/demo.js",
+      "bytes": 28692,
+      "sha256": "22b4d2070e6b8ac40fdd45cb208e2a8fd5ee89068a8d1c7c75fd4086cb6459b9"
+    },
+    {
+      "path": "src/inkwave/runtime/frameStats.js",
+      "bytes": 799,
+      "sha256": "f97dadfef171ac2a2a5ee9262160a45eca9942445c9ed0d6639e2b718626daa0"
+    },
+    {
+      "path": "src/inkwave/runtime/fx/fx.js",
+      "bytes": 108304,
+      "sha256": "415e6fca8949fa4cf61daaf142cd8453ea950bcc975f5cbc3165dfc6a71673b9"
+    },
+    {
+      "path": "src/inkwave/runtime/fx/fxHooks.js",
+      "bytes": 30615,
+      "sha256": "6881e2475e5b6da2a040995587de3f7b492a368387ff8bd97b654e36be386b8c"
+    },
+    {
+      "path": "src/inkwave/runtime/game/actor.js",
+      "bytes": 39920,
+      "sha256": "6f3acaa2ea230cc70159ab5e2bd6839593eb38bfbcca713b869bc9a1391f2743"
+    },
+    {
+      "path": "src/inkwave/runtime/game/bots.js",
+      "bytes": 23670,
+      "sha256": "02465fe33359c36aa2003ab270d80e7047aa74e73a038f92352d0f11dd691c48"
+    },
+    {
+      "path": "src/inkwave/runtime/game/cameraRig.js",
+      "bytes": 19256,
+      "sha256": "60c1ca8c63d1f0522bd47bbb86e3f57c79e8cd27bf7467c280fd4c6f6420b113"
+    },
+    {
+      "path": "src/inkwave/runtime/game/character-geo.js",
+      "bytes": 102578,
+      "sha256": "0ade326a62fe4c88d7ff3147e0941c9e61d87b64645426b849cb2fa054f605ef"
+    },
+    {
+      "path": "src/inkwave/runtime/game/character-mats.js",
+      "bytes": 63845,
+      "sha256": "31abb9eb4f8813736667993f668217f2871677a17b81451790efd472ded17591"
+    },
+    {
+      "path": "src/inkwave/runtime/game/character-weapons.js",
+      "bytes": 31170,
+      "sha256": "e5c2f0d523f4541807469d4e4b779fe167f78cf938428b0fd0bfecb5bb437b63"
+    },
+    {
+      "path": "src/inkwave/runtime/game/character.js",
+      "bytes": 143705,
+      "sha256": "eaf36de36dac2ab9c6d57c97d21eaeeaa4876f6e5060fef2428df5378dafe1c3"
+    },
+    {
+      "path": "src/inkwave/runtime/game/clipCharacter.js",
+      "bytes": 2616,
+      "sha256": "3655b5afa060ffb5e2ce73adfbe7617e72112d98a26d1537ab71e07fe00c7619"
+    },
+    {
+      "path": "src/inkwave/runtime/game/nav.js",
+      "bytes": 8255,
+      "sha256": "7dc3ba0cb2c2b24f495ec5855ce4c0ba4ece26d57cd3aa39e2296617e6a8053c"
+    },
+    {
+      "path": "src/inkwave/runtime/game/physics.js",
+      "bytes": 17069,
+      "sha256": "a46160162d312b2920cdf6967e50fc382ecb61929afa93a2b5fa06966b3105df"
+    },
+    {
+      "path": "src/inkwave/runtime/game/player.js",
+      "bytes": 9920,
+      "sha256": "d9d3400dc6e14f5f6fee61dd1c6289087b14469e6857281761395328cce083cd"
+    },
+    {
+      "path": "src/inkwave/runtime/game/weapons.js",
+      "bytes": 42682,
+      "sha256": "d421f0b6bcf586c352f8a031d562217c93356486863714946cdf4e2b50811638"
+    },
+    {
+      "path": "src/inkwave/runtime/grade.js",
+      "bytes": 2606,
+      "sha256": "ad3808511d7eb1c667b0d03c76a453eaa58625b7d7deb49930e0ed9f02cae9ce"
+    },
+    {
+      "path": "src/inkwave/runtime/input.js",
+      "bytes": 3901,
+      "sha256": "7e6bfb037bf3fa7b0092e04165619f821a46c5cc4f19a712858547468190470f"
+    },
+    {
+      "path": "src/inkwave/runtime/motion/locomotion.js",
+      "bytes": 4307,
+      "sha256": "2fdf863fec18e77db37eddc18a39df0261c97b3d5573592d42bbdad37b9ddab3"
+    },
+    {
+      "path": "src/inkwave/runtime/motion/springs.js",
+      "bytes": 1046,
+      "sha256": "b851e52056e30044b1c1d5ca12a7de2a7df7449b197c2942c3558624514f1767"
+    },
+    {
+      "path": "src/inkwave/runtime/skillSequence.js",
+      "bytes": 1305,
+      "sha256": "0304f7e72c1dedb7a1b6c53070736283c7c155bb1cfc48d7b77f6dffa37dd4d8"
+    },
+    {
+      "path": "src/inkwave/runtime/ui/menu-art.d.ts",
+      "bytes": 311,
+      "sha256": "4575daddfaa99f77bd597cbf8ae9f6a00b2a17f69eda801b65746d37913ad683"
+    },
+    {
+      "path": "src/inkwave/runtime/ui/menu-art.js",
+      "bytes": 53824,
+      "sha256": "6cf1c0d8221b9cd12f3a74c8fa4a3afb79c1d3f34cee4a3121da031bd20aa2fe"
+    },
+    {
+      "path": "src/inkwave/runtime/ui/menus.d.ts",
+      "bytes": 496,
+      "sha256": "b3d38f0eb2e44f5dcedf12345c21200033ad8735a1347fb56315373f4da4c415"
+    },
+    {
+      "path": "src/inkwave/runtime/ui/menus.js",
+      "bytes": 100980,
+      "sha256": "180f13e62dc7b370117b331948091e9cd266ce4f8c75be8c6660e2ccf4d78293"
+    },
+    {
+      "path": "src/inkwave/runtime/ui/ui-icons.js",
+      "bytes": 25721,
+      "sha256": "ab867b011215f544d745e6a161aa82952f42637b07f3813408a325717b10f892"
+    },
+    {
+      "path": "src/inkwave/runtime/ui/ui-util.js",
+      "bytes": 10205,
+      "sha256": "7d1db17a1b17a5e5144a185429eef5d0b4a60f36d7aabe35df0083f41a83b103"
+    },
+    {
+      "path": "src/inkwave/runtime/world/bakeAO.js",
+      "bytes": 2388,
+      "sha256": "fd3610f94f68239b334cadf5a0f2c19230567fa6d18faffdc228603546c23031"
+    },
+    {
+      "path": "src/inkwave/runtime/world/environment.js",
+      "bytes": 109814,
+      "sha256": "bc8c595cf1df617a24be0de900c02940b474259703c3bd8d0ca076dfbfc78feb"
+    },
+    {
+      "path": "src/inkwave/runtime/world/level.js",
+      "bytes": 19983,
+      "sha256": "761333f256d4ba6026ca8ff86db3a0b37cc4e4e82d45bd1a2bdafcb9813532ea"
+    },
+    {
+      "path": "src/inkwave/runtime/world/levelMaterial.js",
+      "bytes": 34334,
+      "sha256": "e1e51051cc163d831bb2fe3ef3e8df233592ba30fb9b69c3fa05008b114acaeb"
+    },
+    {
+      "path": "src/inkwave/runtime/world/paint.js",
+      "bytes": 22268,
+      "sha256": "fe3aca4680e7c7a361bf732489275a381c346e0d0f50365847d70f2c2fb89dca"
+    },
+    {
+      "path": "src/inkwave/runtime/world/props.js",
+      "bytes": 228102,
+      "sha256": "bd08c2c1959971ebf5dacb02a2d7f9f2b8316d2f50c950a10960d6f525acddf5"
+    },
+    {
+      "path": "src/inkwave/runtime/world/texlib.js",
+      "bytes": 45068,
+      "sha256": "bc5ab2fa64d9c3b975c71473700bcfed0fc5636963bfb10a962109320c286d98"
+    },
+    {
+      "path": "src/inkwave/source.test.js",
+      "bytes": 3754,
+      "sha256": "80e63bbc7c3b613f952051b16f851d8a49716f6c209be9206dba6a738e6d0b59"
+    },
+    {
+      "path": "src/inkwave/systems.test.ts",
+      "bytes": 3247,
+      "sha256": "b4b3bfb6d16ac521965ed802f0df086f0f3427c5675f73091863236ac0adaecf"
+    },
+    {
+      "path": "src/inkwave/systems.ts",
+      "bytes": 5354,
+      "sha256": "ff1e113fe5bff09ee53b3f4c6a3798beba0fae2a5fb383ab0481f90e6a900a45"
+    },
+    {
+      "path": "src/inkwave/toolkit.test.js",
+      "bytes": 2794,
+      "sha256": "a3e477805b64af0d84be3aa24bc8ee10f1694d06180d48e87c65c39a2634a55f"
+    },
+    {
+      "path": "src/lab.test.ts",
+      "bytes": 5364,
+      "sha256": "277f8bb29ef45cd21b658a97ec9fd30fe346f13f16aa86894101323a94760685"
+    },
+    {
+      "path": "src/lab.ts",
+      "bytes": 2277,
+      "sha256": "596b06d01884d20c1bf21ee880709841cbbd1eb19e2358e3d7a51ed7b6921167"
+    },
+    {
+      "path": "src/main.tsx",
+      "bytes": 233,
+      "sha256": "6d630d1cd4252fe93d616136f5ca4c13e9c1d5a9e12dc3327ebf9d036400eff7"
+    },
+    {
+      "path": "src/renderer.test.ts",
+      "bytes": 4436,
+      "sha256": "992dcd1c6164f051570f0553cf18270187a0eeda1abbc179b12aff6c765a58d9"
+    },
+    {
+      "path": "src/renderer.ts",
+      "bytes": 2150,
+      "sha256": "7a61307bcb3fa2b0775a5e8d3352e7e382eb7fd4a0892269a3329b812cf38764"
+    },
+    {
+      "path": "src/scenes/atmosphere.tsx",
+      "bytes": 11906,
+      "sha256": "6d462718f40550eef7fb737412a0494417947c9b62bebb8a85dab929c30728bd"
+    },
+    {
+      "path": "src/scenes/birds.tsx",
+      "bytes": 15436,
+      "sha256": "31e8a05ec7ad6652dd9786d3bfdbc2009c2105fa96dc0f505e0a8649e37be767"
+    },
+    {
+      "path": "src/scenes/boot.tsx",
+      "bytes": 917,
+      "sha256": "35d620ec39ad2f0f5c9363142a9839e458d0145cac4c48839237792964250348"
+    },
+    {
+      "path": "src/scenes/cloth.tsx",
+      "bytes": 19508,
+      "sha256": "7678e40ef8473728d952e1bb5722558c448141b388b9201cf364604fb2d4226a"
+    },
+    {
+      "path": "src/scenes/cloudkeep-cam.tsx",
+      "bytes": 8056,
+      "sha256": "5118eb1e517af7750b12faa76280a81bb1608e6e6edf5d5f2c24eba1bdfc919c"
+    },
+    {
+      "path": "src/scenes/crowd.tsx",
+      "bytes": 10772,
+      "sha256": "7e294a6e94601f93e6e7d3c1ed0c46e8ed47cb05e0300e40f6f6d30927ad89e8"
+    },
+    {
+      "path": "src/scenes/destruct.tsx",
+      "bytes": 10275,
+      "sha256": "bcef98ddacb18bc171d44f7a3843683d75646b3eff985778dcedfbddb2049307"
+    },
+    {
+      "path": "src/scenes/drive.tsx",
+      "bytes": 6581,
+      "sha256": "989b804426ff0f5757d330e4475815e2396c99b8f518fc3ee35ea38b3bee6d7e"
+    },
+    {
+      "path": "src/scenes/drone.tsx",
+      "bytes": 10213,
+      "sha256": "d2f6c720657ed11892d35341c30b1bbaadad0ca4fb6a43121a767588583c48df"
+    },
+    {
+      "path": "src/scenes/feel-cam.tsx",
+      "bytes": 2486,
+      "sha256": "8b1df9244c799374853e357a2778c344db0c9d3d0e38504943c6f8ebcd9987c2"
+    },
+    {
+      "path": "src/scenes/feel.tsx",
+      "bytes": 9226,
+      "sha256": "430245b2ff6977f73f2348e47ee23f4f836a05fe47fdca8ffc0bbca204a65487"
+    },
+    {
+      "path": "src/scenes/flames.tsx",
+      "bytes": 9835,
+      "sha256": "db8fc847670f3d190756a0fd684ebd0f71881da653ae07463fdf656c8a443cd6"
+    },
+    {
+      "path": "src/scenes/fog.tsx",
+      "bytes": 5355,
+      "sha256": "02923c79b621956477491e59fddac1d367665f2ebaf569317bebadc357735001"
+    },
+    {
+      "path": "src/scenes/inkwave-3c.tsx",
+      "bytes": 109,
+      "sha256": "3a08f9c06c4eceb3e81dc52acfc9dba3e535275518564779105aea6ef7f01799"
+    },
+    {
+      "path": "src/scenes/inkwave-ai.tsx",
+      "bytes": 109,
+      "sha256": "08416f5900b1bc0939f98af90514d5aa3afb66a554e83f84f18ffca322028cdc"
+    },
+    {
+      "path": "src/scenes/inkwave-audio.tsx",
+      "bytes": 112,
+      "sha256": "aceb21044e4eaa759fe7c4ef6c0962c3b7b29211d8fc280f75ccaf49a5fb0127"
+    },
+    {
+      "path": "src/scenes/inkwave-combat.tsx",
+      "bytes": 113,
+      "sha256": "ac298c728880cea8cf00747b0122510755c707da018a0575118d192073f2e06d"
+    },
+    {
+      "path": "src/scenes/inkwave-diagnostics.tsx",
+      "bytes": 118,
+      "sha256": "835d210fbc38bcb88ed65f5fb7f59a4ee995a0d9c61663b96a93aba14bd579d6"
+    },
+    {
+      "path": "src/scenes/inkwave-materials.tsx",
+      "bytes": 116,
+      "sha256": "ddd4f4e307554738ce24ddb72f5732bb81781569389bd33524ab13a4f8b7733a"
+    },
+    {
+      "path": "src/scenes/inkwave-paint.tsx",
+      "bytes": 112,
+      "sha256": "37a3c052a6e7f053b99a380e9d6936ecd5d49e238b72bc46a5285117b3d60e45"
+    },
+    {
+      "path": "src/scenes/inkwave-ui.tsx",
+      "bytes": 109,
+      "sha256": "ed7753f448f65e45363c1d7099d0e5925f658e122b0ed4ae5572135fe11f8eaa"
+    },
+    {
+      "path": "src/scenes/inkwave-world.tsx",
+      "bytes": 112,
+      "sha256": "d430a3a116c507f6e8faf839de1e3d85ff89ed5db4aff0b1bfda7d7e4f12021b"
+    },
+    {
+      "path": "src/scenes/lightning.tsx",
+      "bytes": 31835,
+      "sha256": "4e19f9f4c60dee2109a21bb7c501509c2411c51ba7a57dead34165db0e2ec0a5"
+    },
+    {
+      "path": "src/scenes/look-post.tsx",
+      "bytes": 6038,
+      "sha256": "c28ecfb41340d6ea2be60479cfc263833d41c6f9d1c2e8e8ea63f94dcb52e9e3"
+    },
+    {
+      "path": "src/scenes/look-presets.tsx",
+      "bytes": 4896,
+      "sha256": "9aeb9ae1fcb0fae6a84c63741fe1ec7a84a06876b186f912513dc82fc7355f8a"
+    },
+    {
+      "path": "src/scenes/look.tsx",
+      "bytes": 6271,
+      "sha256": "9d4c94cb80ebcbf69090b15950f922dd39a9ad8cfaf16de579c0ac62435c4f78"
+    },
+    {
+      "path": "src/scenes/lut.tsx",
+      "bytes": 7277,
+      "sha256": "f264ca62545a9a5fb624d1fb57e8f850b4bf1ed8079eba7192259fcfe14c04f0"
+    },
+    {
+      "path": "src/scenes/motion-blur.tsx",
+      "bytes": 3261,
+      "sha256": "0c2cce82311230719b03777c93af41e956b319eb207097b7eecf02adfdfa3a50"
+    },
+    {
+      "path": "src/scenes/navcrowd.tsx",
+      "bytes": 14149,
+      "sha256": "88dae806657115719990864548fd6c6159f5488ff0c3298e04cbfb592a283f21"
+    },
+    {
+      "path": "src/scenes/npc.tsx",
+      "bytes": 10782,
+      "sha256": "244040113155764b1c45fde720a4a0a9291c600a0d7f8042225ee69b3fea3982"
+    },
+    {
+      "path": "src/scenes/ocean.tsx",
+      "bytes": 8689,
+      "sha256": "c57d16016fc5945e6030385700c3b02887fa5e9463092a0d8994caded5ea4ce1"
+    },
+    {
+      "path": "src/scenes/planet.tsx",
+      "bytes": 14791,
+      "sha256": "1e4ff00aca4ebbbbf1f56b4958c58b999ffe91560ba1c6dd0ea2784b4c86a8d3"
+    },
+    {
+      "path": "src/scenes/plants.tsx",
+      "bytes": 10543,
+      "sha256": "91188b531a2c326a095e218c6fca2eb06fff2a9d24734d0ac2b56354f8d962ce"
+    },
+    {
+      "path": "src/scenes/pool.tsx",
+      "bytes": 9412,
+      "sha256": "389eaa8932d6b63c677718fbc9ff3d54c9e40a718e2999ecc6831b10e6243753"
+    },
+    {
+      "path": "src/scenes/quarks.tsx",
+      "bytes": 23321,
+      "sha256": "28fe94d65b7af26161691c000dd65537c7e715e5b7468dcb8e6e0b86e2119192"
+    },
+    {
+      "path": "src/scenes/rain.tsx",
+      "bytes": 11841,
+      "sha256": "5654b5c89c8a8ebdb8e5efbc3282d9c20915b6f7bc7fbced6b6013b792e5d3fa"
+    },
+    {
+      "path": "src/scenes/retarget.tsx",
+      "bytes": 9430,
+      "sha256": "101b7bce20663317c4033aee622c94c3ccd4b51bbc1db22c9c941790d99f31d4"
+    },
+    {
+      "path": "src/scenes/ropes.tsx",
+      "bytes": 12324,
+      "sha256": "935d5a3b6da8d25091ebc9528db6402316f0499da65aba3ad2dd06ac6db44545"
+    },
+    {
+      "path": "src/scenes/shallow.tsx",
+      "bytes": 9870,
+      "sha256": "fb83fc93b23c2dc54b321479c7a3e3fee195260fbfc1c0e82a1d123afbf9192a"
+    },
+    {
+      "path": "src/scenes/sky.tsx",
+      "bytes": 10092,
+      "sha256": "3fa675c318f102f9fb149ac5a45ea3f7c67bf870e326fc279175aa93dc51076c"
+    },
+    {
+      "path": "src/scenes/ssgi.tsx",
+      "bytes": 7950,
+      "sha256": "f278dc1548efa5f1b9ec9473e32263d5d13cf0853bc0a8c291cc8c35ce3de191"
+    },
+    {
+      "path": "src/scenes/tank-cam.tsx",
+      "bytes": 12290,
+      "sha256": "8e749fe19bfb0bbd75dc785462fcf2d031e8f0745dfa81e9154fad6c56ba5b17"
+    },
+    {
+      "path": "src/scenes/trees.tsx",
+      "bytes": 8557,
+      "sha256": "e8edca7a8d127509cacc5ddf5d90258a41f1ab153ab34a01baa28bc3ed2c755f"
+    },
+    {
+      "path": "src/scenes/volume-cloud.tsx",
+      "bytes": 7443,
+      "sha256": "1c08f7965895f6e647130c2c1940b5938a37bb66463a97b4f867b5dabf1fc4ee"
+    },
+    {
+      "path": "src/scenes/volume-fire.tsx",
+      "bytes": 55188,
+      "sha256": "054e086728ccaaa5e956cd8dfadccd4cff7e7d9eb5d41ba1562939c88cc2036a"
+    },
+    {
+      "path": "src/vendor/seedthree/LICENSE",
+      "bytes": 1066,
+      "sha256": "5a72dfb2ced9d5f11ef95116b8af4b7c191cfd6bb2c011c9c0c89770067b71bf"
+    },
+    {
+      "path": "src/vendor/seedthree/api/seedthree.d.ts",
+      "bytes": 1199,
+      "sha256": "60ae2b3c77e8b8f47c4c4a247248f76ca5c009cace0e272cbb40ff0252c15808"
+    },
+    {
+      "path": "src/vendor/seedthree/api/seedthree.js",
+      "bytes": 31621,
+      "sha256": "c6757ea2bd1765c1ffc19a57e84acaef9dcee663490749f072eb45632a73e750"
+    },
+    {
+      "path": "src/vendor/seedthree/core/branch-cards.js",
+      "bytes": 42920,
+      "sha256": "423d365d9527d387ec6b4ab26980ef546ca702cb27f55dda988eb7fbb9ba7d14"
+    },
+    {
+      "path": "src/vendor/seedthree/core/branch-mesh.js",
+      "bytes": 11557,
+      "sha256": "a5e6db66e63c295d371e1872224296f05155ae622981674c700d624a87e9634a"
+    },
+    {
+      "path": "src/vendor/seedthree/core/cactus-spines.js",
+      "bytes": 9743,
+      "sha256": "6180a5e1cdd4bb05c0543dea15ba9e7cee21425dc0388be61753c8fa519370d3"
+    },
+    {
+      "path": "src/vendor/seedthree/core/dichotomous.js",
+      "bytes": 40240,
+      "sha256": "9e0e3527e3de23301c969a0f25adbe677f1a6365f46075326938681bd35c501d"
+    },
+    {
+      "path": "src/vendor/seedthree/core/fruit.js",
+      "bytes": 7820,
+      "sha256": "697b3eeb337554a214f22f7337e2baf783c3f432f8f5d5f63a0d6e818df53824"
+    },
+    {
+      "path": "src/vendor/seedthree/core/impostor.js",
+      "bytes": 20695,
+      "sha256": "6370b07e9a2f3964379fc80584e3c3b2e0de6e46ae79f32d5db068cec78939c0"
+    },
+    {
+      "path": "src/vendor/seedthree/core/leaf-cards.js",
+      "bytes": 20567,
+      "sha256": "85e921d98a0ac0b419baefe3395a274494d2cb9d3317ac6f7d8b5b9dcb06e9ea"
+    },
+    {
+      "path": "src/vendor/seedthree/core/rng.js",
+      "bytes": 1997,
+      "sha256": "2a48ca143befd0b3dee514c8fffa5623636a3643da1fe641444d65c572e68e44"
+    },
+    {
+      "path": "src/vendor/seedthree/core/tree.js",
+      "bytes": 58008,
+      "sha256": "d3dff9e72f8b11fbac7a8b0c3533aca8f6894d10dee02d71129f1e291e7c7a17"
+    },
+    {
+      "path": "src/vendor/seedthree/core/weber-penn.js",
+      "bytes": 28298,
+      "sha256": "6f6faf1735abf808e8043a9b9fb3290f59168610c54d8f445c98b8970362dbe4"
+    },
+    {
+      "path": "src/vendor/seedthree/core/willow-curtains.js",
+      "bytes": 14291,
+      "sha256": "d437ede27ec73e5edd88b38be808f3afcd6ce6715d3af9e9c86e95a39fe5a5cc"
+    },
+    {
+      "path": "src/vendor/seedthree/core/wind.js",
+      "bytes": 11294,
+      "sha256": "0e7371e6076a1788cb25b2891366f37551eedc08fd3cb6567fecb93b99710d0c"
+    },
+    {
+      "path": "src/vendor/seedthree/core/yucca-leaves.js",
+      "bytes": 32330,
+      "sha256": "2c884d2dced73f4a4e752af201d9af2d10d0f3ca2cd8be85bedc8dcb4820ab6a"
+    },
+    {
+      "path": "src/vendor/seedthree/species/american-beech.js",
+      "bytes": 3294,
+      "sha256": "78af5bce47cdc57c4ac9b6786d384ebe0ddad2f3aee28526b902f9eecf6ec716"
+    },
+    {
+      "path": "src/vendor/seedthree/species/american-sycamore.js",
+      "bytes": 2993,
+      "sha256": "e4a9e9c2a55186b4b89e88a0182e9a7c80b5624820d097d9009aa9639a64506b"
+    },
+    {
+      "path": "src/vendor/seedthree/species/apple.js",
+      "bytes": 3422,
+      "sha256": "aeca222d08a905868e1c62eb3d5e57bb8a170b8de2afb57d3524f916c7ed0115"
+    },
+    {
+      "path": "src/vendor/seedthree/species/blackbrush.js",
+      "bytes": 4774,
+      "sha256": "c41ed02e14d1cbfee9e81c04083b51d0577f4726478839b4977393dcb540da60"
+    },
+    {
+      "path": "src/vendor/seedthree/species/broadleaf-controls.js",
+      "bytes": 1908,
+      "sha256": "4b9225ecdce813e639c66a25e142e0f3090ea890047299906cfd2d17bc1206fc"
+    },
+    {
+      "path": "src/vendor/seedthree/species/cherry.js",
+      "bytes": 2804,
+      "sha256": "781f4dda1f80478732ab3dd6944afc69bfc52b3a553040583424a99ab46d9359"
+    },
+    {
+      "path": "src/vendor/seedthree/species/creosote.js",
+      "bytes": 4474,
+      "sha256": "b0be3f65783f3a1ecee5e8a80fbaa55a7d335ddc2d0ee5b90228f21c627048e6"
+    },
+    {
+      "path": "src/vendor/seedthree/species/douglas-fir.js",
+      "bytes": 1726,
+      "sha256": "5c0053fa6563a3fa8010b6079b3172f638aa00b6749c6ef76adf574acb07c85e"
+    },
+    {
+      "path": "src/vendor/seedthree/species/flowering-dogwood.js",
+      "bytes": 3262,
+      "sha256": "0ba36c6803bc103815e2d32b9947071be8ccc263f4ff3a399644c8d0496997c2"
+    },
+    {
+      "path": "src/vendor/seedthree/species/index.js",
+      "bytes": 1334,
+      "sha256": "827e52071ed8480ad70fefd872b33c2f85d47828b70920e02b9d76e9c6b62d90"
+    },
+    {
+      "path": "src/vendor/seedthree/species/joshua-tree.js",
+      "bytes": 5835,
+      "sha256": "a7e580b427f7d4f0a1b0168f624a82ddc832cfc45121d60d937906087e81dde8"
+    },
+    {
+      "path": "src/vendor/seedthree/species/loblolly.js",
+      "bytes": 1648,
+      "sha256": "8639a839490e33c820b10fe514ebc89546927e9f2ab1dfd99f4e533b21e482e3"
+    },
+    {
+      "path": "src/vendor/seedthree/species/paper-birch.js",
+      "bytes": 2331,
+      "sha256": "a90987f5e1bc43748bbb7bd8a07eda133c80f632caf83e44b8911fb20aa64f69"
+    },
+    {
+      "path": "src/vendor/seedthree/species/pine.js",
+      "bytes": 2217,
+      "sha256": "5b9a6c6efde9a85eb55318aa60bf38caeeb09d3fb18dd7e9cc9a3a7dc0b4fffb"
+    },
+    {
+      "path": "src/vendor/seedthree/species/quaking-aspen.js",
+      "bytes": 2257,
+      "sha256": "ca82ac8fffa6967e969a5400c3fbee7c683a1aafebc12c44566761c8c789e4b3"
+    },
+    {
+      "path": "src/vendor/seedthree/species/red-maple.js",
+      "bytes": 1747,
+      "sha256": "306d09e3a4514ec615a054b74505765938ff0cc1da929237cb716c4beda6c22a"
+    },
+    {
+      "path": "src/vendor/seedthree/species/sagebrush.js",
+      "bytes": 3998,
+      "sha256": "c7c9c933d37c286e7f62ff6caed23556849982a0a6fb32db5dbbd0835040d1c2"
+    },
+    {
+      "path": "src/vendor/seedthree/species/saguaro.js",
+      "bytes": 8037,
+      "sha256": "1e13339bd3fc4d2b483cb532ed80bb009efa06344145fa06b3df6a680b0a17e7"
+    },
+    {
+      "path": "src/vendor/seedthree/species/sweetgum.js",
+      "bytes": 2068,
+      "sha256": "e5335efaf1b81522ea2b4766fb8c5da5fb865e86648042a3228310728bac1b40"
+    },
+    {
+      "path": "src/vendor/seedthree/species/tulip-poplar.js",
+      "bytes": 1807,
+      "sha256": "e2a13468d24bb6204448594917204d31d8ac5813d673d5aea69217065aef16b2"
+    },
+    {
+      "path": "src/vendor/seedthree/species/weeping-willow.js",
+      "bytes": 4980,
+      "sha256": "fafe5960e18a8b027319cbf54f8223948d0667f5ea3a23a4ac9693f551571959"
+    },
+    {
+      "path": "src/vendor/seedthree/species/white-oak.js",
+      "bytes": 3775,
+      "sha256": "e87fe35fff259f96e5274eb6925d28910219499f7e384b527e7483a494db35d5"
+    },
+    {
+      "path": "src/vendor/seedthree/ui/controls.js",
+      "bytes": 26981,
+      "sha256": "53ef5b0b9da85fe5417bb6a646247d5552620a16d06f020fcac727669c56c74e"
+    },
+    {
+      "path": "src/vendor/seedthree/ui/panel-fx.js",
+      "bytes": 4047,
+      "sha256": "480454b445749b3a92d0e7b9b7750e21a96b8cd86381cc83d0617dce9fe8d703"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 339,
+      "sha256": "efa87daa00a57258f325a3f5bde9cbb94db48f97b3f24c6699ecfcf059cb4d16"
+    },
+    {
+      "path": "vite.config.ts",
+      "bytes": 182,
+      "sha256": "dc2120be381dafadb54748e0d6d8c4806966b5e61f5b073754fdb07e12d7382f"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+body { color: #f3f2df; background: #243d43; font: 14px/1.5 system-ui, sans-serif; }
+#world, #world canvas { display: block; width: 100%; height: 100%; outline: none; }
+header { position: absolute; top: 22px; left: 26px; pointer-events: none; text-shadow: 0 2px 8px #142f34; }
+h1 { font-size: 20px; margin: 0 0 5px; font-weight: 600; }
+output { font-variant-numeric: tabular-nums; }
+nav { position: absolute; right: 24px; top: 22px; display: flex; gap: 8px; }
+button { background: #18363bea; border: 1px solid #6b8585; border-radius: 5px; color: inherit; font: inherit; padding: 7px 12px; cursor: pointer; }
+button[aria-pressed=true] { border-color: #b2e1cc; }
+button:focus-visible { outline: 2px solid #ffdb89; outline-offset: 3px; }
+#map { position: absolute; top: 76px; right: 24px; width: 220px; height: 220px; border: 1px solid #77918b; border-radius: 4px; background: #102c31df; pointer-events: none; }
+#map[hidden] { display: none; }
+#hint { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); margin: 0; white-space: nowrap; background: #123038e8; padding: 7px 14px; border-radius: 5px; font-size: 13px; pointer-events: none; }
+#reticle { position: absolute; color: #ffe097; font-size: 32px; transform: translate(-50%, -50%); pointer-events: none; text-shadow: 0 0 5px #322200; }
+@media (max-width: 700px) { header { top: 12px; left: 14px; } h1 { font-size: 16px; } nav { right: 12px; top: 12px; } #map { right: 12px; top: 62px; width: 130px; height: 130px; } #hint { font-size: 10px; padding: 6px; } }
+/* The diagram's pale symbols need their original dark drawing surface. */
+html.demo-frame canvas#map[data-demo-control] { background: #2F484D !important; }

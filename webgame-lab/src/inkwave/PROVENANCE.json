@@ -1,0 +1,168 @@
+{
+  "source": "0xmariowu/inkwave",
+  "revision": "11ce48547980b70c26354b7d6b6bc8a15da87351",
+  "license": "MIT",
+  "files": [
+    {
+      "source": "src/world/paint.js",
+      "sha256": "fd90c2ace5e1d46774b8c670c0662b260aeda619ea6ad7abd49cb43d96a8b91c",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/world/texlib.js",
+      "sha256": "170c393b2d39c90728f6e6919175219bfed47d1b5405bb3e526065dc71e9f1f8",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/game/physics.js",
+      "sha256": "69cef214461935a77ec3a167b70d50fd0e35a953334cd837ab9b8c037da5bb48",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/game/character-geo.js",
+      "sha256": "6494f29b533bb0346d09a95cbaa9b1e0b934bb20fdf88248ed4fc05a905b7627",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/game/character-mats.js",
+      "sha256": "53cf4fdd2db474eef730d7c447c7c07a0aa2bc94baae8c0f081759cdde4e95a1",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/game/character-weapons.js",
+      "sha256": "a75e15972dbce296fb5630358d570f1f206ed72c2626cb69a139f0fbf9451925",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/world/environment.js",
+      "sha256": "1c32d118fe11a7d3df95b2b979f5b2952110565988344ea99804d526a5bc1f8d",
+      "changes": "Preserved reference environment; dispose offscreen cloud/env scenes, shadow and instance buffers."
+    },
+    {
+      "source": "src/world/props.js",
+      "sha256": "87f099f298e4be854f0a1f85975d3036663e8e08d275c44d4486f5ce4be8dcd8",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/fx/fx.js",
+      "sha256": "42229211c0ac69a627175ef80f2f21c6fe4b61636a1e50c78fa7f6df3ab0c904",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/audio/music.js",
+      "sha256": "f6fc0ce83fdaa853dbd45c08b3b0c5efa4d9b8631e31269424f5c67e978138d6",
+      "changes": "Preserved source algorithms; no game bootstrap. Removed audio singleton."
+    },
+    {
+      "source": "src/ui/ui-util.js",
+      "sha256": "5f1d3d4e32d8512bc04fb069533bd6389842bda79ccb7385230f0176b8dc3ad1",
+      "changes": "Preserved source implementation; independently constructed."
+    },
+    {
+      "source": "src/config.js",
+      "sha256": "382d894aed1a45f357caadb757325f88eb1c41ce930c3bcdf484dbf2890499e6",
+      "changes": "INKWAVE reference preset; worlds receive independent structured clones."
+    },
+    {
+      "source": "src/world/level.js",
+      "sha256": "fd8048cbcc207bebe9ad8111aadd5ac60c22c8ed96cdd61c0cabfd22c1f29980",
+      "changes": "Inline two surface schema IDs; consumer supplies any compatible layout."
+    },
+    {
+      "source": "src/world/levelMaterial.js",
+      "sha256": "5263f93886cb9614f2e6fb0b2433e07a77f3d23d532e8c1b3b733c62fe29fbae",
+      "changes": "Explicit actor/paint dependencies; base roughness multiplier for comparison; reference shaders retained."
+    },
+    {
+      "source": "src/game/character.js",
+      "sha256": "e47f7f97b9fc7c413adc31812f4367fc9a6f2bcd7b66459d023ead326ea65d4d",
+      "changes": "Per-world factory; diagnostic foot-plant switch; source rig/assets retained."
+    },
+    {
+      "source": "src/game/weapons.js",
+      "sha256": "babd3d49f5fc2b0bd0cd0b56696186734ceb84f360ed8a5d7f0081cf4c3b850f",
+      "changes": "Per-world factory; owned projectile/resource disposal and reset cleanup."
+    },
+    {
+      "source": "src/game/actor.js",
+      "sha256": "e0fedbc7fc2b5df799223f2e77e3a795972eb4f779d822a43dea1a7e99a97074",
+      "changes": "Per-world factory; source horizontal movement delegated unchanged to motion/locomotion.js; diagnostic pose/step switches."
+    },
+    {
+      "source": "src/game/cameraRig.js",
+      "sha256": "9c2fd9f3ab67e9c349ba77c1423e23ebe237e8fce9338fb301ae3a6bee9f3fc4",
+      "changes": "Per-world factory; exact spring kernels moved to motion/springs.js."
+    },
+    {
+      "source": "src/game/player.js",
+      "sha256": "f532bbe5c19e038a8829b368d3cbf2d416c1405081df8f1681f75c5cbf123ef1",
+      "changes": "Module globals/scratch state are world-local factory closure; explicit preset and event bus dependencies."
+    },
+    {
+      "source": "src/game/bots.js",
+      "sha256": "a3a5fea8c040eb4645643c16672bba23fd5d5cfc93475d067a10969ce2ac540d",
+      "changes": "Module globals/scratch state are world-local factory closure; explicit preset and event bus dependencies."
+    },
+    {
+      "source": "src/game/nav.js",
+      "sha256": "56d858e9a9fa8f3d556c074285cbe2cd75e78900be327d4fe158fdb48683f8a9",
+      "changes": "Actor clearance radius is a constructor parameter."
+    },
+    {
+      "source": "src/fx/fxHooks.js",
+      "sha256": "3cd69a78018605456822f4685a58ecb477a65352bde4284bab11c41427d85d90",
+      "changes": "Per-world event/preset dependencies; explicit subscription disposal."
+    },
+    {
+      "source": "src/audio/audio.js",
+      "sha256": "55a816beb0b01c307c936457bc274f3c3b279090dc2d187890990ac5763fc3bf",
+      "changes": "Per-instance MusicEngine; abortable unlock listeners; disconnect owned nodes, close only owned AudioContext."
+    },
+    {
+      "source": "src/ui/menu-art.js",
+      "sha256": "443d75f9c362885c80694a87f22656cc76981af6f3ff6a4aa38eca932b4eaa11",
+      "changes": "Restored complete original artwork, settings previews and ink wipe. Stage-relative wipe bounds and callback-free disposal."
+    },
+    {
+      "source": "src/core/ctx.js",
+      "sha256": "3bac560e4a49b949890b54f7cbbdf9c7ed378aa2c9a1c3878b1d6df2589e5c04",
+      "destination": "runtime/core/math.js",
+      "changes": "Stateless math only; no global world or bus."
+    },
+    {
+      "source": "src/core/renderer.js",
+      "sha256": "8aa98453e530eb91a08a37aebc2bf76755a1265808561ef448ed9be4847eaefc",
+      "destination": "runtime/grade.js",
+      "changes": "GradeShader only; no renderer singleton or global shadow patch."
+    },
+    {
+      "source": "src/ui/ui-icons.js",
+      "sha256": "ab867b011215f544d745e6a161aa82952f42637b07f3813408a325717b10f892",
+      "changes": "Preserved source SVG icons, lettered logo, and illustrations."
+    },
+    {
+      "source": "src/ui/menus.js",
+      "sha256": "7fd758be41825d5fed9350cb088b0a67c28e3b8e54285a16d58dbafaf441debe",
+      "changes": "Original menu screens and choreography. Host-injected data; stage-relative cursor/bursts; focusable buttons; tracked timers/disposal; result completion callback and public skip/replay."
+    },
+    {
+      "source": "styles/ui.css",
+      "sha256": "b107d3547fdce7de2f680cced26bfa495ae4b0dd9a7a1bf59e8a3ab73239bc18",
+      "changes": "Original menu style rules scoped to .ink-ui-stage; local font paths; sizing units relative to the stage container. HUD import omitted."
+    }
+  ],
+  "extraction": "Source-preserving per-world adapters plus explicitly identified portable kernels and lab-only policies.",
+  "labAuthored": [
+    "systems.ts: clock, event ownership, explicit objective/surface policies and cue timeline",
+    "runtime/demo.js: integration and new training-course layout",
+    "runtime/input.js: abortable input adapter",
+    "InkScene.tsx, UIGallery.tsx, content.ts and inkwave.css: lab interface",
+    "runtime/motion/locomotion.js: extracted actor._horizontal; formulas unchanged",
+    "runtime/motion/springs.js: extracted camera spring kernels; formulas unchanged",
+    "runtime/frameStats.js: bounded presentation-frame interval percentiles, not GPU timer queries",
+    "runtime/world/bakeAO.js: deterministic cosine hemisphere AO over injected Level/Physics queries",
+    "runtime/game/clipCharacter.js: owned GLB scene/animation adapter; reference Fox asset already attributed in LICENSES.md",
+    "runtime/skillSequence.js: renderer-independent timed feedback recipes with cancellation",
+    "runtime/demo.js: repeatable 3C route, baked/realtime AO, clip presentation and skill sinks; systems.ts: boost/recovery policies"
+  ]
+}

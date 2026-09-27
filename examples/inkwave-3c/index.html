@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Run, jump and swim in ink · INKWAVE</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<link href="./src/ui.css" rel="stylesheet"/>
+<script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js","three/addons/":"./vendor/three/jsm/"}}</script>
+<main aria-label="Character movement practice" data-demo-picture="" id="world"></main>
+<aside aria-label="Demo settings" class="ui-panel" data-demo-control="">
+<button aria-pressed="false" id="slow">Slow motion</button>
+<button id="reset">Back to start</button>
+</aside>
+<output aria-label="Character state" class="ui-panel" data-demo-readout="" id="telemetry">Loading…</output>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD · Space · Shift · Esc" id="hint">WASD to move · Space to jump · Hold Shift to dive into orange ink · Mouse to look (click or drag) · Esc to release mouse</p>
+<p data-demo-readout="" hidden="" id="error" role="alert"></p>
+<script src="./src/main.js" type="module"></script>
+</html>

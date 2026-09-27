@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.youtube.com https://s.ytimg.com; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="description" content="スマゲータウンは、アバターで歩き回れるスマートゲームの3Dメタバース広場。チャットで交流し、ガチャでアイテムや家具を集めてマイルームを模様替え。ゲームセンターから100本以上の無料ブラウザゲームへ。スマホ・PC対応。">
+  <meta name="theme-color" content="#5fb4ff">
+  <title>スマゲータウン - SMARTGAME // TOWN | アバターで遊ぶ3Dメタバース広場</title>
+  <link rel="canonical" href="https://smartgame.jp/town/">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="スマゲータウン - SMARTGAME // TOWN">
+  <meta property="og:description" content="アバターで歩き回れるスマートゲームの3Dメタバース広場。チャット・ガチャ・マイルーム・プロフィール、そしてゲームセンターから100本以上の無料ゲームへ。スマホでもPCでも無料。">
+  <meta property="og:url" content="https://smartgame.jp/town/">
+  <meta property="og:image" content="https://smartgame.jp/town/assets/ogp.png?ver=20260913-1">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="スマートゲーム">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="スマゲータウン - SMARTGAME // TOWN">
+  <meta name="twitter:description" content="ゲームも、おしゃべりも、この町で。アバターで歩いて、チャットして、ガチャを回して、マイルームを飾る。ゲームセンターからスマートゲームの全ゲームへ。無料の3Dメタバース広場。">
+  <meta name="twitter:image" content="https://smartgame.jp/town/assets/ogp.png?ver=20260913-1">
+
+  <!-- 構造化データ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "スマゲータウン - SMARTGAME // TOWN",
+    "alternateName": ["スマゲータウン", "SMARTGAME // TOWN"],
+    "url": "https://smartgame.jp/town/",
+    "description": "アバターを作って歩き回れるスマートゲームの3Dメタバース広場。ほかのプレイヤーとチャットで交流し、ガチャで帽子・めがね・羽などのアバターアイテムや家具を集めてマイルームを模様替え。ゲームセンターにはスマートゲームの全ゲームの筐体が並び、そのまま各ゲームで遊べる。全国ランキングの記録・プレイ履歴・お気に入りが並ぶプロフィールも。スマホでもPCでも無料でプレイできる。",
+    "genre": ["メタバース", "アバター", "コミュニケーション", "3Dゲーム", "カジュアルゲーム"],
+    "gamePlatform": ["Web Browser"],
+    "applicationCategory": "Game",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "image": "https://smartgame.jp/town/assets/ogp.png?ver=20260913-1",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "JPY" }
+  }
+  </script>
+
+  <link rel="modulepreload" href="js/town.js?ver=20260925-2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/town.css?ver=20260925-2">
+  <link rel="stylesheet" href="/css/sg-header.css?ver=20260925-1">
+  <!-- Google tag (gtag.js)。初期化はインラインではなく js/analytics.js で行う（CSP対応） -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EY2KEWHS64"></script>
+  <script src="js/analytics.js?ver=20260904-1" defer></script>
+  <script src="js/ad-banner.js?ver=20260925-1" defer></script>
+  <script src="/js/sg-account.js?ver=20260921-1" defer></script>
+  <script src="/js/sg-header.js?ver=20260925-1" defer
+          data-sgh-game="town"
+          data-sgh-menu='[{"k":"sound","sel":"#btn-mute"},{"k":"howto","sel":"#btn-howto"},{"k":"settings","sel":"#btn-settings"},{"k":"home","sel":"#btn-home","name":"広場へ戻る","icon":"⛲"}]'></script>
+</head>
+<body>
+  <header class="sr-only">
+    <h1>スマゲータウン - SMARTGAME // TOWN</h1>
+    <p>スマートゲームのアバターで歩ける3Dメタバース広場。ゲームセンター・ガチャ広場・マイルーム・バー・ライブ会場・美容室・図書館・ペットショップ・道具屋・スマゲービルディング・お知らせ板・チャット。</p>
+  </header>
+
+  <main id="app" aria-label="スマゲータウンの3D画面"></main>
+
+  <div id="ui-root">
+    <div id="loading" role="status" aria-live="polite">
+      <div class="tw-load__grid" aria-hidden="true"></div>
+      <div class="tw-load__scan" aria-hidden="true"></div>
+      <div class="tw-load__frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="tw-load__meta" aria-hidden="true"><span>SYSTEM // BOOT</span><span>SMARTGAME.JP</span><span>3D PLAZA</span><span>LOADING</span></div>
+      <div class="tw-logo">
+        <div class="tw-logo__en">SMARTGAME <b>//</b> TOWN</div>
+        <div class="tw-logo__ja">スマゲータウン</div>
+      </div>
+      <div class="tw-loading__bar"><div class="tw-loading__fill"></div></div>
+      <div class="tw-loading__row"><span class="tw-loading__msg">読み込み中…</span><span class="tw-loading__pct">0%</span></div>
+    </div>
+    <div id="hud"></div>
+  </div>
+
+  <!-- 共通ヘッダーのメニューから呼ばれる操作ボタン（画面には出さない） -->
+  <div class="sgh-hooks" aria-hidden="true">
+    <button type="button" id="btn-mute" tabindex="-1">&#128266;</button>
+    <button type="button" id="btn-howto" tabindex="-1">遊び方</button>
+    <button type="button" id="btn-settings" tabindex="-1">せってい</button>
+    <button type="button" id="btn-home" tabindex="-1">広場へ戻る</button>
+  </div>
+
+  <!-- 静的な説明（クローラ向け。画面は 3D と JS の UI で描く） -->
+  <section class="sr-only" aria-hidden="true">
+    <h2>スマゲータウンでできること</h2>
+    <ul>
+      <li>アバター：肌・髪型・目・服の色を選んで自分だけのキャラクターを作る。ガチャで手に入れた帽子・めがね・羽・持ちものを身につけられる。</li>
+      <li>チャット：タウンにいるほかのプレイヤーと会話。発言は頭の上の吹き出しに表示される。絵文字やジェスチャーも。</li>
+      <li>ガチャ広場：コインでガチャを回してアバターアイテムや家具・壁紙・床を集める。10連はSレア以上が1つ確定。</li>
+      <li>スマゲービルディング：企業ロゴが並ぶロビーから、エレベーターで10階の展望フロアと屋上テラスへ。8階の株式会社waponのオフィスは、入室を許可された方だけが入れるフロアです。契約企業の登録メンバーは内装を編集できます。</li>
+      <li>スマゲー農場：スマゲーレジデンス裏の小道から、同じアバターで農場へ。種まき・水やり・収穫・出荷を楽しみ、畑を広げられます。</li>
+      <li>マイルーム：自分の部屋に家具を置いて模様替え。壁紙と床も替えられる。レジデンスの裏手のスマゲ不動産では、社員に相談してスマジェムで部屋を拡張できる。</li>
+      <li>お知らせ板と板番付：噴水広場の南のお知らせ板に、運営からのお知らせ（イベント・アップデート・メンテナンス）が張り出される。となりの和風の板番付には、釣り大会などのイベントの順位が張り出される。</li>
+      <li>プロフィール：全国ランキングの記録と現在の順位、最近遊んだゲーム、お気に入り、ガチャ図鑑をまとめて確認。</li>
+      <li>ゲームセンター：スマートゲームの全ゲームの筐体が並ぶ。筐体に近づいてそのままプレイへ。インフォメーションセンターの受付に話しかけると全ゲームの一覧からさがせる。</li>
+      <li>商店街：しろくま洋品店、カフェ ひだまり、月あかりバー、美容室 ミモザ、こもれび図書館、ペットショップ こむぎ、高松商店、道具屋 かわせみ、スマゲ不動産、ひだまりライブ会場。移動メニューから訪問でき、美容室では髪型を、洋品店では服とくつを買って着替えられる。ライブ会場のステージに上がってリアクションでダンスも楽しめる。</li>
+      <li>ペット：ペットショップこむぎの店員からコインでペットをおむかえ。ねこ・いぬ・ハムスター・うさぎ・インコ・ペンギン・ドラゴンなど37種類。名前を付けて、いっしょに町を歩くか、マイルームで待っていてもらう。ペットをタップするとなでられる。</li>
+      <li>音声通話：送信の横のマイクを押し、確認で OK を選ぶと参加。近くの参加者に声が届き、離れるほど小さくなる。話している人は名前の横に 🔊 を表示。もう一度マイクを押すと終了。</li>
+      <li>BGM と効果音：場所ごとに変わる BGM（バーではジャズ）。設定で BGM と効果音を別々に ON/OFF できる。</li>
+      <li>ゲームプレイ中：ゲームセンターからゲームを開くと、アバターは筐体の前に残って「ゲームプレイ中」と表示され、ゲームのページの「スマゲータウンに戻る」で筐体の前から再開できる。</li>
+      <li>ほかのプレイヤー：タップしてプロフィールを見たり、その人のマイルームへ遊びに行ける。</li>
+      <li>フレンドと手紙：お互いにアカウント登録・ログインして申請を承認するとフレンドに。手紙（DM）はフレンドだけに送れ、町の赤いポストで投函すると相手のマイルームの受信箱に届く。</li>
+      <li>虫取り・魚釣り：川ぞいの道具屋で買える「虫取り網」「釣り竿」を持っていると、町の花・草むら・木・石垣・街灯・川のそばにいる 65 種類の虫をつかまえたり、川ぞいの「つりば」で 61 種類の魚を釣ったりできる。虫も魚も時間帯と季節で入れ替わり、釣った魚は大きさの自己ベストが残る。つかまえたものは図鑑に登録され、初めての種類はコインのボーナス。</li>
+      <li>スマコイン・スマジェム：町で集めるスマコイン（🪙）のほかに、アカウントで購入できる有償のスマジェム（💎。クレジットカード・Apple Pay・Google Pay・PayPay）と、キャンペーンなどでもらえるボーナスジェムがある。スマジェムはスマコインに交換できる（1 ジェム＝10 スマコイン）。購入にはアカウント登録が必要。</li>
+      <li>ミッションと実績：デイリー・ウィークリー・マンスリーのミッション（ゲームセンターのゲームを遊ぶ・全国ランキングに登録する・チャット・リアクション・コイン拾い・ガチャ・ダーツ・お店めぐり・お散歩など）を達成するとコインがもらえる。遊んだゲームの回数や種類、来町日数、歩いた距離などの積み重ねは実績として記録され、段に届くたびに報酬がもらえる。</li>
+    </ul>
+  </section>
+
+  <footer class="sr-only">
+    <p>SMARTGAME // TOWN（スマゲータウン） Ver. 3.76.0</p>
+    <p>&copy; <a href="https://smartgame.jp/" target="_blank" rel="noopener">スマートゲーム</a>
+      by <a href="https://gameline.jp/" target="_blank" rel="noopener">ゲームライン</a></p>
+  </footer>
+
+  <script type="module" src="js/town.js?ver=20260925-2"></script>
+<!-- sgh-about:start -->
+<!-- このブロックは top/tools/gen-sgh-static.js が自動生成する。手で編集しない -->
+<div class="sgh-about">
+  <div class="sgh-about__head"><img class="sgh-about__icon" src="/img/town-icon.webp?ver=20260904-1" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="sgh-about__name">スマゲータウン</span></div>
+  <p class="sgh-about__desc">スマゲータウンは、アバターで歩き回れるスマートゲームの3Dメタバース広場。チャットで交流し、ガチャでアイテムや家具を集めてマイルームを模様替え。ゲームセンターから100本以上の無料ブラウザゲームへ。スマホ・PC対応。</p>
+</div>
+<!-- sgh-about:end -->
+<!-- sgh-related:start -->
+<!-- このブロックは top/tools/gen-sgh-static.js が自動生成する。手で編集しない -->
+<nav class="sgh-related" aria-label="関連するゲーム">
+  <h2 class="sgh-related__title">関連するゲーム</h2>
+  <ul class="sgh-related__list">
+    <li class="sgh-related__cell"><a class="sgh-related__item" href="/gomibako/"><img class="sgh-related__thumb" src="/img/gomibako-icon.webp?ver=20260902-1" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="sgh-related__name">ゴミ箱チャレンジ</span></a></li>
+    <li class="sgh-related__cell"><a class="sgh-related__item" href="/hole/"><img class="sgh-related__thumb" src="/img/hole-icon.webp?ver=20260827-2" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="sgh-related__name">ホール</span></a></li>
+    <li class="sgh-related__cell"><a class="sgh-related__item" href="/mizukiri/"><img class="sgh-related__thumb" src="/img/mizukiri-icon.webp?ver=20260905-1" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="sgh-related__name">水切り</span></a></li>
+    <li class="sgh-related__cell"><a class="sgh-related__item" href="/siva/"><img class="sgh-related__thumb" src="/img/siva-icon.webp?ver=20260902-1" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="sgh-related__name">芝刈り</span></a></li>
+    <li class="sgh-related__cell"><a class="sgh-related__item" href="/hanko/"><img class="sgh-related__thumb" src="/img/hanko-icon.webp?ver=20260821-1" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="sgh-related__name">社長！ハンコお願いします！</span></a></li>
+    <li class="sgh-related__cell"><a class="sgh-related__item" href="/invader-reverse/"><img class="sgh-related__thumb" src="/img/invader-reverse-icon.webp?ver=20260902-1" alt="" width="34" height="34" loading="lazy" decoding="async"><span class="sgh-related__name">インベーダーリバース</span></a></li>
+  </ul>
+</nav>
+<!-- sgh-related:end -->
+</body>
+</html>

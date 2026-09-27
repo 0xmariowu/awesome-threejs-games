@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Kaku Gothic New';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Old Mincho';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFla.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Zen Old Mincho';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrlla.ttf) format('truetype');
+}

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>銛一本 — 無人島モリ突き漁</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="食費ゼロ円。晩ごはんは、自分で突け。無人島の海に潜ってモリで魚を獲る3Dゲーム。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23062a3d'/%3E%3Cpath d='M10 54 L50 14' stroke='%23e8ecef' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M50 14 l-3 11 M50 14 l-11 3' stroke='%23e8ecef' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='14' cy='50' r='5' fill='none' stroke='%23f0a41c' stroke-width='3'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <!-- ロード画面 -->
+  <section id="loading" class="screen show">
+    <div class="load-inner">
+      <div class="load-logo">銛一本</div>
+      <div class="load-bar"><i></i></div>
+      <div class="load-msg">海を準備しています</div>
+    </div>
+    <div class="load-bubbles"></div>
+  </section>
+
+  <!-- タイトル -->
+  <section id="title" class="screen">
+    <div class="title-shade"></div>
+    <div class="title-block">
+      <div class="title-sub">無人島 素潜り漁</div>
+      <h1 class="title-logo">銛<span>一</span>本</h1>
+      <div class="title-en">MORI&nbsp;IPPON</div>
+      <div class="hanko">0円</div>
+    </div>
+    <div class="title-copy">食費、ゼロ円。<br />晩ごはんは、自分で突け。</div>
+    <nav class="menu">
+      <button data-act="start" class="primary"><span class="k">一</span>漁に出る</button>
+      <button data-act="zukan"><span class="k">二</span>魚図鑑</button>
+      <button data-act="howto"><span class="k">三</span>遊び方</button>
+      <button data-act="settings"><span class="k">四</span>設定</button>
+    </nav>
+    <div class="title-record"></div>
+  </section>
+
+  <!-- ナレーション -->
+  <section id="intro" class="screen">
+    <div class="intro-lines"></div>
+    <div class="intro-skip">クリックでスキップ</div>
+  </section>
+
+  <!-- HUD -->
+  <section id="hud">
+    <div id="compass"><div class="c-strip"></div><div class="c-needle"></div></div>
+    <div id="clock"><svg viewBox="0 0 24 24" class="sun"><circle cx="12" cy="12" r="4.2"/><g stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></svg><span class="c-time">09:00</span><span class="c-left"></span><div class="c-bar"><i></i></div></div>
+
+    <div id="depth">
+      <div class="d-scale"></div>
+      <div class="d-marker"><b>0.0</b><small>m</small></div>
+      <div class="d-max">最深 0.0m</div>
+    </div>
+
+    <div id="breath">
+      <div class="b-kanji">息</div>
+      <div class="b-bar"><i></i><span class="b-notch" style="left:25%"></span><span class="b-notch" style="left:50%"></span><span class="b-notch" style="left:75%"></span></div>
+      <div class="b-sec">58<small>秒</small></div>
+    </div>
+
+    <div id="bag">
+      <div class="bag-row sukari"><span class="lbl">スカリ</span><span class="val"><b class="bag-n">0</b>匹 <em class="bag-y">¥0</em></span></div>
+      <div class="bag-hint">浮上すると確定</div>
+      <div class="bag-row total"><span class="lbl">本日の漁果</span><b class="tot">¥0</b></div>
+    </div>
+
+    <div id="crosshair">
+      <svg viewBox="0 0 100 100">
+        <circle class="ring-bg" cx="50" cy="50" r="19" />
+        <circle class="ring" cx="50" cy="50" r="19" />
+        <circle class="dot" cx="50" cy="50" r="2.2" />
+      </svg>
+      <div class="ch-reach">射程内</div>
+    </div>
+    <div id="stealth"><i></i><i></i><i></i><span>気配</span></div>
+    <div id="tag"><div class="t-name"></div><div class="t-sub"></div><div class="t-eye"></div></div>
+    <div id="prompt"></div>
+    <div id="feed"></div>
+    <div id="warn"></div>
+    <div id="telop"></div>
+    <div id="struggle"><div class="s-title">連打で引き寄せろ！</div><div class="s-bar"><i></i><b></b></div><div class="s-sub">左クリック連打</div></div>
+    <div id="hint"></div>
+    <div id="lockhint">クリックで視点操作を再開</div>
+    <div id="esckey"><kbd>Esc</kbd><span>メニュー</span></div>
+  </section>
+
+  <!-- ポーズ -->
+  <section id="pause" class="screen">
+    <div class="panel narrow">
+      <h2>一時停止</h2>
+      <nav class="menu vertical">
+        <button data-act="resume" class="primary">再開する</button>
+        <button data-act="zukan">魚図鑑</button>
+        <button data-act="settings">設定</button>
+        <button data-act="howto">遊び方</button>
+        <button data-act="quit">漁を切り上げる</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 結果 -->
+  <section id="results" class="screen">
+    <div class="res-card">
+      <div class="res-head">
+        <div class="res-day"></div>
+        <h2>本日の晩ごはん</h2>
+      </div>
+      <div class="res-list"></div>
+      <div class="res-foot">
+        <div class="res-total"><span>総額（市場価格換算）</span><b>¥0</b></div>
+        <div class="res-rank"><div class="stamp"></div><div class="rank-title"></div><div class="rank-sub"></div></div>
+      </div>
+      <div class="res-news"></div>
+      <nav class="menu row">
+        <button data-act="again" class="primary">もう一日、漁に出る</button>
+        <button data-act="toTitle">タイトルへ</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 図鑑 -->
+  <section id="zukan" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>魚図鑑</h2><div class="zk-count"></div><button class="close" data-act="back">閉じる</button></div>
+      <div class="zk-body">
+        <div class="zk-grid"></div>
+        <div class="zk-detail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 遊び方 -->
+  <section id="howto" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>遊び方</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="howto-grid">
+        <div class="ht-keys">
+          <h3>操作</h3>
+          <ul>
+            <li><kbd>マウス</kbd><span>見回す</span></li>
+            <li><kbd>W A S D</kbd><span>泳ぐ（視線の方向へ）</span></li>
+            <li><kbd>Space</kbd><span>浮上する</span></li>
+            <li><kbd>Q</kbd><span>緊急浮上（長押し。ふだんの3倍の速さでまっすぐ水面へ）</span></li>
+            <li><kbd>C</kbd><kbd>Ctrl</kbd><span>潜る（水面ではジャックナイフ潜行）</span></li>
+            <li><kbd>Shift</kbd><span>力泳（速いが息と気配を消費）</span></li>
+            <li><kbd>左クリック長押し</kbd><span>ゴムを引いて銛を溜める</span></li>
+            <li><kbd>離す</kbd><span>突く（溜めるほど遠くまで届く）</span></li>
+            <li><kbd>右クリック</kbd><span>狙いを定める（ズーム）</span></li>
+            <li><kbd>E</kbd><span>貝・ウニを拾う</span></li>
+            <li><kbd>Esc</kbd><span>一時停止</span></li>
+          </ul>
+        </div>
+        <div class="ht-tips">
+          <h3>漁のコツ</h3>
+          <ol>
+            <li><b>息がすべて。</b>深く潜るほど息は早く減る。限界を超えるとブラックアウトし、スカリの獲物を失う。</li>
+            <li><b>獲物は浮上して初めて確定。</b>水面に顔を出せば「獲れたよー！」。</li>
+            <li><b>ゆっくり近づけ。</b>速く泳ぐと「気配」が立ち、魚は逃げる。</li>
+            <li><b>海底でじっと待て。</b>好奇心の強いイシダイやカワハギは向こうから寄ってくる。</li>
+            <li><b>頭を狙え。</b>急所に当てると「一撃」で鮮度ボーナス+20%。</li>
+            <li><b>岩の隙間を覗け。</b>イセエビの触角、タコ、そしてウツボの牙…。</li>
+            <li><b>砂地に目を凝らせ。</b>ヒラメは目だけ出して隠れている。</li>
+            <li><b>深場の洞窟にはヌシがいる。</b>突いたら連打で引き寄せろ。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 設定 -->
+  <section id="settings" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>設定</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-list">
+        <label><span>マウス感度</span><input type="range" min="0.3" max="2.5" step="0.05" data-set="sens" /><output></output></label>
+        <label><span>視野角</span><input type="range" min="60" max="95" step="1" data-set="fov" /><output></output></label>
+        <label><span>全体の音量</span><input type="range" min="0" max="1" step="0.01" data-set="master" /><output></output></label>
+        <label><span>音楽</span><input type="range" min="0" max="1" step="0.01" data-set="music" /><output></output></label>
+        <label><span>効果音</span><input type="range" min="0" max="1" step="0.01" data-set="sfx" /><output></output></label>
+        <label class="toggle"><span>上下反転</span><input type="checkbox" data-set="invertY" /><i></i></label>
+        <label class="toggle"><span>ちらつき軽減</span><input type="checkbox" data-set="calm" /><i></i></label>
+        <label><span>画質</span>
+          <select data-set="quality">
+            <option value="low">軽量</option>
+            <option value="medium">標準</option>
+            <option value="high">高画質</option>
+          </select><output></output>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <div id="fade"></div>
+  <script type="module" src="../src/main.js"></script>
+</body>
+</html>

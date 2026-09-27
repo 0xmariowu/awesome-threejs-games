@@ -1,0 +1,8 @@
+{
+  "name": "cloudkeep-reference",
+  "private": true,
+  "scripts": {
+    "start": "node ../tools/server.mjs .",
+    "test": "npm --prefix upstream test"
+  }
+}

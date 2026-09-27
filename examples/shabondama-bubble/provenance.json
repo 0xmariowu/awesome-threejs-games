@@ -1,0 +1,74 @@
+{
+  "project": "shabondama-biyori",
+  "source": "https://claude.ai/artifact/FozvXt7fcZ6ydzxndkRS1k",
+  "scope": "Unmodified BubbleRenderer, its complete static import closure and archived Three r186. Plain ES modules; no build or external requests.",
+  "files": [
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/bubbles.js",
+      "path": "examples/shabondama-bubble/original/render/bubbles.js",
+      "sha256": "365e44287413b9a1c424b241e1aa2bcd5838743b06e7dfdf61a1f4103ce62dee"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/glsl.js",
+      "path": "examples/shabondama-bubble/original/render/glsl.js",
+      "sha256": "c228036bfe8fbb21fb9ec469926f6caa7f9cb7e8654b97fab470f6eb316f2fe3"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/sky.js",
+      "path": "examples/shabondama-bubble/original/render/sky.js",
+      "sha256": "948f7efe0e0be4cdea706da51739990e28470602ab01e795002254aaf61a274c"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/post.js",
+      "path": "examples/shabondama-bubble/original/render/post.js",
+      "sha256": "f8a7033e6137c44e815cc717b6cae751a22c795398977434fd34d5c3acdc9376"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/water.js",
+      "path": "examples/shabondama-bubble/original/render/water.js",
+      "sha256": "df5e36c8d1a7ffe78e1f563021c7e2578362933eb7ec86bf5d6f316a8eeedbd5"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/terrain.js",
+      "path": "examples/shabondama-bubble/original/render/terrain.js",
+      "sha256": "e2a2d425c4514cdb145987de52b2c693b0b75c63142d1d9a3bf8400a7eea20e4"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/world/layout.js",
+      "path": "examples/shabondama-bubble/original/world/layout.js",
+      "sha256": "663db32db8aa3b68656dd739f88a443267c2a1170b7cc5d2a79c476d0abdf07d"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/util/noise.js",
+      "path": "examples/shabondama-bubble/original/util/noise.js",
+      "sha256": "6424fdb07a4fdbe8a003070394b58c4dfa47aee7e235b4c47c9f35dea63a2f2b"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/render/worldtex.js",
+      "path": "examples/shabondama-bubble/original/render/worldtex.js",
+      "sha256": "0fa56768f33418f685f7e77f015370af9cab78db53a008ae6e1bfd88dda61d40"
+    },
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/world/gen.js",
+      "path": "examples/shabondama-bubble/original/world/gen.js",
+      "sha256": "73a407f4e8df34686ed235e34f435783508afee4db06cb7c4893b84ef7142d86"
+    },
+    {
+      "source": "shabondama-biyori/public/_external/cdn.jsdelivr.net/npm/three@0.186.0/build/three.core.js",
+      "path": "examples/shabondama-bubble/original/vendor/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "source": "shabondama-biyori/public/_external/cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+      "path": "examples/shabondama-bubble/original/vendor/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ],
+  "references": [
+    {
+      "source": "shabondama-biyori/public/_f/1790342986-3d06/src/main.js",
+      "sha256": "4db6769b475f5b307ffb75442b78bfbe45164d9ef631aa9a11b441b925340c1a",
+      "scope": "Reference only: shared uniforms, drag input convention, DPR cap and depth/environment/bubble pass ordering."
+    }
+  ]
+}

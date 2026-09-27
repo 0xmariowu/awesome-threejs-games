@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.blend1
+__pycache__/
+.playwright-cli/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+coverage/
+output/
+*.mp4
+*.webm
+art/previews/VERIFICATION.md

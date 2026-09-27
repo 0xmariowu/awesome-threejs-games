@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Arkenfall · Lock-on and camera collision</title>
+<link href="data:," rel="icon"/>
+<link href="./src/style.css" rel="stylesheet"/>
+<script type="importmap">
+  {"imports":{
+    "./original/Game-BmRmdldn.js":"./src/game-shim.js",
+    "./original/material-Di0Yd9td.js":"./src/material-shim.js"
+  }}
+  </script>
+<link href="./src/ui.css" rel="stylesheet"/></head>
+<body>
+<div aria-label="Lock-on camera scene" data-demo-picture="" id="world" tabindex="0"></div>
+<header class="ui-panel" data-demo-readout=""><output id="readout">Loading…</output></header>
+<nav aria-label="Scene settings" class="ui-panel" data-demo-control="">
+<button aria-pressed="true" id="helpers">Top-down helper</button>
+<button id="reset">Back to start</button>
+</nav>
+<canvas aria-label="Top view: cyan player, yellow target, white camera" data-demo-readout="" height="220" id="map" width="220"></canvas>
+<span data-demo-readout="" hidden="" id="reticle">◇</span>
+<p class="ui-panel" data-demo-control="" data-demo-hint="" data-hint-keys="WASD · Tab · ↔" id="hint">Click scene · Tab / middle click to lock on · WASD to move · A / D to circle · Drag to look around</p>
+<script src="./src/host.js" type="module"></script>
+</body>
+</html>

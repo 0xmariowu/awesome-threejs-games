@@ -1,0 +1,1080 @@
+{
+  "schema_version": 1,
+  "source": "https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs",
+  "author_post": "https://x.com/edwinarbus/status/2102463453176979794",
+  "local_copy": "a local copy of the public artifact captured on 2026-09-23",
+  "fetched_date": "2026-09-23",
+  "archive_date": "2026-09-27",
+  "attribution": "The page credits Claude Opus 5.5 for all code.",
+  "license": "No license is stated in the original artifact. Archived here with full credit to its author for study; rights remain with the author.",
+  "original": {
+    "path": "original/antikythera.html",
+    "bytes": 3587114,
+    "sha256": "599526d78f11b396f36736595e55aee16c4f11d8794565507a493a1e8d41fad0"
+  },
+  "byte_ranges": "Zero-based UTF-8 byte offsets, start inclusive, end exclusive, in original/antikythera.html.",
+  "patches": [
+    {
+      "id": "remove-frame-runtime",
+      "description": "Remove only the marked host runtime preamble; retain surrounding HTML and game scripts.",
+      "start": 27,
+      "end": 36379,
+      "original_sha256": "8871473b3fab6591b6e66d30c5bca33bb74449a385d9f3b10de8002424bdb0eb",
+      "replacement": "",
+      "expected_matches": 1,
+      "removed_ranges": [
+        {
+          "start": 27,
+          "end": 49,
+          "kind": "opening frame-runtime comment"
+        },
+        {
+          "start": 49,
+          "end": 1183,
+          "kind": "host capability configuration: window.__FRAME_PREAMBLE"
+        },
+        {
+          "start": 1183,
+          "end": 36356,
+          "kind": "host frame runtime IIFE, including claude.ai and preview.claude.ai messaging"
+        },
+        {
+          "start": 36356,
+          "end": 36379,
+          "kind": "closing frame-runtime comment"
+        }
+      ]
+    },
+    {
+      "id": "remove-font-preconnect-1",
+      "description": "Remove Google Fonts preconnect link.",
+      "start": 37183,
+      "end": 37242,
+      "original_sha256": "e0564d06b8b57566d131ba3e722230e9acf347c17f68939cb8abfbd6468966e1",
+      "replacement": "",
+      "expected_matches": 1
+    },
+    {
+      "id": "remove-font-preconnect-2",
+      "description": "Remove Google Fonts preconnect link.",
+      "start": 37243,
+      "end": 37311,
+      "original_sha256": "07cd39730f639a9d2add20c8f84637359c452f6bc2f6874f7327cab70d738c1b",
+      "replacement": "",
+      "expected_matches": 1
+    },
+    {
+      "id": "local-font-stylesheet",
+      "description": "Replace Google Fonts stylesheet URL only.",
+      "start": 37341,
+      "end": 37578,
+      "original_sha256": "aea65c99eb022e8cfbebe880c3270e4113c37ef684165bba4d50296d594513b3",
+      "replacement": "./vendor/fonts/fonts.css",
+      "expected_matches": 1
+    },
+    {
+      "id": "local-three",
+      "description": "Replace import-map URL only.",
+      "start": 82724,
+      "end": 82788,
+      "original_sha256": "9e014f120b58bea6b66c9837a83380521059beadbd82b66d73ee8e483b9d2a62",
+      "replacement": "./vendor/three/build/three.module.js",
+      "expected_matches": 1
+    },
+    {
+      "id": "local-three-addons",
+      "description": "Replace import-map URL only.",
+      "start": 82811,
+      "end": 82867,
+      "original_sha256": "6d6aac37abad88c6e31c285ab172c74163e516f46c913c9aad1b0c854f785380",
+      "replacement": "./vendor/three/examples/jsm/",
+      "expected_matches": 1
+    }
+  ],
+  "vendored_files": [
+    {
+      "path": "public/vendor/three/build/three.core.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.core.js",
+      "bytes": 1458113,
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "copied_from": "inkwave/node_modules/three/build/three.core.js",
+      "cdn_sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/build/three.module.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/build/three.module.js",
+      "bytes": 662772,
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "copied_from": "inkwave/node_modules/three/build/three.module.js",
+      "cdn_sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/postprocessing/EffectComposer.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/EffectComposer.js",
+      "bytes": 8501,
+      "sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/postprocessing/EffectComposer.js",
+      "cdn_sha256": "4e079a5886152d7e529a59aef644e968ab4d32c6a33ce016b36bf29b2eac26f7",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/postprocessing/MaskPass.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/MaskPass.js",
+      "bytes": 4694,
+      "sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/postprocessing/MaskPass.js",
+      "cdn_sha256": "7cd08eee9d5d6f5578beaddbdcbe9c384f6873810af27f22ab7db3ceeb127aa3",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/postprocessing/OutputPass.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/OutputPass.js",
+      "bytes": 4184,
+      "sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/postprocessing/OutputPass.js",
+      "cdn_sha256": "02e4a261af34de71338185e9e87f0cbe5cba9115608d984363e1269dec1d2272",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/postprocessing/Pass.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/Pass.js",
+      "bytes": 4218,
+      "sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/postprocessing/Pass.js",
+      "cdn_sha256": "444b409c235ead986893c472e720da1b779a56985c7d10b279c7944b52bd61c5",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/postprocessing/ShaderPass.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/ShaderPass.js",
+      "bytes": 3228,
+      "sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/postprocessing/ShaderPass.js",
+      "cdn_sha256": "e2500a5913b26bbf5148ceaae644c6edcff06a18b01494ee37bf856353d2ab9d",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "bytes": 15397,
+      "sha256": "ba8f2fcadfa6588384c9473498f974d81d120f02f0e63a0e59c265202a006b5a",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "cdn_sha256": "ba8f2fcadfa6588384c9473498f974d81d120f02f0e63a0e59c265202a006b5a",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/shaders/CopyShader.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/CopyShader.js",
+      "bytes": 729,
+      "sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/shaders/CopyShader.js",
+      "cdn_sha256": "a33057d5ac91c43304c186ac0e8816e62bb2ed471d3a00ff3018dfd5c0389718",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "bytes": 1291,
+      "sha256": "5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "cdn_sha256": "5044f780b6e6cf863947f64c36fe1587132f7fbe395ada863cd1e5f0388dcf1e",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/shaders/OutputShader.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/shaders/OutputShader.js",
+      "bytes": 1876,
+      "sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/shaders/OutputShader.js",
+      "cdn_sha256": "353479f77a8d7e2629d49ccac9fc2f5dbfdda5442e0adf867b00377a2fcb0cb2",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "kind": "three",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 37712,
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "copied_from": "inkwave/node_modules/three/examples/jsm/utils/BufferGeometryUtils.js",
+      "cdn_sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/three/LICENSE",
+      "kind": "license",
+      "url": "https://cdn.jsdelivr.net/npm/three@0.186.0/LICENSE",
+      "bytes": 1081,
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "copied_from": "inkwave/node_modules/three/LICENSE",
+      "cdn_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "verification": "byte-identical to jsDelivr",
+      "verified_date": "2026-09-27"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5Gh09GmRGyBaT8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5Gh09GmRGyBaT8.woff2",
+      "bytes": 16216,
+      "sha256": "3681580da952229830d8387612ca68d9d9686b602bd2271dc4088f1b87661491"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GhE9GmRGyBaT8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GhE9GmRGyBaT8.woff2",
+      "bytes": 7488,
+      "sha256": "7dfb584a9345bc1920b74f762998134eb85a1281072fc7f25f2c746bdac29f19"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GhU9GmRGyBaT8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GhU9GmRGyBaT8.woff2",
+      "bytes": 5624,
+      "sha256": "8d67abd055a52e86387ee3fa83d969fbb8dbb4d3dd56e597688bd2fa9ee9d904"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5Ghk9GmRGyBaT8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5Ghk9GmRGyBaT8.woff2",
+      "bytes": 5936,
+      "sha256": "d691decaa1bcf2bebd943f0aaf7528ab6989982d8e5562e370086f95ffa0e987"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GiU9GmRGyBQ.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GiU9GmRGyBQ.woff2",
+      "bytes": 18064,
+      "sha256": "d9244930f9639826bce68e1c430883b02b8cd229a449c342551a01ff8ccd00cf"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5Gik9GmRGyBaT8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5Gik9GmRGyBaT8.woff2",
+      "bytes": 5480,
+      "sha256": "7bbc74c268cadf81d16a8303f8b356d49dc4bea783492143a77ba1cb6cafa389"
+    },
+    {
+      "path": "public/vendor/fonts/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GjU9GmRGyBaT8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUo9_-1phKLFgshYDvh6Vwt7V9VTE5GjU9GmRGyBaT8.woff2",
+      "bytes": 8792,
+      "sha256": "dfb2ba2ebeb517085924e65c21736da740bf523aded618b1e34dd77f6fc7495b"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9ds21TpG1Lsyu7.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9ds21TpG1Lsyu7.woff2",
+      "bytes": 5672,
+      "sha256": "dfc9b76d00362d80ab2e90a14c441ba7ef6b08e82af9cf1141feb073b86095e6"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9dsG1TpG1Lsyu7.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dsG1TpG1Lsyu7.woff2",
+      "bytes": 5940,
+      "sha256": "223ac6ec1f10e12b314fe33f4fc11bbe8343682d1d34d8ddc6c9c8fa2710dcda"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9dsW1TpG1Lsyu7.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dsW1TpG1Lsyu7.woff2",
+      "bytes": 16060,
+      "sha256": "c973d9409448c29d26844e4d0815fdaf37059789b1d295f5e9064653726e869b"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9dsm1TpG1Lsyu7.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dsm1TpG1Lsyu7.woff2",
+      "bytes": 7392,
+      "sha256": "a655f9fdb15aed047526acd4b69ee74e253781674222f2e7246da07b6d253da8"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9du21TpG1Lsyu7.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9du21TpG1Lsyu7.woff2",
+      "bytes": 8704,
+      "sha256": "5fdabd77f27453f9b210596f4eeb8aa009337e21325a139db1a9b09f1382e9ec"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9dv21TpG1Lsw.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dv21TpG1Lsw.woff2",
+      "bytes": 17708,
+      "sha256": "7d45ea11ab9f2a678644aa874155eaf89cf085c02334384e7c72a2cb740f2a8c"
+    },
+    {
+      "path": "public/vendor/fonts/5aUt9_-1phKLFgshYDvh6Vwt7V9dvG1TpG1Lsyu7.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUt9_-1phKLFgshYDvh6Vwt7V9dvG1TpG1Lsyu7.woff2",
+      "bytes": 5488,
+      "sha256": "eaf7973104b32828293b12bc9d712daa211c1e6ef54b65f74f4471e141621fdb"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqE52i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqE52i0VBuxOCBA.woff2",
+      "bytes": 8228,
+      "sha256": "261638ad976127dc55a8104ffc8a56dcaa1f5e88126040a75609b7c28ab4e0a7"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqER2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqER2i0VBuxOCBA.woff2",
+      "bytes": 15680,
+      "sha256": "5be63e946cc5048dfaa471658b3611d3f7672105ae3ef89c848752d602d27e94"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqEV2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqEV2i0VBuxOCBA.woff2",
+      "bytes": 5884,
+      "sha256": "43dc1b9a0c96f325319a84e99fc7c65c95785a9964e3a8d335e383515ac56f01"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqEZ2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqEZ2i0VBuxOCBA.woff2",
+      "bytes": 5580,
+      "sha256": "517fcb8cabb3b9f7529b0953127936b6c02f73e9290e33e3e836477188cdf39c"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqEd2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqEd2i0VBuxOCBA.woff2",
+      "bytes": 7168,
+      "sha256": "bab9dc1971b016eaac44e92605c5494f9b7e1617e7a552be2f0306ebaa82e700"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqEl2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqEl2i0VBuxOCBA.woff2",
+      "bytes": 5448,
+      "sha256": "b34c10a1ffe062c5dad8ae3dd34b6d3da4ee71710977c3fce10d117671a54107"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5alOqEp2i0VBuxM.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5alOqEp2i0VBuxM.woff2",
+      "bytes": 17232,
+      "sha256": "dedb7e4dce28b07cdbebb5de4f5e31a0706c7595916c2eb195a08d097e9070d1"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqE52i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqE52i0VBuxOCBA.woff2",
+      "bytes": 8336,
+      "sha256": "4bb93aca54b319d4e4aa094265025a445c690759b8c0c0e560f50da6110c0625"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqER2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqER2i0VBuxOCBA.woff2",
+      "bytes": 15572,
+      "sha256": "5c1cb227aa5a8f3ddfdb3164a3eb9092e7e041bd8d8ab8374f8dd6586d77545f"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEV2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEV2i0VBuxOCBA.woff2",
+      "bytes": 5908,
+      "sha256": "f1c49bfd357d5a2bdff412f7da5704a5a5e0089c058bb2f84a27da22727efeab"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEZ2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEZ2i0VBuxOCBA.woff2",
+      "bytes": 5580,
+      "sha256": "967b38372db4e38d9f3ef13a0f66fef46409e155b36f91191c579a9737a7998e"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEd2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEd2i0VBuxOCBA.woff2",
+      "bytes": 7224,
+      "sha256": "3df86f009f1573ec3fb85462ba4e2c784044d4c3b9f2865758e5e82cf326fefa"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEl2i0VBuxOCBA.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEl2i0VBuxOCBA.woff2",
+      "bytes": 5396,
+      "sha256": "9a9defceff14fb0f7c64cafbd2fd204fa8b8599583031fa66e8cb7b422e2cbb7"
+    },
+    {
+      "path": "public/vendor/fonts/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEp2i0VBuxM.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUu9_-1phKLFgshYDvh6Vwt5eFIqEp2i0VBuxM.woff2",
+      "bytes": 17172,
+      "sha256": "1a2f3006ecc704345bd35be43341c07b2bc33ff25955d70f47980cffb3099c48"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7V5tvWdUhm97sg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7V5tvWdUhm97sg.woff2",
+      "bytes": 8240,
+      "sha256": "c271ee5c70f231b4ce38f4682a2d032640cb593911295decfb25a044f9640709"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7VRtvWdUhm97sg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VRtvWdUhm97sg.woff2",
+      "bytes": 15568,
+      "sha256": "d8bf25eb11d09b785172d8f207dfd53f36ec969aa54c34d34aacc0c807e42be7"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7VVtvWdUhm97sg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VVtvWdUhm97sg.woff2",
+      "bytes": 5824,
+      "sha256": "1ca85659ab25a9af76a43b196f073a816b6ee34ce6a882f8966abd207413835f"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7VZtvWdUhm97sg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VZtvWdUhm97sg.woff2",
+      "bytes": 5432,
+      "sha256": "b80617d9b7e8fb8afeb06c68a71101b446ad52e7017f29b9dc2a78be27a70f4d"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7VdtvWdUhm97sg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VdtvWdUhm97sg.woff2",
+      "bytes": 7092,
+      "sha256": "ee8b56df405b35e1c8b6a6cf19e577a33bd9dba3fe463682905907504ead8cc7"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7VltvWdUhm97sg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VltvWdUhm97sg.woff2",
+      "bytes": 5328,
+      "sha256": "fddc117a5ff1037bd53281ab5d700795cf76c984319a3d1584acfa9d0ba33768"
+    },
+    {
+      "path": "public/vendor/fonts/5aUz9_-1phKLFgshYDvh6Vwt7VptvWdUhm8.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/alegreyasans/v28/5aUz9_-1phKLFgshYDvh6Vwt7VptvWdUhm8.woff2",
+      "bytes": 17136,
+      "sha256": "624ea7e85a53f6bcb15f862179386546d3182ec8edde32c512662d31e1bfde18"
+    },
+    {
+      "path": "public/vendor/fonts/8vIJ7ww63mVu7gt7-GT7PkRXM8Xx.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt7-GT7PkRXM8Xx.woff2",
+      "bytes": 14536,
+      "sha256": "bd11c74f54739723a68677a077d6d562f3e5d09b9bb822eb658ee5314d1a9614"
+    },
+    {
+      "path": "public/vendor/fonts/8vIJ7ww63mVu7gt79mT7PkRXMw.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/cinzel/v26/8vIJ7ww63mVu7gt79mT7PkRXMw.woff2",
+      "bytes": 25888,
+      "sha256": "ef95296c778719c3d658a8284d65078100450948851b9114485ada01d9d3d3f8"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR1SDk_YAPI.woff2",
+      "bytes": 44172,
+      "sha256": "68fd4b247dde89984ee835d99953d235e4927be2b1b732ad81173b519869cee8"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GR2SDk_YAPIlWk.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR2SDk_YAPIlWk.woff2",
+      "bytes": 19868,
+      "sha256": "19e98f32f56c0f648cc511d29305b295f6f63a7cf1f1c72eb8516dd21e69a705"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GR4SDk_YAPIlWk.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR4SDk_YAPIlWk.woff2",
+      "bytes": 33932,
+      "sha256": "2db942ef6f5237810b751b686706fbd08969a28d055318a9a8fb4a1ec99bbcce"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GR5SDk_YAPIlWk.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR5SDk_YAPIlWk.woff2",
+      "bytes": 11476,
+      "sha256": "65f7302476afd8d89c200101a987691cd99da017e25fb4bf8f57c385f69e9b6f"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GR6SDk_YAPIlWk.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR6SDk_YAPIlWk.woff2",
+      "bytes": 10936,
+      "sha256": "d858010614321f668ca37def13edb91c98f9747d5126092a9dcbff264d6eb948"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GR7SDk_YAPIlWk.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GR7SDk_YAPIlWk.woff2",
+      "bytes": 113756,
+      "sha256": "c2fa6862b03629214873944b171b0df1189420be52aabd82142d45f96fdce588"
+    },
+    {
+      "path": "public/vendor/fonts/SlGUmQSNjdsmc35JDF1K5GRxSDk_YAPIlWk.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGUmQSNjdsmc35JDF1K5GRxSDk_YAPIlWk.woff2",
+      "bytes": 25968,
+      "sha256": "171a104fa20c9ccf6c25945151a98b37ed2ae26986c2e01f9afda65ee2fa9f77"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweD81ZyHKpWiGIg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweD81ZyHKpWiGIg.woff2",
+      "bytes": 26520,
+      "sha256": "d2c4018bf5127a0d3d761c537ab8d96d4bbfb27c592835d23f7ac9db77c11980"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweDQ1ZyHKpWiGIg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDQ1ZyHKpWiGIg.woff2",
+      "bytes": 11076,
+      "sha256": "ad65742680d232e669d8457524be63fd6a847ddc4f94f26ee81e3ac1c3d03960"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweDU1ZyHKpWiGIg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDU1ZyHKpWiGIg.woff2",
+      "bytes": 88392,
+      "sha256": "0077bd5045a699e2d26d1fc5a6071f865ec0698ba419cad62ce9465b59b6d47c"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweDY1ZyHKpWiGIg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDY1ZyHKpWiGIg.woff2",
+      "bytes": 35412,
+      "sha256": "8b2dcef53a6ade1cbbe7038372cccf1585cc766a09ff1db0b70246bca39d6b72"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweDc1ZyHKpWiGIg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDc1ZyHKpWiGIg.woff2",
+      "bytes": 12044,
+      "sha256": "6f05b7834287650ff917192744e045ca26b78fbfce32a68879fa8169e556275b"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweDg1ZyHKpWiGIg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDg1ZyHKpWiGIg.woff2",
+      "bytes": 19612,
+      "sha256": "09d8e9535aa76ce24b659ab15c402765d8c1741222f2ba7a10661ceec69f02ef"
+    },
+    {
+      "path": "public/vendor/fonts/SlGWmQSNjdsmc35JDF1K5GRweDs1ZyHKpWg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/ebgaramond/v33/SlGWmQSNjdsmc35JDF1K5GRweDs1ZyHKpWg.woff2",
+      "bytes": 47824,
+      "sha256": "d2761541b314509e02df3539cd35fc712954a48a50f4e0ab424dde817c699c2a"
+    },
+    {
+      "path": "public/vendor/fonts/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jJaJOwaYTUv1X.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jJaJOwaYTUv1X.woff2",
+      "bytes": 4272,
+      "sha256": "ac6ae131f4f60deff12d11a580b2c7a4550ac0377b5e9272c238e3cbdb9e3605"
+    },
+    {
+      "path": "public/vendor/fonts/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jJqJOwaYTUv1X.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jJqJOwaYTUv1X.woff2",
+      "bytes": 6880,
+      "sha256": "cb71ee3ab2fac8d08a5f71f988dd9370277403d930b662bd6b53b7042100e5f8"
+    },
+    {
+      "path": "public/vendor/fonts/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jKaJOwaYTUv1X.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jKaJOwaYTUv1X.woff2",
+      "bytes": 6628,
+      "sha256": "a778c0fa947dfc4a50ca2a323fc6362a402911b02be570c025f78a9486dd9342"
+    },
+    {
+      "path": "public/vendor/fonts/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jKqJOwaYTUg.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIRdiDOrfiq0b7R8O1Iw9WLcY5jKqJOwaYTUg.woff2",
+      "bytes": 14416,
+      "sha256": "81c2f926d1c8126a7a8665af639a62021351b328cbb6d1ecfce72804f1350480"
+    },
+    {
+      "path": "public/vendor/fonts/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb44QeeMde9u5V.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb44QeeMde9u5V.woff2",
+      "bytes": 4640,
+      "sha256": "db76e2ca47aed303f796c9f31d3ae7c4e7dc789b08bd71663be763f0cd9aa299"
+    },
+    {
+      "path": "public/vendor/fonts/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb4IQeeMde9u5V.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb4IQeeMde9u5V.woff2",
+      "bytes": 7048,
+      "sha256": "5a770adab21aa298afb5862118c405d39f3efa1f7b930a988d137c2bdcb6e275"
+    },
+    {
+      "path": "public/vendor/fonts/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb74QeeMde9u5V.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb74QeeMde9u5V.woff2",
+      "bytes": 6376,
+      "sha256": "1067f90f0795f8f1fff401aceaf7f6063985d917d0bce49b46efa93352d3270c"
+    },
+    {
+      "path": "public/vendor/fonts/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb7IQeeMde9g.woff2",
+      "kind": "font",
+      "url": "https://fonts.gstatic.com/s/gfsneohellenic/v27/8QIUdiDOrfiq0b7R8O1Iw9WLcY5rkYdb7IQeeMde9g.woff2",
+      "bytes": 12612,
+      "sha256": "51fccce108d6bf0a77fd55d2332be1cee203194b35ec139849dd168cf2565f68"
+    },
+    {
+      "path": "public/vendor/fonts/fonts.css",
+      "kind": "font-stylesheet",
+      "url": "https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Neohellenic:wght@400;700&display=swap",
+      "bytes": 28347,
+      "sha256": "c1c0b0441fc1aa67b9027a8e3d565415687429949ef11c0a0d2c25bb4f509ecd",
+      "original_path": "provenance/google-fonts.css",
+      "original_sha256": "551c21f8bd07db8822f2aadb5c771ca2fca9a735bb8882de4155c58713e0ff8c",
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+      "localization": "Only replace each remote woff2 URL with its relative filename; retain every subset."
+    },
+    {
+      "path": "public/vendor/fonts/LICENSE-OFL.txt",
+      "kind": "license",
+      "bytes": 17935,
+      "sha256": "8089ea12379e34798060080e113d8c2622f233b4a2f55c90ebe22b9ae30c252f",
+      "sources": [
+        {
+          "family": "Alegreya Sans",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/alegreyasans/OFL.txt",
+          "path": "provenance/font-licenses/alegreyasans-OFL.txt",
+          "sha256": "0677891e6a143f297350d260ad766ad33bfc18ed5fa4f213acf648d6b597ec1a"
+        },
+        {
+          "family": "Cinzel",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/cinzel/OFL.txt",
+          "path": "provenance/font-licenses/cinzel-OFL.txt",
+          "sha256": "f2b3029aba64c378bf0963b62945eee15e564fe4330b934c8f2eb058282b5e83"
+        },
+        {
+          "family": "EB Garamond",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/ebgaramond/OFL.txt",
+          "path": "provenance/font-licenses/ebgaramond-OFL.txt",
+          "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7"
+        },
+        {
+          "family": "GFS Neohellenic",
+          "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/gfsneohellenic/OFL.txt",
+          "path": "provenance/font-licenses/gfsneohellenic-OFL.txt",
+          "sha256": "bfc205682f5454b42a732ec857b665293ab8bc6f0ee901a0967219ba7ffdb190"
+        }
+      ]
+    }
+  ],
+  "fonts": {
+    "families": [
+      "Alegreya Sans",
+      "Cinzel",
+      "EB Garamond",
+      "GFS Neohellenic"
+    ],
+    "subsets": "All subsets returned by the recorded Chrome User-Agent.",
+    "woff2_files": 59,
+    "woff2_bytes": 933876
+  },
+  "script": {
+    "start": 102524,
+    "content_start": 102546,
+    "end": 3587089,
+    "marker_region_start": 103054,
+    "marker_region_sha256": "96240bb3dab238ea21b133c0570c8dd5d4586b2a18698ec31be18344852b92ea"
+  },
+  "modules": [
+    {
+      "name": "hdr.js",
+      "start": 103054,
+      "end": 108159,
+      "line_start": 812,
+      "line_end": 931,
+      "bundle_line_start": 10,
+      "sha256": "60b3a88553597f23f571988dc5f38f6bac5ff2699e288d529b0c7b302679c9fc",
+      "purpose": "Optional WebGPU HDR output canvas."
+    },
+    {
+      "name": "waves.js",
+      "start": 108159,
+      "end": 110085,
+      "line_start": 932,
+      "line_end": 991,
+      "bundle_line_start": 130,
+      "sha256": "0a5fb488975ee2244678d2d060b5ffe6f5cb70ec807d37d467279c2e7a11e6ce",
+      "purpose": "Shared five-wave Gerstner height, slope, and shader calculations."
+    },
+    {
+      "name": "noise.js",
+      "start": 110085,
+      "end": 113250,
+      "line_start": 992,
+      "line_end": 1093,
+      "bundle_line_start": 190,
+      "sha256": "cb1bec7551ed8472357d6357069017dc0840e6710e959eb2743de07d6276c927",
+      "purpose": "Seeded random numbers and procedural noise helpers."
+    },
+    {
+      "name": "band.js",
+      "start": 113250,
+      "end": 115032,
+      "line_start": 1094,
+      "line_end": 1152,
+      "bundle_line_start": 292,
+      "sha256": "aed82a272b541c72ad98a14e0162f5626f7c4e93d35ca98e3f89b346b579eaa2",
+      "purpose": "Animated cinematic letterboxing and viewport fitting."
+    },
+    {
+      "name": "core.js",
+      "start": 115032,
+      "end": 220258,
+      "line_start": 1153,
+      "line_end": 3747,
+      "bundle_line_start": 351,
+      "sha256": "e28fd2405774cbfb48cc4d1c861ac0412c9524fee8c4f6c71ff9b2a633799653",
+      "purpose": "Scene, renderer, render targets, quality tiers, and adaptive resolution."
+    },
+    {
+      "name": "sky.js",
+      "start": 220258,
+      "end": 300555,
+      "line_start": 3748,
+      "line_end": 5410,
+      "bundle_line_start": 2946,
+      "sha256": "eaf4bdba159c7fb148d30c11453a57c920506c8baa20afec43b4db2f1b2fed85",
+      "purpose": "CPU-baked Rayleigh/Mie atmosphere and cloud coverage."
+    },
+    {
+      "name": "layout.js",
+      "start": 300555,
+      "end": 306495,
+      "line_start": 5411,
+      "line_end": 5523,
+      "bundle_line_start": 4609,
+      "sha256": "56f5fc49f76ab84a07e8c59d1d030dbebd05576826b1cbe77a032e23c10a02a7",
+      "purpose": "Fixed world layout, objective positions, and title camera."
+    },
+    {
+      "name": "surfgeo.js",
+      "start": 306495,
+      "end": 326508,
+      "line_start": 5524,
+      "line_end": 6045,
+      "bundle_line_start": 4722,
+      "sha256": "fd6a7035b4b431265dfa184deb0efeede10734c87ec0257c5802d6c10e072434",
+      "purpose": "Shared procedural geometry builders and surface attributes."
+    },
+    {
+      "name": "boat.js",
+      "start": 326508,
+      "end": 494566,
+      "line_start": 6046,
+      "line_end": 8982,
+      "bundle_line_start": 5244,
+      "sha256": "e792a53405df1813ea485e36f5f1f0464711aba8cbebce96d901dcee11bff2ba",
+      "purpose": "Sponge boat, air pump, gauge, ladder, and hose geometry."
+    },
+    {
+      "name": "ocean.js",
+      "start": 494566,
+      "end": 554612,
+      "line_start": 8983,
+      "line_end": 10319,
+      "bundle_line_start": 8181,
+      "sha256": "5b282d52dff3a1c6083daa928987980ce5690be39b1b4018c9df267788c9888e",
+      "purpose": "Camera-following ocean grid and water rendering."
+    },
+    {
+      "name": "world.js",
+      "start": 554612,
+      "end": 824548,
+      "line_start": 10320,
+      "line_end": 15456,
+      "bundle_line_start": 9518,
+      "sha256": "92768dcc31199e64e960ce0e89b7d6a7ede1485f3eef8a8c562ec6094ee73136",
+      "purpose": "Heightfield seabed, rocks, plants, and procedural materials."
+    },
+    {
+      "name": "prints.js",
+      "start": 824548,
+      "end": 831270,
+      "line_start": 15457,
+      "line_end": 15661,
+      "bundle_line_start": 14655,
+      "sha256": "f377593e7be7a0a037ac7470326c0ffbdfbeddbf5840d69f0c07c2adad755760",
+      "purpose": "Fading seabed footprints from diver movement."
+    },
+    {
+      "name": "sdf.js",
+      "start": 831270,
+      "end": 836361,
+      "line_start": 15662,
+      "line_end": 15781,
+      "bundle_line_start": 14860,
+      "sha256": "1d4dc3c12f33d7485333e7c9ecf95ed854dfb4fc5245b16729c790751ec24bb6",
+      "purpose": "Signed-distance primitives and smooth shape blending."
+    },
+    {
+      "name": "wreck.js",
+      "start": 836361,
+      "end": 1066095,
+      "line_start": 15782,
+      "line_end": 19957,
+      "bundle_line_start": 14980,
+      "sha256": "5eac2538fb253b1139be07b1a3910b2b8d9d1db8096d7d2dd53b9c659aaf3271",
+      "purpose": "Ancient hull, fractured amphorae, and wreck details."
+    },
+    {
+      "name": "island.js",
+      "start": 1066095,
+      "end": 1115421,
+      "line_start": 19958,
+      "line_end": 20943,
+      "bundle_line_start": 19156,
+      "sha256": "c56df3b461ac08823b20b86a77a76585bf27394f890f0a646b0917ec31bea2bf",
+      "purpose": "Aegean island terrain, terraces, and threshing floors."
+    },
+    {
+      "name": "flare.js",
+      "start": 1115421,
+      "end": 1119885,
+      "line_start": 20944,
+      "line_end": 21060,
+      "bundle_line_start": 20142,
+      "sha256": "61a23858597d85b818c036fd58186dda5bfdde13ec9ca2d8e4c6610062645927",
+      "purpose": "Sun flare and atmospheric lens effects."
+    },
+    {
+      "name": "horizon.js",
+      "start": 1119885,
+      "end": 1128218,
+      "line_start": 21061,
+      "line_end": 21258,
+      "bundle_line_start": 20259,
+      "sha256": "e2e5240c2f084667be27fdd7b4225ee4120ace1443d6a644cd71cb70d62aa137",
+      "purpose": "Distant horizon scenery and sea context."
+    },
+    {
+      "name": "leaps.js",
+      "start": 1128218,
+      "end": 1162942,
+      "line_start": 21259,
+      "line_end": 21948,
+      "bundle_line_start": 20457,
+      "sha256": "cf47b3f85eab05bafe6a84c9c7258dfa4a0c3c386eaa2c1918b6a2d1223da600",
+      "purpose": "Procedural above-water wildlife motion."
+    },
+    {
+      "name": "surface.js",
+      "start": 1162942,
+      "end": 1210611,
+      "line_start": 21949,
+      "line_end": 22891,
+      "bundle_line_start": 21147,
+      "sha256": "ab4268fa011d2f6c08a13fe9890ef4744dce912a83587e98bfb41605dc6fce5c",
+      "purpose": "Surface scene, boat context, and sea presentation."
+    },
+    {
+      "name": "gears.js",
+      "start": 1210611,
+      "end": 1225480,
+      "line_start": 22892,
+      "line_end": 23233,
+      "bundle_line_start": 22090,
+      "sha256": "a796b6a4e67d7aae4fe1e448fea6f55a047ed767f3535f334390dfe2ce56eca0",
+      "purpose": "Procedural gear teeth, wheel profiles, and axle geometry."
+    },
+    {
+      "name": "astro.js",
+      "start": 1225480,
+      "end": 1227914,
+      "line_start": 23234,
+      "line_end": 23305,
+      "bundle_line_start": 22432,
+      "sha256": "c60406b7a96406853d0a01cb47c435af00005eb21be4f0cd84bbc796a14dde88",
+      "purpose": "Sun, moon, and eclipse calculations from lunar cycles."
+    },
+    {
+      "name": "frame.js",
+      "start": 1227914,
+      "end": 1230379,
+      "line_start": 23306,
+      "line_end": 23380,
+      "bundle_line_start": 22504,
+      "sha256": "f1e79dea05f3ff00f18a36bfc1b15414ec46e594935f13dd083512ec69069874",
+      "purpose": "Responsive camera framing for the mechanism reveal."
+    },
+    {
+      "name": "fragments.js",
+      "start": 1230379,
+      "end": 1427384,
+      "line_start": 23381,
+      "line_end": 27325,
+      "bundle_line_start": 22579,
+      "sha256": "ba789a3153c5e0998bc35289e39a0cd5f61b398143de331c2e84c678962d2b46",
+      "purpose": "Buried bronze fragments and sediment-cleaning masks."
+    },
+    {
+      "name": "mechanism.js",
+      "start": 1427384,
+      "end": 1580298,
+      "line_start": 27326,
+      "line_end": 30525,
+      "bundle_line_start": 26524,
+      "sha256": "0ed1f764cb163e3d271e0fe55fb5815a1c3df2a7e3d5cd490967c7a73763ab72",
+      "purpose": "Gear trains, spiral dials, and mechanism construction."
+    },
+    {
+      "name": "fx.js",
+      "start": 1580298,
+      "end": 1685440,
+      "line_start": 30526,
+      "line_end": 32856,
+      "bundle_line_start": 29724,
+      "sha256": "9b37e443a8660b9fd82e5dac87b1b003dfe3ad06fe6b596ff9a1ef50a8989aa3",
+      "purpose": "Underwater composite, god rays, depth of field, bloom, and grading."
+    },
+    {
+      "name": "player.js",
+      "start": 1685440,
+      "end": 1823847,
+      "line_start": 32857,
+      "line_end": 35936,
+      "bundle_line_start": 32055,
+      "sha256": "ebd2cb0fcaa8a903ad5bbd0c76891aee9a0f574949781e70418410babe7d6ec6",
+      "purpose": "Turn-and-walk movement, clambering, and buoyancy valve."
+    },
+    {
+      "name": "guide.js",
+      "start": 1823847,
+      "end": 1831002,
+      "line_start": 35937,
+      "line_end": 36167,
+      "bundle_line_start": 35135,
+      "sha256": "c439ee6de4208977fec5603cc2d08dc5843466cd72081e732628f5143023bec7",
+      "purpose": "Idle hints, delayed markers, and low-air objective guidance."
+    },
+    {
+      "name": "touch.js",
+      "start": 1831002,
+      "end": 1860293,
+      "line_start": 36168,
+      "line_end": 36887,
+      "bundle_line_start": 35366,
+      "sha256": "480e706191f39e5998b315ee28ac3167917878e1d05a2a95a744ac5b53fb3ee1",
+      "purpose": "Virtual stick, look and rub gestures, and haptics."
+    },
+    {
+      "name": "lenstext.js",
+      "start": 1860293,
+      "end": 1884479,
+      "line_start": 36888,
+      "line_end": 37452,
+      "bundle_line_start": 36086,
+      "sha256": "be5693846b4b313ce2cc5b7628281b29dfeecb6b43d8e77e7ff59af72a7b1b9c",
+      "purpose": "Gameplay text presentation and lens-aligned labels."
+    },
+    {
+      "name": "main.js",
+      "start": 1884479,
+      "end": 2247493,
+      "line_start": 37453,
+      "line_end": 44916,
+      "bundle_line_start": 36651,
+      "sha256": "c840f3f54a6128008340491c73a4d5a6dd4eddc57be6da8b7f226809d586a5b5",
+      "purpose": "State transitions from title through dive, discovery, assembly, and eclipse."
+    },
+    {
+      "name": "rare.js",
+      "start": 2247493,
+      "end": 2391489,
+      "line_start": 44917,
+      "line_end": 47947,
+      "bundle_line_start": 44115,
+      "sha256": "b59c36092980e4c9eba9c429b24d3cace33292cc37a3d3c75f6c376d5f7b5116",
+      "purpose": "Weighted rare wildlife encounters per dive."
+    },
+    {
+      "name": "life.js",
+      "start": 2391489,
+      "end": 2600304,
+      "line_start": 47948,
+      "line_end": 52250,
+      "bundle_line_start": 47146,
+      "sha256": "58649083d58f60510835d9ffb7f2f1406fa29f96f7a4dd307cfe5a28dcfb3028",
+      "purpose": "Fish schools, spatial hashing, and procedural swimming."
+    },
+    {
+      "name": "critters.js",
+      "start": 2600304,
+      "end": 2789710,
+      "line_start": 52251,
+      "line_end": 56982,
+      "bundle_line_start": 51449,
+      "sha256": "dcb072be47da7c9f37a2af0ad03bc551cc2eb0390c3204f2fc35188d7d386a9c",
+      "purpose": "Octopus, moray, crabs, cuttlefish, and other seabed life."
+    },
+    {
+      "name": "magic.js",
+      "start": 2789710,
+      "end": 2870013,
+      "line_start": 56983,
+      "line_end": 58982,
+      "bundle_line_start": 56181,
+      "sha256": "a7fc24b6e40d1cc805c9db4d36ec1ba60e917728db87e8199de678625037aad9",
+      "purpose": "Mechanism build-up, orrery projection, and reveal effects."
+    },
+    {
+      "name": "audio.js",
+      "start": 2870013,
+      "end": 3080834,
+      "line_start": 58983,
+      "line_end": 64296,
+      "bundle_line_start": 58181,
+      "sha256": "67850c7379b080e6b40b4f414f18e5998caa50dd0ec2a2099e86fd23bbebe21c",
+      "purpose": "Procedural Web Audio sound effects and music."
+    },
+    {
+      "name": "diver.js",
+      "start": 3080834,
+      "end": 3587089,
+      "line_start": 64297,
+      "line_end": 73444,
+      "bundle_line_start": 63495,
+      "sha256": "0f7470d699eb2cd5ed2d601eb37aba4970607dd455e10d0b1f5e17a6ad6ba086",
+      "purpose": "SDF-built divers, skin weights, skeletons, and procedural animation."
+    }
+  ],
+  "public": {
+    "path": "public/index.html",
+    "bytes": 3550366,
+    "sha256": "e2969b480f7e14637a89d3593b3bee348f8076c1665a6f7e498a8a259b268d8f"
+  }
+}

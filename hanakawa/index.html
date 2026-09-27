@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hanakawa</title>
+    <link rel="preload" href="/assets/ui/fonts/cormorant-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/ui/fonts/geist-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/ui/fonts/cormorant-500-italic.woff2" as="font" type="font/woff2" crossorigin />
+    <style>html{background:#a9d2e2}</style>
+    <script type="module" crossorigin src="/assets/index-BeXmJqZW.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/layout-DtbcdJal.js">
+    <link rel="modulepreload" crossorigin href="/assets/three.webgpu-D7sqgfgO.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-jy0zn12G.css">
+  </head>
+  <body data-boot="loading">
+    <canvas id="game" tabindex="0"></canvas>
+    <div id="ui" inert></div>
+    <div id="loading" class="loading">
+      <div class="ls-stage" aria-hidden="true">
+        <div class="loading-paper"></div>
+        <svg class="ls-layer ls-far" data-parallax="0.7" viewBox="-40 0 1680 900" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="hk-haze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3ea" stop-opacity="0" /><stop offset="1" stop-color="#eef3ea" stop-opacity="0.9" /></linearGradient>
+            <radialGradient id="hk-glow"><stop offset="0" stop-color="#ffb46e" stop-opacity="0.7" /><stop offset="1" stop-color="#ffb46e" stop-opacity="0" /></radialGradient>
+            <pattern id="hk-koshi" width="5" height="10" patternUnits="userSpaceOnUse"><rect width="5" height="10" fill="#8a6443" /><rect width="1.6" height="10" fill="#5e4129" /></pattern>
+            <path id="hk-fir" d="M0 -64 L8 -44 L4 -44 L13 -24 L7 -24 L17 0 L-17 0 L-7 -24 L-13 -24 L-4 -44 L-8 -44 Z" />
+            <path id="hk-roof" d="M-26 -14 L26 -14 Q34 -4 60 -4 L58 0 Q30 2 0 2 Q-30 2 -58 0 L-60 -4 Q-34 -4 -26 -14 Z" />
+            <g id="hk-sakura">
+              <path d="M-3 0 L-2 -30 Q-10 -44 -22 -50 L-19 -53 Q-8 -47 0 -38 Q6 -50 18 -58 L21 -55 Q9 -46 4 -32 L4 0 Z" fill="#6b4a3c" />
+              <circle cx="-26" cy="-50" r="17" fill="#e4a3b2" /><circle cx="26" cy="-50" r="17" fill="#e4a3b2" /><circle cx="0" cy="-46" r="18" fill="#e8adbb" />
+              <circle cx="-16" cy="-66" r="22" fill="#f0bfca" /><circle cx="16" cy="-66" r="22" fill="#f0bfca" />
+              <circle cx="0" cy="-82" r="20" fill="#f6d2d9" /><circle cx="-8" cy="-88" r="10" fill="#fae3e7" /><circle cx="-24" cy="-70" r="8" fill="#f8dbe0" />
+            </g>
+            <g id="hk-house">
+              <rect x="-45" y="-80" width="90" height="38" fill="#eee2cb" />
+              <rect x="-30" y="-72" width="60" height="14" fill="#cdb995" />
+              <path d="M-30 -67.5 H30 M-30 -62.5 H30 M-18 -72 V-58 M-6 -72 V-58 M6 -72 V-58 M18 -72 V-58" stroke="#9c8766" stroke-width="1.2" />
+              <path d="M-54 -78 L-40 -98 L40 -98 L54 -78 Z" fill="#40434b" />
+              <rect x="-45" y="-42" width="90" height="42" fill="url(#hk-koshi)" />
+              <rect x="-12" y="-36" width="24" height="36" fill="#2f4563" /><rect x="-12" y="-36" width="24" height="3" fill="#22344d" />
+              <path d="M-52 -40 L-47 -48 L47 -48 L52 -40 Z" fill="#484b53" />
+            </g>
+            <g id="hk-lantern">
+              <circle r="22" fill="url(#hk-glow)" />
+              <path d="M0 -15 V-8" stroke="#2c2522" stroke-width="1" />
+              <rect x="-4" y="-9" width="8" height="2" fill="#2c2522" /><ellipse rx="6" ry="7.5" fill="#dc5a3c" />
+              <path d="M-6 -2.5 H6 M-6 2.5 H6" stroke="#b8402a" stroke-width="0.8" /><rect x="-4" y="7" width="8" height="2" fill="#2c2522" />
+            </g>
+          </defs>
+          <g fill="#fbfaf3" fill-opacity="0.8">
+            <ellipse cx="1040" cy="150" rx="72" ry="16" /><ellipse cx="1000" cy="141" rx="40" ry="19" /><ellipse cx="1080" cy="136" rx="46" ry="24" /><ellipse cx="1122" cy="151" rx="50" ry="13" />
+            <ellipse cx="660" cy="232" rx="92" ry="13" /><ellipse cx="628" cy="222" rx="40" ry="15" /><ellipse cx="688" cy="218" rx="48" ry="19" />
+            <ellipse cx="1452" cy="112" rx="62" ry="12" /><ellipse cx="1432" cy="104" rx="28" ry="12" /><ellipse cx="1474" cy="100" rx="32" ry="14" />
+          </g>
+          <path d="M880 196 q6 -5 12 0 q6 -5 12 0 M922 180 q4 -4 9 0 q4 -4 9 0 M852 220 q5 -4 10 0 q5 -4 10 0" stroke="#40505a" stroke-opacity="0.5" stroke-width="1.6" fill="none" stroke-linecap="round" />
+          <path d="M-40 480 L-40 352 C40 336 120 300 220 312 C300 322 360 286 460 268 C560 250 620 296 720 316 C800 332 880 300 960 290 C1050 278 1110 244 1200 256 C1290 268 1350 296 1440 290 C1520 284 1580 262 1640 266 L1640 480 Z" fill="#b3cfd8" />
+          <path d="M-40 490 L-40 404 C80 394 160 364 260 370 C360 376 430 352 530 358 C650 366 710 396 830 390 C940 384 1010 356 1120 358 C1230 360 1300 386 1410 378 C1510 370 1580 352 1640 354 L1640 490 Z" fill="#9dbec6" />
+          <rect x="-40" y="330" width="1680" height="180" fill="url(#hk-haze)" />
+        </svg>
+        <svg class="ls-layer ls-mid" data-parallax="1.6" viewBox="-40 0 1680 900" preserveAspectRatio="none">
+          <path d="M360 560 C520 498 640 468 780 466 C920 464 1020 478 1130 500 L1130 560 Z" fill="#a3c49a" />
+          <path d="M-40 560 L-40 410 C60 398 140 392 220 404 C300 416 360 440 440 452 C500 460 560 474 640 514 C680 536 710 552 740 560 Z" fill="#86ab70" />
+          <g fill="#5f8a5f">
+            <use href="#hk-fir" transform="translate(10 420) scale(0.9)" /><use href="#hk-fir" transform="translate(48 414) scale(1.1)" /><use href="#hk-fir" transform="translate(96 412) scale(0.8)" />
+            <use href="#hk-fir" transform="translate(150 414) scale(1)" /><use href="#hk-fir" transform="translate(236 424) scale(0.85)" /><use href="#hk-fir" transform="translate(330 444) scale(0.75)" />
+          </g>
+          <path d="M880 560 C950 540 1020 490 1080 452 C1130 422 1170 396 1230 360 C1300 326 1360 300 1440 280 C1520 262 1580 250 1640 244 L1640 560 Z" fill="#6b9660" />
+          <g fill="#4d7a52">
+            <use href="#hk-fir" transform="translate(1100 440) scale(0.9)" /><use href="#hk-fir" transform="translate(1160 408) scale(1.1)" /><use href="#hk-fir" transform="translate(1214 382) scale(1.3)" />
+            <use href="#hk-fir" transform="translate(1262 360) scale(1.2)" /><use href="#hk-fir" transform="translate(1310 340) scale(1.5)" /><use href="#hk-fir" transform="translate(1468 294) scale(1.5)" />
+            <use href="#hk-fir" transform="translate(1512 284) scale(1.3)" /><use href="#hk-fir" transform="translate(1560 274) scale(1.6)" /><use href="#hk-fir" transform="translate(1612 266) scale(1.4)" />
+          </g>
+          <g fill="#3e6848">
+            <use href="#hk-fir" transform="translate(1136 470) scale(1)" /><use href="#hk-fir" transform="translate(1196 452) scale(1.2)" /><use href="#hk-fir" transform="translate(1250 430) scale(1.1)" />
+            <use href="#hk-fir" transform="translate(1520 380) scale(1.4)" /><use href="#hk-fir" transform="translate(1580 370) scale(1.7)" /><use href="#hk-fir" transform="translate(1630 364) scale(1.3)" />
+          </g>
+          <g transform="translate(1390 446)">
+            <rect x="-1.6" y="-214" width="3.2" height="64" fill="#4b443c" />
+            <g fill="#4b443c"><ellipse cy="-170" rx="6" ry="1.8" /><ellipse cy="-177" rx="5.4" ry="1.7" /><ellipse cy="-184" rx="4.8" ry="1.6" /><ellipse cy="-191" rx="4.2" ry="1.5" /><ellipse cy="-198" rx="3.6" ry="1.4" /><circle cy="-216" r="3" /></g>
+            <rect x="-19" y="-152" width="38" height="22" fill="#efe4cf" /><rect x="-19" y="-144" width="38" height="3" fill="#c9492f" />
+            <use href="#hk-roof" transform="translate(0 -152) scale(0.62 0.9)" fill="#3c4049" />
+            <rect x="-23" y="-128" width="46" height="24" fill="#efe4cf" /><rect x="-23" y="-119" width="46" height="3" fill="#c9492f" />
+            <use href="#hk-roof" transform="translate(0 -128) scale(0.72 0.92)" fill="#3c4049" />
+            <rect x="-27" y="-102" width="54" height="26" fill="#efe4cf" /><rect x="-27" y="-92" width="54" height="3" fill="#c9492f" />
+            <use href="#hk-roof" transform="translate(0 -102) scale(0.82 0.95)" fill="#3c4049" />
+            <rect x="-32" y="-74" width="64" height="28" fill="#efe4cf" /><rect x="-32" y="-63" width="64" height="3" fill="#c9492f" />
+            <use href="#hk-roof" transform="translate(0 -74) scale(0.92 1)" fill="#3c4049" />
+            <rect x="-38" y="-44" width="76" height="36" fill="#efe4cf" /><rect x="-38" y="-31" width="76" height="3" fill="#c9492f" /><rect x="-9" y="-26" width="18" height="18" fill="#6a4d3a" />
+            <use href="#hk-roof" transform="translate(0 -44) scale(1.05 1)" fill="#3c4049" />
+            <rect x="-50" y="-8" width="100" height="8" fill="#b7ad99" />
+          </g>
+          <use href="#hk-sakura" transform="translate(1300 452) scale(0.7)" /><use href="#hk-sakura" transform="translate(1480 440) scale(0.75)" /><use href="#hk-sakura" transform="translate(230 440) scale(0.6)" />
+        </svg>
+        <div class="ls-mist"></div>
+        <svg class="ls-town" viewBox="0 0 1600 900" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="hk-water" x1="0" y1="536" x2="0" y2="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a9ded5" /><stop offset="0.16" stop-color="#6fcac2" /><stop offset="0.55" stop-color="#40b1ae" /><stop offset="1" stop-color="#2b9098" /></linearGradient>
+            <linearGradient id="hk-wmist" x1="0" y1="536" x2="0" y2="600" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#f1f6ef" stop-opacity="0.8" /><stop offset="1" stop-color="#f1f6ef" stop-opacity="0" /></linearGradient>
+            <linearGradient id="hk-rfade" x1="0" y1="560" x2="0" y2="800" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.85" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></linearGradient>
+            <mask id="hk-rmask" maskUnits="userSpaceOnUse" x="0" y="536" width="1600" height="364"><rect x="0" y="536" width="1600" height="364" fill="url(#hk-rfade)" /></mask>
+            <path id="hk-gibo" d="M0 -13 C4 -8 5 -4 3 -1 L3 2 L-3 2 L-3 -1 C-5 -4 -4 -8 0 -13 Z" />
+          </defs>
+          <rect x="0" y="536" width="1600" height="364" fill="url(#hk-water)" />
+          <g mask="url(#hk-rmask)" opacity="0.32"><use href="#hk-bridge" transform="matrix(1 0 0 -1 0 1180)" /></g>
+          <rect x="0" y="536" width="1600" height="64" fill="url(#hk-wmist)" />
+          <path d="M0 512 L420 514 L476 520 L520 532 L536 544 L0 550 Z" fill="#86aa66" />
+          <path d="M0 550 L536 544 L552 560 L0 574 Z" fill="#b8aa90" /><path d="M0 568 L548 556 L552 560 L0 574 Z" fill="#978b74" />
+          <path d="M1600 508 L1250 508 L1205 528 L1188 542 L1600 548 Z" fill="#86aa66" />
+          <path d="M1188 542 L1600 548 L1600 570 L1172 558 Z" fill="#b8aa90" /><path d="M1176 555 L1600 564 L1600 570 L1172 558 Z" fill="#978b74" />
+          <use href="#hk-house" transform="translate(66 500) scale(0.8)" /><use href="#hk-house" transform="translate(166 500) scale(0.8)" /><use href="#hk-house" transform="translate(266 500) scale(0.8)" /><use href="#hk-house" transform="translate(360 502) scale(0.8)" />
+          <use href="#hk-house" transform="translate(20 522)" /><use href="#hk-house" transform="translate(115 522)" /><use href="#hk-house" transform="translate(210 522)" /><use href="#hk-house" transform="translate(305 522)" /><use href="#hk-house" transform="translate(396 524) scale(0.92)" />
+          <use href="#hk-sakura" transform="translate(478 524) scale(1.25)" />
+          <use href="#hk-lantern" transform="translate(52 488)" /><use href="#hk-lantern" transform="translate(147 488)" /><use href="#hk-lantern" transform="translate(242 488)" /><use href="#hk-lantern" transform="translate(337 488)" /><use href="#hk-lantern" transform="translate(424 494)" />
+          <use href="#hk-sakura" transform="translate(1216 516) scale(1.05)" />
+          <g transform="translate(1292 512)">
+            <rect x="-24" y="-66" width="6" height="66" fill="#d24a2e" /><rect x="18" y="-66" width="6" height="66" fill="#d24a2e" />
+            <rect x="-30" y="-56" width="60" height="5" fill="#d24a2e" /><rect x="-2" y="-64" width="4" height="9" fill="#d24a2e" />
+            <rect x="-33" y="-67" width="66" height="3" fill="#d24a2e" /><path d="M-38 -66 Q0 -70 38 -66 L41 -73 Q0 -78 -41 -73 Z" fill="#2e2927" />
+          </g>
+          <g transform="translate(1352 512)">
+            <rect x="-7" y="-6" width="14" height="6" fill="#a8a293" /><rect x="-3" y="-26" width="6" height="20" fill="#a8a293" />
+            <rect x="-8" y="-38" width="16" height="12" fill="#a8a293" /><rect x="-5" y="-35" width="10" height="6" fill="#f2bb6c" />
+            <path d="M-13 -38 L0 -48 L13 -38 Z" fill="#8f897b" /><circle cy="-50" r="2.5" fill="#8f897b" />
+          </g>
+          <use href="#hk-sakura" transform="translate(1418 514) scale(0.9)" />
+          <use href="#hk-house" transform="translate(1500 512) scale(0.92)" /><use href="#hk-house" transform="translate(1590 514) scale(0.92)" />
+          <use href="#hk-lantern" transform="translate(1530 482)" />
+          <g id="hk-bridge">
+            <g fill="#3b302b">
+              <rect x="571" y="488" width="8" height="112" /><rect x="651" y="466" width="8" height="134" /><rect x="1011" y="466" width="8" height="134" /><rect x="1091" y="488" width="8" height="112" />
+              <rect x="566" y="566" width="98" height="5" /><rect x="1006" y="566" width="98" height="5" />
+            </g>
+            <path d="M440 546 Q835 350 1230 546 L1230 552 Q835 356 440 552 Z" fill="#8f2f1f" />
+            <path d="M440 528 Q835 330 1230 528 L1230 546 Q835 350 440 546 Z" fill="#d04a2e" />
+            <path d="M440 527 Q835 329 1230 527" stroke="#e8704d" stroke-width="2" fill="none" />
+            <path d="M440.0 529.0V488.0M489.4 505.8V464.8M538.8 485.7V444.7M588.1 468.7V427.7M637.5 454.8V413.8M686.9 443.9V402.9M736.3 436.2V395.2M785.6 431.5V390.5M835.0 430.0V389.0M884.4 431.5V390.5M933.8 436.2V395.2M983.1 443.9V402.9M1032.5 454.8V413.8M1081.9 468.7V427.7M1131.3 485.7V444.7M1180.6 505.8V464.8M1230.0 529.0V488.0" stroke="#d6502f" stroke-width="4.5" />
+            <path d="M440 510 Q835 312 1230 510" stroke="#d6502f" stroke-width="3" fill="none" />
+            <path d="M440 492 Q835 294 1230 492" stroke="#de5a38" stroke-width="5" fill="none" stroke-linecap="round" />
+            <g fill="#7a735f"><use href="#hk-gibo" transform="translate(440 488)" /><use href="#hk-gibo" transform="translate(686.9 402.9)" /><use href="#hk-gibo" transform="translate(983.1 402.9)" /><use href="#hk-gibo" transform="translate(1230 488)" /></g>
+          </g>
+          <g fill="#e3f5f1" fill-opacity="0.7"><ellipse cx="575" cy="600" rx="10" ry="2" /><ellipse cx="655" cy="600" rx="10" ry="2" /><ellipse cx="1015" cy="600" rx="10" ry="2" /><ellipse cx="1095" cy="600" rx="10" ry="2" /></g>
+        </svg>
+      </div>
+      <div class="loading-river" aria-hidden="true">
+        <div class="river-shimmer river-shimmer-far"></div>
+        <div class="river-shimmer river-shimmer-near"></div>
+        <div class="river-track">
+          <div class="river-wake"></div>
+          <div class="river-carrier">
+            <div class="river-boat">
+              <svg class="boat-art" viewBox="0 0 220 110">
+                <defs>
+                  <linearGradient id="hk-fade" x1="0" y1="78" x2="0" y2="104" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0.8" /><stop offset="1" stop-color="#fff" stop-opacity="0" /></linearGradient>
+                  <mask id="hk-reflect" maskUnits="userSpaceOnUse" x="-40" y="78" width="300" height="40"><rect x="-40" y="78" width="300" height="40" fill="url(#hk-fade)" /></mask>
+                </defs>
+                <g id="hk-boat">
+                  <path d="M8 96 L52 8" stroke="#6d4f33" stroke-width="2.4" stroke-linecap="round" />
+                  <path d="M10 70 L180 70 C194 69 205 63 214 52 C212 64 205 74 194 78 C168 83 50 83 28 81 C18 80 12 76 10 70 Z" fill="#5b3e2a" />
+                  <path d="M10 70 L180 70 C194 69 205 63 214 52 L215 49 C206 60 195 66 180 67 L10 67 Z" fill="#b08254" />
+                  <path d="M22 76 C60 78 150 78 192 74" stroke="#3f2a1c" stroke-width="1.2" fill="none" />
+                  <path d="M60 67 L60 48 Q60 32 78 31 L138 31 Q156 32 156 48 L156 67 Z" fill="#a8875a" />
+                  <path d="M66 67 L66 50 L150 50 L150 67 Z" fill="#4a3624" fill-opacity="0.55" />
+                  <path d="M76 31.5 V67 M92 31 V67 M108 31 V67 M124 31 V67 M140 31.5 V67" stroke="#7a5d3a" stroke-width="1.6" />
+                  <path d="M64 42 Q66 34 80 33.5 L136 33.5 Q150 34 152 42" stroke="#cdb07c" stroke-width="1.6" fill="none" />
+                  <path d="M27 36 L41 36 L46 67 L22 67 Z" fill="#9c7a48" />
+                  <path d="M38 41 L45 22" stroke="#9c7a48" stroke-width="4" stroke-linecap="round" />
+                  <circle cx="34" cy="32" r="4.2" fill="#e5c39c" />
+                  <path d="M20 31 L34 19 L48 31 Q34 33 20 31 Z" fill="#d8b56f" />
+                  <path d="M186 67 V36 H196 V38" stroke="#4a3525" stroke-width="1.6" fill="none" />
+                  <rect x="192.5" y="37" width="7" height="2" fill="#2c2522" /><ellipse cx="196" cy="45" rx="5.5" ry="7" fill="#e2623f" /><rect x="192.5" y="51.5" width="7" height="2" fill="#2c2522" />
+                </g>
+                <g mask="url(#hk-reflect)"><use href="#hk-boat" transform="matrix(1 0 0 -1 0 156)" opacity="0.3" /></g>
+                <path d="M6 79 Q-8 80 -24 82 M4 76 Q-6 76.5 -16 77.5" stroke="#f4fbf9" stroke-opacity="0.6" stroke-width="1.2" fill="none" stroke-linecap="round" />
+              </svg>
+              <span class="boat-glow"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loading-branch" aria-hidden="true">
+        <svg viewBox="0 0 600 420">
+          <defs>
+            <g id="hk-bloom">
+              <g fill="#f7d3da"><ellipse cy="-5.4" rx="4.3" ry="5.6" /><ellipse cy="-5.4" rx="4.3" ry="5.6" transform="rotate(72)" /><ellipse cy="-5.4" rx="4.3" ry="5.6" transform="rotate(144)" /><ellipse cy="-5.4" rx="4.3" ry="5.6" transform="rotate(216)" /><ellipse cy="-5.4" rx="4.3" ry="5.6" transform="rotate(288)" /></g>
+              <circle r="2.1" fill="#d06f80" />
+            </g>
+          </defs>
+          <g fill="#5a3d31">
+            <path d="M600 18 C520 40 430 70 360 108 C300 140 230 170 150 222 C200 180 290 138 356 100 C420 64 510 30 600 4 Z" />
+            <path d="M436 74 C425 55 415 38 398 18 C418 36 428 52 441 71 Z" />
+            <path d="M334 118 C324 145 314 170 296 204 C318 172 330 148 340 121 Z" />
+            <path d="M505 44 C512 64 516 86 522 112 C510 88 503 66 499 46 Z" />
+            <path d="M246 166 C230 152 214 144 196 138 C214 148 228 158 240 172 Z" />
+          </g>
+          <g>
+            <use href="#hk-bloom" transform="translate(398 20) scale(1.3) rotate(12)" />
+            <use href="#hk-bloom" transform="translate(383 36) scale(0.9) rotate(40)" />
+            <use href="#hk-bloom" transform="translate(296 204) scale(1.2)" />
+            <use href="#hk-bloom" transform="translate(313 188) scale(0.82) rotate(30)" />
+            <use href="#hk-bloom" transform="translate(522 113) scale(1.35) rotate(20)" />
+            <use href="#hk-bloom" transform="translate(511 94) scale(0.9) rotate(50)" />
+            <use href="#hk-bloom" transform="translate(196 138) scale(1.05) rotate(8)" />
+            <use href="#hk-bloom" transform="translate(151 222) scale(1.2) rotate(25)" />
+            <use href="#hk-bloom" transform="translate(168 207) scale(0.8) rotate(60)" />
+            <use href="#hk-bloom" transform="translate(362 110) scale(1.05) rotate(15)" />
+            <use href="#hk-bloom" transform="translate(560 28) scale(1) rotate(35)" />
+            <use href="#hk-bloom" transform="translate(456 62) scale(0.85) rotate(5)" />
+            <use href="#hk-bloom" transform="translate(268 152) scale(1.25) rotate(45)" />
+            <use href="#hk-bloom" transform="translate(236 176) scale(0.76) rotate(10)" />
+            <use href="#hk-bloom" transform="translate(478 52) scale(1.1) rotate(22)" />
+            <use href="#hk-bloom" transform="translate(342 128) scale(0.9) rotate(52)" />
+          </g>
+          <g fill="#e7a2b1"><circle cx="409" cy="10" r="2.8" /><circle cx="287" cy="214" r="2.6" /><circle cx="530" cy="124" r="2.7" /><circle cx="141" cy="230" r="2.4" /><circle cx="186" cy="133" r="2.2" /></g>
+        </svg>
+      </div>
+      <div class="loading-petals" aria-hidden="true">
+        <i style="--x: 92%; --d: 13s; --t: -2s; --s: 11px"><b></b></i>
+        <i style="--x: 84%; --d: 16s; --t: -9s; --s: 9px"><b></b></i>
+        <i style="--x: 76%; --d: 12s; --t: -5s; --s: 12px"><b></b></i>
+        <i style="--x: 70%; --d: 18s; --t: -14s; --s: 8px"><b></b></i>
+        <i style="--x: 63%; --d: 14s; --t: -1s; --s: 10px"><b></b></i>
+        <i style="--x: 57%; --d: 17s; --t: -7s; --s: 9px"><b></b></i>
+        <i style="--x: 50%; --d: 15s; --t: -11s; --s: 11px"><b></b></i>
+        <i style="--x: 44%; --d: 19s; --t: -4s; --s: 8px"><b></b></i>
+        <i style="--x: 97%; --d: 15s; --t: -12s; --s: 10px"><b></b></i>
+        <i style="--x: 38%; --d: 21s; --t: -16s; --s: 7px"><b></b></i>
+        <i style="--x: 88%; --d: 20s; --t: -6s; --s: 8px"><b></b></i>
+        <i style="--x: 66%; --d: 13s; --t: -10s; --s: 12px"><b></b></i>
+      </div>
+      <div class="loading-inner">
+        <p class="loading-eyebrow">A river journey</p>
+        <div class="loading-title">Hanakawa<span class="seal" aria-hidden="true">花川</span></div>
+        <p class="loading-phase"><span class="loading-label" role="status">Unrolling the map</span></p>
+        <div class="loading-verses" aria-hidden="true">
+          <p>Spring mist on the water, the far bank half remembered.</p>
+          <p>W and S set the throttle. A and D steer.</p>
+          <p>Four bridges cross the river between the weir and the falls.</p>
+          <p>Slow down near a landing and press E to dock.</p>
+          <p>Thirty vermilion torii climb the hill to the shrine.</p>
+          <p>M opens the river chart and your objectives.</p>
+          <p>The current carries petals downstream, and it will carry you.</p>
+          <p>C changes the camera: follow, helm, photo.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>蛤突き — 南の浜のハマグリ獲り</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="かちん、と鳴ったら、そこにいる。遠浅の浜で砂を突きまくり、ハマグリを手で掘り出す3Dゲーム。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d4a5a'/%3E%3Cpath d='M12 40 Q32 8 52 40 Q32 52 12 40Z' fill='%23e9d8b4' stroke='%236b4a2e' stroke-width='2.5'/%3E%3Cpath d='M32 14 L26 44 M32 14 L38 44 M32 14 L32 46' stroke='%238a5a38' stroke-width='2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="/_external/fonts.googleapis.com/css2-a4892115a3da" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/hamaguri/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "/_external/cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "/_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <canvas id="c"></canvas>
+
+  <!-- ロード画面 -->
+  <section id="loading" class="screen show">
+    <div class="load-inner">
+      <div class="load-logo">蛤突き</div>
+      <div class="load-bar"><i></i></div>
+      <div class="load-msg">浜の砂をならしています</div>
+    </div>
+    <div class="load-ripples"></div>
+  </section>
+
+  <!-- タイトル -->
+  <section id="title" class="screen">
+    <div class="title-shade"></div>
+    <div class="title-block">
+      <div class="title-sub">南の浜 干潮の漁</div>
+      <h1 class="title-logo">蛤<span>突</span>き</h1>
+      <div class="title-en">HAMAGURI&nbsp;TSUKI</div>
+      <div class="hanko">干潮</div>
+    </div>
+    <div class="title-copy">かちん、と鳴ったら、<br />そこにいる。</div>
+    <nav class="menu">
+      <button data-act="start" class="primary"><span class="k">一</span>浜に出る</button>
+      <button data-act="zukan"><span class="k">二</span>貝図鑑</button>
+      <button data-act="howto"><span class="k">三</span>遊び方</button>
+      <button data-act="settings"><span class="k">四</span>設定</button>
+      <button data-act="credits"><span class="k">五</span>クレジット</button>
+    </nav>
+    <div class="title-record"></div>
+  </section>
+
+  <!-- ナレーション -->
+  <section id="intro" class="screen">
+    <div class="intro-lines"></div>
+    <div class="intro-skip">クリックでスキップ</div>
+  </section>
+
+  <!-- HUD -->
+  <section id="hud">
+    <div id="tide">
+      <div class="t-row"><svg viewBox="0 0 24 24" class="sun"><circle cx="12" cy="12" r="4.2"/><g stroke-width="1.8" stroke-linecap="round"><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7 7 17M17 7l1.7-1.7"/></g></svg><span class="t-time">10:30</span><span class="t-left"></span></div>
+      <div class="t-bar"><i></i></div>
+    </div>
+
+    <div id="gauge">
+      <div class="g-kid">
+        <svg viewBox="0 0 40 120" class="g-body"><circle cx="20" cy="10" r="7"/><path d="M11 20 h18 l3 30 h-6 l-1 22 h-4 l0 -22 h-2 l0 22 h-4 l-1 -22 h-6z"/><path d="M15 72 h4 l0 40 h-4z M21 72 h4 l0 40 h-4z"/></svg>
+        <div class="g-water"><i></i></div>
+      </div>
+      <div class="g-val"><b>0</b><small>cm</small></div>
+      <div class="g-lbl">水深</div>
+    </div>
+
+    <div id="bag">
+      <div class="bag-row net"><span class="lbl">網袋</span><span class="val"><b class="bag-n">0</b>個</span></div>
+      <div class="bag-row sub"><span class="bag-best"></span></div>
+      <div class="bag-row total"><span class="lbl">本日の成果</span><b class="tot">¥0</b></div>
+    </div>
+
+    <div id="stabs"><b>0</b><small>回</small><span>突いた</span></div>
+
+    <div id="crosshair"><i></i></div>
+    <div id="words"></div>
+    <div id="pin"><span>ここ</span></div>
+    <div id="prompt"></div>
+    <div id="feed"></div>
+    <div id="warn"></div>
+    <div id="telop"></div>
+    <div id="dig">
+      <div class="d-title">砂を掻き出せ！</div>
+      <div class="d-bar"><i></i><b></b></div>
+      <div class="d-sub">マウスを<b>左右</b>に振る（<b>A</b>・<b>D</b> を交互でも）</div>
+    </div>
+    <div id="struggle"><div class="s-title">連打で引き抜け！</div><div class="s-bar"><i></i></div><div class="s-sub">左クリック連打</div></div>
+    <div id="hint"></div>
+    <div id="lockhint">クリックで視点操作を再開</div>
+    <div id="esckey"><kbd>Esc</kbd><span>メニュー</span></div>
+  </section>
+
+  <!-- ポーズ -->
+  <section id="pause" class="screen">
+    <div class="panel narrow">
+      <h2>一時停止</h2>
+      <nav class="menu vertical">
+        <button data-act="resume" class="primary">再開する</button>
+        <button data-act="zukan">貝図鑑</button>
+        <button data-act="settings">設定</button>
+        <button data-act="howto">遊び方</button>
+        <button data-act="quit">浜から上がる</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 結果 -->
+  <section id="results" class="screen">
+    <div class="res-card">
+      <div class="res-head">
+        <div class="res-day"></div>
+        <h2>本日の浜焼き</h2>
+      </div>
+      <div class="res-list"></div>
+      <div class="res-stats"></div>
+      <div class="res-foot">
+        <div class="res-total"><span>総額（浜値）</span><b>¥0</b></div>
+        <div class="res-rank"><div class="stamp"></div><div class="rank-title"></div><div class="rank-sub"></div></div>
+      </div>
+      <div class="res-news"></div>
+      <nav class="menu row">
+        <button data-act="again" class="primary">次の干潮も、浜に出る</button>
+        <button data-act="toTitle">タイトルへ</button>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 図鑑 -->
+  <section id="zukan" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>貝図鑑</h2><div class="zk-count"></div><button class="close" data-act="back">閉じる</button></div>
+      <div class="zk-body">
+        <div class="zk-grid"></div>
+        <div class="zk-detail"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 遊び方 -->
+  <section id="howto" class="screen">
+    <div class="panel wide">
+      <div class="panel-head"><h2>遊び方</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="howto-grid">
+        <div class="ht-keys">
+          <h3>操作</h3>
+          <ul>
+            <li><kbd>マウス</kbd><span>見回す・突く場所をねらう</span></li>
+            <li><kbd>W A S D</kbd><span>水の中を歩く（深いほど重い）</span></li>
+            <li><kbd>左クリック</kbd><span>突く（連打するほど速く突ける）</span></li>
+            <li><kbd>左クリック長押し</kbd><span>一定のリズムで突き続ける</span></li>
+            <li><kbd>E</kbd><kbd>右クリック</kbd><span>当たった所をしゃがんで掘る／やめて立つ</span></li>
+            <li><kbd>マウス左右</kbd><kbd>A D</kbd><span>（掘っている時）砂を掻き出す</span></li>
+            <li><kbd>左クリック</kbd><span>（見えたら）つかんで取り出す</span></li>
+            <li><kbd>Esc</kbd><span>一時停止</span></li>
+          </ul>
+        </div>
+        <div class="ht-tips">
+          <h3>浜のコツ</h3>
+          <ol>
+            <li><b>とにかく突きまくれ。</b>砂の中は見えない。足もとから少しずつずらして、くしでとかすように。</li>
+            <li><b>耳をすませ。</b>生きたハマグリは<b>「カチン」</b>、チョウセンハマグリは重い<b>「カツン」</b>。空き殻は軽い<b>「チャリ」</b>、石は<b>「ゴツ」</b>。</li>
+            <li><b>一つ当たれば、まわりにもいる。</b>貝は群れですんでいる。</li>
+            <li><b>本ハマグリは黒い砂の所に。</b>西の河口のそば、砂が黒っぽくなっている干潟にいる。外浜の白い砂にいるのはチョウセンハマグリ。</li>
+            <li><b>水管の穴を探せ。</b>波が引いて水が澄んだ一瞬、砂に並んだ小さな二つの穴が見える。その下にいる。</li>
+            <li><b>波の合間に掘れ。</b>大きな波が来ると穴が埋まり、顔まで水をかぶる。</li>
+            <li><b>潮は満ちてくる。</b>深い所は最初のうちに。チョウセンハマグリは深いほど大きい。</li>
+            <li><b>浜には主がいるらしい。</b>図鑑をそろえた者だけが、その「ゴン」を聞けるという。</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- クレジット -->
+  <section id="credits" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>クレジット</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-group">音</div>
+      <ul class="credit-list">
+        <li><b>効果音ラボ</b><a href="https://soundeffect-lab.info/" target="_blank" rel="noopener">soundeffect-lab.info</a>
+          <small>波、セミ、トンビの声</small></li>
+        <li><b>Freesound</b><a href="https://freesound.org/" target="_blank" rel="noopener">freesound.org</a>
+          <small>風: <a href="https://freesound.org/people/cribbler/sounds/380379/" target="_blank" rel="noopener">Soft Wind Ambience</a>（cribbler）CC0</small></li>
+      </ul>
+      <div class="set-group">そのほか</div>
+      <ul class="credit-list">
+        <li><b>効果音・音楽</b><span>突く音・当たりの音・掘る音・音楽は WebAudio で合成</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 設定 -->
+  <section id="settings" class="screen">
+    <div class="panel narrow">
+      <div class="panel-head"><h2>設定</h2><button class="close" data-act="back">閉じる</button></div>
+      <div class="set-list">
+        <label><span>マウス感度</span><input type="range" min="0.3" max="2.5" step="0.05" data-set="sens" /><output></output></label>
+        <label><span>視野角</span><input type="range" min="60" max="95" step="1" data-set="fov" /><output></output></label>
+        <label><span>全体の音量</span><input type="range" min="0" max="1" step="0.01" data-set="master" /><output></output></label>
+        <label><span>音楽</span><input type="range" min="0" max="1" step="0.01" data-set="music" /><output></output></label>
+        <label><span>効果音</span><input type="range" min="0" max="1" step="0.01" data-set="sfx" /><output></output></label>
+        <label><span>波・蝉の音</span><input type="range" min="0" max="1" step="0.01" data-set="amb" /><output></output></label>
+        <label class="toggle"><span>上下反転</span><input type="checkbox" data-set="invertY" /><i></i></label>
+        <label class="toggle"><span>麦わら帽子のつば</span><input type="checkbox" data-set="brim" /><i></i></label>
+        <label><span>画質</span>
+          <select data-set="quality">
+            <option value="low">軽量</option>
+            <option value="medium">標準</option>
+            <option value="high">高画質</option>
+          </select><output></output>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <div id="fade"></div>
+  <script type="module" src="../src/hamaguri/main.js"></script>
+</body>
+</html>

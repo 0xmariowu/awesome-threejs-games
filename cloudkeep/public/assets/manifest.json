@@ -1,0 +1,100 @@
+{
+  "airship": {
+    "file": "airship.glb",
+    "objects": 14,
+    "bytes": 1327516,
+    "vertices": 27362
+  },
+  "ray": {
+    "file": "ray.glb",
+    "objects": 16,
+    "bytes": 866388,
+    "vertices": 20052
+  },
+  "whale": {
+    "file": "whale.glb",
+    "objects": 17,
+    "bytes": 399752,
+    "vertices": 9524
+  },
+  "bird": {
+    "file": "bird.glb",
+    "objects": 17,
+    "bytes": 278324,
+    "vertices": 6994
+  },
+  "moth": {
+    "file": "moth.glb",
+    "objects": 20,
+    "bytes": 407956,
+    "vertices": 10242
+  },
+  "koi": {
+    "file": "koi.glb",
+    "objects": 18,
+    "bytes": 287484,
+    "vertices": 6866
+  },
+  "jelly": {
+    "file": "jelly.glb",
+    "objects": 36,
+    "bytes": 401212,
+    "vertices": 9396
+  },
+  "island": {
+    "file": "island.glb",
+    "objects": 5,
+    "bytes": 2939460,
+    "vertices": 66318
+  },
+  "island-distant": {
+    "file": "island-distant.glb",
+    "bytes": 851068,
+    "lod": true
+  },
+  "lighthouse": {
+    "file": "lighthouse.glb",
+    "objects": 7,
+    "bytes": 3190048,
+    "vertices": 69110
+  },
+  "lighthouse-distant": {
+    "file": "lighthouse-distant.glb",
+    "bytes": 901848,
+    "lod": true
+  },
+  "ruins": {
+    "file": "ruins.glb",
+    "objects": 4,
+    "bytes": 3093300,
+    "vertices": 67182
+  },
+  "ruins-distant": {
+    "file": "ruins-distant.glb",
+    "bytes": 871540,
+    "lod": true
+  },
+  "orchard": {
+    "file": "orchard.glb",
+    "objects": 5,
+    "bytes": 3174148,
+    "vertices": 72764
+  },
+  "orchard-distant": {
+    "file": "orchard-distant.glb",
+    "bytes": 927376,
+    "lod": true
+  },
+  "pearl": {
+    "file": "pearl.glb",
+    "objects": 2,
+    "bytes": 37224,
+    "vertices": 796
+  },
+  "food": {
+    "file": "food.glb",
+    "objects": 2,
+    "bytes": 13848,
+    "vertices": 272
+  }
+}

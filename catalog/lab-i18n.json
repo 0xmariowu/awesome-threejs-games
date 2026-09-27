@@ -1,0 +1,178 @@
+{
+  "inkwave-3c": {
+    "name_en": "3C and procedural bodies",
+    "desc_en": "The full input, movement, action and camera chain, comparing the original with direct following."
+  },
+  "inkwave-materials": {
+    "name_en": "Materials and lighting",
+    "desc_en": "Generated textures, wet coatings, sunlight, HDR bloom and color grading."
+  },
+  "inkwave-ui": {
+    "name_en": "UI motion language",
+    "desc_en": "Focus feedback, staggered entrances, ink transitions and skippable results."
+  },
+  "inkwave-paint": {
+    "name_en": "Surface painting and gameplay rules",
+    "desc_en": "GPU appearance and CPU ownership, adapted into toxic zones or speed-boosting ground."
+  },
+  "inkwave-combat": {
+    "name_en": "Combat feedback chain",
+    "desc_en": "Decoupled trajectories, hits, particles, camera, sound and events."
+  },
+  "inkwave-ai": {
+    "name_en": "Goal scoring and navigation",
+    "desc_en": "Original territory bots and a rescue strategy share navigation and movement."
+  },
+  "inkwave-world": {
+    "name_en": "Data-driven levels and props",
+    "desc_en": "Geometry, collision, surfaces and navigation share one source; seeded props are batched."
+  },
+  "inkwave-audio": {
+    "name_en": "Procedural sound and music",
+    "desc_en": "Synthesized effects, spatial audio, layered music and voice management."
+  },
+  "inkwave-diagnostics": {
+    "name_en": "Frame loop and lifecycle",
+    "desc_en": "Fixed timesteps, pause and single-step, load adjustment and resource cleanup."
+  },
+  "feel-cam": {
+    "name_en": "Physics character and camera switching",
+    "desc_en": "Run and jump a fox among slopes, steps and boxes; press C to switch between follow and free cameras."
+  },
+  "feel": {
+    "name_en": "Physics character with fixed follow camera",
+    "desc_en": "A fox movement scene with only a follow camera, for tuning character parameters."
+  },
+  "drive": {
+    "name_en": "Driving with ecctrl vehicle mode",
+    "desc_en": "Driving built into the same character library: wheels, suspension and grip, with WASD controls."
+  },
+  "drone": {
+    "name_en": "Flying a drone with ecctrl propellers",
+    "desc_en": "A thrust-driven drone that balances itself; Space to rise and WASD to move."
+  },
+  "planet": {
+    "name_en": "Planet and wall walking with ecctrl custom gravity",
+    "desc_en": "The fox can walk around a small planet and up walls as the gravity direction changes in real time."
+  },
+  "cloudkeep-cam": {
+    "name_en": "cloudkeep follow camera",
+    "desc_en": "The smooth follow camera from your game: drag to rotate without jumps, press C to recenter, and follow softly."
+  },
+  "tank-cam": {
+    "name_en": "Tank-style camera",
+    "desc_en": "The camera pulls in at walls, raises its view uphill and zooms in wheel-controlled steps, inspired by tank games."
+  },
+  "retarget": {
+    "name_en": "Animation retargeting",
+    "desc_en": "Apply one character’s animation to another with different proportions, for purchased or generated animations."
+  },
+  "crowd": {
+    "name_en": "An animated crowd",
+    "desc_en": "Two hundred animated foxes appear together, drawn in GPU batches without stuttering."
+  },
+  "look": {
+    "name_en": "Base scene lighting",
+    "desc_en": "A realistic sky, sun shadows and grass material, without post-processing."
+  },
+  "look-post": {
+    "name_en": "Scene lighting and post-processing",
+    "desc_en": "Adds ambient occlusion, bloom and color grading to the base scene."
+  },
+  "look-presets": {
+    "name_en": "One-click scene presets",
+    "desc_en": "Original, cinematic, bright, evening and overcast: click a name to switch lighting and color grading."
+  },
+  "lut": {
+    "name_en": "Cinematic color grading with LUT",
+    "desc_en": "Switch between warm, cool, teal-orange, bleach bypass and black-and-white looks, with adjustable strength."
+  },
+  "motion-blur": {
+    "name_en": "Motion blur",
+    "desc_en": "Trails when the fox runs or the camera turns add a sense of speed."
+  },
+  "ssgi": {
+    "name_en": "Global illumination (SSGI)",
+    "desc_en": "Light bounces between walls; a red wall tints nearby surfaces red for greater realism."
+  },
+  "sky": {
+    "name_en": "Physical sky",
+    "desc_en": "Realistic sky colors and sun; move time from dawn to dusk and watch the lighting change."
+  },
+  "volume-cloud": {
+    "name_en": "Volumetric clouds",
+    "desc_en": "Three-dimensional clouds with adjustable density and edges."
+  },
+  "fog": {
+    "name_en": "Height fog",
+    "desc_en": "Ground-hugging fog thickens with distance: clear higher up and denser near the ground."
+  },
+  "rain": {
+    "name_en": "Rain",
+    "desc_en": "Tens of thousands of raindrops computed on the GPU in real time, splashing on the ground."
+  },
+  "lightning": {
+    "name_en": "Lightning",
+    "desc_en": "Lightning strikes every few seconds, cracking the ground, scattering sparks and shaking the view; click to strike."
+  },
+  "atmosphere": {
+    "name_en": "Atmosphere and volumetric clouds for large worlds",
+    "desc_en": "Realistic atmospheric scattering and cloud layers make distant mountains and houses naturally blue and hazy, for large open worlds."
+  },
+  "trees": {
+    "name_en": "Procedural trees with wind",
+    "desc_en": "More than ten types of procedurally generated trees; leaves sway in the wind (branches stay still), with less detail at a distance."
+  },
+  "plants": {
+    "name_en": "WebGPU plant generator",
+    "desc_en": "Twenty tree and plant species generated by species rules, with wind effects, already running on WebGPU."
+  },
+  "destruct": {
+    "name_en": "Destructible geometry: holes and craters",
+    "desc_en": "Click walls or ground to dig holes and blast craters, changing geometry in real time."
+  },
+  "ocean": {
+    "name_en": "Ocean surface with WebGPU",
+    "desc_en": "An open ocean with rolling waves reflecting the sky and sun."
+  },
+  "pool": {
+    "name_en": "Pool with flowing water",
+    "desc_en": "A pool of flowing water that reflects and refracts surrounding objects."
+  },
+  "shallow": {
+    "name_en": "Shallow water around a character",
+    "desc_en": "The fox walks in shallow water, with the ground and its legs visible below the surface."
+  },
+  "quarks": {
+    "name_en": "Particles: campfire, explosions and magic",
+    "desc_en": "A campfire, click-to-explode ground and a magic vortex, all built from particles in code."
+  },
+  "flames": {
+    "name_en": "Flames with node materials",
+    "desc_en": "Stylized flames drawn entirely with TSL node materials, without texture sequences."
+  },
+  "volume-fire": {
+    "name_en": "Volumetric fire",
+    "desc_en": "Flames with volume that look three-dimensional from every angle."
+  },
+  "cloth": {
+    "name_en": "Cloth blowing in the wind",
+    "desc_en": "GPU-simulated cloth that blows in the wind and collides with a ball."
+  },
+  "birds": {
+    "name_en": "GPU bird flock",
+    "desc_en": "Thousands of birds flock above the ground, all computed on the GPU in real time."
+  },
+  "npc": {
+    "name_en": "NPC behavior: wandering, fleeing and chasing",
+    "desc_en": "Twelve small characters: green ones wander, blue ones avoid the fox, and red ones chase it."
+  },
+  "navcrowd": {
+    "name_en": "Crowd pathfinding in a town",
+    "desc_en": "Thirty people navigate a town; click the ground and they walk there around houses and each other."
+  },
+  "ropes": {
+    "name_en": "Ropes and hinges: bridge, chains and lamps",
+    "desc_en": "A suspension bridge, chains and lamps joined by physics joints sway when the fox bumps into them."
+  }
+}

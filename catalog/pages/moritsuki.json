@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "slug": "moritsuki",
+  "title": "Moritsuki / なちゃっとの夏休み",
+  "tagline": "夏日小镇与水边小游戏，展示地理高度场与共享游戏进度",
+  "category": "城镇与生活",
+  "overview_video": "moritsuki/overview",
+  "examples": [
+    {
+      "id": "moritsuki-characters",
+      "title": "后台生成角色",
+      "one_liner": "切换三种原版造型，观察后台生成并旋转查看",
+      "candidate": "moritsuki.characters",
+      "title_en": "Background character generation",
+      "one_liner_en": "Switch between three original character designs, watch background generation and rotate to inspect."
+    }
+  ],
+  "tagline_en": "A summer town and waterside minigames with geographic heightfields and shared game progress."
+}

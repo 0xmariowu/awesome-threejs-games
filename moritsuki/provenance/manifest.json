@@ -1,0 +1,3213 @@
+{
+  "source": "https://cda-social.github.io/moritsuki/",
+  "entry_path": "/moritsuki/index.html",
+  "files": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "bytes": 1314681,
+      "sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/math/SimplexNoise.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/math/SimplexNoise.js",
+      "bytes": 14351,
+      "sha256": "9b8d541b77b0ddc79afaa6a1de8941452c191b8b9006f04e7b8fc422e2b263f7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9b8d541b77b0ddc79afaa6a1de8941452c191b8b9006f04e7b8fc422e2b263f7"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/EffectComposer.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/EffectComposer.js",
+      "bytes": 4651,
+      "sha256": "d234e578618fa816955ebdc059c049c577e203e650e33cf22bde3f232c29e669",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d234e578618fa816955ebdc059c049c577e203e650e33cf22bde3f232c29e669"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/GTAOPass.js",
+      "bytes": 16582,
+      "sha256": "980b036767c439cf2aadd0e869b2e51b2ec00736a75a5ad1bb69dddb03254fe8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "980b036767c439cf2aadd0e869b2e51b2ec00736a75a5ad1bb69dddb03254fe8"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/MaskPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/MaskPass.js",
+      "bytes": 2231,
+      "sha256": "328cf7db0da5d9be83ffe39d54b01d5ac1fddf108cc98182ddbb056f5c8b537f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "328cf7db0da5d9be83ffe39d54b01d5ac1fddf108cc98182ddbb056f5c8b537f"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/OutputPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/OutputPass.js",
+      "bytes": 2524,
+      "sha256": "32f879d2179087676631c799857a885586b3cdd13b9731bd3b13f06428bd58b7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "32f879d2179087676631c799857a885586b3cdd13b9731bd3b13f06428bd58b7"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/Pass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/Pass.js",
+      "bytes": 1706,
+      "sha256": "b3c6128340eaa37e40a6a2f1b738e894c855239417d50959759b34a2b5e89f92",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b3c6128340eaa37e40a6a2f1b738e894c855239417d50959759b34a2b5e89f92"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/RenderPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/RenderPass.js",
+      "bytes": 1941,
+      "sha256": "6c9b8a539ea16e898f65e4760f14937ef9ea94043bd9842c141e0301f41903e8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6c9b8a539ea16e898f65e4760f14937ef9ea94043bd9842c141e0301f41903e8"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/ShaderPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/ShaderPass.js",
+      "bytes": 1576,
+      "sha256": "3b28a1ee27e0eb96c0eab137a1f442ccf127a926904eced2d51e125ec44af781",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3b28a1ee27e0eb96c0eab137a1f442ccf127a926904eced2d51e125ec44af781"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/postprocessing/UnrealBloomPass.js",
+      "bytes": 12410,
+      "sha256": "3bd23a1097af75c7002d0ffc21a6c14f45c4dd701dbaf737030dfc61fb7c64d9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3bd23a1097af75c7002d0ffc21a6c14f45c4dd701dbaf737030dfc61fb7c64d9"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/CopyShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/CopyShader.js",
+      "bytes": 571,
+      "sha256": "4e3346db194db56a596cd074e9bdb39fb5eb52040c333e0d29dc4eb1324d3b1d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4e3346db194db56a596cd074e9bdb39fb5eb52040c333e0d29dc4eb1324d3b1d"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/GTAOShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/GTAOShader.js",
+      "bytes": 12990,
+      "sha256": "e1f5dd89bca4ee679a4aca50c3ef3513926be71f6860c38e31a62cc9d7120b39",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e1f5dd89bca4ee679a4aca50c3ef3513926be71f6860c38e31a62cc9d7120b39"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/HorizontalTiltShiftShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/HorizontalTiltShiftShader.js",
+      "bytes": 1585,
+      "sha256": "f733ecf595f8eb186e0af47cc935d0544b45e6d2f238631860126f73573b8230",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f733ecf595f8eb186e0af47cc935d0544b45e6d2f238631860126f73573b8230"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/LuminosityHighPassShader.js",
+      "bytes": 1147,
+      "sha256": "9f4866f9abb2d96fd83eec46ba4bf2165b22155a7a37ff425c0f60eba18007cb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9f4866f9abb2d96fd83eec46ba4bf2165b22155a7a37ff425c0f60eba18007cb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/OutputShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/OutputShader.js",
+      "bytes": 1490,
+      "sha256": "4944cecd49c0d4d1520a4d927bde8a590fd43f041ee913252b9451855a01d0f0",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4944cecd49c0d4d1520a4d927bde8a590fd43f041ee913252b9451855a01d0f0"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/PoissonDenoiseShader.js",
+      "bytes": 6614,
+      "sha256": "3dab419b23529f8fd59e2713458502f9f51d2dd3af3e1285dc671fcc451d49fb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3dab419b23529f8fd59e2713458502f9f51d2dd3af3e1285dc671fcc451d49fb"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/VerticalTiltShiftShader.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/shaders/VerticalTiltShiftShader.js",
+      "bytes": 1579,
+      "sha256": "ad1184ac6ff50cf6f9110f7cf07c542bbb23ddff9d8538564a39425ef40fa172",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ad1184ac6ff50cf6f9110f7cf07c542bbb23ddff9d8538564a39425ef40fa172"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "path": "_external/cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 31768,
+      "sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c25b7930e570e9ec56173cd3b866ec8d2e10016630db3937efb439daf1cedbf6"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Zen+Old+Mincho:wght@700;900&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-4f512fc4b278",
+      "bytes": 1178,
+      "sha256": "0b215e1465c777f8e2e951abd3a1bdae12a7a830f8374e13c162809013f2a018",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "0c7f2fa2f14b489850e564395a7aec2658e5da00b773253e35d33821bad28ebc"
+    },
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Zen+Old+Mincho:wght@600;900&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-a4892115a3da",
+      "bytes": 1851,
+      "sha256": "4eeb0a76711b1167d9f341bf36ce9198e31183c7e7a899ef95c2c940b8a7aa78",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "6e388ccbab36574691dd1cdff4f9508036a51a5c7d3b40d565c8b8cfa17bd169"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/delagothicone/v19/hESp6XxvMDRA-2eD0lXpDa6QkBAGRQ.ttf",
+      "path": "_external/fonts.gstatic.com/s/delagothicone/v19/hESp6XxvMDRA-2eD0lXpDa6QkBAGRQ.ttf",
+      "bytes": 2477372,
+      "sha256": "e0aafdb03049609bf3a9cffd339449198d3b5432dcb722ad59e3a0ad59ce0d2b",
+      "content_type": "font/ttf",
+      "local_sha256": "e0aafdb03049609bf3a9cffd339449198d3b5432dcb722ad59e3a0ad59ce0d2b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/yujisyuku/v8/BngNUXdTV3vO6Lw5ApOPqPc.ttf",
+      "path": "_external/fonts.gstatic.com/s/yujisyuku/v8/BngNUXdTV3vO6Lw5ApOPqPc.ttf",
+      "bytes": 7779308,
+      "sha256": "23814ddf8f3c8ef8a979f286314453f6ae6110db22bbb3f214bc0e6bdcd47a15",
+      "content_type": "font/ttf",
+      "local_sha256": "23814ddf8f3c8ef8a979f286314453f6ae6110db22bbb3f214bc0e6bdcd47a15"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNWWPYTUtP2d4.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNWWPYTUtP2d4.woff2",
+      "bytes": 9680,
+      "sha256": "3be1f563567099c0b7350440246e5861621da99e68900890978d5824dead5f4c",
+      "content_type": "font/woff2",
+      "local_sha256": "3be1f563567099c0b7350440246e5861621da99e68900890978d5824dead5f4c"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.101.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.101.woff2",
+      "bytes": 8316,
+      "sha256": "0b41b7d58843c03871726a2a631b79c53ae887b843d695b820e33877342adce3",
+      "content_type": "font/woff2",
+      "local_sha256": "0b41b7d58843c03871726a2a631b79c53ae887b843d695b820e33877342adce3"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.102.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.102.woff2",
+      "bytes": 9084,
+      "sha256": "55710c338221b3b7256513d32a2a54380c942ea1210dda0945ec7c21ff3deca3",
+      "content_type": "font/woff2",
+      "local_sha256": "55710c338221b3b7256513d32a2a54380c942ea1210dda0945ec7c21ff3deca3"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.103.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.103.woff2",
+      "bytes": 9292,
+      "sha256": "51e4b76387bcd11b73876bed6d266145dfe07eacc91971e315aeb5839cc36714",
+      "content_type": "font/woff2",
+      "local_sha256": "51e4b76387bcd11b73876bed6d266145dfe07eacc91971e315aeb5839cc36714"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.104.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.104.woff2",
+      "bytes": 9284,
+      "sha256": "0ccad4a8ab09f8206ac49f9cde0c4c782a0d15ee5bbcce8311251b2119227aa9",
+      "content_type": "font/woff2",
+      "local_sha256": "0ccad4a8ab09f8206ac49f9cde0c4c782a0d15ee5bbcce8311251b2119227aa9"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.105.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.105.woff2",
+      "bytes": 9464,
+      "sha256": "939d0fa4c7d020c8428dc0ca8242c050702d97ff20bbdbe71d264a9fbcd1fb90",
+      "content_type": "font/woff2",
+      "local_sha256": "939d0fa4c7d020c8428dc0ca8242c050702d97ff20bbdbe71d264a9fbcd1fb90"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.106.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.106.woff2",
+      "bytes": 10064,
+      "sha256": "55aa9d2250a7ae25bb1a29e637fac4954e804b5ac5f94455bf5e2ef85a208cb2",
+      "content_type": "font/woff2",
+      "local_sha256": "55aa9d2250a7ae25bb1a29e637fac4954e804b5ac5f94455bf5e2ef85a208cb2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.107.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.107.woff2",
+      "bytes": 8900,
+      "sha256": "82b7d39bfe2020cadcfc40ad8f56fca1a37eb95ce3354709279f3617d2b8ccd8",
+      "content_type": "font/woff2",
+      "local_sha256": "82b7d39bfe2020cadcfc40ad8f56fca1a37eb95ce3354709279f3617d2b8ccd8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.108.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.108.woff2",
+      "bytes": 9900,
+      "sha256": "3c8a76c153716201f3bf9a28cd25818ad798aab2cb8234d5f01cbfc00617e2d1",
+      "content_type": "font/woff2",
+      "local_sha256": "3c8a76c153716201f3bf9a28cd25818ad798aab2cb8234d5f01cbfc00617e2d1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.109.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.109.woff2",
+      "bytes": 8436,
+      "sha256": "eadcbe6ac2701cdb5a488803c35b9796a6ae653df530b476ce8237fb3fa3014f",
+      "content_type": "font/woff2",
+      "local_sha256": "eadcbe6ac2701cdb5a488803c35b9796a6ae653df530b476ce8237fb3fa3014f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.110.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.110.woff2",
+      "bytes": 8152,
+      "sha256": "0a41b8161aa5a288ad3563bd7f58734bea83fece86e8fbde89c28002f4f7c89e",
+      "content_type": "font/woff2",
+      "local_sha256": "0a41b8161aa5a288ad3563bd7f58734bea83fece86e8fbde89c28002f4f7c89e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.111.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.111.woff2",
+      "bytes": 9076,
+      "sha256": "03ec750120a4f4ec86707074becd9b30066f2f320cb36567d2a080d431ec7a15",
+      "content_type": "font/woff2",
+      "local_sha256": "03ec750120a4f4ec86707074becd9b30066f2f320cb36567d2a080d431ec7a15"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.112.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.112.woff2",
+      "bytes": 8428,
+      "sha256": "5aac9a93060b4182f4141caaa6b36c742f87f6247cb5ac910166eec999b677a1",
+      "content_type": "font/woff2",
+      "local_sha256": "5aac9a93060b4182f4141caaa6b36c742f87f6247cb5ac910166eec999b677a1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.113.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.113.woff2",
+      "bytes": 7688,
+      "sha256": "ab6a9844abea2076cd882f9cbd56ef1e31533bfd5f0d09befaf78f850d651c87",
+      "content_type": "font/woff2",
+      "local_sha256": "ab6a9844abea2076cd882f9cbd56ef1e31533bfd5f0d09befaf78f850d651c87"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.114.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.114.woff2",
+      "bytes": 7792,
+      "sha256": "a3c3e3dc32742e97bc0bd216ece969bbb4b47249b57f62cd05e34d6655a7d2de",
+      "content_type": "font/woff2",
+      "local_sha256": "a3c3e3dc32742e97bc0bd216ece969bbb4b47249b57f62cd05e34d6655a7d2de"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.115.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.115.woff2",
+      "bytes": 8216,
+      "sha256": "c36ef6d976d3b3fcecdfa18785133b4edae235e175fcf4a8dd36d2e42c190f0e",
+      "content_type": "font/woff2",
+      "local_sha256": "c36ef6d976d3b3fcecdfa18785133b4edae235e175fcf4a8dd36d2e42c190f0e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.116.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.116.woff2",
+      "bytes": 8328,
+      "sha256": "4328acb4e201004ac4784de1d004b33334219722903edc5476f177d222eb2c84",
+      "content_type": "font/woff2",
+      "local_sha256": "4328acb4e201004ac4784de1d004b33334219722903edc5476f177d222eb2c84"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.117.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.117.woff2",
+      "bytes": 6236,
+      "sha256": "8119e46f81c662963c5232a1970a2fb3fd9b3ebd076bd1166fad52d44e4fc856",
+      "content_type": "font/woff2",
+      "local_sha256": "8119e46f81c662963c5232a1970a2fb3fd9b3ebd076bd1166fad52d44e4fc856"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.118.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.118.woff2",
+      "bytes": 6812,
+      "sha256": "ae751fe4fce5974a79edb7900ae5754d3c0e3c14d0415c230d2d873741a3c504",
+      "content_type": "font/woff2",
+      "local_sha256": "ae751fe4fce5974a79edb7900ae5754d3c0e3c14d0415c230d2d873741a3c504"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.119.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.119.woff2",
+      "bytes": 18000,
+      "sha256": "003939e8259764f8c2fc662b496a08f8810c5682deb8e1cf7a04bb00dcd16d85",
+      "content_type": "font/woff2",
+      "local_sha256": "003939e8259764f8c2fc662b496a08f8810c5682deb8e1cf7a04bb00dcd16d85"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.60.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.60.woff2",
+      "bytes": 10748,
+      "sha256": "5c9ddb82f1948604ae626c9a335735e5475339ae1bc70a8be195c76007e942f4",
+      "content_type": "font/woff2",
+      "local_sha256": "5c9ddb82f1948604ae626c9a335735e5475339ae1bc70a8be195c76007e942f4"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.76.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.76.woff2",
+      "bytes": 9364,
+      "sha256": "a78e1a028f7ec613fac960f676a6b3b919f431fd0a2399195565b9a0d44e6462",
+      "content_type": "font/woff2",
+      "local_sha256": "a78e1a028f7ec613fac960f676a6b3b919f431fd0a2399195565b9a0d44e6462"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.79.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.79.woff2",
+      "bytes": 9936,
+      "sha256": "5ea0b9726b2e144b381bc210d4c2324ae41191fb957ce1fb3be190be218fb77a",
+      "content_type": "font/woff2",
+      "local_sha256": "5ea0b9726b2e144b381bc210d4c2324ae41191fb957ce1fb3be190be218fb77a"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.84.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.84.woff2",
+      "bytes": 9224,
+      "sha256": "c17c45051fcd60e187d186db84fae3f5249cb354f47e1acc1a10773f9b996267",
+      "content_type": "font/woff2",
+      "local_sha256": "c17c45051fcd60e187d186db84fae3f5249cb354f47e1acc1a10773f9b996267"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.87.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.87.woff2",
+      "bytes": 9924,
+      "sha256": "803480143b51874996fb4cbc23bf38cde2616011b7bffd54695f9fef1ad06e1d",
+      "content_type": "font/woff2",
+      "local_sha256": "803480143b51874996fb4cbc23bf38cde2616011b7bffd54695f9fef1ad06e1d"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.88.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.88.woff2",
+      "bytes": 8964,
+      "sha256": "cc32ba0ffde4e980e75ed702356308bf56df75b77d13e295826d5661f9557aba",
+      "content_type": "font/woff2",
+      "local_sha256": "cc32ba0ffde4e980e75ed702356308bf56df75b77d13e295826d5661f9557aba"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.90.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.90.woff2",
+      "bytes": 9856,
+      "sha256": "802c2ee50dcf5f4408bbea10b97248b07546e4311154bf5e923ad02f5cba6f8f",
+      "content_type": "font/woff2",
+      "local_sha256": "802c2ee50dcf5f4408bbea10b97248b07546e4311154bf5e923ad02f5cba6f8f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.93.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.93.woff2",
+      "bytes": 9360,
+      "sha256": "7e850fabcacd42329db0297be84c9b2c95e81da58edbd512f47095575badb8c2",
+      "content_type": "font/woff2",
+      "local_sha256": "7e850fabcacd42329db0297be84c9b2c95e81da58edbd512f47095575badb8c2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.98.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.98.woff2",
+      "bytes": 9820,
+      "sha256": "01f1f5066c68f4a8bc342bf833c25510baddc5676de3f4d91c37ae9bb535cac5",
+      "content_type": "font/woff2",
+      "local_sha256": "01f1f5066c68f4a8bc342bf833c25510baddc5676de3f4d91c37ae9bb535cac5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWQ.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqodNaWQ.ttf",
+      "bytes": 2311968,
+      "sha256": "d4e8a9a774fa516121fc04b8187b56d57139419db49fd86d06c331619f68f03b",
+      "content_type": "font/ttf",
+      "local_sha256": "d4e8a9a774fa516121fc04b8187b56d57139419db49fd86d06c331619f68f03b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PWWPYTUtP2d4.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PWWPYTUtP2d4.woff2",
+      "bytes": 9564,
+      "sha256": "9b7779306c604c1c056261847ce5f7dda666f8ac6f7de0ff8105cf88bcce450f",
+      "content_type": "font/woff2",
+      "local_sha256": "9b7779306c604c1c056261847ce5f7dda666f8ac6f7de0ff8105cf88bcce450f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.100.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.100.woff2",
+      "bytes": 10088,
+      "sha256": "3b24c032616913a3dfdca310ddf331f637a729d05725184d0a71b1fa589711a5",
+      "content_type": "font/woff2",
+      "local_sha256": "3b24c032616913a3dfdca310ddf331f637a729d05725184d0a71b1fa589711a5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.102.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.102.woff2",
+      "bytes": 9072,
+      "sha256": "5ac889476e172540aedf41cfc17421516f46cb66394aab741e67f8b0bac87076",
+      "content_type": "font/woff2",
+      "local_sha256": "5ac889476e172540aedf41cfc17421516f46cb66394aab741e67f8b0bac87076"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.103.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.103.woff2",
+      "bytes": 9228,
+      "sha256": "dc8f64a480f73870cbc522d9282d6ee20811aa39a8e09316cbdba99cebb55293",
+      "content_type": "font/woff2",
+      "local_sha256": "dc8f64a480f73870cbc522d9282d6ee20811aa39a8e09316cbdba99cebb55293"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.104.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.104.woff2",
+      "bytes": 9316,
+      "sha256": "7e50f64c9d765c735b6f2836945889f519a6730cb380b2ccded751b5d698696b",
+      "content_type": "font/woff2",
+      "local_sha256": "7e50f64c9d765c735b6f2836945889f519a6730cb380b2ccded751b5d698696b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.105.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.105.woff2",
+      "bytes": 9372,
+      "sha256": "6310fecb0c23645f9ccb48f33b4f0c9c123c6e10f83ea24e6e8f5494e2208900",
+      "content_type": "font/woff2",
+      "local_sha256": "6310fecb0c23645f9ccb48f33b4f0c9c123c6e10f83ea24e6e8f5494e2208900"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.107.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.107.woff2",
+      "bytes": 8920,
+      "sha256": "fc7452b0678681a800835f3e84571c681c2f02b954702d2fcf1073978bfa7c5f",
+      "content_type": "font/woff2",
+      "local_sha256": "fc7452b0678681a800835f3e84571c681c2f02b954702d2fcf1073978bfa7c5f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.108.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.108.woff2",
+      "bytes": 9960,
+      "sha256": "d789a3bdb118ede2d8e9812b76cc3ee95cae5724529c8b5abf143c8bba1902ed",
+      "content_type": "font/woff2",
+      "local_sha256": "d789a3bdb118ede2d8e9812b76cc3ee95cae5724529c8b5abf143c8bba1902ed"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.110.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.110.woff2",
+      "bytes": 8112,
+      "sha256": "dc86239079422fe8e5fe2d00a47b400b4e0f22704d89fd2179a9ae610bd3dd32",
+      "content_type": "font/woff2",
+      "local_sha256": "dc86239079422fe8e5fe2d00a47b400b4e0f22704d89fd2179a9ae610bd3dd32"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.112.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.112.woff2",
+      "bytes": 8348,
+      "sha256": "a4ace4de5aeb003e435b33a35f94bb4a2db64f56975358b02eb186acc68c4374",
+      "content_type": "font/woff2",
+      "local_sha256": "a4ace4de5aeb003e435b33a35f94bb4a2db64f56975358b02eb186acc68c4374"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.113.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.113.woff2",
+      "bytes": 7704,
+      "sha256": "3b43fd2c081370ef8d7eed78ce471d80133b46842361a9810b251075cd3c1f5f",
+      "content_type": "font/woff2",
+      "local_sha256": "3b43fd2c081370ef8d7eed78ce471d80133b46842361a9810b251075cd3c1f5f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.114.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.114.woff2",
+      "bytes": 7800,
+      "sha256": "bb222ce7ff141ccf3a808b977bf7860fdea2283f95120b0089b6be7f6d1b781d",
+      "content_type": "font/woff2",
+      "local_sha256": "bb222ce7ff141ccf3a808b977bf7860fdea2283f95120b0089b6be7f6d1b781d"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.115.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.115.woff2",
+      "bytes": 8188,
+      "sha256": "d3c9c4596d6bcd4e33ad3970cfd95868ca3184a1ca1af3ae314ba650bf4e9f7e",
+      "content_type": "font/woff2",
+      "local_sha256": "d3c9c4596d6bcd4e33ad3970cfd95868ca3184a1ca1af3ae314ba650bf4e9f7e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.116.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.116.woff2",
+      "bytes": 8336,
+      "sha256": "7d1490d3772194d34d18eaa5aa92fd6f6b5ed07a5001a2b32eabaeff2e2fc617",
+      "content_type": "font/woff2",
+      "local_sha256": "7d1490d3772194d34d18eaa5aa92fd6f6b5ed07a5001a2b32eabaeff2e2fc617"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.117.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.117.woff2",
+      "bytes": 6208,
+      "sha256": "fac0de216d51c89674635a71e8bfd629fbc327833b0bc626b7fc8eec5d1ab487",
+      "content_type": "font/woff2",
+      "local_sha256": "fac0de216d51c89674635a71e8bfd629fbc327833b0bc626b7fc8eec5d1ab487"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.118.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.118.woff2",
+      "bytes": 6764,
+      "sha256": "15c77a7cbe2fe6a7a807837ed6c34e76d157a9c51e7ab134be8ac004ae35eff4",
+      "content_type": "font/woff2",
+      "local_sha256": "15c77a7cbe2fe6a7a807837ed6c34e76d157a9c51e7ab134be8ac004ae35eff4"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.119.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.119.woff2",
+      "bytes": 17420,
+      "sha256": "d44880ae723c3965950e69e8a46d8e0ebfd17ae80ec62317831297d089fb6b55",
+      "content_type": "font/woff2",
+      "local_sha256": "d44880ae723c3965950e69e8a46d8e0ebfd17ae80ec62317831297d089fb6b55"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.38.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.38.woff2",
+      "bytes": 13584,
+      "sha256": "ea4633b0e99b89cfb361bff38dcc09f2f9ad1c73442e2ca7a52275091966dad5",
+      "content_type": "font/woff2",
+      "local_sha256": "ea4633b0e99b89cfb361bff38dcc09f2f9ad1c73442e2ca7a52275091966dad5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.79.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.79.woff2",
+      "bytes": 9888,
+      "sha256": "3b492e445c86576f6f861cfbeb82e37d9f7aa11c933812b9968351e0511dda3a",
+      "content_type": "font/woff2",
+      "local_sha256": "3b492e445c86576f6f861cfbeb82e37d9f7aa11c933812b9968351e0511dda3a"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.96.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.96.woff2",
+      "bytes": 9144,
+      "sha256": "b353999b2d23e47d8a4297b4c3dd4f21b4c3812005e767de72b316d1070b94c5",
+      "content_type": "font/woff2",
+      "local_sha256": "b353999b2d23e47d8a4297b4c3dd4f21b4c3812005e767de72b316d1070b94c5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.99.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.99.woff2",
+      "bytes": 9800,
+      "sha256": "c1a75bfdeca39ac2c0ad6d7c911cad1e47241ee1c80429257fba67bc52da39fb",
+      "content_type": "font/woff2",
+      "local_sha256": "c1a75bfdeca39ac2c0ad6d7c911cad1e47241ee1c80429257fba67bc52da39fb"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWQ.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqr9PaWQ.ttf",
+      "bytes": 2298020,
+      "sha256": "2884952ee68ede183dcb7418a80e2c5c15c4c23cc920b69ef1bc9a037df75302",
+      "content_type": "font/ttf",
+      "local_sha256": "2884952ee68ede183dcb7418a80e2c5c15c4c23cc920b69ef1bc9a037df75302"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LWWPYTUtP2d4.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LWWPYTUtP2d4.woff2",
+      "bytes": 9588,
+      "sha256": "e4ab8e9dc6984461551cf416f31f8e976cccee7359464ba4b86163c62d233251",
+      "content_type": "font/woff2",
+      "local_sha256": "e4ab8e9dc6984461551cf416f31f8e976cccee7359464ba4b86163c62d233251"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.100.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.100.woff2",
+      "bytes": 10032,
+      "sha256": "e57261b615d2de291bad3be1f1eb65624d22de6f09284397f0065ed6c1ba35db",
+      "content_type": "font/woff2",
+      "local_sha256": "e57261b615d2de291bad3be1f1eb65624d22de6f09284397f0065ed6c1ba35db"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.101.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.101.woff2",
+      "bytes": 8344,
+      "sha256": "ba041a9f3871b8e1a1b4c1babf9af8e1318917bb0bd5a90bc4efd01d9a68d25b",
+      "content_type": "font/woff2",
+      "local_sha256": "ba041a9f3871b8e1a1b4c1babf9af8e1318917bb0bd5a90bc4efd01d9a68d25b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.102.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.102.woff2",
+      "bytes": 9064,
+      "sha256": "39ca359eafe9fd8983a694d5eef3ca1eb6cd06da20e7bd153cedd2a081deb7c7",
+      "content_type": "font/woff2",
+      "local_sha256": "39ca359eafe9fd8983a694d5eef3ca1eb6cd06da20e7bd153cedd2a081deb7c7"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.103.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.103.woff2",
+      "bytes": 9296,
+      "sha256": "c424d8b8c7c721f92880860e9b1c9fb7472cef10123d47bf2c77055f43831171",
+      "content_type": "font/woff2",
+      "local_sha256": "c424d8b8c7c721f92880860e9b1c9fb7472cef10123d47bf2c77055f43831171"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.104.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.104.woff2",
+      "bytes": 9244,
+      "sha256": "4627a0909deb53c17ed3073f738c69a60bb7c5e50825aa2a4fa9c7d88603d3e0",
+      "content_type": "font/woff2",
+      "local_sha256": "4627a0909deb53c17ed3073f738c69a60bb7c5e50825aa2a4fa9c7d88603d3e0"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.106.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.106.woff2",
+      "bytes": 10052,
+      "sha256": "80ec98748507afb2a984b25a719aaa61cc3b5fa694d323e06870eb396656bf1e",
+      "content_type": "font/woff2",
+      "local_sha256": "80ec98748507afb2a984b25a719aaa61cc3b5fa694d323e06870eb396656bf1e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.107.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.107.woff2",
+      "bytes": 8840,
+      "sha256": "30d0b0734a74f8472a7100b87d094d8e87696b28b2e7e2d96478891fe79962b9",
+      "content_type": "font/woff2",
+      "local_sha256": "30d0b0734a74f8472a7100b87d094d8e87696b28b2e7e2d96478891fe79962b9"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.108.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.108.woff2",
+      "bytes": 9900,
+      "sha256": "a577f62b3851eeaa20f83d59ce59a84fccee6784cf8d7a835b16830c455367fb",
+      "content_type": "font/woff2",
+      "local_sha256": "a577f62b3851eeaa20f83d59ce59a84fccee6784cf8d7a835b16830c455367fb"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.109.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.109.woff2",
+      "bytes": 8340,
+      "sha256": "ddcb5c5369f2aafcfce17f569abd6592fe09c6f8747cefa540b15ebfcd354617",
+      "content_type": "font/woff2",
+      "local_sha256": "ddcb5c5369f2aafcfce17f569abd6592fe09c6f8747cefa540b15ebfcd354617"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.110.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.110.woff2",
+      "bytes": 8160,
+      "sha256": "e54e69d27fee56deb9340425cd2d88b930e837cc049dacddae04a8cddeedf60d",
+      "content_type": "font/woff2",
+      "local_sha256": "e54e69d27fee56deb9340425cd2d88b930e837cc049dacddae04a8cddeedf60d"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.111.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.111.woff2",
+      "bytes": 9056,
+      "sha256": "3047bb8e2c6da356b3bfa015a2c106996fb3bcbadc486d9d3b12d0b4aa7001fd",
+      "content_type": "font/woff2",
+      "local_sha256": "3047bb8e2c6da356b3bfa015a2c106996fb3bcbadc486d9d3b12d0b4aa7001fd"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.112.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.112.woff2",
+      "bytes": 8352,
+      "sha256": "ccf608b799ea07ef6b312acb259e589b53dd47de888e2ee6f315b3ee52548b33",
+      "content_type": "font/woff2",
+      "local_sha256": "ccf608b799ea07ef6b312acb259e589b53dd47de888e2ee6f315b3ee52548b33"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.113.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.113.woff2",
+      "bytes": 7664,
+      "sha256": "f6c829ab1b73b75c0bbe0bac95dbf89939dd3fa5440818839af48578aea79cc1",
+      "content_type": "font/woff2",
+      "local_sha256": "f6c829ab1b73b75c0bbe0bac95dbf89939dd3fa5440818839af48578aea79cc1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.114.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.114.woff2",
+      "bytes": 7864,
+      "sha256": "5acc3f560ecf8db16186f3499eb70f2d4d94d526bcd3630d4012c4f5527e12dc",
+      "content_type": "font/woff2",
+      "local_sha256": "5acc3f560ecf8db16186f3499eb70f2d4d94d526bcd3630d4012c4f5527e12dc"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.115.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.115.woff2",
+      "bytes": 8200,
+      "sha256": "0c2bebd64e9a68d4d0be21dd780b403b232a3022484287d206be6d56c044f66e",
+      "content_type": "font/woff2",
+      "local_sha256": "0c2bebd64e9a68d4d0be21dd780b403b232a3022484287d206be6d56c044f66e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.116.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.116.woff2",
+      "bytes": 8376,
+      "sha256": "2c5081c41ee4de3909863754597d7c91bb33190a9c12a584feed2c9e19263916",
+      "content_type": "font/woff2",
+      "local_sha256": "2c5081c41ee4de3909863754597d7c91bb33190a9c12a584feed2c9e19263916"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.117.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.117.woff2",
+      "bytes": 6136,
+      "sha256": "d3f0caffb8e6c9ec3b118a7d7f7b8a1fb043577255b4ca580fa22b9454d32121",
+      "content_type": "font/woff2",
+      "local_sha256": "d3f0caffb8e6c9ec3b118a7d7f7b8a1fb043577255b4ca580fa22b9454d32121"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.119.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.119.woff2",
+      "bytes": 18424,
+      "sha256": "59026eff368388a007dd2ab70f0fc9bea17d136ec58db10577e83b37d30744b5",
+      "content_type": "font/woff2",
+      "local_sha256": "59026eff368388a007dd2ab70f0fc9bea17d136ec58db10577e83b37d30744b5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.83.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.83.woff2",
+      "bytes": 9848,
+      "sha256": "9a68d65ea561186832d469f55e220d5897a5d449a257eeb86c519990beab87c1",
+      "content_type": "font/woff2",
+      "local_sha256": "9a68d65ea561186832d469f55e220d5897a5d449a257eeb86c519990beab87c1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.92.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.92.woff2",
+      "bytes": 9048,
+      "sha256": "f1fda84e3e80a99c5577e2efbdbcd8992b0774cae15a1337dd93d8fa4bf80b7d",
+      "content_type": "font/woff2",
+      "local_sha256": "f1fda84e3e80a99c5577e2efbdbcd8992b0774cae15a1337dd93d8fa4bf80b7d"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.95.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.95.woff2",
+      "bytes": 8992,
+      "sha256": "b247d92af78c11cbaf43d57f97766c34f86410b4584e9342361005edc3073b9c",
+      "content_type": "font/woff2",
+      "local_sha256": "b247d92af78c11cbaf43d57f97766c34f86410b4584e9342361005edc3073b9c"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.96.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.96.woff2",
+      "bytes": 9124,
+      "sha256": "093447bc47f0b531362c7d1f587ac98bc0d2b9557ab8e15dba82cc62957d15cb",
+      "content_type": "font/woff2",
+      "local_sha256": "093447bc47f0b531362c7d1f587ac98bc0d2b9557ab8e15dba82cc62957d15cb"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.97.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWHSSmlNk8rxVYz1keqDognBR0dnbIQ0DZlb2g.97.woff2",
+      "bytes": 8752,
+      "sha256": "8c85eebec50a1f7fd86e897a576e79fa4dad885cbf109d727a10b9261a665cda",
+      "content_type": "font/woff2",
+      "local_sha256": "8c85eebec50a1f7fd86e897a576e79fa4dad885cbf109d727a10b9261a665cda"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWQ.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMVW2drQpDw0GjzrVNFf_valaDBcznOqs9LaWQ.ttf",
+      "bytes": 2325592,
+      "sha256": "6fafdce8f5726736b79b4e6118e7f6b5c5e53e8f24204f63a3ef7fdc15725502",
+      "content_type": "font/ttf",
+      "local_sha256": "6fafdce8f5726736b79b4e6118e7f6b5c5e53e8f24204f63a3ef7fdc15725502"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenkakugothicnew/v18/gNMYW2drQpDw0GjzrVNFf_valaDBcznOkjs.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenkakugothicnew/v18/gNMYW2drQpDw0GjzrVNFf_valaDBcznOkjs.ttf",
+      "bytes": 2357792,
+      "sha256": "67f17ccc7a7f5a26f799feb9cf647fe509648f9943ecaadb745615504f9666d4",
+      "content_type": "font/ttf",
+      "local_sha256": "67f17ccc7a7f5a26f799feb9cf647fe509648f9943ecaadb745615504f9666d4"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb4vrVla.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb4vrVla.ttf",
+      "bytes": 5518704,
+      "sha256": "96d633d176a18ce8ca8b8ea0800668da4410ecbe4400e511bc3af03247cdb740",
+      "content_type": "font/ttf",
+      "local_sha256": "96d633d176a18ce8ca8b8ea0800668da4410ecbe4400e511bc3af03247cdb740"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFla.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFla.ttf",
+      "bytes": 5433848,
+      "sha256": "30d2f8074f694ab515ce3bfda1257a1aa799ce30d1ba89221e702e1857b85be3",
+      "content_type": "font/ttf",
+      "local_sha256": "30d2f8074f694ab515ce3bfda1257a1aa799ce30d1ba89221e702e1857b85be3"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.100.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.100.woff2",
+      "bytes": 19132,
+      "sha256": "a45c2c17e4f8bcb1928f99c7e4e2f9f366cde576c279af8c95a3c3d1e23f1ca5",
+      "content_type": "font/woff2",
+      "local_sha256": "a45c2c17e4f8bcb1928f99c7e4e2f9f366cde576c279af8c95a3c3d1e23f1ca5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.101.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.101.woff2",
+      "bytes": 16160,
+      "sha256": "093bbfcc22e9e644fd6e8f4bee52c6ed0fbc7897e3045eede435ce93a6c6082b",
+      "content_type": "font/woff2",
+      "local_sha256": "093bbfcc22e9e644fd6e8f4bee52c6ed0fbc7897e3045eede435ce93a6c6082b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.103.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.103.woff2",
+      "bytes": 17936,
+      "sha256": "058e506ea6fe5300596fd216f5745be87eb32153039e46555f1bd939a7b902fd",
+      "content_type": "font/woff2",
+      "local_sha256": "058e506ea6fe5300596fd216f5745be87eb32153039e46555f1bd939a7b902fd"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.105.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.105.woff2",
+      "bytes": 18172,
+      "sha256": "da15a3e392d7fb8312f5f997644643b50983fdcb65bb926fc6f57079a7944cc2",
+      "content_type": "font/woff2",
+      "local_sha256": "da15a3e392d7fb8312f5f997644643b50983fdcb65bb926fc6f57079a7944cc2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.106.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.106.woff2",
+      "bytes": 19324,
+      "sha256": "6b012d90e9d8fa74f92009b45471d5fbc2484ec6d714ff43ed3ab8d44d040fa4",
+      "content_type": "font/woff2",
+      "local_sha256": "6b012d90e9d8fa74f92009b45471d5fbc2484ec6d714ff43ed3ab8d44d040fa4"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.110.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.110.woff2",
+      "bytes": 16320,
+      "sha256": "40c5f9f824977d431d6e99cbff8ebf0603f8a40e98d1adb3f4d1c953ce3718f1",
+      "content_type": "font/woff2",
+      "local_sha256": "40c5f9f824977d431d6e99cbff8ebf0603f8a40e98d1adb3f4d1c953ce3718f1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.112.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.112.woff2",
+      "bytes": 16768,
+      "sha256": "0f2d85203ba3fcf280ba214a81a66f8a52e50f279ddb5c0f36880c832f49be00",
+      "content_type": "font/woff2",
+      "local_sha256": "0f2d85203ba3fcf280ba214a81a66f8a52e50f279ddb5c0f36880c832f49be00"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.113.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.113.woff2",
+      "bytes": 15664,
+      "sha256": "f49550806d2c36af750fe5661242c9fa2dec84469dd4e862f6238fe214dae8e9",
+      "content_type": "font/woff2",
+      "local_sha256": "f49550806d2c36af750fe5661242c9fa2dec84469dd4e862f6238fe214dae8e9"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.114.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.114.woff2",
+      "bytes": 14652,
+      "sha256": "5bf411bce496c670bbcf367cd7bbe9b83c664c83398ac8aa14400201154aead4",
+      "content_type": "font/woff2",
+      "local_sha256": "5bf411bce496c670bbcf367cd7bbe9b83c664c83398ac8aa14400201154aead4"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.116.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.116.woff2",
+      "bytes": 15420,
+      "sha256": "403de8fe0d6d16440ce36ee36ed52b1894897ad65ec598dcbb1f8a7c663f761f",
+      "content_type": "font/woff2",
+      "local_sha256": "403de8fe0d6d16440ce36ee36ed52b1894897ad65ec598dcbb1f8a7c663f761f"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.117.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.117.woff2",
+      "bytes": 12128,
+      "sha256": "be26d7193f4620c8dd5eda5e45fb834734b2e520f97c7d41dff1745cd4df10fd",
+      "content_type": "font/woff2",
+      "local_sha256": "be26d7193f4620c8dd5eda5e45fb834734b2e520f97c7d41dff1745cd4df10fd"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.119.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrFlf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.119.woff2",
+      "bytes": 28760,
+      "sha256": "b2cf996e26c0d979070d0927bb180c823270faa1b9bdf5edc65217ad967ccca1",
+      "content_type": "font/woff2",
+      "local_sha256": "b2cf996e26c0d979070d0927bb180c823270faa1b9bdf5edc65217ad967ccca1"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrGld-9ICPRBv.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5LrGld-9ICPRBv.woff2",
+      "bytes": 16424,
+      "sha256": "1ce304c33ac6a83211162e04bdd5b9ea1a8d361be81b2e004bfec2eaee4d18a9",
+      "content_type": "font/woff2",
+      "local_sha256": "1ce304c33ac6a83211162e04bdd5b9ea1a8d361be81b2e004bfec2eaee4d18a9"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrlla.ttf",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrlla.ttf",
+      "bytes": 5413672,
+      "sha256": "6019c2dd9622e4805edbed2ad0dfeb3913b3d99b29f2d9e430228417a074fd57",
+      "content_type": "font/ttf",
+      "local_sha256": "6019c2dd9622e4805edbed2ad0dfeb3913b3d99b29f2d9e430228417a074fd57"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.100.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.100.woff2",
+      "bytes": 18988,
+      "sha256": "aa52dfae452ff4033d2d0470a26a3626c7fbc0f1aca1cebd4f26650ce156dd46",
+      "content_type": "font/woff2",
+      "local_sha256": "aa52dfae452ff4033d2d0470a26a3626c7fbc0f1aca1cebd4f26650ce156dd46"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.101.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.101.woff2",
+      "bytes": 16140,
+      "sha256": "c6f16437497b0299d03a3b5e402e85673169a8ac46eae351837fbed29063b2c9",
+      "content_type": "font/woff2",
+      "local_sha256": "c6f16437497b0299d03a3b5e402e85673169a8ac46eae351837fbed29063b2c9"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.103.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.103.woff2",
+      "bytes": 17848,
+      "sha256": "5739c466a3a4b84a42e4337b3580c9f1e5ea16f29f588c70713cd924f58f63a7",
+      "content_type": "font/woff2",
+      "local_sha256": "5739c466a3a4b84a42e4337b3580c9f1e5ea16f29f588c70713cd924f58f63a7"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.104.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.104.woff2",
+      "bytes": 17380,
+      "sha256": "f89c14d73e7f2c4d382408720d9ddd1f24a80dd4044127534c6a1f2aa01a1442",
+      "content_type": "font/woff2",
+      "local_sha256": "f89c14d73e7f2c4d382408720d9ddd1f24a80dd4044127534c6a1f2aa01a1442"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.105.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.105.woff2",
+      "bytes": 17932,
+      "sha256": "f280b0b4b35e5372147ef26cc4dfeaa3e56158d9bbb6048c51597f85c3623400",
+      "content_type": "font/woff2",
+      "local_sha256": "f280b0b4b35e5372147ef26cc4dfeaa3e56158d9bbb6048c51597f85c3623400"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.106.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.106.woff2",
+      "bytes": 19392,
+      "sha256": "6a6ffc2b67123609fb1480ce1ffdfdf9ed51e5734de9cc3618a2407ca8a7eff6",
+      "content_type": "font/woff2",
+      "local_sha256": "6a6ffc2b67123609fb1480ce1ffdfdf9ed51e5734de9cc3618a2407ca8a7eff6"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.107.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.107.woff2",
+      "bytes": 16244,
+      "sha256": "7b10734c74ba6beb0f612c4bb7c425c65ce759fc6632f7bcfea3d56dbf47e8f5",
+      "content_type": "font/woff2",
+      "local_sha256": "7b10734c74ba6beb0f612c4bb7c425c65ce759fc6632f7bcfea3d56dbf47e8f5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.108.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.108.woff2",
+      "bytes": 18264,
+      "sha256": "1eb212abd1867ab9fe47b2d1263b186ede85a16ce5b873fefa4aad1ff44df6ba",
+      "content_type": "font/woff2",
+      "local_sha256": "1eb212abd1867ab9fe47b2d1263b186ede85a16ce5b873fefa4aad1ff44df6ba"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.109.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.109.woff2",
+      "bytes": 15812,
+      "sha256": "9def390428479039ed475edc6b3f3e65e4403206c456cbe0b1f3ad267be68e33",
+      "content_type": "font/woff2",
+      "local_sha256": "9def390428479039ed475edc6b3f3e65e4403206c456cbe0b1f3ad267be68e33"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.110.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.110.woff2",
+      "bytes": 16200,
+      "sha256": "bb85efe4a59dbd0cc11e53e4c8459c6bd14e89af6c975d28fa9e5127c649bfff",
+      "content_type": "font/woff2",
+      "local_sha256": "bb85efe4a59dbd0cc11e53e4c8459c6bd14e89af6c975d28fa9e5127c649bfff"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.111.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.111.woff2",
+      "bytes": 16520,
+      "sha256": "fa05f96f7ebf4b8c4b9b136d04b12b0ee76c9ad3b147a21bcdfc5050556e0d7a",
+      "content_type": "font/woff2",
+      "local_sha256": "fa05f96f7ebf4b8c4b9b136d04b12b0ee76c9ad3b147a21bcdfc5050556e0d7a"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.112.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.112.woff2",
+      "bytes": 16660,
+      "sha256": "9e198f736945078f7ff7b554c06b01d7a13f9361bfebaf714e15ec47ae67d1f8",
+      "content_type": "font/woff2",
+      "local_sha256": "9e198f736945078f7ff7b554c06b01d7a13f9361bfebaf714e15ec47ae67d1f8"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.113.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.113.woff2",
+      "bytes": 15640,
+      "sha256": "079e5d57d5602488841deb720e452f4fcc966fb6185e8a8b38864b9ba5c5e168",
+      "content_type": "font/woff2",
+      "local_sha256": "079e5d57d5602488841deb720e452f4fcc966fb6185e8a8b38864b9ba5c5e168"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.114.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.114.woff2",
+      "bytes": 14656,
+      "sha256": "0ac0e022425f4ab8847c9665bd1d44313527801f87b8fb2167ef73eddd3f62dd",
+      "content_type": "font/woff2",
+      "local_sha256": "0ac0e022425f4ab8847c9665bd1d44313527801f87b8fb2167ef73eddd3f62dd"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.115.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.115.woff2",
+      "bytes": 15316,
+      "sha256": "0fc928a0204ab3539259b13357d9c5aa095b2bb538dcedf38fda9d98e0ac8a3e",
+      "content_type": "font/woff2",
+      "local_sha256": "0fc928a0204ab3539259b13357d9c5aa095b2bb538dcedf38fda9d98e0ac8a3e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.116.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.116.woff2",
+      "bytes": 15380,
+      "sha256": "fa9b59dcc6b54c474add08ed62140d22fe4ac313791a9268701e8cdfbc48a9f0",
+      "content_type": "font/woff2",
+      "local_sha256": "fa9b59dcc6b54c474add08ed62140d22fe4ac313791a9268701e8cdfbc48a9f0"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.117.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.117.woff2",
+      "bytes": 12100,
+      "sha256": "a1da96c485a8c3afe73bdb2a44d7063fa6cb1467cef785f94b993843dec8fec5",
+      "content_type": "font/woff2",
+      "local_sha256": "a1da96c485a8c3afe73bdb2a44d7063fa6cb1467cef785f94b993843dec8fec5"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.119.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.119.woff2",
+      "bytes": 28488,
+      "sha256": "426ad9bef684b24568014ac5f543f9915ad3ec13fdbc469f5a64f127e5f9ffe7",
+      "content_type": "font/woff2",
+      "local_sha256": "426ad9bef684b24568014ac5f543f9915ad3ec13fdbc469f5a64f127e5f9ffe7"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.80.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.80.woff2",
+      "bytes": 17708,
+      "sha256": "e22cff945e7728d6d32f2e4d2b0a53836c26a2bab05664c41d7d31f7c6dfb1b2",
+      "content_type": "font/woff2",
+      "local_sha256": "e22cff945e7728d6d32f2e4d2b0a53836c26a2bab05664c41d7d31f7c6dfb1b2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.97.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.97.woff2",
+      "bytes": 17132,
+      "sha256": "50aef0c894f41844c330f8812f1bc99a40fc62a0606c0721dac53610ed8db0b2",
+      "content_type": "font/woff2",
+      "local_sha256": "50aef0c894f41844c330f8812f1bc99a40fc62a0606c0721dac53610ed8db0b2"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.99.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrllf8dUgP1p77gLAxSnIckBQjXn9sfLjeG9rwq0.99.woff2",
+      "bytes": 19468,
+      "sha256": "36456576bb198f916a84dfe302a4e6c18c8b3ef05a99f00dfd132b516e11981e",
+      "content_type": "font/woff2",
+      "local_sha256": "36456576bb198f916a84dfe302a4e6c18c8b3ef05a99f00dfd132b516e11981e"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrmld-9ICPRBv.woff2",
+      "path": "_external/fonts.gstatic.com/s/zenoldmincho/v13/tss3ApVaYytLwxTqcxfMyBveyb5zrmld-9ICPRBv.woff2",
+      "bytes": 16188,
+      "sha256": "c025e09867cb9392a02906612d3405ddb522c1b51d4c74862eaf7849bc55f6d0",
+      "content_type": "font/woff2",
+      "local_sha256": "c025e09867cb9392a02906612d3405ddb522c1b51d4c74862eaf7849bc55f6d0"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/bag.mp3",
+      "path": "moritsuki/assets/sfx/town/bag.mp3",
+      "bytes": 12999,
+      "sha256": "3a2ec0c5edd81c3d99a680eb4eaabc744caff4097d91d008bb34608166d94835",
+      "content_type": "audio/mp3",
+      "local_sha256": "3a2ec0c5edd81c3d99a680eb4eaabc744caff4097d91d008bb34608166d94835"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/blip.mp3",
+      "path": "moritsuki/assets/sfx/town/blip.mp3",
+      "bytes": 2132,
+      "sha256": "fdf2c64df8e2d0ce27e6f44eef98b943712e18e014c12c917406adbcf3eea956",
+      "content_type": "audio/mp3",
+      "local_sha256": "fdf2c64df8e2d0ce27e6f44eef98b943712e18e014c12c917406adbcf3eea956"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/cicada-bed.mp3",
+      "path": "moritsuki/assets/sfx/town/cicada-bed.mp3",
+      "bytes": 463037,
+      "sha256": "27ec22e8c0ad8cb48f64f5e55b891fff12e3da06683d0cd9855744017bb05614",
+      "content_type": "audio/mp3",
+      "local_sha256": "27ec22e8c0ad8cb48f64f5e55b891fff12e3da06683d0cd9855744017bb05614"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/coin.mp3",
+      "path": "moritsuki/assets/sfx/town/coin.mp3",
+      "bytes": 21358,
+      "sha256": "0a7c9ab7c666cd238fbceee1910fc8a2734a3e991ac42f892bb0a528ffcc7bf8",
+      "content_type": "audio/mp3",
+      "local_sha256": "0a7c9ab7c666cd238fbceee1910fc8a2734a3e991ac42f892bb0a528ffcc7bf8"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/creek.mp3",
+      "path": "moritsuki/assets/sfx/town/creek.mp3",
+      "bytes": 360847,
+      "sha256": "b1793b3dec8c415ccc2b9c2be463d0e7d387375ae989e65c25f61bac58b1f66d",
+      "content_type": "audio/mp3",
+      "local_sha256": "b1793b3dec8c415ccc2b9c2be463d0e7d387375ae989e65c25f61bac58b1f66d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/frogs.mp3",
+      "path": "moritsuki/assets/sfx/town/frogs.mp3",
+      "bytes": 480906,
+      "sha256": "b98d4e64d60c6f74e42cdf1b429083981b9a4080c526be61e7543af2bdd23b14",
+      "content_type": "audio/mp3",
+      "local_sha256": "b98d4e64d60c6f74e42cdf1b429083981b9a4080c526be61e7543af2bdd23b14"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/furin.mp3",
+      "path": "moritsuki/assets/sfx/town/furin.mp3",
+      "bytes": 64409,
+      "sha256": "f76abec42bce7688c2ff18718fd372e43632a0bc7a5e2d0759de11e657603e89",
+      "content_type": "audio/mp3",
+      "local_sha256": "f76abec42bce7688c2ff18718fd372e43632a0bc7a5e2d0759de11e657603e89"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/give.mp3",
+      "path": "moritsuki/assets/sfx/town/give.mp3",
+      "bytes": 17179,
+      "sha256": "7e2b91fe4f43e1f168bfe5b2494f2c7011630e293cf12c38c1813ba250441425",
+      "content_type": "audio/mp3",
+      "local_sha256": "7e2b91fe4f43e1f168bfe5b2494f2c7011630e293cf12c38c1813ba250441425"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/higurashi.mp3",
+      "path": "moritsuki/assets/sfx/town/higurashi.mp3",
+      "bytes": 392820,
+      "sha256": "fb24604d2f7a95504684afbbfd533de5d25db3c4f7fdbf918f9eb412105f7847",
+      "content_type": "audio/mp3",
+      "local_sha256": "fb24604d2f7a95504684afbbfd533de5d25db3c4f7fdbf918f9eb412105f7847"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/manifest.json",
+      "path": "moritsuki/assets/sfx/town/manifest.json",
+      "bytes": 4556,
+      "sha256": "d20cef25927185d6522130dcf1b22392660f25d8d59d7775cb5908a2f3de40cd",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "d20cef25927185d6522130dcf1b22392660f25d8d59d7775cb5908a2f3de40cd"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/minmin.mp3",
+      "path": "moritsuki/assets/sfx/town/minmin.mp3",
+      "bytes": 487174,
+      "sha256": "79d748b5922453466847864af23035cbf6cc45a1c1206581750d317eacd18457",
+      "content_type": "audio/mp3",
+      "local_sha256": "79d748b5922453466847864af23035cbf6cc45a1c1206581750d317eacd18457"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/run-asphalt.mp3",
+      "path": "moritsuki/assets/sfx/town/run-asphalt.mp3",
+      "bytes": 42100,
+      "sha256": "42c4e926a76272f952e09cc5a8afd5872ff8366cdc5173ca45d444e4e3367f80",
+      "content_type": "audio/mp3",
+      "local_sha256": "42c4e926a76272f952e09cc5a8afd5872ff8366cdc5173ca45d444e4e3367f80"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/run-grass.mp3",
+      "path": "moritsuki/assets/sfx/town/run-grass.mp3",
+      "bytes": 42100,
+      "sha256": "876869317c5db217b3f6290274a244b608af33c675bdd0b74ed742216d133d7d",
+      "content_type": "audio/mp3",
+      "local_sha256": "876869317c5db217b3f6290274a244b608af33c675bdd0b74ed742216d133d7d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/run-gravel.mp3",
+      "path": "moritsuki/assets/sfx/town/run-gravel.mp3",
+      "bytes": 40637,
+      "sha256": "945f72c4970b72322d5858d395653a4c260bda6e8519864abaaf4407d121b04a",
+      "content_type": "audio/mp3",
+      "local_sha256": "945f72c4970b72322d5858d395653a4c260bda6e8519864abaaf4407d121b04a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/run-sand.mp3",
+      "path": "moritsuki/assets/sfx/town/run-sand.mp3",
+      "bytes": 42100,
+      "sha256": "34c06ea09b550d88f4f7a83604f5b17fe2aa74e08736f85f07a3b4cfac4a3c66",
+      "content_type": "audio/mp3",
+      "local_sha256": "34c06ea09b550d88f4f7a83604f5b17fe2aa74e08736f85f07a3b4cfac4a3c66"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/run-soil.mp3",
+      "path": "moritsuki/assets/sfx/town/run-soil.mp3",
+      "bytes": 42100,
+      "sha256": "f9ea36a6836a267b167fe853390da13a81143fd3d63c1aa8e45ded28ebff360f",
+      "content_type": "audio/mp3",
+      "local_sha256": "f9ea36a6836a267b167fe853390da13a81143fd3d63c1aa8e45ded28ebff360f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/step-asphalt.mp3",
+      "path": "moritsuki/assets/sfx/town/step-asphalt.mp3",
+      "bytes": 51243,
+      "sha256": "e92881603c31d8c1a796150d7ca297e6691a434bd403c7584197846c878c0167",
+      "content_type": "audio/mp3",
+      "local_sha256": "e92881603c31d8c1a796150d7ca297e6691a434bd403c7584197846c878c0167"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/step-grass.mp3",
+      "path": "moritsuki/assets/sfx/town/step-grass.mp3",
+      "bytes": 49414,
+      "sha256": "59be5c28b0871d467ac233b13ffa263dc68b4285444790de7da5aef3f4fd4d70",
+      "content_type": "audio/mp3",
+      "local_sha256": "59be5c28b0871d467ac233b13ffa263dc68b4285444790de7da5aef3f4fd4d70"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/step-gravel.mp3",
+      "path": "moritsuki/assets/sfx/town/step-gravel.mp3",
+      "bytes": 46123,
+      "sha256": "c2a1c8dbb737ab376f9bc9b35c681404fc7b7f0b9fb332f31413e4f5c0b14699",
+      "content_type": "audio/mp3",
+      "local_sha256": "c2a1c8dbb737ab376f9bc9b35c681404fc7b7f0b9fb332f31413e4f5c0b14699"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/step-sand.mp3",
+      "path": "moritsuki/assets/sfx/town/step-sand.mp3",
+      "bytes": 51243,
+      "sha256": "d1a191452f1427d1d22b520405847d67b8a8b488e050feb6af613e2d8775a966",
+      "content_type": "audio/mp3",
+      "local_sha256": "d1a191452f1427d1d22b520405847d67b8a8b488e050feb6af613e2d8775a966"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/step-soil.mp3",
+      "path": "moritsuki/assets/sfx/town/step-soil.mp3",
+      "bytes": 51243,
+      "sha256": "eb4d6e2cff8825d9ef9bf8d1ad728b5ea6cdc735d86e3940d5f81b4130044876",
+      "content_type": "audio/mp3",
+      "local_sha256": "eb4d6e2cff8825d9ef9bf8d1ad728b5ea6cdc735d86e3940d5f81b4130044876"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/tonbi.mp3",
+      "path": "moritsuki/assets/sfx/town/tonbi.mp3",
+      "bytes": 79978,
+      "sha256": "5426eeb70d20f295d899b07d3b9bfa92e4d366cd76c351e99a2cd242a5018cea",
+      "content_type": "audio/mp3",
+      "local_sha256": "5426eeb70d20f295d899b07d3b9bfa92e4d366cd76c351e99a2cd242a5018cea"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/uguisu.mp3",
+      "path": "moritsuki/assets/sfx/town/uguisu.mp3",
+      "bytes": 18852,
+      "sha256": "86b1ddac3b8ef9e973dc883dfe3b62bf00267966bdb0ec41f24344e4b707a6a3",
+      "content_type": "audio/mp3",
+      "local_sha256": "86b1ddac3b8ef9e973dc883dfe3b62bf00267966bdb0ec41f24344e4b707a6a3"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/waves.mp3",
+      "path": "moritsuki/assets/sfx/town/waves.mp3",
+      "bytes": 324798,
+      "sha256": "ba3867095881355abbec7ecc90865b3c538fbbb69f82aa196a2f29a3d1a14d8f",
+      "content_type": "audio/mp3",
+      "local_sha256": "ba3867095881355abbec7ecc90865b3c538fbbb69f82aa196a2f29a3d1a14d8f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/wind-rush.mp3",
+      "path": "moritsuki/assets/sfx/town/wind-rush.mp3",
+      "bytes": 220779,
+      "sha256": "3ac9f33fe622af1e4ea14da9c57584f0b1d82741332aa3a04f9a4e5ecffe62b2",
+      "content_type": "audio/mp3",
+      "local_sha256": "3ac9f33fe622af1e4ea14da9c57584f0b1d82741332aa3a04f9a4e5ecffe62b2"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/assets/sfx/town/wind-soft.mp3",
+      "path": "moritsuki/assets/sfx/town/wind-soft.mp3",
+      "bytes": 260746,
+      "sha256": "9947a0b4c570e2e92b307b45073b33c924b0aa712b0d49cd2c840715c56311ac",
+      "content_type": "audio/mp3",
+      "local_sha256": "9947a0b4c570e2e92b307b45073b33c924b0aa712b0d49cd2c840715c56311ac"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/gazami/index.html?town",
+      "path": "moritsuki/gazami/index.html",
+      "bytes": 11735,
+      "sha256": "4e0b540ddc7d9efe41ddd8b8352dbdc32fd5796bb4b96aac4cacf7242ae6501c",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "16638cbc777dcff56973eb6951f41bcafc9ac44c8446a45002f65e0c556c7d81"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/hamaguri/index.html?town",
+      "path": "moritsuki/hamaguri/index.html",
+      "bytes": 11767,
+      "sha256": "7efe9a853853af9cec2b58b38fcb3185ee4d8a335818512095e3c014d56d3fad",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "2a151a83067d8ec1b1972da0f7248cf271eb704952aa0023c703799e38bfdfa7"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/",
+      "path": "moritsuki/index.html",
+      "bytes": 8643,
+      "sha256": "4916b7ed5e63145f58366a4cd7dbe0eb83e47cc2ce094c1211044b4f0b13bc0d",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "f968f32b656f3218c6370205efd442770af4a4f018c8b98d3558ce65e4db0aca"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/kusafugu/index.html?town",
+      "path": "moritsuki/kusafugu/index.html",
+      "bytes": 11951,
+      "sha256": "72304232b7642b316fd7d39e3a3cd47bc18c309e7a1274d4d98d80768689acfd",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "1299f0cd99f02dfe5f72c73472799956becd7f5a5db946a72aed689c452fedd6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/mori/index.html?town",
+      "path": "moritsuki/mori/index.html",
+      "bytes": 10556,
+      "sha256": "487cee9223cebe6cb3cc3259de684eb8cfb54655ebc1ad963868b32ae28e3cb3",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "e29646166c59da4739ca31559994c66df37bd8b452ac8ac5a8b754a4de6cf8e0"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/core/audio.js",
+      "path": "moritsuki/src/core/audio.js",
+      "bytes": 18544,
+      "sha256": "348b0946d8d8a07ded64349cf365bace8dc54159b87e1c9f78f107459ca1a884",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "348b0946d8d8a07ded64349cf365bace8dc54159b87e1c9f78f107459ca1a884"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/core/geo.js",
+      "path": "moritsuki/src/core/geo.js",
+      "bytes": 4799,
+      "sha256": "5b3bf2dce301ad1b5954342a07e81021136452fa4467b0cc02b2a126f24cd201",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5b3bf2dce301ad1b5954342a07e81021136452fa4467b0cc02b2a126f24cd201"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/core/input.js",
+      "path": "moritsuki/src/core/input.js",
+      "bytes": 4431,
+      "sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/core/noise.js",
+      "path": "moritsuki/src/core/noise.js",
+      "bytes": 4109,
+      "sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/core/post.js",
+      "path": "moritsuki/src/core/post.js",
+      "bytes": 5469,
+      "sha256": "69914f7e4bf184100dc84abdff49f59979d72b98244de5c361b14f6cd7ea07a1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "69914f7e4bf184100dc84abdff49f59979d72b98244de5c361b14f6cd7ea07a1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/core/shaderPatch.js",
+      "path": "moritsuki/src/core/shaderPatch.js",
+      "bytes": 10427,
+      "sha256": "5a2836a221520b0aed86a31c67849322b2218cf186fbd2588ae13730db447d96",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5a2836a221520b0aed86a31c67849322b2218cf186fbd2588ae13730db447d96"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/creatures.js",
+      "path": "moritsuki/src/fish/creatures.js",
+      "bytes": 60607,
+      "sha256": "56d8d9520abadf293b6f3af335865f5ac615c227867c5bf1867aed5baa15d252",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "56d8d9520abadf293b6f3af335865f5ac615c227867c5bf1867aed5baa15d252"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/fish.js",
+      "path": "moritsuki/src/fish/fish.js",
+      "bytes": 19165,
+      "sha256": "8e4344246e33e6ee57a3531c83c6eda15b6d7dd7c13bae97aabb791c258353a8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8e4344246e33e6ee57a3531c83c6eda15b6d7dd7c13bae97aabb791c258353a8"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/fishform.js",
+      "path": "moritsuki/src/fish/fishform.js",
+      "bytes": 11330,
+      "sha256": "e1037c574736a316b4f2013065933b7c24ac6b3b0510a36c15bf97ddd8e91a02",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e1037c574736a316b4f2013065933b7c24ac6b3b0510a36c15bf97ddd8e91a02"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/fishpaint.js",
+      "path": "moritsuki/src/fish/fishpaint.js",
+      "bytes": 10681,
+      "sha256": "6b9131e170aef694ac1792f726828ab77f1bbdc77f8c303ea2f9eb1370b555f6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6b9131e170aef694ac1792f726828ab77f1bbdc77f8c303ea2f9eb1370b555f6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/fishpaint.worker.js",
+      "path": "moritsuki/src/fish/fishpaint.worker.js",
+      "bytes": 468,
+      "sha256": "1162ca546c4e45d0680e79db22c85d0d2e418b2fa1ae27bb01b7dd109488c11e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1162ca546c4e45d0680e79db22c85d0d2e418b2fa1ae27bb01b7dd109488c11e"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/lobster.js",
+      "path": "moritsuki/src/fish/lobster.js",
+      "bytes": 34684,
+      "sha256": "cf656f310bc712840c0540717af5d290115cb9ab954ec6bdd069e30dbd25a7a9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "cf656f310bc712840c0540717af5d290115cb9ab954ec6bdd069e30dbd25a7a9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/models.js",
+      "path": "moritsuki/src/fish/models.js",
+      "bytes": 446,
+      "sha256": "711bc05a842f00ade77db6f5bc2ec187ca6bcb97add4061fda54df1206d78887",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "711bc05a842f00ade77db6f5bc2ec187ca6bcb97add4061fda54df1206d78887"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/octopus.js",
+      "path": "moritsuki/src/fish/octopus.js",
+      "bytes": 20642,
+      "sha256": "6a79cf2d366f19cf95544b89d4dee7cd337aa9ef155a27c3e6cd4178a042b5fb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6a79cf2d366f19cf95544b89d4dee7cd337aa9ef155a27c3e6cd4178a042b5fb"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/species.js",
+      "path": "moritsuki/src/fish/species.js",
+      "bytes": 44826,
+      "sha256": "89dcdff38d402438505c41d02bed15d2e4db84847071d0b5c3269898faf05aa2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "89dcdff38d402438505c41d02bed15d2e4db84847071d0b5c3269898faf05aa2"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/thumbs.js",
+      "path": "moritsuki/src/fish/thumbs.js",
+      "bytes": 3271,
+      "sha256": "88a702771ec58acdd50a51ced5a3ce515997fc5f6f12d699cbcaf432f78b5d69",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "88a702771ec58acdd50a51ced5a3ce515997fc5f6f12d699cbcaf432f78b5d69"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/fish/turtle.js",
+      "path": "moritsuki/src/fish/turtle.js",
+      "bytes": 17756,
+      "sha256": "9f66a2cb9377aa5e7172a51ce9f56fcdb17a2e5ea7112ea0b1ef18f69a99df4e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9f66a2cb9377aa5e7172a51ce9f56fcdb17a2e5ea7112ea0b1ef18f69a99df4e"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/game.js",
+      "path": "moritsuki/src/game.js",
+      "bytes": 61019,
+      "sha256": "aae53bb04f6f464cac9d55117302e1800a705b48ae770e97bc27b751945873f8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "aae53bb04f6f464cac9d55117302e1800a705b48ae770e97bc27b751945873f8"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/backdrop.js",
+      "path": "moritsuki/src/gazami/backdrop.js",
+      "bytes": 27121,
+      "sha256": "7d88a11ab9af72eb13a21167f99f96f7a28c62010696c63ca1f54dd708235b5c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7d88a11ab9af72eb13a21167f99f96f7a28c62010696c63ca1f54dd708235b5c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/beach.js",
+      "path": "moritsuki/src/gazami/beach.js",
+      "bytes": 19388,
+      "sha256": "f63371e91f45de97f693445904cb0ceef1144b96cecc12b01757a09fc2169da6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f63371e91f45de97f693445904cb0ceef1144b96cecc12b01757a09fc2169da6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/body.js",
+      "path": "moritsuki/src/gazami/body.js",
+      "bytes": 25911,
+      "sha256": "62fdd6860e45d06c22c3d25085d245dda31a77dcf3fe25ee49b12d0f239fa0e5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "62fdd6860e45d06c22c3d25085d245dda31a77dcf3fe25ee49b12d0f239fa0e5"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/core/audio.js",
+      "path": "moritsuki/src/gazami/core/audio.js",
+      "bytes": 22293,
+      "sha256": "e3ea1cf13505babef3f6748f719fb3129074fd1f31606adaf944c1e4135e5b31",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e3ea1cf13505babef3f6748f719fb3129074fd1f31606adaf944c1e4135e5b31"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/core/input.js",
+      "path": "moritsuki/src/gazami/core/input.js",
+      "bytes": 4431,
+      "sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/core/noise.js",
+      "path": "moritsuki/src/gazami/core/noise.js",
+      "bytes": 4109,
+      "sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/crabs.js",
+      "path": "moritsuki/src/gazami/crabs.js",
+      "bytes": 60502,
+      "sha256": "74d52a759a85feedc0c03975c1492891f5f4726b66bd784f4098298915f621cf",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "74d52a759a85feedc0c03975c1492891f5f4726b66bd784f4098298915f621cf"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/field.js",
+      "path": "moritsuki/src/gazami/field.js",
+      "bytes": 8085,
+      "sha256": "affaea06fdc84bde55d99f8d27d1c07cf1b66311ae3b7960e5a7511562364eec",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "affaea06fdc84bde55d99f8d27d1c07cf1b66311ae3b7960e5a7511562364eec"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/fx.js",
+      "path": "moritsuki/src/gazami/fx.js",
+      "bytes": 7540,
+      "sha256": "2fcf3722ba670d2be52a2581ebb1c4023df1257cdf863cbbe1a1f5d22ff0b323",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2fcf3722ba670d2be52a2581ebb1c4023df1257cdf863cbbe1a1f5d22ff0b323"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/game.js",
+      "path": "moritsuki/src/gazami/game.js",
+      "bytes": 76062,
+      "sha256": "1fb8babb13422dedc5a8d4fcee38637973924295aeabe52d553d1fcf3ef973a7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1fb8babb13422dedc5a8d4fcee38637973924295aeabe52d553d1fcf3ef973a7"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/main.js",
+      "path": "moritsuki/src/gazami/main.js",
+      "bytes": 349,
+      "sha256": "6c1bab17db6e6b35fc56aea81fd57646e4dda0b29cbaceb0bf7954fe4de227ca",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6c1bab17db6e6b35fc56aea81fd57646e4dda0b29cbaceb0bf7954fe4de227ca"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/netbag.js",
+      "path": "moritsuki/src/gazami/netbag.js",
+      "bytes": 5500,
+      "sha256": "73eba0ec53af5753c2c49bc267426fe6db6f5a7181d8b8bcea4f9d262b945bc5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "73eba0ec53af5753c2c49bc267426fe6db6f5a7181d8b8bcea4f9d262b945bc5"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/player.js",
+      "path": "moritsuki/src/gazami/player.js",
+      "bytes": 5193,
+      "sha256": "c8152222aadf1dcb9c30f17a34017714484cdee6c94d6cea697548b88361201b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c8152222aadf1dcb9c30f17a34017714484cdee6c94d6cea697548b88361201b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/post.js",
+      "path": "moritsuki/src/gazami/post.js",
+      "bytes": 5696,
+      "sha256": "f7c0fa332c75c0fb211e74bba9b217392126909b988f3383d7707f8ce64b7f50",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f7c0fa332c75c0fb211e74bba9b217392126909b988f3383d7707f8ce64b7f50"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/save.js",
+      "path": "moritsuki/src/gazami/save.js",
+      "bytes": 1299,
+      "sha256": "d06be57aeb75cf556855ef570fd726a70c9c1146a5638816a9092ee18130378f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d06be57aeb75cf556855ef570fd726a70c9c1146a5638816a9092ee18130378f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/sense.js",
+      "path": "moritsuki/src/gazami/sense.js",
+      "bytes": 13469,
+      "sha256": "be4c9ab05e657b2ebfceabe76ce646a11bbb01ef24e8dfdae8253303c65ee080",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "be4c9ab05e657b2ebfceabe76ce646a11bbb01ef24e8dfdae8253303c65ee080"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/shade.js",
+      "path": "moritsuki/src/gazami/shade.js",
+      "bytes": 8660,
+      "sha256": "34fda1b374144eecbb52ae59aae459c27b7d73387bbc87c8fbbdfafb57b55ddf",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "34fda1b374144eecbb52ae59aae459c27b7d73387bbc87c8fbbdfafb57b55ddf"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/sky.js",
+      "path": "moritsuki/src/gazami/sky.js",
+      "bytes": 5731,
+      "sha256": "9280c871053bdc330175c6f20b13829bfeb218a1a33b44ce9e7715e69bed15d4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9280c871053bdc330175c6f20b13829bfeb218a1a33b44ce9e7715e69bed15d4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/species.js",
+      "path": "moritsuki/src/gazami/species.js",
+      "bytes": 4803,
+      "sha256": "95f970d5bdc99bcd8ffcb9174f24fd492436d5653ece47edab312d8e57933c17",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "95f970d5bdc99bcd8ffcb9174f24fd492436d5653ece47edab312d8e57933c17"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/style.css",
+      "path": "moritsuki/src/gazami/style.css",
+      "bytes": 37549,
+      "sha256": "1d4df6f5991754860b4f1acae99325bfab208a454046cc1915258aa22ba148c1",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "1d4df6f5991754860b4f1acae99325bfab208a454046cc1915258aa22ba148c1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/thumbs.js",
+      "path": "moritsuki/src/gazami/thumbs.js",
+      "bytes": 2166,
+      "sha256": "92534db4380620284433a540807989325f28b8723351e53718ca3300aadb11e7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "92534db4380620284433a540807989325f28b8723351e53718ca3300aadb11e7"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/ui.js",
+      "path": "moritsuki/src/gazami/ui.js",
+      "bytes": 15011,
+      "sha256": "c98574c9fb3a43a300892bd7280d46ea4998193506525c3943e468fff5b55e2e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c98574c9fb3a43a300892bd7280d46ea4998193506525c3943e468fff5b55e2e"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/water.js",
+      "path": "moritsuki/src/gazami/water.js",
+      "bytes": 26155,
+      "sha256": "7af36e11dec1eb224e8a46986d994f243dfea60a867f150ebf88e2c34bafeac9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7af36e11dec1eb224e8a46986d994f243dfea60a867f150ebf88e2c34bafeac9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/gazami/world.js",
+      "path": "moritsuki/src/gazami/world.js",
+      "bytes": 5420,
+      "sha256": "f7147c5f386ff74118872703442f5e9fff92c9f1dd4b9067da3f0e329e4fbf23",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f7147c5f386ff74118872703442f5e9fff92c9f1dd4b9067da3f0e329e4fbf23"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/backdrop.js",
+      "path": "moritsuki/src/hamaguri/backdrop.js",
+      "bytes": 22729,
+      "sha256": "e29e4faba3fb2643ddb814c6f287343ce765da0b38fb4e713b78a5eea8b35a87",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e29e4faba3fb2643ddb814c6f287343ce765da0b38fb4e713b78a5eea8b35a87"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/beach.js",
+      "path": "moritsuki/src/hamaguri/beach.js",
+      "bytes": 19253,
+      "sha256": "9d636c61683785cf921ed4cde85f30c118c9dbc52f7760d5cdb49305e5b80a41",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9d636c61683785cf921ed4cde85f30c118c9dbc52f7760d5cdb49305e5b80a41"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/body.js",
+      "path": "moritsuki/src/hamaguri/body.js",
+      "bytes": 24237,
+      "sha256": "d64a1f2125228f5936ffd8db0cf0f36b4ca3a56fec2040652b83854340c06b0e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d64a1f2125228f5936ffd8db0cf0f36b4ca3a56fec2040652b83854340c06b0e"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/clams.js",
+      "path": "moritsuki/src/hamaguri/clams.js",
+      "bytes": 22788,
+      "sha256": "1b24cf720fde0d7c6f443ac411d12346d54cdea5edf7f1a20146d5d22b0a2384",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1b24cf720fde0d7c6f443ac411d12346d54cdea5edf7f1a20146d5d22b0a2384"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/core/audio.js",
+      "path": "moritsuki/src/hamaguri/core/audio.js",
+      "bytes": 20611,
+      "sha256": "bc263699e99e3a943627962656059671d74e69a5e13e7a6a047fd4148aa262a3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bc263699e99e3a943627962656059671d74e69a5e13e7a6a047fd4148aa262a3"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/core/input.js",
+      "path": "moritsuki/src/hamaguri/core/input.js",
+      "bytes": 4431,
+      "sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/core/noise.js",
+      "path": "moritsuki/src/hamaguri/core/noise.js",
+      "bytes": 4109,
+      "sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/field.js",
+      "path": "moritsuki/src/hamaguri/field.js",
+      "bytes": 8248,
+      "sha256": "97ad9022f1b3c849dd8e16246a203488e9d1cf893fa8e7d0b804665dd47f7475",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "97ad9022f1b3c849dd8e16246a203488e9d1cf893fa8e7d0b804665dd47f7475"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/fx.js",
+      "path": "moritsuki/src/hamaguri/fx.js",
+      "bytes": 5879,
+      "sha256": "7747c7a614c2b3df1eedfecb3e1798073964db91c0a6290e5719ded2991aacdb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7747c7a614c2b3df1eedfecb3e1798073964db91c0a6290e5719ded2991aacdb"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/game.js",
+      "path": "moritsuki/src/hamaguri/game.js",
+      "bytes": 49425,
+      "sha256": "7da5d4f13afeed9db28e2930693dd772b93bed9da9907a3fd73a1b14cb3fa5cf",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7da5d4f13afeed9db28e2930693dd772b93bed9da9907a3fd73a1b14cb3fa5cf"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/main.js",
+      "path": "moritsuki/src/hamaguri/main.js",
+      "bytes": 354,
+      "sha256": "7684b0af23e0417e75915f1dd2ece91fa8989e97d202406f71e0ba7795a9e8ee",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7684b0af23e0417e75915f1dd2ece91fa8989e97d202406f71e0ba7795a9e8ee"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/marks.js",
+      "path": "moritsuki/src/hamaguri/marks.js",
+      "bytes": 9130,
+      "sha256": "15c6c0732d26c4d13e8910ee14c3711df633fb9945fed1b0b21f70cd08275312",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "15c6c0732d26c4d13e8910ee14c3711df633fb9945fed1b0b21f70cd08275312"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/netbag.js",
+      "path": "moritsuki/src/hamaguri/netbag.js",
+      "bytes": 4853,
+      "sha256": "b750710c570f1be2836445fff76912e761ca9cd322ba5d91175f9052fe1a2dc3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b750710c570f1be2836445fff76912e761ca9cd322ba5d91175f9052fe1a2dc3"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/player.js",
+      "path": "moritsuki/src/hamaguri/player.js",
+      "bytes": 5095,
+      "sha256": "ac147a5ed518ee16aed1ad247abac1b2911436d06bf54f5abb98baa7ab6e723c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ac147a5ed518ee16aed1ad247abac1b2911436d06bf54f5abb98baa7ab6e723c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/post.js",
+      "path": "moritsuki/src/hamaguri/post.js",
+      "bytes": 5513,
+      "sha256": "5b1660424e3059bc62c579b0206f5e6105bb1c7306cb24b159de23610658bb58",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5b1660424e3059bc62c579b0206f5e6105bb1c7306cb24b159de23610658bb58"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/rod.js",
+      "path": "moritsuki/src/hamaguri/rod.js",
+      "bytes": 9655,
+      "sha256": "42e5e7d27efeb1afab0c17f615463e8764a9e06f71364fbcce0e89acfb6224c1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "42e5e7d27efeb1afab0c17f615463e8764a9e06f71364fbcce0e89acfb6224c1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/save.js",
+      "path": "moritsuki/src/hamaguri/save.js",
+      "bytes": 1159,
+      "sha256": "88bc7a19498d0e335b8772b9607930dadc780bd7abc082c174cfe0a150134fc8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "88bc7a19498d0e335b8772b9607930dadc780bd7abc082c174cfe0a150134fc8"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/shade.js",
+      "path": "moritsuki/src/hamaguri/shade.js",
+      "bytes": 6520,
+      "sha256": "15525c21ad2d83762913e0ba5955419b607e66fa2343d5c81d2addb615e63a48",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "15525c21ad2d83762913e0ba5955419b607e66fa2343d5c81d2addb615e63a48"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/species.js",
+      "path": "moritsuki/src/hamaguri/species.js",
+      "bytes": 5659,
+      "sha256": "cf4c2ee5be21ed086b3052fb83cb941be325bae4b4aa51b76b231c3770c75f92",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "cf4c2ee5be21ed086b3052fb83cb941be325bae4b4aa51b76b231c3770c75f92"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/style.css",
+      "path": "moritsuki/src/hamaguri/style.css",
+      "bytes": 37648,
+      "sha256": "e8b9a0dcfe1157951a7c9156ae6a16211df830fc120c46978fb8e3911e67f499",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "e8b9a0dcfe1157951a7c9156ae6a16211df830fc120c46978fb8e3911e67f499"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/thumbs.js",
+      "path": "moritsuki/src/hamaguri/thumbs.js",
+      "bytes": 1972,
+      "sha256": "68020526497bcef68fde79a318f3914b43981a8699e765a8689193a0deb4e033",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "68020526497bcef68fde79a318f3914b43981a8699e765a8689193a0deb4e033"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/tool.js",
+      "path": "moritsuki/src/hamaguri/tool.js",
+      "bytes": 8409,
+      "sha256": "0ca56649bdbb0e4f2b93943f3c58280c47627d33baf0a6677f7a16275793286d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0ca56649bdbb0e4f2b93943f3c58280c47627d33baf0a6677f7a16275793286d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/ui.js",
+      "path": "moritsuki/src/hamaguri/ui.js",
+      "bytes": 15245,
+      "sha256": "7601242cc3896eb76d298b7dbb6eeffaf1b889c1419b54958478c7be5575e9fe",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7601242cc3896eb76d298b7dbb6eeffaf1b889c1419b54958478c7be5575e9fe"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/water.js",
+      "path": "moritsuki/src/hamaguri/water.js",
+      "bytes": 23660,
+      "sha256": "9bcd33802e173771248996adb69cd8635b644575c994013ee535f808b948e659",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9bcd33802e173771248996adb69cd8635b644575c994013ee535f808b948e659"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/hamaguri/world.js",
+      "path": "moritsuki/src/hamaguri/world.js",
+      "bytes": 3806,
+      "sha256": "3c0ccef9f1359a33117c1f669b80ff735310b597bcbe1d59102e45355f052f79",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3c0ccef9f1359a33117c1f669b80ff735310b597bcbe1d59102e45355f052f79"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/aim.js",
+      "path": "moritsuki/src/kusafugu/aim.js",
+      "bytes": 5214,
+      "sha256": "c6775974a1ca660f22f873ff0bb0bd8dbef84dbb737b14cb9d5cc6997ebf015b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c6775974a1ca660f22f873ff0bb0bd8dbef84dbb737b14cb9d5cc6997ebf015b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/backdrop.js",
+      "path": "moritsuki/src/kusafugu/backdrop.js",
+      "bytes": 27121,
+      "sha256": "7d88a11ab9af72eb13a21167f99f96f7a28c62010696c63ca1f54dd708235b5c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7d88a11ab9af72eb13a21167f99f96f7a28c62010696c63ca1f54dd708235b5c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/beach.js",
+      "path": "moritsuki/src/kusafugu/beach.js",
+      "bytes": 19388,
+      "sha256": "f63371e91f45de97f693445904cb0ceef1144b96cecc12b01757a09fc2169da6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f63371e91f45de97f693445904cb0ceef1144b96cecc12b01757a09fc2169da6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/body.js",
+      "path": "moritsuki/src/kusafugu/body.js",
+      "bytes": 27124,
+      "sha256": "18e103f500dbc1d93ebb3f3e7a72275f00bb00309c69037fae88bc57b241f11d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "18e103f500dbc1d93ebb3f3e7a72275f00bb00309c69037fae88bc57b241f11d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/bucket.js",
+      "path": "moritsuki/src/kusafugu/bucket.js",
+      "bytes": 9015,
+      "sha256": "489468f50e1bd2ce89d7e1ee7866eb985b68a41518918383c913635fe69f792d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "489468f50e1bd2ce89d7e1ee7866eb985b68a41518918383c913635fe69f792d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/core/audio.js",
+      "path": "moritsuki/src/kusafugu/core/audio.js",
+      "bytes": 26023,
+      "sha256": "765d90cc96d1599009c1719ceadc7e802ca246cc31610f817edfae90c5115efb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "765d90cc96d1599009c1719ceadc7e802ca246cc31610f817edfae90c5115efb"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/core/input.js",
+      "path": "moritsuki/src/kusafugu/core/input.js",
+      "bytes": 4431,
+      "sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8f00c897ba2cfa3fa326899f398ab4f48dfaf1c2208bedc1f6f3eb8093f89433"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/core/noise.js",
+      "path": "moritsuki/src/kusafugu/core/noise.js",
+      "bytes": 4109,
+      "sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/field.js",
+      "path": "moritsuki/src/kusafugu/field.js",
+      "bytes": 12067,
+      "sha256": "5ca6756b30018ee54fcd2ba5903040e87a5da95ee90072c09b5391b3cb49c5bd",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5ca6756b30018ee54fcd2ba5903040e87a5da95ee90072c09b5391b3cb49c5bd"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/fugu.js",
+      "path": "moritsuki/src/kusafugu/fugu.js",
+      "bytes": 30707,
+      "sha256": "fffd354831fade93cc97ea9c306c5ae3cdff472e7ab94fd6ae35b799522b3e57",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fffd354831fade93cc97ea9c306c5ae3cdff472e7ab94fd6ae35b799522b3e57"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/fx.js",
+      "path": "moritsuki/src/kusafugu/fx.js",
+      "bytes": 7540,
+      "sha256": "2fcf3722ba670d2be52a2581ebb1c4023df1257cdf863cbbe1a1f5d22ff0b323",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2fcf3722ba670d2be52a2581ebb1c4023df1257cdf863cbbe1a1f5d22ff0b323"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/game.js",
+      "path": "moritsuki/src/kusafugu/game.js",
+      "bytes": 62798,
+      "sha256": "373b2f90326328083f0b63a786cf0cd8d904a101d99108639dca2aa7b92e6f03",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "373b2f90326328083f0b63a786cf0cd8d904a101d99108639dca2aa7b92e6f03"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/lab.js",
+      "path": "moritsuki/src/kusafugu/lab.js",
+      "bytes": 7052,
+      "sha256": "a0dfe464fef438dc9eff2eda4d1759a334fd35501189f95d64e68c11bb3e6468",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a0dfe464fef438dc9eff2eda4d1759a334fd35501189f95d64e68c11bb3e6468"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/main.js",
+      "path": "moritsuki/src/kusafugu/main.js",
+      "bytes": 354,
+      "sha256": "9a358a08756f2beddf321014e96a19721090f5552d1051f47b57fc31a021900a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9a358a08756f2beddf321014e96a19721090f5552d1051f47b57fc31a021900a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/pebbles.js",
+      "path": "moritsuki/src/kusafugu/pebbles.js",
+      "bytes": 7561,
+      "sha256": "c69e2804b3a404bca7d70490e51384f62e37a01d7f7183965fcd042cab5b94eb",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c69e2804b3a404bca7d70490e51384f62e37a01d7f7183965fcd042cab5b94eb"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/player.js",
+      "path": "moritsuki/src/kusafugu/player.js",
+      "bytes": 5243,
+      "sha256": "917aaea579d77c6e844b193780a4f8ce38905ab957a1ac7a4f3b75590a1a4ba9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "917aaea579d77c6e844b193780a4f8ce38905ab957a1ac7a4f3b75590a1a4ba9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/post.js",
+      "path": "moritsuki/src/kusafugu/post.js",
+      "bytes": 5696,
+      "sha256": "f7c0fa332c75c0fb211e74bba9b217392126909b988f3383d7707f8ce64b7f50",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f7c0fa332c75c0fb211e74bba9b217392126909b988f3383d7707f8ce64b7f50"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/save.js",
+      "path": "moritsuki/src/kusafugu/save.js",
+      "bytes": 1429,
+      "sha256": "c16f6464bbd93d553996524bcadcf0b992b7197f450ca9b48bf2ab15de446821",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c16f6464bbd93d553996524bcadcf0b992b7197f450ca9b48bf2ab15de446821"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/shade.js",
+      "path": "moritsuki/src/kusafugu/shade.js",
+      "bytes": 9044,
+      "sha256": "822a50a4d8b612547891f89ab8a83fda009c2ad581cb18d8c2d1cdaf715a3bf6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "822a50a4d8b612547891f89ab8a83fda009c2ad581cb18d8c2d1cdaf715a3bf6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/shine.js",
+      "path": "moritsuki/src/kusafugu/shine.js",
+      "bytes": 6528,
+      "sha256": "ac446307e67c003c9c71849880ce982ef359b81b1bd22cde6b1eb17e1b5ee27b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ac446307e67c003c9c71849880ce982ef359b81b1bd22cde6b1eb17e1b5ee27b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/sky.js",
+      "path": "moritsuki/src/kusafugu/sky.js",
+      "bytes": 5731,
+      "sha256": "9280c871053bdc330175c6f20b13829bfeb218a1a33b44ce9e7715e69bed15d4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9280c871053bdc330175c6f20b13829bfeb218a1a33b44ce9e7715e69bed15d4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/species.js",
+      "path": "moritsuki/src/kusafugu/species.js",
+      "bytes": 5040,
+      "sha256": "d6caceb7c9e19f8b52ad5e7d51d7924193961ab9f65869e8502e64596d11d5f8",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d6caceb7c9e19f8b52ad5e7d51d7924193961ab9f65869e8502e64596d11d5f8"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/style.css",
+      "path": "moritsuki/src/kusafugu/style.css",
+      "bytes": 40139,
+      "sha256": "e73a75a4e1f0f1916ed2826e407a6f254e881a936836697f6df461b37030aa15",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "e73a75a4e1f0f1916ed2826e407a6f254e881a936836697f6df461b37030aa15"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/thumbs.js",
+      "path": "moritsuki/src/kusafugu/thumbs.js",
+      "bytes": 2313,
+      "sha256": "e3af73ec23ae8e0e3dfbf6ec615866ecd94be604a286a1ecca099ad04929f173",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e3af73ec23ae8e0e3dfbf6ec615866ecd94be604a286a1ecca099ad04929f173"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/ui.js",
+      "path": "moritsuki/src/kusafugu/ui.js",
+      "bytes": 14735,
+      "sha256": "694f21381e5dabbbf724a83f8a6b0ebbea754fbd130a01ef2d65fc2b02a81ec3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "694f21381e5dabbbf724a83f8a6b0ebbea754fbd130a01ef2d65fc2b02a81ec3"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/water.js",
+      "path": "moritsuki/src/kusafugu/water.js",
+      "bytes": 27509,
+      "sha256": "68e468c43e1f80742cee0087068e7d05e88f9fd390f2f3ebdc026497927c16b4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "68e468c43e1f80742cee0087068e7d05e88f9fd390f2f3ebdc026497927c16b4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/kusafugu/world.js",
+      "path": "moritsuki/src/kusafugu/world.js",
+      "bytes": 5420,
+      "sha256": "f7147c5f386ff74118872703442f5e9fff92c9f1dd4b9067da3f0e329e4fbf23",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f7147c5f386ff74118872703442f5e9fff92c9f1dd4b9067da3f0e329e4fbf23"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/main.js",
+      "path": "moritsuki/src/main.js",
+      "bytes": 338,
+      "sha256": "a18652525a58a2b1de32cac75946df06832d0318bb7ccea9fbea2ff250d160db",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a18652525a58a2b1de32cac75946df06832d0318bb7ccea9fbea2ff250d160db"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/player.js",
+      "path": "moritsuki/src/player.js",
+      "bytes": 9078,
+      "sha256": "829fac06103f83f8a0149343ae96d3811ab3c61422686d527bfb00cca8b02e6f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "829fac06103f83f8a0149343ae96d3811ab3c61422686d527bfb00cca8b02e6f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/save.js",
+      "path": "moritsuki/src/save.js",
+      "bytes": 1744,
+      "sha256": "d9ae147eb3ae67bd1bfc86526966836b91e1bf879b74f640c6b05e88a7af30a9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d9ae147eb3ae67bd1bfc86526966836b91e1bf879b74f640c6b05e88a7af30a9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/shared/items.js",
+      "path": "moritsuki/src/shared/items.js",
+      "bytes": 3941,
+      "sha256": "d54128fcc6cbe97324d4805051d35d6c6d0ef9043e5158229612993de47691c4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d54128fcc6cbe97324d4805051d35d6c6d0ef9043e5158229612993de47691c4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/shared/progress.js",
+      "path": "moritsuki/src/shared/progress.js",
+      "bytes": 2238,
+      "sha256": "e8e9dad41d05fe712365875b0fe033a4067e00457d199c1a835a52b976430f03",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e8e9dad41d05fe712365875b0fe033a4067e00457d199c1a835a52b976430f03"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/shared/townLink.js",
+      "path": "moritsuki/src/shared/townLink.js",
+      "bytes": 1976,
+      "sha256": "9e4337adc49249d84b7f882b963426f9d496c9c98ae80114789589a867b6c22a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9e4337adc49249d84b7f882b963426f9d496c9c98ae80114789589a867b6c22a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/spear.js",
+      "path": "moritsuki/src/spear.js",
+      "bytes": 16734,
+      "sha256": "900a3ee46c789a24c9685218186498a9478f0a4d8cf7c37389669f90e54406b7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "900a3ee46c789a24c9685218186498a9478f0a4d8cf7c37389669f90e54406b7"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/style.css",
+      "path": "moritsuki/src/style.css",
+      "bytes": 38822,
+      "sha256": "0486469f6640f7b7552ae42344b20a6f46ee658ffe606c37ba66d90fa24fb437",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "0486469f6640f7b7552ae42344b20a6f46ee658ffe606c37ba66d90fa24fb437"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/ambience.js",
+      "path": "moritsuki/src/town/ambience.js",
+      "bytes": 8169,
+      "sha256": "9f2f80cdb7847af29faec37c7b4dfd167207121cd32fcfab91cd048816f6a465",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9f2f80cdb7847af29faec37c7b4dfd167207121cd32fcfab91cd048816f6a465"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/boats.js",
+      "path": "moritsuki/src/town/assets/boats.js",
+      "bytes": 48124,
+      "sha256": "a3a09acd56a85bc53d80191ec222d34174ac13d048f0e71339b3152629baf379",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a3a09acd56a85bc53d80191ec222d34174ac13d048f0e71339b3152629baf379"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/build.js",
+      "path": "moritsuki/src/town/assets/build.js",
+      "bytes": 17018,
+      "sha256": "e383784969bae68699922f82b989b5fee47886dea16f56001c2f90176d42a882",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e383784969bae68699922f82b989b5fee47886dea16f56001c2f90176d42a882"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/home.js",
+      "path": "moritsuki/src/town/assets/home.js",
+      "bytes": 26266,
+      "sha256": "1dc26ffab0c500bed55066f86bd61f0496c6e31be288c566dc029d3b7154a171",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1dc26ffab0c500bed55066f86bd61f0496c6e31be288c566dc029d3b7154a171"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/house.js",
+      "path": "moritsuki/src/town/assets/house.js",
+      "bytes": 25107,
+      "sha256": "3114f4552c4b2c4c72b34b69dfeecaee7e7aeeb51a8e3f9170bb1211ba8ccb58",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3114f4552c4b2c4c72b34b69dfeecaee7e7aeeb51a8e3f9170bb1211ba8ccb58"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/interior.js",
+      "path": "moritsuki/src/town/assets/interior.js",
+      "bytes": 8452,
+      "sha256": "25e80e4f82bb0d6856660fa080975de8e3ee20d13c5c3d189014c3e8c48db87c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "25e80e4f82bb0d6856660fa080975de8e3ee20d13c5c3d189014c3e8c48db87c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/kit.js",
+      "path": "moritsuki/src/town/assets/kit.js",
+      "bytes": 8461,
+      "sha256": "b4eea8d2c755b9e59b267fce0971f9649e205eea5da31534995d36023644f1f1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b4eea8d2c755b9e59b267fce0971f9649e205eea5da31534995d36023644f1f1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/lab.js",
+      "path": "moritsuki/src/town/assets/lab.js",
+      "bytes": 25540,
+      "sha256": "1a4b9dca3fee8ccb692f0b3d263cbb234fa53d4dd71a983a95b6adc3a587b217",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1a4b9dca3fee8ccb692f0b3d263cbb234fa53d4dd71a983a95b6adc3a587b217"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/labStages.js",
+      "path": "moritsuki/src/town/assets/labStages.js",
+      "bytes": 59803,
+      "sha256": "594992d3e448f29d750473ecf227dd9a45688c68c5f0ded44363cc0ff3baa747",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "594992d3e448f29d750473ecf227dd9a45688c68c5f0ded44363cc0ff3baa747"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/ownerHome.js",
+      "path": "moritsuki/src/town/assets/ownerHome.js",
+      "bytes": 62534,
+      "sha256": "5392ba94450dff62f165a6af4f8d9bdc7715cd114ffedf59008b8805852c8e59",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5392ba94450dff62f165a6af4f8d9bdc7715cd114ffedf59008b8805852c8e59"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/park.js",
+      "path": "moritsuki/src/town/assets/park.js",
+      "bytes": 12622,
+      "sha256": "f4046b8a2b1ed9191a705e36881d2057edbff6b35a9804e352e37cd115a8be84",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f4046b8a2b1ed9191a705e36881d2057edbff6b35a9804e352e37cd115a8be84"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/plants.js",
+      "path": "moritsuki/src/town/assets/plants.js",
+      "bytes": 12743,
+      "sha256": "0a349f60bf8fad7a08478221f5e5efd13ac3e83c123d518f6c3440344b8789a1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0a349f60bf8fad7a08478221f5e5efd13ac3e83c123d518f6c3440344b8789a1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/props.js",
+      "path": "moritsuki/src/town/assets/props.js",
+      "bytes": 6927,
+      "sha256": "0d77729215102f18cf1815187101b3f7f2212e33ee15af8f34f4a9192f6bc23d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "0d77729215102f18cf1815187101b3f7f2212e33ee15af8f34f4a9192f6bc23d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/shokudo.js",
+      "path": "moritsuki/src/town/assets/shokudo.js",
+      "bytes": 27793,
+      "sha256": "5118c4d2976920f102abf29182685b72d4529ae2db1496187969e22353dad006",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5118c4d2976920f102abf29182685b72d4529ae2db1496187969e22353dad006"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/textures.js",
+      "path": "moritsuki/src/town/assets/textures.js",
+      "bytes": 18394,
+      "sha256": "c458f8c8889dc335fb0879d78c35e8da480d5cf19dfaeafcdb3dcdc3193dd3ac",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c458f8c8889dc335fb0879d78c35e8da480d5cf19dfaeafcdb3dcdc3193dd3ac"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/trees.js",
+      "path": "moritsuki/src/town/assets/trees.js",
+      "bytes": 18906,
+      "sha256": "263033b2a8f0c3da5012464bdcf3fec829ec852de33fd3335f21e655db83b899",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "263033b2a8f0c3da5012464bdcf3fec829ec852de33fd3335f21e655db83b899"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/trees2.js",
+      "path": "moritsuki/src/town/assets/trees2.js",
+      "bytes": 29366,
+      "sha256": "a44d9a246edf106a3ee14a84fa7039d35ecb5c5bb8c734f23c43a74c626b722d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a44d9a246edf106a3ee14a84fa7039d35ecb5c5bb8c734f23c43a74c626b722d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/vehicles.js",
+      "path": "moritsuki/src/town/assets/vehicles.js",
+      "bytes": 39208,
+      "sha256": "eb5b707c863064b3e5e9e829577186a0aa984c7ac26280f2480d6b95cade8f25",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "eb5b707c863064b3e5e9e829577186a0aa984c7ac26280f2480d6b95cade8f25"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/assets/vending.js",
+      "path": "moritsuki/src/town/assets/vending.js",
+      "bytes": 18321,
+      "sha256": "3f2371b9a2e9a81f414c4c4c82bad8d7295cf903cc6339e00e08bf370c3dce61",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3f2371b9a2e9a81f414c4c4c82bad8d7295cf903cc6339e00e08bf370c3dce61"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/bag.js",
+      "path": "moritsuki/src/town/bag.js",
+      "bytes": 10065,
+      "sha256": "f276dcc55eb857e3565283bfed7e159b357f36d0fb85b1603cc87d286be42047",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f276dcc55eb857e3565283bfed7e159b357f36d0fb85b1603cc87d286be42047"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/blocks.js",
+      "path": "moritsuki/src/town/blocks.js",
+      "bytes": 3526,
+      "sha256": "4aabd2c37b95a9c6ca49ae02c87e7baf22a2c72375d229cb35f9f59f829b2d1d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4aabd2c37b95a9c6ca49ae02c87e7baf22a2c72375d229cb35f9f59f829b2d1d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/buildings.js",
+      "path": "moritsuki/src/town/buildings.js",
+      "bytes": 19072,
+      "sha256": "a65d5eb48ea405c45fb62a2836ae6147a7deebc4095fcb1de4cf714ccb660af1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a65d5eb48ea405c45fb62a2836ae6147a7deebc4095fcb1de4cf714ccb660af1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/data.js",
+      "path": "moritsuki/src/town/data.js",
+      "bytes": 9758,
+      "sha256": "687337564de28525595f30600ad47af570acde11ebca4d7c6747a365f1e819ab",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "687337564de28525595f30600ad47af570acde11ebca4d7c6747a365f1e819ab"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/data/paddy-plan.json",
+      "path": "moritsuki/src/town/data/paddy-plan.json",
+      "bytes": 40275,
+      "sha256": "c633557f47da6913a29c8efc9de857adb6881a01dd62afd8cb36d1808a7de36e",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "c633557f47da6913a29c8efc9de857adb6881a01dd62afd8cb36d1808a7de36e"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/data/planted-trees.json",
+      "path": "moritsuki/src/town/data/planted-trees.json",
+      "bytes": 5750,
+      "sha256": "8f56299f6700876f12693048c028eb8c33cb8aa936b7bc9b714c62401a517211",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "8f56299f6700876f12693048c028eb8c33cb8aa936b7bc9b714c62401a517211"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/data/yoshimi-core.bin",
+      "path": "moritsuki/src/town/data/yoshimi-core.bin",
+      "bytes": 405002,
+      "sha256": "66c83ba377ce01717996af53f42c32daf44b696d89a54844c4d712cd868533ba",
+      "content_type": "application/octet-stream",
+      "local_sha256": "66c83ba377ce01717996af53f42c32daf44b696d89a54844c4d712cd868533ba"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/data/yoshimi-outer.bin",
+      "path": "moritsuki/src/town/data/yoshimi-outer.bin",
+      "bytes": 206082,
+      "sha256": "e4549eceabb2034461a3130603b435afe69ed4aa98043112af45c5c0b3e135a1",
+      "content_type": "application/octet-stream",
+      "local_sha256": "e4549eceabb2034461a3130603b435afe69ed4aa98043112af45c5c0b3e135a1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/data/yoshimi.json",
+      "path": "moritsuki/src/town/data/yoshimi.json",
+      "bytes": 173863,
+      "sha256": "24c17f432caa7e64f14e077663db46ff6712df853cf7690d5ed0df72694a474b",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "24c17f432caa7e64f14e077663db46ff6712df853cf7690d5ed0df72694a474b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/fence.js",
+      "path": "moritsuki/src/town/fence.js",
+      "bytes": 19522,
+      "sha256": "11f43181bcfd1b6070556b0e3696a5923a5be7addebe54c15d8bb1c8f75587a9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "11f43181bcfd1b6070556b0e3696a5923a5be7addebe54c15d8bb1c8f75587a9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/grass.js",
+      "path": "moritsuki/src/town/grass.js",
+      "bytes": 22502,
+      "sha256": "db5b1ac1d714f7a5a0986cbe50d6ca08ef4d8a504637e6926450b0b5cc76c2f5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "db5b1ac1d714f7a5a0986cbe50d6ca08ef4d8a504637e6926450b0b5cc76c2f5"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/hud.js",
+      "path": "moritsuki/src/town/hud.js",
+      "bytes": 6932,
+      "sha256": "60841182c12e1129d076fec1caf58a8916ca3693028bd36e31c4a8f0730d3832",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "60841182c12e1129d076fec1caf58a8916ca3693028bd36e31c4a8f0730d3832"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/hair.js",
+      "path": "moritsuki/src/town/kid/hair.js",
+      "bytes": 3410,
+      "sha256": "d200eec2ed83aa987c589a67a0bb27a1a8bd0dd047297d62d76cd3ce346544f7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d200eec2ed83aa987c589a67a0bb27a1a8bd0dd047297d62d76cd3ce346544f7"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/index.js",
+      "path": "moritsuki/src/town/kid/index.js",
+      "bytes": 15722,
+      "sha256": "da2aac02c1d995e1758f4ac43f354102bdb5509b5505dcf4cb0cd786501a43c4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "da2aac02c1d995e1758f4ac43f354102bdb5509b5505dcf4cb0cd786501a43c4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/kid.worker.js",
+      "path": "moritsuki/src/town/kid/kid.worker.js",
+      "bytes": 417,
+      "sha256": "4aee097f7f44eb5b908bc1733c7250e40c6232fdb382195759f17bef06dbe9d9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4aee097f7f44eb5b908bc1733c7250e40c6232fdb382195759f17bef06dbe9d9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/model.js",
+      "path": "moritsuki/src/town/kid/model.js",
+      "bytes": 18798,
+      "sha256": "eb009471861d4c7f5b67c67d9af2ec7095deaa75f02e6792815b6961bc2c2fa6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "eb009471861d4c7f5b67c67d9af2ec7095deaa75f02e6792815b6961bc2c2fa6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/sdf.js",
+      "path": "moritsuki/src/town/kid/sdf.js",
+      "bytes": 10461,
+      "sha256": "8e7de6e092eb598c4da2286f69328ddbb89d2db54269e56b464c98ddee25c263",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8e7de6e092eb598c4da2286f69328ddbb89d2db54269e56b464c98ddee25c263"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/shapes.js",
+      "path": "moritsuki/src/town/kid/shapes.js",
+      "bytes": 22316,
+      "sha256": "c7ab424d22a96fd5e27f19775a24cfaa19912a22a39997fbeb7f4c27d3c5bca6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c7ab424d22a96fd5e27f19775a24cfaa19912a22a39997fbeb7f4c27d3c5bca6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/kid/textures.js",
+      "path": "moritsuki/src/town/kid/textures.js",
+      "bytes": 15691,
+      "sha256": "cc52944194d80c2be70be603f76da8af4f2e51d4781b3200314bd4152a90ba70",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "cc52944194d80c2be70be603f76da8af4f2e51d4781b3200314bd4152a90ba70"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/landmarks.js",
+      "path": "moritsuki/src/town/landmarks.js",
+      "bytes": 26368,
+      "sha256": "a40302aef64e7465eb44537f4025e5e0158c37df06b637e7776a598d7ede74a4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a40302aef64e7465eb44537f4025e5e0158c37df06b637e7776a598d7ede74a4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/layout.js",
+      "path": "moritsuki/src/town/layout.js",
+      "bytes": 7339,
+      "sha256": "dfc85bc09dde862ca82728032153a12431979970a1281f9272fd389c07abd6d9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "dfc85bc09dde862ca82728032153a12431979970a1281f9272fd389c07abd6d9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/lots.js",
+      "path": "moritsuki/src/town/lots.js",
+      "bytes": 13006,
+      "sha256": "658b7b9fd71f75138570635fcb01b2d797ec3f86dfa90c2d63a2469d43603964",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "658b7b9fd71f75138570635fcb01b2d797ec3f86dfa90c2d63a2469d43603964"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/main.js",
+      "path": "moritsuki/src/town/main.js",
+      "bytes": 32956,
+      "sha256": "3c4743439c841a72fb953f060d11f6a9b21980438d9aa8f03682c0de91101066",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3c4743439c841a72fb953f060d11f6a9b21980438d9aa8f03682c0de91101066"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/materials.js",
+      "path": "moritsuki/src/town/materials.js",
+      "bytes": 6596,
+      "sha256": "b04ecc7eeb02ff89c7e57f14c58fb2aa302c6a88897a5a7770ed37974d8d94ba",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b04ecc7eeb02ff89c7e57f14c58fb2aa302c6a88897a5a7770ed37974d8d94ba"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/mesher.js",
+      "path": "moritsuki/src/town/mesher.js",
+      "bytes": 4590,
+      "sha256": "9827e532df67ae75427320a96f9714c4764bb6437802f2e94ed48e3f26d71be9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9827e532df67ae75427320a96f9714c4764bb6437802f2e94ed48e3f26d71be9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/nature.js",
+      "path": "moritsuki/src/town/nature.js",
+      "bytes": 9500,
+      "sha256": "2023ffe1085ae0ce580d378477083b309bc19da1f773eb51fd08546a32516d7d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2023ffe1085ae0ce580d378477083b309bc19da1f773eb51fd08546a32516d7d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/face.js",
+      "path": "moritsuki/src/town/people/face.js",
+      "bytes": 17804,
+      "sha256": "9a1f00ff75d9ebb836291435c4a78876842bea79a78801a68d355852f08bd93a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9a1f00ff75d9ebb836291435c4a78876842bea79a78801a68d355852f08bd93a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/human.js",
+      "path": "moritsuki/src/town/people/human.js",
+      "bytes": 14690,
+      "sha256": "ff4ce28d2f36490d8a5a4112c33b8ecd08da4f8ef2d94ff1aa31d1512658e25e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ff4ce28d2f36490d8a5a4112c33b8ecd08da4f8ef2d94ff1aa31d1512658e25e"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/isogai.js",
+      "path": "moritsuki/src/town/people/isogai.js",
+      "bytes": 22146,
+      "sha256": "b275dbc5dc14e94cc14e3bae82f6af15639379a3293bad548efb870ffc424c91",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b275dbc5dc14e94cc14e3bae82f6af15639379a3293bad548efb870ffc424c91"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/lines.js",
+      "path": "moritsuki/src/town/people/lines.js",
+      "bytes": 6344,
+      "sha256": "c1bc4630b7614c72e02651659855da406cb04a2a576a62cf8cdf2c69d95b9aea",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c1bc4630b7614c72e02651659855da406cb04a2a576a62cf8cdf2c69d95b9aea"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/model.js",
+      "path": "moritsuki/src/town/people/model.js",
+      "bytes": 19906,
+      "sha256": "b3eb32a33b31b7754d1bd4d5065f92e91df611c9bc443c1af208e8f8d1cf8872",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b3eb32a33b31b7754d1bd4d5065f92e91df611c9bc443c1af208e8f8d1cf8872"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/natsumi.js",
+      "path": "moritsuki/src/town/people/natsumi.js",
+      "bytes": 23955,
+      "sha256": "61f64024523d533d22687d2cedc1c1c7aea63b1195c4250050ab41f7e1f6b348",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "61f64024523d533d22687d2cedc1c1c7aea63b1195c4250050ab41f7e1f6b348"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/npc.js",
+      "path": "moritsuki/src/town/people/npc.js",
+      "bytes": 28685,
+      "sha256": "95b6d0390baf295e7c1cedcf12df4d3b55cfbc0f2248622bccd6d17a89dcaaf3",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "95b6d0390baf295e7c1cedcf12df4d3b55cfbc0f2248622bccd6d17a89dcaaf3"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/people.worker.js",
+      "path": "moritsuki/src/town/people/people.worker.js",
+      "bytes": 596,
+      "sha256": "07db22ee02d5d554ac00a4aa683ef808c00f52da4f7b49d0af5883eebe9ab021",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "07db22ee02d5d554ac00a4aa683ef808c00f52da4f7b49d0af5883eebe9ab021"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/prints.js",
+      "path": "moritsuki/src/town/people/prints.js",
+      "bytes": 2185,
+      "sha256": "5325547e5fe1dc196f1ef8e2ad665d0ad631e8d35a6fdaff2e2342fb6f49dce5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5325547e5fe1dc196f1ef8e2ad665d0ad631e8d35a6fdaff2e2342fb6f49dce5"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/shoes.js",
+      "path": "moritsuki/src/town/people/shoes.js",
+      "bytes": 4306,
+      "sha256": "277498f0d6fc818d3a3e85004d854ee2fa1909c0ae1d83bcbfd459550a81c89d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "277498f0d6fc818d3a3e85004d854ee2fa1909c0ae1d83bcbfd459550a81c89d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/strands.js",
+      "path": "moritsuki/src/town/people/strands.js",
+      "bytes": 4767,
+      "sha256": "102f6eb4143d1050c7f5a460b3a75a51d27f6886b3e859a09db77713103a9d62",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "102f6eb4143d1050c7f5a460b3a75a51d27f6886b3e859a09db77713103a9d62"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/talk.js",
+      "path": "moritsuki/src/town/people/talk.js",
+      "bytes": 14161,
+      "sha256": "ca12e3640897b60501527f4697411f040f6393b04c4fd897266e229e6d6b4bb7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ca12e3640897b60501527f4697411f040f6393b04c4fd897266e229e6d6b4bb7"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/people/town.js",
+      "path": "moritsuki/src/town/people/town.js",
+      "bytes": 1925,
+      "sha256": "307879fa63d9816b4954c8c8d3623dc4c59f6fae29bbddd321043b56bfbcfbdd",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "307879fa63d9816b4954c8c8d3623dc4c59f6fae29bbddd321043b56bfbcfbdd"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/plant.js",
+      "path": "moritsuki/src/town/plant.js",
+      "bytes": 17062,
+      "sha256": "bba035fe0d2769e95ac91a578a4f2dfec41e0f20020064b92b0b579655cd7083",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bba035fe0d2769e95ac91a578a4f2dfec41e0f20020064b92b0b579655cd7083"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/player.js",
+      "path": "moritsuki/src/town/player.js",
+      "bytes": 7249,
+      "sha256": "bb328c8b0a75e83d86e3d2f305ab450d906401d434fd92ebccc94fd2d0985b9c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bb328c8b0a75e83d86e3d2f305ab450d906401d434fd92ebccc94fd2d0985b9c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/props.js",
+      "path": "moritsuki/src/town/props.js",
+      "bytes": 6841,
+      "sha256": "5cc13088ee6b1167f9f4f8629fadb36f9ffba632e574153d1fa565757a5bcc0a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5cc13088ee6b1167f9f4f8629fadb36f9ffba632e574153d1fa565757a5bcc0a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/quests.js",
+      "path": "moritsuki/src/town/quests.js",
+      "bytes": 29790,
+      "sha256": "a1be7f188dfdb9385a092b74ddfe94af03dedad4b9263afe0232a1244b96d278",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a1be7f188dfdb9385a092b74ddfe94af03dedad4b9263afe0232a1244b96d278"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/render.js",
+      "path": "moritsuki/src/town/render.js",
+      "bytes": 6645,
+      "sha256": "6bb65091ea7fcb9221060100b9e7ee4f54eeb1137cde3e2bbd8219d824eab213",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6bb65091ea7fcb9221060100b9e7ee4f54eeb1137cde3e2bbd8219d824eab213"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/roads.js",
+      "path": "moritsuki/src/town/roads.js",
+      "bytes": 31405,
+      "sha256": "46bf1060f1396e3bc4567c6d90cf65c6708b1127f354c7726241125f497ed81b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "46bf1060f1396e3bc4567c6d90cf65c6708b1127f354c7726241125f497ed81b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/farms.js",
+      "path": "moritsuki/src/town/scenery/farms.js",
+      "bytes": 12264,
+      "sha256": "27ba143af4c097b4e340cdeeef31e89e1be688a7a47bd702a83820b30d240d02",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "27ba143af4c097b4e340cdeeef31e89e1be688a7a47bd702a83820b30d240d02"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/forest.js",
+      "path": "moritsuki/src/town/scenery/forest.js",
+      "bytes": 10220,
+      "sha256": "27e11059781b92fa3a1bacf30feee97407776bcbbfa42f9fefec50134ca53a9c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "27e11059781b92fa3a1bacf30feee97407776bcbbfa42f9fefec50134ca53a9c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/frontage.js",
+      "path": "moritsuki/src/town/scenery/frontage.js",
+      "bytes": 37190,
+      "sha256": "f8996c6e92c477a5efd323e279cad9a28e0f139ed14759a4879d2074a5220e45",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f8996c6e92c477a5efd323e279cad9a28e0f139ed14759a4879d2074a5220e45"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/hamlets.js",
+      "path": "moritsuki/src/town/scenery/hamlets.js",
+      "bytes": 19989,
+      "sha256": "95fbbf14c0b72eecd99fcf8e9779b0d8006e009eccb6da95f8da85447ed703e6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "95fbbf14c0b72eecd99fcf8e9779b0d8006e009eccb6da95f8da85447ed703e6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/haze.js",
+      "path": "moritsuki/src/town/scenery/haze.js",
+      "bytes": 3859,
+      "sha256": "42ef9c11dd6c72a972fcce3b3cb51fd50c18df3d5146c207c118c0fe38b20387",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "42ef9c11dd6c72a972fcce3b3cb51fd50c18df3d5146c207c118c0fe38b20387"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/landscape.js",
+      "path": "moritsuki/src/town/scenery/landscape.js",
+      "bytes": 2164,
+      "sha256": "a0abf9d99683012fffcf4ad568637160824fb1fec5fc3de57ff81ad969d7fd2a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a0abf9d99683012fffcf4ad568637160824fb1fec5fc3de57ff81ad969d7fd2a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/oikawa.js",
+      "path": "moritsuki/src/town/scenery/oikawa.js",
+      "bytes": 21538,
+      "sha256": "c917d9157bb8742e3a267c88a7cddeb78c32336936141b593b9d382019a8d105",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c917d9157bb8742e3a267c88a7cddeb78c32336936141b593b9d382019a8d105"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/paddies.js",
+      "path": "moritsuki/src/town/scenery/paddies.js",
+      "bytes": 59123,
+      "sha256": "2aa637bf60edde8631cb37cc1efd2082b2939a2ad8104f1c58061c12aa85e687",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2aa637bf60edde8631cb37cc1efd2082b2939a2ad8104f1c58061c12aa85e687"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/plan.js",
+      "path": "moritsuki/src/town/scenery/plan.js",
+      "bytes": 3739,
+      "sha256": "e83430509b5319f44e153854d8260ea60c3045051fccac84630059762503b638",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e83430509b5319f44e153854d8260ea60c3045051fccac84630059762503b638"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/planted.js",
+      "path": "moritsuki/src/town/scenery/planted.js",
+      "bytes": 2316,
+      "sha256": "089c065214c6fa903f5475128dd68f86edf77e32ed33760e9f6d5ee666c1c209",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "089c065214c6fa903f5475128dd68f86edf77e32ed33760e9f6d5ee666c1c209"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/scenery/river.js",
+      "path": "moritsuki/src/town/scenery/river.js",
+      "bytes": 7670,
+      "sha256": "cbe4c9132b65cb48fef19f9b7cdb2ca20ac496ee58fc0d12743902809457d7ae",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "cbe4c9132b65cb48fef19f9b7cdb2ca20ac496ee58fc0d12743902809457d7ae"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/stagePick.js",
+      "path": "moritsuki/src/town/stagePick.js",
+      "bytes": 11274,
+      "sha256": "c951f76c094dbc740e1a99d70eef3eb69be515a5c68fdb20efa1473c36ab8473",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c951f76c094dbc740e1a99d70eef3eb69be515a5c68fdb20efa1473c36ab8473"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/stageSite.js",
+      "path": "moritsuki/src/town/stageSite.js",
+      "bytes": 5173,
+      "sha256": "b6a264e8efc92067828fa9feaccc5275ae8c969d9ce74240d83d569960135265",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b6a264e8efc92067828fa9feaccc5275ae8c969d9ce74240d83d569960135265"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/terrain.js",
+      "path": "moritsuki/src/town/terrain.js",
+      "bytes": 16925,
+      "sha256": "197fa2066526f5337a3c244f08390c5db2c5a2a98abfe6a5c8445f0a781fa692",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "197fa2066526f5337a3c244f08390c5db2c5a2a98abfe6a5c8445f0a781fa692"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/town.css",
+      "path": "moritsuki/src/town/town.css",
+      "bytes": 41647,
+      "sha256": "42c85e99f317d55ecb20425f059c5a39a58a547cda16b14bb38189caf331626a",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "42c85e99f317d55ecb20425f059c5a39a58a547cda16b14bb38189caf331626a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/travel.js",
+      "path": "moritsuki/src/town/travel.js",
+      "bytes": 31485,
+      "sha256": "24f3b19e24661861bc1f2b6fd15d193678e855bcb853075d1b5569bbec3585de",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "24f3b19e24661861bc1f2b6fd15d193678e855bcb853075d1b5569bbec3585de"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/town/water.js",
+      "path": "moritsuki/src/town/water.js",
+      "bytes": 8873,
+      "sha256": "a978630f8680673b245cf66f1da6fc4c22ad5a99259625405777731e5b8a466a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a978630f8680673b245cf66f1da6fc4c22ad5a99259625405777731e5b8a466a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/townMode.js",
+      "path": "moritsuki/src/townMode.js",
+      "bytes": 3570,
+      "sha256": "177b0b2e5c3acd2fa527a84b953e246fd4637b7cdbdd530defbfad25c686afb4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "177b0b2e5c3acd2fa527a84b953e246fd4637b7cdbdd530defbfad25c686afb4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/ui.js",
+      "path": "moritsuki/src/ui.js",
+      "bytes": 18308,
+      "sha256": "5832e1f01819c94c1d651118c317bdc54ac6e1dc4d8948251c63a092440afac1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5832e1f01819c94c1d651118c317bdc54ac6e1dc4d8948251c63a092440afac1"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/biku.js",
+      "path": "moritsuki/src/unagi/biku.js",
+      "bytes": 4240,
+      "sha256": "a7db2b74fff179c83acf026d97d7aace3588a024574ce6d974861d013daa4c09",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a7db2b74fff179c83acf026d97d7aace3588a024574ce6d974861d013daa4c09"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/body.js",
+      "path": "moritsuki/src/unagi/body.js",
+      "bytes": 21487,
+      "sha256": "88f165a76883497d8fc6583c0d04b1115471d824eb7af191f8fc194620bf0ea6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "88f165a76883497d8fc6583c0d04b1115471d824eb7af191f8fc194620bf0ea6"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/channel.js",
+      "path": "moritsuki/src/unagi/channel.js",
+      "bytes": 20704,
+      "sha256": "d9ef18c7d3c621357fc2ba886fb82d13f18170f6be67ab9b42b6581faabe0e74",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d9ef18c7d3c621357fc2ba886fb82d13f18170f6be67ab9b42b6581faabe0e74"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/core/audio.js",
+      "path": "moritsuki/src/unagi/core/audio.js",
+      "bytes": 23396,
+      "sha256": "00d4de3660fd9bbe0dbb73533ac682ba513bda284175093a88a4194119e04217",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "00d4de3660fd9bbe0dbb73533ac682ba513bda284175093a88a4194119e04217"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/core/geo.js",
+      "path": "moritsuki/src/unagi/core/geo.js",
+      "bytes": 4799,
+      "sha256": "5b3bf2dce301ad1b5954342a07e81021136452fa4467b0cc02b2a126f24cd201",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "5b3bf2dce301ad1b5954342a07e81021136452fa4467b0cc02b2a126f24cd201"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/core/input.js",
+      "path": "moritsuki/src/unagi/core/input.js",
+      "bytes": 4592,
+      "sha256": "896f08a02e579960362fa8f8a7e5b8716548139a6171ac9595c7298c4c69339c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "896f08a02e579960362fa8f8a7e5b8716548139a6171ac9595c7298c4c69339c"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/core/noise.js",
+      "path": "moritsuki/src/unagi/core/noise.js",
+      "bytes": 4109,
+      "sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fbb6ac62926a6e964e4b204c5471549511ac0594b43f71fbc8156b370fa8aa0f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/critters.js",
+      "path": "moritsuki/src/unagi/critters.js",
+      "bytes": 51641,
+      "sha256": "f2a8bbca1c412426d8ed82149a6df915f1f8e268d4a147b6f2ef2d0f01113581",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f2a8bbca1c412426d8ed82149a6df915f1f8e268d4a147b6f2ef2d0f01113581"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/ditch.js",
+      "path": "moritsuki/src/unagi/ditch.js",
+      "bytes": 6783,
+      "sha256": "48855b11ab4613f22830b2fe395f26a26d1b0edfeeb6c2f3595bd15b3e68593a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "48855b11ab4613f22830b2fe395f26a26d1b0edfeeb6c2f3595bd15b3e68593a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fauna.js",
+      "path": "moritsuki/src/unagi/fauna.js",
+      "bytes": 40743,
+      "sha256": "40893289d0135c9efa0940f6d73de4679d418f504adb3c33746f08d8bcff50ab",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "40893289d0135c9efa0940f6d73de4679d418f504adb3c33746f08d8bcff50ab"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fish/fishform.js",
+      "path": "moritsuki/src/unagi/fish/fishform.js",
+      "bytes": 11456,
+      "sha256": "dd09dd425990a0646941259d2909010e42585d27483c3924a9c43b5b5e32aab9",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "dd09dd425990a0646941259d2909010e42585d27483c3924a9c43b5b5e32aab9"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fish/fishmodel.js",
+      "path": "moritsuki/src/unagi/fish/fishmodel.js",
+      "bytes": 16409,
+      "sha256": "1cb7037c95b82749f7532402623f310cbfd8c0b59fffce43a2d2f065e79df993",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1cb7037c95b82749f7532402623f310cbfd8c0b59fffce43a2d2f065e79df993"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fish/fishpaint.js",
+      "path": "moritsuki/src/unagi/fish/fishpaint.js",
+      "bytes": 10745,
+      "sha256": "07a1a885a92a21a3504150279be8f3694519737ec9f989d86ada22024f2aadb5",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "07a1a885a92a21a3504150279be8f3694519737ec9f989d86ada22024f2aadb5"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fish/fishpaint.worker.js",
+      "path": "moritsuki/src/unagi/fish/fishpaint.worker.js",
+      "bytes": 387,
+      "sha256": "8f9a2e80b11c5423e5ce58222786ad87881e5d988585c9359bff9e1e91dfde8f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8f9a2e80b11c5423e5ce58222786ad87881e5d988585c9359bff9e1e91dfde8f"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fish/fishspecies.js",
+      "path": "moritsuki/src/unagi/fish/fishspecies.js",
+      "bytes": 12356,
+      "sha256": "1a473cbd49118ffc8e153c30fcb1930ac42e78c9f9db930d412ec741606d2a9d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1a473cbd49118ffc8e153c30fcb1930ac42e78c9f9db930d412ec741606d2a9d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/fx.js",
+      "path": "moritsuki/src/unagi/fx.js",
+      "bytes": 6560,
+      "sha256": "06fa3ed0a05edd657b67a006136b8cdc3e0402cc1a9057e412072c174171b4f2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "06fa3ed0a05edd657b67a006136b8cdc3e0402cc1a9057e412072c174171b4f2"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/game.js",
+      "path": "moritsuki/src/unagi/game.js",
+      "bytes": 48227,
+      "sha256": "d019261e084d6bceed45a22641cd6a73accf2663d15319d221f4307f0255f9df",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d019261e084d6bceed45a22641cd6a73accf2663d15319d221f4307f0255f9df"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/glow.js",
+      "path": "moritsuki/src/unagi/glow.js",
+      "bytes": 3780,
+      "sha256": "ef0c6209e3438001456cf9eaa265f9bc8b113853a08816d039776701cc18b81d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ef0c6209e3438001456cf9eaa265f9bc8b113853a08816d039776701cc18b81d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/main.js",
+      "path": "moritsuki/src/unagi/main.js",
+      "bytes": 348,
+      "sha256": "3b08365b281ac69dfa4dc7c218d5727b4e4aa72bae219cfd44afe31fc0fb9904",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3b08365b281ac69dfa4dc7c218d5727b4e4aa72bae219cfd44afe31fc0fb9904"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/net.js",
+      "path": "moritsuki/src/unagi/net.js",
+      "bytes": 23367,
+      "sha256": "a32fc9076a094c7760d915a5772872aef729939a1a07aa3bbfce4c7083461d04",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a32fc9076a094c7760d915a5772872aef729939a1a07aa3bbfce4c7083461d04"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/plants.js",
+      "path": "moritsuki/src/unagi/plants.js",
+      "bytes": 22290,
+      "sha256": "a754303bfa23712c5d4c8625e8cc631b516641b54cabe15fd2c7212510a5ba70",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a754303bfa23712c5d4c8625e8cc631b516641b54cabe15fd2c7212510a5ba70"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/player.js",
+      "path": "moritsuki/src/unagi/player.js",
+      "bytes": 7165,
+      "sha256": "e69d8d83d5babf6673c06bf6d1c1fea46c32d8cc7c7514fa2e4fd5a37e9ac704",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e69d8d83d5babf6673c06bf6d1c1fea46c32d8cc7c7514fa2e4fd5a37e9ac704"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/post.js",
+      "path": "moritsuki/src/unagi/post.js",
+      "bytes": 4771,
+      "sha256": "d01ee70ef08af151c71741f071b7c582f3d19a4253f858bdb6ad4e88f347186b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d01ee70ef08af151c71741f071b7c582f3d19a4253f858bdb6ad4e88f347186b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/save.js",
+      "path": "moritsuki/src/unagi/save.js",
+      "bytes": 1176,
+      "sha256": "7b2a4d08c602d2a9924d963fda0a07ec88f7de5e2354348a73e752086d3b0ed4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7b2a4d08c602d2a9924d963fda0a07ec88f7de5e2354348a73e752086d3b0ed4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/scenery.js",
+      "path": "moritsuki/src/unagi/scenery.js",
+      "bytes": 32892,
+      "sha256": "4b74c0d2ee8f219ca5f64b16b41ff2776408112a39c98654fc7347126deee335",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4b74c0d2ee8f219ca5f64b16b41ff2776408112a39c98654fc7347126deee335"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/shade.js",
+      "path": "moritsuki/src/unagi/shade.js",
+      "bytes": 8350,
+      "sha256": "04df76f8d8a6fb7df345cdb0fc35f08276d4921cdfcf90c58c785f4ce683abab",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "04df76f8d8a6fb7df345cdb0fc35f08276d4921cdfcf90c58c785f4ce683abab"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/sky.js",
+      "path": "moritsuki/src/unagi/sky.js",
+      "bytes": 4401,
+      "sha256": "a321bae31933ac19877ee23c59f36eb37394204df040a220b423fceac599ae3b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a321bae31933ac19877ee23c59f36eb37394204df040a220b423fceac599ae3b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/species.js",
+      "path": "moritsuki/src/unagi/species.js",
+      "bytes": 7263,
+      "sha256": "9836f4c8072866f190001b703ddeac91a88d68add6cf6bf7900b79de178eed76",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "9836f4c8072866f190001b703ddeac91a88d68add6cf6bf7900b79de178eed76"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/spine.js",
+      "path": "moritsuki/src/unagi/spine.js",
+      "bytes": 7492,
+      "sha256": "7dd85e665701ec6a72d1b5780db1480539f2cccd2f7848dfb8785f3f248edd68",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "7dd85e665701ec6a72d1b5780db1480539f2cccd2f7848dfb8785f3f248edd68"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/style.css",
+      "path": "moritsuki/src/unagi/style.css",
+      "bytes": 36536,
+      "sha256": "9121c996cf79e855feb621480dbcb3702836fec887539c9ac21fe4a13496aaa4",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "9121c996cf79e855feb621480dbcb3702836fec887539c9ac21fe4a13496aaa4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/textures.js",
+      "path": "moritsuki/src/unagi/textures.js",
+      "bytes": 10888,
+      "sha256": "4b8d7085611400ec516134ec93922d4ba36c212bffed187e4aa9517e56999fca",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4b8d7085611400ec516134ec93922d4ba36c212bffed187e4aa9517e56999fca"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/thumbs.js",
+      "path": "moritsuki/src/unagi/thumbs.js",
+      "bytes": 7231,
+      "sha256": "c6881693561a6458cf8d01589688c26f7e180794ebac65aae03419b43d14b866",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "c6881693561a6458cf8d01589688c26f7e180794ebac65aae03419b43d14b866"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/ui.js",
+      "path": "moritsuki/src/unagi/ui.js",
+      "bytes": 14930,
+      "sha256": "b940718f99f1b27e25922027b265394ce0399a97c5766d4e963235d39749f66a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b940718f99f1b27e25922027b265394ce0399a97c5766d4e963235d39749f66a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/water.js",
+      "path": "moritsuki/src/unagi/water.js",
+      "bytes": 22519,
+      "sha256": "f2b441420b50b6c58fd83cb9bf8eda756d9254bd1d0b1968a09321e91f3a8528",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f2b441420b50b6c58fd83cb9bf8eda756d9254bd1d0b1968a09321e91f3a8528"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/unagi/world.js",
+      "path": "moritsuki/src/unagi/world.js",
+      "bytes": 5978,
+      "sha256": "281efb3e49ac158e4a3bf10aa562a7308759dba721e7ebc13971b9692dfe1980",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "281efb3e49ac158e4a3bf10aa562a7308759dba721e7ebc13971b9692dfe1980"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/decor.js",
+      "path": "moritsuki/src/world/decor.js",
+      "bytes": 37424,
+      "sha256": "b0e9ff3dcd2e9070e93f42fdb4e7a155dab578dda5d18cc18bd39567de659c16",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b0e9ff3dcd2e9070e93f42fdb4e7a155dab578dda5d18cc18bd39567de659c16"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/effects.js",
+      "path": "moritsuki/src/world/effects.js",
+      "bytes": 13683,
+      "sha256": "568efbe24616c57f131718f63dd8610b0d5be1885daf31774e008b180c63af8a",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "568efbe24616c57f131718f63dd8610b0d5be1885daf31774e008b180c63af8a"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/shells.js",
+      "path": "moritsuki/src/world/shells.js",
+      "bytes": 14646,
+      "sha256": "bcf19edbce4d14f480e154d19e45482d0ac69e6c9f7cb2268d1dff04f78aa09b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "bcf19edbce4d14f480e154d19e45482d0ac69e6c9f7cb2268d1dff04f78aa09b"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/sky.js",
+      "path": "moritsuki/src/world/sky.js",
+      "bytes": 2986,
+      "sha256": "96d71d1c1698604ca0c9048dbf348f7c7a564e4d59be9b43c3e57e60b7c7ac5d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "96d71d1c1698604ca0c9048dbf348f7c7a564e4d59be9b43c3e57e60b7c7ac5d"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/surfaces.js",
+      "path": "moritsuki/src/world/surfaces.js",
+      "bytes": 3152,
+      "sha256": "129055903ae262500f754b9b952b4ac0a39ca5ec4aa2328f10a75f93406dac57",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "129055903ae262500f754b9b952b4ac0a39ca5ec4aa2328f10a75f93406dac57"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/terrain.js",
+      "path": "moritsuki/src/world/terrain.js",
+      "bytes": 7197,
+      "sha256": "13ee12adfb5a5fe681bb6987759345167a0d259db6948f906a9173db400e7863",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "13ee12adfb5a5fe681bb6987759345167a0d259db6948f906a9173db400e7863"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/water.js",
+      "path": "moritsuki/src/world/water.js",
+      "bytes": 7302,
+      "sha256": "68d6c444473f39c5167986cfb550074180a606328547641fbcd1b434e1802ec4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "68d6c444473f39c5167986cfb550074180a606328547641fbcd1b434e1802ec4"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/src/world/world.js",
+      "path": "moritsuki/src/world/world.js",
+      "bytes": 35719,
+      "sha256": "4e052a84aecc3472a1ef05b681620e2d5ce82a21f569a4fd170748fda9891d00",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4e052a84aecc3472a1ef05b681620e2d5ce82a21f569a4fd170748fda9891d00"
+    },
+    {
+      "url": "https://cda-social.github.io/moritsuki/unagi/index.html?town",
+      "path": "moritsuki/unagi/index.html",
+      "bytes": 11775,
+      "sha256": "e8a8d27fa7077e9313b15d1e9ca0d471adc49c1b2e89290f9bf9cbd5d39d662f",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "bbfa5c8294b07355db8b6829190178d2375dd82ca97dba525d5db786709f6ef3"
+    }
+  ],
+  "failed": {
+    "https://cse.google.com/cse.js?cx=": "HTTP 400; ",
+    "https://github.com/gsi-cyberjapan/gsimaps/blob/gh-pages/layers_txt/layers_tochibunrui.txt": "Unexpected HTML instead of asset",
+    "https://cda-social.github.io/moritsuki/src/town/.b64.txt": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/town/.bin": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/town/.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/town/manifest.json": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/town/yoshimi.json": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/gazami/core/waves.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/gazami/core/wind-soft.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/hamaguri/core/cicada-bed.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/hamaguri/core/minmin.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/hamaguri/core/tonbi.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/hamaguri/core/waves.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/hamaguri/core/wind-soft.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/kusafugu/core/waves.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/kusafugu/core/wind-soft.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/unagi/core/creek.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/unagi/core/frogs.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/unagi/core/higurashi.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/unagi/core/uguisu.mp3": "HTTP 404; ",
+    "https://cda-social.github.io/moritsuki/src/unagi/core/wind-soft.mp3": "HTTP 404; "
+  }
+}

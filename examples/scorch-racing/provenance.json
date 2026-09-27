@@ -1,0 +1,63 @@
+{
+  "project": "scorch-podracer",
+  "source": "https://scortch-podracer.netlify.app/",
+  "scope": "Byte-identical archived HTML. Complete original declaration blocks are selected verbatim, with new host shims and exports; no game logic is rewritten.",
+  "files": [
+    {
+      "source": "scorch-podracer/public/index.html",
+      "path": "examples/scorch-racing/original/index.html",
+      "sha256": "2dbb6cb98d570211867f6aa2ea2a69d3ad0675dddd270e3a963d43e2846e4c0e"
+    }
+  ],
+  "vendor": {
+    "name": "embedded-three",
+    "start": 1690,
+    "end": 653341,
+    "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
+  },
+  "blocks": [
+    {
+      "name": "math-palette",
+      "start": 653588,
+      "end": 656449,
+      "sha256": "45a6e172e86e316396b72072d2d74e843924e0de20764aca50349be9653192f3"
+    },
+    {
+      "name": "procedural-assets-track",
+      "start": 666669,
+      "end": 730115,
+      "sha256": "00a35c2b0d068a41541a9efd2f570345f5818849ac196c7f362f73744a4e5ab3"
+    },
+    {
+      "name": "race-constants",
+      "start": 915804,
+      "end": 915930,
+      "sha256": "647b99f10d8c121292494fd239eda9de51ed7d86e6229c178d6b714cab3cf11c"
+    },
+    {
+      "name": "barriers",
+      "start": 916455,
+      "end": 918127,
+      "sha256": "b6c994512115fd81d3f8a8ed2773997a6cfd87cb01a2ff278efda98576e833ea"
+    },
+    {
+      "name": "racer-forces",
+      "start": 918970,
+      "end": 924909,
+      "sha256": "2d0d7fb2e7ef4653a77c10a45fc0d5e8c6ed9e0a2d293cc28c0ce77fc3172749"
+    },
+    {
+      "name": "player-input",
+      "start": 927723,
+      "end": 928587,
+      "sha256": "736049b9c74bd961de28c0555cc3145b54d3e8d375b1ebe95e5fedfdb47ec115"
+    },
+    {
+      "name": "pod-pose",
+      "start": 939525,
+      "end": 943423,
+      "sha256": "9fd24faf5823ee30a6552ebb6b1929f36eed56b1cc171bec73949c0198ad20e7"
+    }
+  ],
+  "assets": []
+}

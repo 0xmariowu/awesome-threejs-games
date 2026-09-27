@@ -1,0 +1,27 @@
+{
+  "schema_version": 3,
+  "slug": "tidewater",
+  "title": "Tidewater",
+  "tagline": "海边钓鱼游戏，展示自研 WebGPU 引擎、海浪与大气渲染",
+  "category": "其他引擎",
+  "overview_video": "tidewater/overview",
+  "examples": [
+    {
+      "id": "tidewater-fishing",
+      "title": "钓鱼拉力",
+      "one_liner": "收线与松线控制拉力，观察钓获、断线和逃脱结果",
+      "candidate": "tidewater.fishing",
+      "title_en": "Fishing line tension",
+      "one_liner_en": "Reel in or release to control tension and observe catches, snapped lines and escapes."
+    },
+    {
+      "id": "tidewater-ocean",
+      "title": "海浪与浮力",
+      "one_liner": "切换海况，驾驶原版小船，观察浮标与船体随浪起伏",
+      "candidate": "tidewater.ocean-query",
+      "title_en": "Waves and buoyancy",
+      "one_liner_en": "Switch sea states, drive the original boat and watch buoys and the hull rise and fall with the waves."
+    }
+  ],
+  "tagline_en": "Seaside fishing with a custom WebGPU engine, ocean waves and atmospheric rendering."
+}

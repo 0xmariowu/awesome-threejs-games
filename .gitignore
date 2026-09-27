@@ -1,0 +1,38 @@
+# Game archives are tracked. Their original upstream git folders are kept as
+# .git-upstream (renamed so git does not treat them as embedded repositories).
+.git-upstream/
+
+# Example build caches.
+/examples/*/.vite/
+
+# Generated evidence and recorded media (hash-pinned in catalog/videos.json).
+/output/
+/media/
+
+node_modules/
+__pycache__/
+.playwright-cli/
+.DS_Store
+
+# Local plans, notes and reviews stay on disk but are never published.
+.claude/
+.codex/
+experience/
+catalog/reviews/
+inkwave/.claude/
+inkwave/experience/
+
+# GitHub Pages build output.
+/_site/
+
+# Private project retained locally; excluded from the public archive.
+/inkwave/docs/garden/
+/inkwave/src/garden/
+/inkwave/tests/garden/
+/inkwave/assets/garden/
+/inkwave/garden.html
+/inkwave/scripts/garden-*.py
+/inkwave/scripts/garden-*.mjs
+/inkwave/package.json
+/inkwave/package-lock.json
+/inkwave/vite.config.js
