@@ -1859,7 +1859,7 @@
         },
         {
           "path": "examples/botanic-meadow/provenance.json",
-          "sha256": "e75d3d4acbefc4867046186abd480e4f175cdeec520f4ea730ef465b4a77d05f"
+          "sha256": "c021fc7787d4d78c460c8893bf09e10e82a421be0dc4c9baf1d4e7fa930cc39c"
         },
         {
           "path": "examples/botanic-meadow/provenance.test.mjs",
@@ -1879,7 +1879,7 @@
         },
         {
           "path": "examples/botanic-meadow/src/model.mjs",
-          "sha256": "7f3255fd8f0f012e15dee293cb238ac407a4f43b39c1665a7bf4981e0e8d2131"
+          "sha256": "eb28788023d720b66696d1fdfc849a61c391a14f916da5a993c83527c8bc8ed6"
         },
         {
           "path": "examples/botanic-meadow/src/studio.js",

@@ -482,6 +482,36 @@ class LibraryUITestCase(unittest.TestCase):
         self.page.get_by_role('link',name='Open in Demos ›').click()
         expect(self.page).to_have_url(re.compile('/demos/example%3A'))
 
+    def test_missing_tool_detail_keeps_boot_and_tools_available(self):
+        tools = self.context.request.get(BASE_URL+'/data/tools.json').json()
+        missing = tools['tools'][0]
+        full = self.context.request.get(BASE_URL+'/data/tool/'+missing['slug']+'.json').json()
+        tools['tools'].append(dict(missing, slug='available-tool'))
+        self.context.route('**/data/tools.json', lambda r: r.fulfill(json=tools))
+        self.context.route('**/data/tool/'+missing['slug']+'.json',
+                           lambda r: r.fulfill(status=404, body='not found'))
+        self.context.route('**/data/tool/available-tool.json',
+                           lambda r: r.fulfill(json=dict(full, slug='available-tool')))
+
+        self.goto('/?lang=en')
+        expect(self.page.locator('.game-card')).to_have_count(
+            len(json.loads((ROOT/'catalog/games.json').read_text())['games']))
+        self.page.get_by_role('link', name='Tools', exact=True).click()
+        expect(self.page.locator('.tool-card')).to_have_count(len(tools['tools']))
+        card = self.page.locator('.tool-card').filter(
+            has=self.page.locator('a[href="/t/'+missing['slug']+'"]'))
+        expect(card.get_by_role('link', name='Open tool ↗', exact=True)).to_have_attribute('href', missing['url'])
+        card.get_by_role('link', name='Learn more ›', exact=True).click()
+        expect(self.page.locator('main h1')).to_have_text('Tools for making web games.')
+        expect(self.page.locator('.game-card')).to_have_count(0)
+
+        self.goto('/t/'+missing['slug']+'?lang=en')
+        expect(self.page.locator('main h1')).to_have_text('Tools for making web games.')
+        expect(card.get_by_role('link', name='Open tool ↗', exact=True)).to_have_attribute('href', missing['url'])
+        self.goto('/t/available-tool?lang=en')
+        expect(self.page.locator('main h1')).to_have_text(full['title'])
+        expect(self.page.locator('.tool-feature')).to_have_count(len(full['features']))
+
     def test_boot_error_retry_and_source_error_retry(self):
         self.context.route('**/data/pages.json',lambda route:route.fulfill(status=503,body='unavailable'))
         self.page.goto(BASE_URL+'/?lang=en',wait_until='domcontentloaded')

@@ -124,8 +124,8 @@ class Library {
       if (!isStatic) this.launchIndex = await fetch('/api/index').then(r => r.json());
       const details = await Promise.all(pages.pages.map(p => j(`data/page/${p.slug}.json`).catch(() => null)));
       const detail = {}; pages.pages.forEach((p, i) => { detail[p.slug] = details[i]; });
-      const toolDetails = await Promise.all(tools.tools.map(p => j(`data/tool/${p.slug}.json`)));
-      const toolDetail = Object.fromEntries(toolDetails.map(p => [p.slug,p]));
+      const toolDetails = await Promise.all(tools.tools.map(p => j(`data/tool/${p.slug}.json`).catch(() => null)));
+      const toolDetail = Object.fromEntries(toolDetails.filter(Boolean).map(p => [p.slug,p]));
       const ordered = demos.categories.flatMap(c => demos.demos.filter(d => d.category === c.key));
       this.setState({ data: { pages: pages.pages, detail, tools: tools.tools, toolDetail, cats: demos.categories, demos: ordered } }, () => this.onRoute());
     } catch (e) { this.setState({ bootErr: e.message }); }
@@ -394,7 +394,7 @@ class Library {
     if (['project','tool'].includes(r.name)) {
       const tool = r.name === 'tool';
       const p = (tool ? data.tools : data.pages).find(x => x.slug === r.slug), d = (tool ? data.toolDetail : data.detail)[r.slug];
-      if (!p || !d) { out.isProject = false; out.isHome = true; return out; }
+      if (!p || !d) { out.isProject = false; out.isHome = !tool; out.isTools = tool; return out; }
       const exs = d.examples || [];
       out.backHref = tool ? '#/tools' : '#/';
       out.goBack = tool ? out.goTools : out.goHome;

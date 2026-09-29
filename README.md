@@ -186,6 +186,6 @@
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — No license stated — study use
 - <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — No license stated — study use
 - <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — No license stated — study use
-- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC files.
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC code or assets; only our own screen recording and preview image of the tool.
 
 Webgame Lab lists third-party assets in [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).

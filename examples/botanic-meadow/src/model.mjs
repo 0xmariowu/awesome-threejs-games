@@ -5,8 +5,16 @@ export function random(seed) {
 }
 const smooth = t => t * t * (3 - 2 * t);
 function hash(x, z, seed) {
-  let h = Math.imul(x, 374761393) ^ Math.imul(z, 668265263) ^ Math.imul(seed, 1442695041);
-  h = Math.imul(h ^ h >>> 13, 1274126177); return ((h ^ h >>> 16) >>> 0) / 4294967295;
+  // pcg3d: Jarzynski & Olano, "Hash Functions for GPU Rendering", JCGT 2020, §6.1: https://jcgt.org/published/0009/03/02/
+  let a = (Math.imul(x, 1664525) + 1013904223) >>> 0;
+  let b = (Math.imul(z, 1664525) + 1013904223) >>> 0;
+  let c = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
+  a = (a + Math.imul(b, c)) >>> 0;
+  b = (b + Math.imul(c, a)) >>> 0;
+  c = (c + Math.imul(a, b)) >>> 0;
+  a ^= a >>> 16; b ^= b >>> 16; c ^= c >>> 16;
+  // Only the first output component is needed from the final mixing round.
+  return ((a + Math.imul(b, c)) >>> 0) / 4294967295;
 }
 export function noise(x, z, seed) {
   const ix = Math.floor(x), iz = Math.floor(z), u = smooth(x - ix), v = smooth(z - iz);

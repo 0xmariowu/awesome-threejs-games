@@ -77,8 +77,8 @@
           "en": "Do not redistribute or sell the generated assets on their own, or mirror the tool itself"
         }
       ],
-      "license_note": "Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC files.",
-      "license_note_zh": "作者条款不允许镜像转载工具本身（条款 v1.0.0，2026-09-28）。本仓库只链接原站，不收录任何 FABOTANIC 文件。",
+      "license_note": "Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC code or assets; only our own screen recording and preview image of the tool.",
+      "license_note_zh": "作者条款不允许镜像转载工具本身（条款 v1.0.0，2026-09-28）。本仓库只链接原站，不收录它的任何代码或素材，只有我们自己录的操作视频和预览图。",
       "overview_video": "fab-botanic/overview",
       "examples": [
         {
