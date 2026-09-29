@@ -3,6 +3,7 @@
   "tools": [
     {
       "slug": "fab-botanic",
+      "hosted": true,
       "title": "FABOTANIC",
       "author": "AMIX · トミナガハルキ",
       "author_url": "https://amix-design.com/",
@@ -73,12 +74,12 @@
       ],
       "cannot": [
         {
-          "zh": "不能把生成的模型单独打包分发或转卖，也不能镜像转载工具本身",
-          "en": "Do not redistribute or sell the generated assets on their own, or mirror the tool itself"
+          "zh": "不能把生成的模型单独打包分发或转卖",
+          "en": "Do not redistribute or sell the generated assets on their own"
         }
       ],
-      "license_note": "Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC code or assets; only our own screen recording and preview image of the tool.",
-      "license_note_zh": "作者条款不允许镜像转载工具本身（条款 v1.0.0，2026-09-28）。本仓库只链接原站，不收录它的任何代码或素材，只有我们自己录的操作视频和预览图。",
+      "license_note": "All rights belong to AMIX / トミナガハルキ. Non-commercial study copy with full credit, interface translated into Chinese/English; the author's terms (v1.0.0, 2026-09-28) do not grant mirroring, and this copy will be removed on the author's request.",
+      "license_note_zh": "版权归 AMIX / トミナガハルキ 所有。本站副本仅作非商业学习展示并完整署名，界面文字已译成中英文；作者条款（v1.0.0，2026-09-28）未授权镜像，作者要求时立即下架。",
       "overview_video": "fab-botanic/overview",
       "examples": [
         {

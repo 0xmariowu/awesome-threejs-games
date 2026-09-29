@@ -28,12 +28,12 @@ const T = {
   toolsTitle: ['好用的游戏制作工具。', 'Tools for making web games.'],
   toolsSub: ['{n} 个工具，帮你制作网页游戏。', '{n} tools to help you build web games.'],
   toolsSubOne: ['1 个工具，帮你制作网页游戏。', '1 tool to help you build web games.'],
-  openTool: ['打开工具 ↗', 'Open tool ↗'], terms: ['使用条款 ↗', 'Terms ↗'],
+  openTool: ['打开工具', 'Open tool'], originalSite: ['原站 ↗', 'Original site ↗'], terms: ['使用条款 ↗', 'Terms ↗'],
   allTools: ['全部工具', 'All tools'], author: ['作者', 'By'],
   features: ['能做什么', 'What it can do'], steps: ['怎么用在游戏里', 'Use it in your game'],
   usage: ['能不能用', 'Usage rights'],
   toolExamplesSub: ['受这个工具启发、独立实现的技术示例。', 'Independent examples inspired by this tool.'],
-  toolFooter: ['工具版权归原作者所有，本站只做介绍和链接。', 'Tools belong to their authors; this site only describes and links to them.'],
+  toolFooter: ['工具版权归原作者所有，本站副本仅供非商业学习展示。', 'Tools belong to their authors; copies here are for non-commercial study.'],
   loading: ['正在读取…', 'Loading…'], loadingFiles: ['正在读取文件列表…', 'Loading file list…'],
   dataFailed: ['数据加载失败', 'Couldn’t load the library'], retry: ['重试', 'Try again'],
   homeTitle: ['可以直接玩的 Three.js 游戏。', 'Three.js games you can play.'],
@@ -182,6 +182,12 @@ class Library {
     popup.opener = null;
     try { popup.location.replace(await this.launchURL(id)); }
     catch (error) { popup.close(); this.flash(error.message); }
+  };
+  openTool = slug => async event => {
+    if (isStatic) return;
+    event.preventDefault();
+    try { window.location.assign(await this.launchURL('tool:' + slug)); }
+    catch (error) { this.flash(error.message); }
   };
   async prepareFrame(id) {
     if (isStatic) return;
@@ -388,6 +394,7 @@ class Library {
     out.toolsSub = this.t(data.tools.length === 1 ? 'toolsSubOne' : 'toolsSub',{n:data.tools.length});
     out.wideTools = data.tools.length < 3;
     out.tools = data.tools.map(p => ({...p,tagline:this.loc(p,'tagline'),
+      play:p.hosted ? p.launch?.url : p.url,openTool:p.hosted ? this.openTool(p.slug) : undefined,
       facts:p.facts.map(f=>f[s.lang]).join(' · '),img:siteURL(`/previews/${p.slug}.webp`),
       video:p.overview_video?.url,href:`#/t/${p.slug}`,open:this.nav(`/t/${p.slug}`)}));
     if (['tools','tool'].includes(r.name)) t.footer = t.toolFooter;
@@ -400,13 +407,14 @@ class Library {
       out.goBack = tool ? out.goTools : out.goHome;
       out.backLabel = tool ? t.allTools : t.allProjects;
       out.primaryLabel = tool ? t.openTool : t.playGame;
-      out.secondaryLabel = tool ? t.terms : t.browseSource;
+      out.secondaryLabel = tool ? t.originalSite : t.browseSource;
       out.examplesSubtitle = tool ? t.toolExamplesSub : t.examplesSub;
       out.showExamples = !tool || exs.length > 0;
       out.tool = tool ? {...d,features:d.features.map(f=>({title:this.loc(f,'title'),desc:this.loc(f,'desc')})),
+        notice:s.lang === 'zh' ? d.license_note_zh : d.license_note,
         steps:d.steps.map(f=>f[s.lang]),can:d.can.map(f=>f[s.lang]).join(' '),cannot:d.cannot.map(f=>f[s.lang]).join(' ')} : null;
-      out.proj = { title: d.title, tagline: this.loc(d, 'tagline'), play: tool ? d.url : d.project?.launch?.url || '#', launch: tool ? undefined : this.play('game:' + r.slug), gh: d.source_url,
-        srcHref: tool ? d.terms_url : `#/source/${r.slug}`, openSource: tool ? undefined : this.nav(`/source/${r.slug}`), video: d.overview_video?.url, poster: siteURL(`/previews/${r.slug}.webp`),
+      out.proj = { title: d.title, tagline: this.loc(d, 'tagline'), play: tool ? (d.hosted ? d.launch?.url : d.url) : d.project?.launch?.url || '#', launch: tool ? (d.hosted ? this.openTool(r.slug) : undefined) : this.play('game:' + r.slug), gh: d.source_url,
+        sameTab:tool && d.hosted,srcHref: tool ? d.url : `#/source/${r.slug}`, openSource: tool ? undefined : this.nav(`/source/${r.slug}`), video: d.overview_video?.url, poster: siteURL(`/previews/${r.slug}.webp`),
         badge: this.badge(p.runnability), note: this.loc(p.runnability, 'review_note') || '', hasExamples: exs.length > 0, noExamples: !exs.length,
         examples: exs.map((ex, i) => {
           const running = s.runEx === ex.id;

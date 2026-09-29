@@ -1,10 +1,10 @@
-import {readFile} from 'node:fs/promises';
+import {readFile, realpath} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
-const fields = new Set(['slug','title','author','author_url','url','terms_url','about_url','tagline','tagline_en','facts','features','steps','can','cannot','license_note','license_note_zh','overview_video','examples']);
+const fields = new Set(['slug','title','hosted','author','author_url','url','terms_url','about_url','tagline','tagline_en','facts','features','steps','can','cannot','license_note','license_note_zh','overview_video','examples']);
 const exampleFields = new Set(['id','title','title_en','one_liner','one_liner_en','candidate']);
 
 export function validateTools(data, examples = []) {
@@ -28,6 +28,7 @@ export function validateTools(data, examples = []) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(tool.slug)) fail(`${label}: invalid slug`);
     if (seen.has(tool.slug)) fail(`${label}: duplicate slug ${tool.slug}`);
     seen.add(tool.slug);
+    if (tool.hosted !== undefined && typeof tool.hosted !== 'boolean') fail(`${label}.hosted must be a boolean`);
     for (const field of ['url','terms_url','author_url',...(tool.about_url === undefined ? []:['about_url'])]) {
       text(tool[field],`${label}.${field}`,2048);
       try { const url = new URL(tool[field]); if (url.protocol !== 'https:' || url.username || url.password) throw new Error(); }
@@ -62,14 +63,37 @@ export async function loadTools(root = ROOT) {
   const {examples} = JSON.parse(await readFile(path.join(root,'catalog/examples.json'),'utf8'));
   const errors = validateTools(data,examples);
   if (errors.length) throw new Error(errors.join('; '));
-  return data.tools;
+  return Promise.all(data.tools.map(async tool => {
+    let local;
+    try { local = JSON.parse(await readFile(path.join(root,tool.slug,'local.json'),'utf8')); }
+    catch (error) { if (error.code !== 'ENOENT') throw error; }
+    if (tool.hosted && !local) throw new Error(`Missing local.json for hosted tool: ${tool.slug}`);
+    if (!local) return tool;
+    const safe = value => typeof value === 'string' && !/[\\\0%?#]/.test(value) &&
+      value.split('/').every(part => part && part !== '..' && !part.startsWith('.'));
+    if (!object(local) || !(local.root === '.' || safe(local.root)) ||
+        typeof local.entry !== 'string' || !local.entry.startsWith('/') || !safe(local.entry.slice(1)) ||
+        !Number.isInteger(local.port) || local.port < 1 || local.port > 65535)
+      throw new Error(`Invalid local.json for tool: ${tool.slug}`);
+    const folder = await realpath(path.join(root,tool.slug));
+    const source = await realpath(path.resolve(folder,local.root));
+    const relative = path.relative(folder,source);
+    if (relative === '..' || relative.startsWith('..'+path.sep) || path.isAbsolute(relative))
+      throw new Error(`Tool runtime outside archive: ${tool.slug}`);
+    return {...tool,local,...(tool.hosted ? {launch:{type:'tool',url:`http://127.0.0.1:${local.port}${local.entry}`}} : {})};
+  }));
 }
 
-export function toolSummary(tool, overview) {
-  const {slug,title,tagline,tagline_en,facts,url} = tool;
-  return {slug,title,tagline,tagline_en,facts,url,overview_video:overview,examples:tool.examples.length};
+const launchFor = (tool, records) => tool.hosted ? records.find(row=>row.id===`tool:${tool.slug}`)?.launch ?? tool.launch ?? null : null;
+export function hostedToolURL(tool, base) {
+  return base+`tools-app/${tool.slug}/${tool.local.entry.slice(1)}`;
 }
-export function toolDetail(tool, overview, records) {
-  return {...tool,overview_video:overview,examples:tool.examples.map(example => ({...example,
+export function toolSummary(tool, overview, records = []) {
+  const {slug,title,tagline,tagline_en,facts,url,terms_url,hosted} = tool;
+  return {slug,title,tagline,tagline_en,facts,url,terms_url,hosted:!!hosted,launch:launchFor(tool,records),overview_video:overview,examples:tool.examples.length};
+}
+export function toolDetail(tool, overview, records = []) {
+  const {local,launch,...metadata} = tool;
+  return {...metadata,launch:launchFor(tool,records),overview_video:overview,examples:tool.examples.map(example => ({...example,
     launch:records.find(row=>row.id===`example:${example.id}`)?.launch ?? null}))};
 }

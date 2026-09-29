@@ -144,7 +144,7 @@
 
 **FABOTANIC** — Generate 3D plants in the browser and drop them straight into your game.
 
-<a href="https://amix-design.com/tl/fab-botanic/">Open tool ↗</a> · <a href="https://amix-design.com/tl/fab-botanic/license.html">Terms</a>
+<a href="https://0xmariowu.github.io/awesome-threejs-games/tools-app/fab-botanic/tl/fab-botanic/index.html">Open tool ↗</a> · <a href="https://amix-design.com/tl/fab-botanic/">Original site</a> · <a href="https://amix-design.com/tl/fab-botanic/license.html">Terms</a>
 
 ## Technique demos
 
@@ -186,6 +186,6 @@
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — No license stated — study use
 - <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — No license stated — study use
 - <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — No license stated — study use
-- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC code or assets; only our own screen recording and preview image of the tool.
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — All rights belong to AMIX / トミナガハルキ. Non-commercial study copy with full credit, interface translated into Chinese/English; the author&#39;s terms (v1.0.0, 2026-09-28) do not grant mirroring, and this copy will be removed on the author&#39;s request.
 
 Webgame Lab lists third-party assets in [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).

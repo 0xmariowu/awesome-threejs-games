@@ -85,13 +85,24 @@ test('workflow and tracked-input gate rejects missing, untracked and misconfigur
   assert.ok((await checkBuildInputs(root)).files > 10);
   const tool=JSON.parse(await readFile(new URL('../catalog/tools.json',import.meta.url),'utf8')).tools[0];
   await put('catalog/tools.json',JSON.stringify({schema_version:1,tools:[{...tool,examples:[]}]}));
+  await put('fab-botanic/local.json',JSON.stringify({root:'public',entry:'/tl/fab-botanic/index.html',port:8107}));
+  await put('fab-botanic/public/tl/fab-botanic/index.html','<head></head><script src="/tl/common/app.js"></script>');
+  await put('fab-botanic/public/tl/common/app.js','console.log("plant list")');
+  await assert.rejects(checkBuildInputs(root),/Untracked build input: fab-botanic\/local.json/);
+  execFileSync('git',['-C',root,'add','fab-botanic/local.json']);
+  await assert.rejects(checkBuildInputs(root),/Untracked build input: fab-botanic\/public\/tl\/common\/app.js/);
+  execFileSync('git',['-C',root,'add','fab-botanic/public']);
   await put('previews/fab-botanic.webp','recorded preview');
   await assert.rejects(checkBuildInputs(root),/Untracked build input: previews\/fab-botanic.webp/);
   execFileSync('git',['-C',root,'add','previews/fab-botanic.webp']);
   await assert.rejects(checkBuildInputs(root),/Untracked build input: media-web\/fab-botanic\/overview.mp4/);
   await put('media-web/fab-botanic/overview.mp4','recorded video');
   execFileSync('git',['-C',root,'add','media-web/fab-botanic/overview.mp4']);
-  assert.ok((await checkBuildInputs(root)).files > 10);
+  const requiredInputs = await checkBuildInputs(root);
+  assert.ok(requiredInputs.files > 10);
+  await put('fab-botanic/public/tl/fab-botanic/about.html','archived gallery');
+  await put('fab-botanic/public/tl/fab-botanic/about/scenes/plant.glb','archived model');
+  assert.deepEqual(await checkBuildInputs(root),requiredInputs);
   await put('library/untracked.js','fixture');
   await assert.rejects(checkBuildInputs(root),/Untracked build input: library\/untracked.js/);
   await rm(path.join(root,'library/untracked.js'));
@@ -196,6 +207,34 @@ test('INKWAVE copying excludes the private project while preserving local files 
   } finally {await rm(root, {recursive:true, force:true});}
 });
 
+test('FABOTANIC excludes only its archived gallery and retains the generator runtime', async t => {
+  const root = await mkdtemp(path.join(os.tmpdir(),'gameref-fabotanic-runtime-'));
+  t.after(()=>rm(root,{recursive:true,force:true}));
+  const source = path.join(root,'archive'), destination = path.join(root,'site');
+  const gallery = ['tl/fab-botanic/about.html','tl/fab-botanic/about/viewer.js',
+    'tl/fab-botanic/about/scenes/plant.glb'];
+  const runtime = ['index.html','tl/fab-botanic/index.html','tl/common/libs/three/three.js',
+    'tl/fab-botanic/license.html','tl/fab-botanic/license/1.0.0.html','tl/fab-botanic/ogp/ogp.jpg',
+    'tl/fab-botanic/about-extra.js','tl/fab-botanic/about.html.bak','tl/other/about.html',
+    'tl/other/about/viewer.js','about.html','about/viewer.js'];
+  for (const relative of [...gallery,...runtime]) {
+    await mkdir(path.dirname(path.join(source,relative)),{recursive:true});
+    await writeFile(path.join(source,relative),'archive bytes');
+  }
+  assert.equal(runtimeFile('tl/fab-botanic/about','fab-botanic'),false);
+  const report = await copyRuntime(source,destination,BASE+'tools-app/fab-botanic/',{slug:'fab-botanic'});
+  assert.equal(report.files,runtime.length);
+  for (const relative of gallery) {
+    assert.equal(runtimeFile(relative,'fab-botanic'),false,relative);
+    assert.equal(runtimeFile(relative,'other'),true,relative);
+    assert.equal(runtimeFile(relative),true,relative);
+    await assert.rejects(readFile(path.join(destination,relative)),{code:'ENOENT'});
+  }
+  await assert.rejects(readdir(path.join(destination,'tl/fab-botanic/about')),{code:'ENOENT'});
+  for (const relative of runtime) assert.ok((await readFile(path.join(destination,relative),'utf8')).endsWith('archive bytes'),relative);
+  for (const relative of [...gallery,...runtime]) assert.equal(await readFile(path.join(source,relative),'utf8'),'archive bytes');
+});
+
 test('brotli-captured text is decoded before URL rewriting and other binary text is copied untouched', async () => {
   const {brotliCompressSync} = await import('node:zlib');
   const root = await mkdtemp(path.join(os.tmpdir(), 'gameref-brotli-'));
@@ -215,16 +254,19 @@ test('brotli-captured text is decoded before URL rewriting and other binary text
   } finally { await rm(root, {recursive:true, force:true}); }
 });
 
-test('tool build data contains only link-out metadata, site video and example launches', async t => {
+test('tool build data includes hosted launch, site video and example launches', async t => {
   const {writeToolData} = await import('./build_site.mjs');
   const root=await mkdtemp(path.join(os.tmpdir(),'gameref-tool-build-'));
   t.after(()=>rm(root,{recursive:true,force:true}));
   const tool=JSON.parse(await readFile(new URL('../catalog/tools.json',import.meta.url),'utf8')).tools[0];
   const entry={id:'plant',title:'Plant'};
   const launch={type:'example',url:BASE+'examples/plant/index.html'};
-  await writeToolData(root,[{...tool,examples:[entry]}],new Map([[tool.overview_video,{duration:70}]]),[{id:'example:plant',launch}]);
+  const hostedLaunch={type:'tool',url:BASE+'tools-app/fab-botanic/tl/fab-botanic/index.html'};
+  await writeToolData(root,[{...tool,examples:[entry]}],new Map([[tool.overview_video,{duration:70}]]),[{id:'example:plant',launch},{id:'tool:fab-botanic',kind:'tool',launch:hostedLaunch}]);
   const summaries=JSON.parse(await readFile(path.join(root,'data/tools.json'))).tools;
   const full=JSON.parse(await readFile(path.join(root,'data/tool',tool.slug+'.json')));
+  assert.deepEqual(summaries[0].launch,hostedLaunch);
+  assert.deepEqual(full.launch,hostedLaunch);
   assert.equal(summaries[0].examples,1);
   assert.equal(summaries[0].overview_video.url,BASE+'media/fab-botanic/overview.mp4');
   assert.equal(full.overview_video.poster,BASE+'previews/fab-botanic.webp');
@@ -234,7 +276,7 @@ test('tool build data contains only link-out metadata, site video and example la
   assert.deepEqual(await readdir(root),['data']);
 });
 
-test('complete tool-only build writes directory indexes and counts without copying the local capture', async t => {
+test('complete hosted tool build rewrites the capture, records launch, validates entry and supports link-only tools', async t => {
   const {buildSite} = await import('./build_site.mjs');
   const root=await mkdtemp(path.join(os.tmpdir(),'gameref-tools-site-'));
   t.after(()=>rm(root,{recursive:true,force:true}));
@@ -249,7 +291,11 @@ test('complete tool-only build writes directory indexes and counts without copyi
   await put('library/index.html','<!doctype html><head></head><body><div id="app"></div></body>');
   await put('previews/fab-botanic.webp','preview');
   await put('media-web/fab-botanic/overview.mp4','recorded overview');
-  await put('fab-botanic/public/index.html','LOCAL CAPTURE MUST STAY PRIVATE');
+  await save('fab-botanic/local.json',{root:'public',entry:'/tl/fab-botanic/index.html',port:8107});
+  const captured='<head></head><script src="/tl/common/app.js"></script><a href="/tl/fab-botanic/license.html">Terms</a>';
+  await put('fab-botanic/public/tl/fab-botanic/index.html',captured);
+  await put('fab-botanic/public/tl/common/app.js','fetch("/tl/fab-botanic/plants.json")');
+  await put('fab-botanic/provenance/notes.json','{}');
   await put('webgame-lab/src/catalog.ts','export const catalog = [];');
   // Isolate our publishing contract from the third-party Lab bundler.
   await put('webgame-lab/node_modules/vite/bin/vite.js',`const fs=require('node:fs');const out=process.argv[process.argv.indexOf('--outDir')+1];fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/index.html','Lab fixture');`);
@@ -262,5 +308,21 @@ test('complete tool-only build writes directory indexes and counts without copyi
   assert.equal((await readdir(out)).includes('fab-botanic'),false);
   assert.equal((await readdir(out)).includes('games'),false);
   assert.deepEqual(JSON.parse(await readFile(path.join(out,'data/src/manifest.json'))),[]);
-  assert.equal(await readFile(path.join(root,'fab-botanic/public/index.html'),'utf8'),'LOCAL CAPTURE MUST STAY PRIVATE');
+  const hosted=path.join(out,'tools-app/fab-botanic');
+  assert.match(await readFile(path.join(hosted,'tl/fab-botanic/index.html'),'utf8'),/src="\/awesome-threejs-games\/tools-app\/fab-botanic\/tl\/common\/app.js"/);
+  assert.equal(await readFile(path.join(hosted,'tl/common/app.js'),'utf8'),'fetch("'+BASE+'tools-app/fab-botanic/tl/fab-botanic/plants.json")');
+  assert.equal(await readFile(path.join(root,'fab-botanic/public/tl/fab-botanic/index.html'),'utf8'),captured);
+  const record=JSON.parse(await readFile(path.join(out,'data/index.json'))).records[0];
+  assert.equal(record.kind,'tool');assert.equal(record.launch.url,BASE+'tools-app/fab-botanic/tl/fab-botanic/index.html');
+  assert.deepEqual(JSON.parse(await readFile(path.join(out,'data/tools.json'))).tools[0].launch,record.launch);
+  assert.deepEqual(JSON.parse(await readFile(path.join(out,'data/tool/fab-botanic.json'))).launch,record.launch);
+  const report=JSON.parse(await readFile(path.join(out,'data/deploy.json'))).reports.find(r=>r.kind==='tool');
+  assert.equal(report.slug,'fab-botanic');assert.ok(report.rewrites.length>0);
+  await assert.rejects(readFile(path.join(hosted,'provenance/notes.json')),/ENOENT/);
+  await rm(path.join(root,'fab-botanic/public/tl/fab-botanic/index.html'));
+  await assert.rejects(buildSite({root}),/Missing tool entry/);
+  await save('catalog/tools.json',{schema_version:1,tools:[{...tool,hosted:false,examples:[]}]});
+  await buildSite({root});
+  assert.equal((await readdir(out)).includes('tools-app'),false);
+  assert.equal(JSON.parse(await readFile(path.join(out,'data/tools.json'))).tools[0].launch,null);
 });

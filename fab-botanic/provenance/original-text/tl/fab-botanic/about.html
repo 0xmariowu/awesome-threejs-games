@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fbfbf7">
+<title>FABOTANIC（ファボタニック）とは｜作例・機能・AIでの組み込み方 | AMIX</title>
+<meta name="description" content="草木・植物の3D素材をブラウザで生成して、GLB・透過PNG・Three.js用ZIPで書き出せる無料ツール「FABOTANIC」。41系統の植物、通常とローポリ、近景・中景・遠景の作り分け、作例と、Claude CodeなどのコーディングAIでゲームへ組み込む方法を紹介します。">
+<link rel="canonical" href="https://amix-design.com/tl/fab-botanic/about.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FABOTANIC（ファボタニック）とは｜作例・機能・AIでの組み込み方">
+<meta property="og:description" content="41系統の草木をブラウザで生成し、GLB・PNG・Three.js用ZIPで保存。書き出した植物で組んだ作例と、コーディングAIでゲームへ組み込む手順。">
+<meta property="og:url" content="https://amix-design.com/tl/fab-botanic/about.html">
+<meta property="og:site_name" content="AMIX">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://amix-design.com/tl/fab-botanic/ogp/ogp.jpg">
+<meta property="og:image:alt" content="FABOTANIC — 広葉樹を生成している編集画面">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://amix-design.com/tl/fab-botanic/ogp/ogp.jpg">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"無料です。アカウント登録も不要です。"}},
+    {"@type":"Question","name":"作った植物を商用のゲームや映像に使えますか？","acceptedAnswer":{"@type":"Answer","text":"使えます。ゲーム・映像・広告・Web・受託制作などの作品に組み込めます。作品内のクレジットは任意です。素材そのものを素材集として配布・販売することはできません。"}},
+    {"@type":"Question","name":"作ったデータはサーバーへ送信されますか？","acceptedAnswer":{"@type":"Answer","text":"入力した設定や作った素材は送信されません。生成・編集・保存はすべてブラウザの中で行います。なお、ページの閲覧状況はアクセス解析（Cloudflare Web Analytics）で計測しています。"}},
+    {"@type":"Question","name":"Three.js以外でも使えますか？","acceptedAnswer":{"@type":"Answer","text":"GLBはglTFの標準形式です。Blenderなど、glTFを読み込めるソフトで開けます。ゲームエンジンで使う場合は、各エンジンのglTF読み込みへの対応をご確認ください。風や自動LODの付属コードはThree.js r185用です。"}},
+    {"@type":"Question","name":"スマートフォンでも使えますか？","acceptedAnswer":{"@type":"Answer","text":"画面は対応していますが、植物の生成と書き出しには処理の余裕が必要です。PCでのご利用をおすすめします。"}}
+  ]
+}
+</script>
+<script type="importmap">{"imports":{"three":"../common/libs/three/r185/build/three.module.min.js","three/addons/":"../common/libs/three/r185/examples/jsm/"}}</script>
+<style>
+:root{
+  --ink:#263b2b;--muted:#6f786b;--line:#e1e4d8;--paper:#fbfbf7;--card:#ffffff;--green:#2f533c;--green-deep:#223f31;--pale:#e8efdf;--stage:#f1f0e8;
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;
+  --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",Georgia,serif;
+  --latin:Georgia,"Times New Roman",serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.9}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green)}
+a:focus-visible,button:focus-visible{outline:3px solid #b17d38;outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:10;background:rgba(251,251,247,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);min-width:0}
+.brand .brand-logo{display:block;height:19px;width:auto;color:var(--ink)}
+.brand span{font-size:11px;line-height:1;color:var(--muted);white-space:nowrap;padding-top:1px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 20px;border-radius:7px;font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--green-deep)}
+.btn-ghost{border:1px solid #bfcab8;color:var(--ink);background:var(--card)}
+.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero */
+.hero{padding:64px 0 36px}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(32px,5.2vw,58px);line-height:1.3;letter-spacing:.02em;margin:14px 0 20px}
+.hero .lead{max-width:680px;font-size:17px;color:#3f5243;margin:0 0 28px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-figure{margin:0}
+.hero-figure img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--stage)}
+.hero-figure figcaption,.works figcaption{font-size:13px;color:var(--muted);line-height:1.7;padding:12px 24px 0}
+.hero-figure figcaption{max-width:var(--wrap);margin:0 auto}
+
+section{padding:88px 0 0}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,38px);line-height:1.4;margin:10px 0 16px;letter-spacing:.02em}
+h3{font-size:18px;line-height:1.5;margin:0 0 8px}
+.section-lead{max-width:720px;color:#46584a;margin:0 0 36px}
+
+/* works */
+.works{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
+.works figure{margin:0}
+.works img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;background:var(--stage)}
+.works figcaption{padding:12px 0 0}
+.works figcaption strong{display:block;color:var(--ink);font-size:15px;margin-bottom:2px}
+.note{font-size:13px;color:var(--muted);margin:28px 0 0}
+
+.enter{display:block;position:relative;width:100%;padding:0;border:0;background:none;cursor:pointer;color:inherit;font:inherit;text-align:left}
+.enter-label{position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:30px;background:rgba(251,251,247,.92);color:var(--ink);font-size:13px;font-weight:600;box-shadow:0 2px 12px rgba(20,40,25,.18);transition:transform .2s}
+.enter-label svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}
+.enter:hover .enter-label{transform:translateY(-2px)}
+.works .enter img{border-radius:6px}
+.hero-figure .enter-label{right:24px;bottom:24px;font-size:14px;padding:10px 18px}
+/* viewer */
+.viewer{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#0f1a14;color:#fff}
+.viewer::backdrop{background:#0f1a14}
+.viewer-stage{position:absolute;inset:0;outline:none}
+.viewer-stage canvas{display:block;width:100%;height:100%;cursor:grab}
+.viewer-stage canvas:active{cursor:grabbing}
+.viewer-bar{position:absolute;left:0;right:0;top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;pointer-events:none}
+.viewer-bar>*{pointer-events:auto}
+.viewer-title{font-size:14px;font-weight:600;background:rgba(15,26,20,.55);padding:8px 14px;border-radius:30px}
+.viewer-actions{display:flex;gap:8px}
+.viewer button.vbtn{min-height:40px;min-width:40px;padding:8px 14px;border-radius:30px;border:0;background:rgba(251,251,247,.92);color:var(--ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.viewer-hint{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:12px;background:rgba(15,26,20,.55);padding:8px 14px;border-radius:30px;white-space:nowrap;pointer-events:none}
+.viewer-walk{position:absolute;right:16px;bottom:16px;display:none;flex-direction:column;gap:10px}
+.viewer-walk button{width:60px;height:60px;border-radius:50%;border:0;background:rgba(251,251,247,.9);color:var(--ink);font-size:13px;font-weight:700;touch-action:none;-webkit-user-select:none;user-select:none}
+.viewer-loading{position:absolute;inset:0;display:grid;place-items:center;font-size:13px;color:#dfe8dc;pointer-events:none}
+.viewer-loading-inner{display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;padding:0 24px}
+.viewer-logo{width:150px;height:auto;color:#dfe8dc;opacity:.5}
+.viewer-loading[hidden]{display:none}
+@media(pointer:coarse){.viewer-walk{display:flex}.viewer-hint{bottom:auto;top:64px}}
+/* case */
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.case-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;color:inherit;text-decoration:none;transition:border-color .2s}
+.case-card:hover{border-color:#b9c7b1}
+.case-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.case-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.case-body h3{margin:0}
+.case-body p{margin:0;font-size:15px;color:#46584a;flex:1}
+.case-link{font-size:14px;font-weight:600;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+
+/* features */
+.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.feature{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.feature .num{font-family:var(--latin);font-size:13px;color:var(--muted);letter-spacing:.1em}
+.feature h3{margin-top:6px}
+.feature p{margin:0;font-size:15px;color:#46584a}
+.feature p.scope{font-size:12px;color:var(--muted);margin:-2px 0 8px}
+
+/* catalog */
+.catalog{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.cat{background:var(--pale);border-radius:10px;padding:18px}
+.cat b{display:block;font-size:15px}
+.cat .count{font-family:var(--latin);font-size:30px;line-height:1.2;color:var(--green)}
+.cat p{margin:8px 0 0;font-size:13px;line-height:1.8;color:#46584a}
+
+/* table */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th,td{padding:14px 18px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-size:12px;letter-spacing:.08em;color:var(--muted);font-weight:600;background:#f6f7f1}
+td:first-child{white-space:nowrap;font-weight:600}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px}
+.steps li::before{content:counter(s,decimal-leading-zero);display:block;font-family:var(--latin);font-size:13px;letter-spacing:.1em;color:var(--muted);margin-bottom:6px}
+.steps p{margin:0;font-size:15px;color:#46584a}
+
+/* AI */
+.ai{background:var(--green-deep);color:#e9efe6;padding:80px 0 88px;margin-top:88px}
+.ai .eyebrow{color:#a9bca8}
+.ai h2{color:#fff}
+.ai .section-lead{color:#c9d6c7}
+.ai a{color:#cfe3c5}
+.ai .steps li{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}
+.ai .steps li::before{color:#a9bca8}
+.ai .steps h3{color:#fff}
+.ai .steps p{color:#c9d6c7}
+.prompt{margin:36px 0 0;background:#172c22;border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:22px 24px}
+.prompt-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.prompt-head span{font-size:12px;letter-spacing:.12em;color:#a9bca8}
+.copy{min-height:36px;padding:6px 14px;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;font:inherit;font-size:13px;cursor:pointer}
+.prompt pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;color:#f1f5ee}
+.tips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;margin:36px 0 0;padding:0;list-style:none}
+.tips li{font-size:15px;color:#d6e0d4;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
+.tips b{color:#fff;display:block;margin-bottom:2px}
+.ai code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:rgba(255,255,255,.1);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+
+/* terms */
+.terms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.term{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:20px}
+.term .tag{display:inline-block;font-size:12px;font-weight:600;padding:2px 10px;border-radius:30px;background:var(--pale);color:var(--green);margin-bottom:10px}
+.term .tag.no{background:#f3e9e3;color:#8a4a32}
+.term p{margin:0;font-size:14px;color:#46584a;line-height:1.8}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--muted);flex-shrink:0}
+.faq details[open] summary::after{content:"－"}
+.faq details p{margin:10px 0 0;color:#46584a;font-size:15px}
+
+/* cta + footer */
+.cta{text-align:center;padding:96px 0 80px}
+.cta h2{margin-bottom:22px}
+footer{border-top:1px solid var(--line);padding:32px 0 40px;font-size:13px;color:var(--muted)}
+footer p{margin:0 0 8px}
+footer a{color:var(--muted)}
+.sep{margin:0 8px;opacity:.6}
+
+@media(max-width:960px){
+  .features{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .catalog{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .terms{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .works{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+  body{font-size:15px}
+  .wrap{padding:0 16px}
+  .topbar .wrap{height:58px}
+  .brand .brand-logo{height:16px}
+  .brand span{display:none}
+  .topbar .btn{min-height:40px;padding:8px 14px;font-size:13px}
+  .hero{padding:40px 0 28px}
+  .hero .lead{font-size:16px}
+  .hero-figure figcaption{padding:10px 16px 0}
+  section{padding:64px 0 0}
+  .works{grid-template-columns:1fr;gap:32px}
+  .features,.steps,.terms,.tips,.cases{grid-template-columns:1fr}
+  .catalog{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ai{padding:60px 0 64px;margin-top:64px}
+  .prompt{padding:18px}
+  .cta{padding:72px 0 56px}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="FABOTANIC（ファボタニック）ツールを開く"><svg class="brand-logo" viewBox="0 0 435.68 54.93" fill="currentColor" aria-hidden="true" focusable="false"><path d="M39.64,13.13c-6.85-6.05-13.13-7.24-19.9-7.24-1.67,0-2.39,0-3.18.08-.08,3.02-.16,11.54-.16,18.55,10.99-.24,15.05-1.51,15.76-6.29l.88.08c-.4,2.95-.48,5.17-.48,8.36,0,3.34.08,5.49.48,8.28l-.88.08c-.64-5.02-4.78-5.89-15.76-6.13,0,13.13.08,18.39.16,20.94.08,1.83.72,2.79,2.47,3.5l-.08.56c-2.63-.24-7.01-.32-9.39-.32s-6.77.08-9.39.32l-.16-.56c1.75-.72,2.47-1.67,2.55-3.5.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-1.83-.8-2.79-2.55-3.5l.08-.56c2.71.24,7.01.32,14.65.32h21.25c.88,3.26,2.63,7.96,4.3,11.38l-.64.4Z"/><path d="M89.64,53.33l-.16.56c-1.75-.24-7.96-.32-9.63-.32-1.83,0-10.03.08-11.7.32l-.16-.56c2.31-.96,2.71-2.15,1.83-4.3-.64-1.59-1.75-4.14-3.1-7.17h-18.79c-1.19,3.1-2.07,5.57-2.55,7.01-.8,2.71.24,3.74,2.31,4.46l-.16.56c-1.75-.24-6.05-.32-7.8-.32-1.51,0-4.46.08-6.13.32l-.08-.56c1.51-.48,3.1-1.59,4.78-4.7C45.06,35.82,55.41,12.98,60.66.48h1.67c5.01,11.62,16.88,37.41,22.53,48.4,1.19,2.31,3.26,3.98,4.78,4.46ZM64.56,37.02c-2.55-5.73-5.49-12.26-7.88-17.43-2.07,5.17-4.7,11.7-6.85,17.43h14.73Z"/><path d="M107.71,54.05c-5.33,0-11.07-.16-17.51-.48v-.56c1.27-.16,2.47-1.03,2.55-3.18.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-2.31-1.27-3.02-2.55-3.18v-.56c5.57-.32,11.22-.48,15.04-.48,13.93,0,24.44,3.58,24.44,12.5,0,5.33-4.78,11.3-14.89,11.78,13.13,0,20.54,4.94,20.54,13.69,0,7-6.05,15.2-27.62,15.2ZM106.75,5.41c-.08,3.82-.16,9.31-.16,17.91,7.32-.16,9.55-3.82,9.55-9.55,0-5.33-2.39-8.36-9.39-8.36ZM110.02,27.78c-.96,0-2.07.08-3.42.24v1.51c0,12.1.08,17.2.16,19.66.88.08,1.83.08,2.47.08,7,0,11.22-3.5,11.22-10.43,0-5.97-2.95-11.07-10.43-11.07Z"/><path d="M170.75,54.93c-17.35,0-30.01-10.91-30.01-27.46S153.4,0,170.75,0s30.09,10.83,30.09,27.46-12.66,27.46-30.09,27.46ZM170.75,5.02c-9.16,0-14.09,8.04-14.09,22.45s4.94,22.45,14.09,22.45,14.25-8.2,14.25-22.45-5.09-22.45-14.25-22.45Z"/><path d="M249.72,13.45c-5.57-5.02-12.5-7.88-16.16-7.88h-.48v21.89c0,12.34.08,19.82.16,22.37.08,1.83.8,2.79,2.55,3.5l-.16.56c-2.55-.24-7-.32-9.31-.32-2.47,0-6.85.08-9.47.32l-.08-.56c1.75-.72,2.39-1.67,2.47-3.5.08-2.55.16-10.03.16-22.37V5.57h-.4c-3.66,0-10.67,2.95-16.24,7.88l-.56-.48c1.43-4.22,2.63-8.52,3.18-11.62h41.79c.56,3.1,1.67,7.4,3.18,11.62l-.64.48Z"/><path d="M297.17,53.33l-.16.56c-1.75-.24-7.96-.32-9.63-.32-1.83,0-10.03.08-11.7.32l-.16-.56c2.31-.96,2.71-2.15,1.83-4.3-.64-1.59-1.75-4.14-3.1-7.17h-18.79c-1.19,3.1-2.07,5.57-2.55,7.01-.8,2.71.24,3.74,2.31,4.46l-.16.56c-1.75-.24-6.05-.32-7.8-.32-1.51,0-4.46.08-6.13.32l-.08-.56c1.51-.48,3.1-1.59,4.78-4.7,6.77-12.82,17.12-35.66,22.37-48.16h1.67c5.01,11.62,16.88,37.41,22.53,48.4,1.19,2.31,3.26,3.98,4.78,4.46ZM272.09,37.02c-2.55-5.73-5.49-12.26-7.88-17.43-2.07,5.17-4.7,11.7-6.85,17.43h14.73Z"/><path d="M351.78,1.59c-1.75.8-2.39,1.43-2.63,4.14-.32,3.74-.4,9.47-.4,21.73s0,21.49.08,26.67h-5.65c-15.6-17.27-27.78-30.73-37.81-41.24.16,3.9.24,8.52.32,14.57.08,10.03.72,18.15,1.19,21.73.32,2.63,1.04,3.42,2.63,4.14l-.16.56c-1.75-.24-4.7-.32-6.05-.32-1.27,0-3.5.08-5.41.32l-.16-.56c1.75-.8,2.39-1.43,2.55-3.18.32-4.7.48-10.43.48-22.69,0-6.61-.08-13.13-.16-16.32-.08-5.33-2.23-7.64-5.01-9.55l.16-.56c2.71.24,5.89.32,8.76.32,2.55,0,5.17-.08,7.56-.16,12.82,14.41,21.81,24.04,31.92,34.31-.08-2.47-.16-5.25-.16-8.04-.16-10.03-.56-17.43-.96-21.49-.4-2.87-1.27-3.66-2.87-4.38l.16-.56c1.67.24,4.14.32,5.65.32,1.67,0,4.06-.08,5.81-.32l.16.56Z"/><path d="M376.78,53.89c-2.63-.24-7-.32-9.39-.32s-6.77.08-9.39.32l-.16-.56c1.75-.72,2.47-1.67,2.55-3.5.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-1.83-.8-2.79-2.55-3.5l.16-.56c2.63.24,6.93.32,9.39.32s6.77-.08,9.39-.32l.08.56c-1.75.72-2.39,1.67-2.47,3.5-.08,2.55-.16,9.95-.16,22.37s.08,19.82.16,22.37c.08,1.83.72,2.79,2.47,3.5l-.08.56Z"/><path d="M383.46,27.46c0-16.72,13.21-27.46,30.49-27.46,8.36,0,16.4,2.55,21.25,7.48l.48,12.58-.72.16c-4.38-10.19-10.59-15.05-18.47-15.05-10.11,0-17.51,8.52-17.51,22.29s7.08,22.13,17.83,22.13c7.64,0,13.61-3.5,18.23-9.95l.64.16-.16,7.64c-4.7,4.3-11.94,7.48-21.09,7.48-17.75,0-30.97-10.91-30.97-27.46Z"/></svg><span>ファボタニック · by AMIX</span></a>
+    <a class="btn btn-primary" href="./">ツールを開く</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Procedural plant workshop</div>
+      <h1>草木の3D素材を、<br>ブラウザで仕立てて持ち出す。</h1>
+      <p class="lead">FABOTANIC（ファボタニック）は、木・草花・シダ・観葉植物・サボテンなど41系統の植物を、形と質感から組み立てる3D素材ジェネレーターです。できた植物は、ゲームやWebで使えるGLB、透過PNG、Three.js用のZIPで保存できます。無料・登録不要で、植物の生成と書き出しはブラウザの中で完結します。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 4.5c-8-1-14 2.6-14 8.2 0 3.3 2.4 5.2 5.1 5.2 5.1 0 8.9-5 8.9-13.4Z"/><path d="M4 21 15.5 9.5"/></svg>FABOTANICを開く</a>
+        <a class="btn btn-ghost" href="#ai">AIで組み込む方法</a>
+      </div>
+    </div>
+  </div>
+  <figure class="hero-figure">
+    <button class="enter" type="button" data-scene="forest" aria-label="作例「森のはずれ」を3Dで見る"><img src="about/forest-2000.jpg" srcset="about/forest-1200.jpg 1200w, about/forest-2000.jpg 2000w" sizes="100vw" width="2000" height="1125" alt="森のはずれの草地。手前に野草とシダ、左右に広葉樹、奥に林が続く" fetchpriority="high"><span class="enter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg>3Dで中に入る</span></button>
+    <figcaption>作例「森のはずれ」。手前の広葉樹は近景モデル、奥の林は中景モデル、さらに奥は遠景モデル。足もとはシダ・野草パッチ・野花です。植物はすべてFABOTANICで書き出したものです。</figcaption>
+  </figure>
+
+  <section id="works">
+    <div class="wrap">
+      <div class="eyebrow">Works</div>
+      <h2>書き出した植物で、背景を組む。</h2>
+      <p class="section-lead">どの作例も、FABOTANICから保存したGLBを Three.js r185 のシーンに並べて撮影したものです。近くは細部のある近景モデル、遠くは軽い中景・遠景モデルというように、置く距離で用途を使い分けています。</p>
+      <div class="works">
+        <figure>
+          <button class="enter" type="button" data-scene="meadow" aria-label="この作例を3Dで見る"><img src="about/meadow-1200.jpg" srcset="about/meadow-1200.jpg 1200w, about/meadow-2000.jpg 2000w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 360px" width="2000" height="1125" alt="低い目線から見た野花の草原。デイジーやポピーが咲き、奥に林" loading="lazy"><span class="enter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg>3Dで見る</span></button>
+          <figcaption><strong>野の花の草原</strong>夕方の光の中、野草パッチA〜Cに野花A〜Cを混ぜています。奥は花木Aと広葉樹、その先の林は遠景モデルです。</figcaption>
+        </figure>
+        <figure>
+          <button class="enter" type="button" data-scene="tropical" aria-label="この作例を3Dで見る"><img src="about/tropical-1200.jpg" srcset="about/tropical-1200.jpg 1200w, about/tropical-2000.jpg 2000w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 360px" width="2000" height="1125" alt="ヤシとソテツ、観葉植物が茂る南国の庭" loading="lazy"><span class="enter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg>3Dで見る</span></button>
+          <figcaption><strong>南国の庭</strong>海辺に、ヤシ型A・B、ソテツ型A、観葉広葉植物A・B、観葉硬葉植物A、シダA、細葉草本A、多肉Bを植えています。</figcaption>
+        </figure>
+        <figure>
+          <button class="enter" type="button" data-scene="lowpoly" aria-label="この作例を3Dで見る"><img src="about/lowpoly-1200.jpg" srcset="about/lowpoly-1200.jpg 1200w, about/lowpoly-2000.jpg 2000w" sizes="(max-width:640px) 100vw, (max-width:960px) 50vw, 360px" width="2000" height="1125" alt="ローポリの木々と草が並ぶ丘を見下ろした景色" loading="lazy"><span class="enter-label"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="m3 13 9 5 9-5"/></svg>3Dで見る</span></button>
+          <figcaption><strong>ローポリの丘</strong>池のまわりに、見た目のスタイルを「ローポリ」にして書き出した広葉樹A・B、針葉樹A・B、花木A、野草パッチ、細葉草本、野花、シダ。</figcaption>
+        </figure>
+      </div>
+      <p class="note">画像をクリックすると、その場面の中に入って見回せます（ドラッグで向きを変え、WASD・矢印キー・ホイールで移動。スマホは画面のボタンで前後に進みます）。草花は風で揺れます（右上のボタンで止められます）。3Dで見る版は、ブラウザで動かせるように遠くの草花を中景・遠景モデルに置き換えて間引き、テクスチャを512pxに縮めています。読み込みは1場面あたり約4〜14MBです。</p>
+      <p class="note">作例の地面・空・雲・山並み・水面・光・配置と、色の調整・風の揺れは、この紹介のために別に組んだものです。ツールが書き出すのは植物のモデルと付属のコードで、作例用の地形・空・水面は含みません。ただし野草フィールドでは、生成した地面を含めて保存できます。</p>
+    </div>
+  </section>
+
+  <section id="case">
+    <div class="wrap">
+      <div class="eyebrow">In use</div>
+      <h2>AMIXのゲームでも使っています。</h2>
+      <div class="cases">
+        <a class="case-card" href="../tool-g-mizukiri/">
+          <img src="about/mizukiri-1200.jpg" width="1200" height="675" alt="水切りゲーム MIZUKIRI の河原。川岸に広葉樹と野草が茂る" loading="lazy">
+          <div class="case-body">
+            <h3>水切り MIZUKIRI</h3>
+            <p>河原に茂る木と野草は、FABOTANICで作ったモデルです。手前の木は細部のある立体、川沿いは軽い立体、奥の山肌は遠景モデルと、見える距離で使い分けています。</p>
+            <span class="case-link">MIZUKIRIで遊ぶ</span>
+          </div>
+        </a>
+        <a class="case-card" href="../tool-g-upstream/">
+          <img src="about/upstream-1200.jpg" width="1200" height="780" alt="遡上 Salmon Ascent。黄葉の森に挟まれた川で、サケが滝の手前を跳ねる" loading="lazy">
+          <div class="case-body">
+            <h3>遡上 Salmon Ascent</h3>
+            <p>サケが川を遡るゲームです。岸の森は、ステージごとに実際の樹種に合わせてFABOTANICで作りました。岸の手前は立体、奥の山肌は遠景用のモデルで、山肌が見えないほど鬱蒼とした森にしています。</p>
+            <span class="case-link">遡上で遊ぶ</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="eyebrow">Features</div>
+      <h2>できること</h2>
+      <p class="section-lead">植物の種類を選び、数値とシードで形を仕立て、使う場面に合わせて書き出します。</p>
+      <div class="features">
+        <div class="feature"><div class="num">01</div><h3>41系統の草木</h3><p>広葉樹・針葉樹・竹から、野草・野花・シダ・観葉植物・サボテンまで。同じ種類でもシードを変えれば別の個体になります。</p></div>
+        <div class="feature"><div class="num">02</div><h3>通常とローポリ</h3><p>細部まで表現する「通常」と、専用の面構成で作る「ローポリ」。作品の画風に合わせて選べます。</p></div>
+        <div class="feature"><div class="num">03</div><h3>近景・中景・遠景</h3><p>近景・中景・遠景で、用途に合ったモデルを選べます。遠景の表現は植物とスタイルによって異なり、一部の通常樹木では画像を使った軽量モデル、それ以外では簡略化した立体モデルなどを使います。</p></div>
+        <div class="feature"><div class="num">04</div><h3>形と質感を調整</h3><p>高さ、枝の始まる位置、葉の量、色や質感などを数値で調整できます。設定はJSONに保存して、あとから読み込み直せます。</p></div>
+        <div class="feature"><div class="num">05</div><h3>樹木LODと大量配置</h3><p class="scope">対象：通常スタイルの樹木9系統</p><p>広葉樹A〜E・花木A・針葉樹A〜Cは、近景・中景・遠景の3モデルを距離で切り替えるZIPで保存できます。この9系統の遠景は画像を使った軽量モデルで、数千本を並べるための配置用コードも付きます。</p></div>
+        <div class="feature"><div class="num">06</div><h3>ブラウザの中で完結</h3><p>生成・編集・保存はすべて手元のブラウザで行います。アカウント登録は不要で、入力した設定や作った素材をサーバーへ送ることはありません。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="eyebrow">Collection</div>
+      <h2>収録している植物</h2>
+      <div class="catalog">
+        <div class="cat"><span class="count">12</span><b>樹木</b><p>広葉樹A〜E、花木A・B、針葉樹A〜C、竹類A・B</p></div>
+        <div class="cat"><span class="count">15</span><b>草・野花</b><p>野草パッチA〜C、細葉草本A・B、穂草A・B、枯れ草株、タンポポ型、オオバコ型、野花A〜C、三小葉草本A・B</p></div>
+        <div class="cat"><span class="count">5</span><b>シダ・観葉</b><p>シダA・B、観葉広葉植物A・B、観葉硬葉植物A</p></div>
+        <div class="cat"><span class="count">8</span><b>乾燥地・南国</b><p>多肉A〜C、サボテンA・B、ヤシ型A・B、ソテツ型A</p></div>
+        <div class="cat"><span class="count">1</span><b>野草フィールド</b><p>草・クローバー・広葉雑草が混ざる植生面（既定は3m四方）</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formats">
+    <div class="wrap">
+      <div class="eyebrow">Export</div>
+      <h2>書き出せる形式</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>形式</th><th>中身</th><th>向いている使い方</th></tr></thead>
+          <tbody>
+            <tr><td>GLB</td><td>形状と質感（PBR）を1ファイルに。テクスチャは512px〜2K</td><td>Three.jsやglTF対応のソフトで、静止した植物として配置</td></tr>
+            <tr><td>透過PNG</td><td>背景なしの画像（長辺1,600px）</td><td>2Dの背景、資料、サムネイル</td></tr>
+            <tr><td>生成設定JSON</td><td>種類・設定値・シード</td><td>同じ植物を作り直す、続きを編集する</td></tr>
+            <tr><td>Three.js ZIP</td><td>GLB、読み込み用コード（r185）、最小サンプル、AI向けガイド</td><td>風で揺らしたいとき、AIに組み込みを任せたいとき</td></tr>
+            <tr><td>樹木LOD ZIP</td><td>近景・中景・遠景の3モデルと距離切替のコード</td><td>カメラが近づく木（対象は通常スタイルの樹木9系統）</td></tr>
+            <tr><td>LOD ZIP</td><td>野草フィールドの近景・中景・遠景と配置情報</td><td>広い草地を距離に応じて軽くしたいとき</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">付属のサンプルは、Three.js r185 をCDN（jsDelivr）から読み込みます。自分のサーバーから配信することもできます。</p>
+    </div>
+  </section>
+
+  <section id="howto">
+    <div class="wrap">
+      <div class="eyebrow">How to</div>
+      <h2>使い方</h2>
+      <ol class="steps">
+        <li><h3>種類を選ぶ</h3><p>左の一覧から植物を選びます。一覧の画像は実際の描画結果です。</p></li>
+        <li><h3>仕立てる</h3><p>高さや葉の量、色を調整。「形をシャッフル」で同じ設定のまま別の個体にできます。</p></li>
+        <li><h3>用途とスタイルを決める</h3><p>近景・中景・遠景と、通常・ローポリを選びます。</p></li>
+        <li><h3>書き出す</h3><p>右上の「書き出す」から形式を選んで保存します。保存すると利用条件の版とURLがファイルに記録されます。</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="ai" class="ai">
+    <div class="wrap">
+      <div class="eyebrow">Vibe coding</div>
+      <h2>AIに頼んで、ゲームへ組み込む。</h2>
+      <p class="section-lead">「Three.js ZIP」には、AI向けの説明書 <code>AI_README.md</code> と、寸法・原点・対応機能をまとめた <code>asset.json</code> が入っています。Claude Code や Codex などのコーディングAIにZIPごと渡せば、植物の大きさや置き方を推測させずに組み込みを進められます。</p>
+      <ol class="steps">
+        <li><h3>ZIPで保存</h3><p>使う植物だけを「Three.js ZIP」で保存します。種類ごとに別のZIPにします。</p></li>
+        <li><h3>プロジェクトに置く</h3><p>ZIPを展開して、植物ごとに別フォルダへ置きます（例：<code>assets/plants/&lt;assetId&gt;/</code>）。</p></li>
+        <li><h3>AIに読ませる</h3><p>まず <code>AI_README.md</code> と <code>asset.json</code> を読むように伝えます。</p></li>
+        <li><h3>範囲を指定する</h3><p>何本・どこに・揺らすかどうかを伝え、足してほしくない機能も書いておきます。</p></li>
+      </ol>
+      <div class="prompt">
+        <div class="prompt-head"><span>AIへの依頼の例</span><button class="copy" type="button" data-copy="prompt-text">コピー</button></div>
+<pre id="prompt-text">assets/plants/ にある FABOTANIC の植物を、このゲームの背景に配置してください。
+まず各フォルダの AI_README.md と asset.json を読み、単位・原点・対応機能を確認してください。
+・既存の scene・renderer・ゲームループ・Three.js はそのまま使う
+・GLBを既存の読み込み処理で静止配置する（風・自動LOD・編集UIは付けない）
+・木は川沿いに10本、草は手前に30株。重なりすぎないように
+・追加・変更するファイルと、入れなかった機能を最後に一覧にする</pre>
+      </div>
+      <ul class="tips">
+        <li><b>基本は静止配置</b>GLBを既存の読み込み処理に渡すのがいちばん軽く、依存も増えません。付属コードは、風や距離切替が必要なときだけ使います。</li>
+        <li><b>揺らすなら明示する</b>付属の読み込み関数は、風に対応した素材では既定で風が有効になります。静止させたいときは <code>windEnabled: false</code> を指定するよう伝えてください。</li>
+        <li><b>林や山肌を埋めるなら遠景</b>通常スタイルの樹木9系統を遠景で書き出したZIPには、区画ごとにまとめて描く配置用コード（<code>loadBackgroundForest</code>）が付きます。数千本規模の背景に向いています。</li>
+        <li><b>別の日のZIPは別フォルダに</b>同じ名前のファイルを上書きすると、以前の素材が壊れます。<code>assetId</code> ごとのフォルダで管理するよう伝えておくと安全です。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="terms">
+    <div class="wrap">
+      <div class="eyebrow">License</div>
+      <h2>利用条件の要点</h2>
+      <div class="terms">
+        <div class="term"><span class="tag">OK</span><p>ゲーム・映像・広告・Web・アプリ・受託制作などの作品に、商用でも組み込めます。加工も自由です。</p></div>
+        <div class="term"><span class="tag">任意</span><p>作品内のクレジットは任意です。記載していただける場合は「植物素材：FABOTANIC（AMIX）」のようにどうぞ。</p></div>
+        <div class="term"><span class="tag no">不可</span><p>素材そのものを素材集・アセットパック・NFTなどとして配布・販売することはできません。無料配布も同じです。</p></div>
+        <div class="term"><span class="tag">MIT</span><p>ZIPに付く読み込み用コードは、対象ファイルに限りMITライセンスです。</p></div>
+      </div>
+      <p class="note">詳しくは<a href="license/1.0.0.html">ライセンスと利用条件（条件版 1.0.0）</a>をご確認ください。要約より条件本文が優先します。</p>
+    </div>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="eyebrow">FAQ</div>
+      <h2>よくある質問</h2>
+      <details><summary>無料で使えますか？</summary><p>無料です。アカウント登録も不要です。</p></details>
+      <details><summary>作った植物を商用のゲームや映像に使えますか？</summary><p>使えます。ゲーム・映像・広告・Web・受託制作などの作品に組み込めます。作品内のクレジットは任意です。素材そのものを素材集として配布・販売することはできません。</p></details>
+      <details><summary>作ったデータはサーバーへ送信されますか？</summary><p>入力した設定や作った素材は送信されません。生成・編集・保存はすべてブラウザの中で行います。なお、ページの閲覧状況はアクセス解析（Cloudflare Web Analytics）で計測しています。詳しくは<a href="https://amix-design.com/privacy/tools">ツールプライバシーポリシー</a>をご確認ください。</p></details>
+      <details><summary>Three.js以外でも使えますか？</summary><p>GLBはglTFの標準形式です。Blenderなど、glTFを読み込めるソフトで開けます。ゲームエンジンで使う場合は、各エンジンのglTF読み込みへの対応をご確認ください。風や自動LODの付属コードは Three.js r185 用です。</p></details>
+      <details><summary>スマートフォンでも使えますか？</summary><p>画面は対応していますが、植物の生成と書き出しには処理の余裕が必要です。PCでのご利用をおすすめします。</p></details>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="wrap">
+      <h2>最初の一本を、仕立ててみる。</h2>
+      <a class="btn btn-primary" href="./">FABOTANICを開く</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="./">FABOTANIC</a> — 草木・植物3D素材ジェネレーター</p>
+    <p>
+      <a href="https://amix-design.com/" target="_blank" rel="noopener">制作：AMIX</a><span class="sep" aria-hidden="true">/</span>
+      <a href="https://amix-design.com/tools" target="_blank" rel="noopener">無料ツール一覧</a><span class="sep" aria-hidden="true">/</span>
+      <a href="https://amix-design.com/term/tools" target="_blank" rel="noopener">利用規約</a><span class="sep" aria-hidden="true">/</span>
+      <a href="license.html">ライセンス</a>
+    </p>
+  </div>
+</footer>
+
+<dialog class="viewer" id="viewer" aria-label="作例を3Dで見る">
+  <div class="viewer-stage" id="viewer-stage" tabindex="-1" autofocus>
+    <div class="viewer-loading" id="viewer-loading"><div class="viewer-loading-inner"><svg class="viewer-logo" viewBox="0 0 435.68 54.93" fill="currentColor" aria-hidden="true" focusable="false"><path d="M39.64,13.13c-6.85-6.05-13.13-7.24-19.9-7.24-1.67,0-2.39,0-3.18.08-.08,3.02-.16,11.54-.16,18.55,10.99-.24,15.05-1.51,15.76-6.29l.88.08c-.4,2.95-.48,5.17-.48,8.36,0,3.34.08,5.49.48,8.28l-.88.08c-.64-5.02-4.78-5.89-15.76-6.13,0,13.13.08,18.39.16,20.94.08,1.83.72,2.79,2.47,3.5l-.08.56c-2.63-.24-7.01-.32-9.39-.32s-6.77.08-9.39.32l-.16-.56c1.75-.72,2.47-1.67,2.55-3.5.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-1.83-.8-2.79-2.55-3.5l.08-.56c2.71.24,7.01.32,14.65.32h21.25c.88,3.26,2.63,7.96,4.3,11.38l-.64.4Z"/><path d="M89.64,53.33l-.16.56c-1.75-.24-7.96-.32-9.63-.32-1.83,0-10.03.08-11.7.32l-.16-.56c2.31-.96,2.71-2.15,1.83-4.3-.64-1.59-1.75-4.14-3.1-7.17h-18.79c-1.19,3.1-2.07,5.57-2.55,7.01-.8,2.71.24,3.74,2.31,4.46l-.16.56c-1.75-.24-6.05-.32-7.8-.32-1.51,0-4.46.08-6.13.32l-.08-.56c1.51-.48,3.1-1.59,4.78-4.7C45.06,35.82,55.41,12.98,60.66.48h1.67c5.01,11.62,16.88,37.41,22.53,48.4,1.19,2.31,3.26,3.98,4.78,4.46ZM64.56,37.02c-2.55-5.73-5.49-12.26-7.88-17.43-2.07,5.17-4.7,11.7-6.85,17.43h14.73Z"/><path d="M107.71,54.05c-5.33,0-11.07-.16-17.51-.48v-.56c1.27-.16,2.47-1.03,2.55-3.18.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-2.31-1.27-3.02-2.55-3.18v-.56c5.57-.32,11.22-.48,15.04-.48,13.93,0,24.44,3.58,24.44,12.5,0,5.33-4.78,11.3-14.89,11.78,13.13,0,20.54,4.94,20.54,13.69,0,7-6.05,15.2-27.62,15.2ZM106.75,5.41c-.08,3.82-.16,9.31-.16,17.91,7.32-.16,9.55-3.82,9.55-9.55,0-5.33-2.39-8.36-9.39-8.36ZM110.02,27.78c-.96,0-2.07.08-3.42.24v1.51c0,12.1.08,17.2.16,19.66.88.08,1.83.08,2.47.08,7,0,11.22-3.5,11.22-10.43,0-5.97-2.95-11.07-10.43-11.07Z"/><path d="M170.75,54.93c-17.35,0-30.01-10.91-30.01-27.46S153.4,0,170.75,0s30.09,10.83,30.09,27.46-12.66,27.46-30.09,27.46ZM170.75,5.02c-9.16,0-14.09,8.04-14.09,22.45s4.94,22.45,14.09,22.45,14.25-8.2,14.25-22.45-5.09-22.45-14.25-22.45Z"/><path d="M249.72,13.45c-5.57-5.02-12.5-7.88-16.16-7.88h-.48v21.89c0,12.34.08,19.82.16,22.37.08,1.83.8,2.79,2.55,3.5l-.16.56c-2.55-.24-7-.32-9.31-.32-2.47,0-6.85.08-9.47.32l-.08-.56c1.75-.72,2.39-1.67,2.47-3.5.08-2.55.16-10.03.16-22.37V5.57h-.4c-3.66,0-10.67,2.95-16.24,7.88l-.56-.48c1.43-4.22,2.63-8.52,3.18-11.62h41.79c.56,3.1,1.67,7.4,3.18,11.62l-.64.48Z"/><path d="M297.17,53.33l-.16.56c-1.75-.24-7.96-.32-9.63-.32-1.83,0-10.03.08-11.7.32l-.16-.56c2.31-.96,2.71-2.15,1.83-4.3-.64-1.59-1.75-4.14-3.1-7.17h-18.79c-1.19,3.1-2.07,5.57-2.55,7.01-.8,2.71.24,3.74,2.31,4.46l-.16.56c-1.75-.24-6.05-.32-7.8-.32-1.51,0-4.46.08-6.13.32l-.08-.56c1.51-.48,3.1-1.59,4.78-4.7,6.77-12.82,17.12-35.66,22.37-48.16h1.67c5.01,11.62,16.88,37.41,22.53,48.4,1.19,2.31,3.26,3.98,4.78,4.46ZM272.09,37.02c-2.55-5.73-5.49-12.26-7.88-17.43-2.07,5.17-4.7,11.7-6.85,17.43h14.73Z"/><path d="M351.78,1.59c-1.75.8-2.39,1.43-2.63,4.14-.32,3.74-.4,9.47-.4,21.73s0,21.49.08,26.67h-5.65c-15.6-17.27-27.78-30.73-37.81-41.24.16,3.9.24,8.52.32,14.57.08,10.03.72,18.15,1.19,21.73.32,2.63,1.04,3.42,2.63,4.14l-.16.56c-1.75-.24-4.7-.32-6.05-.32-1.27,0-3.5.08-5.41.32l-.16-.56c1.75-.8,2.39-1.43,2.55-3.18.32-4.7.48-10.43.48-22.69,0-6.61-.08-13.13-.16-16.32-.08-5.33-2.23-7.64-5.01-9.55l.16-.56c2.71.24,5.89.32,8.76.32,2.55,0,5.17-.08,7.56-.16,12.82,14.41,21.81,24.04,31.92,34.31-.08-2.47-.16-5.25-.16-8.04-.16-10.03-.56-17.43-.96-21.49-.4-2.87-1.27-3.66-2.87-4.38l.16-.56c1.67.24,4.14.32,5.65.32,1.67,0,4.06-.08,5.81-.32l.16.56Z"/><path d="M376.78,53.89c-2.63-.24-7-.32-9.39-.32s-6.77.08-9.39.32l-.16-.56c1.75-.72,2.47-1.67,2.55-3.5.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-1.83-.8-2.79-2.55-3.5l.16-.56c2.63.24,6.93.32,9.39.32s6.77-.08,9.39-.32l.08.56c-1.75.72-2.39,1.67-2.47,3.5-.08,2.55-.16,9.95-.16,22.37s.08,19.82.16,22.37c.08,1.83.72,2.79,2.47,3.5l-.08.56Z"/><path d="M383.46,27.46c0-16.72,13.21-27.46,30.49-27.46,8.36,0,16.4,2.55,21.25,7.48l.48,12.58-.72.16c-4.38-10.19-10.59-15.05-18.47-15.05-10.11,0-17.51,8.52-17.51,22.29s7.08,22.13,17.83,22.13c7.64,0,13.61-3.5,18.23-9.95l.64.16-.16,7.64c-4.7,4.3-11.94,7.48-21.09,7.48-17.75,0-30.97-10.91-30.97-27.46Z"/></svg><span id="viewer-loading-text">読み込んでいます…</span></div></div>
+  </div>
+  <div class="viewer-bar">
+    <span class="viewer-title" id="viewer-title"></span>
+    <span class="viewer-actions"><button class="vbtn" type="button" id="viewer-wind" aria-pressed="true">風 オン</button><button class="vbtn" type="button" id="viewer-reset">最初の位置</button><button class="vbtn" type="button" id="viewer-close" aria-label="閉じる">閉じる</button></span>
+  </div>
+  <p class="viewer-hint" id="viewer-hint">ドラッグで見回す · WASD・矢印キー・ホイールで移動</p>
+  <div class="viewer-walk"><button type="button" data-hold="1" aria-label="前へ進む">前へ</button><button type="button" data-hold="-1" aria-label="後ろへ下がる">後ろへ</button></div>
+</dialog>
+
+<script type="module">
+const dlg=document.getElementById('viewer'),stage=document.getElementById('viewer-stage'),loading=document.getElementById('viewer-loading'),loadingText=document.getElementById('viewer-loading-text');
+const hint=document.getElementById('viewer-hint');
+if(matchMedia('(pointer:coarse)').matches)hint.textContent='指でなぞって見回す · 右下のボタンで移動';
+let current=null,token=0;
+async function open(name,label){
+  const my=++token;
+  document.getElementById('viewer-title').textContent=label;
+  loading.hidden=false;loadingText.textContent='読み込んでいます…';
+  dlg.showModal();
+  try{
+    const {openScene}=await import('./about/viewer.js');
+    if(my!==token)return;
+    const v=await openScene(name,stage,{onProgress:(d,n)=>{if(my===token)loadingText.textContent='読み込んでいます… '+d+' / '+n;}});
+    if(my!==token||!dlg.open){v.dispose();return;}
+    current=v;windBtn.textContent=v.wind?'風 オン':'風 オフ';windBtn.setAttribute('aria-pressed',String(v.wind));loading.hidden=true;
+  }catch(e){console.error(e);if(my!==token)return;token++;loadingText.textContent='3Dを表示できませんでした。WebGL2に対応したブラウザでお試しください。';}
+}
+function close(){token++;if(current){current.dispose();current=null;}if(dlg.open)dlg.close();}
+dlg.addEventListener('close',()=>{token++;if(current){current.dispose();current=null;}});
+document.getElementById('viewer-close').addEventListener('click',close);
+document.getElementById('viewer-reset').addEventListener('click',()=>current&&current.reset());
+const windBtn=document.getElementById('viewer-wind');
+windBtn.addEventListener('click',()=>{if(!current)return;const on=current.setWind(!current.wind);windBtn.textContent=on?'風 オン':'風 オフ';windBtn.setAttribute('aria-pressed',String(on));});
+document.querySelectorAll('.enter').forEach(b=>b.addEventListener('click',()=>{
+  const fig=b.closest('figure'),label=(fig.querySelector('figcaption strong')||{}).textContent||'森のはずれ';
+  open(b.dataset.scene,label);
+}));
+document.querySelectorAll('[data-hold]').forEach(b=>{
+  const v=+b.dataset.hold,on=e=>{e.preventDefault();current&&current.setHold(v);},off=()=>current&&current.setHold(0);
+  b.addEventListener('pointerdown',on);b.addEventListener('pointerup',off);b.addEventListener('pointercancel',off);b.addEventListener('pointerleave',off);
+});
+</script>
+<script>
+document.querySelectorAll('[data-copy]').forEach(function(b){
+  b.addEventListener('click',function(){
+    var t=document.getElementById(b.getAttribute('data-copy')).textContent;
+    var done=function(){b.textContent='コピーしました';setTimeout(function(){b.textContent='コピー'},1600)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){})}
+  });
+});
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a423ff399f50fd6b',t:'MTc5MDYxMTYwMw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

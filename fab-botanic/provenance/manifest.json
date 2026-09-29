@@ -1,0 +1,559 @@
+{
+  "source": "https://amix-design.com/tl/fab-botanic/",
+  "entry_path": "/tl/fab-botanic/index.html",
+  "files": [
+    {
+      "url": "https://amix-design.com/tl/common/libs/three/r185/build/three.core.min.js",
+      "path": "tl/common/libs/three/r185/build/three.core.min.js",
+      "bytes": 385386,
+      "sha256": "05b2609338c76cd65daf74f3ac515bc9a5045e1b3b33edc07d8c9bd55250fa90",
+      "content_type": "application/javascript",
+      "local_sha256": "05b2609338c76cd65daf74f3ac515bc9a5045e1b3b33edc07d8c9bd55250fa90"
+    },
+    {
+      "url": "https://amix-design.com/tl/common/libs/three/r185/build/three.module.min.js",
+      "path": "tl/common/libs/three/r185/build/three.module.min.js",
+      "bytes": 365552,
+      "sha256": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6",
+      "content_type": "application/javascript",
+      "local_sha256": "86bcee248b64f44bcfc23c331ae74619061957d59cab040171dcb6fb5900beb6"
+    },
+    {
+      "url": "https://amix-design.com/tl/common/libs/three/r185/examples/jsm/loaders/GLTFLoader.js",
+      "path": "tl/common/libs/three/r185/examples/jsm/loaders/GLTFLoader.js",
+      "bytes": 114959,
+      "sha256": "97642d720f16cc9a0c9844934198e4d0c023bea8e89576d0f7545d03b2d103d2",
+      "content_type": "application/javascript",
+      "local_sha256": "97642d720f16cc9a0c9844934198e4d0c023bea8e89576d0f7545d03b2d103d2"
+    },
+    {
+      "url": "https://amix-design.com/tl/common/libs/three/r185/examples/jsm/utils/BufferGeometryUtils.js",
+      "path": "tl/common/libs/three/r185/examples/jsm/utils/BufferGeometryUtils.js",
+      "bytes": 37621,
+      "sha256": "5c552223a9309883743b80538d6e9cdb45e3227f30d3ec56fb2c39b46e78d595",
+      "content_type": "application/javascript",
+      "local_sha256": "5c552223a9309883743b80538d6e9cdb45e3227f30d3ec56fb2c39b46e78d595"
+    },
+    {
+      "url": "https://amix-design.com/tl/common/libs/three/r185/examples/jsm/utils/SkeletonUtils.js",
+      "path": "tl/common/libs/three/r185/examples/jsm/utils/SkeletonUtils.js",
+      "bytes": 11535,
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "content_type": "application/javascript",
+      "local_sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/forest-2000.jpg",
+      "path": "tl/fab-botanic/about/forest-2000.jpg",
+      "bytes": 764022,
+      "sha256": "4553fbff040d0a406964c9b96858f87549e9542c85a99209609f03afc200326f",
+      "content_type": "image/jpeg",
+      "local_sha256": "4553fbff040d0a406964c9b96858f87549e9542c85a99209609f03afc200326f"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/lowpoly-1200.jpg",
+      "path": "tl/fab-botanic/about/lowpoly-1200.jpg",
+      "bytes": 140921,
+      "sha256": "2ec2886722f7a844a6db041ea8501939907021e5f7c1d1a283cf6e9001b80b4c",
+      "content_type": "image/jpeg",
+      "local_sha256": "2ec2886722f7a844a6db041ea8501939907021e5f7c1d1a283cf6e9001b80b4c"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/meadow-1200.jpg",
+      "path": "tl/fab-botanic/about/meadow-1200.jpg",
+      "bytes": 363535,
+      "sha256": "6ac28504027c63cf89da274da5e429160952a0e2f2e0ddf551a3966b9a5c4166",
+      "content_type": "image/jpeg",
+      "local_sha256": "6ac28504027c63cf89da274da5e429160952a0e2f2e0ddf551a3966b9a5c4166"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/mizukiri-1200.jpg",
+      "path": "tl/fab-botanic/about/mizukiri-1200.jpg",
+      "bytes": 223525,
+      "sha256": "b8f07ea825a0c6fcb8ffd4463fba10624cc13efbd21d2d31e92798c7dc3b8fe4",
+      "content_type": "image/jpeg",
+      "local_sha256": "b8f07ea825a0c6fcb8ffd4463fba10624cc13efbd21d2d31e92798c7dc3b8fe4"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-cedar.glb",
+      "path": "tl/fab-botanic/about/scenes/b-cedar.glb",
+      "bytes": 80576,
+      "sha256": "2dda059ce95d0ed3afae058beafc30b6b5151301f9076d47391c2e5bd18f1759",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "2dda059ce95d0ed3afae058beafc30b6b5151301f9076d47391c2e5bd18f1759"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-daisy.glb",
+      "path": "tl/fab-botanic/about/scenes/b-daisy.glb",
+      "bytes": 246172,
+      "sha256": "dc3abc44f651a7f00a3405f8972316b6157a870b58d5d18916b423ae8e93c7a8",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "dc3abc44f651a7f00a3405f8972316b6157a870b58d5d18916b423ae8e93c7a8"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-fern.glb",
+      "path": "tl/fab-botanic/about/scenes/b-fern.glb",
+      "bytes": 404660,
+      "sha256": "fcba6c326e88dfe55cf6f71cbff635e64c4e76621285074e738c47236460e918",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "fcba6c326e88dfe55cf6f71cbff635e64c4e76621285074e738c47236460e918"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-fir.glb",
+      "path": "tl/fab-botanic/about/scenes/b-fir.glb",
+      "bytes": 55548,
+      "sha256": "8171b821a86e4c73f104826e5b68a41d5a4fe603ec7349654903e0b75e786cb3",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "8171b821a86e4c73f104826e5b68a41d5a4fe603ec7349654903e0b75e786cb3"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-ginkgo.glb",
+      "path": "tl/fab-botanic/about/scenes/b-ginkgo.glb",
+      "bytes": 80888,
+      "sha256": "1362012b5e24ee29554c262fadeabcf3e6f193c78ea06cdb8d0e39c508fc93cb",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "1362012b5e24ee29554c262fadeabcf3e6f193c78ea06cdb8d0e39c508fc93cb"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-grass.glb",
+      "path": "tl/fab-botanic/about/scenes/b-grass.glb",
+      "bytes": 101576,
+      "sha256": "100688e7d6bfeda544749939ed0b15582521403d1d74144375b733c55da64656",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "100688e7d6bfeda544749939ed0b15582521403d1d74144375b733c55da64656"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-maple.glb",
+      "path": "tl/fab-botanic/about/scenes/b-maple.glb",
+      "bytes": 88796,
+      "sha256": "2fa9a3ee8507d0e2bb089f4383fb9f5093b77f1bdc61aa86bd2e6d3f448867e5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "2fa9a3ee8507d0e2bb089f4383fb9f5093b77f1bdc61aa86bd2e6d3f448867e5"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-meadow.glb",
+      "path": "tl/fab-botanic/about/scenes/b-meadow.glb",
+      "bytes": 131992,
+      "sha256": "aa451cc26bd3171ba45c8f4ef777d4439bd029d21f75ba90e46453c662bd409d",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "aa451cc26bd3171ba45c8f4ef777d4439bd029d21f75ba90e46453c662bd409d"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-meadowb.glb",
+      "path": "tl/fab-botanic/about/scenes/b-meadowb.glb",
+      "bytes": 154276,
+      "sha256": "626e666e8d5c065dd5134096c444c6db78332865cfc7cfbaca2c27a5a658d652",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "626e666e8d5c065dd5134096c444c6db78332865cfc7cfbaca2c27a5a658d652"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-meadowc.glb",
+      "path": "tl/fab-botanic/about/scenes/b-meadowc.glb",
+      "bytes": 141464,
+      "sha256": "de1c65bb2bfb6584c5937cf132954f736bd7831c7ed1b8a905e00150995e35f0",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "de1c65bb2bfb6584c5937cf132954f736bd7831c7ed1b8a905e00150995e35f0"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-oak.glb",
+      "path": "tl/fab-botanic/about/scenes/b-oak.glb",
+      "bytes": 98140,
+      "sha256": "ea1052985734326b68ba79cebc17c8fda96bc97fde2ec7bc79523faccb8f403d",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "ea1052985734326b68ba79cebc17c8fda96bc97fde2ec7bc79523faccb8f403d"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-poppy.glb",
+      "path": "tl/fab-botanic/about/scenes/b-poppy.glb",
+      "bytes": 179136,
+      "sha256": "8d1f21d3c640942225d957e6355418789f17ac69b807e24118dc1faaf56d30c5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "8d1f21d3c640942225d957e6355418789f17ac69b807e24118dc1faaf56d30c5"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-yarrow.glb",
+      "path": "tl/fab-botanic/about/scenes/b-yarrow.glb",
+      "bytes": 325580,
+      "sha256": "e126e4e09173556d9b41e916dc561ce50e7aeca3d25ce62449de16767fb32da5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "e126e4e09173556d9b41e916dc561ce50e7aeca3d25ce62449de16767fb32da5"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/b-zelkova.glb",
+      "path": "tl/fab-botanic/about/scenes/b-zelkova.glb",
+      "bytes": 90696,
+      "sha256": "b1ab83b39ac823fdd418362dd51785d8a08294dd8102b2a707edeb3a007f6c42",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b1ab83b39ac823fdd418362dd51785d8a08294dd8102b2a707edeb3a007f6c42"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-cherry.glb",
+      "path": "tl/fab-botanic/about/scenes/l-cherry.glb",
+      "bytes": 953240,
+      "sha256": "81f982ffc26cf93120107dea9a1a808d4efe7c9e145c47729db8eecfa773a1f1",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "81f982ffc26cf93120107dea9a1a808d4efe7c9e145c47729db8eecfa773a1f1"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-daisy.glb",
+      "path": "tl/fab-botanic/about/scenes/l-daisy.glb",
+      "bytes": 361772,
+      "sha256": "94935e8c37196cbbbd08ae59cb8a334a423c3574e40b038ce7fe06b50f563e0c",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "94935e8c37196cbbbd08ae59cb8a334a423c3574e40b038ce7fe06b50f563e0c"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-fern.glb",
+      "path": "tl/fab-botanic/about/scenes/l-fern.glb",
+      "bytes": 671924,
+      "sha256": "c0923603a656066dc94d3cae506e4e553543a67b56f3f63172cd58ce313accba",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "c0923603a656066dc94d3cae506e4e553543a67b56f3f63172cd58ce313accba"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-fir.glb",
+      "path": "tl/fab-botanic/about/scenes/l-fir.glb",
+      "bytes": 1045816,
+      "sha256": "83098535ed0d4171af8f0bdf24fd047b68358281af06a964e3ec7bbe91de9e1c",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "83098535ed0d4171af8f0bdf24fd047b68358281af06a964e3ec7bbe91de9e1c"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-grass.glb",
+      "path": "tl/fab-botanic/about/scenes/l-grass.glb",
+      "bytes": 47220,
+      "sha256": "d779afd4352c1a380520ce35ffcb2f8baee4bf4996ab58ef70cdd8e01910e211",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "d779afd4352c1a380520ce35ffcb2f8baee4bf4996ab58ef70cdd8e01910e211"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-meadow.glb",
+      "path": "tl/fab-botanic/about/scenes/l-meadow.glb",
+      "bytes": 317716,
+      "sha256": "879baa24e18f3ae51075c945abbd33d1a4e97599d232eb494bd32a398223bfe8",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "879baa24e18f3ae51075c945abbd33d1a4e97599d232eb494bd32a398223bfe8"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-oak.glb",
+      "path": "tl/fab-botanic/about/scenes/l-oak.glb",
+      "bytes": 210444,
+      "sha256": "508ca373cab6cabc3dfb14b1b70c657c4083d5a48f370fe0f9dd849cd7ed7303",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "508ca373cab6cabc3dfb14b1b70c657c4083d5a48f370fe0f9dd849cd7ed7303"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-pine.glb",
+      "path": "tl/fab-botanic/about/scenes/l-pine.glb",
+      "bytes": 491404,
+      "sha256": "9e35f7b4b95282e2e56f45a03392ceab4046ec571fa55b24aa94c390cbebe1c5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "9e35f7b4b95282e2e56f45a03392ceab4046ec571fa55b24aa94c390cbebe1c5"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/l-tree.glb",
+      "path": "tl/fab-botanic/about/scenes/l-tree.glb",
+      "bytes": 210444,
+      "sha256": "8d456a867fdbc82491bff0f691c88c4310910ede28585786c4537ec41fcb12ad",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "8d456a867fdbc82491bff0f691c88c4310910ede28585786c4537ec41fcb12ad"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-daisy.glb",
+      "path": "tl/fab-botanic/about/scenes/m-daisy.glb",
+      "bytes": 301232,
+      "sha256": "036c3beff46c40ab4a9d90a740ce483f3d5adea56acf1b28124fd85ac1b330d9",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "036c3beff46c40ab4a9d90a740ce483f3d5adea56acf1b28124fd85ac1b330d9"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-fern.glb",
+      "path": "tl/fab-botanic/about/scenes/m-fern.glb",
+      "bytes": 705180,
+      "sha256": "84865f08bca2750c2b92a44fe2f29de1e0f92493453f611141b6ebc09e8f1b01",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "84865f08bca2750c2b92a44fe2f29de1e0f92493453f611141b6ebc09e8f1b01"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-grass.glb",
+      "path": "tl/fab-botanic/about/scenes/m-grass.glb",
+      "bytes": 216388,
+      "sha256": "b361d31ec42a1e973ad2d0be88405c66f618fac127212d495ba79ae63c1bf021",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b361d31ec42a1e973ad2d0be88405c66f618fac127212d495ba79ae63c1bf021"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-meadow.glb",
+      "path": "tl/fab-botanic/about/scenes/m-meadow.glb",
+      "bytes": 275932,
+      "sha256": "825749ccc67643b0b1ba33ccf9903743afedfc72736f711063a804d441892485",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "825749ccc67643b0b1ba33ccf9903743afedfc72736f711063a804d441892485"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-meadowb.glb",
+      "path": "tl/fab-botanic/about/scenes/m-meadowb.glb",
+      "bytes": 231324,
+      "sha256": "260b69808837e28649d71ddd270fa00e8a48a93b894948a296e2b4ef80b3818c",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "260b69808837e28649d71ddd270fa00e8a48a93b894948a296e2b4ef80b3818c"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-meadowc.glb",
+      "path": "tl/fab-botanic/about/scenes/m-meadowc.glb",
+      "bytes": 213988,
+      "sha256": "49ba937ab0d1b4f64872b1fd4eb3f97e161e41bdfb22c80d6d31e57b8c849af6",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "49ba937ab0d1b4f64872b1fd4eb3f97e161e41bdfb22c80d6d31e57b8c849af6"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-oak.glb",
+      "path": "tl/fab-botanic/about/scenes/m-oak.glb",
+      "bytes": 1039544,
+      "sha256": "95a4f7b45f722424bae3e55b21f091785160a7787223780cf4f027c14c4235ed",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "95a4f7b45f722424bae3e55b21f091785160a7787223780cf4f027c14c4235ed"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-poppy.glb",
+      "path": "tl/fab-botanic/about/scenes/m-poppy.glb",
+      "bytes": 189800,
+      "sha256": "0dd7d1e48b3aebef93fc33ee62fb983411fa28276969db9fad769bbc9f889f88",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "0dd7d1e48b3aebef93fc33ee62fb983411fa28276969db9fad769bbc9f889f88"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-yarrow.glb",
+      "path": "tl/fab-botanic/about/scenes/m-yarrow.glb",
+      "bytes": 494820,
+      "sha256": "dbffd08c933bbd21fea58391c291e1ad231c0f438981ab32568c7a6c4c3a090a",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "dbffd08c933bbd21fea58391c291e1ad231c0f438981ab32568c7a6c4c3a090a"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/m-zelkova.glb",
+      "path": "tl/fab-botanic/about/scenes/m-zelkova.glb",
+      "bytes": 964736,
+      "sha256": "cd60ea7ede16e5cfb3208d75195159723c315567df34e56cf57be97ad1c5fe8f",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "cd60ea7ede16e5cfb3208d75195159723c315567df34e56cf57be97ad1c5fe8f"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-cherry-1.glb",
+      "path": "tl/fab-botanic/about/scenes/n-cherry-1.glb",
+      "bytes": 2296368,
+      "sha256": "e384754a10dff513c8f2fc40aaf4bc21076802faa2af2033303b930957b49959",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "e384754a10dff513c8f2fc40aaf4bc21076802faa2af2033303b930957b49959"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-cycad.glb",
+      "path": "tl/fab-botanic/about/scenes/n-cycad.glb",
+      "bytes": 2333676,
+      "sha256": "f1a09f4c3ce1a9a5937bb34619bc32cc3ef16ab038844afaab49a8453ff3c399",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "f1a09f4c3ce1a9a5937bb34619bc32cc3ef16ab038844afaab49a8453ff3c399"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-daisy.glb",
+      "path": "tl/fab-botanic/about/scenes/n-daisy.glb",
+      "bytes": 399548,
+      "sha256": "f1ba7c1f0217d33c588c9a6e458fc7920ad02a76f58f08c1f44d3dc4cfd9f12d",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "f1ba7c1f0217d33c588c9a6e458fc7920ad02a76f58f08c1f44d3dc4cfd9f12d"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-fern.glb",
+      "path": "tl/fab-botanic/about/scenes/n-fern.glb",
+      "bytes": 1113800,
+      "sha256": "9d70d6ae29a9da8adcac99bf47a4e7f7b88fcb67efd5f42264e07773d13c1b09",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "9d70d6ae29a9da8adcac99bf47a4e7f7b88fcb67efd5f42264e07773d13c1b09"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-ficus.glb",
+      "path": "tl/fab-botanic/about/scenes/n-ficus.glb",
+      "bytes": 315624,
+      "sha256": "8a1991e25346c1a5bc4a64ed9a98b1fa0891cfc0faf8a24976d2df94430eb13e",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "8a1991e25346c1a5bc4a64ed9a98b1fa0891cfc0faf8a24976d2df94430eb13e"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-grass.glb",
+      "path": "tl/fab-botanic/about/scenes/n-grass.glb",
+      "bytes": 299852,
+      "sha256": "6130c907b43717a6f60f9812bf12cba3883818832c16d85dd249f51930ab2c6b",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "6130c907b43717a6f60f9812bf12cba3883818832c16d85dd249f51930ab2c6b"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-hardleaf.glb",
+      "path": "tl/fab-botanic/about/scenes/n-hardleaf.glb",
+      "bytes": 390692,
+      "sha256": "de5fc4807aaf5fe63d668ba0a06a3d8bc3611871da0a94d2aa0c1f660201e243",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "de5fc4807aaf5fe63d668ba0a06a3d8bc3611871da0a94d2aa0c1f660201e243"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-meadow.glb",
+      "path": "tl/fab-botanic/about/scenes/n-meadow.glb",
+      "bytes": 405904,
+      "sha256": "b79531a912f33b7a0eff35abae2f9420511ede65265ee7b80a57ee195e7a2763",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "b79531a912f33b7a0eff35abae2f9420511ede65265ee7b80a57ee195e7a2763"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-meadowb.glb",
+      "path": "tl/fab-botanic/about/scenes/n-meadowb.glb",
+      "bytes": 845064,
+      "sha256": "ae22f09ee57c8929a73c48a91f06776a473ccbeee9311b9f36bc4fe5fd4153df",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "ae22f09ee57c8929a73c48a91f06776a473ccbeee9311b9f36bc4fe5fd4153df"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-meadowc.glb",
+      "path": "tl/fab-botanic/about/scenes/n-meadowc.glb",
+      "bytes": 875292,
+      "sha256": "6cac33926a070218901a51542be77339e578d60d41a4a92c6e7679bed91b10a3",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "6cac33926a070218901a51542be77339e578d60d41a4a92c6e7679bed91b10a3"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-oak-1.glb",
+      "path": "tl/fab-botanic/about/scenes/n-oak-1.glb",
+      "bytes": 1258888,
+      "sha256": "e66ccfea82bd4cd9b9a1fa7c5b2079e00c198fbde240f16e84f3aedc6e3fe8b5",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "e66ccfea82bd4cd9b9a1fa7c5b2079e00c198fbde240f16e84f3aedc6e3fe8b5"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-palmfan.glb",
+      "path": "tl/fab-botanic/about/scenes/n-palmfan.glb",
+      "bytes": 629092,
+      "sha256": "91119821d3206b11115c1798a49cd190440e1e113233b0f716cd825fc91b82be",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "91119821d3206b11115c1798a49cd190440e1e113233b0f716cd825fc91b82be"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-palmpinnate.glb",
+      "path": "tl/fab-botanic/about/scenes/n-palmpinnate.glb",
+      "bytes": 1612412,
+      "sha256": "f53021753ea92ef9be0b7040fc1e3ed3346b18a588d2d448a45d1e03d2ec4ef2",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "f53021753ea92ef9be0b7040fc1e3ed3346b18a588d2d448a45d1e03d2ec4ef2"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-poppy.glb",
+      "path": "tl/fab-botanic/about/scenes/n-poppy.glb",
+      "bytes": 223800,
+      "sha256": "809373f67f80ece902d64fff2a9f02f7c5ae12ef75f0612a7a22b9151fda5a46",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "809373f67f80ece902d64fff2a9f02f7c5ae12ef75f0612a7a22b9151fda5a46"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-splitleaf.glb",
+      "path": "tl/fab-botanic/about/scenes/n-splitleaf.glb",
+      "bytes": 673444,
+      "sha256": "414b2a1f629b420f853f262dc0fdc43040c899665dadbf6f9f82f5c636e1ad9b",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "414b2a1f629b420f853f262dc0fdc43040c899665dadbf6f9f82f5c636e1ad9b"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-succulentb.glb",
+      "path": "tl/fab-botanic/about/scenes/n-succulentb.glb",
+      "bytes": 274444,
+      "sha256": "9f03da8c5d6ca5936d48ca82ea06233841c4b3a96daa0221c53ef1883ca0c633",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "9f03da8c5d6ca5936d48ca82ea06233841c4b3a96daa0221c53ef1883ca0c633"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-tree-1.glb",
+      "path": "tl/fab-botanic/about/scenes/n-tree-1.glb",
+      "bytes": 1154832,
+      "sha256": "59a26a1f3b0e7f63769bd293d1092aaaf8ca17f488f0683c4e2d465167f885ba",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "59a26a1f3b0e7f63769bd293d1092aaaf8ca17f488f0683c4e2d465167f885ba"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-yarrow.glb",
+      "path": "tl/fab-botanic/about/scenes/n-yarrow.glb",
+      "bytes": 694672,
+      "sha256": "76ad11e34cc39e2f0bc6f11aaac0926190a7e5d2a648bcf352de36441859c491",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "76ad11e34cc39e2f0bc6f11aaac0926190a7e5d2a648bcf352de36441859c491"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/scenes/n-zelkova-1.glb",
+      "path": "tl/fab-botanic/about/scenes/n-zelkova-1.glb",
+      "bytes": 1156852,
+      "sha256": "3c2f559f9daa04fd4448f729605de244cd6cdf0487bed531d11484a7d57e56b6",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "3c2f559f9daa04fd4448f729605de244cd6cdf0487bed531d11484a7d57e56b6"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/tropical-1200.jpg",
+      "path": "tl/fab-botanic/about/tropical-1200.jpg",
+      "bytes": 286384,
+      "sha256": "f113533a64a6d493b3b0f9d0999aa4a208472577d47dcda2ed19f4357c9455ad",
+      "content_type": "image/jpeg",
+      "local_sha256": "f113533a64a6d493b3b0f9d0999aa4a208472577d47dcda2ed19f4357c9455ad"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/upstream-1200.jpg",
+      "path": "tl/fab-botanic/about/upstream-1200.jpg",
+      "bytes": 235623,
+      "sha256": "1b59bae7c174fb221720fcb15aa325da6bb620c5364295fc4cdb375a5b6d9785",
+      "content_type": "image/jpeg",
+      "local_sha256": "1b59bae7c174fb221720fcb15aa325da6bb620c5364295fc4cdb375a5b6d9785"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about/viewer.js",
+      "path": "tl/fab-botanic/about/viewer.js",
+      "bytes": 27117,
+      "sha256": "fb8cfe71f8d174a0e56041c0f2091a53e26f282ed8b3bbdffda37b1558ebb426",
+      "content_type": "application/javascript",
+      "local_sha256": "fb8cfe71f8d174a0e56041c0f2091a53e26f282ed8b3bbdffda37b1558ebb426"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/about.html",
+      "path": "tl/fab-botanic/about.html",
+      "bytes": 47433,
+      "sha256": "5e4806fda49540581e2619c40965b42f7bfdcf88fceab5020d47c4a98eae505e",
+      "content_type": "text/html; charset=UTF-8",
+      "local_sha256": "62f771942332723df4ca84d5686a50c65389bb695b8f67b854e439290f615691"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/index.html",
+      "path": "tl/fab-botanic/index.html",
+      "bytes": 1527360,
+      "sha256": "86b06d0e3aa06bf9a438b5a75e9fd4bf523b5536a170a89afff322db743ac352",
+      "content_type": "text/html; charset=UTF-8",
+      "local_sha256": "6f74100bc743a19248f025c585a8b57359d7ddb5ceb5ee96698b54ca361aa251"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/license/1.0.0.html",
+      "path": "tl/fab-botanic/license/1.0.0.html",
+      "bytes": 22975,
+      "sha256": "34ad201aa8335fec3b419fde6b28483e89c011759a535f07c5744a286f22b4a6",
+      "content_type": "text/html; charset=UTF-8",
+      "local_sha256": "9d4862f1aca6265f8b7ba7218cfe529b88ba5b72f7c27ab8486bb26f729683eb"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/license.html",
+      "path": "tl/fab-botanic/license.html",
+      "bytes": 22975,
+      "sha256": "aca20517beca1d0746d39b6c05ac954bf68d08bddbf74c1e13d7fec5e5a75c9b",
+      "content_type": "text/html; charset=UTF-8",
+      "local_sha256": "9d4862f1aca6265f8b7ba7218cfe529b88ba5b72f7c27ab8486bb26f729683eb"
+    },
+    {
+      "url": "https://amix-design.com/tl/fab-botanic/ogp/ogp.jpg",
+      "path": "tl/fab-botanic/ogp/ogp.jpg",
+      "bytes": 341606,
+      "sha256": "8f9488ffcc3e153074ba9ee82f5ffe83740963105333ce5a7a1d4758975a29b6",
+      "content_type": "image/jpeg",
+      "local_sha256": "8f9488ffcc3e153074ba9ee82f5ffe83740963105333ce5a7a1d4758975a29b6"
+    }
+  ],
+  "failed": {}
+}
