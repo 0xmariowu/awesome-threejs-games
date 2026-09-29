@@ -9,7 +9,7 @@ import {loadPages} from './pages.mjs';
 import {loadDemos, sourceManifest} from './demos.mjs';
 
 export const BASE = '/awesome-threejs-games/';
-export const VIDEO_LIMIT = 12_000_000;
+export const VIDEO_LIMIT = 6_000_000;
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const decodeText = bytes => { try { return new TextDecoder('utf-8',{fatal:true}).decode(bytes); } catch { return null; } };
 const json = async file => JSON.parse(await readFile(file, 'utf8'));
@@ -94,7 +94,7 @@ export async function prepareVideo(root, slug, out) {
   const artifact = path.join(root,'media-web',slug,'overview.mp4');
   if (await exists(source)) {
     const hash = createHash('sha256').update(await readFile(source)).digest('hex');
-    const cache = path.join(root,'output/media-encodes',hash+'-720p30-high-v1.mp4');
+    const cache = path.join(root,'output/media-encodes',hash+'-720p30-high-v2-6mb.mp4');
     await mkdir(path.dirname(cache),{recursive:true});
     if (!await exists(cache)) {
       const probe = spawnSync('ffprobe',['-v','error','-show_entries','format=duration','-of','json',source],{encoding:'utf8'});
@@ -110,7 +110,7 @@ export async function prepareVideo(root, slug, out) {
         '-crf','26','-maxrate',String(bitrate),'-bufsize',String(bitrate),
         '-pix_fmt','yuv420p','-movflags','+faststart','-an',temp],{encoding:'utf8'});
       if (encode.status !== 0) throw new Error('ffmpeg failed: '+encode.stderr);
-      if ((await stat(temp)).size > VIDEO_LIMIT) throw new Error('Encoded video exceeds 12 MB: '+slug);
+      if ((await stat(temp)).size > VIDEO_LIMIT) throw new Error('Encoded video exceeds 6 MB: '+slug);
       await rename(temp,cache);
       console.log(`Encoded ${slug}: ${(await stat(cache)).size} bytes (source ${hash})`);
     }

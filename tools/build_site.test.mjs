@@ -149,7 +149,9 @@ test('source manifest includes all tracked text roots with sizes, bundles only k
   await writeFile(path.join(root,'media-web/game/overview.mp4'),Buffer.from('video fixture'));
   assert.equal((await prepareVideo(root,'game',path.join(root,'site'))).bytes,13);
   assert.equal(await readFile(path.join(root,'site/media/game/overview.mp4'),'utf8'),'video fixture');
-  await writeFile(path.join(root,'media-web/game/overview.mp4'),Buffer.alloc(12_000_001));
+  await writeFile(path.join(root,'media-web/game/overview.mp4'),Buffer.alloc(6_000_000));
+  assert.equal((await prepareVideo(root,'game',path.join(root,'site'))).bytes,6_000_000);
+  await writeFile(path.join(root,'media-web/game/overview.mp4'),Buffer.alloc(6_000_001));
   await assert.rejects(prepareVideo(root,'game',path.join(root,'site')),/Invalid video size/);
 });
 
