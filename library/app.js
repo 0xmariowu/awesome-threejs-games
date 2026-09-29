@@ -183,12 +183,7 @@ class Library {
     try { popup.location.replace(await this.launchURL(id)); }
     catch (error) { popup.close(); this.flash(error.message); }
   };
-  openTool = slug => async event => {
-    if (isStatic) return;
-    event.preventDefault();
-    try { window.location.assign(await this.launchURL('tool:' + slug)); }
-    catch (error) { this.flash(error.message); }
-  };
+  openTool = slug => this.play('tool:' + slug);
   async prepareFrame(id) {
     if (isStatic) return;
     try { await this.launchURL(id); this.setState({}); }
@@ -414,7 +409,7 @@ class Library {
         notice:s.lang === 'zh' ? d.license_note_zh : d.license_note,
         steps:d.steps.map(f=>f[s.lang]),can:d.can.map(f=>f[s.lang]).join(' '),cannot:d.cannot.map(f=>f[s.lang]).join(' ')} : null;
       out.proj = { title: d.title, tagline: this.loc(d, 'tagline'), play: tool ? (d.hosted ? d.launch?.url : d.url) : d.project?.launch?.url || '#', launch: tool ? (d.hosted ? this.openTool(r.slug) : undefined) : this.play('game:' + r.slug), gh: d.source_url,
-        sameTab:tool && d.hosted,srcHref: tool ? d.url : `#/source/${r.slug}`, openSource: tool ? undefined : this.nav(`/source/${r.slug}`), video: d.overview_video?.url, poster: siteURL(`/previews/${r.slug}.webp`),
+        srcHref: tool ? d.url : `#/source/${r.slug}`, openSource: tool ? undefined : this.nav(`/source/${r.slug}`), video: d.overview_video?.url, poster: siteURL(`/previews/${r.slug}.webp`),
         badge: this.badge(p.runnability), note: this.loc(p.runnability, 'review_note') || '', hasExamples: exs.length > 0, noExamples: !exs.length,
         examples: exs.map((ex, i) => {
           const running = s.runEx === ex.id;

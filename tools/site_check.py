@@ -320,7 +320,8 @@ class Checker:
             if tool.get('hosted'):
                 expect(link).to_have_attribute('href', tool['launch']['url'])
                 assert tool['launch']['url'].startswith(PREFIX+'tools-app/'+tool['slug']+'/')
-                assert link.get_attribute('target') in (None, '_self'), 'Hosted tool must use the same tab'
+                expect(link).to_have_attribute('target', '_blank')
+                assert 'noopener' in (link.get_attribute('rel') or '').split(), 'Missing noopener'
             else:
                 external_link(link, tool['url'])
 
@@ -407,24 +408,29 @@ class Checker:
             def hosted_check():
                 url = hosted['launch']['url']
                 assert url.startswith(PREFIX+'tools-app/'+hosted['slug']+'/')
-                # Exercise both actual buttons and their same-tab navigation.
+                # Check both links, then load the hosted copy in a separate page.
                 for route, selector in [('tools', '.tool-card[data-slug="'+hosted['slug']+'"] .tool-open'),
                                         ('t/'+hosted['slug'], '.project-actions .play-button')]:
                     assert page.goto(self.base+route).status == 200
                     link = page.locator(selector)
                     expect(link).to_have_attribute('href', url)
-                    assert link.get_attribute('target') in (None, '_self')
-                    link.click()
-                    expect(page).to_have_url(urljoin(self.base,url))
-                    expect(page.locator('#speciesList .species-card').first).to_be_visible(timeout=90000)
-                    if hosted['slug'] == 'fab-botanic':
-                        expect(page.get_by_role('heading',name='植物标本工坊',exact=True)).to_be_visible()
-                        page.wait_for_function('window.verdant?.plant && !window.verdant.renderer.dataOnly',timeout=90000)
-                    page.wait_for_timeout(3000)
-                    self.capture(page,hosted['slug']+'-hosted',page.locator('canvas').first)
-                    assert len(context.pages) == 1, 'Hosted launch opened another tab'
-                    assert not self.current['console_errors'], 'Hosted tool logged console errors'
-                    assert not self.current['errors'], 'Hosted tool had failed requests or runtime errors'
+                    expect(link).to_have_attribute('target', '_blank')
+                    assert 'noopener' in (link.get_attribute('rel') or '').split(), 'Missing noopener'
+                    hosted_page = context.new_page()
+                    try:
+                        assert hosted_page.goto(urljoin(self.base,url)).status == 200
+                        expect(hosted_page).to_have_url(urljoin(self.base,url))
+                        expect(hosted_page.locator('#speciesList .species-card').first).to_be_visible(timeout=90000)
+                        if hosted['slug'] == 'fab-botanic':
+                            expect(hosted_page.get_by_role('heading',name='植物标本工坊',exact=True)).to_be_visible()
+                            hosted_page.wait_for_function('window.verdant?.plant && !window.verdant.renderer.dataOnly',timeout=90000)
+                        hosted_page.wait_for_timeout(3000)
+                        self.capture(hosted_page,hosted['slug']+'-hosted',hosted_page.locator('canvas').first)
+                        expect(page).to_have_url(self.base+route)
+                        assert not self.current['console_errors'], 'Hosted tool logged console errors'
+                        assert not self.current['errors'], 'Hosted tool had failed requests or runtime errors'
+                    finally:
+                        hosted_page.close()
             self.run('hosted-tool', hosted['slug'], hosted_check, hosted['slug'])
 
     def finish(self):

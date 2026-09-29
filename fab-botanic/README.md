@@ -22,5 +22,5 @@ Open <http://127.0.0.1:8107/> (redirects to `/tl/fab-botanic/index.html`). The s
 
 - Captured 2026-09-29 from the original site: generator page (`tl/fab-botanic/index.html`), guide and 3D gallery (`about.html`, `about/`), terms pages and the shared Three.js r185 runtime under `tl/common/`.
 - The Cloudflare challenge/analytics script injected by the host was removed.
-- The generator page's interface text (`tl/fab-botanic/index.html`) was translated from Japanese into Chinese/English for this site (labels, buttons and plant display names only; generation logic unchanged). The author's original page is kept byte-for-byte in `provenance/original-text/tl/fab-botanic/index.html`.
+- The generator page's interface text (`tl/fab-botanic/index.html`) was translated from Japanese into Chinese/English for this site, including the text written into exported files (READMEs, license notes, metadata); generation logic, data keys and file names are unchanged. The author's original page is kept byte-for-byte in `provenance/original-text/tl/fab-botanic/index.html`.
 - Original byte hashes: [provenance/manifest.json](provenance/manifest.json). Source reading map: [TECHNICAL.md](TECHNICAL.md).
