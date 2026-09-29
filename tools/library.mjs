@@ -6,6 +6,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildIndex, search, context, readSource, sha256 } from './library-index.mjs';
 import { createServer, sendFile, mime } from './server.mjs';
+import { loadTools, toolSummary, toolDetail } from './tools.mjs';
 import { loadPages } from './pages.mjs';
 import { loadDemos, sourceManifest } from './demos.mjs';
 
@@ -13,11 +14,12 @@ const sleep = ms => new Promise(resolve=>setTimeout(resolve,ms));
 const listen = (server,port) => new Promise((resolve,reject)=>{server.once('error',reject);server.listen(port,'127.0.0.1',resolve);});
 export async function createLibrary({index, launcher} = {}) {
   index ||= await buildIndex();
+  const tools = await loadTools(index.root);
   let manifest;
   const getManifest = () => manifest ||= sourceManifest(index.root, index.games);
   const token = randomBytes(32).toString('hex');
   const owned = new Set(), pending = new Map();
-  const publicIndex = () => ({schema_version:index.schema_version,generated_at:index.generated_at,counts:index.counts,
+  const publicIndex = () => ({schema_version:index.schema_version,generated_at:index.generated_at,counts:{...index.counts,tool:tools.length},
     records:index.records,category_names:index.category_names,category_names_en:index.category_names_en,lab_error:index.labError,token,thumbnails:Object.keys(index.thumbnails)});
   const fail = (status,message) => {throw Object.assign(new Error(message),{status});};
   const project = slug => {
@@ -106,6 +108,9 @@ export async function createLibrary({index, launcher} = {}) {
     try {
       const url=new URL(req.url,origin);
       // Both live and Pages clients consume the same public data paths.
+      if (url.pathname === '/data/tools.json') url.pathname = '/api/tools';
+      const toolRoute = /^\/data\/tool\/([a-z0-9-]+)\.json$/.exec(url.pathname);
+      if (toolRoute) { url.pathname = '/api/tool'; url.searchParams.set('slug',toolRoute[1]); }
       if (url.pathname === '/data/pages.json') url.pathname = '/api/pages';
       if (url.pathname === '/data/demos.json') url.pathname = '/api/demos';
       const detail = /^\/data\/page\/([a-z0-9-]+)\.json$/.exec(url.pathname);
@@ -146,6 +151,17 @@ export async function createLibrary({index, launcher} = {}) {
         return send(200,await readFile(path.join(index.root,file)),'image/png');
       }
       try {
+        if (url.pathname === '/api/tools' || url.pathname === '/api/tool') {
+          const {videos} = await loadPages(index.root);
+          const overview = tool => {
+            const row = videos.get(tool.overview_video);
+            return {url:row ? `/media-web/${tool.slug}/overview.mp4`:null,poster:`/previews/${tool.slug}.webp`,duration:row?.duration};
+          };
+          if (url.pathname === '/api/tools') return send(200,{tools:tools.map(tool=>toolSummary(tool,overview(tool)))});
+          const tool = tools.find(tool=>tool.slug===url.searchParams.get('slug'));
+          if (!tool) return send(404,{error:'Unknown tool'});
+          return send(200,toolDetail(tool,overview(tool),index.records));
+        }
         if(url.pathname==='/api/demos')return send(200,await loadDemos(index));
         if(url.pathname==='/api/pages') {
           const {pages,errors,videos}=await loadPages(index.root);
@@ -207,6 +223,11 @@ export async function createLibrary({index, launcher} = {}) {
         // Check the raw path before URL normalization can erase traversal segments.
         const pathname=decodeURIComponent(req.url.split('?')[0]);
         if(!pathname.startsWith('/') || /[\\\0]/.test(pathname) || pathname.split('/').some(part=>part==='.' || part==='..'))return send(404,{error:'Unknown library route'});
+        if (/^\/media-web\/[a-z0-9-]+\/overview\.mp4$/.test(pathname)) {
+          const absolute = await contained(path.join(index.root,'media-web'),pathname.slice(11));
+          if (await sendFile(req,res,absolute,securityHeaders)) return;
+          return send(404,{error:'Media not found'});
+        }
         if(pathname.startsWith('/media/')) {
           if(!safePath(pathname.slice(1)) || !['.mp4','.vtt','.jpg'].includes(path.extname(pathname)))return send(404,{error:'Media not found'});
           const absolute=await contained(path.join(index.root,'media'),pathname.slice(7));
@@ -218,7 +239,7 @@ export async function createLibrary({index, launcher} = {}) {
         const name=pathname.slice(1),vendor=name.split('/');
         const asset=assets[pathname] || (/^[a-z0-9-]+\.(js|css|html)$/.test(name) ||
           (vendor[0]==='vendor' && vendor.length>=2 && vendor.every(part=>/^[a-z0-9._-]+$/.test(part) && !part.startsWith('.')) && name.endsWith('.js')) ? name:null) ||
-          (/^\/(p|source|demos)\//.test(pathname) || ['/topics','/search','/demos'].includes(pathname) ? 'index.html':null);
+          (/^\/(p|t|source|demos)\//.test(pathname) || ['/topics','/search','/demos','/tools','/tools/'].includes(pathname) ? 'index.html':null);
         if(asset) {
           const absolute=await contained(path.join(index.root,'library'),asset);
           if(!(await stat(absolute)).isFile())return send(404,{error:'File not found'});

@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
+import { loadTools } from './tools.mjs';
 import { loadPages } from './pages.mjs';
 
 const demoCategories = [
@@ -29,7 +30,7 @@ export async function loadDemos(index) {
     ? JSON.parse(await readFile(path.join(index.root,'catalog/lab-i18n.json'),'utf8')) : {};
   const examples = new Map(JSON.parse(await readFile(path.join(index.root,'catalog/examples.json'),'utf8')).examples.map(row=>[row.id,row]));
   const demos = [];
-  for (const page of pages.values()) for (const entry of page.examples) {
+  for (const page of [...pages.values(),...await loadTools(index.root)]) for (const entry of page.examples) {
     const example = examples.get(entry.id), id = `example:${entry.id}`;
     demos.push({id,kind:'example',title:entry.title,one_liner:entry.one_liner,title_en:entry.title_en,one_liner_en:entry.one_liner_en,
       source_label:index.games.find(game=>game.slug===page.slug)?.title || page.title,

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "project": "fab-botanic",
+  "example": "botanic-meadow",
+  "maturity": "independent-implementation",
+  "original_code": true,
+  "candidates": [],
+  "statement": "Independent implementation inspired by FABOTANIC; no FABOTANIC code or assets",
+  "inspiration": {
+    "name": "FABOTANIC",
+    "url": "https://amix-design.com/tl/fab-botanic/",
+    "credit": "AMIX / Haruki Tominaga",
+    "source_accessed": false
+  },
+  "scope": "Original seeded Poisson-disk rejection sampling with noise density, gaps, species affinity, five procedural species, GPU instancing and vertex-shader wind.",
+  "third_party": [
+    {
+      "name": "three.js",
+      "version": "r186",
+      "license": "MIT",
+      "files": [
+        {
+          "source": "antikythera/public/vendor/three/build/three.module.js",
+          "path": "vendor/three/build/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        },
+        {
+          "source": "antikythera/public/vendor/three/build/three.core.js",
+          "path": "vendor/three/build/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "source": "antikythera/public/vendor/three/LICENSE",
+          "path": "vendor/three/LICENSE",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    }
+  ],
+  "repository_support": [
+    {
+      "source": "examples/_shared/ui.js",
+      "path": "src/ui.js",
+      "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+    },
+    {
+      "source": "examples/_shared/ui.css",
+      "path": "src/ui.css",
+      "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+    }
+  ],
+  "files": [
+    {
+      "path": "examples/botanic-meadow/README.md",
+      "sha256": "34f2349ba07d19971270a6bbbaf0ace1c13dc531cb112c70b028ccd70fe22213"
+    },
+    {
+      "path": "examples/botanic-meadow/index.html",
+      "sha256": "c48a39275306f95d43732c37da71d9b0e9eca5fdbd2f9c9a7a4b0921bd8948e6"
+    },
+    {
+      "path": "examples/botanic-meadow/local.json",
+      "sha256": "6dcec336cbf18c172d0c511c99705a554614414dddcb9dd1547ead3d40830900"
+    },
+    {
+      "path": "examples/botanic-meadow/model.test.mjs",
+      "sha256": "6c709669991a969d36504e0da602c6d64fea338f104df7fddb83d2cdb27310b6"
+    },
+    {
+      "path": "examples/botanic-meadow/provenance.test.mjs",
+      "sha256": "105dab8b1662b448ddb4b2b501bca09a28f6664d4f813a72a2598781e97070a8"
+    },
+    {
+      "path": "examples/botanic-meadow/src/geometry.js",
+      "sha256": "69f150fa0474fd563412bb5dc035aacf44caddfdc743490954bcf1c71c8bffb6"
+    },
+    {
+      "path": "examples/botanic-meadow/src/i18n.js",
+      "sha256": "03e85e9d642c62292e6349c954306eb2bec2c8c305c69ab0ae251b8c069b3db6"
+    },
+    {
+      "path": "examples/botanic-meadow/src/main.js",
+      "sha256": "0152d8a662a35ec18ff1cac243a56067f37c4bb88e6e7cf91b2db53afccea27d"
+    },
+    {
+      "path": "examples/botanic-meadow/src/model.mjs",
+      "sha256": "eb28788023d720b66696d1fdfc849a61c391a14f916da5a993c83527c8bc8ed6"
+    },
+    {
+      "path": "examples/botanic-meadow/src/studio.js",
+      "sha256": "b243f04f0618c7509bd172458abf695a57f5f694ff507c30b010b3cf9c4f5d37"
+    },
+    {
+      "path": "examples/botanic-meadow/src/style.css",
+      "sha256": "103fc7a4013221fbb18f0ff7d911f23ce50519d7c247eabb389863bf908b162d"
+    },
+    {
+      "path": "examples/botanic-meadow/src/ui.css",
+      "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+    },
+    {
+      "path": "examples/botanic-meadow/src/ui.js",
+      "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+    },
+    {
+      "path": "examples/botanic-meadow/test_browser.py",
+      "sha256": "0125514ff34b5e4d00eb3a0be0940de7d3395b858df0ecf1430b430d52cb8fe8"
+    },
+    {
+      "path": "examples/botanic-meadow/vendor/three/LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "examples/botanic-meadow/vendor/three/build/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "examples/botanic-meadow/vendor/three/build/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ]
+}

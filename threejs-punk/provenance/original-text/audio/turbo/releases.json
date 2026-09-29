@@ -1,0 +1,69 @@
+{
+  "file": "releases.wav",
+  "sampleRate": 44100,
+  "takes": {
+    "long-a": [
+      0,
+      31466
+    ],
+    "long-b": [
+      33671,
+      35834
+    ],
+    "long-c": [
+      71710,
+      32748
+    ],
+    "body": [
+      106663,
+      35357
+    ],
+    "sweep": [
+      144225,
+      25613
+    ],
+    "short-a": [
+      172043,
+      23770
+    ],
+    "short-b": [
+      198018,
+      22028
+    ],
+    "snap": [
+      222251,
+      19377
+    ],
+    "brake": [
+      243833,
+      38743
+    ],
+    "brake-b": [
+      284781,
+      31822
+    ]
+  },
+  "sources": [
+    {
+      "id": 705390,
+      "title": "Air Brake Applied",
+      "author": "chungus43A",
+      "url": "https://freesound.org/people/chungus43A/sounds/705390/",
+      "license": "CC0 1.0"
+    },
+    {
+      "id": 751354,
+      "title": "AIRBrst_Air Pump Release Variations_PF_265 DAYS OF SOUND",
+      "author": "itmightgetloud",
+      "url": "https://freesound.org/people/itmightgetloud/sounds/751354/",
+      "license": "CC0 1.0"
+    },
+    {
+      "id": 801435,
+      "title": "air brake sound effect",
+      "author": "okpato123",
+      "url": "https://freesound.org/people/okpato123/sounds/801435/",
+      "license": "CC0 1.0"
+    }
+  ]
+}

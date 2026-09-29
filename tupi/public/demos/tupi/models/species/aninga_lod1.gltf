@@ -1,0 +1,254 @@
+{
+  "asset": {
+    "generator": "glTF-Transform v4.5.0",
+    "version": "2.0"
+  },
+  "accessors": [
+    {
+      "type": "SCALAR",
+      "componentType": 5123,
+      "count": 7314,
+      "normalized": false,
+      "byteOffset": 0,
+      "bufferView": 0
+    },
+    {
+      "type": "VEC2",
+      "componentType": 5126,
+      "count": 5158,
+      "normalized": false,
+      "byteOffset": 0,
+      "bufferView": 1
+    },
+    {
+      "type": "VEC3",
+      "componentType": 5126,
+      "count": 5158,
+      "max": [
+        1.2288751602172852,
+        2.8000004291534424,
+        1.2684382200241089
+      ],
+      "min": [
+        -1.2356164455413818,
+        -0.001004993449896574,
+        -1.2575342655181885
+      ],
+      "normalized": false,
+      "byteOffset": 0,
+      "bufferView": 2
+    },
+    {
+      "type": "VEC3",
+      "componentType": 5120,
+      "count": 5158,
+      "normalized": true,
+      "byteOffset": 0,
+      "bufferView": 3
+    },
+    {
+      "type": "VEC2",
+      "componentType": 5123,
+      "count": 5158,
+      "normalized": true,
+      "byteOffset": 0,
+      "bufferView": 4
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 1,
+      "byteOffset": 0,
+      "byteLength": 14628,
+      "target": 34963,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 0,
+          "byteLength": 2476,
+          "mode": "TRIANGLES",
+          "byteStride": 2,
+          "count": 7314
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 14628,
+      "byteLength": 41264,
+      "target": 34962,
+      "byteStride": 8,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 2476,
+          "byteLength": 29864,
+          "mode": "ATTRIBUTES",
+          "byteStride": 8,
+          "count": 5158
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 55892,
+      "byteLength": 61896,
+      "target": 34962,
+      "byteStride": 12,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 32340,
+          "byteLength": 47471,
+          "mode": "ATTRIBUTES",
+          "byteStride": 12,
+          "count": 5158
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 117788,
+      "byteLength": 20632,
+      "target": 34962,
+      "byteStride": 4,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 79812,
+          "byteLength": 10680,
+          "mode": "ATTRIBUTES",
+          "filter": "OCTAHEDRAL",
+          "byteStride": 4,
+          "count": 5158
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 138420,
+      "byteLength": 20632,
+      "target": 34962,
+      "byteStride": 4,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 90492,
+          "byteLength": 18695,
+          "mode": "ATTRIBUTES",
+          "byteStride": 4,
+          "count": 5158
+        }
+      }
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "extensions": {
+        "EXT_texture_webp": {
+          "source": 1
+        }
+      }
+    },
+    {
+      "sampler": 0,
+      "extensions": {
+        "EXT_texture_webp": {
+          "source": 0
+        }
+      }
+    }
+  ],
+  "images": [
+    {
+      "name": "NormalGL_9daf1c65-c135-4394-9443-bd246e9a833c",
+      "mimeType": "image/webp",
+      "uri": "aninga_normalgl9d_n.webp"
+    },
+    {
+      "name": "Color_9daf1c65-c135-4394-9443-bd246e9a833c",
+      "mimeType": "image/webp",
+      "uri": "aninga_color9daf1_c.webp"
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "aninga_lod1.bin",
+      "byteLength": 109188
+    },
+    {
+      "byteLength": 159052,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "fallback": true
+        }
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "solid_aninga",
+      "doubleSided": true,
+      "pbrMetallicRoughness": {
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0,
+        "baseColorTexture": {
+          "index": 0
+        }
+      },
+      "normalTexture": {
+        "index": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Mangrove Arrowleaf Clump Mesh.002",
+      "primitives": [
+        {
+          "attributes": {
+            "_FLORA": 1,
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TEXCOORD_0": 4
+          },
+          "mode": 4,
+          "material": 0,
+          "indices": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "aninga_lod1",
+      "mesh": 0
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp"
+  ],
+  "extensionsRequired": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp"
+  ]
+}

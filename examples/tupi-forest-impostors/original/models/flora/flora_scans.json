@@ -1,0 +1,60 @@
+{
+ "trees": [
+  {
+   "impSize": 6.068,
+   "impBottom": -0.182,
+   "impTop": 6.068,
+   "name": "island_tree_01",
+   "dims": [
+    4.755,
+    5.027,
+    -4.818
+   ],
+   "height": 5.027,
+   "wood": "island_tree_01_wood.glb",
+   "cards": "island_tree_01_cards.json",
+   "impostorRow": 0
+  },
+  {
+   "impSize": 7.03,
+   "impBottom": -0.211,
+   "impTop": 7.03,
+   "name": "island_tree_02",
+   "dims": [
+    4.208,
+    3.407,
+    -4.071
+   ],
+   "height": 3.407,
+   "wood": "island_tree_02_wood.glb",
+   "cards": "island_tree_02_cards.json",
+   "impostorRow": 1
+  },
+  {
+   "impSize": 4.693,
+   "impBottom": -0.141,
+   "impTop": 4.693,
+   "name": "island_tree_03",
+   "dims": [
+    2.972,
+    2.615,
+    -2.913
+   ],
+   "height": 2.615,
+   "wood": "island_tree_03_wood.glb",
+   "cards": "island_tree_03_cards.json",
+   "impostorRow": 2
+  }
+ ],
+ "atlas": {
+  "cells": 4,
+  "cell": 256
+ },
+ "impostor": {
+  "views": 8,
+  "top": true,
+  "cols": 9,
+  "cell": 256,
+  "rows": 3
+ }
+}

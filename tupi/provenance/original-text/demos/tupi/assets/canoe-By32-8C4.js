@@ -1,0 +1,1 @@
+import{a as e,c as t,i as n,l as r,n as i,o as a,r as o,s,t as c,u as l}from"./canoe-s8Ju-0Hu.js";export{c as CANOE,i as bakeBark,o as canoeParams,n as floorY,e as gunwaleY,a as halfBeam,s as keelY,t as makeCanoeGeometry,r as makeCanoeMaterial,l as makeWaterOccluderGeometry};

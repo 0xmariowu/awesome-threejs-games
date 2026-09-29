@@ -1,0 +1,19 @@
+{
+  "schema_version": 3,
+  "slug": "threejs-punk",
+  "title": "Threejs-Punk Drive",
+  "tagline": "在霓虹雨夜驾驶、漂移、步行探索城市，走进车库查看跑车",
+  "tagline_en": "Drive and drift through a rainy neon city, explore on foot and inspect sports cars in the garage.",
+  "category": "赛车",
+  "overview_video": "threejs-punk/overview",
+  "examples": [
+    {
+      "id": "punk-engine-audio",
+      "title": "引擎声浪",
+      "one_liner": "踩油门、换挡、收油，听原版 V8 声浪随转速变化。",
+      "title_en": "Engine audio",
+      "one_liner_en": "Rev, shift and lift: hear the original V8 respond to RPM and load.",
+      "candidate": "threejs-punk.engine-audio"
+    }
+  ]
+}

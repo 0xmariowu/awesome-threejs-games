@@ -1,0 +1,549 @@
+{
+  "source": "https://www.rubenmarcus.dev/demos/tupi/",
+  "entry_path": "/demos/tupi/index.html",
+  "files": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap",
+      "path": "_external/fonts.googleapis.com/css2-cf7d8702b67e",
+      "bytes": 765,
+      "sha256": "5e0b12078281f3dc22a58119cbf46729480d9deddb1dfcb57366aa6810eae2ab",
+      "content_type": "text/css; charset=utf-8",
+      "local_sha256": "804d64edcb0623367f322cc445d056d033305a7f1a9aaa7a66f7671b0cba2594"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jDOjw.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jDOjw.ttf",
+      "bytes": 293036,
+      "sha256": "0b9a8a33cfaa624d30f70f9b6686da769b319b8c37a55af16e29fef690108bbf",
+      "content_type": "font/ttf",
+      "local_sha256": "0b9a8a33cfaa624d30f70f9b6686da769b319b8c37a55af16e29fef690108bbf"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_s06GnM.ttf",
+      "bytes": 290496,
+      "sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b",
+      "content_type": "font/ttf",
+      "local_sha256": "1724047c8988ca5155bff667bc48fa52e97d57aabc6b42eebbf986f21a4be20b"
+    },
+    {
+      "url": "https://fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86GnM.ttf",
+      "path": "_external/fonts.gstatic.com/s/cormorantgaramond/v21/co3umX5slCNuHLi8bLeY9MK7whWMhyjypVO7abI26QOD_v86GnM.ttf",
+      "bytes": 290236,
+      "sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7",
+      "content_type": "font/ttf",
+      "local_sha256": "6d37a86241a25d63f8fe6018b4c083449886b7165c1acb15edd0f574f690ecf7"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F8k3mcx3537el9afyendf.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/8k3mcx3537el9afyendf.png",
+      "bytes": 58802,
+      "sha256": "1e06494e0c270546e0d49f0df6023f5e7a54bf2a01a0e90cd974787b92ab8d8e",
+      "content_type": "image/webp",
+      "local_sha256": "1e06494e0c270546e0d49f0df6023f5e7a54bf2a01a0e90cd974787b92ab8d8e"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fbwp2f2guebyrsywzazc0.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/bwp2f2guebyrsywzazc0.png",
+      "bytes": 406504,
+      "sha256": "5869de17c553830c90a7bd0e2633f3fe9bb94e0f2220764c425884c41827b166",
+      "content_type": "image/webp",
+      "local_sha256": "5869de17c553830c90a7bd0e2633f3fe9bb94e0f2220764c425884c41827b166"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fead0j2uzung6rfeybl55.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/ead0j2uzung6rfeybl55.png",
+      "bytes": 66054,
+      "sha256": "fbbfd86d3474b87aa10a0f6f57113f0e7c84d7d6ee0e0a0e0aca6ee100345f82",
+      "content_type": "image/webp",
+      "local_sha256": "fbbfd86d3474b87aa10a0f6f57113f0e7c84d7d6ee0e0a0e0aca6ee100345f82"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fij14c51g2co4dp4g13c4.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/ij14c51g2co4dp4g13c4.png",
+      "bytes": 90168,
+      "sha256": "1363e8fcae0abacce704e9c017b3246e522e692b47e3da306205457be8cc968b",
+      "content_type": "image/webp",
+      "local_sha256": "1363e8fcae0abacce704e9c017b3246e522e692b47e3da306205457be8cc968b"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fjtrqvmw3aeklyovjvrzy.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/jtrqvmw3aeklyovjvrzy.png",
+      "bytes": 102548,
+      "sha256": "7191fff47e43b4f01ba0b52cdad7f98148587790f7fff5bc73458f6c41cf4542",
+      "content_type": "image/webp",
+      "local_sha256": "7191fff47e43b4f01ba0b52cdad7f98148587790f7fff5bc73458f6c41cf4542"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fq3dicjcio7ym0qfrvh78.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/q3dicjcio7ym0qfrvh78.png",
+      "bytes": 423950,
+      "sha256": "413ca833a9b22a27f2bc4bcf55fe642e4b367480281b01e56f27da6b8206272e",
+      "content_type": "image/webp",
+      "local_sha256": "413ca833a9b22a27f2bc4bcf55fe642e4b367480281b01e56f27da6b8206272e"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fx4a0e5xnan1d1b17ky3n.png",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/x4a0e5xnan1d1b17ky3n.png",
+      "bytes": 90168,
+      "sha256": "1363e8fcae0abacce704e9c017b3246e522e692b47e3da306205457be8cc968b",
+      "content_type": "image/webp",
+      "local_sha256": "1363e8fcae0abacce704e9c017b3246e522e692b47e3da306205457be8cc968b"
+    },
+    {
+      "url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fzcmwucc3i3zgy5l9mcpu.jpg",
+      "path": "_external/media2.dev.to/dynamic/image/width=800,height=,fit=scale-down,gravity=auto,format=auto/https:/dev-to-uploads.s3.amazonaws.com/uploads/articles/zcmwucc3i3zgy5l9mcpu.jpg",
+      "bytes": 80062,
+      "sha256": "9d2ffc8f1d66dde788fb809f041e9ef81eb7b735f62c5034a1104458a94618de",
+      "content_type": "image/webp",
+      "local_sha256": "9d2ffc8f1d66dde788fb809f041e9ef81eb7b735f62c5034a1104458a94618de"
+    },
+    {
+      "url": "https://rubenmarcus.dev/demos/tupi/og.jpg",
+      "path": "_external/rubenmarcus.dev/demos/tupi/og.jpg",
+      "bytes": 121537,
+      "sha256": "8feac4964f6b76993dbf50bcb30dda4542175f73959e5c55f8382d928cb80564",
+      "content_type": "image/jpeg",
+      "local_sha256": "8feac4964f6b76993dbf50bcb30dda4542175f73959e5c55f8382d928cb80564"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/ai-index.json",
+      "path": "ai-index.json",
+      "bytes": 43266,
+      "sha256": "eb23be01b2fe249b45799a03ccb6cb5f010ac645d40e7c61bb64ff71548aa867",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "eb23be01b2fe249b45799a03ccb6cb5f010ac645d40e7c61bb64ff71548aa867"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/api/resume.json",
+      "path": "api/resume.json",
+      "bytes": 6955,
+      "sha256": "1d86d9c40fdb650f4cf25006b12451306448f88b2d840064726aeb13575ee8ff",
+      "content_type": "application/json",
+      "local_sha256": "1d86d9c40fdb650f4cf25006b12451306448f88b2d840064726aeb13575ee8ff"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/api/resume.txt",
+      "path": "api/resume.txt",
+      "bytes": 983,
+      "sha256": "352afa073005998ae499ee24e2a511164337b29d517c0b85dbe80dbe8a2d0360",
+      "content_type": "text/plain; charset=utf-8",
+      "local_sha256": "352afa073005998ae499ee24e2a511164337b29d517c0b85dbe80dbe8a2d0360"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "path": "demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "bytes": 19864,
+      "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/ambience-DIs5l1-T.js",
+      "path": "demos/tupi/assets/ambience-DIs5l1-T.js",
+      "bytes": 17675,
+      "sha256": "72f8cc768c7c643b34e16e0e0decdd431ecda18d5b79e33ff0ce9e3f1a3c514e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "72f8cc768c7c643b34e16e0e0decdd431ecda18d5b79e33ff0ce9e3f1a3c514e"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/birds-DeFPwjcp.js",
+      "path": "demos/tupi/assets/birds-DeFPwjcp.js",
+      "bytes": 7003,
+      "sha256": "6bd5880d36b5ab23cfc8d4a1e52873059e8642464cd9baca7d274a5af2198419",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6bd5880d36b5ab23cfc8d4a1e52873059e8642464cd9baca7d274a5af2198419"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/birds-DmZkOyFQ.js",
+      "path": "demos/tupi/assets/birds-DmZkOyFQ.js",
+      "bytes": 80,
+      "sha256": "dd541ca83096959db70a7bbe4f1fbec9fabf23b436a7394c9f38f06ec6f410c1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "dd541ca83096959db70a7bbe4f1fbec9fabf23b436a7394c9f38f06ec6f410c1"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/cache-B9YKTUCP.js",
+      "path": "demos/tupi/assets/cache-B9YKTUCP.js",
+      "bytes": 1991,
+      "sha256": "b82ad32500df7eb8cdd652bd49fc964925fdb44b7f74fc0037652e6f2579079b",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "b82ad32500df7eb8cdd652bd49fc964925fdb44b7f74fc0037652e6f2579079b"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/camera-CDf2sJ53.js",
+      "path": "demos/tupi/assets/camera-CDf2sJ53.js",
+      "bytes": 12397,
+      "sha256": "ccdec713bc235e479d4de673ad97788a7238525f07bb9d2d57e8f14bea1dd0cc",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "ccdec713bc235e479d4de673ad97788a7238525f07bb9d2d57e8f14bea1dd0cc"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/canoe-By32-8C4.js",
+      "path": "demos/tupi/assets/canoe-By32-8C4.js",
+      "bytes": 276,
+      "sha256": "681ff58a61ee0a13846fa2981c12585ae131f4ee8301e98c447c494cdb868126",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "681ff58a61ee0a13846fa2981c12585ae131f4ee8301e98c447c494cdb868126"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/canoe-s8Ju-0Hu.js",
+      "path": "demos/tupi/assets/canoe-s8Ju-0Hu.js",
+      "bytes": 7908,
+      "sha256": "e083495d50abfcf1f718bc3676037397aa058aa9816c2dc666cc7541734d7358",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "e083495d50abfcf1f718bc3676037397aa058aa9816c2dc666cc7541734d7358"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/engine-DyFoP1yu.js",
+      "path": "demos/tupi/assets/engine-DyFoP1yu.js",
+      "bytes": 8034,
+      "sha256": "3f04772c06147e07433a7978084a499eea4e23d5ac30750336a86e0f6c32f897",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3f04772c06147e07433a7978084a499eea4e23d5ac30750336a86e0f6c32f897"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/engine-h0W-Gsup.js",
+      "path": "demos/tupi/assets/engine-h0W-Gsup.js",
+      "bytes": 114,
+      "sha256": "f7591e4a55f1394a2128b7aff836b80e066721012842a0bcf1f973f2dfbbc4a4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f7591e4a55f1394a2128b7aff836b80e066721012842a0bcf1f973f2dfbbc4a4"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/environment-DsRXgLng.js",
+      "path": "demos/tupi/assets/environment-DsRXgLng.js",
+      "bytes": 13668,
+      "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/fauna-BEOc_OlS.js",
+      "path": "demos/tupi/assets/fauna-BEOc_OlS.js",
+      "bytes": 59605,
+      "sha256": "672ddf664f1d85af9015f626d2f0c39bc12f6c39a6a0dcdc03a455cd5bbb04d7",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "672ddf664f1d85af9015f626d2f0c39bc12f6c39a6a0dcdc03a455cd5bbb04d7"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/fleet-CmCdPN8d.js",
+      "path": "demos/tupi/assets/fleet-CmCdPN8d.js",
+      "bytes": 45126,
+      "sha256": "d94a93cb7eafa819ede487e33e85a10afaf8a6d2a3c2e75f7b95a90b49921365",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "d94a93cb7eafa819ede487e33e85a10afaf8a6d2a3c2e75f7b95a90b49921365"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/forest-ehp2HefA.js",
+      "path": "demos/tupi/assets/forest-ehp2HefA.js",
+      "bytes": 10117,
+      "sha256": "6c4c64a5f64aa0c763a7630be8c7d47a2fd39739bab1fdc3315ba222ffa76189",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6c4c64a5f64aa0c763a7630be8c7d47a2fd39739bab1fdc3315ba222ffa76189"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/layout-BRLrp2Am.js",
+      "path": "demos/tupi/assets/layout-BRLrp2Am.js",
+      "bytes": 442,
+      "sha256": "1e23a0ad1e883448b044517bd04aa26435a12fa92ad53bc2807d74647b9b7c61",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1e23a0ad1e883448b044517bd04aa26435a12fa92ad53bc2807d74647b9b7c61"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/layout-n7oYTSht.js",
+      "path": "demos/tupi/assets/layout-n7oYTSht.js",
+      "bytes": 1880,
+      "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/main-BxOdblV6.js",
+      "path": "demos/tupi/assets/main-BxOdblV6.js",
+      "bytes": 18340,
+      "sha256": "65bb54bbbc57640131b8954f1c069296e3a20dd5e9aa9c6c476caf54177f4a72",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "65bb54bbbc57640131b8954f1c069296e3a20dd5e9aa9c6c476caf54177f4a72"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/mangrove-Dx2aduxF.js",
+      "path": "demos/tupi/assets/mangrove-Dx2aduxF.js",
+      "bytes": 9956,
+      "sha256": "6155919caed7aa8b3f458f7cc6f0bed6b7e2c90e133a0492dad1d90475099f0f",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "6155919caed7aa8b3f458f7cc6f0bed6b7e2c90e133a0492dad1d90475099f0f"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "path": "demos/tupi/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "bytes": 71714,
+      "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/overlay-nBNR6e8J.js",
+      "path": "demos/tupi/assets/overlay-nBNR6e8J.js",
+      "bytes": 19716,
+      "sha256": "b7a341f0b97dbb36ee28b79ec660a2042975c362ed3b4fc0f72e208fa02382ee",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "10afbec044e50ab72d6d8c162bf08c47e6a1615b5e05bd1b7923645e7f8b1edb"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/paddling-p-iGeLm8.js",
+      "path": "demos/tupi/assets/paddling-p-iGeLm8.js",
+      "bytes": 10644,
+      "sha256": "8b5459ac105b9c0f63e75e4545cc771e403d039a7a3f2a461a02d8ad620fac2c",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "8b5459ac105b9c0f63e75e4545cc771e403d039a7a3f2a461a02d8ad620fac2c"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/pipeline-BT70zyB_.js",
+      "path": "demos/tupi/assets/pipeline-BT70zyB_.js",
+      "bytes": 23979,
+      "sha256": "f1cd6d54e319f4b50f24d0183e132ffcc090326c41ec387e10d11d90725e48d4",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "f1cd6d54e319f4b50f24d0183e132ffcc090326c41ec387e10d11d90725e48d4"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/preload-helper-RqQVD8tm.js",
+      "path": "demos/tupi/assets/preload-helper-RqQVD8tm.js",
+      "bytes": 1229,
+      "sha256": "cbfed004349df7b68cfc81448badf83d1bf77defbf20860b5a526008b4e55f95",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "cbfed004349df7b68cfc81448badf83d1bf77defbf20860b5a526008b4e55f95"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/score-BCVX1DJU.js",
+      "path": "demos/tupi/assets/score-BCVX1DJU.js",
+      "bytes": 2739,
+      "sha256": "31edf74ae8566ce8d6f18654812cc81064d07a4a3bf1a070fdabb0b47cf1288e",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "31edf74ae8566ce8d6f18654812cc81064d07a4a3bf1a070fdabb0b47cf1288e"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/score-jPUyIwcW.js",
+      "path": "demos/tupi/assets/score-jPUyIwcW.js",
+      "bytes": 214,
+      "sha256": "92ae1db1fcd4c085b780f3ab781bb0ce15dcb60ac84f56f582be0d946fca42c2",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "92ae1db1fcd4c085b780f3ab781bb0ce15dcb60ac84f56f582be0d946fca42c2"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/smoke-C6jnvXIw.js",
+      "path": "demos/tupi/assets/smoke-C6jnvXIw.js",
+      "bytes": 5054,
+      "sha256": "85309142070cd74dbc3f05efa064180df64b94f49fe50c08f5035365e32b9a47",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "85309142070cd74dbc3f05efa064180df64b94f49fe50c08f5035365e32b9a47"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/soundscape-BConVJq7.js",
+      "path": "demos/tupi/assets/soundscape-BConVJq7.js",
+      "bytes": 3569,
+      "sha256": "301014f367b4ff2ae3bd83c8fbb10670000d80df4b2fd28209483a93ac407d02",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "301014f367b4ff2ae3bd83c8fbb10670000d80df4b2fd28209483a93ac407d02"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/species-DQm89Ox5.js",
+      "path": "demos/tupi/assets/species-DQm89Ox5.js",
+      "bytes": 35823,
+      "sha256": "834c80dbff15ff0835a88ba61b229559c2b8a5491f0d03fe38e926b8565d3605",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "834c80dbff15ff0835a88ba61b229559c2b8a5491f0d03fe38e926b8565d3605"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/terrain-nbKkxvd9.js",
+      "path": "demos/tupi/assets/terrain-nbKkxvd9.js",
+      "bytes": 33499,
+      "sha256": "fbd42330f08cbbe5aab155b89eab996aa449b84aef275cbac39c6c11a88327e6",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "fbd42330f08cbbe5aab155b89eab996aa449b84aef275cbac39c6c11a88327e6"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/terrainUtil-BBWYZdtw.js",
+      "path": "demos/tupi/assets/terrainUtil-BBWYZdtw.js",
+      "bytes": 5440,
+      "sha256": "47968d8aa525d7b221b6c5ee7ce53370f0f52f08bbe7118577c02ca28f089b1d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "47968d8aa525d7b221b6c5ee7ce53370f0f52f08bbe7118577c02ca28f089b1d"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/terrainUtil-DHFmWhdH.js",
+      "path": "demos/tupi/assets/terrainUtil-DHFmWhdH.js",
+      "bytes": 351,
+      "sha256": "3381aeb50b5d9843082569b5dc24ffa8aea43610f6a356b94162644dec7cf3f1",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "3381aeb50b5d9843082569b5dc24ffa8aea43610f6a356b94162644dec7cf3f1"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.core-CKagcDpn.js",
+      "path": "demos/tupi/assets/three.core-CKagcDpn.js",
+      "bytes": 377007,
+      "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "path": "demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "bytes": 11582,
+      "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "path": "demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "bytes": 705109,
+      "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/assets/water-Ct6j_3H2.js",
+      "path": "demos/tupi/assets/water-Ct6j_3H2.js",
+      "bytes": 10213,
+      "sha256": "746559db032e4bb2801d83a33afb5eb72ace9650bbdf253c3c185f96ea14a3bf",
+      "content_type": "application/javascript; charset=utf-8",
+      "local_sha256": "746559db032e4bb2801d83a33afb5eb72ace9650bbdf253c3c185f96ea14a3bf"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/favicon.svg",
+      "path": "demos/tupi/favicon.svg",
+      "bytes": 235,
+      "sha256": "588975944cbfb8727d16f7d29339f2f2ad48a869ea2463b6a4ece0d517467afe",
+      "content_type": "image/svg+xml",
+      "local_sha256": "588975944cbfb8727d16f7d29339f2f2ad48a869ea2463b6a4ece0d517467afe"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/",
+      "path": "demos/tupi/index.html",
+      "bytes": 7018,
+      "sha256": "79148d0e193cd0a06ecb913a5205ec7bb3d5b943391847c8b98ab500a7e8fdbd",
+      "content_type": "text/html; charset=utf-8",
+      "local_sha256": "68ce8a9a3b193075c4cac5e5d640e364f5cd4aca292fc6529b519d7ef975998e"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/loading.mp4",
+      "path": "demos/tupi/loading.mp4",
+      "bytes": 2316204,
+      "sha256": "619f4f0f246e273dece1618acf16c6bb22368094e8d307b98d3eab88b06aec07",
+      "content_type": "video/mp4",
+      "local_sha256": "619f4f0f246e273dece1618acf16c6bb22368094e8d307b98d3eab88b06aec07"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/models/tex/brown_eye.png",
+      "path": "demos/tupi/models/tex/brown_eye.png",
+      "bytes": 610817,
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b",
+      "content_type": "image/png",
+      "local_sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/models/warrior_mpfb.glb",
+      "path": "demos/tupi/models/warrior_mpfb.glb",
+      "bytes": 1805988,
+      "sha256": "36753bf22c178df646cc5ecd3ab55f5dac17ab746530a4de0099a45fd1572a2e",
+      "content_type": "model/gltf-binary",
+      "local_sha256": "36753bf22c178df646cc5ecd3ab55f5dac17ab746530a4de0099a45fd1572a2e"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/og.jpg",
+      "path": "demos/tupi/og.jpg",
+      "bytes": 121537,
+      "sha256": "8feac4964f6b76993dbf50bcb30dda4542175f73959e5c55f8382d928cb80564",
+      "content_type": "image/jpeg",
+      "local_sha256": "8feac4964f6b76993dbf50bcb30dda4542175f73959e5c55f8382d928cb80564"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/demos/tupi/warrior.svg",
+      "path": "demos/tupi/warrior.svg",
+      "bytes": 7354,
+      "sha256": "f6c550285e3401ec5c53015a1b4f2b195b86631c74b535b16bddd9d7d2aa1e6d",
+      "content_type": "image/svg+xml",
+      "local_sha256": "f6c550285e3401ec5c53015a1b4f2b195b86631c74b535b16bddd9d7d2aa1e6d"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/docs.json",
+      "path": "docs.json",
+      "bytes": 38269,
+      "sha256": "6dadf64000e08a04fd55c7e9f61bc664e63b7294b0da4365db6ef9b6709de36b",
+      "content_type": "application/json; charset=utf-8",
+      "local_sha256": "6dadf64000e08a04fd55c7e9f61bc664e63b7294b0da4365db6ef9b6709de36b"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/llms-full.txt",
+      "path": "llms-full.txt",
+      "bytes": 507656,
+      "sha256": "ab6e86b034efa13dedafd541022693b519117cb45540d57b7034ac1204d91c13",
+      "content_type": "text/plain; charset=utf-8",
+      "local_sha256": "5fc9db5c3cbd85704eae0c65e6f911d882d9ec2fed1123dccc9cb36258321078"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/llms.txt",
+      "path": "llms.txt",
+      "bytes": 6576,
+      "sha256": "a7c6c26698a38e03801a5a5fe9babdca1251b6a7d0c13f0f6ef9622de40526a0",
+      "content_type": "text/plain; charset=utf-8",
+      "local_sha256": "a7c6c26698a38e03801a5a5fe9babdca1251b6a7d0c13f0f6ef9622de40526a0"
+    }
+  ],
+  "failed": {
+    "https://www.rubenmarcus.dev/.autoresearcher/config.json": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/aeo.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/astro.config.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/botsim.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/.css": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/audio/score.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/audio/soundscape.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/cinematic/camera.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/cinematic/overlay.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/film.mp4": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/og.jpg": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/post/pipeline.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/ambience.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/birds.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/canoe.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/environment.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/fauna.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/fleet.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/forest.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/layout.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/mangrove.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/smoke.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/terrain.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/terrainUtil.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/world/water.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/game.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/invariants.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/package-lock.json": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/package.json": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/router_init.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/scripts/gen-og-images.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/scripts/text-gate.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/skills-lock.json": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/src/run-loop.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/tools/eval/gl-shots.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/tools/eval/harness.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/tools/eval/invariants.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/tools/eval/mutate.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/tools/gen-arch.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/tools/gen-docs.mjs": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/~/.ralph-starter/sources.json": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/api/Next.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/api/Three.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/api/Vue.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/api/aeo.js": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/.glb": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/flora_scans.json": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/impostor.webp": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/impostor_n.webp": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/leaf_atlas.webp": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/leaf_atlas_n.webp": "HTTP 404; ",
+    "https://www.rubenmarcus.dev/demos/tupi/assets/manifest.json": "HTTP 404; "
+  }
+}

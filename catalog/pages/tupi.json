@@ -1,0 +1,35 @@
+{
+  "schema_version": 3,
+  "slug": "tupi",
+  "title": "Tupi",
+  "tagline": "沿雨中的红树林河道观看独木舟船队，拖动镜头探索 1554 年的伯蒂奥加",
+  "tagline_en": "Follow a canoe fleet through rainy mangroves and move the camera around Bertioga in 1554.",
+  "category": "互动影像",
+  "overview_video": "tupi/overview",
+  "examples": [
+    {
+      "id": "tupi-rain-river",
+      "title": "雨中河面",
+      "one_liner": "调节雨量与薄雾，观察原始河面涟漪和反射",
+      "title_en": "Tupi · Rain river",
+      "one_liner_en": "Adjust rain and mist on the original river surface.",
+      "candidate": "tupi.rain-river"
+    },
+    {
+      "id": "tupi-paddling-fleet",
+      "title": "划桨船队",
+      "one_liner": "原始船员协同划桨，可调动画速度、船数和镜头",
+      "title_en": "Tupi · Paddling fleet",
+      "one_liner_en": "Inspect original crew strokes, canoe counts and camera views.",
+      "candidate": "tupi.paddling-fleet"
+    },
+    {
+      "id": "tupi-forest-impostors",
+      "title": "森林替身与细节切换",
+      "one_liner": "原始森林与同位置树木，比较完整网格和替身卡片",
+      "title_en": "Tupi · Forest impostors",
+      "one_liner_en": "Compare original tree cards and meshes, then inspect the forest.",
+      "candidate": "tupi.forest-impostors"
+    }
+  ]
+}

@@ -36,3 +36,6 @@ inkwave/experience/
 /inkwave/package.json
 /inkwave/package-lock.json
 /inkwave/vite.config.js
+
+# Link-only tool: local capture must never be mirrored.
+/fab-botanic/

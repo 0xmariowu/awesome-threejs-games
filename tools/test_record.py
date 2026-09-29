@@ -127,6 +127,15 @@ class RecorderTests(unittest.TestCase):
         self.assertFalse(record.port_answers(self.port))
         self.assertFalse((self.root / 'media').exists())
 
+    def test_catalog_tool_records_overview_only_without_changing_games(self):
+        (self.root / 'catalog/tools.json').write_text(json.dumps({'schema_version':1,'tools':[{'slug':'synthetic'}]}))
+        self.dry_run(1, 'Tools must record only an overview shot')
+        self.scenario.write_text(self.source + "\ndel SHOTS['motion']\n", encoding='utf-8')
+        self.dry_run(0)
+        (self.root / 'catalog/tools.json').write_text(json.dumps({'schema_version':1,'tools':[{'slug':'other'}]}))
+        self.scenario.write_text(self.source, encoding='utf-8')
+        self.dry_run(0)
+
     def test_dry_run_missing_overview(self):
         self.scenario.write_text(self.source + "\ndel SHOTS['overview']\n", encoding='utf-8')
         self.dry_run(1, 'overview')

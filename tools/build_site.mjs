@@ -5,11 +5,12 @@ import {createHash} from 'node:crypto';
 import {pathToFileURL, fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {brotliDecompressSync} from 'node:zlib';
+import {loadTools, toolSummary, toolDetail} from './tools.mjs';
 import {loadPages} from './pages.mjs';
 import {loadDemos, sourceManifest} from './demos.mjs';
 
 export const BASE = '/awesome-threejs-games/';
-export const VIDEO_LIMIT = 12_000_000;
+export const VIDEO_LIMIT = 6_000_000;
 const ROOT = fileURLToPath(new URL('../', import.meta.url));
 const decodeText = bytes => { try { return new TextDecoder('utf-8',{fatal:true}).decode(bytes); } catch { return null; } };
 const json = async file => JSON.parse(await readFile(file, 'utf8'));
@@ -61,7 +62,7 @@ export async function checkBuildInputs(root = ROOT) {
     }
   }
   await module('tools/build_site.mjs');
-  for (const name of ['games','examples','extraction-candidates','runnability','videos','lab-i18n']) await requireFile(`catalog/${name}.json`);
+  for (const name of ['games','tools','examples','extraction-candidates','runnability','videos','lab-i18n']) await requireFile(`catalog/${name}.json`);
   for (const dir of ['catalog/pages','library','previews']) await tree(dir);
   await tree('webgame-lab',name=>['node_modules','.git','dist'].includes(name));
   for (const name of ['package.json','package-lock.json','src/catalog.ts','index.html','vite.config.ts']) await requireFile(`webgame-lab/${name}`);
@@ -75,7 +76,7 @@ export async function checkBuildInputs(root = ROOT) {
     const required = new Set(slug === 'cloudkeep-flight' ? ['provenance.json'] : []);
     for (const file of await files(source,'',required,slug)) await requireFile(path.relative(root,path.join(source,file)).split(path.sep).join('/'));
   }
-  for (const game of games) {
+  for (const game of [...games,...await loadTools(root)]) {
     await requireFile(`previews/${game.slug}.webp`);
     await requireFile(`media-web/${game.slug}/overview.mp4`);
   }
@@ -94,7 +95,7 @@ export async function prepareVideo(root, slug, out) {
   const artifact = path.join(root,'media-web',slug,'overview.mp4');
   if (await exists(source)) {
     const hash = createHash('sha256').update(await readFile(source)).digest('hex');
-    const cache = path.join(root,'output/media-encodes',hash+'-720p30-high-v1.mp4');
+    const cache = path.join(root,'output/media-encodes',hash+'-720p30-high-v2-6mb.mp4');
     await mkdir(path.dirname(cache),{recursive:true});
     if (!await exists(cache)) {
       const probe = spawnSync('ffprobe',['-v','error','-show_entries','format=duration','-of','json',source],{encoding:'utf8'});
@@ -110,7 +111,7 @@ export async function prepareVideo(root, slug, out) {
         '-crf','26','-maxrate',String(bitrate),'-bufsize',String(bitrate),
         '-pix_fmt','yuv420p','-movflags','+faststart','-an',temp],{encoding:'utf8'});
       if (encode.status !== 0) throw new Error('ffmpeg failed: '+encode.stderr);
-      if ((await stat(temp)).size > VIDEO_LIMIT) throw new Error('Encoded video exceeds 12 MB: '+slug);
+      if ((await stat(temp)).size > VIDEO_LIMIT) throw new Error('Encoded video exceeds 6 MB: '+slug);
       await rename(temp,cache);
       console.log(`Encoded ${slug}: ${(await stat(cache)).size} bytes (source ${hash})`);
     }
@@ -277,6 +278,16 @@ async function buildLab(root, out) {
     return await copyRuntime(path.join(temp,'dist'),path.join(out,'lab'),BASE+'lab/');
   } finally {await rm(temp,{recursive:true,force:true});}
 }
+export async function writeToolData(out, tools, videos, records) {
+  const summaries = [];
+  for (const tool of tools) {
+    const overview = siteVideo(videos.get(tool.overview_video),tool.slug);
+    summaries.push(toolSummary(tool,overview));
+    await writeJSON(path.join(out,'data/tool',tool.slug+'.json'),toolDetail(tool,overview,records));
+  }
+  await writeJSON(path.join(out,'data/tools.json'),{tools:summaries});
+}
+
 export async function buildSite({root = ROOT} = {}) {
   const out = path.join(root,'_site');
   if (await exists(out) && !await exists(path.join(out,'.gameref-build'))) throw new Error('Refusing to replace an unmarked _site directory');
@@ -285,6 +296,7 @@ export async function buildSite({root = ROOT} = {}) {
   const {examples} = await json(path.join(root,'catalog/examples.json'));
   const {games:reviews} = await json(path.join(root,'catalog/runnability.json'));
   const {pages,errors,videos} = await loadPages(root);
+  const tools = await loadTools(root);
   if (errors.size || pages.size !== games.length) throw new Error('Invalid or missing project pages: '+[...errors.values()].join('; '));
   const {catalog} = await import(pathToFileURL(path.join(root,'webgame-lab/src/catalog.ts')));
   const reports = [], records = [];
@@ -317,10 +329,10 @@ export async function buildSite({root = ROOT} = {}) {
   await writeFile(path.join(out,'index.html'),html); await writeFile(path.join(out,'404.html'),html); await writeFile(path.join(out,'.nojekyll'),'');
   // Real directory indexes make README deep links return 200 on Pages; 404.html
   // also boots the router for legacy source/search links and unknown routes.
-  for (const route of ['demos',...games.map(game=>'p/'+game.slug)]) {await mkdir(path.join(out,route),{recursive:true});await writeFile(path.join(out,route,'index.html'),html);}
+  for (const route of ['demos','tools',...tools.map(tool=>'t/'+tool.slug),...games.map(game=>'p/'+game.slug)]) {await mkdir(path.join(out,route),{recursive:true});await writeFile(path.join(out,route,'index.html'),html);}
   await cp(path.join(root,'previews'),path.join(out,'previews'),{recursive:true});
   const media = [];
-  for (const game of games) media.push(await prepareVideo(root,game.slug,out));
+  for (const game of [...games,...tools]) media.push(await prepareVideo(root,game.slug,out));
   const summaries=[];
   for (const game of games) {
     const page=pages.get(game.slug),overview=siteVideo(videos.get(page.overview_video),game.slug),project=records.find(row=>row.id===`game:${game.slug}`);
@@ -328,6 +340,7 @@ export async function buildSite({root = ROOT} = {}) {
     summaries.push({...page,examples:page.examples.length,has_example:!!page.examples.length,overview_video:overview,runnability:review ? {reviewed_verdict:review.reviewed_verdict,review_note:review.review_note,review_note_en:review.review_note_en}:null});
     await writeJSON(path.join(out,'data/page',game.slug+'.json'),{...page,project,overview_video:overview,source_url:`https://github.com/0xmariowu/awesome-threejs-games/tree/main/${game.slug}`,examples:page.examples.map(example=>({...example,launch:records.find(row=>row.id===`example:${example.id}`).launch}))});
   }
+  await writeToolData(out,tools,videos,records);
   const manifest = await sourceManifest(root, games);
   await writeJSON(path.join(out,'data/src/manifest.json'), manifest);
   for (const file of manifest.filter(f => f.bundled)) {
@@ -340,7 +353,7 @@ export async function buildSite({root = ROOT} = {}) {
     const dir=path.join(out,'demos',demo.id);
     await mkdir(dir,{recursive:true}); await writeFile(path.join(dir,'index.html'),html);
   }
-  await writeJSON(path.join(out,'data/index.json'),{schema_version:1,records,thumbnails:[],counts:{project:games.length,example:examples.length,demo:catalog.length}});
+  await writeJSON(path.join(out,'data/index.json'),{schema_version:1,records,thumbnails:[],counts:{project:games.length,tool:tools.length,example:examples.length,demo:catalog.length}});
   await writeJSON(path.join(out,'data/pages.json'),{pages:summaries});
   await writeJSON(path.join(out,'data/demos.json'),demos);
   await writeJSON(path.join(out,'data/runnability.json'),{games:summaries.map(row=>({slug:row.slug,...row.runnability}))});

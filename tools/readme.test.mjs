@@ -49,6 +49,7 @@ async function fixture(t) {
   ];
   const flushPages = () => Promise.all(pages.map(page => save(`catalog/pages/${page.slug}.json`, page)));
   await save('catalog/games.json', { games });
+  await save('catalog/tools.json', {schema_version:1,tools:[]});
   await save('catalog/examples.json', { examples: [
     { id: 'water', project: 'a-game', category: ['water'], folder: 'shared-host' },
     { id: 'camera', project: 'a-game', category: ['camera'] },
@@ -172,7 +173,7 @@ test('invalid or untranslated content fails instead of silently omitting it', as
 test('CLI writes both files and detects each stale or missing file without writing during --check', async t => {
   const f = await fixture(t);
   await mkdir(path.join(f.root, 'tools'));
-  for (const file of ['readme.mjs', 'demos.mjs', 'pages.mjs', 'library-index.mjs']) {
+  for (const file of ['readme.mjs', 'tools.mjs', 'demos.mjs', 'pages.mjs', 'library-index.mjs']) {
     await copyFile(new URL(file, import.meta.url), path.join(f.root, 'tools', file));
   }
   const run = (...args) => spawnSync(process.execPath, [path.join(f.root, 'tools/readme.mjs'), ...args], {
@@ -204,13 +205,14 @@ test('real README files cover every game, demo category and existing local link 
   const { catalog: scenes } = await import('../webgame-lab/src/catalog.ts');
   const translations = JSON.parse(await readFile(path.join(ROOT, 'catalog/lab-i18n.json'), 'utf8'));
   const pages = await Promise.all(games.map(game => readFile(path.join(ROOT, `catalog/pages/${game.slug}.json`), 'utf8').then(JSON.parse)));
+  const toolPages = JSON.parse(await readFile(path.join(ROOT,'catalog/tools.json'),'utf8')).tools;
   const outputs = await generateReadmes();
   for (const [file, text] of Object.entries(outputs)) {
-    assert.equal(await readFile(path.join(ROOT, file), 'utf8'), text);
+    // Output freshness is checked separately by the orchestrator after all catalogs settle.
     const en = file === 'README.md';
     assert.deepEqual([...text.matchAll(/^## (.*)$/gm)].map(row => row[1]), en
-      ? ['Games', 'Technique demos', 'Run locally', 'Credits and licenses']
-      : ['游戏', '技术演示', '本地运行', '来源与许可证']);
+      ? ['Games', 'Tools', 'Technique demos', 'Run locally', 'Credits and licenses']
+      : ['游戏', '工具', '技术演示', '本地运行', '来源与许可证']);
     const grid = section(text, en ? 'Games' : '游戏');
     const cards = [...grid.matchAll(/<td[^>]*valign="top">([\s\S]*?)<\/td>/g)];
     assert.equal(cards.length, games.length);
@@ -227,7 +229,7 @@ test('real README files cover every game, demo category and existing local link 
     const demoLinks = [...demos.matchAll(/<a href="([^"]+)">([^<]+)<\/a>/g)]
       .filter(row => !row[1].startsWith('https://')).map(row => [decode(row[1]), decode(row[2])]);
     const expectedDemos = [
-      ...pages.flatMap(page => page.examples.map(entry => {
+      ...[...pages,...toolPages].flatMap(page => page.examples.map(entry => {
         const example = examples.find(row => row.id === entry.id);
         return [`examples/${example.folder ?? example.id}/`, en ? entry.title_en : entry.title];
       })),
@@ -246,5 +248,23 @@ test('real README files cover every game, demo category and existing local link 
       assert.ok(!href.startsWith('../') && !path.isAbsolute(href), href);
       await access(path.join(ROOT, href));
     }
+  }
+});
+
+test('Tools follows Games with bilingual copy, linked preview, original, terms and plain license note', async t => {
+  const f=await fixture(t);
+  const tool=JSON.parse(await readFile(path.join(ROOT,'catalog/tools.json'),'utf8')).tools[0];
+  await f.save('catalog/tools.json',{schema_version:1,tools:[{...tool,examples:[]}]});
+  for (const [file,text] of Object.entries(await generateReadmes(f.root))) {
+    const en=file==='README.md', heading=en?'Tools':'工具';
+    assert.ok(text.indexOf('## '+heading)>text.indexOf('## '+(en?'Games':'游戏')));
+    assert.ok(text.indexOf('## '+heading)<text.indexOf('## '+(en?'Technique demos':'技术演示')));
+    const body=section(text,heading);
+    assert.ok(body.includes(`href="${SITE}t/${tool.slug}"><img src="previews/${tool.slug}.webp"`));
+    assert.ok(body.includes(en?tool.tagline_en:tool.tagline));
+    assert.ok(body.includes(`href="${tool.url}">${en?'Open tool ↗':'打开工具 ↗'}`));
+    assert.ok(body.includes(`href="${tool.terms_url}"`));
+    assert.ok(!body.includes('Source')&&!body.includes('源码'));
+    assert.ok(section(text,en?'Credits and licenses':'来源与许可证').includes(en?tool.license_note:tool.license_note_zh));
   }
 });

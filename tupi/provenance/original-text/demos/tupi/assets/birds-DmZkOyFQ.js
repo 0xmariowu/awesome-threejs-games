@@ -1,0 +1,1 @@
+import{n as e,t}from"./birds-DeFPwjcp.js";export{t as default,e as flockCentre};

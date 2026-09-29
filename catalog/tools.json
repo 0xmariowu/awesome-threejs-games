@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "tools": [
+    {
+      "slug": "fab-botanic",
+      "title": "FABOTANIC",
+      "author": "AMIX · トミナガハルキ",
+      "author_url": "https://amix-design.com/",
+      "url": "https://amix-design.com/tl/fab-botanic/",
+      "terms_url": "https://amix-design.com/tl/fab-botanic/license.html",
+      "about_url": "https://amix-design.com/tl/fab-botanic/about.html",
+      "tagline": "在浏览器里生成 3D 草木，导出后直接放进游戏",
+      "tagline_en": "Generate 3D plants in the browser and drop them straight into your game.",
+      "facts": [
+        {
+          "zh": "41 种植物",
+          "en": "41 plant systems"
+        },
+        {
+          "zh": "免登录",
+          "en": "No sign-up"
+        },
+        {
+          "zh": "可商用",
+          "en": "Commercial use"
+        }
+      ],
+      "features": [
+        {
+          "title": "选植物",
+          "title_en": "Pick a plant",
+          "desc": "树木、野草、野花、蕨类、观叶植物、仙人掌，共 41 种",
+          "desc_en": "Trees, grasses, wildflowers, ferns, foliage plants and cacti: 41 systems."
+        },
+        {
+          "title": "调形状",
+          "title_en": "Shape it",
+          "desc": "高度、叶量、颜色和质感都能调，换随机种子就是新的一株",
+          "desc_en": "Tune height, foliage, colour and texture; a new seed grows a new individual."
+        },
+        {
+          "title": "看风吹",
+          "title_en": "Preview wind",
+          "desc": "在工具里直接预览草木被风吹动的样子",
+          "desc_en": "Preview the plants swaying in the wind right in the tool."
+        },
+        {
+          "title": "远近三档",
+          "title_en": "Near, mid, far",
+          "desc": "同一株植物导出近景、中景、远景三种精细度，远处更省性能",
+          "desc_en": "Export near, mid and far versions of one plant so distant ones stay cheap."
+        }
+      ],
+      "steps": [
+        {
+          "zh": "选好、调好一株植物",
+          "en": "Pick and shape a plant"
+        },
+        {
+          "zh": "点「書き出す」（导出）按钮导出模型文件（GLB）或 Three.js 压缩包",
+          "en": "Export a GLB model or the Three.js ZIP"
+        },
+        {
+          "zh": "放进 Three.js 场景；压缩包里附带读取代码和给 AI 的说明",
+          "en": "Load it in a Three.js scene; the ZIP includes loader code and an AI guide"
+        }
+      ],
+      "can": [
+        {
+          "zh": "放进游戏、视频、网页和商业作品，可以修改，不必署名",
+          "en": "Use in games, video, web and commercial work; modify freely; credit optional"
+        }
+      ],
+      "cannot": [
+        {
+          "zh": "不能把生成的模型单独打包分发或转卖，也不能镜像转载工具本身",
+          "en": "Do not redistribute or sell the generated assets on their own, or mirror the tool itself"
+        }
+      ],
+      "license_note": "Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC code or assets; only our own screen recording and preview image of the tool.",
+      "license_note_zh": "作者条款不允许镜像转载工具本身（条款 v1.0.0，2026-09-28）。本仓库只链接原站，不收录它的任何代码或素材，只有我们自己录的操作视频和预览图。",
+      "overview_video": "fab-botanic/overview",
+      "examples": [
+        {
+          "id": "botanic-meadow",
+          "title": "野地与风",
+          "one_liner": "用聚集、空隙和微风生成混合野地",
+          "title_en": "A mixed wild field",
+          "one_liner_en": "Scatter a mixed meadow with clusters, gaps and wind",
+          "candidate": "fab-botanic.meadow"
+        },
+        {
+          "id": "botanic-phyllotaxis",
+          "title": "叶序与黄金角",
+          "one_liner": "调节黄金角，观察叶片和花盘的排列",
+          "title_en": "Leaf arrangements",
+          "one_liner_en": "Explore leaf arrangements and sunflower spirals",
+          "candidate": "fab-botanic.phyllotaxis"
+        }
+      ]
+    }
+  ]
+}

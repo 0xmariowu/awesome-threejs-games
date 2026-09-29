@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tupi · Forest impostors</title><link rel="icon" href="data:,"><link rel="stylesheet" href="src/style.css"><link rel="stylesheet" href="src/ui.css"></head>
+<body><canvas data-demo-picture aria-label="Tupi · Forest impostors"></canvas><section data-demo-control><h1>Tupi · Forest impostors</h1>
+<label>Scene<select id="scene"><option value="grove">Comparison grove</option><option value="forest">Original forest</option></select></label>
+<label>Tree rendering<select id="mode"><option value="cards">Impostor cards</option><option value="meshes">Full meshes</option><option value="auto">Automatic LOD</option></select></label>
+<label>Draw distance<input id="distance" type="range" min="80" max="1600" step="20" value="1000"></label>
+<label><span>Pause</span><input id="pause" type="checkbox"></label></section>
+<output id="status" data-demo-readout>Loading…</output><p data-demo-hint>Drag to orbit · Scroll to zoom</p>
+<script type="module" src="src/main.js"></script></body></html>

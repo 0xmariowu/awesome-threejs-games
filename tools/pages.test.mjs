@@ -26,6 +26,7 @@ async function fixture(t) {
   const examples = [{id:'cloudkeep-flight',project:'cloudkeep',port:8103},{id:'other-flight',project:'other',port:8104}];
   for (const example of examples) await save(`examples/${example.id}/local.json`,{port:example.port});
   await save('catalog/games.json',{games:[{slug:'cloudkeep'},{slug:'other'}]});
+  await save('catalog/tools.json',{schema_version:1,tools:[]});
   await save('catalog/extraction-candidates.json',{candidates});
   await save('catalog/examples.json',{examples});
   const page = {schema_version:3,slug:'cloudkeep',title:'Cloudkeep',tagline:'驾驶飞船',tagline_en:'Fly the ship',category:'飞行探索',
@@ -53,6 +54,33 @@ test('valid fixture loads maps and passes both validators',async t=>{
   assert.deepEqual(await checkPages(f.root),expected);
   assert.deepEqual(await checkPages(f.root,{slug:'cloudkeep',requireVideos:true}),expected);
   assert.deepEqual(await checkVideos(f.root,'cloudkeep'),expected);
+});
+
+test('registered tools own videos without becoming game pages',async t=>{
+  const f = await fixture(t);
+  await f.save('catalog/tools.json',{schema_version:1,tools:[{slug:'plant-tool'}]});
+  const video = {...f.videos.videos[1],id:'plant-tool/overview',project:'plant-tool'};
+  for (const field of ['file','poster','captions']) {
+    const content = await readFile(path.join(f.root,video[field]));
+    video[field] = video[field].replace('/cloudkeep/','/plant-tool/');
+    await f.write(video[field],content);
+  }
+  f.videos.videos.push(video); await f.flush();
+  assert.deepEqual(await checkPages(f.root),{errors:[],warnings:[],checked:['cloudkeep','plant-tool']});
+  assert.deepEqual(await checkVideos(f.root,'plant-tool'),{errors:[],warnings:[],checked:['plant-tool']});
+  await f.save('catalog/pages/plant-tool.json',{...f.page,slug:'plant-tool',examples:[],overview_video:'plant-tool/overview'});
+  assert.match((await checkPages(f.root)).errors.join('\n'),/plant-tool: slug does not exist in games.json/);
+  assert.match((await checkPages(f.root,{slug:'plant-tool'})).errors.join('\n'),/plant-tool: unknown project/);
+});
+
+test('tool registry is optional but malformed registries fail validation',async t=>{
+  const f = await fixture(t);
+  await rm(path.join(f.root,'catalog/tools.json'));
+  assert.deepEqual((await checkPages(f.root)).errors,[]);
+  for (const data of [null,{schema_version:2,tools:[]},{schema_version:1,tools:[null]}]) {
+    await f.save('catalog/tools.json',data);
+    assert.match((await checkPages(f.root)).errors.join('\n'),/tools.json must contain/);
+  }
 });
 
 const textLimits = [
@@ -165,7 +193,7 @@ for (const scope of ['page','example']) test(`${scope} requires every declared f
 test('all categories are accepted with empty examples and a null overview',async t=>{
   const f = await fixture(t);
   f.page.examples = []; f.page.overview_video = null; f.videos.videos = [];
-  for (const category of ['飞行探索','赛车','开放世界动作','战斗','城镇与生活','风景与氛围','其他引擎']) {
+  for (const category of ['飞行探索','赛车','开放世界动作','战斗','城镇与生活','风景与氛围','互动影像','其他引擎']) {
     f.page.category = category; await f.flush();
     assert.deepEqual(await checkPages(f.root,{requireVideos:true}),{errors:[],warnings:[],checked:['cloudkeep']});
     assert.deepEqual((await checkVideos(f.root,'cloudkeep')).errors,[]);
@@ -323,7 +351,9 @@ test('real catalog candidates load',async()=>{
 });
 
 test('CLI check on the real root validates every catalog v3 page',async()=>{
-  const count = (await readdir(path.join(ROOT, 'catalog/pages'))).filter(name => name.endsWith('.json')).length;
+  const pages = (await readdir(path.join(ROOT, 'catalog/pages'))).filter(name => name.endsWith('.json')).map(name=>name.slice(0,-5));
+  const {videos} = JSON.parse(await readFile(path.join(ROOT,'catalog/videos.json'),'utf8'));
+  const count = new Set([...pages,...videos.map(video=>video.project)]).size;
   assert.ok(count > 0);
   const result = spawnSync(process.execPath,[path.join(ROOT,'tools/pages.mjs'),'check'],{cwd:ROOT,encoding:'utf8'});
   assert.equal(result.error,undefined);

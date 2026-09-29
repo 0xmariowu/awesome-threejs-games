@@ -80,9 +80,9 @@ class LibraryUITestCase(unittest.TestCase):
     def test_home_navigation_and_card_alignment(self):
         self.goto()
         pages = self.context.request.get(BASE_URL+'/data/pages.json').json()['pages']
-        self.assertEqual(len(pages),16)
-        expect(self.page.locator('.game-card')).to_have_count(16)
-        expect(self.page.locator('.topbar nav a')).to_have_text(['项目','技术演示'])
+        self.assertEqual(len(pages),len(json.loads((ROOT/'catalog/games.json').read_text())['games']))
+        expect(self.page.locator('.game-card')).to_have_count(len(json.loads((ROOT/'catalog/games.json').read_text())['games']))
+        expect(self.page.locator('.topbar nav a')).to_have_text(['游戏','工具','技术演示'])
         expect(self.page.locator('.home h1')).to_have_text('可以直接玩的 Three.js 游戏。')
         self.assertEqual(self.page.locator('.game-card').evaluate_all('ns => ns.map(n=>n.dataset.slug)'), [p['slug'] for p in pages])
         positions = self.page.locator('.game-card .play-button').evaluate_all('ns=>ns.slice(0,3).map(n=>n.getBoundingClientRect().top)')
@@ -91,7 +91,7 @@ class LibraryUITestCase(unittest.TestCase):
         self.page.locator('.game-card[data-slug=cloudkeep] h2 a').click()
         expect(self.page.locator('h1')).to_have_text('Cloudkeep')
         expect(self.page).to_have_url(BASE_URL+'/p/cloudkeep')
-        self.page.locator('.topbar nav a').nth(1).click()
+        self.page.locator('.topbar nav a').nth(2).click()
         expect(self.page).to_have_url(BASE_URL+'/demos')
         expect(self.page.locator('.demo-item[aria-pressed=true]')).to_have_attribute('data-id','example:tidewater-fishing')
         self.page.locator('.brand').click()
@@ -284,7 +284,7 @@ class LibraryUITestCase(unittest.TestCase):
         for width in [390,768,1024,1280,1440,1920]:
             self.page.set_viewport_size({'width':width,'height':1000})
             for lang in ['zh','en']:
-                for route in ['/','/p/cloudkeep','/demos/example:tidewater-fishing','/source/cloudkeep']:
+                for route in ['/','/p/cloudkeep','/tools','/t/fab-botanic','/demos/example:tidewater-fishing','/source/cloudkeep']:
                     with self.subTest(width=width,lang=lang,route=route):
                         self.goto(route+'?lang='+lang)
                         self.page.wait_for_timeout(150)
@@ -326,8 +326,10 @@ class LibraryUITestCase(unittest.TestCase):
         catalog=self.context.request.get(BASE_URL+'/data/demos.json').json()
         demos=catalog['demos']
         examples={e['id']:e for e in json.loads((ROOT/'catalog/examples.json').read_text())['examples']}
-        self.assertEqual(len(demos),62)
-        self.assertEqual(sum(d['kind']=='example' for d in demos),18)
+        page_examples = sum(len(json.loads(file.read_text())['examples']) for file in (ROOT/'catalog/pages').glob('*.json'))
+        tool_examples = sum(len(tool['examples']) for tool in json.loads((ROOT/'catalog/tools.json').read_text())['tools'])
+        self.assertEqual(sum(d['kind']=='example' for d in demos),page_examples+tool_examples)
+        self.assertEqual(sum(d['kind']=='lab' for d in demos),44)
         for demo in demos:
             with self.subTest(demo=demo['id']):
                 source_exists(demo['source_url'])
@@ -393,7 +395,122 @@ class LibraryUITestCase(unittest.TestCase):
                 for name in names:text=text.replace(name,'')
                 if lang=='en':self.assertIsNone(re.search(r'[\u3400-\u9fff]',text),text[:1500])
                 else:self.assertRegex(text,r'[\u3400-\u9fff]')
-                expect(self.page.locator('.topbar nav a')).to_have_text(['Projects','Demos'] if lang=='en' else ['项目','技术演示'])
+                expect(self.page.locator('.topbar nav a')).to_have_text(['Games','Tools','Demos'] if lang=='en' else ['游戏','工具','技术演示'])
+
+    def test_tools_nav_detail_links_themes_languages_and_screenshots(self):
+        shots = Path('/private/tmp/claude-501/-Users-vimala/5258cabc-626a-402d-b921-71f034ba10e0/scratchpad/shots')
+        shots.mkdir(parents=True, exist_ok=True)
+        tool = json.loads((ROOT/'catalog/tools.json').read_text())['tools'][0]
+        for width in [1440,390]:
+            self.page.set_viewport_size({'width':width,'height':1000})
+            for theme in ['light','dark']:
+                self.context.add_init_script('localStorage.setItem("gameref-theme",'+json.dumps(theme)+')')
+                for lang in ['zh','en']:
+                    for route in ['/tools','/t/fab-botanic']:
+                        with self.subTest(width=width,theme=theme,lang=lang,route=route):
+                            self.goto(route+'?lang='+lang)
+                            expect(self.page.locator('html')).to_have_attribute('data-theme',theme)
+                            nav=self.page.locator('header.topbar nav a')
+                            expect(nav).to_have_text(['游戏','工具','技术演示'] if lang=='zh' else ['Games','Tools','Demos'])
+                            expect(nav.nth(1)).to_have_attribute('aria-current','page')
+                            self.assertEqual(self.page.locator('header.topbar nav [aria-current=page]').count(),1)
+                            expect(nav.nth(1)).to_have_css('color',self.page.locator('body').evaluate('n=>getComputedStyle(n).color'))
+                            for link in self.page.get_by_role('link',name='打开工具 ↗' if lang=='zh' else 'Open tool ↗',exact=True).all():
+                                expect(link).to_have_attribute('href',tool['url'])
+                                expect(link).to_have_attribute('target','_blank')
+                                expect(link).to_have_attribute('rel','noopener')
+                            expect(self.page.get_by_role('link',name='浏览源码' if lang=='zh' else 'Browse source',exact=True)).to_have_count(0)
+                            video=self.page.locator('main video')
+                            expect(video).to_have_count(1)
+                            expect(video).to_have_attribute('loop','')
+                            expect(video).to_have_attribute('poster','/previews/fab-botanic.webp')
+                            self.page.wait_for_function('()=>{const v=document.querySelector("main video");return v.readyState>=2 && !v.paused && v.currentTime>.1}',timeout=15000)
+                            self.assertTrue(video.evaluate('v=>v.muted && v.defaultMuted'))
+                            if route=='/tools':
+                                expect(self.page.locator('h1')).to_have_text('好用的游戏制作工具。' if lang=='zh' else 'Tools for making web games.')
+                                expect(self.page.locator('.tool-card')).to_have_count(1)
+                                expect(self.page.locator('.tool-facts')).to_have_text(' · '.join(f[lang] for f in tool['facts']))
+                                expect(self.page.get_by_role('link',name=('了解更多' if lang=='zh' else 'Learn more')+' ›')).to_have_attribute('href','/t/fab-botanic')
+                                media=self.page.locator('.tool-media').bounding_box();body=self.page.locator('.tool-card-body').bounding_box()
+                                self.assertTrue(body['x']>media['x']+media['width'] if width==1440 else body['y']>=media['y']+media['height'])
+                            else:
+                                expect(self.page.locator('h1')).to_have_text('FABOTANIC')
+                                expect(self.page.locator('.tool-feature')).to_have_count(4)
+                                expect(self.page.locator('.tool-step-grid li')).to_have_count(3)
+                                for heading in (['能做什么','怎么用在游戏里','能不能用'] if lang=='zh' else ['What it can do','Use it in your game','Usage rights']):
+                                    expect(self.page.get_by_role('heading',name=heading,exact=True)).to_be_visible()
+                                expect(self.page.locator('.tool-usage')).to_contain_text('✓ '+tool['can'][0][lang])
+                                expect(self.page.locator('.tool-usage')).to_contain_text('✗ '+tool['cannot'][0][lang])
+                                for link in self.page.get_by_role('link',name='使用条款 ↗' if lang=='zh' else 'Terms ↗',exact=True).all():
+                                    expect(link).to_have_attribute('href',tool['terms_url'])
+                                    expect(link).to_have_attribute('target','_blank')
+                                    expect(link).to_have_attribute('rel','noopener')
+                                expect(self.page.get_by_role('link',name=tool['author'],exact=True)).to_have_attribute('href',tool['author_url'])
+                                expect(self.page.get_by_role('link',name='‹ 全部工具' if lang=='zh' else '‹ All tools')).to_have_attribute('href','/tools')
+                                expect(self.page.locator('footer')).to_contain_text('工具版权归原作者所有，本站只做介绍和链接。' if lang=='zh' else 'Tools belong to their authors; this site only describes and links to them.')
+                                expect(self.page.locator('.example-row')).to_have_count(len(tool['examples']))
+                                if not tool['examples']:
+                                    expect(self.page.get_by_role('heading',name='技术示例' if lang=='zh' else 'Technique examples',exact=True)).to_have_count(0)
+                            self.assertLessEqual(self.page.evaluate('document.documentElement.scrollWidth'),width)
+                            if lang=='zh':
+                                self.page.wait_for_timeout(500)
+                                self.page.screenshot(path=str(shots/f'f003-{ "tools" if route=="/tools" else "fab-botanic" }-{width}-{theme}.png'),full_page=True)
+        for route,active in [('/',0),('/p/cloudkeep',0),('/source/cloudkeep',0),('/demos',2)]:
+            self.goto(route+'?lang=en')
+            expect(self.page.locator('header.topbar nav a').nth(active)).to_have_attribute('aria-current','page')
+
+    def test_tools_grid_fallback_and_shared_examples(self):
+        tools=self.context.request.get(BASE_URL+'/data/tools.json').json()
+        tools['tools']=[dict(tools['tools'][0],slug='tool-'+str(i)) for i in range(3)]
+        full=self.context.request.get(BASE_URL+'/data/tool/fab-botanic.json').json()
+        game=self.context.request.get(BASE_URL+'/data/page/cloudkeep.json').json()
+        full['examples']=game['examples'][:1]
+        self.context.route('**/data/tools.json',lambda r:r.fulfill(json=tools))
+        self.context.route(re.compile(r'/data/tool/tool-[0-2]\.json$'),lambda r:r.fulfill(json=dict(full,slug=r.request.url.split('/')[-1][:-5])))
+        for width,columns in [(1440,3),(768,2),(390,1)]:
+            self.page.set_viewport_size({'width':width,'height':1000})
+            self.goto('/tools?lang=en')
+            expect(self.page.locator('.tools-grid .tool-card')).to_have_count(3)
+            self.assertEqual(self.page.locator('.tools-grid').evaluate('n=>getComputedStyle(n).gridTemplateColumns.split(" ").length'),columns)
+        self.goto('/t/tool-0?lang=en')
+        expect(self.page.get_by_text('Independent examples inspired by this tool.',exact=True)).to_be_visible()
+        self.page.locator('.example-row').get_by_role('button',name='Run',exact=True).click()
+        expect(self.page.locator('iframe')).to_have_count(1)
+        expect(self.page.locator('iframe')).to_have_attribute('src',re.compile('^http'))
+        self.page.locator('.example-row').get_by_role('button',name='Stop',exact=True).click()
+        expect(self.page.locator('iframe')).to_have_count(0)
+        self.page.get_by_role('link',name='Open in Demos ›').click()
+        expect(self.page).to_have_url(re.compile('/demos/example%3A'))
+
+    def test_missing_tool_detail_keeps_boot_and_tools_available(self):
+        tools = self.context.request.get(BASE_URL+'/data/tools.json').json()
+        missing = tools['tools'][0]
+        full = self.context.request.get(BASE_URL+'/data/tool/'+missing['slug']+'.json').json()
+        tools['tools'].append(dict(missing, slug='available-tool'))
+        self.context.route('**/data/tools.json', lambda r: r.fulfill(json=tools))
+        self.context.route('**/data/tool/'+missing['slug']+'.json',
+                           lambda r: r.fulfill(status=404, body='not found'))
+        self.context.route('**/data/tool/available-tool.json',
+                           lambda r: r.fulfill(json=dict(full, slug='available-tool')))
+
+        self.goto('/?lang=en')
+        expect(self.page.locator('.game-card')).to_have_count(
+            len(json.loads((ROOT/'catalog/games.json').read_text())['games']))
+        self.page.get_by_role('link', name='Tools', exact=True).click()
+        expect(self.page.locator('.tool-card')).to_have_count(len(tools['tools']))
+        card = self.page.locator('.tool-card').filter(
+            has=self.page.locator('a[href="/t/'+missing['slug']+'"]'))
+        expect(card.get_by_role('link', name='Open tool ↗', exact=True)).to_have_attribute('href', missing['url'])
+        card.get_by_role('link', name='Learn more ›', exact=True).click()
+        expect(self.page.locator('main h1')).to_have_text('Tools for making web games.')
+        expect(self.page.locator('.game-card')).to_have_count(0)
+
+        self.goto('/t/'+missing['slug']+'?lang=en')
+        expect(self.page.locator('main h1')).to_have_text('Tools for making web games.')
+        expect(card.get_by_role('link', name='Open tool ↗', exact=True)).to_have_attribute('href', missing['url'])
+        self.goto('/t/available-tool?lang=en')
+        expect(self.page.locator('main h1')).to_have_text(full['title'])
+        expect(self.page.locator('.tool-feature')).to_have_count(len(full['features']))
 
     def test_boot_error_retry_and_source_error_retry(self):
         self.context.route('**/data/pages.json',lambda route:route.fulfill(status=503,body='unavailable'))
@@ -401,7 +518,7 @@ class LibraryUITestCase(unittest.TestCase):
         expect(self.page.get_by_text('Couldn’t load the library',exact=True)).to_be_visible()
         self.context.unroute('**/data/pages.json')
         self.page.get_by_role('button',name='Try again',exact=True).click()
-        expect(self.page.locator('.game-card')).to_have_count(16)
+        expect(self.page.locator('.game-card')).to_have_count(len(json.loads((ROOT/'catalog/games.json').read_text())['games']))
         self.context.route('**/data/src/cloudkeep/README.md',lambda r:r.fulfill(status=503,body='unavailable'))
         self.context.route('https://raw.githubusercontent.com/**',lambda r:r.fulfill(status=404,body='unavailable'))
         self.goto('/source/cloudkeep?lang=en')
