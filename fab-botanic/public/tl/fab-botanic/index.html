@@ -266,6 +266,44 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 @media(max-width:1200px) and (min-width:761px){.species-card{grid-template-columns:minmax(0,1fr);gap:6px;align-items:start;padding:6px;min-height:0}.species-thumb{width:100%;height:64px}.species-form{display:none}}
 /* 見出しの補足は途中で折り返さず、足りなければ次の行へ回す */
 .output-panel-title{flex-wrap:wrap;gap:4px 12px;white-space:nowrap}
+
+/* Parameter-first inspector: existing controls remain mounted in both panels. */
+.inspector{min-width:0}
+.inspector-tabs{display:flex;flex:none;gap:24px;padding:0 20px;border-bottom:1px solid var(--line)}
+.inspector-tabs button{position:relative;min-height:52px;padding:12px 4px;font-size:14px;font-weight:600;color:var(--muted)}
+.inspector-tabs button.active{color:var(--green)}
+.inspector-tabs button.active::after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:var(--green)}
+.inspector-panel{flex:1;min-height:0;min-width:0}
+#tunePanel{display:flex;flex-direction:column}
+#tunePanel>.selection-context{flex:none;margin:0;padding:10px 24px 6px;border:0;background:none}
+#selectionSummary{font-size:11px;line-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#tunePanel>.tabs{flex:none;gap:16px}
+#tunePanel>.inspector-scroll{flex:1;min-height:0;min-width:0;overflow-y:auto;overflow-x:hidden;padding-top:16px}
+#tunePanel>.workflow-feedback,#tunePanel>.generation-recovery{flex:none;max-height:35%;overflow-y:auto}
+#tunePanel>.inspector-bottom{flex:none;padding:10px 8px}
+.inspector-bottom .variation-tools{grid-template-columns:54px minmax(max-content,1fr) max-content minmax(max-content,1fr);gap:4px;margin:0}
+.inspector-bottom .variation-tools select{min-height:44px;padding:4px 2px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);font-size:12px;line-height:18px;white-space:nowrap}
+.inspector-bottom .variation-tools .button{min-width:0;min-height:44px;padding:5px 4px;gap:3px;font-size:12px;line-height:18px;white-space:nowrap;word-break:keep-all}
+.inspector-bottom .random-button{justify-content:center}
+.inspector-bottom .random-button span{font-size:12px;white-space:nowrap}
+.inspector-bottom .random-button svg{display:none}
+.inspector-bottom .random-arrow{display:inline;margin-left:0;font-size:14px!important}
+#infoPanel{overflow-y:auto;overflow-wrap:anywhere;scrollbar-width:thin}
+.inspector-status{margin:0 24px 20px;font-size:11px;line-height:1.7;color:var(--muted)}
+.inspector-notes{padding:16px 24px;font-size:10px;line-height:1.8;color:var(--muted)}
+.inspector-notes .micro-copy{font-size:11px}
+@media(max-width:960px) and (min-width:761px){
+ .inspector-tabs{padding:0 14px;gap:18px}
+ #tunePanel>.selection-context{padding-left:18px;padding-right:18px}
+ #tunePanel>.tabs{padding:0 14px;gap:12px}
+}
+@media(max-width:760px){
+ .inspector{display:flex;height:calc(100dvh - 64px);min-height:500px}
+ .inspector-tabs button{min-height:48px}
+ #tunePanel>.tabs{position:static;backdrop-filter:none;background:var(--paper)}
+ #tunePanel>.inspector-scroll{padding-top:16px}
+ #tunePanel>.inspector-bottom{padding:10px 12px max(10px,env(safe-area-inset-bottom))}
+}
 </style>
 <link rel="canonical" href="https://amix-design.com/tl/fab-botanic/">
 <meta property="og:type" content="website">
@@ -387,7 +425,12 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 <div class="fatal-error" hidden="" id="fatalError"><strong>无法启动预览 / Preview failed to start</strong><p></p><button class="button primary" onclick="location.reload()">重新打开 / Reload</button></div>
 </section>
 <aside aria-label="植物设置 / Plant Settings" class="inspector">
-<div class="inspector-heading"><span class="eyebrow">02 / CULTIVATE</span><h2>参数调整 / Cultivate</h2><p id="speciesNote" title="Flexible fronds lined with small leaflets.">柔软的叶轴上，排列着细小的叶片。</p></div><div class="selection-context" aria-label="当前素材 / Current Asset"><strong id="selectionSummary"></strong><span id="selectionStatus" role="status" aria-live="polite"></span></div>
+<div class="inspector-tabs" role="tablist" aria-label="检查面板 / Inspector">
+<button type="button" id="tabTune" role="tab" aria-controls="tunePanel" aria-selected="true" class="active">调参 / Tune</button>
+<button type="button" id="tabInfo" role="tab" aria-controls="infoPanel" aria-selected="false" tabindex="-1">信息 / Info</button>
+</div>
+<div id="tunePanel" class="inspector-panel" role="tabpanel" aria-labelledby="tabTune">
+<div class="selection-context" aria-label="当前素材 / Current Asset"><strong id="selectionSummary"></strong></div>
 <div class="workflow-feedback"><p id="workflowNotice" class="workflow-notice" role="status" aria-live="polite" hidden></p><div class="workflow-actions"><button type="button" id="undoReplacement" class="button subtle" hidden>撤销替换 / Undo Replacement</button><button type="button" id="dismissWorkflowNotice" hidden>关闭通知 / Dismiss</button></div></div>
 <div id="generationRecovery" class="generation-recovery" tabindex="-1" aria-label="生成错误恢复 / Generation Recovery" hidden><strong>生成失败 / Generation Failed</strong><p id="generationErrorText" role="alert"></p><div class="workflow-actions"><button type="button" id="retryGeneration" class="button subtle">重试 / Retry</button><button type="button" id="restoreSuccessful" class="button subtle">恢复上次成功设置 / Restore Last Working Settings</button></div><p class="micro-copy">仍可保存设置 JSON。GLB 和图片需生成成功后再导出。 / Settings JSON can still be saved. Export GLB or images after generation succeeds.</p></div>
 <div aria-label="设置类别 / Settings Category" class="tabs" role="tablist"><button aria-controls="shapePanel" aria-selected="true" class="active" id="tabShape" role="tab">实体形状 / Solid</button><button aria-controls="materialPanel" aria-selected="false" id="tabMaterial" role="tab" tabindex="-1">材质着色 / Shaded</button></div>
@@ -403,9 +446,14 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 <details id="treeLodSettings"><summary>树木多级 LOD ZIP：距离自动切换 / Tree LOD Package</summary><div class="tree-lod-inputs"><label for="treeLodMidM">中景切换 (m) / Mid Distance<input type="number" id="treeLodMidM" min="1" max="100" step="1" value="8"></label><label for="treeLodFarM">远景切换 (m) / Far Distance<input type="number" id="treeLodFarM" min="2" max="300" step="1" value="24"></label></div><p class="micro-copy">支持 9 类常规树木。低多边形、草本和 FIELD 的用途需手动选择导出。 / Supports 9 natural tree types. Export low-poly, grass and FIELD model profiles manually.</p></details></section><details class="field-details" hidden="" id="fieldDetails" open=""><summary><span>FIELD SYSTEM</span><span aria-hidden="true" class="disclosure-indicator">−</span></summary><label class="field-search-label" for="fieldCompositionMode">群落构成 / Field Composition</label><select id="fieldCompositionMode"><option value="layered">基础野草＋增植 / Base + Additions</option><option value="catalog">自选全部 / Custom Mix</option><option value="legacy">保留旧版 / Legacy Mix</option></select><div id="fieldAdditionsControls"><label class="ground-toggle"><input type="checkbox" id="fieldAdditionsEnabled"> 添加植物 / Add Plants</label><label for="fieldAdditionAmount">增植数量 / Additions <output id="fieldAdditionAmountValue">10</output></label><input type="range" id="fieldAdditionAmount" min="0" max="100" value="10"><p id="fieldAdditionReason" class="control-reason" hidden></p><p class="micro-copy">保留基础草、小花和地表。设为 0 时不自动增植，但明确选入的种类仍至少保留 1 株。 / Keeps base grass, flowers and ground cover. At 0, automatic additions stop; each explicitly included type still has at least 1 plant.</p><button id="shuffleAdditions" type="button" class="button subtle">随机增植 / Shuffle Additions</button></div><div class="field-shuffle-actions"><button class="button primary" id="shuffleField" type="button">SHUFFLE FIELD <small>保留环境 / Keep Environment</small></button><button class="button subtle" id="newField" type="button">NEW FIELD <small>更换环境 / New Environment</small></button></div><p class="micro-copy">随机草地改变基础草；随机增植保留基础草地；NEW FIELD 也会更换环境。 / Shuffle Field changes base grass; Shuffle Additions keeps it. NEW FIELD also changes the environment.</p><details id="fieldSpeciesSelector" class="field-species-selector"><summary><span id="fieldSelectorTitle">增植选择 / Added Plants</span><span aria-hidden="true">＋</span></summary><p id="fieldSelectorExplanation" class="micro-copy">这里只设置增植，基础草和小花保持不变。 / Select additions here; base grass and flowers stay unchanged.</p><p class="micro-copy">观叶和多肉需手动选入。优先放置所选组合，过密时提示。不保证生态适配。 / Houseplants and succulents require manual selection. Selected combinations take priority; crowding triggers a warning. Ecological compatibility is not guaranteed.</p><p id="fieldChoiceStatus" role="status" class="field-choice-status"></p><div id="fieldLegacyNotice" hidden><p class="micro-copy">已保留加载的旧版 FIELD。切换时保留基础形状，增植默认关闭。 / Keeps the loaded legacy FIELD. Switching preserves the base shape and starts with additions off.</p><button id="fieldModernize" type="button" class="button subtle">保留基础并启用增植 / Enable Additions</button></div><div class="field-choice-bulk"><button id="fieldChoicesAuto" type="button">全部自动 / All Auto</button><button id="fieldChoicesNone" type="button">全部排除 / Exclude All</button></div><label for="fieldPlantSearch" class="field-search-label">筛选植物 / Filter Plants</label><input id="fieldPlantSearch" type="search" placeholder="按名称搜索 / Search by name" autocomplete="off"><div id="fieldPlantChoices"></div></details><div class="sliders" id="fieldSliders"></div><p class="micro-copy" id="mixSummary"></p><label class="ground-toggle" id="groundOptions"><input checked="" id="includeGround" type="checkbox"/> 地面一同生成并导出 / Include Ground in Export</label><p class="micro-copy">草高只影响草本和下层植物；树木、观叶和多肉保留各自尺寸。密度决定候选数量，实际株数受间距和绘制预算限制。填充度不是实测覆盖率。石、苔、落叶可单独调整。 / Grass height affects herbs and undergrowth; trees, houseplants and succulents keep their own sizes. Density sets candidates; spacing and rendering budget limit actual counts. Fill is not measured coverage. Adjust rocks, moss and litter separately.</p></details><div class="control-section"><div class="control-section-title"><span>ESSENTIAL</span><small>基础 / Basic</small></div><div class="sliders" id="essentialSliders"></div></div><details class="control-section collapsible" id="inspector-section-1"><summary><span>GROWTH / SEASON</span><span>生长与季节 /<br>Growth & Season</span><span aria-hidden="true" class="disclosure-indicator">＋</span></summary><div class="sliders" id="growthSliders"></div></details><details class="control-section collapsible" id="inspector-section-2"><summary><span>STRUCTURE</span><span>形态 / Form</span><span aria-hidden="true" class="disclosure-indicator">＋</span></summary><div id="branchStartControl" hidden><label class="ground-toggle"><input type="checkbox" id="branchStartManual" aria-describedby="branchStartHelp">手动设置分枝高度 / Set Branch Height</label><p id="branchStartHelp" class="micro-copy">调整地面到第一主枝根部的高度。关闭时自动匹配树形；开启后用滑块或米数设置。 / Sets the height from ground to the first main branch. Off uses the tree shape; on allows a slider or metre value.</p><div id="branchStartInputs"></div><p id="branchStartActual" class="micro-copy" role="status"></p></div><div class="sliders" id="structureSliders"></div></details><details class="control-section collapsible" id="inspector-section-3"><summary><span>ADVANCED</span><span>细节 / Details</span><span aria-hidden="true" class="disclosure-indicator">＋</span></summary><div class="sliders" id="advancedSliders"></div></details><div class="control-group"><div class="field-heading"><span>生成质量 / Quality</span><span class="hint-label">应用于导出 / Used in Export</span></div><div class="segmented" id="qualityGroup"><button data-quality="draft">轻量 / Draft</button><button class="active" data-quality="balanced">标准 / Standard</button><button data-quality="detail">精细 / Detail</button></div><p class="micro-copy">设置支持的常规模型曲面精度。若用途或风格已决定细分，选项会停用并保留原值。 / Sets surface detail for supported natural models. When the style or profile controls subdivision, this option is disabled and its value retained.</p></div></div>
 <div aria-labelledby="tabMaterial" hidden="" id="materialPanel" role="tabpanel"><div class="sliders" id="materialSliders"></div><div class="texture-preview"><div><canvas height="256" id="texturePreview" width="256"></canvas><span>BASE COLOR</span></div><div><canvas height="256" id="normalPreview" width="256"></canvas><span>NORMAL</span></div></div><div class="bark-preview" hidden="" id="barkPreviewBox"><canvas height="256" id="barkPreview" width="256"></canvas><span>BARK / 独立树皮 PBR 材质</span></div><p class="micro-copy texture-note">按植物生成叶脉、色差和粗糙度。树木还生成专属树皮 PBR 纹理，一并写入 GLB。 / Generates plant-specific veins, color variation and roughness. Trees also include species-specific bark PBR textures in GLB.</p><button class="button subtle" id="textureReroll"><svg><use href="#i-refresh"></use></svg>重新计算纹理 / Re-roll Texture</button></div>
 <details class="environment-details" id="environmentSection"><summary>ENVIRONMENT / 环境与风动预览<span aria-hidden="true" class="disclosure-indicator">＋</span></summary><div class="wind-preview-panel"><div class="field-heading"><span>ENVIRONMENT PREVIEW</span><span class="hint-label">Wind live / season baked</span></div><label class="ground-toggle"><input id="windPreview" type="checkbox"/> 风动预览 / Wind Preview</label><label class="export-field" for="windDistanceMode">风动范围 / Wind Range<select id="windDistanceMode"><option value="all">全距离 / All Distances</option><option value="distance">近处衰减 / Distance Fade</option></select></label><div id="distanceWindControls" hidden><div class="wind-distance-fields"><label>开始减弱 (m) / Fade Start<input id="windNearM" type="number" min="0" max="200" step="1" value="12"></label><label>停止距离 (m) / Stop Distance<input id="windFarM" type="number" min="1" max="500" step="1" value="30"></label></div><p class="micro-copy">近处保持风动，过渡区平滑减弱，远处改为静态绘制。编辑器按整体判断，Three.js ZIP 按素材或 FIELD 单元判断。游戏中请将 camera 传入 update 的第 3 个参数。 / Wind fades smoothly to static rendering over distance. The editor checks the whole model; Three.js ZIP checks each asset or FIELD cell. Pass camera as the third update argument in games.</p></div><div class="wind-row"><label>风速 / Speed <input id="windSpeed" max="12" min="0" step=".1" type="range" value="2.5"/><output id="windSpeedValue">2.5 m/s</output></label><label>阵风 / Gust <input id="windGust" max="100" min="0" step="1" type="range" value="25"/><output id="windGustValue">25%</output></label><label>风向 / Direction <input id="windDirectionDeg" max="360" min="0" step="1" type="range" value="14"/><output id="windDirectionDegValue">14°</output></label></div><p class="micro-copy">风动实时显示，共同弯曲保持形体连接；苔、落叶、石和地面不动。日照、湿度和季节用于重新生成 FIELD，不包含天空、雨或水面。 / Live wind uses shared bending to keep parts connected; moss, litter, rocks and ground stay still. Sun, moisture and season guide FIELD regeneration; sky, rain and water are not rendered.</p><p class="micro-copy env-status" id="environmentStatus">ENV — wind 2.5 m/s / gust 25% / herb profile</p></div></details><details class="seed-details" id="inspector-section-4"><summary><span>SEEDS / 随机数种子</span><span aria-hidden="true" class="disclosure-indicator">＋</span></summary><p class="micro-copy">相同数值重现同一株植物。锁定项不会随随机生成改变。 / Identical values reproduce the same plant. Locked values stay unchanged when randomized.</p><div id="seedInputs"></div></details>
-<p class="micro-copy draft-preservation-note">本页打开期间保留各植物的编辑值。关闭前请保存需要的设置 JSON。 / Each plant keeps its edits while this page is open. Save needed settings JSON before closing.</p><div class="reset-row"><button id="resetBtn">恢复此植物默认参数 / Reset to Defaults</button><button aria-label="保存设置 / Save Settings" class="mobile-only" id="mobileSaveBtn"><svg><use href="#i-save"></use></svg></button><button aria-label="加载设置 / Load Settings" class="mobile-only" id="mobileImportBtn"><svg><use href="#i-upload"></use></svg></button></div>
+<div class="reset-row"><button id="resetBtn">恢复此植物默认参数 / Reset to Defaults</button><button aria-label="保存设置 / Save Settings" class="mobile-only" id="mobileSaveBtn"><svg><use href="#i-save"></use></svg></button><button aria-label="加载设置 / Load Settings" class="mobile-only" id="mobileImportBtn"><svg><use href="#i-upload"></use></svg></button></div>
 </div>
-<div class="field-metrics" hidden="" id="fieldMetrics"><div><span>FIELD SIZE</span><strong id="fieldDimensions"></strong></div><div><span>PLANTS</span><strong id="fieldInstances"></strong></div><p>共享/绘制三角形 <span id="fieldEfficiency"></span></p><p id="fieldBudget"></p></div><div class="inspector-bottom"><div class="variation-tools"><label for="variationStrength">形态变化 / Variation</label><select id="variationStrength"><option value="25">小 / Small</option><option value="45" selected>标准 / Standard</option><option value="70">大 / Large</option></select><button id="shuffleShape" class="button subtle" type="button">随机形体 / Shuffle</button><button id="undoVariation" class="button subtle" type="button" disabled>撤销更改 / Undo Shape</button><p class="micro-copy">同类形态变化；高度、色彩、季节、风动不变。</p></div><button class="button random-button" disabled="" id="randomBtn"><svg><use href="#i-shuffle"></use></svg><span>生成同配置新个体 / New Seed</span><span class="random-arrow">↗</span></button><p><span class="status-dot"></span>无需账号，植物在浏览器内生成</p></div>
+<div class="inspector-bottom"><div class="variation-tools"><label class="visually-hidden" for="variationStrength">形态变化 / Variation</label><select id="variationStrength" title="形态变化 / Variation" aria-label="形态变化 / Variation" aria-describedby="variationHelp"><option value="25" title="小 / Small">小</option><option value="45" title="标准 / Standard" selected>标准</option><option value="70" title="大 / Large">大</option></select><button id="shuffleShape" class="button subtle" type="button" title="随机形体 / Shuffle shape" aria-label="随机形体 / Shuffle shape">随机形体</button><button id="undoVariation" class="button subtle" type="button" title="撤销 / Undo shape" aria-label="撤销 / Undo shape" disabled>撤销</button><button class="button random-button" disabled="" id="randomBtn" title="新个体 / New seed" aria-label="新个体 / New seed"><svg><use href="#i-shuffle"></use></svg><span>新个体</span><span class="random-arrow">↗</span></button></div></div>
+</div>
+<div id="infoPanel" class="inspector-panel" role="tabpanel" aria-labelledby="tabInfo" tabindex="0" hidden>
+<div class="inspector-heading"><span class="eyebrow">02 / CULTIVATE</span><h2>参数调整 / Cultivate</h2><p id="speciesNote" title="Flexible fronds lined with small leaflets.">柔软的叶轴上，排列着细小的叶片。</p></div><div class="inspector-status"><span id="selectionStatus" role="status" aria-live="polite"></span></div>
+<div class="field-metrics" hidden="" id="fieldMetrics"><div><span>FIELD SIZE</span><strong id="fieldDimensions"></strong></div><div><span>PLANTS</span><strong id="fieldInstances"></strong></div><p>共享/绘制三角形 <span id="fieldEfficiency"></span></p><p id="fieldBudget"></p></div><div class="inspector-notes"><p class="micro-copy" id="variationHelp">同类形态变化；高度、色彩、季节、风动不变。</p><p class="micro-copy draft-preservation-note">本页打开期间保留各植物的编辑值。关闭前请保存需要的设置 JSON。 / Each plant keeps its edits while this page is open. Save needed settings JSON before closing.</p><p><span class="status-dot"></span>无需账号，植物在浏览器内生成</p></div>
+</div>
 </aside>
 </main>
 <footer class="creator-footer"><span class="creator-credit">©️<a href="https://amix-design.com/" target="_blank" rel="noopener noreferrer">AMIX</a>｜<a href="https://amix-design.com/tominaga/" target="_blank" rel="noopener noreferrer">トミナガハルキ (Haruki Tominaga)</a></span><a class="footer-link" href="https://amix-design.com/tl/fab-botanic/about.html">指南与示例 / Guide & Gallery</a><button type="button" data-open-legal>使用许可与条款 / License & Terms</button><span class="policy-badge" data-legal-status>支持商业嵌入 · 条件 1.0.0 / Commercial Use Allowed</span></footer>
@@ -6021,7 +6069,33 @@ function bindLegalUI(){
  $('downloadLegalDocs').addEventListener('click',()=>saveBlob(new Blob([distributionFiles()['LICENSES.txt']],{type:'text/plain;charset=utf-8'}),'FABOTANIC-code-LICENSES.txt'));
 }
 
+function bindInspectorTabs(){
+ const tabs=[$('tabTune'),$('tabInfo')];
+ const storageKey='fabotanic:inspector-tab';
+ function activate(index,remember=true){
+  for(const [i,tab] of tabs.entries()){
+   const active=i===index;
+   tab.classList.toggle('active',active);
+   tab.setAttribute('aria-selected',String(active));
+   tab.tabIndex=active?0:-1;
+   $(tab.getAttribute('aria-controls')).hidden=!active;
+  }
+  if(remember)try{localStorage.setItem(storageKey,index===1?'info':'tune')}catch{}
+ }
+ for(const [index,tab] of tabs.entries()){
+  tab.addEventListener('click',()=>activate(index));
+  tab.addEventListener('keydown',event=>{
+   if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
+   event.preventDefault();
+   const next=event.key==='Home'?0:event.key==='End'?1:1-index;
+   activate(next);tabs[next].focus();
+  });
+ }
+ let saved='tune';try{saved=localStorage.getItem(storageKey)}catch{}
+ activate(saved==='info'?1:0,false);
+}
 function bindUI(){
+ bindInspectorTabs();
  bindLegalUI();
  for(const id of ['treeLodMidM','treeLodFarM'])$(id).addEventListener('change',()=>{if(exporting)return;let n;try{n=parseNumericInput($(id).value,{min:Number($(id).min),max:Number($(id).max),label:'LOD 距离 / LOD Distance'});}catch(error){syncGeometryProfile();setWorkflowNotice(error.message,true);return;}clearVariationUndo();state=validateState({...state,[id]:n});syncGeometryProfile();persistSession();});
 
