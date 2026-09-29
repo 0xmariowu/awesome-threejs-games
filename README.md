@@ -186,6 +186,6 @@
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — No license stated — study use
 - <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — No license stated — study use
 - <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — No license stated — study use
-- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — All rights belong to AMIX / トミナガハルキ. Non-commercial study copy with full credit, interface translated into Chinese/English; the author&#39;s terms (v1.0.0, 2026-09-28) do not grant mirroring, and this copy will be removed on the author&#39;s request.
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — All rights belong to AMIX / トミナガハルキ. Non-commercial study copy with full credit, interface and exported text translated into Chinese/English (the author&#39;s Japanese terms are authoritative); the author&#39;s terms (v1.0.0, 2026-09-28) do not grant mirroring, and this copy will be removed on the author&#39;s request.
 
 Webgame Lab lists third-party assets in [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).

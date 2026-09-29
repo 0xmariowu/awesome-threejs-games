@@ -33,4 +33,4 @@ FABOTANIC is a client-side procedural botanical generation engine and specimen e
 
 4. **Offline Isolation & Security**:
    - Stripped Cloudflare `challenge-platform` JS injection (`/cdn-cgi/challenge-platform/scripts/jsd/main.js`).
-   - The Cloudflare challenge/analytics script injected by the host was removed. The generator loads no external scripts; its guide, terms and author links point to the original site. Interface text was translated into Chinese/English; the original page is in provenance/original-text.
+   - The Cloudflare challenge/analytics script injected by the host was removed. The generator loads no external scripts; its guide, terms and author links point to the original site. Interface and exported text were translated into Chinese/English; the original page is in provenance/original-text.

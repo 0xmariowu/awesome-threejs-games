@@ -186,6 +186,6 @@
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — 未声明许可证，仅供学习
 - <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — 未声明许可证，仅供学习
 - <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — 未声明许可证，仅供学习
-- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — 版权归 AMIX / トミナガハルキ 所有。本站副本仅作非商业学习展示并完整署名，界面文字已译成中英文；作者条款（v1.0.0，2026-09-28）未授权镜像，作者要求时立即下架。
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — 版权归 AMIX / トミナガハルキ 所有。本站副本仅作非商业学习展示并完整署名，界面和导出文字已译成中英文（以作者日文条款为准）；作者条款（v1.0.0，2026-09-28）未授权镜像，作者要求时立即下架。
 
 Webgame Lab 的第三方资产见 [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).
