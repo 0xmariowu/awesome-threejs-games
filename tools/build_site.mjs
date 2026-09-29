@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 import {pathToFileURL, fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {brotliDecompressSync} from 'node:zlib';
-import {loadTools, toolSummary, toolDetail} from './tools.mjs';
+import {loadTools, toolSummary, toolDetail, hostedToolURL} from './tools.mjs';
 import {loadPages} from './pages.mjs';
 import {loadDemos, sourceManifest} from './demos.mjs';
 
@@ -68,7 +68,8 @@ export async function checkBuildInputs(root = ROOT) {
   for (const name of ['package.json','package-lock.json','src/catalog.ts','index.html','vite.config.ts']) await requireFile(`webgame-lab/${name}`);
   const {games} = await json(path.join(root,'catalog/games.json'));
   const {examples} = await json(path.join(root,'catalog/examples.json'));
-  const roots = [...games.map(game=>[game.slug,game.slug]), ...examples.map(example=>['examples/'+(example.folder || example.id),example.folder || example.id])];
+  const tools = await loadTools(root);
+  const roots = [...games.map(game=>[game.slug,game.slug]), ...tools.filter(tool=>tool.hosted).map(tool=>[tool.slug,tool.slug]), ...examples.map(example=>['examples/'+(example.folder || example.id),example.folder || example.id])];
   for (const [folder,slug] of roots) {
     await requireFile(`${folder}/local.json`);
     const config = await json(path.join(root,folder,'local.json'));
@@ -76,7 +77,7 @@ export async function checkBuildInputs(root = ROOT) {
     const required = new Set(slug === 'cloudkeep-flight' ? ['provenance.json'] : []);
     for (const file of await files(source,'',required,slug)) await requireFile(path.relative(root,path.join(source,file)).split(path.sep).join('/'));
   }
-  for (const game of [...games,...await loadTools(root)]) {
+  for (const game of [...games,...tools]) {
     await requireFile(`previews/${game.slug}.webp`);
     await requireFile(`media-web/${game.slug}/overview.mp4`);
   }
@@ -129,6 +130,8 @@ export async function prepareVideo(root, slug, out) {
 export function runtimeFile(relative, slug) {
   // The separate private project remains on disk in local archive checkouts.
   if (slug === 'inkwave' && /^(?:(?:docs|src|tests|assets)\/garden(?:\/|$)|garden\.html$|scripts\/garden-[^/]*\.(?:py|mjs)$|package(?:-lock)?\.json$|vite\.config\.js$)/.test(relative)) return false;
+  // Guide links use the author's site; keep the unused 3D gallery in the archive only.
+  if (slug === 'fab-botanic' && /^tl\/fab-botanic\/about(?:\.html$|\/|$)/.test(relative)) return false;
   return !relative.split('/').some(part => part.startsWith('.') || ['node_modules','dist-garden','tests','test','screenshots','provenance','output','experience','docs'].includes(part)) &&
     !/(?:\.map$|\.md$|\.py$|\.test\.|\.spec\.|^(?:local|package(?:-lock)?|provenance|SNAPSHOT)\.json$|(?:^|\/)build\.mjs$)/i.test(relative);
 }
@@ -282,7 +285,7 @@ export async function writeToolData(out, tools, videos, records) {
   const summaries = [];
   for (const tool of tools) {
     const overview = siteVideo(videos.get(tool.overview_video),tool.slug);
-    summaries.push(toolSummary(tool,overview));
+    summaries.push(toolSummary(tool,overview,records));
     await writeJSON(path.join(out,'data/tool',tool.slug+'.json'),toolDetail(tool,overview,records));
   }
   await writeJSON(path.join(out,'data/tools.json'),{tools:summaries});
@@ -308,6 +311,13 @@ export async function buildSite({root = ROOT} = {}) {
     if (!await exists(path.join(out,'games',game.slug,entry))) throw new Error(`Missing entry: ${game.slug}/${entry}`);
     reports.push(report);
     records.push({id:`game:${game.slug}`,kind:'project',project:game.slug,title:game.title,launch:{type:'original',url:BASE+`games/${game.slug}/${entry}`}});
+  }
+  for (const tool of tools.filter(tool=>tool.hosted)) {
+    const destination = path.join(out,'tools-app',tool.slug);
+    const report = await copyRuntime(path.resolve(root,tool.slug,tool.local.root),destination,BASE+`tools-app/${tool.slug}/`,{slug:tool.slug});
+    if (!await exists(path.join(destination,tool.local.entry.slice(1)))) throw new Error(`Missing tool entry: ${tool.slug}${tool.local.entry}`);
+    reports.push({...report,kind:'tool'});
+    records.push({id:`tool:${tool.slug}`,kind:'tool',project:tool.slug,title:tool.title,launch:{type:'tool',url:hostedToolURL(tool,BASE)}});
   }
   const copied = new Set();
   for (const example of examples) {
@@ -360,9 +370,9 @@ export async function buildSite({root = ROOT} = {}) {
   await copyFile(path.join(root,'catalog/lab-i18n.json'),path.join(out,'data/lab-i18n.json'));
   await writeJSON(path.join(out,'data/deploy.json'),{base:BASE,media,reports});
   const sizes=validateSizes(await allSizes(out));
-  console.table(reports.filter(row=>games.some(game=>game.slug===row.slug)).map(row=>({game:row.slug,scanned_files:row.files,url_files:row.scan.filter(file=>file.absolute_urls.length).length,rewrites:row.rewrites.reduce((sum,r)=>sum+r.count,0),online:row.online})));
+  console.table(reports.filter(row=>row.kind==='tool' || games.some(game=>game.slug===row.slug)).map(row=>({kind:row.kind || 'game',slug:row.slug,scanned_files:row.files,url_files:row.scan.filter(file=>file.absolute_urls.length).length,rewrites:row.rewrites.reduce((sum,r)=>sum+r.count,0),online:row.online})));
   console.table(Object.entries(sizes.groups).map(([folder,bytes])=>({folder,bytes,MB:(bytes/1e6).toFixed(2)})));
-  console.log(`Total ${(sizes.total/1e6).toFixed(2)} MB; largest ${sizes.largest.file} (${(sizes.largest.bytes/1e6).toFixed(2)} MB)`);
+  console.log(`Total ${sizes.total} bytes (${(sizes.total/1e6).toFixed(2)} MB); headroom ${1_000_000_000-sizes.total} bytes; largest ${sizes.largest.file} (${(sizes.largest.bytes/1e6).toFixed(2)} MB)`);
   return {out,reports,sizes};
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

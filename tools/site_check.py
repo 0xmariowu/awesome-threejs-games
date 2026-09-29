@@ -305,7 +305,8 @@ class Checker:
         en = self.locale == 'en-US'
         lang = 'en' if en else 'zh'
         tool = context.request.get(self.base+'data/tool/fab-botanic.json').json()
-        open_label = 'Open tool ↗' if en else '打开工具 ↗'
+        open_label = 'Open tool' if en else '打开工具'
+        original_label = 'Original site ↗' if en else '原站 ↗'
         terms_label = 'Terms ↗' if en else '使用条款 ↗'
 
         def external_link(link, url):
@@ -314,6 +315,14 @@ class Checker:
             expect(link).to_have_attribute('href', url)
             expect(link).to_have_attribute('target', '_blank')
             assert 'noopener' in (link.get_attribute('rel') or '').split(), 'Missing noopener'
+
+        def primary_link(link):
+            if tool.get('hosted'):
+                expect(link).to_have_attribute('href', tool['launch']['url'])
+                assert tool['launch']['url'].startswith(PREFIX+'tools-app/'+tool['slug']+'/')
+                assert link.get_attribute('target') in (None, '_self'), 'Hosted tool must use the same tab'
+            else:
+                external_link(link, tool['url'])
 
         def video_check():
             video = page.locator('main video')
@@ -335,7 +344,9 @@ class Checker:
             expect(page.locator('.tool-card')).to_have_count(1)
             card = page.locator('.tool-card[data-slug="fab-botanic"]')
             expect(card.locator('h2')).to_have_text(tool['title'])
-            external_link(card.get_by_role('link', name=open_label, exact=True), tool['url'])
+            primary_link(card.get_by_role('link', name=open_label, exact=True))
+            external_link(card.get_by_role('link', name=original_label, exact=True), tool['url'])
+            external_link(card.get_by_role('link', name=terms_label, exact=True), tool['terms_url'])
             more = card.get_by_role('link', name='Learn more ›' if en else '了解更多 ›', exact=True)
             expect(more).to_have_attribute('href', PREFIX+'t/fab-botanic')
             video_check()
@@ -343,12 +354,13 @@ class Checker:
             more.click()
             expect(page).to_have_url(self.base+'t/fab-botanic')
             expect(page.locator('.project h1')).to_have_text(tool['title'])
-        self.run('tools', '1 tool card and external launch', listing, 'fab-botanic')
+        self.run('tools', '1 tool card and hosted launch', listing, 'fab-botanic')
 
         def detail():
             assert page.goto(self.base+'t/fab-botanic').status == 200
             expect(page.locator('.project h1')).to_have_text(tool['title'])
-            external_link(page.locator('.project-actions').get_by_role('link', name=open_label, exact=True), tool['url'])
+            primary_link(page.locator('.project-actions').get_by_role('link', name=open_label, exact=True))
+            external_link(page.locator('.project-actions').get_by_role('link', name=original_label, exact=True), tool['url'])
             external_link(page.locator('.project-actions').get_by_role('link', name=terms_label, exact=True), tool['terms_url'])
             video_check()
             features = page.locator('.tool-features')
@@ -365,8 +377,10 @@ class Checker:
             expect(usage.locator('p')).to_have_text([
                 '✓ '+' '.join(line[lang] for line in tool['can']),
                 '✗ '+' '.join(line[lang] for line in tool['cannot']),
+                tool['license_note' if en else 'license_note_zh'],
             ])
             external_link(usage.get_by_role('link', name=terms_label, exact=True), tool['terms_url'])
+            expect(page.locator('footer')).to_contain_text('Tools belong to their authors; copies here are for non-commercial study.' if en else '工具版权归原作者所有，本站副本仅供非商业学习展示。')
             expect(page.get_by_role('heading', name='Technique examples' if en else '技术示例', exact=True)).to_be_visible()
             expect(page.locator('.example-row')).to_have_count(2)
             self.capture(page, 'fab-botanic')
@@ -387,6 +401,31 @@ class Checker:
                     row.get_by_role('button', name='Stop' if en else '停止', exact=True).click()
                     expect(page.locator('iframe')).to_have_count(0)
             self.run('tool-example', example['id'], inline_example, 'fab-botanic')
+
+        summaries = context.request.get(self.base+'data/tools.json').json()['tools']
+        for hosted in (item for item in summaries if item.get('hosted')):
+            def hosted_check():
+                url = hosted['launch']['url']
+                assert url.startswith(PREFIX+'tools-app/'+hosted['slug']+'/')
+                # Exercise both actual buttons and their same-tab navigation.
+                for route, selector in [('tools', '.tool-card[data-slug="'+hosted['slug']+'"] .tool-open'),
+                                        ('t/'+hosted['slug'], '.project-actions .play-button')]:
+                    assert page.goto(self.base+route).status == 200
+                    link = page.locator(selector)
+                    expect(link).to_have_attribute('href', url)
+                    assert link.get_attribute('target') in (None, '_self')
+                    link.click()
+                    expect(page).to_have_url(urljoin(self.base,url))
+                    expect(page.locator('#speciesList .species-card').first).to_be_visible(timeout=90000)
+                    if hosted['slug'] == 'fab-botanic':
+                        expect(page.get_by_role('heading',name='植物标本工坊',exact=True)).to_be_visible()
+                        page.wait_for_function('window.verdant?.plant && !window.verdant.renderer.dataOnly',timeout=90000)
+                    page.wait_for_timeout(3000)
+                    self.capture(page,hosted['slug']+'-hosted',page.locator('canvas').first)
+                    assert len(context.pages) == 1, 'Hosted launch opened another tab'
+                    assert not self.current['console_errors'], 'Hosted tool logged console errors'
+                    assert not self.current['errors'], 'Hosted tool had failed requests or runtime errors'
+            self.run('hosted-tool', hosted['slug'], hosted_check, hosted['slug'])
 
     def finish(self):
         cols, width, height = 5, 320, 246

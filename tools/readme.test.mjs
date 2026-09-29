@@ -255,6 +255,8 @@ test('Tools follows Games with bilingual copy, linked preview, original, terms a
   const f=await fixture(t);
   const tool=JSON.parse(await readFile(path.join(ROOT,'catalog/tools.json'),'utf8')).tools[0];
   await f.save('catalog/tools.json',{schema_version:1,tools:[{...tool,examples:[]}]});
+  await f.save('fab-botanic/local.json',{root:'public',entry:'/tl/fab-botanic/index.html',port:8107});
+  await mkdir(path.join(f.root,'fab-botanic/public'),{recursive:true});
   for (const [file,text] of Object.entries(await generateReadmes(f.root))) {
     const en=file==='README.md', heading=en?'Tools':'工具';
     assert.ok(text.indexOf('## '+heading)>text.indexOf('## '+(en?'Games':'游戏')));
@@ -262,9 +264,10 @@ test('Tools follows Games with bilingual copy, linked preview, original, terms a
     const body=section(text,heading);
     assert.ok(body.includes(`href="${SITE}t/${tool.slug}"><img src="previews/${tool.slug}.webp"`));
     assert.ok(body.includes(en?tool.tagline_en:tool.tagline));
-    assert.ok(body.includes(`href="${tool.url}">${en?'Open tool ↗':'打开工具 ↗'}`));
+    assert.ok(body.includes(`href="${SITE}tools-app/fab-botanic/tl/fab-botanic/index.html">${en?'Open tool ↗':'打开工具'}`));
+    assert.ok(body.includes(`href="${tool.url}">${en?'Original site':'原站'}`));
     assert.ok(body.includes(`href="${tool.terms_url}"`));
     assert.ok(!body.includes('Source')&&!body.includes('源码'));
-    assert.ok(section(text,en?'Credits and licenses':'来源与许可证').includes(en?tool.license_note:tool.license_note_zh));
+    assert.ok(section(text,en?'Credits and licenses':'来源与许可证').replaceAll('&#39;',"'").includes(en?tool.license_note:tool.license_note_zh));
   }
 });

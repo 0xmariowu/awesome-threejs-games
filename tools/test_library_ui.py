@@ -415,10 +415,16 @@ class LibraryUITestCase(unittest.TestCase):
                             expect(nav.nth(1)).to_have_attribute('aria-current','page')
                             self.assertEqual(self.page.locator('header.topbar nav [aria-current=page]').count(),1)
                             expect(nav.nth(1)).to_have_css('color',self.page.locator('body').evaluate('n=>getComputedStyle(n).color'))
-                            for link in self.page.get_by_role('link',name='打开工具 ↗' if lang=='zh' else 'Open tool ↗',exact=True).all():
-                                expect(link).to_have_attribute('href',tool['url'])
-                                expect(link).to_have_attribute('target','_blank')
-                                expect(link).to_have_attribute('rel','noopener')
+                            for link in self.page.get_by_role('link',name='打开工具' if lang=='zh' else 'Open tool',exact=True).all():
+                                expect(link).to_have_attribute('href','http://127.0.0.1:8107/tl/fab-botanic/index.html')
+                                self.assertIsNone(link.get_attribute('target'))
+                            for label, url in [('原站 ↗' if lang=='zh' else 'Original site ↗',tool['url']),('使用条款 ↗' if lang=='zh' else 'Terms ↗',tool['terms_url'])]:
+                                links=self.page.get_by_role('link',name=label,exact=True)
+                                self.assertGreater(links.count(),0)
+                                for link in links.all():
+                                    expect(link).to_have_attribute('href',url)
+                                    expect(link).to_have_attribute('target','_blank')
+                                    expect(link).to_have_attribute('rel','noopener')
                             expect(self.page.get_by_role('link',name='浏览源码' if lang=='zh' else 'Browse source',exact=True)).to_have_count(0)
                             video=self.page.locator('main video')
                             expect(video).to_have_count(1)
@@ -441,13 +447,14 @@ class LibraryUITestCase(unittest.TestCase):
                                     expect(self.page.get_by_role('heading',name=heading,exact=True)).to_be_visible()
                                 expect(self.page.locator('.tool-usage')).to_contain_text('✓ '+tool['can'][0][lang])
                                 expect(self.page.locator('.tool-usage')).to_contain_text('✗ '+tool['cannot'][0][lang])
+                                expect(self.page.locator('.tool-license-note')).to_have_text(tool['license_note_zh' if lang=='zh' else 'license_note'])
                                 for link in self.page.get_by_role('link',name='使用条款 ↗' if lang=='zh' else 'Terms ↗',exact=True).all():
                                     expect(link).to_have_attribute('href',tool['terms_url'])
                                     expect(link).to_have_attribute('target','_blank')
                                     expect(link).to_have_attribute('rel','noopener')
                                 expect(self.page.get_by_role('link',name=tool['author'],exact=True)).to_have_attribute('href',tool['author_url'])
                                 expect(self.page.get_by_role('link',name='‹ 全部工具' if lang=='zh' else '‹ All tools')).to_have_attribute('href','/tools')
-                                expect(self.page.locator('footer')).to_contain_text('工具版权归原作者所有，本站只做介绍和链接。' if lang=='zh' else 'Tools belong to their authors; this site only describes and links to them.')
+                                expect(self.page.locator('footer')).to_contain_text('工具版权归原作者所有，本站副本仅供非商业学习展示。' if lang=='zh' else 'Tools belong to their authors; copies here are for non-commercial study.')
                                 expect(self.page.locator('.example-row')).to_have_count(len(tool['examples']))
                                 if not tool['examples']:
                                     expect(self.page.get_by_role('heading',name='技术示例' if lang=='zh' else 'Technique examples',exact=True)).to_have_count(0)
@@ -458,6 +465,15 @@ class LibraryUITestCase(unittest.TestCase):
         for route,active in [('/',0),('/p/cloudkeep',0),('/source/cloudkeep',0),('/demos',2)]:
             self.goto(route+'?lang=en')
             expect(self.page.locator('header.topbar nav a').nth(active)).to_have_attribute('aria-current','page')
+
+    def test_hosted_tool_launches_from_card_and_detail_in_same_tab(self):
+        for route in ['/tools','/t/fab-botanic']:
+            with self.subTest(route=route):
+                self.goto(route+'?lang=en')
+                self.page.get_by_role('link',name='Open tool',exact=True).click()
+                expect(self.page).to_have_url('http://127.0.0.1:8107/tl/fab-botanic/index.html')
+                expect(self.page.get_by_role('heading',name='植物标本工坊',exact=True)).to_be_visible(timeout=30000)
+                self.assertEqual(len(self.context.pages),1)
 
     def test_tools_grid_fallback_and_shared_examples(self):
         tools=self.context.request.get(BASE_URL+'/data/tools.json').json()
@@ -500,14 +516,14 @@ class LibraryUITestCase(unittest.TestCase):
         expect(self.page.locator('.tool-card')).to_have_count(len(tools['tools']))
         card = self.page.locator('.tool-card').filter(
             has=self.page.locator('a[href="/t/'+missing['slug']+'"]'))
-        expect(card.get_by_role('link', name='Open tool ↗', exact=True)).to_have_attribute('href', missing['url'])
+        expect(card.get_by_role('link', name='Open tool', exact=True)).to_have_attribute('href', missing['launch']['url'])
         card.get_by_role('link', name='Learn more ›', exact=True).click()
         expect(self.page.locator('main h1')).to_have_text('Tools for making web games.')
         expect(self.page.locator('.game-card')).to_have_count(0)
 
         self.goto('/t/'+missing['slug']+'?lang=en')
         expect(self.page.locator('main h1')).to_have_text('Tools for making web games.')
-        expect(card.get_by_role('link', name='Open tool ↗', exact=True)).to_have_attribute('href', missing['url'])
+        expect(card.get_by_role('link', name='Open tool', exact=True)).to_have_attribute('href', missing['launch']['url'])
         self.goto('/t/available-tool?lang=en')
         expect(self.page.locator('main h1')).to_have_text(full['title'])
         expect(self.page.locator('.tool-feature')).to_have_count(len(full['features']))

@@ -144,7 +144,7 @@
 
 **FABOTANIC** — 在浏览器里生成 3D 草木，导出后直接放进游戏
 
-<a href="https://amix-design.com/tl/fab-botanic/">打开工具 ↗</a> · <a href="https://amix-design.com/tl/fab-botanic/license.html">使用条款</a>
+<a href="https://0xmariowu.github.io/awesome-threejs-games/tools-app/fab-botanic/tl/fab-botanic/index.html">打开工具</a> · <a href="https://amix-design.com/tl/fab-botanic/">原站</a> · <a href="https://amix-design.com/tl/fab-botanic/license.html">使用条款</a>
 
 ## 技术演示
 
@@ -186,6 +186,6 @@
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — 未声明许可证，仅供学习
 - <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — 未声明许可证，仅供学习
 - <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — 未声明许可证，仅供学习
-- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — 作者条款不允许镜像转载工具本身（条款 v1.0.0，2026-09-28）。本仓库只链接原站，不收录它的任何代码或素材，只有我们自己录的操作视频和预览图。
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — 版权归 AMIX / トミナガハルキ 所有。本站副本仅作非商业学习展示并完整署名；作者条款（v1.0.0，2026-09-28）未授权镜像，作者要求时立即下架。
 
 Webgame Lab 的第三方资产见 [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).

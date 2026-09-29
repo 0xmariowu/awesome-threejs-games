@@ -15,12 +15,13 @@ const listen = (server,port) => new Promise((resolve,reject)=>{server.once('erro
 export async function createLibrary({index, launcher} = {}) {
   index ||= await buildIndex();
   const tools = await loadTools(index.root);
+  const toolRecords = tools.filter(tool=>tool.hosted).map(tool=>({id:`tool:${tool.slug}`,kind:'tool',project:tool.slug,title:tool.title,launch:tool.launch}));
   let manifest;
   const getManifest = () => manifest ||= sourceManifest(index.root, index.games);
   const token = randomBytes(32).toString('hex');
   const owned = new Set(), pending = new Map();
   const publicIndex = () => ({schema_version:index.schema_version,generated_at:index.generated_at,counts:{...index.counts,tool:tools.length},
-    records:index.records,category_names:index.category_names,category_names_en:index.category_names_en,lab_error:index.labError,token,thumbnails:Object.keys(index.thumbnails)});
+    records:[...index.records,...toolRecords],category_names:index.category_names,category_names_en:index.category_names_en,lab_error:index.labError,token,thumbnails:Object.keys(index.thumbnails)});
   const fail = (status,message) => {throw Object.assign(new Error(message),{status});};
   const project = slug => {
     if(!/^[a-z0-9-]+$/.test(slug || '') || !index.games.some(game=>game.slug===slug))fail(404,'Unknown project');
@@ -41,13 +42,13 @@ export async function createLibrary({index, launcher} = {}) {
     if(path.relative(base,absolute).split(path.sep).some(part=>part.toLowerCase()==='node_modules'))fail(400,'Invalid archive path');
     return absolute;
   }
-  const servedFolder = record => record.launch.type==='original' ? record.project : `examples/${record.launch.folder ?? record.launch.id}`;
+  const servedFolder = record => ['original','tool'].includes(record.launch.type) ? record.project : `examples/${record.launch.folder ?? record.launch.id}`;
   async function ensureOriginal(record) {
     const folder = servedFolder(record);
     const config = JSON.parse(await readFile(path.join(index.root,folder,'local.json'),'utf8'));
-    const root = path.join(index.root,folder,config.root || 'public');
+    const root = await contained(path.join(index.root,folder),config.root || 'public');
     const entry = new URL(record.launch.url).pathname;
-    const expected = await readFile(path.join(root,(entry==='/' ? config.entry||'/index.html' : entry).replace(/^\//,'')));
+    const expected = await readFile(await contained(root,(entry==='/' ? config.entry||'/index.html' : entry).replace(/^\//,'')));
     let response;
     try {response=await fetch(record.launch.url,{signal:AbortSignal.timeout(1500)});} catch(error) {
       if (error.cause?.code !== 'ECONNREFUSED') throw new Error('Game port is occupied or unresponsive; inspect it before retrying.');
@@ -82,7 +83,7 @@ export async function createLibrary({index, launcher} = {}) {
     child.kill();owned.delete(child);throw new Error('Lab did not become ready within 12 seconds.');
   }
   async function launch(id) {
-    const record=index.records.find(record=>record.id===id);
+    const record=index.records.find(record=>record.id===id) || toolRecords.find(record=>record.id===id);
     if(!record?.launch)throw new Error('This record has no runnable entry. Open its linked original or example.');
     if(launcher)return launcher(record);
     const key=record.launch.type==='lab' ? 'lab' : `${servedFolder(record)}:${new URL(record.launch.url).port}`;

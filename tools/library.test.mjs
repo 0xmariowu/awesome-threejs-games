@@ -545,7 +545,7 @@ test('live design data aliases, source manifest and bundled text preserve access
   }
 });
 
-test('tool routes serve link-only metadata, counts, preview and bounded video without exposing the archive', async t => {
+test('tool routes serve hosted launch metadata, counts, preview and bounded video', async t => {
   const server=await createLibrary({index});
   await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
   t.after(()=>new Promise(resolve=>{server.close(resolve);server.closeAllConnections();}));
@@ -556,6 +556,9 @@ test('tool routes serve link-only metadata, counts, preview and bounded video wi
   assert.equal(tools[0].slug,'fab-botanic');
   assert.equal(full.url,'https://amix-design.com/tl/fab-botanic/');
   assert.equal(full.terms_url,'https://amix-design.com/tl/fab-botanic/license.html');
+  assert.equal(full.launch.url,'http://127.0.0.1:8107/tl/fab-botanic/index.html');
+  assert.deepEqual(tools[0].launch,full.launch);
+  assert.equal(full.local,undefined);
   assert.equal(full.source_url,undefined);assert.equal(full.project,undefined);
   assert.equal((await (await get('/api/index')).json()).counts.tool,tools.length);
   for (const route of ['/tools','/tools/','/t/fab-botanic','/t/fab-botanic/']) assert.match(await (await get(route)).text(),/id="app"/);
@@ -563,4 +566,45 @@ test('tool routes serve link-only metadata, counts, preview and bounded video wi
   assert.equal((await get('/previews/fab-botanic.webp')).headers.get('content-type'),'image/webp');
   const video=await fetch(base+full.overview_video.url,{headers:{Range:'bytes=0-31'}});
   assert.equal(video.status,206);assert.equal((await video.arrayBuffer()).byteLength,32);
+});
+
+test('hosted tool launch uses the token boundary, serves its capture and rejects entry symlinks', async t => {
+  const root=await mkdtemp(path.join(os.tmpdir(),'gameref-hosted-launch-'));
+  t.after(()=>rm(root,{recursive:true,force:true}));
+  const put=async(file,body)=>{await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),body);};
+  const portProbe=http.createServer();
+  await new Promise(resolve=>portProbe.listen(0,'127.0.0.1',resolve));
+  const port=portProbe.address().port;
+  await new Promise(resolve=>portProbe.close(resolve));
+  const tool=JSON.parse(await readFile(new URL('../catalog/tools.json',import.meta.url),'utf8')).tools[0];
+  await put('catalog/tools.json',JSON.stringify({schema_version:1,tools:[{...tool,examples:[]}]}));
+  await put('catalog/examples.json','{"examples":[]}');
+  await put('fab-botanic/local.json',JSON.stringify({root:'public',entry:'/tl/fab-botanic/index.html',port}));
+  const entry='fab-botanic/public/tl/fab-botanic/index.html';
+  await put(entry,'<h1>Plant workshop fixture</h1>');
+  const server=await createLibrary({index:{root,records:[],games:[],counts:{},thumbnails:{}}});
+  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+  t.after(()=>new Promise(resolve=>{server.close(resolve);server.closeAllConnections();}));
+  const base=`http://127.0.0.1:${server.address().port}`;
+  const data=await (await fetch(base+'/api/index')).json();
+  assert.equal(data.records[0].kind,'tool');
+  const post=(headers={})=>fetch(base+'/api/launch',{method:'POST',headers:{'Content-Type':'application/json',...headers},body:JSON.stringify({id:'tool:fab-botanic'})});
+  assert.equal((await post()).status,403);
+  assert.equal((await post({'X-Library-Token':data.token,Origin:'https://evil.test'})).status,403);
+  const hostileHost=await new Promise((resolve,reject)=>{
+    const req=http.request(base+'/api/launch',{method:'POST',headers:{Host:'evil.test','Content-Type':'application/json','X-Library-Token':data.token}},res=>{res.resume();resolve(res.statusCode);});
+    req.on('error',reject);req.end(JSON.stringify({id:'tool:fab-botanic'}));
+  });
+  assert.equal(hostileHost,403);
+  const response=await post({'X-Library-Token':data.token,Origin:base});
+  assert.equal(response.status,200);
+  const {url}=await response.json();
+  assert.equal(url,`http://127.0.0.1:${port}/tl/fab-botanic/index.html`);
+  assert.equal(await (await fetch(url)).text(),'<h1>Plant workshop fixture</h1>');
+  assert.equal((await post({'X-Library-Token':data.token})).status,200);
+  await put('outside.html','Outside archive');
+  await rm(path.join(root,entry));await symlink(path.join(root,'outside.html'),path.join(root,entry));
+  const denied=await post({'X-Library-Token':data.token});
+  assert.equal(denied.status,400);assert.equal((await denied.json()).error,'File not found');
+  assert.equal((await fetch(url)).status,403);
 });
