@@ -1,0 +1,598 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-09-26T01:58:51.244Z",
+  "site": {
+    "name": "Ruben Marcus",
+    "url": "https://www.rubenmarcus.dev",
+    "languages": [
+      "en",
+      "pt-BR"
+    ]
+  },
+  "documents": [
+    {
+      "url": "https://www.rubenmarcus.dev/",
+      "title": "Ruben Marcus",
+      "description": "AI Fullstack Engineer building AI products, agent systems, AEO infrastructure, and high-performance web experiences.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/",
+      "title": "Ruben Marcus",
+      "description": "Engenheiro AI Fullstack construindo produtos de IA, sistemas de agents, infraestrutura AEO e experiências web de alta performance.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/services/ai-product-systems",
+      "title": "AI products & agent systems",
+      "description": "Turn an AI idea or brittle prototype into a product with an operating harness, evals, observability, and a path to production.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/services/ai-product-systems",
+      "title": "Produtos de IA & sistemas de agents",
+      "description": "Transforme uma ideia de IA ou protótipo frágil em produto com harness operacional, evals, observabilidade e caminho até produção.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/services/ai-native-frontend",
+      "title": "AI-native frontend & design engineering",
+      "description": "Build or modernize a distinctive web product with senior frontend engineering and an AI delivery harness that preserves quality.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/services/ai-native-frontend",
+      "title": "Frontend AI-native & design engineering",
+      "description": "Construa ou modernize um produto web distinto com engenharia frontend sênior e um harness de entrega com IA que preserva qualidade.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/services/aeo",
+      "title": "AEO audit & implementation",
+      "description": "Make a site legible, trustworthy, and citable to answer engines—from crawl policy and entities to content, evidence, and machine-readable delivery.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/services/aeo",
+      "title": "Auditoria & implementação de AEO",
+      "description": "Torne um site legível, confiável e citável por answer engines — de políticas de crawl e entidades a conteúdo, evidência e entrega machine-readable.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/work/ralph-starter",
+      "title": "Ralph Starter · Case study",
+      "description": "How Ralph Starter turns AI coding from an open-ended chat into an isolated, verifiable multi-agent delivery system.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/work/ralph-starter",
+      "title": "Ralph Starter · Estudo de caso",
+      "description": "Como o Ralph Starter transforma coding com IA de chat aberto em um sistema multi-agent isolado e verificável de entrega.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/work/aeo-platform",
+      "title": "AEO.js + AEO Checker · Case study",
+      "description": "A framework, scanner, and publishing system for making websites legible and citable to answer engines.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/work/aeo-platform",
+      "title": "AEO.js + AEO Checker · Estudo de caso",
+      "description": "Um framework, scanner e sistema de publicação para tornar sites legíveis e citáveis por answer engines.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/work/cs-brasil",
+      "title": "CS Brasil · Case study",
+      "description": "A browser FPS built with Three.js and an AI production harness spanning gameplay, maps, visual QA, telemetry, and automated issue capture.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/work/cs-brasil",
+      "title": "CS Brasil · Estudo de caso",
+      "description": "Um FPS de navegador construído com Three.js e um harness de produção com IA cobrindo jogabilidade, mapas, QA visual, telemetria e captura automatizada de issues.",
+      "language": "pt-BR"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#ralph-starter-orchestration",
+      "title": "Ralph Starter Orchestration",
+      "description": "Delivery harness for running one or many coding agents through bounded specs, isolated git worktrees, feedback loops, and explicit completion gates.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#autoresearch-benchmark-loop",
+      "title": "Autoresearch Benchmark Loop",
+      "description": "Autonomous research method where every agent proposal must survive a reproducible benchmark before it enters the frontier.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#aeo-delivery-system",
+      "title": "AEO Delivery System",
+      "description": "Technical AEO workflow that treats crawler policy, canonical identity, entities, structured data, and machine-readable surfaces as one tested system.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#benchmark-frontier-archaeology",
+      "title": "Benchmark Frontier Archaeology",
+      "description": "Reverse-engineers every accepted frontier move to separate the transferable structural lever from nonce luck and search artifacts.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#ecdsa-route-spec",
+      "title": "ECDSA.fail Route Spec",
+      "description": "Source-anchored gate that turns papers, diffs, and hypotheses into bounded route packets before code or compute is spent.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#circuit-engineer-factory",
+      "title": "Circuit Engineer Factory",
+      "description": "Role factory for dispatching circuit engineers with the exact field, group, phase, ancilla, and cost constraints of a route.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#circuit-optimization",
+      "title": "ECDSA Circuit Optimization",
+      "description": "Structural optimization method for point-addition circuits across qubit width, Toffoli count, live ranges, arithmetic, and score.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#reversible-circuit-validation",
+      "title": "Reversible Circuit Validation",
+      "description": "Correctness protocol that isolates classical output, phase behavior, and ancilla cleanup before an optimization is trusted.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#peak-qubit-reduction",
+      "title": "Peak Qubit Reduction",
+      "description": "Timeline-based method for finding the tallest live-qubit moment and creating safe holes through earlier uncompute or later recompute.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#toffoli-reduction",
+      "title": "Toffoli Reduction",
+      "description": "Gate-cost method for cutting Toffoli and non-Clifford work through algebraic fusion, measured replay, and cheaper uncomputation.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#island-hunting",
+      "title": "ECDSA.fail Island Hunting",
+      "description": "Spend-gated search protocol for estimating clean-island density, validating candidates, and deciding whether a GPU nonce hunt is economical.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#multi-agent-research-collaboration",
+      "title": "Multi-Agent Research Collaboration",
+      "description": "Scientific collaboration contract for splitting orthogonal investigations, exchanging exact evidence, and reconciling agent disagreement.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#csbrasil-content-pipeline",
+      "title": "CS Brasil Content Pipeline",
+      "description": "Six-gate creation pipeline for Brazilian characters, teams, real-world maps, and 3D assets, from sourced research to in-engine validation.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#faction-pipeline",
+      "title": "Faction Pipeline",
+      "description": "Vertical-slice pipeline for shipping a playable faction as one system: roster, crest, cover, character, thumbnail, selection video, voice, and UI integration.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#asset-review",
+      "title": "Adversarial Asset Review",
+      "description": "Clean-context critic for every new character, map, model, and texture; the builder's explanation is deliberately excluded from the review.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#regua",
+      "title": "Régua / Executable Quality Gate",
+      "description": "Method for writing invariants, probes, and thresholds that must prove they can fail before they are allowed to protect the game.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#csbrasil-pr-triage",
+      "title": "CS Brasil PR Triage",
+      "description": "Risk classifier for deciding whether a pull request is mergeable, needs staging, or requires human gameplay or backend review.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#csbrasil-smoke-check",
+      "title": "CS Brasil Smoke Check",
+      "description": "Playable-journey gate covering menu, ranking, nickname, team and character selection, initial boot, and first HUD.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#gauntlet-fps",
+      "title": "Gauntlet FPS",
+      "description": "Adversarial visual-improvement loop for a browser FPS: independent critics, measured screenshots, conflict-aware builders, and regression gates.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#bug-hunt",
+      "title": "Bug Hunt",
+      "description": "Measurement-first debugging protocol that requires a failing ruler, a falsifiable hypothesis, and a mutation proving the fix can regress.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#blog-voice",
+      "title": "Blog Voice",
+      "description": "Editorial voice contract for technical writing grounded in shipped systems, concrete tradeoffs, and verifiable claims.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#bilingual-publishing",
+      "title": "Bilingual Publishing",
+      "description": "End-to-end publishing contract for paired English and Portuguese articles, localized slugs, metadata, internal links, RSS, and covers.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#portfolio-cover-system",
+      "title": "Portfolio Cover System",
+      "description": "Visual-system skill for generating consistent bilingual article covers and social thumbnails in the portfolio's phosphor language.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#frontend-delivery-harness",
+      "title": "Frontend Delivery Harness",
+      "description": "Repository-aware frontend workflow combining specs, browser evidence, responsive checks, accessibility, tests, and diff review.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/skills#portfolio-mcp",
+      "title": "Portfolio MCP",
+      "description": "Agent-facing discovery skill for evaluating experience, services, availability, and starting an introduction through MCP.",
+      "language": "en"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/cs-brasil-ai-harness",
+      "title": "The AI harness behind the CS Brasil game",
+      "description": "The machine that builds CS Brasil is no longer a folder of markdown. It is a measurement engine: the real game booted in pure Node, 61 invariants with mutation tests, generated docs that fail CI on drift, and four laws learned the expensive way.",
+      "language": "en",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/evals-are-the-product",
+      "title": "Evals are the product",
+      "description": "What an eval actually is, learned the expensive way: a browser FPS gated by 61 invariants that must each ship with a failing mutation, and a quantum decoder benchmark won with one scalar and a five-step loop. The model changes every few months. The ruler survives.",
+      "language": "en",
+      "lastModified": "2026-07-02T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/agent-command-center",
+      "title": "A command center for agent swarms, in markdown",
+      "description": "I run a swarm of coding agents — Codex, Claude, Amp, Kimi — plus humans, coordinated entirely through markdown files. No database, no dashboard-as-source-of-truth, chat history explicitly banned. Here is the shared brain: control room, task queue, candidate cemetery, and fail-closed automation.",
+      "language": "en",
+      "lastModified": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/from-prompt-to-product-five-ways-to-build-with-ai",
+      "title": "From prompt to product: five ways to build with AI",
+      "description": "Prompt engineering, vibe coding, agentic engineering, product engineering, and research engineering sound like names for the same thing. They are not. The difference is what you control, what feedback you trust, and who decides the work is done.",
+      "language": "en",
+      "lastModified": "2026-08-11T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/dag-agent-orchestration",
+      "title": "Git worktrees are my agent orchestrator",
+      "description": "ralph-starter runs coding agents in Ralph Wiggum loops, and swarm mode coordinates them with git worktrees, Promise.allSettled, and a strategy switch. Three strategies with real tradeoffs, and why a DAG executor would reject this design at startup.",
+      "language": "en",
+      "lastModified": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/autoresearcher-pareto-frontier",
+      "title": "Keeping an autonomous research agent honest",
+      "description": "Autoresearcher runs benchmark-driven research loops: one agent step, one benchmark command, one number, keep or reject. The part that makes it work isn't the agent. It's that the loop is deliberately simple, fail-closed, and leaves a full audit trail in git and JSONL.",
+      "language": "en",
+      "lastModified": "2026-07-08T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/agents-welcome-portfolio",
+      "title": "This portfolio is agents-welcome. Probably the first.",
+      "description": "My site has an AGENTS.md, an MCP server, a hiring API, and a terminal resume. Your agent can read my CV, check my availability, and book an intro. Here is how it works.",
+      "language": "en",
+      "lastModified": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/aeo-what-it-moves",
+      "title": "How AEO can help your business grow",
+      "description": "AEO is the plumbing that lets ChatGPT, Perplexity and friends read and cite your business. I built a free scanner that has run 4,569 scans across 2,259 unique sites; the same 3 failures show up everywhere.",
+      "language": "en",
+      "lastModified": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/context-engineering",
+      "title": "Context engineering inside a runtime with 344K chats",
+      "description": "A production AI-agent runtime I helped build served 2.85M messages across 344K chats with streaming agent loops and OpenAPI to tool conversion. The context was the spec: system prompts lived in x-mb, tools were operationIds, and wallet state rode every request. Real code from BitteProtocol/chat, make-agent, and agent-sdk.",
+      "language": "en",
+      "lastModified": "2026-06-05T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/automating-entire-workflows-with-ralph-starter",
+      "title": "Automating entire workflows with ralph-starter",
+      "description": "ralph-starter runs Ralph Wiggum loops — fetch a spec, run the AI agent, check tests/lint/build, feed errors back, repeat. Here's how it works and why I built it.",
+      "language": "en",
+      "lastModified": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/frontend-ai-harness-prompt-to-pull-request",
+      "title": "My AI harness for frontend: from prompt to pull request",
+      "description": "The system I use to turn an idea into verifiable frontend: specs, skills, model selection, Ralph Starter, worktrees, browsers, screenshots, tests, GitHub, and telemetry. The model writes code. The harness decides what to trust.",
+      "language": "en",
+      "lastModified": "2026-08-11T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/getting-started-with-next-js-strapi-security-first",
+      "title": "Getting started with Next.js + Strapi: Security first",
+      "description": "Before touching Content-Types or routes, talk about security. This is the security playbook for a Strapi + Next.js stack — XSS, CSRF, clickjacking, JWT, SSL, monitoring.",
+      "language": "en",
+      "lastModified": "2021-05-16T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/how-i-hit-1-qec-using-ai",
+      "title": "How I Hit #1 on a Quantum Error Correction Challenge using AI",
+      "description": "I topped the QEC Decoder Optimization Arena leaderboard at 2,642 errors per million — not with physics credentials, but with a tight experimental loop: held-out validation, statistical gating, and a swarm of agents in isolated git worktrees.",
+      "language": "en",
+      "lastModified": "2026-04-16T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/i-built-my-portfolio-with-a-fleet-of-ai-agents",
+      "title": "I built my portfolio with a fleet of AI agents",
+      "description": "The making-of of this site: AI-generated 3D models that kept coming out as busts, a shader pipeline that morphs me into wireframe and ASCII, a visual gauntlet that grades every pixel, and what I learned about art-directing machines.",
+      "language": "en",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/llm-cross-pollination",
+      "title": "Cross-pollinating LLMs: peer review for machines",
+      "description": "I built a research pipeline where frontier models from different providers generate, adversarially review, and merge each other's work. The only thing shared between them is the previous phase's text. It turns out peer review compiles into prompt choreography surprisingly well.",
+      "language": "en",
+      "lastModified": "2026-07-11T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/inside-the-gauntlet-loop",
+      "title": "Inside the Gauntlet loop",
+      "description": "The techniques inside the adversarial agent loop that builds CS Brasil: a 25-criterion visual rubric written so a language model can grade a PNG, critic prompts that ban vague answers by name, a generated symbol-level conflict table for a 6,543-line file, and a regression hunter with permission to find nothing.",
+      "language": "en",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/mastra-field-notes",
+      "title": "I rebuilt my agent loop in Mastra. Here's what my runtime gets right.",
+      "description": "I ran hand-rolled agent loops in production on a web3 agent platform (2.85M+ messages) and in ralph-starter. I spent a week rebuilding the same loop in Mastra to see what a framework buys. Head-to-head notes: what Mastra makes easy, what my runtime does that it can't, and who should pick which.",
+      "language": "en",
+      "lastModified": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/mini-shai-hulud-dependency-risk",
+      "title": "The Mini Shai-Hulud Case and the Real Risk of Dependencies",
+      "description": "The May 2026 Mini Shai-Hulud wave didn't just steal an npm token — it abused the build and publishing pipeline itself: pull_request_target, cache poisoning, OIDC trusted publishing, and install scripts. What actually happened, and what I'd audit first.",
+      "language": "en",
+      "lastModified": "2026-05-12T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/openrouter-routing",
+      "title": "Routing 9 agent roles across 7 providers: the ECDSA.fail harness",
+      "description": "I led AI engineering on the multi-agent research harness that took #1 on ECDSA.fail. The routing layer is the part worth stealing: role to model tables, fail-closed adapters, and a spend gate that aborts the run before the bill does.",
+      "language": "en",
+      "lastModified": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/rag-in-production",
+      "title": "How RAG works inside Mirofi.sh",
+      "description": "Mirofi.sh is a hosted multi-agent social-simulation platform built on an open-source engine, GraphRAG, and Zep. This is the retrieval story: what agent memory stores, how it feeds each turn, and where the graph earned its complexity.",
+      "language": "en",
+      "lastModified": "2026-05-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/shipping-a-browser-fps",
+      "title": "Building a browser FPS with AI agents",
+      "description": "CS Brasil is a satirical browser FPS — 5 factions, 44 characters, 26 weapons, 5 maps, zero-build Three.js — built almost entirely by AI agents running a named adversarial loop: the Gauntlet. Critics grade, builders edit the same 6,543-line file in parallel, and the loop never ends itself.",
+      "language": "en",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/rebuilding-1554-in-the-browser",
+      "title": "Tupi: rebuilding 1554 in the browser with 32 AI agents",
+      "description": "A 1554 Tupinambá canoe raid rebuilt in real-time 3D in the browser with Claude Opus 5.5, three.js and Blender: the pipeline, what broke, what it cost.",
+      "language": "en",
+      "lastModified": "2026-09-26T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/the-agent-swarm-that-took-1-on-ecdsa-fail",
+      "title": "The swarm that took #1 on ECDSA.fail",
+      "description": "How I built an autonomous multi-agent research harness — 9 specialist LLM roles across 7+ providers, fail-closed adapters, lane-isolated dispatch, and a falsifier queue — that produced the top-ranked quantum circuit on ECDSA.fail.",
+      "language": "en",
+      "lastModified": "2026-06-18T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/vercel-ai-sdk-streaming",
+      "title": "Streaming 2.85M messages: the plumbing of a production agent chat",
+      "description": "I was the second most active committer on the open-source chat package of a production agent platform, the streaming front of an AI runtime that turned OpenAPI specs into tools and drove on-chain agents across NEAR and EVM. Real code from BitteProtocol/chat: the useChat loop, tool-call states, the OpenAPI operationId contract, and how history gets rebuilt.",
+      "language": "en",
+      "lastModified": "2026-07-21T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/blog/why-use-next-js-strapi",
+      "title": "Why use Next.js + Strapi?",
+      "description": "The case for pairing Next.js with the Strapi headless CMS for a modern decoupled frontend / CMS stack. Headless concepts, alternatives, boilerplates.",
+      "language": "en",
+      "lastModified": "2021-05-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/harness-de-ia-por-tras-do-cs-brasil",
+      "title": "O harness de IA por trás do CS Brasil",
+      "description": "A máquina que constrói o CS Brasil não é mais uma pasta de markdown. É um motor de medição: o jogo real dando boot em Node puro, 61 invariantes com testes de mutação, docs gerados que reprovam o CI quando derivam, e quatro leis aprendidas do jeito caro.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/evals-sao-o-produto",
+      "title": "Evals são o produto",
+      "description": "O que é um eval de verdade, aprendido do jeito caro: um FPS de navegador travado por 61 invariantes que precisam shipar com uma mutação que as reprova, e um benchmark de decoder quântico vencido com um escalar e um loop de cinco passos. O modelo muda a cada poucos meses. A régua sobrevive.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-02T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/centro-de-comando-para-swarms-de-agentes-em-markdown",
+      "title": "Um centro de comando para swarms de agentes, em markdown",
+      "description": "Eu rodo um swarm de agentes de codificação — Codex, Claude, Amp, Kimi — mais humanos, coordenados inteiramente por arquivos markdown. Sem banco de dados, sem dashboard como fonte da verdade, histórico de chat explicitamente banido. Aqui está o cérebro compartilhado: sala de controle, fila de tarefas, cemitério de candidatos e automação fail-closed.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-02T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/do-prompt-ao-produto-cinco-formas-de-desenvolver-com-ia",
+      "title": "Do prompt ao produto: cinco formas de desenvolver com IA",
+      "description": "Prompt engineering, vibe coding, agentic engineering, product engineering e research engineering parecem nomes para a mesma coisa. Não são. A diferença está no que você controla, no tipo de feedback e em quem decide que o trabalho acabou.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-11T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/git-worktrees-como-orquestrador-de-agentes",
+      "title": "Git worktrees são meu orquestrador de agentes",
+      "description": "O ralph-starter roda agentes de código em loops Ralph Wiggum, e o swarm mode coordena tudo com git worktrees, Promise.allSettled e um switch de estratégia. Três estratégias com tradeoffs reais, e por que um executor de DAG rejeitaria esse design no startup.",
+      "language": "pt-BR",
+      "lastModified": "2026-06-25T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/mantendo-um-agente-de-pesquisa-autonomo-honesto",
+      "title": "Mantendo um agente de pesquisa autônomo honesto",
+      "description": "O Autoresearcher roda loops de pesquisa orientados por benchmark: um passo do agente, um comando de benchmark, um número, manter ou rejeitar. O que faz isso funcionar não é o agente. É o fato de o loop ser deliberadamente simples, fail-closed e deixar uma trilha de auditoria completa em git e JSONL.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-08T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/este-portfolio-e-agent-first",
+      "title": "Este portfólio é agent-first. Provavelmente o primeiro.",
+      "description": "Meu site fala MCP, tem AGENTS.md, API de hire e currículo de terminal. Seu agent lê meu CV, checa disponibilidade e agenda um intro sem você tocar em formulário. Veja como funciona.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-06T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/como-aeo-pode-fazer-seu-negocio-crescer",
+      "title": "Como AEO pode fazer seu negócio crescer",
+      "description": "AEO permite ao ChatGPT, Perplexity e afins lerem e citarem seu negócio. Meu scanner gratuito já rodou 4.569 scans em 2.259 sites únicos; as mesmas falhas aparecem em todo lugar.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-27T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/context-engineering-em-um-runtime-com-344k-chats",
+      "title": "Context engineering dentro de um runtime com 344K chats",
+      "description": "Um runtime de agentes de IA em produção que ajudei a construir atendeu 2,85M de mensagens em 344K chats com loops de agentes em streaming e conversão de OpenAPI para tools. O contexto era a spec: system prompts viviam no x-mb, tools eram operationIds, e o estado da carteira acompanhava cada request. Código real do BitteProtocol/chat, make-agent e agent-sdk.",
+      "language": "pt-BR",
+      "lastModified": "2026-06-05T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/automatizando-fluxos-de-trabalho-com-ralph-starter",
+      "title": "Automatizando fluxos de trabalho inteiros com o ralph-starter",
+      "description": "O ralph-starter roda loops no estilo Ralph Wiggum — busca uma spec, executa o agente de IA, checa testes/lint/build, devolve os erros, repete. Como funciona e por que eu construí.",
+      "language": "pt-BR",
+      "lastModified": "2026-02-19T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/meu-harness-de-ia-para-frontend-do-prompt-ao-pull-request",
+      "title": "Meu harness de IA para frontend: do prompt ao pull request",
+      "description": "O sistema que uso para transformar uma ideia em frontend verificável: specs, skills, escolha de modelo, Ralph Starter, worktrees, browser, screenshots, testes, GitHub e telemetria. O modelo escreve código. O harness decide em que acreditar.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-11T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/comecando-com-next-js-e-strapi-seguranca-em-primeiro-lugar",
+      "title": "Começando com Next.js + Strapi: segurança em primeiro lugar",
+      "description": "Antes de mexer em Content-Types ou rotas, vamos falar de segurança. Este é o guia de segurança para uma stack Strapi + Next.js — XSS, CSRF, clickjacking, JWT, SSL, monitoramento.",
+      "language": "pt-BR",
+      "lastModified": "2021-05-16T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/como-cheguei-ao-primeiro-lugar-em-correcao-de-erros-quanticos-com-ia",
+      "title": "Como cheguei ao #1 num desafio de correção de erros quânticos usando IA",
+      "description": "Topei o leaderboard da QEC Decoder Optimization Arena a 2.642 erros por milhão — não com credenciais em física, mas com um loop experimental enxuto: validação em dados reservados, gating estatístico e um swarm de agentes em git worktrees isolados.",
+      "language": "pt-BR",
+      "lastModified": "2026-04-16T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/como-construi-este-portfolio-com-agentes-de-ia",
+      "title": "Como construi esse portfolio com AI Agents",
+      "description": "O making-of deste site: modelos 3D gerados por IA que viviam saíam como bustos, um pipeline de shaders que me transforma em wireframe e ASCII, um gauntlet visual que avalia cada pixel, e o que aprendi sobre art-directing de máquinas.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/por-dentro-do-gauntlet-loop",
+      "title": "Por dentro do Gauntlet loop",
+      "description": "As técnicas dentro do loop adversarial de agentes que constrói o CS Brasil: uma régua visual de 25 critérios escrita para um modelo de linguagem conseguir dar nota a um PNG, prompts de crítico que banem resposta vaga pelo nome, uma tabela de conflito gerada no nível do símbolo para um arquivo de 6.543 linhas, e um caçador de regressões com permissão para não achar nada.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/polinizacao-cruzada-de-llms-revisao-por-pares-para-maquinas",
+      "title": "Polinização cruzada de LLMs: revisão por pares para máquinas",
+      "description": "Construí um pipeline de pesquisa em que modelos de fronteira de provedores diferentes geram, revisam adversarialmente e fazem merge do trabalho uns dos outros. A única coisa compartilhada entre eles é o texto da fase anterior. Revisão por pares compila em coreografia de prompts surpreendentemente bem.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-11T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/reescrevi-meu-loop-de-agente-em-mastra",
+      "title": "Reescrevi meu loop de agente em Mastra. Eis o que meu runtime acerta.",
+      "description": "Rodei loops de agente feitos à mão em produção numa plataforma de agentes web3 (2,85M+ de mensagens) e no ralph-starter. Passei uma semana reconstruindo o mesmo loop em Mastra para ver o que um framework compra. Notas head-to-head: o que Mastra facilita, o que meu runtime faz que ele não consegue, e quem deve escolher qual.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-18T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/mini-shai-hulud-e-o-risco-real-das-dependencias",
+      "title": "O caso Mini Shai-Hulud e o risco real das dependências",
+      "description": "A onda de Mini Shai-Hulud de maio de 2026 não apenas roubou um token do npm — ela abusou do próprio pipeline de build e publicação: pull_request_target, cache poisoning, OIDC trusted publishing e install scripts. O que de fato aconteceu e o que eu auditaria primeiro.",
+      "language": "pt-BR",
+      "lastModified": "2026-05-12T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/roteando-papeis-de-agente-entre-providers-com-openrouter",
+      "title": "Roteando 9 papéis de agente entre 7 providers: o harness do ECDSA.fail",
+      "description": "Liderei engenharia de IA no harness de pesquisa multi-agente que ficou em #1 no ECDSA.fail. A camada de roteamento é a parte que vale roubar: tabelas de papel para modelo, adapters fail-closed, e um spend gate que aborta a execução antes da conta.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-15T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/como-o-rag-funciona-dentro-do-mirofi-sh",
+      "title": "Como o RAG funciona dentro do Mirofi.sh",
+      "description": "Mirofi.sh é uma plataforma hospedada de simulação social multi-agente construída sobre um motor open-source, GraphRAG e Zep. Esta é a história da recuperação: o que a memória do agente armazena, como ela alimenta cada turno e onde o grafo justificou sua complexidade.",
+      "language": "pt-BR",
+      "lastModified": "2026-05-28T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/reconstruindo-1554-no-navegador",
+      "title": "Tupi: reconstruindo 1554 no navegador com 32 agentes de IA",
+      "description": "Um ataque tupinambá de 1554 recriado em 3D no navegador com Claude Opus 5.5, three.js e Blender: o pipeline, o que quebrou e quanto custou.",
+      "language": "pt-BR",
+      "lastModified": "2026-09-26T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/construindo-um-fps-de-navegador-com-agentes-de-ia",
+      "title": "Construindo um FPS de navegador com Agentes de IA",
+      "description": "CS Brasil é um FPS de navegador satírico — 5 facções, 44 personagens, 26 armas, 5 mapas, Three.js zero-build — construído quase inteiramente por agentes de IA rodando um loop adversarial com nome: o Gauntlet. Críticos dão nota, builders editam o mesmo arquivo de 6.543 linhas em paralelo, e o loop nunca termina sozinho.",
+      "language": "pt-BR",
+      "lastModified": "2026-08-07T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/o-swarm-que-chegou-ao-primeiro-lugar-no-ecdsa-fail",
+      "title": "O swarm que chegou ao #1 no ECDSA.fail",
+      "description": "Como construí um harness de pesquisa autônomo multi-agente — 9 papéis especializados de LLM entre 7+ provedores, adaptadores fail-closed, dispatch isolado por lane e uma fila de falsificação — que produziu o circuito quântico melhor ranqueado no ECDSA.fail.",
+      "language": "pt-BR",
+      "lastModified": "2026-06-18T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/streaming-de-2-85-milhoes-de-mensagens-com-vercel-ai-sdk",
+      "title": "Streaming de 2,85M de mensagens: o encanamento de um chat de agente em produção",
+      "description": "Fui o segundo committer mais ativo no pacote de chat open-source de uma plataforma de agentes em produção, a frente de streaming de um runtime de IA que transformava specs OpenAPI em ferramentas e conduzia agentes on-chain entre NEAR e EVM. Código real do BitteProtocol/chat: o loop do useChat, os estados de tool-call, o contrato de operationId do OpenAPI, e como o histórico é reconstruído.",
+      "language": "pt-BR",
+      "lastModified": "2026-07-21T00:00:00.000Z"
+    },
+    {
+      "url": "https://www.rubenmarcus.dev/pt/blog/por-que-usar-next-js-e-strapi",
+      "title": "Por que usar Next.js + Strapi?",
+      "description": "O caso para parear Next.js com o CMS headless Strapi para uma stack moderna e desacoplada de frontend / CMS. Conceitos de headless, alternativas, boilerplates.",
+      "language": "pt-BR",
+      "lastModified": "2021-05-07T00:00:00.000Z"
+    }
+  ]
+}

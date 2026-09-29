@@ -75,12 +75,22 @@ test('workflow and tracked-input gate rejects missing, untracked and misconfigur
   async function put(file,body) {await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),body);}
   await put('.github/workflows/pages.yml',workflow);
   await put('tools/build_site.mjs','// fixture');
+  await put('catalog/tools.json',JSON.stringify({schema_version:1,tools:[]}));
   for (const name of ['games','examples']) await put(`catalog/${name}.json`,JSON.stringify({[name]:[]}));
   for (const name of ['extraction-candidates','runnability','videos','lab-i18n']) await put(`catalog/${name}.json`,'{}');
   for (const dir of ['catalog/pages','library','previews']) await put(`${dir}/fixture.txt`,'fixture');
   for (const name of ['package.json','package-lock.json','src/catalog.ts','index.html','vite.config.ts']) await put(`webgame-lab/${name}`,'{}');
   execFileSync('git',['init','-q',root]);
   execFileSync('git',['-C',root,'add','.']);
+  assert.ok((await checkBuildInputs(root)).files > 10);
+  const tool=JSON.parse(await readFile(new URL('../catalog/tools.json',import.meta.url),'utf8')).tools[0];
+  await put('catalog/tools.json',JSON.stringify({schema_version:1,tools:[{...tool,examples:[]}]}));
+  await put('previews/fab-botanic.webp','recorded preview');
+  await assert.rejects(checkBuildInputs(root),/Untracked build input: previews\/fab-botanic.webp/);
+  execFileSync('git',['-C',root,'add','previews/fab-botanic.webp']);
+  await assert.rejects(checkBuildInputs(root),/Untracked build input: media-web\/fab-botanic\/overview.mp4/);
+  await put('media-web/fab-botanic/overview.mp4','recorded video');
+  execFileSync('git',['-C',root,'add','media-web/fab-botanic/overview.mp4']);
   assert.ok((await checkBuildInputs(root)).files > 10);
   await put('library/untracked.js','fixture');
   await assert.rejects(checkBuildInputs(root),/Untracked build input: library\/untracked.js/);
@@ -104,6 +114,9 @@ test('same client routes and JSON URLs work at the Pages base and at local root'
   assert.equal(hosted.siteURL('/data/page/game.json'),BASE+'data/page/game.json');
   assert.equal(hosted.siteURL('/source/game/README.md'),BASE+'source/game/README.md');
   assert.equal(hosted.siteURL('/demos/example%3Awater'),BASE+'demos/example%3Awater');
+  assert.equal(hosted.siteURL('/tools'),BASE+'tools');
+  assert.equal(hosted.routePath(BASE+'t/fab-botanic/'),'/t/fab-botanic');
+  assert.equal(hosted.siteURL('/data/tool/fab-botanic.json'),BASE+'data/tool/fab-botanic.json');
   assert.equal(local.isStatic,false);
   assert.equal(local.siteURL('/p/game'),'/p/game');
 });
@@ -200,4 +213,54 @@ test('brotli-captured text is decoded before URL rewriting and other binary text
     assert.ok(!out.includes('�'));
     assert.deepEqual(await readFile(path.join(destination, 'odd.txt')), odd);
   } finally { await rm(root, {recursive:true, force:true}); }
+});
+
+test('tool build data contains only link-out metadata, site video and example launches', async t => {
+  const {writeToolData} = await import('./build_site.mjs');
+  const root=await mkdtemp(path.join(os.tmpdir(),'gameref-tool-build-'));
+  t.after(()=>rm(root,{recursive:true,force:true}));
+  const tool=JSON.parse(await readFile(new URL('../catalog/tools.json',import.meta.url),'utf8')).tools[0];
+  const entry={id:'plant',title:'Plant'};
+  const launch={type:'example',url:BASE+'examples/plant/index.html'};
+  await writeToolData(root,[{...tool,examples:[entry]}],new Map([[tool.overview_video,{duration:70}]]),[{id:'example:plant',launch}]);
+  const summaries=JSON.parse(await readFile(path.join(root,'data/tools.json'))).tools;
+  const full=JSON.parse(await readFile(path.join(root,'data/tool',tool.slug+'.json')));
+  assert.equal(summaries[0].examples,1);
+  assert.equal(summaries[0].overview_video.url,BASE+'media/fab-botanic/overview.mp4');
+  assert.equal(full.overview_video.poster,BASE+'previews/fab-botanic.webp');
+  assert.equal(full.url,tool.url);assert.equal(full.terms_url,tool.terms_url);
+  assert.deepEqual(full.examples[0].launch,launch);
+  assert.equal(full.source_url,undefined);assert.equal(full.project,undefined);
+  assert.deepEqual(await readdir(root),['data']);
+});
+
+test('complete tool-only build writes directory indexes and counts without copying the local capture', async t => {
+  const {buildSite} = await import('./build_site.mjs');
+  const root=await mkdtemp(path.join(os.tmpdir(),'gameref-tools-site-'));
+  t.after(()=>rm(root,{recursive:true,force:true}));
+  const put=async(file,body)=>{await mkdir(path.dirname(path.join(root,file)),{recursive:true});await writeFile(path.join(root,file),body);};
+  const save=(file,data)=>put(file,JSON.stringify(data));
+  const tool=JSON.parse(await readFile(new URL('../catalog/tools.json',import.meta.url),'utf8')).tools[0];
+  await save('catalog/tools.json',{schema_version:1,tools:[{...tool,examples:[]}]});
+  await save('catalog/games.json',{games:[]});await save('catalog/examples.json',{examples:[]});
+  await save('catalog/runnability.json',{games:[]});await save('catalog/lab-i18n.json',{});
+  await save('catalog/videos.json',{videos:[{id:tool.overview_video,duration:70}]});
+  await mkdir(path.join(root,'catalog/pages'));
+  await put('library/index.html','<!doctype html><head></head><body><div id="app"></div></body>');
+  await put('previews/fab-botanic.webp','preview');
+  await put('media-web/fab-botanic/overview.mp4','recorded overview');
+  await put('fab-botanic/public/index.html','LOCAL CAPTURE MUST STAY PRIVATE');
+  await put('webgame-lab/src/catalog.ts','export const catalog = [];');
+  // Isolate our publishing contract from the third-party Lab bundler.
+  await put('webgame-lab/node_modules/vite/bin/vite.js',`const fs=require('node:fs');const out=process.argv[process.argv.indexOf('--outDir')+1];fs.mkdirSync(out,{recursive:true});fs.writeFileSync(out+'/index.html','Lab fixture');`);
+  execFileSync('git',['init','-q',root]);
+  const {out}=await buildSite({root});
+  for (const route of ['tools','t/fab-botanic']) assert.match(await readFile(path.join(out,route,'index.html'),'utf8'),/gameref-base/);
+  assert.deepEqual(JSON.parse(await readFile(path.join(out,'data/index.json'))).counts,{project:0,tool:1,example:0,demo:0});
+  assert.equal(await readFile(path.join(out,'media/fab-botanic/overview.mp4'),'utf8'),'recorded overview');
+  assert.equal(await readFile(path.join(out,'previews/fab-botanic.webp'),'utf8'),'preview');
+  assert.equal((await readdir(out)).includes('fab-botanic'),false);
+  assert.equal((await readdir(out)).includes('games'),false);
+  assert.deepEqual(JSON.parse(await readFile(path.join(out,'data/src/manifest.json'))),[]);
+  assert.equal(await readFile(path.join(root,'fab-botanic/public/index.html'),'utf8'),'LOCAL CAPTURE MUST STAY PRIVATE');
 });

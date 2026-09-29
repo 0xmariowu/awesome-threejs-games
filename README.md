@@ -3,7 +3,7 @@
 <div align="center">
 <h1>Awesome Three.js Games</h1>
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-<p>16 playable web games with their full source and runnable technique demos.</p>
+<p>18 playable web games with their full source and runnable technique demos.</p>
 <p><a href="https://0xmariowu.github.io/awesome-threejs-games/">Live site</a> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos">Demos</a></p>
 </div>
 
@@ -122,19 +122,41 @@
     <a href="https://0xmariowu.github.io/awesome-threejs-games/games/antikythera/index.html">▶ Play</a> · <a href="antikythera/">Source</a>
   </td>
 </tr>
+<tr>
+  <td width="50%" valign="top">
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/p/threejs-punk"><img src="previews/threejs-punk.webp" width="400" alt="Threejs-Punk Drive"></a><br>
+    <b>Threejs-Punk Drive</b><br>
+    Drive and drift through a rainy neon city, explore on foot and inspect sports cars in the garage.<br>
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/games/threejs-punk/index.html">▶ Play</a> · <a href="threejs-punk/">Source</a>
+  </td>
+  <td width="50%" valign="top">
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/p/tupi"><img src="previews/tupi.webp" width="400" alt="Tupi"></a><br>
+    <b>Tupi</b><br>
+    Follow a canoe fleet through rainy mangroves and move the camera around Bertioga in 1554.<br>
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/games/tupi/demos/tupi/index.html">▶ Play</a> · <a href="tupi/">Source</a>
+  </td>
+</tr>
 </table>
+
+## Tools
+
+<a href="https://0xmariowu.github.io/awesome-threejs-games/t/fab-botanic"><img src="previews/fab-botanic.webp" width="400" alt="FABOTANIC"></a>
+
+**FABOTANIC** — Generate 3D plants in the browser and drop them straight into your game.
+
+<a href="https://amix-design.com/tl/fab-botanic/">Open tool ↗</a> · <a href="https://amix-design.com/tl/fab-botanic/license.html">Terms</a>
 
 ## Technique demos
 
 - <b>Camera &amp; controls</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=camera">Live demos</a>: <a href="examples/arkenfall-camera/">Lock-on and camera collision</a> · <a href="examples/cloudkeep-flight/">Flight and follow camera</a> · <a href="examples/inkwave-3c/">Running, jumping and ink diving</a> · <a href="examples/monolith-tour/">Walking, flying and camera handoffs</a> · <a href="examples/shabondama-director/">Bubble camera director</a> · <a href="webgame-lab/src/scenes/inkwave-3c.tsx">3C and procedural bodies</a> · <a href="webgame-lab/src/scenes/feel-cam.tsx">Physics character and camera switching</a> · <a href="webgame-lab/src/scenes/feel.tsx">Physics character with fixed follow camera</a> · <a href="webgame-lab/src/scenes/drive.tsx">Driving with ecctrl vehicle mode</a> · <a href="webgame-lab/src/scenes/drone.tsx">Flying a drone with ecctrl propellers</a> · <a href="webgame-lab/src/scenes/planet.tsx">Planet and wall walking with ecctrl custom gravity</a> · <a href="webgame-lab/src/scenes/cloudkeep-cam.tsx">cloudkeep follow camera</a> · <a href="webgame-lab/src/scenes/tank-cam.tsx">Tank-style camera</a>
-- <b>Vehicles &amp; physics</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=vehicle">Live demos</a>: <a href="examples/scorch-racing/">Pod racing physics</a> · <a href="webgame-lab/src/scenes/ropes.tsx">Ropes and hinges: bridge, chains and lamps</a>
+- <b>Vehicles &amp; physics</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=vehicle">Live demos</a>: <a href="examples/scorch-racing/">Pod racing physics</a> · <a href="examples/punk-engine-audio/">Engine audio</a> · <a href="examples/tupi-paddling-fleet/">Tupi · Paddling fleet</a> · <a href="webgame-lab/src/scenes/ropes.tsx">Ropes and hinges: bridge, chains and lamps</a>
 - <b>Combat</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=combat">Live demos</a>: <a href="examples/arkenfall-combat/">Combos and parry timing</a> · <a href="examples/vox-reactions/">Elemental reaction playground</a>
 - <b>AI &amp; crowds</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=ai">Live demos</a>: <a href="examples/cloudkeep-ecology/">Feeding, capture and ecology</a> · <a href="examples/scorch-race-ai/">Look-ahead racing AI</a> · <a href="webgame-lab/src/scenes/inkwave-ai.tsx">Goal scoring and navigation</a> · <a href="webgame-lab/src/scenes/npc.tsx">NPC behavior: wandering, fleeing and chasing</a> · <a href="webgame-lab/src/scenes/navcrowd.tsx">Crowd pathfinding in a town</a>
 - <b>Characters &amp; animation</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=animation">Live demos</a>: <a href="webgame-lab/src/scenes/inkwave-ui.tsx">UI motion language</a> · <a href="webgame-lab/src/scenes/retarget.tsx">Animation retargeting</a> · <a href="webgame-lab/src/scenes/crowd.tsx">An animated crowd</a>
-- <b>Rendering &amp; post-processing</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=rendering">Live demos</a>: <a href="examples/cloudkeep-atmosphere/">Cloud sea and in-cloud fog</a> · <a href="examples/inkwave-paint/">Ink on floors and walls</a> · <a href="examples/shabondama-bubble/">Bubble film iridescence</a> · <a href="webgame-lab/src/scenes/inkwave-materials.tsx">Materials and lighting</a> · <a href="webgame-lab/src/scenes/look.tsx">Base scene lighting</a> · <a href="webgame-lab/src/scenes/look-post.tsx">Scene lighting and post-processing</a> · <a href="webgame-lab/src/scenes/look-presets.tsx">One-click scene presets</a> · <a href="webgame-lab/src/scenes/lut.tsx">Cinematic color grading with LUT</a> · <a href="webgame-lab/src/scenes/motion-blur.tsx">Motion blur</a> · <a href="webgame-lab/src/scenes/ssgi.tsx">Global illumination (SSGI)</a> · <a href="webgame-lab/src/scenes/sky.tsx">Physical sky</a> · <a href="webgame-lab/src/scenes/volume-cloud.tsx">Volumetric clouds</a> · <a href="webgame-lab/src/scenes/fog.tsx">Height fog</a> · <a href="webgame-lab/src/scenes/rain.tsx">Rain</a> · <a href="webgame-lab/src/scenes/lightning.tsx">Lightning</a> · <a href="webgame-lab/src/scenes/atmosphere.tsx">Atmosphere and volumetric clouds for large worlds</a>
-- <b>Water</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=water">Live demos</a>: <a href="examples/tidewater-ocean/">Waves and buoyancy</a> · <a href="webgame-lab/src/scenes/ocean.tsx">Ocean surface with WebGPU</a> · <a href="webgame-lab/src/scenes/pool.tsx">Pool with flowing water</a> · <a href="webgame-lab/src/scenes/shallow.tsx">Shallow water around a character</a>
+- <b>Rendering &amp; post-processing</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=rendering">Live demos</a>: <a href="examples/cloudkeep-atmosphere/">Cloud sea and in-cloud fog</a> · <a href="examples/inkwave-paint/">Ink on floors and walls</a> · <a href="examples/shabondama-bubble/">Bubble film iridescence</a> · <a href="examples/tupi-forest-impostors/">Tupi · Forest impostors</a> · <a href="webgame-lab/src/scenes/inkwave-materials.tsx">Materials and lighting</a> · <a href="webgame-lab/src/scenes/look.tsx">Base scene lighting</a> · <a href="webgame-lab/src/scenes/look-post.tsx">Scene lighting and post-processing</a> · <a href="webgame-lab/src/scenes/look-presets.tsx">One-click scene presets</a> · <a href="webgame-lab/src/scenes/lut.tsx">Cinematic color grading with LUT</a> · <a href="webgame-lab/src/scenes/motion-blur.tsx">Motion blur</a> · <a href="webgame-lab/src/scenes/ssgi.tsx">Global illumination (SSGI)</a> · <a href="webgame-lab/src/scenes/sky.tsx">Physical sky</a> · <a href="webgame-lab/src/scenes/volume-cloud.tsx">Volumetric clouds</a> · <a href="webgame-lab/src/scenes/fog.tsx">Height fog</a> · <a href="webgame-lab/src/scenes/rain.tsx">Rain</a> · <a href="webgame-lab/src/scenes/lightning.tsx">Lightning</a> · <a href="webgame-lab/src/scenes/atmosphere.tsx">Atmosphere and volumetric clouds for large worlds</a>
+- <b>Water</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=water">Live demos</a>: <a href="examples/tidewater-ocean/">Waves and buoyancy</a> · <a href="examples/tupi-rain-river/">Tupi · Rain river</a> · <a href="webgame-lab/src/scenes/ocean.tsx">Ocean surface with WebGPU</a> · <a href="webgame-lab/src/scenes/pool.tsx">Pool with flowing water</a> · <a href="webgame-lab/src/scenes/shallow.tsx">Shallow water around a character</a>
 - <b>Effects &amp; particles</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=effects">Live demos</a>: <a href="webgame-lab/src/scenes/inkwave-combat.tsx">Combat feedback chain</a> · <a href="webgame-lab/src/scenes/quarks.tsx">Particles: campfire, explosions and magic</a> · <a href="webgame-lab/src/scenes/flames.tsx">Flames with node materials</a> · <a href="webgame-lab/src/scenes/volume-fire.tsx">Volumetric fire</a> · <a href="webgame-lab/src/scenes/cloth.tsx">Cloth blowing in the wind</a> · <a href="webgame-lab/src/scenes/birds.tsx">GPU bird flock</a>
-- <b>World &amp; terrain</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=world">Live demos</a>: <a href="examples/monolith-terrain/">Terrain streaming</a> · <a href="webgame-lab/src/scenes/inkwave-paint.tsx">Surface painting and gameplay rules</a> · <a href="webgame-lab/src/scenes/inkwave-world.tsx">Data-driven levels and props</a> · <a href="webgame-lab/src/scenes/trees.tsx">Procedural trees with wind</a> · <a href="webgame-lab/src/scenes/plants.tsx">WebGPU plant generator</a> · <a href="webgame-lab/src/scenes/destruct.tsx">Destructible geometry: holes and craters</a>
+- <b>World &amp; terrain</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=world">Live demos</a>: <a href="examples/monolith-terrain/">Terrain streaming</a> · <a href="examples/botanic-meadow/">A mixed wild field</a> · <a href="examples/botanic-phyllotaxis/">Leaf arrangements</a> · <a href="webgame-lab/src/scenes/inkwave-paint.tsx">Surface painting and gameplay rules</a> · <a href="webgame-lab/src/scenes/inkwave-world.tsx">Data-driven levels and props</a> · <a href="webgame-lab/src/scenes/trees.tsx">Procedural trees with wind</a> · <a href="webgame-lab/src/scenes/plants.tsx">WebGPU plant generator</a> · <a href="webgame-lab/src/scenes/destruct.tsx">Destructible geometry: holes and craters</a>
 - <b>Gameplay &amp; rules</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=gameplay">Live demos</a>: <a href="examples/tidewater-fishing/">Fishing line tension</a>
 - <b>Assets &amp; tools</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=tooling">Live demos</a>: <a href="examples/cloudkeep-flight/">Models and distant detail</a> · <a href="examples/moritsuki-characters/">Background character generation</a> · <a href="webgame-lab/src/scenes/inkwave-audio.tsx">Procedural sound and music</a> · <a href="webgame-lab/src/scenes/inkwave-diagnostics.tsx">Frame loop and lifecycle</a>
 
@@ -162,5 +184,8 @@
 - <a href="https://tableparty.io/kart">Sunsprint / Tableparty Kart</a> — No license stated — study use
 - <a href="https://github.com/0xmariowu/cloudkeep">Cloudkeep</a> — MIT
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — No license stated — study use
+- <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — No license stated — study use
+- <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — No license stated — study use
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — Tool and generator source are not licensed for mirroring or redistribution (terms v1.0.0, 2026-09-28). This repository links to the original and ships no FABOTANIC files.
 
 Webgame Lab lists third-party assets in [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).

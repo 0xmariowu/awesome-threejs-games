@@ -1,0 +1,254 @@
+{
+  "asset": {
+    "generator": "glTF-Transform v4.5.0",
+    "version": "2.0"
+  },
+  "accessors": [
+    {
+      "type": "SCALAR",
+      "componentType": 5123,
+      "count": 7338,
+      "normalized": false,
+      "byteOffset": 0,
+      "bufferView": 0
+    },
+    {
+      "type": "VEC2",
+      "componentType": 5126,
+      "count": 4413,
+      "normalized": false,
+      "byteOffset": 0,
+      "bufferView": 1
+    },
+    {
+      "type": "VEC3",
+      "componentType": 5126,
+      "count": 4413,
+      "max": [
+        1.1107631921768188,
+        2.4000000953674316,
+        1.18121337890625
+      ],
+      "min": [
+        -1.1107631921768188,
+        0,
+        -1.18121337890625
+      ],
+      "normalized": false,
+      "byteOffset": 0,
+      "bufferView": 2
+    },
+    {
+      "type": "VEC3",
+      "componentType": 5120,
+      "count": 4413,
+      "normalized": true,
+      "byteOffset": 0,
+      "bufferView": 3
+    },
+    {
+      "type": "VEC2",
+      "componentType": 5123,
+      "count": 4413,
+      "normalized": true,
+      "byteOffset": 0,
+      "bufferView": 4
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 1,
+      "byteOffset": 0,
+      "byteLength": 14676,
+      "target": 34963,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 0,
+          "byteLength": 2500,
+          "mode": "TRIANGLES",
+          "byteStride": 2,
+          "count": 7338
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 14676,
+      "byteLength": 35304,
+      "target": 34962,
+      "byteStride": 8,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 2500,
+          "byteLength": 27948,
+          "mode": "ATTRIBUTES",
+          "byteStride": 8,
+          "count": 4413
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 49980,
+      "byteLength": 52956,
+      "target": 34962,
+      "byteStride": 12,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 30448,
+          "byteLength": 42286,
+          "mode": "ATTRIBUTES",
+          "byteStride": 12,
+          "count": 4413
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 102936,
+      "byteLength": 17652,
+      "target": 34962,
+      "byteStride": 4,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 72736,
+          "byteLength": 9116,
+          "mode": "ATTRIBUTES",
+          "filter": "OCTAHEDRAL",
+          "byteStride": 4,
+          "count": 4413
+        }
+      }
+    },
+    {
+      "buffer": 1,
+      "byteOffset": 120588,
+      "byteLength": 17652,
+      "target": 34962,
+      "byteStride": 4,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "buffer": 0,
+          "byteOffset": 81852,
+          "byteLength": 15903,
+          "mode": "ATTRIBUTES",
+          "byteStride": 4,
+          "count": 4413
+        }
+      }
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "extensions": {
+        "EXT_texture_webp": {
+          "source": 1
+        }
+      }
+    },
+    {
+      "sampler": 0,
+      "extensions": {
+        "EXT_texture_webp": {
+          "source": 0
+        }
+      }
+    }
+  ],
+  "images": [
+    {
+      "name": "NormalGL_9d50a574-3eb3-4353-aac2-c72c5263b951",
+      "mimeType": "image/webp",
+      "uri": "caete_normalgl9d_n.webp"
+    },
+    {
+      "name": "Color_9d50a574-3eb3-4353-aac2-c72c5263b951",
+      "mimeType": "image/webp",
+      "uri": "caete_color9d50a_c.webp"
+    }
+  ],
+  "buffers": [
+    {
+      "uri": "caete_lod1.bin",
+      "byteLength": 97756
+    },
+    {
+      "byteLength": 138240,
+      "extensions": {
+        "EXT_meshopt_compression": {
+          "fallback": true
+        }
+      }
+    }
+  ],
+  "materials": [
+    {
+      "name": "solid_caete",
+      "doubleSided": true,
+      "pbrMetallicRoughness": {
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0,
+        "baseColorTexture": {
+          "index": 0
+        }
+      },
+      "normalTexture": {
+        "index": 1
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Crimson Bracted Heliconia Clump Mesh.002",
+      "primitives": [
+        {
+          "attributes": {
+            "_FLORA": 1,
+            "POSITION": 2,
+            "NORMAL": 3,
+            "TEXCOORD_0": 4
+          },
+          "mode": 4,
+          "material": 0,
+          "indices": 0
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "caete_lod1",
+      "mesh": 0
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "scene": 0,
+  "extensionsUsed": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp"
+  ],
+  "extensionsRequired": [
+    "EXT_meshopt_compression",
+    "EXT_texture_webp"
+  ]
+}

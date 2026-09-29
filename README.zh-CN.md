@@ -3,7 +3,7 @@
 <div align="center">
 <h1>Awesome Three.js Games</h1>
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
-<p>16 个可玩的网页游戏，附完整源码和可运行的技术演示。</p>
+<p>18 个可玩的网页游戏，附完整源码和可运行的技术演示。</p>
 <p><a href="https://0xmariowu.github.io/awesome-threejs-games/">在线网站</a> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos">技术演示</a></p>
 </div>
 
@@ -122,19 +122,41 @@
     <a href="https://0xmariowu.github.io/awesome-threejs-games/games/antikythera/index.html">▶ 体验游戏</a> · <a href="antikythera/">源码</a>
   </td>
 </tr>
+<tr>
+  <td width="50%" valign="top">
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/p/threejs-punk"><img src="previews/threejs-punk.webp" width="400" alt="Threejs-Punk Drive"></a><br>
+    <b>Threejs-Punk Drive</b><br>
+    在霓虹雨夜驾驶、漂移、步行探索城市，走进车库查看跑车<br>
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/games/threejs-punk/index.html">▶ 体验游戏</a> · <a href="threejs-punk/">源码</a>
+  </td>
+  <td width="50%" valign="top">
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/p/tupi"><img src="previews/tupi.webp" width="400" alt="Tupi"></a><br>
+    <b>Tupi</b><br>
+    沿雨中的红树林河道观看独木舟船队，拖动镜头探索 1554 年的伯蒂奥加<br>
+    <a href="https://0xmariowu.github.io/awesome-threejs-games/games/tupi/demos/tupi/index.html">▶ 体验游戏</a> · <a href="tupi/">源码</a>
+  </td>
+</tr>
 </table>
+
+## 工具
+
+<a href="https://0xmariowu.github.io/awesome-threejs-games/t/fab-botanic"><img src="previews/fab-botanic.webp" width="400" alt="FABOTANIC"></a>
+
+**FABOTANIC** — 在浏览器里生成 3D 草木，导出后直接放进游戏
+
+<a href="https://amix-design.com/tl/fab-botanic/">打开工具 ↗</a> · <a href="https://amix-design.com/tl/fab-botanic/license.html">使用条款</a>
 
 ## 技术演示
 
 - <b>镜头与操控</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=camera">在线演示</a>: <a href="examples/arkenfall-camera/">锁定与镜头避障</a> · <a href="examples/cloudkeep-flight/">飞行与追随镜头</a> · <a href="examples/inkwave-3c/">奔跑跳跃与潜墨</a> · <a href="examples/monolith-tour/">步行飞行与镜头交接</a> · <a href="examples/shabondama-director/">泡泡镜头导演</a> · <a href="webgame-lab/src/scenes/inkwave-3c.tsx">3C 与程序化身体</a> · <a href="webgame-lab/src/scenes/feel-cam.tsx">物理角色 + 镜头切换</a> · <a href="webgame-lab/src/scenes/feel.tsx">物理角色（固定跟随）</a> · <a href="webgame-lab/src/scenes/drive.tsx">开车（ecctrl 车辆模式）</a> · <a href="webgame-lab/src/scenes/drone.tsx">开无人机（ecctrl 螺旋桨）</a> · <a href="webgame-lab/src/scenes/planet.tsx">星球表面 / 墙面行走（ecctrl 自定义重力）</a> · <a href="webgame-lab/src/scenes/cloudkeep-cam.tsx">cloudkeep 追随镜头</a> · <a href="webgame-lab/src/scenes/tank-cam.tsx">坦克游戏式镜头</a>
-- <b>载具与物理</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=vehicle">在线演示</a>: <a href="examples/scorch-racing/">飞梭驾驶力学</a> · <a href="webgame-lab/src/scenes/ropes.tsx">绳索和铰链（吊桥、铁链、吊灯）</a>
+- <b>载具与物理</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=vehicle">在线演示</a>: <a href="examples/scorch-racing/">飞梭驾驶力学</a> · <a href="examples/punk-engine-audio/">引擎声浪</a> · <a href="examples/tupi-paddling-fleet/">划桨船队</a> · <a href="webgame-lab/src/scenes/ropes.tsx">绳索和铰链（吊桥、铁链、吊灯）</a>
 - <b>战斗</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=combat">在线演示</a>: <a href="examples/arkenfall-combat/">连击与招架时机</a> · <a href="examples/vox-reactions/">元素反应实验场</a>
 - <b>AI 与群体</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=ai">在线演示</a>: <a href="examples/cloudkeep-ecology/">喂食、捕获与生态</a> · <a href="examples/scorch-race-ai/">前瞻赛车 AI</a> · <a href="webgame-lab/src/scenes/inkwave-ai.tsx">目标评分与导航</a> · <a href="webgame-lab/src/scenes/npc.tsx">NPC 行为（闲逛、躲避、追赶）</a> · <a href="webgame-lab/src/scenes/navcrowd.tsx">人群寻路（小镇）</a>
 - <b>角色与动画</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=animation">在线演示</a>: <a href="webgame-lab/src/scenes/inkwave-ui.tsx">UI 动态语言</a> · <a href="webgame-lab/src/scenes/retarget.tsx">动作重定向</a> · <a href="webgame-lab/src/scenes/crowd.tsx">一大群角色同屏</a>
-- <b>画面与后期</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=rendering">在线演示</a>: <a href="examples/cloudkeep-atmosphere/">云海与入云雾效</a> · <a href="examples/inkwave-paint/">墨水涂地与墙面</a> · <a href="examples/shabondama-bubble/">泡泡薄膜虹彩</a> · <a href="webgame-lab/src/scenes/inkwave-materials.tsx">材质与光照链路</a> · <a href="webgame-lab/src/scenes/look.tsx">画面基础</a> · <a href="webgame-lab/src/scenes/look-post.tsx">画面 + 后期</a> · <a href="webgame-lab/src/scenes/look-presets.tsx">一键画面预设</a> · <a href="webgame-lab/src/scenes/lut.tsx">电影调色（LUT）</a> · <a href="webgame-lab/src/scenes/motion-blur.tsx">运动模糊</a> · <a href="webgame-lab/src/scenes/ssgi.tsx">全局光照</a> · <a href="webgame-lab/src/scenes/sky.tsx">物理天空</a> · <a href="webgame-lab/src/scenes/volume-cloud.tsx">体积云</a> · <a href="webgame-lab/src/scenes/fog.tsx">高度雾</a> · <a href="webgame-lab/src/scenes/rain.tsx">下雨</a> · <a href="webgame-lab/src/scenes/lightning.tsx">闪电</a> · <a href="webgame-lab/src/scenes/atmosphere.tsx">大气 + 体积云（大世界用）</a>
-- <b>水面</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=water">在线演示</a>: <a href="examples/tidewater-ocean/">海浪与浮力</a> · <a href="webgame-lab/src/scenes/ocean.tsx">海面（WebGPU 海洋）</a> · <a href="webgame-lab/src/scenes/pool.tsx">水池（流动水面）</a> · <a href="webgame-lab/src/scenes/shallow.tsx">浅水（角色站在水里）</a>
+- <b>画面与后期</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=rendering">在线演示</a>: <a href="examples/cloudkeep-atmosphere/">云海与入云雾效</a> · <a href="examples/inkwave-paint/">墨水涂地与墙面</a> · <a href="examples/shabondama-bubble/">泡泡薄膜虹彩</a> · <a href="examples/tupi-forest-impostors/">森林替身与细节切换</a> · <a href="webgame-lab/src/scenes/inkwave-materials.tsx">材质与光照链路</a> · <a href="webgame-lab/src/scenes/look.tsx">画面基础</a> · <a href="webgame-lab/src/scenes/look-post.tsx">画面 + 后期</a> · <a href="webgame-lab/src/scenes/look-presets.tsx">一键画面预设</a> · <a href="webgame-lab/src/scenes/lut.tsx">电影调色（LUT）</a> · <a href="webgame-lab/src/scenes/motion-blur.tsx">运动模糊</a> · <a href="webgame-lab/src/scenes/ssgi.tsx">全局光照</a> · <a href="webgame-lab/src/scenes/sky.tsx">物理天空</a> · <a href="webgame-lab/src/scenes/volume-cloud.tsx">体积云</a> · <a href="webgame-lab/src/scenes/fog.tsx">高度雾</a> · <a href="webgame-lab/src/scenes/rain.tsx">下雨</a> · <a href="webgame-lab/src/scenes/lightning.tsx">闪电</a> · <a href="webgame-lab/src/scenes/atmosphere.tsx">大气 + 体积云（大世界用）</a>
+- <b>水面</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=water">在线演示</a>: <a href="examples/tidewater-ocean/">海浪与浮力</a> · <a href="examples/tupi-rain-river/">雨中河面</a> · <a href="webgame-lab/src/scenes/ocean.tsx">海面（WebGPU 海洋）</a> · <a href="webgame-lab/src/scenes/pool.tsx">水池（流动水面）</a> · <a href="webgame-lab/src/scenes/shallow.tsx">浅水（角色站在水里）</a>
 - <b>特效与粒子</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=effects">在线演示</a>: <a href="webgame-lab/src/scenes/inkwave-combat.tsx">战斗反馈链</a> · <a href="webgame-lab/src/scenes/quarks.tsx">粒子特效（篝火、爆炸、魔法）</a> · <a href="webgame-lab/src/scenes/flames.tsx">火焰（节点材质）</a> · <a href="webgame-lab/src/scenes/volume-fire.tsx">体积火（立体的火）</a> · <a href="webgame-lab/src/scenes/cloth.tsx">布料（旗子被风吹）</a> · <a href="webgame-lab/src/scenes/birds.tsx">鸟群（显卡算）</a>
-- <b>世界与地形</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=world">在线演示</a>: <a href="examples/monolith-terrain/">地形流式加载</a> · <a href="webgame-lab/src/scenes/inkwave-paint.tsx">表面涂色与玩法规则</a> · <a href="webgame-lab/src/scenes/inkwave-world.tsx">数据驱动关卡与道具</a> · <a href="webgame-lab/src/scenes/trees.tsx">程序化树（会随风摆）</a> · <a href="webgame-lab/src/scenes/plants.tsx">WebGPU 植物生成器</a> · <a href="webgame-lab/src/scenes/destruct.tsx">可破坏几何（打洞、炸坑）</a>
+- <b>世界与地形</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=world">在线演示</a>: <a href="examples/monolith-terrain/">地形流式加载</a> · <a href="examples/botanic-meadow/">野地与风</a> · <a href="examples/botanic-phyllotaxis/">叶序与黄金角</a> · <a href="webgame-lab/src/scenes/inkwave-paint.tsx">表面涂色与玩法规则</a> · <a href="webgame-lab/src/scenes/inkwave-world.tsx">数据驱动关卡与道具</a> · <a href="webgame-lab/src/scenes/trees.tsx">程序化树（会随风摆）</a> · <a href="webgame-lab/src/scenes/plants.tsx">WebGPU 植物生成器</a> · <a href="webgame-lab/src/scenes/destruct.tsx">可破坏几何（打洞、炸坑）</a>
 - <b>玩法与规则</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=gameplay">在线演示</a>: <a href="examples/tidewater-fishing/">钓鱼拉力</a>
 - <b>资产与工具</b> · <a href="https://0xmariowu.github.io/awesome-threejs-games/demos?cat=tooling">在线演示</a>: <a href="examples/cloudkeep-flight/">模型与远景减面</a> · <a href="examples/moritsuki-characters/">后台生成角色</a> · <a href="webgame-lab/src/scenes/inkwave-audio.tsx">程序化声音与配乐</a> · <a href="webgame-lab/src/scenes/inkwave-diagnostics.tsx">帧循环与生命周期</a>
 
@@ -162,5 +184,8 @@
 - <a href="https://tableparty.io/kart">Sunsprint / Tableparty Kart</a> — 未声明许可证，仅供学习
 - <a href="https://github.com/0xmariowu/cloudkeep">Cloudkeep</a> — MIT
 - <a href="https://claude.ai/artifact/ReCBQGZ4EirKSiEmT8XXfs">Antikythera</a> — 未声明许可证，仅供学习
+- <a href="https://www.threejspunk.com/">Threejs-Punk Drive</a> — 未声明许可证，仅供学习
+- <a href="https://www.rubenmarcus.dev/demos/tupi/">Tupi</a> — 未声明许可证，仅供学习
+- <a href="https://amix-design.com/tl/fab-botanic/">FABOTANIC</a> — 作者条款不允许镜像转载工具本身（条款 v1.0.0，2026-09-28）。本仓库只链接原站，不收录任何 FABOTANIC 文件。
 
 Webgame Lab 的第三方资产见 [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).

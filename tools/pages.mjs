@@ -6,7 +6,7 @@ import { ROOT, sha256 } from './library-index.mjs';
 const json = async file => JSON.parse(await readFile(file, 'utf8'));
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const string = value => typeof value === 'string' && value.trim().length > 0;
-const categories = ['飞行探索','赛车','开放世界动作','战斗','城镇与生活','风景与氛围','其他引擎'];
+const categories = ['飞行探索','赛车','开放世界动作','战斗','城镇与生活','风景与氛围','互动影像','其他引擎'];
 const pageFields = new Set(['schema_version','slug','title','tagline','tagline_en','category','overview_video','examples']);
 const exampleFields = new Set(['id','title','title_en','one_liner','one_liner_en','candidate']);
 function required(value, label, error, max) {
@@ -111,16 +111,24 @@ export async function loadPages(root = ROOT) {
 async function validate(root, {slug, requireVideos = false, videosOnly = false} = {}) {
   const result = {errors:[],warnings:[],checked:[]};
   const fail = message => result.errors.push(message);
-  let pages, videoData, games, candidates, examples;
+  let pages, videoData, games, candidates, examples, toolProjects = [];
   try {
     ({pages,videoData} = await readData(root,slug,fail));
     games = (await json(path.join(root,'catalog/games.json'))).games;
     if (!Array.isArray(games)) throw new Error('games.json must contain a games array');
+    try {
+      const data = await json(path.join(root,'catalog/tools.json'));
+      if (!object(data) || data.schema_version !== 1 || !Array.isArray(data.tools) ||
+          data.tools.some(tool=>!object(tool) || !string(tool.slug)))
+        throw new Error('tools.json must contain schema_version 1 and a tools array with slugs');
+      toolProjects = data.tools.map(tool=>tool.slug);
+    } catch (error) { if (error.code !== 'ENOENT') throw error; }
     candidates = await loadCandidates(root);
     examples = !videosOnly ? await loadExamples(root) : [];
     root = await realpath(root);
   } catch (error) { fail(`${slug ?? 'videos'}: cannot load catalog: ${error.message}`); return result; }
   const projects = new Set(games.map(game=>game.slug));
+  const videoProjects = new Set([...projects,...toolProjects]);
   const candidateMap = new Map(candidates.map(row=>[row.id,row]));
   const exampleMap = new Map(examples.map(row=>[row.id,row]));
   // Port ownership is global, even when checking just one project's page.
@@ -153,7 +161,7 @@ async function validate(root, {slug, requireVideos = false, videosOnly = false} 
       if (example.port !== local.port) error('port must match local.json port');
     } catch (cause) { error(`cannot access folder or local.json: ${cause.code || cause.message}`); }
   }
-  if (slug !== undefined && !projects.has(slug)) fail(`${slug}: unknown project`);
+  if (slug !== undefined && !(videosOnly ? videoProjects : projects).has(slug)) fail(`${slug}: unknown project`);
   if (!videosOnly && slug !== undefined && !pages.has(slug)) fail(`${slug}: page file does not exist`);
 
   async function reference(relative, prefix, label, error) {
@@ -184,7 +192,7 @@ async function validate(root, {slug, requireVideos = false, videosOnly = false} 
     if (required(video.id,'id',error) && !/^[a-z0-9][a-z0-9_-]*\/[a-z0-9][a-z0-9_-]*$/i.test(video.id)) error('id must have form <project>/<shot>');
     if (seenVideos.has(video.id) || videos.some(other=>other !== video && other?.id === video.id)) error(`duplicate video id ${video.id}`);
     seenVideos.add(video.id); videoMap.set(video.id,video);
-    if (!projects.has(video.project)) error('unknown project');
+    if (!videoProjects.has(video.project)) error('unknown project');
     if (typeof video.id === 'string' && video.id.split('/')[0] !== video.project) error('id project does not match project');
     if (video.module !== null && candidateMap.get(video.module)?.project !== video.project) error('module must be null or a candidate of this project');
     for (const field of ['duration','fps','width','height']) {

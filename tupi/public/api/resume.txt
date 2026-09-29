@@ -1,0 +1,26 @@
+
+[32m[1mrubenmarcus.dev[0m [2m// terminal resume[0m
+
+[1mRuben Marcus[0m — Senior AI Fullstack Engineer
+Lisbon, Portugal · remote worldwide · 14 years shipping
+
+[32mproof[0m
+  #1 ECDSA.fail ............ multi-agent research harness (9 roles, 7+ providers)
+  #1 QEC decoder ........... Optimization Arena, 2,642 EPM
+  Bitte AI runtime ......... 2.85M+ messages · 24,164 users · 16,703 agents
+  CS Brasil (browser FPS) .. 2,191 players · 154K+ kills · 27 countries
+  aeo.js / check.aeojs.org . 4,569 AEO scans
+  npm ...................... 34K+ all-time downloads
+
+[32mopen source[0m
+  ralphstarter.ai · autoresearcher.org · aeojs.org
+  check.aeojs.org · scanrepo.dev · csbrasil.online
+
+[32mhire me[0m
+  social linkedin.com/in/rubenmarcus
+  cv     GET  /cv.pdf
+  api    POST /api/hire  {"name","contact","brief"}
+  mcp    POST /api/mcp   (initialize · tools/list · tools/call)
+  json   GET  /api/resume.json
+
+[2magents welcome — this server speaks MCP.[0m

@@ -25,7 +25,7 @@ test('example launches default to the id and root entry and support a shared fol
   assert.deepEqual(models.related.map(row=>row.id),['cloudkeep.asset-build']);
 });
 test('all originals, mechanism candidates and existing scenes are searchable',async()=>{
-  assert.equal(index.counts.project,index.games.length);assert.equal(index.counts.capability,62);assert.equal(index.counts.demo,45);
+  assert.equal(index.counts.project,index.games.length);assert.equal(index.counts.capability,JSON.parse(await readFile(new URL('../catalog/extraction-candidates.json',import.meta.url),'utf8')).candidates.length);assert.equal(index.counts.demo,45);
   assert.equal(new Set(index.records.map(row=>row.id)).size,index.records.length);
   // Every pinned source matches the catalog; refresh catalog/examples.json hashes when a host changes.
   for (const record of index.records) {
@@ -101,6 +101,7 @@ async function fixture(t,{launcher}={}) {
   page.tagline_en = page.tagline;
   for (const example of page.examples) {example.title_en = example.title; example.one_liner_en = example.one_liner;}
   await json('catalog/games.json',{games});
+  await json('catalog/tools.json',{schema_version:1,tools:[]});
   await json('catalog/extraction-candidates.json',{candidates:[{id:'cloudkeep.flight',project:'cloudkeep'}]});
   await json('catalog/examples.json',{examples:page.examples.map(({id})=>({id,project:'cloudkeep'}))});
   await json('catalog/pages/cloudkeep.json',page);
@@ -542,4 +543,24 @@ test('live design data aliases, source manifest and bundled text preserve access
     assert.equal((await f.get(route,{Origin:'https://hostile.test'})).status,403);
     assert.equal((await f.get(route,{'Sec-Fetch-Site':'cross-site'})).status,403);
   }
+});
+
+test('tool routes serve link-only metadata, counts, preview and bounded video without exposing the archive', async t => {
+  const server=await createLibrary({index});
+  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+  t.after(()=>new Promise(resolve=>{server.close(resolve);server.closeAllConnections();}));
+  const base=`http://127.0.0.1:${server.address().port}`;
+  const get=async route=>{const response=await fetch(base+route);assert.equal(response.status,200,route);return response;};
+  const tools=(await (await get('/data/tools.json')).json()).tools;
+  const full=await (await get('/data/tool/fab-botanic.json')).json();
+  assert.equal(tools[0].slug,'fab-botanic');
+  assert.equal(full.url,'https://amix-design.com/tl/fab-botanic/');
+  assert.equal(full.terms_url,'https://amix-design.com/tl/fab-botanic/license.html');
+  assert.equal(full.source_url,undefined);assert.equal(full.project,undefined);
+  assert.equal((await (await get('/api/index')).json()).counts.tool,tools.length);
+  for (const route of ['/tools','/tools/','/t/fab-botanic','/t/fab-botanic/']) assert.match(await (await get(route)).text(),/id="app"/);
+  for (const route of ['/fab-botanic/public/tl/fab-botanic/index.html','/api/tool?slug=missing','/data/tool/missing.json','/api/tree?project=fab-botanic']) assert.equal((await fetch(base+route)).status,404);
+  assert.equal((await get('/previews/fab-botanic.webp')).headers.get('content-type'),'image/webp');
+  const video=await fetch(base+full.overview_video.url,{headers:{Range:'bytes=0-31'}});
+  assert.equal(video.status,206);assert.equal((await video.arrayBuffer()).byteLength,32);
 });

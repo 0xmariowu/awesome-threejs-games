@@ -23,7 +23,17 @@ const CODE_EXT = /\.(m?js|cjs|jsx|tsx?|html|css|glsl|wgsl|vert|frag|json|md|py)$
 const SKIP = /^(LICENSE|local\.json|provenance\.json|package-lock\.json)$/i;
 const LINE_CAP = 500;
 const T = {
-  mainNav: ['主导航', 'Main navigation'], projects: ['项目', 'Projects'], demos: ['技术演示', 'Demos'],
+  mainNav: ['主导航', 'Main navigation'], projects: ['游戏', 'Games'], demos: ['技术演示', 'Demos'],
+  tools: ['工具', 'Tools'], tool: ['工具', 'Tool'],
+  toolsTitle: ['好用的游戏制作工具。', 'Tools for making web games.'],
+  toolsSub: ['{n} 个工具，帮你制作网页游戏。', '{n} tools to help you build web games.'],
+  toolsSubOne: ['1 个工具，帮你制作网页游戏。', '1 tool to help you build web games.'],
+  openTool: ['打开工具 ↗', 'Open tool ↗'], terms: ['使用条款 ↗', 'Terms ↗'],
+  allTools: ['全部工具', 'All tools'], author: ['作者', 'By'],
+  features: ['能做什么', 'What it can do'], steps: ['怎么用在游戏里', 'Use it in your game'],
+  usage: ['能不能用', 'Usage rights'],
+  toolExamplesSub: ['受这个工具启发、独立实现的技术示例。', 'Independent examples inspired by this tool.'],
+  toolFooter: ['工具版权归原作者所有，本站只做介绍和链接。', 'Tools belong to their authors; this site only describes and links to them.'],
   loading: ['正在读取…', 'Loading…'], loadingFiles: ['正在读取文件列表…', 'Loading file list…'],
   dataFailed: ['数据加载失败', 'Couldn’t load the library'], retry: ['重试', 'Try again'],
   homeTitle: ['可以直接玩的 Three.js 游戏。', 'Three.js games you can play.'],
@@ -109,13 +119,15 @@ class Library {
     this.setState({ bootErr: null, data: null });
     try {
       const j = u => fetch(siteURL('/' + u)).then(r => { if (!r.ok) throw new Error(`${u} · HTTP ${r.status}`); return r.json(); });
-      const [pages, demos, manifest] = await Promise.all([j('data/pages.json'), j('data/demos.json'), j('data/src/manifest.json')]);
+      const [pages, demos, manifest, tools] = await Promise.all([j('data/pages.json'), j('data/demos.json'), j('data/src/manifest.json'), j('data/tools.json')]);
       buildLocal(manifest);
       if (!isStatic) this.launchIndex = await fetch('/api/index').then(r => r.json());
       const details = await Promise.all(pages.pages.map(p => j(`data/page/${p.slug}.json`).catch(() => null)));
       const detail = {}; pages.pages.forEach((p, i) => { detail[p.slug] = details[i]; });
+      const toolDetails = await Promise.all(tools.tools.map(p => j(`data/tool/${p.slug}.json`)));
+      const toolDetail = Object.fromEntries(toolDetails.map(p => [p.slug,p]));
       const ordered = demos.categories.flatMap(c => demos.demos.filter(d => d.category === c.key));
-      this.setState({ data: { pages: pages.pages, detail, cats: demos.categories, demos: ordered } }, () => this.onRoute());
+      this.setState({ data: { pages: pages.pages, detail, tools: tools.tools, toolDetail, cats: demos.categories, demos: ordered } }, () => this.onRoute());
     } catch (e) { this.setState({ bootErr: e.message }); }
   }
 
@@ -135,6 +147,8 @@ class Library {
     url.pathname = siteURL(route);
     if (url.href !== location.href) history.replaceState(null, '', url);
     const s = route.split('/').filter(Boolean).map(decodeURIComponent);
+    if (s[0] === 'tools') return {name:'tools'};
+    if (s[0] === 't' && s[1]) return {name:'tool',slug:s[1]};
     if (s[0] === 'p' && s[1]) return {name: 'project', slug: s[1]};
     if (s[0] === 'demos') return {name: 'demos', id: s[1] || null};
     if (s[0] === 'source' && s[1]) return {name: 'source', slug: s[1], path: s.slice(1).join('/')};
@@ -340,18 +354,20 @@ class Library {
     const order = ['auto', 'light', 'dark'];
     const out = {
       t, brand: s.w < 520 ? 'Three.js Games' : 'Awesome Three.js Games',
-      goHome: this.nav('/'), goDemos: this.nav('/demos'),
+      goHome: this.nav('/'), goTools: this.nav('/tools'), goDemos: this.nav('/demos'),
       navProjC: r.name === 'home' || r.name === 'project' || r.name === 'source' ? 'var(--ink)' : 'var(--ink2)',
       navDemoC: r.name === 'demos' ? 'var(--ink)' : 'var(--ink2)',
-      navProjCur: r.name === 'home' ? 'page' : undefined, navDemoCur: r.name === 'demos' ? 'page' : undefined,
+      navProjCur: ['home','project','source'].includes(r.name) ? 'page' : undefined, navDemoCur: r.name === 'demos' ? 'page' : undefined,
+      navToolC: ['tools','tool'].includes(r.name) ? 'var(--ink)' : 'var(--ink2)',
+      navToolCur: ['tools','tool'].includes(r.name) ? 'page' : undefined,
       langLabel: s.lang === 'zh' ? 'EN' : '中', langTitle: s.lang === 'zh' ? 'Switch to English' : '切换到中文', toggleLang: setLang(s.lang === 'zh' ? 'en' : 'zh'),
       fullscreen: () => this.frameEl?.requestFullscreen?.().catch(() => {}),
       frameRef: this.frameRef,
       themeLabel: `${s.themePref === 'auto' ? '◐' : s.themePref === 'light' ? '○' : '●'} ${t[s.themePref]}`, themeTitle: t.appearance,
       cycleTheme: () => { const themePref = order[(order.indexOf(s.themePref) + 1) % 3]; try { localStorage.setItem('gameref-theme', themePref); } catch {} this.setState({ themePref }, () => this.applyTheme()); },
       isBooting: !data && !s.bootErr, bootError: !!s.bootErr, bootErrorMsg: s.bootErr || '', retryBoot: () => this.boot(),
-      isHome: !!data && r.name === 'home', isProject: !!data && r.name === 'project', isDemos: !!data && r.name === 'demos', isSource: !!data && r.name === 'source',
-      showFooter: !!data && (r.name === 'home' || r.name === 'project'),
+      isHome: !!data && r.name === 'home', isProject: !!data && ['project','tool'].includes(r.name), isTool: r.name === 'tool', isTools: !!data && r.name === 'tools', isDemos: !!data && r.name === 'demos', isSource: !!data && r.name === 'source',
+      showFooter: !!data && ['home','project','tools','tool'].includes(r.name),
       toast: s.toast, toastOp: s.toast ? 1 : 0, videoRef: this.videoRef, playerRef: this.playerRef,
       games: [], gridCols: s.w >= 1000 ? 'repeat(3,minmax(0,1fr))' : s.w >= 620 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)', homeSub: '',
       proj: { examples: [] }, player: {}, demo: {}, demoGroups: [], q: s.q, src: { rows: [], crumbs: [] }, viewer: this.viewerVals(),
@@ -369,12 +385,28 @@ class Library {
         badge: this.badge(p.runnability), note: this.loc(p.runnability, 'review_note') || '' };
     });
 
-    if (r.name === 'project') {
-      const p = data.pages.find(x => x.slug === r.slug), d = data.detail[r.slug];
+    out.toolsSub = this.t(data.tools.length === 1 ? 'toolsSubOne' : 'toolsSub',{n:data.tools.length});
+    out.wideTools = data.tools.length < 3;
+    out.tools = data.tools.map(p => ({...p,tagline:this.loc(p,'tagline'),
+      facts:p.facts.map(f=>f[s.lang]).join(' · '),img:siteURL(`/previews/${p.slug}.webp`),
+      video:p.overview_video?.url,href:`#/t/${p.slug}`,open:this.nav(`/t/${p.slug}`)}));
+    if (['tools','tool'].includes(r.name)) t.footer = t.toolFooter;
+    if (['project','tool'].includes(r.name)) {
+      const tool = r.name === 'tool';
+      const p = (tool ? data.tools : data.pages).find(x => x.slug === r.slug), d = (tool ? data.toolDetail : data.detail)[r.slug];
       if (!p || !d) { out.isProject = false; out.isHome = true; return out; }
       const exs = d.examples || [];
-      out.proj = { title: d.title, tagline: this.loc(d, 'tagline'), play: d.project?.launch?.url || '#', launch: this.play('game:' + r.slug), gh: d.source_url,
-        srcHref: `#/source/${r.slug}`, openSource: this.nav(`/source/${r.slug}`), video: d.overview_video?.url, poster: siteURL(`/previews/${r.slug}.webp`),
+      out.backHref = tool ? '#/tools' : '#/';
+      out.goBack = tool ? out.goTools : out.goHome;
+      out.backLabel = tool ? t.allTools : t.allProjects;
+      out.primaryLabel = tool ? t.openTool : t.playGame;
+      out.secondaryLabel = tool ? t.terms : t.browseSource;
+      out.examplesSubtitle = tool ? t.toolExamplesSub : t.examplesSub;
+      out.showExamples = !tool || exs.length > 0;
+      out.tool = tool ? {...d,features:d.features.map(f=>({title:this.loc(f,'title'),desc:this.loc(f,'desc')})),
+        steps:d.steps.map(f=>f[s.lang]),can:d.can.map(f=>f[s.lang]).join(' '),cannot:d.cannot.map(f=>f[s.lang]).join(' ')} : null;
+      out.proj = { title: d.title, tagline: this.loc(d, 'tagline'), play: tool ? d.url : d.project?.launch?.url || '#', launch: tool ? undefined : this.play('game:' + r.slug), gh: d.source_url,
+        srcHref: tool ? d.terms_url : `#/source/${r.slug}`, openSource: tool ? undefined : this.nav(`/source/${r.slug}`), video: d.overview_video?.url, poster: siteURL(`/previews/${r.slug}.webp`),
         badge: this.badge(p.runnability), note: this.loc(p.runnability, 'review_note') || '', hasExamples: exs.length > 0, noExamples: !exs.length,
         examples: exs.map((ex, i) => {
           const running = s.runEx === ex.id;

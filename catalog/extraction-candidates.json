@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated_at": "2026-09-26",
   "scope": "15 references; source inspection and proposed extractions, not newly verified reusable packages",
-  "candidate_count": 62,
+  "candidate_count": 66,
   "priorities": {
     "P0": "First extraction wave: bounded contracts and high reuse value",
     "P1": "Second wave: retain fixture and integration dependencies",
@@ -1842,6 +1842,220 @@
       "proposed_verification": "Regenerate into a separate output, compare bounds/pivots/material slots and runtime silhouette; never overwrite hand-edited originals.",
       "priority": "P1",
       "extraction_verified": false
+    },
+    {
+      "id": "threejs-punk.engine-audio",
+      "project": "threejs-punk",
+      "title": "Threejs-Punk · Engine audio",
+      "category": [
+        "vehicle"
+      ],
+      "stage": "extracted",
+      "source_refs": [
+        {
+          "path": "examples/punk-engine-audio/original/assets/engineSampler.worklet-CiauAed6.js",
+          "sha256": "9e3c666e713e52c34598ed487a3b38af77932a5b81bdc941105422e9b9909035"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/assets/engineSynth.worklet-tkiTUezc.js",
+          "sha256": "6af52b575a99e49fc04af9a3cce55e6997af4385f5b7d4c13cd1d96894bd2060"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/engine/v8.json",
+          "sha256": "cc69c92533de85c4976948ce736dca883f6486c4920933c12b63f0b3a660800b"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/engine/v8.wav",
+          "sha256": "6aeeadfb28d5d50f622789b0953bf489e00aac63a3299200975deb297f0d7b91"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/nitro-turbo.mp3",
+          "sha256": "f0cdab565f6a95a69b214bc517356cf8ba79d5cccb7af61723994a3379af3246"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/tire-squeal.wav",
+          "sha256": "f6622da6342468cf4730cb7bd7b17782c5b64afa3fae9e3ec131c94e797781c6"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/turbo/releases.json",
+          "sha256": "fe81a2d3006bda29890040f9e5b12fdb483c698fb249d0442fd0d61e5bb4e2f1"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/turbo/releases.wav",
+          "sha256": "547f71b1c73aa603e22668fc7718937178de5fc14fe8171869929389c0e0a272"
+        }
+      ],
+      "observed_mechanism": "Unchanged sampled and procedural V8 AudioWorklets with original audio banks in a standalone RPM, throttle and gear host. Includes limiter cuts, turbo release on lift and an automatic six-gear sweep.",
+      "proposed_boundary": "Host-authored acceleration/coasting fixture, not full vehicle physics. Original parameter protocol, smoothing, engine EQ/gain and Quadra constants are retained. Turbo plays original takes with a host envelope; full procedural flutter/body/whistle/echo, positional acoustics, nitro, tires and other game layers are omitted. Related nitro/tire source assets are pinned but unused. Worklets expose no layer weights. Browser checks prove signal/parameter changes, not subjective full-game audio parity. No blanket upstream reuse license is claimed.",
+      "dependencies": [
+        "Browser ES modules and Web Audio AudioWorklet (localhost or HTTPS)",
+        "Original engineSampler and engineSynth worklets, V8 recording and pitch map, turbo release bank",
+        "User gesture to start audio; no Three.js, build step or external requests"
+      ],
+      "proposed_verification": "node --test examples/punk-engine-audio/*.test.mjs && python3 examples/punk-engine-audio/test_browser.py",
+      "priority": "P1",
+      "extraction_verified": true
+    },
+    {
+      "id": "tupi.forest-impostors",
+      "project": "tupi",
+      "title": "Tupi · Forest impostors",
+      "category": [
+        "rendering",
+        "world"
+      ],
+      "stage": "extracted",
+      "source_refs": [
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/OrbitControls-DnFMDpyt.js",
+          "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/environment-DsRXgLng.js",
+          "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/forest-ehp2HefA.js",
+          "sha256": "6c4c64a5f64aa0c763a7630be8c7d47a2fd39739bab1fdc3315ba222ffa76189"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/layout-n7oYTSht.js",
+          "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/meshopt_decoder.module-DaPnEMPd.js",
+          "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/species-DQm89Ox5.js",
+          "sha256": "834c80dbff15ff0835a88ba61b229559c2b8a5491f0d03fe38e926b8565d3605"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/three.core-CKagcDpn.js",
+          "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/three.tsl-Cx8kD8RS.js",
+          "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+        }
+      ],
+      "observed_mechanism": "Unchanged original forest builder plus a labelled 120-tree comparison grove using original species helpers, scanned meshes and flora atlases. Cards/full meshes, host-controlled automatic LOD, draw distance and renderer counts. Unchanged environment module supplies the sun, sky environment and mist; calibrated host diffuse fill keeps the isolated canopy legible.",
+      "proposed_boundary": "The original forest has fixed path-distance bands and no runtime full-mesh toggle. That selector and the 180-unit camera-distance LOD apply only to the comparison grove. Original forest view disables the selector. Optional species-model streaming is skipped with nospecies; original scans, atlases and procedural special species remain. Uses built-in terrain-height fallback and flat ground. Original environment starts at the forest chapter (104 seconds), with host diffuse fill instead of film automatic exposure; not pixel-identical full-film lighting.",
+      "dependencies": [
+        "WebGPU-capable browser on localhost or HTTPS",
+        "Original Three.js core, WebGPU and TSL chunks plus OrbitControls",
+        "Byte-identical archived Tupi module closure and required assets",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "proposed_verification": "node --test examples/tupi-forest-impostors/*.test.mjs && python3 examples/tupi-forest-impostors/test_browser.py",
+      "priority": "P1",
+      "extraction_verified": true
+    },
+    {
+      "id": "tupi.paddling-fleet",
+      "project": "tupi",
+      "title": "Tupi · Paddling fleet",
+      "category": [
+        "vehicle",
+        "animation"
+      ],
+      "stage": "extracted",
+      "source_refs": [
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/OrbitControls-DnFMDpyt.js",
+          "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/cache-B9YKTUCP.js",
+          "sha256": "b82ad32500df7eb8cdd652bd49fc964925fdb44b7f74fc0037652e6f2579079b"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/canoe-s8Ju-0Hu.js",
+          "sha256": "e083495d50abfcf1f718bc3676037397aa058aa9816c2dc666cc7541734d7358"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/fleet-CmCdPN8d.js",
+          "sha256": "d94a93cb7eafa819ede487e33e85a10afaf8a6d2a3c2e75f7b95a90b49921365"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/layout-n7oYTSht.js",
+          "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/meshopt_decoder.module-DaPnEMPd.js",
+          "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/paddling-p-iGeLm8.js",
+          "sha256": "8b5459ac105b9c0f63e75e4545cc771e403d039a7a3f2a461a02d8ad620fac2c"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/three.core-CKagcDpn.js",
+          "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+        }
+      ],
+      "observed_mechanism": "Original fleet, paddling and canoe modules with archived crew models and baked shapes. Time scaling, 1/3/6/12 canoes, camera presets and orbit controls.",
+      "proposed_boundary": "Stroke speed scales the entire original animation clock, including movement and wakes. Count changes reload and reset time. Original small crew phase offsets remain. Uses the fleet module standalone water fallback, host ambient fill and lighter water material; no full river or film environment. Original v4 rig may warn about a 2.2 cm hand-to-paddle gap.",
+      "dependencies": [
+        "WebGPU-capable browser on localhost or HTTPS",
+        "Original Three.js core, WebGPU and TSL chunks plus OrbitControls",
+        "Byte-identical archived Tupi module closure and required assets",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "proposed_verification": "node --test examples/tupi-paddling-fleet/*.test.mjs && python3 examples/tupi-paddling-fleet/test_browser.py",
+      "priority": "P1",
+      "extraction_verified": true
+    },
+    {
+      "id": "tupi.rain-river",
+      "project": "tupi",
+      "title": "Tupi · Rain river",
+      "category": [
+        "water",
+        "effects"
+      ],
+      "stage": "extracted",
+      "source_refs": [
+        {
+          "path": "examples/tupi-rain-river/original/assets/OrbitControls-DnFMDpyt.js",
+          "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/environment-DsRXgLng.js",
+          "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/layout-n7oYTSht.js",
+          "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/three.core-CKagcDpn.js",
+          "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/three.tsl-Cx8kD8RS.js",
+          "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/three.webgpu-DTZfZZb9.js",
+          "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/water-Ct6j_3H2.js",
+          "sha256": "746559db032e4bb2801d83a33afb5eb72ace9650bbdf253c3c185f96ea14a3bf"
+        }
+      ],
+      "observed_mechanism": "Original Tupi water and atmosphere modules running unchanged with rain intensity, mist, light-phase controls and an orbit camera.",
+      "proposed_boundary": "Host bank silhouettes supply scale and reflection contrast. No original terrain, forest, fleet, audio or post-processing. The distant cinematic rain curtain is hidden; nearby rain, ripples, sky and fog use the original shaders.",
+      "dependencies": [
+        "WebGPU-capable browser on localhost or HTTPS",
+        "Original Three.js core, WebGPU and TSL chunks plus OrbitControls",
+        "Byte-identical archived Tupi module closure and required assets",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "proposed_verification": "node --test examples/tupi-rain-river/*.test.mjs && python3 examples/tupi-rain-river/test_browser.py",
+      "priority": "P1",
+      "extraction_verified": true
     }
   ]
 }

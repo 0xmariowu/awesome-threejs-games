@@ -474,6 +474,54 @@
       "parity": "not-certified",
       "status": "local-playthrough-verified",
       "audit": "output/playthrough/antikythera/"
+    },
+    {
+      "slug": "threejs-punk",
+      "title": "Threejs-Punk Drive",
+      "source": "https://www.threejspunk.com/",
+      "port": 8105,
+      "entry": "/index.html",
+      "source_type": "deployed-bundles",
+      "stack": [
+        "Three.js WebGPU / TSL",
+        "Rapier vehicle physics",
+        "Procedural city and authored vehicle assets",
+        "Web Audio engine worklets and radio",
+        "DOM menus and HUD"
+      ],
+      "files": 121,
+      "bytes": 118324576,
+      "readme": "threejs-punk/README.md",
+      "technical": "threejs-punk/TECHNICAL.md",
+      "limitations": "Original captured runtime is unchanged. Driving and menus run locally, but the achievements panel requests uncaptured models/game/sigils/*.svg images (404). Headless desktop pointer lock is unavailable; walking uses native Chrome touch emulation and keyboard input. Campaign completion, all unlocks and physical touch devices are not certified.",
+      "license_note": "No license is stated in the captured deployment. Archived with credit to Anderson Mancini and Sunag for study; rights remain with the original authors. Preserve included vendor and asset notices.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "audit": "output/playthrough/threejs-punk/"
+    },
+    {
+      "slug": "tupi",
+      "title": "Tupi",
+      "source": "https://www.rubenmarcus.dev/demos/tupi/",
+      "port": 8106,
+      "entry": "/demos/tupi/index.html",
+      "source_type": "deployed-bundles",
+      "stack": [
+        "Three.js WebGPU / TSL",
+        "Authored 210-second cinematic camera",
+        "Instanced forest and animated canoe fleet",
+        "Rain ripples, river reflections and mist",
+        "Web Audio soundscape and historical captions"
+      ],
+      "files": 199,
+      "bytes": 49207900,
+      "readme": "tupi/README.md",
+      "technical": "tupi/TECHNICAL.md",
+      "limitations": "Original captured runtime is unchanged. The local /api/views visitor counter returns 405; this does not stop the live scene. Native 210-second cinematic and camera-control evidence is collected separately from visual review. Touch controls and fallback film playback are unverified.",
+      "license_note": "No license is stated in the captured deployment. Archived with credit to Ruben Marcus (@rubenmarcus_dev) for study; rights remain with the original authors. Preserve included vendor and asset notices.",
+      "parity": "not-certified",
+      "status": "local-runtime-captured",
+      "audit": "output/playthrough/tupi/"
     }
   ]
 }

@@ -1,0 +1,402 @@
+{
+ "version": 2,
+ "species": [
+  {
+   "id": "jucara",
+   "lods": [
+    {
+     "file": "jucara_lod0.gltf",
+     "tris": 10512,
+     "files": [
+      "jucara_lod0.gltf",
+      "jucara_lod0.bin",
+      "jucara_jucaraleaf_n.webp",
+      "jucara_jucaraleaf_c.webp",
+      "jucara_jucarawood_n.webp",
+      "jucara_jucarawood_c.webp"
+     ],
+     "bytes": 483345
+    },
+    {
+     "file": "jucara_lod1.gltf",
+     "tris": 696,
+     "files": [
+      "jucara_lod1.gltf",
+      "jucara_lod1.bin",
+      "jucara_jucaraleaf_n.webp",
+      "jucara_jucaraleaf_c.webp",
+      "jucara_jucarawood_n.webp",
+      "jucara_jucarawood_c.webp"
+     ],
+     "bytes": 165825
+    }
+   ],
+   "lodDistances": [
+    45,
+    220
+   ],
+   "impostor": {
+    "cells": 3,
+    "cellPx": 341,
+    "width": 15.089798303246498,
+    "height": 15.089798303246498,
+    "bottom": -0.05404482036828995,
+    "views": 8,
+    "top": 8,
+    "azimuth0": "glTF +Z (camera on +Z looking at -Z)",
+    "azimuthStepDeg": 45,
+    "color": "jucara_imp_color.webp",
+    "normal": "jucara_imp_normal.webp",
+    "bytes": 136004
+   },
+   "height": 14.1,
+   "stipeHeight": 11,
+   "crownRadius": 3,
+   "windAmp": 0.12,
+   "translucency": 0.25,
+   "kind": "palm",
+   "name": "Palmito-ju\u00e7ara (Euterpe edulis)",
+   "source": "blender-procedural (Mint mesh rejected; Mint preview used as reference)",
+   "mint": "https://mint.gg/chat/ph70zh044ce34j9c47vgy3w0ex8f2bc1",
+   "bytes": 650946,
+   "priority": "critical"
+  },
+  {
+   "id": "jeriva",
+   "lods": [
+    {
+     "file": "jeriva_lod0.gltf",
+     "tris": 12160,
+     "files": [
+      "jeriva_lod0.gltf",
+      "jeriva_lod0.bin",
+      "jeriva_jerivaleaf_n.webp",
+      "jeriva_jerivaleaf_c.webp",
+      "jeriva_jerivawood_n.webp",
+      "jeriva_jerivawood_c.webp"
+     ],
+     "bytes": 494609
+    },
+    {
+     "file": "jeriva_lod1.gltf",
+     "tris": 888,
+     "files": [
+      "jeriva_lod1.gltf",
+      "jeriva_lod1.bin",
+      "jeriva_jerivaleaf_n.webp",
+      "jeriva_jerivaleaf_c.webp",
+      "jeriva_jerivawood_n.webp",
+      "jeriva_jerivawood_c.webp"
+     ],
+     "bytes": 147212
+    }
+   ],
+   "lodDistances": [
+    45,
+    220
+   ],
+   "impostor": {
+    "cells": 3,
+    "cellPx": 341,
+    "width": 12.703711193278432,
+    "height": 12.703711193278432,
+    "bottom": -0.005478811450302601,
+    "views": 8,
+    "top": 8,
+    "azimuth0": "glTF +Z (camera on +Z looking at -Z)",
+    "azimuthStepDeg": 45,
+    "color": "jeriva_imp_color.webp",
+    "normal": "jeriva_imp_normal.webp",
+    "bytes": 267848
+   },
+   "height": 11.3,
+   "stipeHeight": 9,
+   "crownRadius": 3,
+   "windAmp": 0.12,
+   "translucency": 0.25,
+   "kind": "palm",
+   "name": "Jeriv\u00e1 (Syagrus romanzoffiana)",
+   "source": "blender-procedural",
+   "bytes": 801859,
+   "priority": "critical"
+  },
+  {
+   "id": "embauba",
+   "lods": [
+    {
+     "file": "embauba_lod0.gltf",
+     "tris": 9750,
+     "files": [
+      "embauba_lod0.gltf",
+      "embauba_lod0.bin",
+      "embauba_embaubalea_n.webp",
+      "embauba_embaubalea_c.webp",
+      "embauba_normalgl84_n.webp",
+      "embauba_color844d0_c.webp"
+     ],
+     "bytes": 389769
+    },
+    {
+     "file": "embauba_lod1.gltf",
+     "tris": 1283,
+     "files": [
+      "embauba_lod1.gltf",
+      "embauba_lod1.bin",
+      "embauba_embaubalea_n.webp",
+      "embauba_embaubalea_c.webp",
+      "embauba_normalgl84_n.webp",
+      "embauba_color844d0_c.webp"
+     ],
+     "bytes": 240060
+    }
+   ],
+   "lodDistances": [
+    60,
+    260
+   ],
+   "impostor": {
+    "cells": 3,
+    "cellPx": 341,
+    "width": 13.947570792883635,
+    "height": 13.947570792883635,
+    "bottom": 0.016455071046948433,
+    "views": 8,
+    "top": 8,
+    "azimuth0": "glTF +Z (camera on +Z looking at -Z)",
+    "azimuthStepDeg": 45,
+    "color": "embauba_imp_color.webp",
+    "normal": "embauba_imp_normal.webp",
+    "bytes": 383542
+   },
+   "height": 13,
+   "windAmp": 0.07,
+   "translucency": 0.15,
+   "silverBack": true,
+   "kind": "tree",
+   "name": "Emba\u00faba (Cecropia pachystachya)",
+   "source": "mint wood + blender card crown",
+   "mint": "https://mint.gg/chat/ph71z4pctq5ew22g2gd5fehrkd8f3dv3",
+   "bytes": 825377,
+   "priority": "critical"
+  },
+  {
+   "id": "ipe",
+   "lods": [
+    {
+     "file": "ipe_lod0.gltf",
+     "tris": 12332,
+     "files": [
+      "ipe_lod0.gltf",
+      "ipe_lod0.bin",
+      "ipe_ipeleafn_n.webp",
+      "ipe_ipeleaf_c.webp",
+      "ipe_normalgla4_n.webp",
+      "ipe_colora4a8e_c.webp"
+     ],
+     "bytes": 600204
+    },
+    {
+     "file": "ipe_lod1.gltf",
+     "tris": 2386,
+     "files": [
+      "ipe_lod1.gltf",
+      "ipe_lod1.bin",
+      "ipe_ipeleafn_n.webp",
+      "ipe_ipeleaf_c.webp",
+      "ipe_normalgla4_n.webp",
+      "ipe_colora4a8e_c.webp"
+     ],
+     "bytes": 426469
+    }
+   ],
+   "lodDistances": [
+    60,
+    260
+   ],
+   "impostor": {
+    "cells": 3,
+    "cellPx": 341,
+    "width": 18.633563134483992,
+    "height": 18.633563134483992,
+    "bottom": 0.004121434409171343,
+    "views": 8,
+    "top": 8,
+    "azimuth0": "glTF +Z (camera on +Z looking at -Z)",
+    "azimuthStepDeg": 45,
+    "color": "ipe_imp_color.webp",
+    "normal": "ipe_imp_normal.webp",
+    "bytes": 607978
+   },
+   "height": 17,
+   "windAmp": 0.05,
+   "translucency": 0.35,
+   "silverBack": false,
+   "kind": "tree",
+   "name": "Ip\u00ea-amarelo in bloom (Handroanthus)",
+   "source": "mint wood + blender flower-card crown",
+   "mint": "https://mint.gg/chat/ph79es5mn08t89wg79bd9aj1x98f2fxq",
+   "bytes": 1310461,
+   "priority": "critical",
+   "bloomTint": {
+    "amarelo": "#ffd21f",
+    "roxo": "#8a78f0",
+    "note": "optional: leafMaterial(map,{bloom:true}) on flower_* + InstancedMesh.setColorAt(tint) turns the same asset into ip\u00ea-roxo; without bloom the atlas is already yellow"
+   }
+  },
+  {
+   "id": "figueira",
+   "lods": [
+    {
+     "file": "figueira_lod0.gltf",
+     "tris": 11104,
+     "files": [
+      "figueira_lod0.gltf",
+      "figueira_lod0.bin",
+      "figueira_figueirale_n.webp",
+      "figueira_figueirale_c.webp",
+      "figueira_normalgl5b_n.webp",
+      "figueira_color5b86f_c.webp"
+     ],
+     "bytes": 478816
+    },
+    {
+     "file": "figueira_lod1.gltf",
+     "tris": 3188,
+     "files": [
+      "figueira_lod1.gltf",
+      "figueira_lod1.bin",
+      "figueira_figueirale_n.webp",
+      "figueira_figueirale_c.webp",
+      "figueira_normalgl5b_n.webp",
+      "figueira_color5b86f_c.webp"
+     ],
+     "bytes": 301488
+    }
+   ],
+   "lodDistances": [
+    60,
+    260
+   ],
+   "impostor": {
+    "cells": 3,
+    "cellPx": 341,
+    "width": 33.31677276611328,
+    "height": 33.31677276611328,
+    "bottom": -1.563374638557434,
+    "views": 8,
+    "top": 8,
+    "azimuth0": "glTF +Z (camera on +Z looking at -Z)",
+    "azimuthStepDeg": 45,
+    "color": "figueira_imp_color.webp",
+    "normal": "figueira_imp_normal.webp",
+    "bytes": 383190
+   },
+   "height": 24,
+   "windAmp": 0.05,
+   "translucency": 0.12,
+   "silverBack": false,
+   "kind": "tree",
+   "name": "Figueira (Ficus) with buttresses + aerial roots",
+   "source": "mint wood + blender card crown",
+   "mint": "https://mint.gg/chat/ph7b606v3qaa1w8rqx29j56j798f29z0",
+   "bytes": 996738,
+   "priority": "critical"
+  },
+  {
+   "id": "aninga",
+   "lods": [
+    {
+     "file": "aninga_lod0.gltf",
+     "tris": 13720,
+     "files": [
+      "aninga_lod0.gltf",
+      "aninga_lod0.bin",
+      "aninga_normalgl9d_n.webp",
+      "aninga_color9daf1_c.webp"
+     ],
+     "bytes": 364318
+    },
+    {
+     "file": "aninga_lod1.gltf",
+     "tris": 2438,
+     "files": [
+      "aninga_lod1.gltf",
+      "aninga_lod1.bin",
+      "aninga_normalgl9d_n.webp",
+      "aninga_color9daf1_c.webp"
+     ],
+     "bytes": 126568
+    }
+   ],
+   "lodDistances": [
+    30,
+    120
+   ],
+   "impostor": null,
+   "height": 2.79,
+   "width": 2.53,
+   "windAmp": 0.05,
+   "kind": "solid",
+   "name": "Aninga (Montrichardia arborescens)",
+   "source": "mint+blender",
+   "mint": "https://mint.gg/chat/ph797sxmnshjcjb42xj99cbeq58f2f5p",
+   "bytes": 478464,
+   "priority": "optional"
+  },
+  {
+   "id": "caete",
+   "lods": [
+    {
+     "file": "caete_lod0.gltf",
+     "tris": 13720,
+     "files": [
+      "caete_lod0.gltf",
+      "caete_lod0.bin",
+      "caete_normalgl9d_n.webp",
+      "caete_color9d50a_c.webp"
+     ],
+     "bytes": 335091
+    },
+    {
+     "file": "caete_lod1.gltf",
+     "tris": 2446,
+     "files": [
+      "caete_lod1.gltf",
+      "caete_lod1.bin",
+      "caete_normalgl9d_n.webp",
+      "caete_color9d50a_c.webp"
+     ],
+     "bytes": 141482
+    }
+   ],
+   "lodDistances": [
+    30,
+    120
+   ],
+   "impostor": null,
+   "height": 2.39,
+   "width": 2.35,
+   "windAmp": 0.06,
+   "kind": "solid",
+   "name": "Caet\u00e9 / Heliconia",
+   "source": "mint+blender",
+   "mint": "https://mint.gg/chat/ph73h7t75f4tk7gpjwpmfzj0v98f3n8b",
+   "bytes": 437781,
+   "priority": "optional"
+  }
+ ],
+ "conventions": {
+  "units": "metres, glTF Y-up, origin at the base centre (y=0 on the ground/waterline); scale per instance for size variety (height is the unscaled asset height)",
+  "materials": "material name prefix = role: leaf_* / flower_* = alpha cards (use flora leafMaterial(map) with map.userData.normalMap = normalMap); wood_* = trunk/stipe/stems (opaque, textured, single-sided); solid_* = opaque leaves modelled as geometry (double-sided, textured); body_* = fauna (opaque)",
+  "attribute": "_FLORA (vec2, GLTFLoader exposes it as geometry.attributes._flora): x = wind sway weight 0 base -> 1 tips, y = exposure/AO 0 inside -> 1 outer shell; same semantics as GeoBuilder flora. geometry.setAttribute(\"flora\", geometry.attributes._flora)",
+  "windAmp": "metres of sway at weight 1 (pass as leafMaterial amp / windPosition(amp) for ALL materials of the species so leaves and wood move together)",
+  "lodDistances": "[lod0->lod1, lod1->impostor] metres from the camera route; fauna/solids without impostor: cull beyond the second value",
+  "impostor": "3x3 atlas: colour 1024^2 (cellPx 341), normal 512^2 same layout. cells 0-7 = side views, camera at azimuth k*45deg about +Y starting at +Z (camera on +Z looking toward -Z), increasing toward +X; cell 8 = top. Row 0 of the image = cells 0,1,2. Colour = unlit albedo x baked exposure (sRGB) + alpha; normal = object-space normal*0.5+0.5 (linear). Quad width x height metres, bottom edge at y=bottom. aninga/caete/bromelia/fauna have none: cull beyond lodDistances[1]",
+  "compression": "EXT_meshopt_compression (GLTFLoader.setMeshoptDecoder), WebP textures; normals/uvs quantized, positions float (quantized positions need a node dequant transform that breaks the metre-based wind and geometry extraction into InstancedMesh)",
+  "fauna": "forward = +Z; static meshes (no rig)",
+  "files": "each LOD = <id>_lodN.gltf + .bin + EXTERNAL .webp textures shared by both LODs (load with GLTFLoader as usual; the browser fetches each texture once). lods[i].files lists everything; species.bytes = all files of the species",
+  "priority": "critical = load before first frame (palms, trees); optional = stream after first frame (bromelia, aninga, caete, jacare, garca)"
+ },
+ "totalBytes": 6678457,
+ "criticalBytes": 4585381
+}

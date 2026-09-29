@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Record local game scenarios as timestamped CDP frames, video and WebVTT."""
+"""Record local game and tool scenarios as timestamped CDP frames, video and WebVTT."""
 
 import argparse
 import asyncio
@@ -99,6 +99,12 @@ def validate(shots, slug, root):
     candidates = json.loads((root / 'catalog/extraction-candidates.json').read_text(
         encoding='utf-8'))['candidates']
     ids = {item['id'] for item in candidates if item['project'] == slug}
+    # Tools use the same local capture pipeline, but publish only an overview.
+    tool_catalog = root / 'catalog/tools.json'
+    if tool_catalog.exists():
+        tools = json.loads(tool_catalog.read_text(encoding='utf-8'))['tools']
+        if any(tool['slug'] == slug for tool in tools) and set(shots) != {'overview'}:
+            errors.append('Tools must record only an overview shot')
     overview = shots.get('overview')
     if not isinstance(overview, Shot) or overview.module is not None:
         errors.append('An overview shot with module=None is required')

@@ -1,6 +1,7 @@
 import { readFile, writeFile, realpath } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { loadTools } from './tools.mjs';
 import { loadPages } from './pages.mjs';
 import { loadDemos } from './demos.mjs';
 
@@ -19,6 +20,7 @@ const copy = {
   en: {
     switch: '**English** · [简体中文](README.zh-CN.md)',
     intro: count => `${count} playable web games with their full source and runnable technique demos.`,
+    tools: 'Tools', openTool: 'Open tool ↗', terms: 'Terms',
     site: 'Live site', demos: 'Demos', games: 'Games', play: '▶ Play', source: 'Source',
     partial: 'Partly playable', techniques: 'Technique demos', liveDemos: 'Live demos',
     local: 'Run locally', library: 'Library', open: 'Open', game: 'One game',
@@ -30,6 +32,7 @@ const copy = {
   'zh-CN': {
     switch: '[English](README.md) · **简体中文**',
     intro: count => `${count} 个可玩的网页游戏，附完整源码和可运行的技术演示。`,
+    tools: '工具', openTool: '打开工具 ↗', terms: '使用条款',
     site: '在线网站', demos: '技术演示', games: '游戏', play: '▶ 体验游戏', source: '源码',
     partial: '部分能玩', techniques: '技术演示', liveDemos: '在线演示',
     local: '本地运行', library: '技术库', open: '打开', game: '单个游戏',
@@ -59,10 +62,10 @@ async function loadReadmeData(root) {
     category: [labCategories[scene.category] || scene.category],
   }));
   const demos = await loadDemos({ root, games, records });
-  return { games, pages, reviews: new Map(reviews.map(review => [review.slug, review])), ...demos };
+  return { games, pages, tools:await loadTools(root), reviews: new Map(reviews.map(review => [review.slug, review])), ...demos };
 }
 
-function renderReadme({ games, pages, reviews, categories, demos }, language) {
+function renderReadme({ games, pages, tools, reviews, categories, demos }, language) {
   const words = copy[language];
   if (!words) throw new Error(`Unsupported README language: ${language}`);
   const localized = (row, field) => {
@@ -89,6 +92,11 @@ function renderReadme({ games, pages, reviews, categories, demos }, language) {
   for (let i = 0; i < cards.length; i += 2) {
     rows.push('<tr>', cards[i], cards[i + 1] || '  <td width="50%"></td>', '</tr>');
   }
+  const toolCards = tools.flatMap(tool => [
+    `<a href="${SITE}t/${tool.slug}"><img src="previews/${tool.slug}.webp" width="400" alt="${escapeHtml(tool.title)}"></a>`, '',
+    `**${escapeHtml(tool.title)}** — ${escapeHtml(localized(tool,'tagline'))}`, '',
+    `${link(words.openTool,tool.url)} · ${link(words.terms,tool.terms_url)}`, '',
+  ]);
   const demoLists = categories.map(category => {
     const entries = demos.filter(demo => demo.category === category.key).map(demo => {
       const source = demo.kind === 'lab'
@@ -115,12 +123,13 @@ function renderReadme({ games, pages, reviews, categories, demos }, language) {
     `<p>${link(words.site, SITE)} · ${link(words.demos, `${SITE}demos`)}</p>`,
     '</div>', '',
     `## ${words.games}`, '', '<table>', ...rows, '</table>', '',
+    `## ${words.tools}`, '', ...toolCards,
     `## ${words.techniques}`, '', ...demoLists, '',
     `## ${words.local}`, '',
     `- ${words.library}: \`node tools/library.mjs\``,
     `- ${words.open}: http://127.0.0.1:8080`,
     `- ${words.game}: \`node tools/server.mjs <slug>\``, '',
-    `## ${words.credits}`, '', ...credits, '',
+    `## ${words.credits}`, '', ...credits, ...tools.map(tool=>`- ${link(tool.title,tool.url)} — ${escapeHtml(language === 'en' ? tool.license_note : tool.license_note_zh)}`), '',
     `${words.assets} [webgame-lab/LICENSES.md](webgame-lab/LICENSES.md).`, '',
   ].join('\n');
 }

@@ -1822,6 +1822,748 @@
           "sha256": "05051b16f5f65fb1b27b5a96cafedbf23421e1e739255b2251630b10eff4afc7"
         }
       ]
+    },
+    {
+      "id": "botanic-meadow",
+      "project": "fab-botanic",
+      "title": "Botanical studies · A mixed wild field",
+      "scope": "Original seeded Poisson-disk rejection sampling with noise density, gaps, species affinity, five procedural species, GPU instancing and vertex-shader wind.",
+      "category": [
+        "world"
+      ],
+      "maturity": "independent-implementation",
+      "candidates": [],
+      "dependencies": [
+        "WebGL 2 and browser ES modules",
+        "Three.js r186 (MIT), copied from tracked antikythera/public/vendor/three with LICENSE",
+        "First-party shared UI helpers; no runtime network and no build step"
+      ],
+      "limitations": "Finite-budget rejection sampler, not maximal Poisson sampling. Stylized species without ecology, collision, export or terrain simulation. Wind normals are approximate. Plant count excludes pebbles; renderer triangle/draw-call statistics include the ground and shadow pass.",
+      "verify": "node --test examples/botanic-meadow/*.test.mjs && python3 examples/botanic-meadow/test_browser.py",
+      "files": [
+        {
+          "path": "examples/botanic-meadow/README.md",
+          "sha256": "34f2349ba07d19971270a6bbbaf0ace1c13dc531cb112c70b028ccd70fe22213"
+        },
+        {
+          "path": "examples/botanic-meadow/index.html",
+          "sha256": "c48a39275306f95d43732c37da71d9b0e9eca5fdbd2f9c9a7a4b0921bd8948e6"
+        },
+        {
+          "path": "examples/botanic-meadow/local.json",
+          "sha256": "6dcec336cbf18c172d0c511c99705a554614414dddcb9dd1547ead3d40830900"
+        },
+        {
+          "path": "examples/botanic-meadow/model.test.mjs",
+          "sha256": "6c709669991a969d36504e0da602c6d64fea338f104df7fddb83d2cdb27310b6"
+        },
+        {
+          "path": "examples/botanic-meadow/provenance.json",
+          "sha256": "e75d3d4acbefc4867046186abd480e4f175cdeec520f4ea730ef465b4a77d05f"
+        },
+        {
+          "path": "examples/botanic-meadow/provenance.test.mjs",
+          "sha256": "105dab8b1662b448ddb4b2b501bca09a28f6664d4f813a72a2598781e97070a8"
+        },
+        {
+          "path": "examples/botanic-meadow/src/geometry.js",
+          "sha256": "69f150fa0474fd563412bb5dc035aacf44caddfdc743490954bcf1c71c8bffb6"
+        },
+        {
+          "path": "examples/botanic-meadow/src/i18n.js",
+          "sha256": "03e85e9d642c62292e6349c954306eb2bec2c8c305c69ab0ae251b8c069b3db6"
+        },
+        {
+          "path": "examples/botanic-meadow/src/main.js",
+          "sha256": "0152d8a662a35ec18ff1cac243a56067f37c4bb88e6e7cf91b2db53afccea27d"
+        },
+        {
+          "path": "examples/botanic-meadow/src/model.mjs",
+          "sha256": "7f3255fd8f0f012e15dee293cb238ac407a4f43b39c1665a7bf4981e0e8d2131"
+        },
+        {
+          "path": "examples/botanic-meadow/src/studio.js",
+          "sha256": "b243f04f0618c7509bd172458abf695a57f5f694ff507c30b010b3cf9c4f5d37"
+        },
+        {
+          "path": "examples/botanic-meadow/src/style.css",
+          "sha256": "103fc7a4013221fbb18f0ff7d911f23ce50519d7c247eabb389863bf908b162d"
+        },
+        {
+          "path": "examples/botanic-meadow/src/ui.css",
+          "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+        },
+        {
+          "path": "examples/botanic-meadow/src/ui.js",
+          "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+        },
+        {
+          "path": "examples/botanic-meadow/test_browser.py",
+          "sha256": "0125514ff34b5e4d00eb3a0be0940de7d3395b858df0ecf1430b430d52cb8fe8"
+        },
+        {
+          "path": "examples/botanic-meadow/vendor/three/LICENSE",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        },
+        {
+          "path": "examples/botanic-meadow/vendor/three/build/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "path": "examples/botanic-meadow/vendor/three/build/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        }
+      ],
+      "port": 8135,
+      "evidence": [
+        "examples/botanic-meadow/provenance.json",
+        "/private/tmp/claude-501/-Users-vimala/5258cabc-626a-402d-b921-71f034ba10e0/scratchpad/shots/botanic-meadow.png",
+        "/private/tmp/claude-501/-Users-vimala/5258cabc-626a-402d-b921-71f034ba10e0/scratchpad/botanic-meadow-verify.txt"
+      ]
+    },
+    {
+      "id": "botanic-phyllotaxis",
+      "project": "fab-botanic",
+      "title": "Botanical studies · Leaf arrangements",
+      "scope": "Original leaf-node arrangements and a Vogel sunflower head, with angle comparison, count, spacing, taper, deterministic seed and top-down inspection.",
+      "category": [
+        "world"
+      ],
+      "maturity": "independent-implementation",
+      "candidates": [],
+      "dependencies": [
+        "WebGL 2 and browser ES modules",
+        "Three.js r186 (MIT), copied from tracked antikythera/public/vendor/three with LICENSE",
+        "First-party shared UI helpers; no runtime network and no build step"
+      ],
+      "limitations": "Stylized geometric study, not a biological growth model or FABOTANIC feature reproduction. Fixed arrangement modes lock divergence; seed-head mode disables internode spacing. Packing comparison is mean nearest-neighbour distance for the displayed finite Vogel disc.",
+      "verify": "node --test examples/botanic-phyllotaxis/*.test.mjs && python3 examples/botanic-phyllotaxis/test_browser.py",
+      "files": [
+        {
+          "path": "examples/botanic-phyllotaxis/README.md",
+          "sha256": "01df1ce3171ce57b1081c51cb469e26c651dd2dd5b3063350713b8337b3e4156"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/index.html",
+          "sha256": "ce4cf1ac97e5bc1d4c4669ebb60cbde88038578bbcdf163d484accf49c175ced"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/local.json",
+          "sha256": "257c06f4dab03241ff7000acbe0383fd76c14c0899c66658898bd6dd73723df6"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/model.test.mjs",
+          "sha256": "3daf69099836c9409200cc5749302fd599c4860981f5ac38dc66704b14103949"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/provenance.json",
+          "sha256": "a6cbebb7d2f31469ed5b09d9dd79d3b45fe607c4e61bf5517609289e6ca294a9"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/provenance.test.mjs",
+          "sha256": "105dab8b1662b448ddb4b2b501bca09a28f6664d4f813a72a2598781e97070a8"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/geometry.js",
+          "sha256": "117240f20ef3606986571b069577848e48764a3ec183efd2a17218485aee5566"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/i18n.js",
+          "sha256": "ae0629d8ae0db1fa622129889fd20e12b5028d6a86a338300c42244899c6a629"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/main.js",
+          "sha256": "d9f456f447d4889a3983c2cd740e974d1bc4c2b1c25dd80723d120ae9014e4ca"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/model.mjs",
+          "sha256": "8d284a41e8a0c5391ffe8209ed3a0a622ece9cb7d00beb44d24bc13367a0381f"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/studio.js",
+          "sha256": "b243f04f0618c7509bd172458abf695a57f5f694ff507c30b010b3cf9c4f5d37"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/style.css",
+          "sha256": "c0b07a3b1e013f409df2bd21f24dfea24b654292d703e63e1ac430e0c28e6ce4"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/ui.css",
+          "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/src/ui.js",
+          "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/test_browser.py",
+          "sha256": "18a7ac5a0b44002b4e170869f0c94e5f662d487120dcbf7b4b2ceda666339e61"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/vendor/three/LICENSE",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/vendor/three/build/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "path": "examples/botanic-phyllotaxis/vendor/three/build/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        }
+      ],
+      "port": 8134,
+      "evidence": [
+        "examples/botanic-phyllotaxis/provenance.json",
+        "/private/tmp/claude-501/-Users-vimala/5258cabc-626a-402d-b921-71f034ba10e0/scratchpad/shots/botanic-phyllotaxis.png",
+        "/private/tmp/claude-501/-Users-vimala/5258cabc-626a-402d-b921-71f034ba10e0/scratchpad/botanic-phyllotaxis-verify.txt"
+      ]
+    },
+    {
+      "id": "punk-engine-audio",
+      "project": "threejs-punk",
+      "title": "Threejs-Punk · Engine audio",
+      "scope": "Unchanged sampled and procedural V8 AudioWorklets with original audio banks in a standalone RPM, throttle and gear host. Includes limiter cuts, turbo release on lift and an automatic six-gear sweep.",
+      "category": [
+        "vehicle"
+      ],
+      "maturity": "extracted-verified",
+      "candidates": [],
+      "dependencies": [
+        "Browser ES modules and Web Audio AudioWorklet (localhost or HTTPS)",
+        "Original engineSampler and engineSynth worklets, V8 recording and pitch map, turbo release bank",
+        "User gesture to start audio; no Three.js, build step or external requests"
+      ],
+      "limitations": "Host-authored acceleration/coasting fixture, not full vehicle physics. Original parameter protocol, smoothing, engine EQ/gain and Quadra constants are retained. Turbo plays original takes with a host envelope; full procedural flutter/body/whistle/echo, positional acoustics, nitro, tires and other game layers are omitted. Related nitro/tire source assets are pinned but unused. Worklets expose no layer weights. Browser checks prove signal/parameter changes, not subjective full-game audio parity. No blanket upstream reuse license is claimed.",
+      "verify": "node --test examples/punk-engine-audio/*.test.mjs && python3 examples/punk-engine-audio/test_browser.py",
+      "files": [
+        {
+          "path": "examples/punk-engine-audio/README.md",
+          "sha256": "b4656a74b93437f46a4229fb0450ef7c67cbb5cf4036788ff002018424b5dbd6"
+        },
+        {
+          "path": "examples/punk-engine-audio/drive.test.mjs",
+          "sha256": "562cf62f17c5a01a5f9c8c365a6e3117dd1a3f8b94d8e1919282cb3dc174e7dd"
+        },
+        {
+          "path": "examples/punk-engine-audio/index.html",
+          "sha256": "5ed1e05d3af1a96b1d3bbc9aa6103dc2631605c9b975f69c0ab003c7f1303169"
+        },
+        {
+          "path": "examples/punk-engine-audio/local.json",
+          "sha256": "3bc261a8df0ad08b3a52da0536b42a4dcece0e5ca589032a50451ed52887d73c"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/assets/engineSampler.worklet-CiauAed6.js",
+          "sha256": "9e3c666e713e52c34598ed487a3b38af77932a5b81bdc941105422e9b9909035"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/assets/engineSynth.worklet-tkiTUezc.js",
+          "sha256": "6af52b575a99e49fc04af9a3cce55e6997af4385f5b7d4c13cd1d96894bd2060"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/engine/v8.json",
+          "sha256": "cc69c92533de85c4976948ce736dca883f6486c4920933c12b63f0b3a660800b"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/engine/v8.wav",
+          "sha256": "6aeeadfb28d5d50f622789b0953bf489e00aac63a3299200975deb297f0d7b91"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/nitro-turbo.mp3",
+          "sha256": "f0cdab565f6a95a69b214bc517356cf8ba79d5cccb7af61723994a3379af3246"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/tire-squeal.wav",
+          "sha256": "f6622da6342468cf4730cb7bd7b17782c5b64afa3fae9e3ec131c94e797781c6"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/turbo/releases.json",
+          "sha256": "fe81a2d3006bda29890040f9e5b12fdb483c698fb249d0442fd0d61e5bb4e2f1"
+        },
+        {
+          "path": "examples/punk-engine-audio/original/audio/turbo/releases.wav",
+          "sha256": "547f71b1c73aa603e22668fc7718937178de5fc14fe8171869929389c0e0a272"
+        },
+        {
+          "path": "examples/punk-engine-audio/provenance.json",
+          "sha256": "c2a1029889acc106062923da988cc0494e3a086bd154eac717e664b336322287"
+        },
+        {
+          "path": "examples/punk-engine-audio/provenance.test.mjs",
+          "sha256": "0510b71aa4aed4e43c2c6aff525e45002f327ad4e4ef6ac45830330a63b6ef65"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/audio.mjs",
+          "sha256": "5521dabe108f1831bcf278ef2b0b4e1282fb7fbec2f13a92564e1935f54306c4"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/drive.mjs",
+          "sha256": "c875d372ada7604e6c5ebfc06b8b8a2873677d78ce647ae06d6a8936b3535e71"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/host.mjs",
+          "sha256": "c8803c8e343e42b9edefa1c1a033af4d3f49cf0a5980ffb00a13b9d361b5c02b"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/i18n.js",
+          "sha256": "4e2ec837f4c528b82d3fd31df993364717dac2dd2b3aa30d14c0b057fa732302"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/style.css",
+          "sha256": "b18ba5924860146306af5d8e97b4111ff0cc83f6e7213960219119c35cbc26bd"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/ui.css",
+          "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+        },
+        {
+          "path": "examples/punk-engine-audio/src/ui.js",
+          "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+        },
+        {
+          "path": "examples/punk-engine-audio/test_browser.py",
+          "sha256": "06a9ab35904021015de90e10e8976115018b7078643b55b4bca8020df1397d69"
+        }
+      ],
+      "port": 8130
+    },
+    {
+      "id": "tupi-forest-impostors",
+      "project": "tupi",
+      "title": "Tupi · Forest impostors",
+      "scope": "Unchanged original forest builder plus a labelled 120-tree comparison grove using original species helpers, scanned meshes and flora atlases. Cards/full meshes, host-controlled automatic LOD, draw distance and renderer counts. Unchanged environment module supplies the sun, sky environment and mist; calibrated host diffuse fill keeps the isolated canopy legible.",
+      "category": [
+        "rendering",
+        "world"
+      ],
+      "maturity": "extracted-verified",
+      "candidates": [],
+      "dependencies": [
+        "WebGPU-capable browser on localhost or HTTPS",
+        "Original Three.js core, WebGPU and TSL chunks plus OrbitControls",
+        "Byte-identical archived Tupi module closure and required assets",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "limitations": "The original forest has fixed path-distance bands and no runtime full-mesh toggle. That selector and the 180-unit camera-distance LOD apply only to the comparison grove. Original forest view disables the selector. Optional species-model streaming is skipped with nospecies; original scans, atlases and procedural special species remain. Uses built-in terrain-height fallback and flat ground. Original environment starts at the forest chapter (104 seconds), with host diffuse fill instead of film automatic exposure; not pixel-identical full-film lighting.",
+      "verify": "node --test examples/tupi-forest-impostors/*.test.mjs && python3 examples/tupi-forest-impostors/test_browser.py",
+      "files": [
+        {
+          "path": "examples/tupi-forest-impostors/README.md",
+          "sha256": "67eb31ca40edb0267bede906bee79bcba35324f488eb34a13cdc6e9bbb9cc6a9"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/index.html",
+          "sha256": "007876fb69fe6f5ba28ef45ed72ffaff1984717d70406262737da49d75e40e73"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/local.json",
+          "sha256": "93a373e33e30f87bc8944f4de24d8b3ff7c4399898848e02cff7634be6289e07"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/OrbitControls-DnFMDpyt.js",
+          "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/environment-DsRXgLng.js",
+          "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/forest-ehp2HefA.js",
+          "sha256": "6c4c64a5f64aa0c763a7630be8c7d47a2fd39739bab1fdc3315ba222ffa76189"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/layout-n7oYTSht.js",
+          "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/meshopt_decoder.module-DaPnEMPd.js",
+          "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/species-DQm89Ox5.js",
+          "sha256": "834c80dbff15ff0835a88ba61b229559c2b8a5491f0d03fe38e926b8565d3605"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/three.core-CKagcDpn.js",
+          "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/three.tsl-Cx8kD8RS.js",
+          "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/assets/three.webgpu-DTZfZZb9.js",
+          "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/fern_02_b.glb",
+          "sha256": "964927cdf7203c84730ff0a7cf13c43a8e82ce5cbcd6bee6b18f92645542b912"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/flora_scans.json",
+          "sha256": "ea93c12a5a7758fc31e25b3de39d1bdfbe584d463b670b775b67263894ffc207"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/impostor.webp",
+          "sha256": "d6c22a45dccce728786b492d5bb98829ff94b1daf92e00f8b78a339b936060ca"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/impostor_n.webp",
+          "sha256": "f4b64b80146cd7710eac737c6ff707f3886fa7f5c4e2554ba2b65da33e1b910c"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_01_cards.json",
+          "sha256": "565079e2973d22c625165a787cab7a5da32bfec253727003124d5ddf3776c1cf"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_01_wood.glb",
+          "sha256": "4761095b2f675ae2aab9fa9d008cd15dd0bc909f26c0ff9ef15a9e5ae362009e"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_02_cards.json",
+          "sha256": "22504b1b5cf023b59060d93903a1189982f05fdbe2b95ffcc2e42f2c3342e176"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_02_wood.glb",
+          "sha256": "4df4efaebed22817be9b19438161265a2e5ae23407b5937229b4a106a88e122c"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_03_cards.json",
+          "sha256": "c34d1b547760ccdf73b86176238efd695cb5d291f4ec9cc9ba45f948fe0671fb"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_03_wood.glb",
+          "sha256": "5801577d929361e7c5d913317770c3c21af895ebab055c223cc31515231a0892"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/leaf_atlas.webp",
+          "sha256": "c7665be1b4ae76ea80dc94300f390fd25be188a98b7e7f6e8e61f7f4949c859d"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/leaf_atlas_n.webp",
+          "sha256": "3a81dbf5b3a17ca43e46cf326d8d5ea06b53c10427a2c1c2270ccaf3b2ef102a"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/root_cluster_01.glb",
+          "sha256": "2df98e869044eae5965a882d198227f3ccf1c5f91d34dcce6181017472f17279"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/original/models/flora/shrub_02_c.glb",
+          "sha256": "31a918cb2b5c1db70e434ae1e6db22930abc46d355d0033d6e7f56ce97d208ee"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/provenance.json",
+          "sha256": "c5cdd5835f105a7c0a76611c98cc58181d14cc104042b8bb0b14c5006eea2a45"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/provenance.test.mjs",
+          "sha256": "0a1e2080ea17d11762f9150366c6085a7dd7208052b5b30724e4ed9d8b5fe212"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/src/host.js",
+          "sha256": "e8095f72f97ff576d0301802fb4fe731e64cb12c7f3b95f1dc4b3e3353d24a6e"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/src/i18n.js",
+          "sha256": "f92e6f717e444e979f16fe2ede5bc3387afe15bb6298c3684925c4b67b40e8b5"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/src/main.js",
+          "sha256": "1e59efa327c12ffed36f246ef505618909f4e4fddd3b11b5c5a2dc1b4709cf9d"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/src/style.css",
+          "sha256": "34f9489f2086b4dccee31f24b212372ee57daa5942705f5661a4535ffe2f3d83"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/src/ui.css",
+          "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/src/ui.js",
+          "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+        },
+        {
+          "path": "examples/tupi-forest-impostors/test_browser.py",
+          "sha256": "9e4dc1cdd2274244cfadc91b87b88de04aa6f8b6350cf743c0434c4914727bc3"
+        }
+      ],
+      "port": 8133
+    },
+    {
+      "id": "tupi-paddling-fleet",
+      "project": "tupi",
+      "title": "Tupi · Paddling fleet",
+      "scope": "Original fleet, paddling and canoe modules with archived crew models and baked shapes. Time scaling, 1/3/6/12 canoes, camera presets and orbit controls.",
+      "category": [
+        "vehicle",
+        "animation"
+      ],
+      "maturity": "extracted-verified",
+      "candidates": [],
+      "dependencies": [
+        "WebGPU-capable browser on localhost or HTTPS",
+        "Original Three.js core, WebGPU and TSL chunks plus OrbitControls",
+        "Byte-identical archived Tupi module closure and required assets",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "limitations": "Stroke speed scales the entire original animation clock, including movement and wakes. Count changes reload and reset time. Original small crew phase offsets remain. Uses the fleet module standalone water fallback, host ambient fill and lighter water material; no full river or film environment. Original v4 rig may warn about a 2.2 cm hand-to-paddle gap.",
+      "verify": "node --test examples/tupi-paddling-fleet/*.test.mjs && python3 examples/tupi-paddling-fleet/test_browser.py",
+      "files": [
+        {
+          "path": "examples/tupi-paddling-fleet/README.md",
+          "sha256": "885a3dda25529d970b414b78be49e8b9a308e17bd405eb89a9cae59d20bd3165"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/index.html",
+          "sha256": "034160333f750c3bd2c4217ad26d08214808dd6cf73d6095ee670169c00828a6"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/local.json",
+          "sha256": "4360adc55ba81f1f14ebbcdc89bc875f20b2c50f55d0ffd05da6f45eb239b98e"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/OrbitControls-DnFMDpyt.js",
+          "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/cache-B9YKTUCP.js",
+          "sha256": "b82ad32500df7eb8cdd652bd49fc964925fdb44b7f74fc0037652e6f2579079b"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/canoe-s8Ju-0Hu.js",
+          "sha256": "e083495d50abfcf1f718bc3676037397aa058aa9816c2dc666cc7541734d7358"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/fleet-CmCdPN8d.js",
+          "sha256": "d94a93cb7eafa819ede487e33e85a10afaf8a6d2a3c2e75f7b95a90b49921365"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/layout-n7oYTSht.js",
+          "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/meshopt_decoder.module-DaPnEMPd.js",
+          "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/paddling-p-iGeLm8.js",
+          "sha256": "8b5459ac105b9c0f63e75e4545cc771e403d039a7a3f2a461a02d8ad620fac2c"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/three.core-CKagcDpn.js",
+          "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/three.tsl-Cx8kD8RS.js",
+          "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/assets/three.webgpu-DTZfZZb9.js",
+          "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/baked/crew-shapes.bin",
+          "sha256": "b459d6a42ee1adedb7470acb1ed7af296f931626d31d0838ea474bd1df1eaefa"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/baked/hero-shapes.bin",
+          "sha256": "b120bc3aa91ef6a672029ef79ab7fc305772c474a5e4b9d18b2acf24082d3389"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v0_hi.glb",
+          "sha256": "0d629034a378298b65a6b6a6e96786bbc0e957aebf20ac043e7a82e05e4e1d80"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v0_lo.glb",
+          "sha256": "eff6de649ba5b88fa7b850db3fb0a8625526c0eb9d25b7b1e6641e724e24d59b"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v1_hi.glb",
+          "sha256": "193a6c802a6ed12f2d1213a2c0ed3bc21555b8e721a67af9f49c6195aa17dea7"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v1_lo.glb",
+          "sha256": "5daf96c3297ac0c750eec7ad853d87e762882a3be74f28c328047f360e836efa"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v2_hi.glb",
+          "sha256": "002a02832e99a58e401aeab4cbbeec07c800390a10ab1c2cf54398e65808db6c"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v2_lo.glb",
+          "sha256": "41d5bd681878c06c6ebbdc62d2a2f391f95da26be410c87424bb02a18f1bb867"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v3_hi.glb",
+          "sha256": "2668920255b6ab445560b002d2a65879243aa7b8d0946c757969a6d3ba175625"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v3_lo.glb",
+          "sha256": "9913658d414f2e417fe477fe5243f248113646fd2aab08bffbfd000257ed2b44"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v4_hi.glb",
+          "sha256": "daae478f3cf44af0b316bf290a02e8cf8e67d55dd8bc9ac95eff7ba162701c4b"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v4_lo.glb",
+          "sha256": "2b7f52c1887d375379a5b441ea9846324104b0a5ef647101dd15b7a20c7fd163"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v5_hi.glb",
+          "sha256": "f48d5a7de55c8c1e4c82cfbe6396dd6b0974c12e970f3da8ca9830c26875233e"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/crew_v5_lo.glb",
+          "sha256": "939aa9c66991f7451f855964daee21f2ca5ace95e2f369c4fd2d6c295ab5a085"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/tex/brown_eye.png",
+          "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/original/models/warrior_mpfb.glb",
+          "sha256": "36753bf22c178df646cc5ecd3ab55f5dac17ab746530a4de0099a45fd1572a2e"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/provenance.json",
+          "sha256": "06db94aae8f399f538f42fcece033cc51e0812842206be847acdde775b1b6c27"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/provenance.test.mjs",
+          "sha256": "dfe36b814d16f800aa26ce748505914e404c54a7e78a286f7cb3e1b017071747"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/src/host.js",
+          "sha256": "e8095f72f97ff576d0301802fb4fe731e64cb12c7f3b95f1dc4b3e3353d24a6e"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/src/i18n.js",
+          "sha256": "a7317cad34757e8df8356873640feb23a546d04910d176b6081d65b334f98c2c"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/src/main.js",
+          "sha256": "e0d2e4e4e56d0d479dd4ba53819774800cb37cdd8c3c5901f173b8b9b75baca5"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/src/style.css",
+          "sha256": "34f9489f2086b4dccee31f24b212372ee57daa5942705f5661a4535ffe2f3d83"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/src/ui.css",
+          "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/src/ui.js",
+          "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+        },
+        {
+          "path": "examples/tupi-paddling-fleet/test_browser.py",
+          "sha256": "9421245c8decae5ceb4811f318d2cddee754b570d445ce82d2ae1d2c095a4a1d"
+        }
+      ],
+      "port": 8132
+    },
+    {
+      "id": "tupi-rain-river",
+      "project": "tupi",
+      "title": "Tupi · Rain river",
+      "scope": "Original Tupi water and atmosphere modules running unchanged with rain intensity, mist, light-phase controls and an orbit camera.",
+      "category": [
+        "water",
+        "effects"
+      ],
+      "maturity": "extracted-verified",
+      "candidates": [],
+      "dependencies": [
+        "WebGPU-capable browser on localhost or HTTPS",
+        "Original Three.js core, WebGPU and TSL chunks plus OrbitControls",
+        "Byte-identical archived Tupi module closure and required assets",
+        "Plain browser ES modules; no build or external network"
+      ],
+      "limitations": "Host bank silhouettes supply scale and reflection contrast. No original terrain, forest, fleet, audio or post-processing. The distant cinematic rain curtain is hidden; nearby rain, ripples, sky and fog use the original shaders.",
+      "verify": "node --test examples/tupi-rain-river/*.test.mjs && python3 examples/tupi-rain-river/test_browser.py",
+      "files": [
+        {
+          "path": "examples/tupi-rain-river/README.md",
+          "sha256": "f118570fc6467af4949c3c0d77c3136d6f176672dcb30cbcb759061f3217a4fa"
+        },
+        {
+          "path": "examples/tupi-rain-river/index.html",
+          "sha256": "6084134041f16b8a24ee977d2e70437dc0f134525be3d9dddf8d54a957098402"
+        },
+        {
+          "path": "examples/tupi-rain-river/local.json",
+          "sha256": "54c41a519ddc089d127e85e51688a8485200a7710e5747fbfa89473d588b8295"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/OrbitControls-DnFMDpyt.js",
+          "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/environment-DsRXgLng.js",
+          "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/layout-n7oYTSht.js",
+          "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/three.core-CKagcDpn.js",
+          "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/three.tsl-Cx8kD8RS.js",
+          "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/three.webgpu-DTZfZZb9.js",
+          "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+        },
+        {
+          "path": "examples/tupi-rain-river/original/assets/water-Ct6j_3H2.js",
+          "sha256": "746559db032e4bb2801d83a33afb5eb72ace9650bbdf253c3c185f96ea14a3bf"
+        },
+        {
+          "path": "examples/tupi-rain-river/provenance.json",
+          "sha256": "0b23f1419055d52b59b2da8d43122ae00a32c06260865162b61f3a9f4ac182d7"
+        },
+        {
+          "path": "examples/tupi-rain-river/provenance.test.mjs",
+          "sha256": "2bec24966886d1d90825ecebcf081579e574563f99160379c002ccc6f13c7af8"
+        },
+        {
+          "path": "examples/tupi-rain-river/src/host.js",
+          "sha256": "e8095f72f97ff576d0301802fb4fe731e64cb12c7f3b95f1dc4b3e3353d24a6e"
+        },
+        {
+          "path": "examples/tupi-rain-river/src/i18n.js",
+          "sha256": "792ce70411771cb80eae13e712c54c0077c9f7016f13d8e848b9f755b8f7fad3"
+        },
+        {
+          "path": "examples/tupi-rain-river/src/main.js",
+          "sha256": "bde2ebe901505f4fc31c28f352b66f520b4a7d179ebb7460a6104b5fdc6a09e7"
+        },
+        {
+          "path": "examples/tupi-rain-river/src/style.css",
+          "sha256": "34f9489f2086b4dccee31f24b212372ee57daa5942705f5661a4535ffe2f3d83"
+        },
+        {
+          "path": "examples/tupi-rain-river/src/ui.css",
+          "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+        },
+        {
+          "path": "examples/tupi-rain-river/src/ui.js",
+          "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+        },
+        {
+          "path": "examples/tupi-rain-river/test_browser.py",
+          "sha256": "b1ccf68981256bb96a9c92b336f7eb2b6141af0eaeb6a8ff1ed2430d6e97bf38"
+        }
+      ],
+      "port": 8131
     }
   ]
 }

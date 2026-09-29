@@ -8245,6 +8245,45 @@
       "review_note_en": "All 8 single-player tracks, Grand Prix, battles and the trailer are playable. Online play requires the original server; battle arena background images are missing on the original site too."
     },
     {
+      "slug": "threejs-punk",
+      "run_at": "2026-09-29T03:30:40.522500Z",
+      "auto_verdict": "ok",
+      "modes": [
+        {
+          "name": "achievements",
+          "entered": true,
+          "seconds": 38,
+          "enter_seconds": 90.0,
+          "black": false,
+          "frozen": false,
+          "stall": false,
+          "errors": [],
+          "failed_requests": [
+            {
+              "url": "http://127.0.0.1:8105/thunderstorm.mp3",
+              "failure": "net::ERR_ABORTED"
+            },
+            {
+              "url": "http://127.0.0.1:8105/night-ambience.mp3",
+              "failure": "net::ERR_ABORTED"
+            },
+            {
+              "url": "http://127.0.0.1:8105/light-rain.mp3",
+              "failure": "net::ERR_ABORTED"
+            }
+          ],
+          "reason": "",
+          "auto_verdict": "ok",
+          "load_stall_seconds": 0.8665,
+          "harness": []
+        }
+      ],
+      "reviewed_verdict": "能玩",
+      "review_note": "开车、步行、车库七辆车、城市地图、电台、成就、消息和设置都实际玩过。成就页漏下载的 54 个图标已从原站补回。需要支持 WebGPU 的浏览器。",
+      "review_note_en": "Driving, walking, all seven garage cars, city map, radio, achievements, messages and settings were played. 54 achievement icons missed by the capture were restored from the original site. Needs a WebGPU browser.",
+      "reviewed_run_at": "2026-09-29T03:30:40.522500Z"
+    },
+    {
       "slug": "tidewater",
       "run_at": "2026-09-27T04:11:09.365729Z",
       "auto_verdict": "ok",
@@ -8449,6 +8488,69 @@
       "reviewed_verdict": "能玩",
       "review_note": "步行、钓鱼卖鱼、开船、四种海况、潜水、夜晚、商店全部正常。",
       "reviewed_run_at": "2026-09-27T04:11:09.365729Z"
+    },
+    {
+      "slug": "tupi",
+      "run_at": "2026-09-29T03:07:40.765978Z",
+      "auto_verdict": "issue",
+      "modes": [
+        {
+          "name": "cinematic",
+          "entered": true,
+          "seconds": 235,
+          "enter_seconds": 180,
+          "black": false,
+          "frozen": false,
+          "stall": false,
+          "errors": [
+            "Failed to load resource: the server responded with a status of 405 (Method Not Allowed)"
+          ],
+          "failed_requests": [
+            {
+              "url": "http://127.0.0.1:8106/api/views",
+              "status": 405
+            },
+            {
+              "url": "http://127.0.0.1:8106/api/views",
+              "failure": "net::ERR_ABORTED"
+            }
+          ],
+          "reason": "errors",
+          "auto_verdict": "issue",
+          "load_stall_seconds": 3.7998000000000003,
+          "harness": []
+        },
+        {
+          "name": "interactive-camera",
+          "entered": true,
+          "seconds": 45,
+          "enter_seconds": 180,
+          "black": false,
+          "frozen": false,
+          "stall": false,
+          "errors": [
+            "Failed to load resource: the server responded with a status of 405 (Method Not Allowed)"
+          ],
+          "failed_requests": [
+            {
+              "url": "http://127.0.0.1:8106/api/views",
+              "status": 405
+            },
+            {
+              "url": "http://127.0.0.1:8106/api/views",
+              "failure": "net::ERR_ABORTED"
+            }
+          ],
+          "reason": "errors",
+          "auto_verdict": "issue",
+          "load_stall_seconds": 1.2499,
+          "harness": []
+        }
+      ],
+      "reviewed_verdict": "能玩",
+      "review_note": "完整看完一轮影片，并用镜头操作试过。它是互动影像，不是闯关游戏。浏览量统计接口不可用，不影响观看。需要支持 WebGPU 的浏览器。",
+      "review_note_en": "The full cinematic loop was watched and camera input exercised. It is an interactive film rather than a game. The view counter service is unavailable; viewing is unaffected. Needs a WebGPU browser.",
+      "reviewed_run_at": "2026-09-29T03:07:40.765978Z"
     },
     {
       "slug": "vox-arcana",
