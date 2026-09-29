@@ -104,6 +104,8 @@ summary::-webkit-details-marker{display:none}.disclosure-indicator{margin-left:a
 .environment-details{border-top:1px solid var(--line);margin-top:18px}.wind-preview-panel{border:0;margin:0;padding:0 0 12px}
 .wind-row{display:grid;grid-template-columns:1fr;gap:10px}.wind-row label{font-size:11px}.wind-row input{height:32px}.wind-row output{font-size:11px}
 .wind-quick{border:1px solid #bbc7af;border-radius:5px;padding:8px 10px;font-size:10px;background:#f4f6ef;white-space:nowrap}
+.stage-label-short{display:none}
+@media(max-width:960px){.stage-label-full{display:none}.stage-label-short{display:inline}.specimen-caption{right:64px}}
 .wind-quick[aria-pressed="true"]{background:#e0ebd4}.stage-controls{gap:9px;flex-wrap:wrap}.gesture-hint{margin-left:auto;font-size:9px}
 input[type=range]{height:32px;min-height:32px;background:transparent;margin:0}
 input[type=range]::-webkit-slider-runnable-track{height:3px;border-radius:5px;background:linear-gradient(to right,#778f62 0 var(--pct),#e0e5d8 var(--pct) 100%)}
@@ -184,7 +186,9 @@ input[type=range]::-moz-range-track{height:3px;background:#e0e5d8}input[type=ran
 .creator-credit{font-size:12px;line-height:1.9;white-space:normal;overflow-wrap:anywhere}.creator-credit a{text-decoration:underline;text-underline-offset:3px}.creator-footer button,.export-policy-note button{text-decoration:underline;text-underline-offset:3px;min-height:40px}
 .creator-footer .footer-link{display:inline-flex;align-items:center;min-height:40px;color:inherit;text-decoration:underline;text-underline-offset:3px}
 .header-link{display:inline-flex;align-items:center;min-height:36px;padding:0 10px;font-size:11px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
-@media(max-width:380px){.header-link{padding:0 6px;font-size:10px}}
+.header-link-short{display:none}
+@media(max-width:760px){.header-link-full{display:none}.header-link-short{display:inline}}
+@media(max-width:380px){.header-link{padding:0 4px;font-size:10px}}
 .policy-badge{font-size:10px;color:#806535}.legal-dialog{width:min(720px,calc(100vw - 24px));overflow-wrap:anywhere}.legal-dialog .legal-status{font-size:12px;line-height:1.9;background:#f3efde;padding:12px;border-radius:5px}.legal-document{border-top:1px solid var(--line)}.legal-document>summary{cursor:pointer;min-height:48px;display:flex;align-items:center;font-size:12px;line-height:1.7;padding:10px 4px}.legal-document>summary::after{content:'＋';margin-left:auto}.legal-document[open]>summary::after{content:'−'}.legal-document>pre{font-family:var(--sans);font-size:12px;line-height:1.95;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:0 4px 18px}.legal-dialog #downloadLegalDocs{width:100%;margin-top:16px;min-height:44px}.export-policy-note{font-size:11px;line-height:1.8;margin:8px 0 18px;padding:10px;border:1px solid var(--line);border-radius:6px}
 @media(max-width:760px){.creator-footer{gap:4px 16px;padding:14px 10px}.creator-footer .creator-credit{width:100%;text-align:center}.legal-dialog{padding:28px 18px}.legal-dialog h2{font-size:21px}}
 
@@ -338,7 +342,7 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 <header class="topbar">
 <a aria-label="FABOTANIC 首页 / Home" class="brand brand-botanic" href="#"><span class="brand-name-row"><span class="brand-wordmark"><svg class="brand-logo" viewBox="0 0 435.68 54.93" fill="currentColor" aria-hidden="true" focusable="false"><path d="M39.64,13.13c-6.85-6.05-13.13-7.24-19.9-7.24-1.67,0-2.39,0-3.18.08-.08,3.02-.16,11.54-.16,18.55,10.99-.24,15.05-1.51,15.76-6.29l.88.08c-.4,2.95-.48,5.17-.48,8.36,0,3.34.08,5.49.48,8.28l-.88.08c-.64-5.02-4.78-5.89-15.76-6.13,0,13.13.08,18.39.16,20.94.08,1.83.72,2.79,2.47,3.5l-.08.56c-2.63-.24-7.01-.32-9.39-.32s-6.77.08-9.39.32l-.16-.56c1.75-.72,2.47-1.67,2.55-3.5.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-1.83-.8-2.79-2.55-3.5l.08-.56c2.71.24,7.01.32,14.65.32h21.25c.88,3.26,2.63,7.96,4.3,11.38l-.64.4Z"/><path d="M89.64,53.33l-.16.56c-1.75-.24-7.96-.32-9.63-.32-1.83,0-10.03.08-11.7.32l-.16-.56c2.31-.96,2.71-2.15,1.83-4.3-.64-1.59-1.75-4.14-3.1-7.17h-18.79c-1.19,3.1-2.07,5.57-2.55,7.01-.8,2.71.24,3.74,2.31,4.46l-.16.56c-1.75-.24-6.05-.32-7.8-.32-1.51,0-4.46.08-6.13.32l-.08-.56c1.51-.48,3.1-1.59,4.78-4.7C45.06,35.82,55.41,12.98,60.66.48h1.67c5.01,11.62,16.88,37.41,22.53,48.4,1.19,2.31,3.26,3.98,4.78,4.46ZM64.56,37.02c-2.55-5.73-5.49-12.26-7.88-17.43-2.07,5.17-4.7,11.7-6.85,17.43h14.73Z"/><path d="M107.71,54.05c-5.33,0-11.07-.16-17.51-.48v-.56c1.27-.16,2.47-1.03,2.55-3.18.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-2.31-1.27-3.02-2.55-3.18v-.56c5.57-.32,11.22-.48,15.04-.48,13.93,0,24.44,3.58,24.44,12.5,0,5.33-4.78,11.3-14.89,11.78,13.13,0,20.54,4.94,20.54,13.69,0,7-6.05,15.2-27.62,15.2ZM106.75,5.41c-.08,3.82-.16,9.31-.16,17.91,7.32-.16,9.55-3.82,9.55-9.55,0-5.33-2.39-8.36-9.39-8.36ZM110.02,27.78c-.96,0-2.07.08-3.42.24v1.51c0,12.1.08,17.2.16,19.66.88.08,1.83.08,2.47.08,7,0,11.22-3.5,11.22-10.43,0-5.97-2.95-11.07-10.43-11.07Z"/><path d="M170.75,54.93c-17.35,0-30.01-10.91-30.01-27.46S153.4,0,170.75,0s30.09,10.83,30.09,27.46-12.66,27.46-30.09,27.46ZM170.75,5.02c-9.16,0-14.09,8.04-14.09,22.45s4.94,22.45,14.09,22.45,14.25-8.2,14.25-22.45-5.09-22.45-14.25-22.45Z"/><path d="M249.72,13.45c-5.57-5.02-12.5-7.88-16.16-7.88h-.48v21.89c0,12.34.08,19.82.16,22.37.08,1.83.8,2.79,2.55,3.5l-.16.56c-2.55-.24-7-.32-9.31-.32-2.47,0-6.85.08-9.47.32l-.08-.56c1.75-.72,2.39-1.67,2.47-3.5.08-2.55.16-10.03.16-22.37V5.57h-.4c-3.66,0-10.67,2.95-16.24,7.88l-.56-.48c1.43-4.22,2.63-8.52,3.18-11.62h41.79c.56,3.1,1.67,7.4,3.18,11.62l-.64.48Z"/><path d="M297.17,53.33l-.16.56c-1.75-.24-7.96-.32-9.63-.32-1.83,0-10.03.08-11.7.32l-.16-.56c2.31-.96,2.71-2.15,1.83-4.3-.64-1.59-1.75-4.14-3.1-7.17h-18.79c-1.19,3.1-2.07,5.57-2.55,7.01-.8,2.71.24,3.74,2.31,4.46l-.16.56c-1.75-.24-6.05-.32-7.8-.32-1.51,0-4.46.08-6.13.32l-.08-.56c1.51-.48,3.1-1.59,4.78-4.7,6.77-12.82,17.12-35.66,22.37-48.16h1.67c5.01,11.62,16.88,37.41,22.53,48.4,1.19,2.31,3.26,3.98,4.78,4.46ZM272.09,37.02c-2.55-5.73-5.49-12.26-7.88-17.43-2.07,5.17-4.7,11.7-6.85,17.43h14.73Z"/><path d="M351.78,1.59c-1.75.8-2.39,1.43-2.63,4.14-.32,3.74-.4,9.47-.4,21.73s0,21.49.08,26.67h-5.65c-15.6-17.27-27.78-30.73-37.81-41.24.16,3.9.24,8.52.32,14.57.08,10.03.72,18.15,1.19,21.73.32,2.63,1.04,3.42,2.63,4.14l-.16.56c-1.75-.24-4.7-.32-6.05-.32-1.27,0-3.5.08-5.41.32l-.16-.56c1.75-.8,2.39-1.43,2.55-3.18.32-4.7.48-10.43.48-22.69,0-6.61-.08-13.13-.16-16.32-.08-5.33-2.23-7.64-5.01-9.55l.16-.56c2.71.24,5.89.32,8.76.32,2.55,0,5.17-.08,7.56-.16,12.82,14.41,21.81,24.04,31.92,34.31-.08-2.47-.16-5.25-.16-8.04-.16-10.03-.56-17.43-.96-21.49-.4-2.87-1.27-3.66-2.87-4.38l.16-.56c1.67.24,4.14.32,5.65.32,1.67,0,4.06-.08,5.81-.32l.16.56Z"/><path d="M376.78,53.89c-2.63-.24-7-.32-9.39-.32s-6.77.08-9.39.32l-.16-.56c1.75-.72,2.47-1.67,2.55-3.5.08-2.55.16-10.03.16-22.37s-.08-19.82-.16-22.37c-.08-1.83-.8-2.79-2.55-3.5l.16-.56c2.63.24,6.93.32,9.39.32s6.77-.08,9.39-.32l.08.56c-1.75.72-2.39,1.67-2.47,3.5-.08,2.55-.16,9.95-.16,22.37s.08,19.82.16,22.37c.08,1.83.72,2.79,2.47,3.5l-.08.56Z"/><path d="M383.46,27.46c0-16.72,13.21-27.46,30.49-27.46,8.36,0,16.4,2.55,21.25,7.48l.48,12.58-.72.16c-4.38-10.19-10.59-15.05-18.47-15.05-10.11,0-17.51,8.52-17.51,22.29s7.08,22.13,17.83,22.13c7.64,0,13.61-3.5,18.23-9.95l.64.16-.16,7.64c-4.7,4.3-11.94,7.48-21.09,7.48-17.75,0-30.97-10.91-30.97-27.46Z"/></svg><span class="visually-hidden">FABOTANIC</span></span><span class="brand-owner">by AMIX</span></span><small class="brand-tagline">3D 植物素材生成器 / 3D Plant Generator</small></a>
 <div class="top-center"><span class="status-dot"></span> PROCEDURAL PLANT WORKSHOP · 3D植物工坊</div>
-<div class="header-actions"><a class="header-link" href="https://amix-design.com/tl/fab-botanic/about.html">作例与指南 / Guide & Gallery</a><button aria-label="加载设置 JSON / Load Settings JSON" class="icon-button header-secondary" id="importBtn" title="加载设置 JSON / Load Settings JSON"><svg><use href="#i-upload"></use></svg></button><button aria-label="保存设置 JSON / Save Settings JSON" class="icon-button header-secondary" id="saveBtn" title="保存设置 JSON / Save Settings JSON"><svg><use href="#i-save"></use></svg></button><span class="header-divider"></span><button class="button primary" disabled="" id="exportBtn"><svg><use href="#i-download"></use></svg><span>导出 / Export</span></button></div>
+<div class="header-actions"><a class="header-link" href="https://amix-design.com/tl/fab-botanic/about.html" title="作例与指南 / Guide & Gallery" aria-label="作例与指南 / Guide & Gallery"><span class="header-link-full">作例与指南 / Guide & Gallery</span><span class="header-link-short" aria-hidden="true">指南</span></a><button aria-label="加载设置 JSON / Load Settings JSON" class="icon-button header-secondary" id="importBtn" title="加载设置 JSON / Load Settings JSON"><svg><use href="#i-upload"></use></svg></button><button aria-label="保存设置 JSON / Save Settings JSON" class="icon-button header-secondary" id="saveBtn" title="保存设置 JSON / Save Settings JSON"><svg><use href="#i-save"></use></svg></button><span class="header-divider"></span><button class="button primary" disabled="" id="exportBtn"><svg><use href="#i-download"></use></svg><span>导出 / Export</span></button></div>
 </header>
 <main class="workspace">
 <aside aria-label="植物库 / Plant Library" class="library">
@@ -419,7 +423,7 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 <div class="stage-side"><span>PROCEDURAL BOTANY</span><i></i><span>IN-BROWSER</span></div>
 <div class="specimen-caption"><div class="eyebrow" id="familyLabel">NEPHROLEPIDACEAE</div><h2 id="specimenName">野草群落 / Wild Field</h2><p id="latinLabel">Mixed vegetation</p></div>
 <div class="stage-actions"><button aria-label="全景 / Fit View" class="stage-icon" id="fitBtn" title="重置视角 / Fit View"><svg><use href="#i-frame"></use></svg></button><button aria-label="自动旋转 / Auto Rotate" aria-pressed="false" class="stage-icon" id="rotateBtn" title="自动旋转 / Auto Rotate"><svg><use href="#i-rotate"></use></svg></button><button aria-label="切换背景明暗 / Toggle Background" aria-pressed="false" class="stage-icon" id="backgroundBtn" title="切换背景明暗 / Toggle Background"><svg><use href="#i-sun"></use></svg></button></div>
-<div class="stage-controls"><button aria-pressed="false" class="wind-quick" id="windQuick" type="button">风动预览 / Wind</button><div aria-label="显示模式 / View Mode" class="view-modes" role="group"><button aria-pressed="true" class="active" data-mode="0">材质着色 / Shaded</button><button aria-pressed="false" data-mode="1">实体形状 / Solid</button><button aria-pressed="false" data-mode="2">线框网格 / Wireframe</button></div><span class="gesture-hint">拖动旋转 / Drag to rotate <span>·</span> 滚轮缩放 / Scroll to zoom</span><button class="light-button" id="lightBtn"><svg><use href="#i-sun"></use></svg><span>摄影棚 / Studio</span></button></div>
+<div class="stage-controls"><button aria-pressed="false" class="wind-quick" id="windQuick" type="button" title="风动预览 / Wind" aria-label="风动预览 / Wind"><span class="stage-label-full">风动预览 / Wind</span><span class="stage-label-short" aria-hidden="true">风动预览</span></button><div aria-label="显示模式 / View Mode" class="view-modes" role="group"><button aria-pressed="true" class="active" data-mode="0" title="材质着色 / Shaded" aria-label="材质着色 / Shaded"><span class="stage-label-full">材质着色 / Shaded</span><span class="stage-label-short" aria-hidden="true">材质</span></button><button aria-pressed="false" data-mode="1" title="实体形状 / Solid" aria-label="实体形状 / Solid"><span class="stage-label-full">实体形状 / Solid</span><span class="stage-label-short" aria-hidden="true">形状</span></button><button aria-pressed="false" data-mode="2" title="线框网格 / Wireframe" aria-label="线框网格 / Wireframe"><span class="stage-label-full">线框网格 / Wireframe</span><span class="stage-label-short" aria-hidden="true">线框</span></button></div><span class="gesture-hint">拖动旋转 / Drag to rotate <span>·</span> 滚轮缩放 / Scroll to zoom</span><button class="light-button" id="lightBtn"><svg><use href="#i-sun"></use></svg><span>摄影棚 / Studio</span></button></div>
 <div class="stats-bar"><div><span>TRIANGLES</span><strong id="triCount">—</strong></div><div><span id="vertexLabel">VERTICES</span><strong id="vertexCount">—</strong></div><div><span>HEIGHT</span><strong id="heightStat">—</strong></div><div class="mesh-stat"><span>MESHES</span><strong id="meshCount">—</strong></div><span class="verified-badge" hidden="" id="verifiedBadge"><svg><use href="#i-check"></use></svg> GLB 已验证 / GLB Verified</span></div>
 <div class="loading" id="loading"><div class="leaf-loader"><svg><use href="#i-leaf"></use></svg></div><strong id="loadingText">正在生成植物 / Growing your plant</strong><span>每株植物，各有不同。 / Every plant is unique.</span></div>
 <div class="fatal-error" hidden="" id="fatalError"><strong>无法启动预览 / Preview failed to start</strong><p></p><button class="button primary" onclick="location.reload()">重新打开 / Reload</button></div>
@@ -431,7 +435,7 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 </div>
 <div id="tunePanel" class="inspector-panel" role="tabpanel" aria-labelledby="tabTune">
 <div class="selection-context" aria-label="当前素材 / Current Asset"><strong id="selectionSummary"></strong></div>
-<div class="workflow-feedback"><p id="workflowNotice" class="workflow-notice" role="status" aria-live="polite" hidden></p><div class="workflow-actions"><button type="button" id="undoReplacement" class="button subtle" hidden>撤销替换 / Undo Replacement</button><button type="button" id="dismissWorkflowNotice" hidden>关闭通知 / Dismiss</button></div></div>
+<div id="workflowFeedback" class="workflow-feedback"><p id="workflowNotice" class="workflow-notice" role="status" aria-live="polite" hidden></p><div class="workflow-actions"><button type="button" id="undoReplacement" class="button subtle" hidden>撤销替换 / Undo Replacement</button><button type="button" id="dismissWorkflowNotice" hidden>关闭通知 / Dismiss</button></div></div>
 <div id="generationRecovery" class="generation-recovery" tabindex="-1" aria-label="生成错误恢复 / Generation Recovery" hidden><strong>生成失败 / Generation Failed</strong><p id="generationErrorText" role="alert"></p><div class="workflow-actions"><button type="button" id="retryGeneration" class="button subtle">重试 / Retry</button><button type="button" id="restoreSuccessful" class="button subtle">恢复上次成功设置 / Restore Last Working Settings</button></div><p class="micro-copy">仍可保存设置 JSON。GLB 和图片需生成成功后再导出。 / Settings JSON can still be saved. Export GLB or images after generation succeeds.</p></div>
 <div aria-label="设置类别 / Settings Category" class="tabs" role="tablist"><button aria-controls="shapePanel" aria-selected="true" class="active" id="tabShape" role="tab">实体形状 / Solid</button><button aria-controls="materialPanel" aria-selected="false" id="tabMaterial" role="tab" tabindex="-1">材质着色 / Shaded</button></div>
 <div class="inspector-scroll">
@@ -451,7 +455,7 @@ button:disabled,input:disabled,select:disabled{cursor:not-allowed}#stage[aria-bu
 <div class="inspector-bottom"><div class="variation-tools"><label class="visually-hidden" for="variationStrength">形态变化 / Variation</label><select id="variationStrength" title="形态变化 / Variation" aria-label="形态变化 / Variation" aria-describedby="variationHelp"><option value="25" title="小 / Small">小</option><option value="45" title="标准 / Standard" selected>标准</option><option value="70" title="大 / Large">大</option></select><button id="shuffleShape" class="button subtle" type="button" title="随机形体 / Shuffle shape" aria-label="随机形体 / Shuffle shape">随机形体</button><button id="undoVariation" class="button subtle" type="button" title="撤销 / Undo shape" aria-label="撤销 / Undo shape" disabled>撤销</button><button class="button random-button" disabled="" id="randomBtn" title="新个体 / New seed" aria-label="新个体 / New seed"><svg><use href="#i-shuffle"></use></svg><span>新个体</span><span class="random-arrow">↗</span></button></div></div>
 </div>
 <div id="infoPanel" class="inspector-panel" role="tabpanel" aria-labelledby="tabInfo" tabindex="0" hidden>
-<div class="inspector-heading"><span class="eyebrow">02 / CULTIVATE</span><h2>参数调整 / Cultivate</h2><p id="speciesNote" title="Flexible fronds lined with small leaflets.">柔软的叶轴上，排列着细小的叶片。</p></div><div class="inspector-status"><span id="selectionStatus" role="status" aria-live="polite"></span></div>
+<div class="inspector-heading"><span class="eyebrow">02 / INFO</span><h2>植物信息 / Plant info</h2><p id="speciesNote" title="Flexible fronds lined with small leaflets.">柔软的叶轴上，排列着细小的叶片。</p></div><div class="inspector-status"><span id="selectionStatus" role="status" aria-live="polite"></span></div>
 <div class="field-metrics" hidden="" id="fieldMetrics"><div><span>FIELD SIZE</span><strong id="fieldDimensions"></strong></div><div><span>PLANTS</span><strong id="fieldInstances"></strong></div><p>共享/绘制三角形 <span id="fieldEfficiency"></span></p><p id="fieldBudget"></p></div><div class="inspector-notes"><p class="micro-copy" id="variationHelp">同类形态变化；高度、色彩、季节、风动不变。</p><p class="micro-copy draft-preservation-note">本页打开期间保留各植物的编辑值。关闭前请保存需要的设置 JSON。 / Each plant keeps its edits while this page is open. Save needed settings JSON before closing.</p><p><span class="status-dot"></span>无需账号，植物在浏览器内生成</p></div>
 </div>
 </aside>
@@ -5612,7 +5616,10 @@ function createUIController(doc){
   const env=$('environmentSection');env.dataset.availability=unsupportedWind?'disabled':'enabled';env.classList.toggle('is-unavailable',unsupportedWind);
   envNote.hidden=!!(p.wind.available&&!paused&&previewAvailable);envNote.textContent=p.wind.reason||(!previewAvailable?'此环境无法显示 3D 预览，风动设置仍可保存和导出 ZIP。 / 3D preview is unavailable; wind settings can still be saved and exported in ZIP.':'');
   $('windQuick').disabled=exporting||unsupportedWind||!previewAvailable;
-  $('windQuick').textContent=unsupportedWind?(s.geometryProfile==='background'?'远景静态 / Far Static':'静态模型 / Static'):!previewAvailable?'无 3D 预览 / No 3D Preview':paused?'播放风动 / Play Wind':'暂停风动 / Pause Wind';
+  const windLabel=unsupportedWind?(s.geometryProfile==='background'?'远景静态 / Far Static':'静态模型 / Static'):!previewAvailable?'无 3D 预览 / No 3D Preview':paused?'播放风动 / Play Wind':'暂停风动 / Pause Wind';
+  $('windQuick').querySelector('.stage-label-full').textContent=windLabel;
+  $('windQuick').querySelector('.stage-label-short').textContent=windLabel.split(' / ')[0];
+  $('windQuick').title=windLabel;$('windQuick').setAttribute('aria-label',windLabel);
   $('windQuick').setAttribute('aria-pressed',String(p.wind.available&&!paused&&previewAvailable));
   $('windQuick').setAttribute('aria-describedby','windAvailabilityReason');
   for(const d of groups){
@@ -5764,17 +5771,18 @@ async function rebuild(material=false,fit=false){
   if(id!==generation)return false;currentPlant=plant;renderer.setPlant(plant,fit);renderer.setTextures(tex);renderer.setWindDistance?.(state.windDistanceMode,state.windNearM,state.windFarM);applyWind();updateStats(plant);drawTexturePreviews(tex);$('loading').hidden=true;$('verifiedBadge').hidden=true;$('previewLabel').textContent='LIVE SPECIMEN';
   try{localStorage.setItem('verdant:session',JSON.stringify({engineVersion:ENGINE_VERSION,state}))}catch{}
   lastSuccessfulState=structuredClone(snapshot);setBusy(false);return true;
- }catch(e){if(id!==generation)return false;buildFailure=e.message||String(e);setBusy(false);$('loading').hidden=true;toast('生成失败，可在设置栏重试或恢复。 / Generation failed; retry or restore in Settings.',7000);console.error(e);if(!replacingSettings)requestAnimationFrame(()=>{if(buildFailure&&id===generation){$('generationRecovery').focus({preventScroll:true});$('generationRecovery').scrollIntoView({block:'start'});}});return false;}
+ }catch(e){if(id!==generation)return false;buildFailure=e.message||String(e);setBusy(false);$('loading').hidden=true;toast('生成失败，可在设置栏重试或恢复。 / Generation failed; retry or restore in Settings.',7000);console.error(e);if(!replacingSettings)requestAnimationFrame(()=>{if(buildFailure&&id===generation){$('retryGeneration').focus({preventScroll:true});$('generationRecovery').scrollIntoView({block:'start'});}});return false;}
 }
 
 function setWorkflowNotice(message='',error=false){
- const el=$('workflowNotice');if(!el)return;el.hidden=!message;el.textContent=message;el.dataset.tone=error?'error':'info';if($('dismissWorkflowNotice'))$('dismissWorkflowNotice').hidden=!message;
+ const el=$('workflowNotice');if(!el)return;if(message&&error)activateInspectorTab(0,false);el.hidden=!message;el.textContent=message;el.dataset.tone=error?'error':'info';if($('dismissWorkflowNotice'))$('dismissWorkflowNotice').hidden=!message;
+ if(message&&error)requestAnimationFrame(()=>{if(!el.hidden&&el.dataset.tone==='error'){$('dismissWorkflowNotice').focus({preventScroll:true});$('workflowFeedback').scrollIntoView({block:'start'});}});
 }
 function syncRecoveryUI(){
  const undo=$('undoReplacement');if(!undo)return;
  undo.hidden=!editingSession.undoKind;undo.disabled=busy||exporting||replacingSettings;
  undo.textContent=editingSession.undoKind==='reset'?'撤销重置 / Undo Reset':'撤销加载 / Undo Load';
- const box=$('generationRecovery');box.hidden=!buildFailure;
+ const box=$('generationRecovery');if(buildFailure&&box.hidden)activateInspectorTab(0,false);box.hidden=!buildFailure;
  $('generationErrorText').textContent=buildFailure?buildFailure+(currentPlant?' 仍显示上次成功的模型，新设置尚未生成成功。 / The last successful model remains; the new settings have not generated successfully.':' 暂无生成结果。 / No model has been generated yet.'):'';
  $('retryGeneration').disabled=busy||exporting||replacingSettings;
  $('restoreSuccessful').hidden=!lastSuccessfulState;$('restoreSuccessful').disabled=busy||exporting||replacingSettings;
@@ -6069,30 +6077,30 @@ function bindLegalUI(){
  $('downloadLegalDocs').addEventListener('click',()=>saveBlob(new Blob([distributionFiles()['LICENSES.txt']],{type:'text/plain;charset=utf-8'}),'FABOTANIC-code-LICENSES.txt'));
 }
 
+function activateInspectorTab(index,remember=true){
+ const tabs=[$('tabTune'),$('tabInfo')];
+ for(const [i,tab] of tabs.entries()){
+  const active=i===index;
+  tab.classList.toggle('active',active);
+  tab.setAttribute('aria-selected',String(active));
+  tab.tabIndex=active?0:-1;
+  $(tab.getAttribute('aria-controls')).hidden=!active;
+ }
+ if(remember)try{localStorage.setItem('fabotanic:inspector-tab',index===1?'info':'tune')}catch{}
+}
 function bindInspectorTabs(){
  const tabs=[$('tabTune'),$('tabInfo')];
- const storageKey='fabotanic:inspector-tab';
- function activate(index,remember=true){
-  for(const [i,tab] of tabs.entries()){
-   const active=i===index;
-   tab.classList.toggle('active',active);
-   tab.setAttribute('aria-selected',String(active));
-   tab.tabIndex=active?0:-1;
-   $(tab.getAttribute('aria-controls')).hidden=!active;
-  }
-  if(remember)try{localStorage.setItem(storageKey,index===1?'info':'tune')}catch{}
- }
  for(const [index,tab] of tabs.entries()){
-  tab.addEventListener('click',()=>activate(index));
+  tab.addEventListener('click',()=>activateInspectorTab(index));
   tab.addEventListener('keydown',event=>{
    if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;
    event.preventDefault();
    const next=event.key==='Home'?0:event.key==='End'?1:1-index;
-   activate(next);tabs[next].focus();
+   activateInspectorTab(next);tabs[next].focus();
   });
  }
- let saved='tune';try{saved=localStorage.getItem(storageKey)}catch{}
- activate(saved==='info'?1:0,false);
+ let saved='tune';try{saved=localStorage.getItem('fabotanic:inspector-tab')}catch{}
+ activateInspectorTab(saved==='info'?1:0,false);
 }
 function bindUI(){
  bindInspectorTabs();
