@@ -1,0 +1,163 @@
+{
+  "author": "Ruben Marcus",
+  "source_url": "https://www.rubenmarcus.dev/demos/tupi/",
+  "note": "Byte-identical archived chunks and required runtime assets. Host code is separate; main is excluded. No additional license grant is asserted.",
+  "files": [
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/OrbitControls-DnFMDpyt.js",
+      "source": "tupi/public/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/cache-B9YKTUCP.js",
+      "source": "tupi/public/demos/tupi/assets/cache-B9YKTUCP.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/cache-B9YKTUCP.js",
+      "sha256": "b82ad32500df7eb8cdd652bd49fc964925fdb44b7f74fc0037652e6f2579079b"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/canoe-s8Ju-0Hu.js",
+      "source": "tupi/public/demos/tupi/assets/canoe-s8Ju-0Hu.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/canoe-s8Ju-0Hu.js",
+      "sha256": "e083495d50abfcf1f718bc3676037397aa058aa9816c2dc666cc7541734d7358"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/fleet-CmCdPN8d.js",
+      "source": "tupi/public/demos/tupi/assets/fleet-CmCdPN8d.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/fleet-CmCdPN8d.js",
+      "sha256": "d94a93cb7eafa819ede487e33e85a10afaf8a6d2a3c2e75f7b95a90b49921365"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/layout-n7oYTSht.js",
+      "source": "tupi/public/demos/tupi/assets/layout-n7oYTSht.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/layout-n7oYTSht.js",
+      "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "source": "tupi/public/demos/tupi/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/paddling-p-iGeLm8.js",
+      "source": "tupi/public/demos/tupi/assets/paddling-p-iGeLm8.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/paddling-p-iGeLm8.js",
+      "sha256": "8b5459ac105b9c0f63e75e4545cc771e403d039a7a3f2a461a02d8ad620fac2c"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/three.core-CKagcDpn.js",
+      "source": "tupi/public/demos/tupi/assets/three.core-CKagcDpn.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.core-CKagcDpn.js",
+      "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/three.tsl-Cx8kD8RS.js",
+      "source": "tupi/public/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/assets/three.webgpu-DTZfZZb9.js",
+      "source": "tupi/public/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/baked/crew-shapes.bin",
+      "source": "tupi/public/demos/tupi/baked/crew-shapes.bin",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/baked/crew-shapes.bin",
+      "sha256": "b459d6a42ee1adedb7470acb1ed7af296f931626d31d0838ea474bd1df1eaefa"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/baked/hero-shapes.bin",
+      "source": "tupi/public/demos/tupi/baked/hero-shapes.bin",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/baked/hero-shapes.bin",
+      "sha256": "b120bc3aa91ef6a672029ef79ab7fc305772c474a5e4b9d18b2acf24082d3389"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v0_hi.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v0_hi.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v0_hi.glb",
+      "sha256": "0d629034a378298b65a6b6a6e96786bbc0e957aebf20ac043e7a82e05e4e1d80"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v0_lo.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v0_lo.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v0_lo.glb",
+      "sha256": "eff6de649ba5b88fa7b850db3fb0a8625526c0eb9d25b7b1e6641e724e24d59b"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v1_hi.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v1_hi.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v1_hi.glb",
+      "sha256": "193a6c802a6ed12f2d1213a2c0ed3bc21555b8e721a67af9f49c6195aa17dea7"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v1_lo.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v1_lo.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v1_lo.glb",
+      "sha256": "5daf96c3297ac0c750eec7ad853d87e762882a3be74f28c328047f360e836efa"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v2_hi.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v2_hi.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v2_hi.glb",
+      "sha256": "002a02832e99a58e401aeab4cbbeec07c800390a10ab1c2cf54398e65808db6c"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v2_lo.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v2_lo.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v2_lo.glb",
+      "sha256": "41d5bd681878c06c6ebbdc62d2a2f391f95da26be410c87424bb02a18f1bb867"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v3_hi.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v3_hi.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v3_hi.glb",
+      "sha256": "2668920255b6ab445560b002d2a65879243aa7b8d0946c757969a6d3ba175625"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v3_lo.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v3_lo.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v3_lo.glb",
+      "sha256": "9913658d414f2e417fe477fe5243f248113646fd2aab08bffbfd000257ed2b44"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v4_hi.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v4_hi.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v4_hi.glb",
+      "sha256": "daae478f3cf44af0b316bf290a02e8cf8e67d55dd8bc9ac95eff7ba162701c4b"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v4_lo.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v4_lo.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v4_lo.glb",
+      "sha256": "2b7f52c1887d375379a5b441ea9846324104b0a5ef647101dd15b7a20c7fd163"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v5_hi.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v5_hi.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v5_hi.glb",
+      "sha256": "f48d5a7de55c8c1e4c82cfbe6396dd6b0974c12e970f3da8ca9830c26875233e"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/crew_v5_lo.glb",
+      "source": "tupi/public/demos/tupi/models/crew_v5_lo.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/crew_v5_lo.glb",
+      "sha256": "939aa9c66991f7451f855964daee21f2ca5ace95e2f369c4fd2d6c295ab5a085"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/tex/brown_eye.png",
+      "source": "tupi/public/demos/tupi/models/tex/brown_eye.png",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/tex/brown_eye.png",
+      "sha256": "4659691c7295ad6206c78b003e5fd0e5f91dcd53032fa914a229bb48cabe424b"
+    },
+    {
+      "path": "examples/tupi-paddling-fleet/original/models/warrior_mpfb.glb",
+      "source": "tupi/public/demos/tupi/models/warrior_mpfb.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/warrior_mpfb.glb",
+      "sha256": "36753bf22c178df646cc5ecd3ab55f5dac17ab746530a4de0099a45fd1572a2e"
+    }
+  ]
+}

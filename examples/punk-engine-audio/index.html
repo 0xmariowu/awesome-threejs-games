@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Punk · Engine audio</title><link rel="icon" href="data:,">
+<link rel="stylesheet" href="./src/style.css"><link rel="stylesheet" href="./src/ui.css"></head>
+<body>
+<section id="instrument" data-demo-picture aria-label="Engine tachometer">
+  <header><span>QUADRA / V8</span><span>THREEJS-PUNK</span></header>
+  <svg viewBox="0 0 960 540" role="img" aria-label="RPM gauge">
+    <g id="ticks"></g>
+    <path id="rpm-arc" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+    <g id="needle"><path d="M 469 307 L 480 92 L 491 307 Z" fill="currentColor"/><circle cx="480" cy="300" r="14" fill="currentColor"/></g>
+    <text x="480" y="355" id="rpm-number" class="rpm-value">900</text>
+    <text x="480" y="383" class="unit">RPM</text>
+    <text x="480" y="426" id="activity" class="activity">Idle</text>
+    <text x="100" y="392" class="unit" id="gear-label">GEAR</text>
+    <text x="100" y="449" id="gear-number" class="gear-value">1</text>
+    <text x="860" y="392" class="unit" id="boost-label">TURBO</text>
+    <text x="860" y="442" id="boost-number" class="boost-value">0%</text>
+    <path id="wave" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </svg>
+  <footer><span>4.2 L TWIN-TURBO</span><a href="https://www.threejspunk.com/" target="_blank" rel="noreferrer">Anderson Mancini &amp; Sunag ↗</a></footer>
+</section>
+<div class="actions" data-demo-control><button id="start">Start audio</button><button id="drive" aria-pressed="false">Drive sweep</button></div>
+<label data-demo-control for="throttle">Throttle <output id="throttle-value">0%</output><input id="throttle" type="range" min="0" max="1" step=".01" value="0"></label>
+<div class="actions" data-demo-control><button id="down">Q · Gear down</button><button id="up">E · Gear up</button></div>
+<label data-demo-control for="voice">Engine voice <select id="voice"><option value="sampler">Original sample</option><option value="synth">Original synth</option></select></label>
+<label data-demo-control for="volume">Volume <input id="volume" type="range" min="0" max=".6" step=".01" value=".3"></label>
+<output id="status" data-demo-readout aria-live="polite">Click Start audio to listen.</output>
+<dl data-demo-readout><dt>Engine load</dt><dd id="load">0%</dd><dt>Output RMS</dt><dd id="rms">0.0000</dd><dt>Turbo releases</dt><dd id="releases">0</dd><dt>Limiter cuts</dt><dd id="cuts">0</dd></dl>
+<p id="hint" data-demo-hint data-hint-keys="W · Q / E">Hold W to accelerate · Q / E change gear · Release W to lift</p>
+<script type="module" src="./src/host.mjs"></script>
+</body></html>

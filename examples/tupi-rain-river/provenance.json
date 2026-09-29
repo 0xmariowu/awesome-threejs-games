@@ -1,0 +1,49 @@
+{
+  "author": "Ruben Marcus",
+  "source_url": "https://www.rubenmarcus.dev/demos/tupi/",
+  "note": "Byte-identical archived chunks and required runtime assets. Host code is separate; main is excluded. No additional license grant is asserted.",
+  "files": [
+    {
+      "path": "examples/tupi-rain-river/original/assets/OrbitControls-DnFMDpyt.js",
+      "source": "tupi/public/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+    },
+    {
+      "path": "examples/tupi-rain-river/original/assets/environment-DsRXgLng.js",
+      "source": "tupi/public/demos/tupi/assets/environment-DsRXgLng.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/environment-DsRXgLng.js",
+      "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+    },
+    {
+      "path": "examples/tupi-rain-river/original/assets/layout-n7oYTSht.js",
+      "source": "tupi/public/demos/tupi/assets/layout-n7oYTSht.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/layout-n7oYTSht.js",
+      "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+    },
+    {
+      "path": "examples/tupi-rain-river/original/assets/three.core-CKagcDpn.js",
+      "source": "tupi/public/demos/tupi/assets/three.core-CKagcDpn.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.core-CKagcDpn.js",
+      "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+    },
+    {
+      "path": "examples/tupi-rain-river/original/assets/three.tsl-Cx8kD8RS.js",
+      "source": "tupi/public/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+    },
+    {
+      "path": "examples/tupi-rain-river/original/assets/three.webgpu-DTZfZZb9.js",
+      "source": "tupi/public/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+    },
+    {
+      "path": "examples/tupi-rain-river/original/assets/water-Ct6j_3H2.js",
+      "source": "tupi/public/demos/tupi/assets/water-Ct6j_3H2.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/water-Ct6j_3H2.js",
+      "sha256": "746559db032e4bb2801d83a33afb5eb72ace9650bbdf253c3c185f96ea14a3bf"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "project": "threejs-punk",
+  "source": "https://www.threejspunk.com/",
+  "credit": "Anderson Mancini and Sunag",
+  "scope": "Byte-identical original worklets and audio assets; independent main-thread host. The game bootstrap is read as protocol reference only, never copied or imported.",
+  "files": [
+    {
+      "source": "threejs-punk/public/assets/engineSampler.worklet-CiauAed6.js",
+      "path": "examples/punk-engine-audio/original/assets/engineSampler.worklet-CiauAed6.js",
+      "sha256": "9e3c666e713e52c34598ed487a3b38af77932a5b81bdc941105422e9b9909035",
+      "url": "https://www.threejspunk.com/assets/engineSampler.worklet-CiauAed6.js",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/assets/engineSynth.worklet-tkiTUezc.js",
+      "path": "examples/punk-engine-audio/original/assets/engineSynth.worklet-tkiTUezc.js",
+      "sha256": "6af52b575a99e49fc04af9a3cce55e6997af4385f5b7d4c13cd1d96894bd2060",
+      "url": "https://www.threejspunk.com/assets/engineSynth.worklet-tkiTUezc.js",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/audio/engine/v8.json",
+      "path": "examples/punk-engine-audio/original/audio/engine/v8.json",
+      "sha256": "cc69c92533de85c4976948ce736dca883f6486c4920933c12b63f0b3a660800b",
+      "url": "https://www.threejspunk.com/audio/engine/v8.json",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/audio/engine/v8.wav",
+      "path": "examples/punk-engine-audio/original/audio/engine/v8.wav",
+      "sha256": "6aeeadfb28d5d50f622789b0953bf489e00aac63a3299200975deb297f0d7b91",
+      "url": "https://www.threejspunk.com/audio/engine/v8.wav",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/audio/turbo/releases.json",
+      "path": "examples/punk-engine-audio/original/audio/turbo/releases.json",
+      "sha256": "fe81a2d3006bda29890040f9e5b12fdb483c698fb249d0442fd0d61e5bb4e2f1",
+      "url": "https://www.threejspunk.com/audio/turbo/releases.json",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/audio/turbo/releases.wav",
+      "path": "examples/punk-engine-audio/original/audio/turbo/releases.wav",
+      "sha256": "547f71b1c73aa603e22668fc7718937178de5fc14fe8171869929389c0e0a272",
+      "url": "https://www.threejspunk.com/audio/turbo/releases.wav",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/audio/nitro-turbo.mp3",
+      "path": "examples/punk-engine-audio/original/audio/nitro-turbo.mp3",
+      "sha256": "f0cdab565f6a95a69b214bc517356cf8ba79d5cccb7af61723994a3379af3246",
+      "url": "https://www.threejspunk.com/audio/nitro-turbo.mp3",
+      "credit": "Anderson Mancini and Sunag"
+    },
+    {
+      "source": "threejs-punk/public/audio/tire-squeal.wav",
+      "path": "examples/punk-engine-audio/original/audio/tire-squeal.wav",
+      "sha256": "f6622da6342468cf4730cb7bd7b17782c5b64afa3fae9e3ec131c94e797781c6",
+      "url": "https://www.threejspunk.com/audio/tire-squeal.wav",
+      "credit": "Anderson Mancini and Sunag"
+    }
+  ],
+  "reference": {
+    "source": "threejs-punk/public/assets/index-BdYCjkRC.js",
+    "sha256": "87d6d1767104581829d156adddaf3463db585f603c60db0096212e794d79eed6",
+    "symbols": [
+      "Qk (sample payload)",
+      "Qce / Ze (audio graph and parameter update)",
+      "I2 (tuning defaults)",
+      "gh (Quadra drivetrain)",
+      "yde (load and limiter)"
+    ]
+  }
+}

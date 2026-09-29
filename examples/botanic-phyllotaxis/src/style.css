@@ -1,0 +1,30 @@
+#world {color:#334a3c; touch-action:none;}
+#world canvas {position:absolute;inset:0;}
+.scene-heading {position:absolute;left:28px;top:25px;pointer-events:none;}
+.eyebrow {font:10px var(--ui-mono);letter-spacing:.15em;text-transform:uppercase;}
+.scene-heading h1 {font:normal clamp(20px,2.6vw,35px)/1.15 Georgia,"Songti SC",serif;margin:10px 0 8px;letter-spacing:-.025em;}
+.scene-heading p {font:12px var(--ui-font);margin:0;color:#647462;}
+.specimen-tag {position:absolute;left:28px;bottom:65px;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
+.specimen-tag span {font:12px var(--ui-font);}
+.specimen-tag strong {font:normal clamp(26px,4.2vw,56px)/1 var(--ui-mono);letter-spacing:-.07em;}
+.specimen-tag small {font:10px var(--ui-mono);color:#647462;}
+.scene-footer {position:absolute;bottom:18px;left:28px;right:28px;display:flex;justify-content:space-between;gap:12px;font:10px var(--ui-mono);color:#647462;pointer-events:none;}
+.scale-tag {position:absolute;right:28px;top:30px;font:12px var(--ui-mono);border-bottom:2px solid #74856c;padding-bottom:8px;}
+html.demo-frame .settings label {min-height:31px;}
+html.demo-frame .settings label span {font-size:12px;}
+html.demo-frame .settings label output {font:10px var(--ui-mono);display:block;}
+html.demo-frame .settings input[type=range] {padding:0;border:0;accent-color:#7b914f;}
+html.demo-frame .settings .angle-buttons {display:flex;gap:5px;grid-column:1/-1;}
+html.demo-frame .settings .explanation {font:11px/1.5 var(--ui-font);color:var(--ui-muted);margin:1px 0;}
+html.demo-frame .settings button:disabled, html.demo-frame .settings input:disabled {opacity:.45;cursor:default;}
+.demo-metrics {margin:0;} .demo-metrics dd {margin:0;font-family:var(--ui-mono);}
+#packing {margin:0;font:11px/1.5 var(--ui-font);color:var(--ui-muted);}
+#empty {position:absolute;left:20%;right:20%;top:48%;padding:12px;background:var(--ui-panel);border-radius:8px;text-align:center;color:var(--ui-ink);font:13px var(--ui-font);}
+[data-theme=dark] #world {color:#e0e7cf;}
+[data-theme=dark] :is(.scene-heading p,.specimen-tag small,.scene-footer) {color:#bdc9b8;}
+@media(max-width:600px){.scene-heading {left:14px;top:14px}.scene-heading h1 {font-size:20px;margin:5px 0}.scene-heading p {font-size:10px}.eyebrow {font-size:8px}.scene-footer {left:14px;right:14px;bottom:10px;font-size:7px}.specimen-tag {left:14px;bottom:35px;gap:3px}.specimen-tag span,.specimen-tag small {font-size:8px}.specimen-tag strong {font-size:26px}.scale-tag{right:14px;top:17px;font-size:10px}}
+
+html.demo-frame .demo-controls .settings label:has(input[type=range]) {flex-wrap:nowrap;}
+html.demo-frame .demo-controls .settings label input[type=range] {flex-basis:auto;width:52%;}
+html.demo-frame .demo-controls .settings input[type=checkbox] {appearance:none;border-radius:5px;cursor:pointer;}
+html.demo-frame .demo-controls .settings input[type=checkbox]:checked {background:var(--ui-link);box-shadow:inset 0 0 0 3px var(--ui-panel);}

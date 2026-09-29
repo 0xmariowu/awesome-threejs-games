@@ -1,0 +1,145 @@
+{
+  "author": "Ruben Marcus",
+  "source_url": "https://www.rubenmarcus.dev/demos/tupi/",
+  "note": "Byte-identical archived chunks and required runtime assets. Host code is separate; main is excluded. No additional license grant is asserted.",
+  "files": [
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/OrbitControls-DnFMDpyt.js",
+      "source": "tupi/public/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/OrbitControls-DnFMDpyt.js",
+      "sha256": "4d765dfde16e3d33853d34c795606adb7f6ff15ec02e1e48a6bd1cdde7197f95"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/environment-DsRXgLng.js",
+      "source": "tupi/public/demos/tupi/assets/environment-DsRXgLng.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/environment-DsRXgLng.js",
+      "sha256": "a3929a94936ec6d45fe3fda76f327ee4def92ab509ae84307b2149b75a2e15e6"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/forest-ehp2HefA.js",
+      "source": "tupi/public/demos/tupi/assets/forest-ehp2HefA.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/forest-ehp2HefA.js",
+      "sha256": "6c4c64a5f64aa0c763a7630be8c7d47a2fd39739bab1fdc3315ba222ffa76189"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/layout-n7oYTSht.js",
+      "source": "tupi/public/demos/tupi/assets/layout-n7oYTSht.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/layout-n7oYTSht.js",
+      "sha256": "974fdc2eca53b8c2be9a0086659d0be01c66850de4fa1fbed62efb76d0b46d18"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "source": "tupi/public/demos/tupi/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/meshopt_decoder.module-DaPnEMPd.js",
+      "sha256": "47a3831f5f39c587972a7d236453a2cd2138eda3d1b0133ae94784593e8b5f16"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/species-DQm89Ox5.js",
+      "source": "tupi/public/demos/tupi/assets/species-DQm89Ox5.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/species-DQm89Ox5.js",
+      "sha256": "834c80dbff15ff0835a88ba61b229559c2b8a5491f0d03fe38e926b8565d3605"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/three.core-CKagcDpn.js",
+      "source": "tupi/public/demos/tupi/assets/three.core-CKagcDpn.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.core-CKagcDpn.js",
+      "sha256": "2372682df7c12799669a4ca40fd8d6109d5b0494c1e579ebadff9a1760e7fa78"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/three.tsl-Cx8kD8RS.js",
+      "source": "tupi/public/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.tsl-Cx8kD8RS.js",
+      "sha256": "1b21a1d49061d4136d90e653206ece4b2b89979a1e12379fae17e952c9f4c06d"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/assets/three.webgpu-DTZfZZb9.js",
+      "source": "tupi/public/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/assets/three.webgpu-DTZfZZb9.js",
+      "sha256": "37b0b1c4891a0ba334e60463d31c1c28b6b1df9a057bd67ddc423d98fcdee9f0"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/fern_02_b.glb",
+      "source": "tupi/public/demos/tupi/models/flora/fern_02_b.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/fern_02_b.glb",
+      "sha256": "964927cdf7203c84730ff0a7cf13c43a8e82ce5cbcd6bee6b18f92645542b912"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/flora_scans.json",
+      "source": "tupi/public/demos/tupi/models/flora/flora_scans.json",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/flora_scans.json",
+      "sha256": "ea93c12a5a7758fc31e25b3de39d1bdfbe584d463b670b775b67263894ffc207"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/impostor.webp",
+      "source": "tupi/public/demos/tupi/models/flora/impostor.webp",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/impostor.webp",
+      "sha256": "d6c22a45dccce728786b492d5bb98829ff94b1daf92e00f8b78a339b936060ca"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/impostor_n.webp",
+      "source": "tupi/public/demos/tupi/models/flora/impostor_n.webp",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/impostor_n.webp",
+      "sha256": "f4b64b80146cd7710eac737c6ff707f3886fa7f5c4e2554ba2b65da33e1b910c"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_01_cards.json",
+      "source": "tupi/public/demos/tupi/models/flora/island_tree_01_cards.json",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/island_tree_01_cards.json",
+      "sha256": "565079e2973d22c625165a787cab7a5da32bfec253727003124d5ddf3776c1cf"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_01_wood.glb",
+      "source": "tupi/public/demos/tupi/models/flora/island_tree_01_wood.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/island_tree_01_wood.glb",
+      "sha256": "4761095b2f675ae2aab9fa9d008cd15dd0bc909f26c0ff9ef15a9e5ae362009e"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_02_cards.json",
+      "source": "tupi/public/demos/tupi/models/flora/island_tree_02_cards.json",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/island_tree_02_cards.json",
+      "sha256": "22504b1b5cf023b59060d93903a1189982f05fdbe2b95ffcc2e42f2c3342e176"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_02_wood.glb",
+      "source": "tupi/public/demos/tupi/models/flora/island_tree_02_wood.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/island_tree_02_wood.glb",
+      "sha256": "4df4efaebed22817be9b19438161265a2e5ae23407b5937229b4a106a88e122c"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_03_cards.json",
+      "source": "tupi/public/demos/tupi/models/flora/island_tree_03_cards.json",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/island_tree_03_cards.json",
+      "sha256": "c34d1b547760ccdf73b86176238efd695cb5d291f4ec9cc9ba45f948fe0671fb"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/island_tree_03_wood.glb",
+      "source": "tupi/public/demos/tupi/models/flora/island_tree_03_wood.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/island_tree_03_wood.glb",
+      "sha256": "5801577d929361e7c5d913317770c3c21af895ebab055c223cc31515231a0892"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/leaf_atlas.webp",
+      "source": "tupi/public/demos/tupi/models/flora/leaf_atlas.webp",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/leaf_atlas.webp",
+      "sha256": "c7665be1b4ae76ea80dc94300f390fd25be188a98b7e7f6e8e61f7f4949c859d"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/leaf_atlas_n.webp",
+      "source": "tupi/public/demos/tupi/models/flora/leaf_atlas_n.webp",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/leaf_atlas_n.webp",
+      "sha256": "3a81dbf5b3a17ca43e46cf326d8d5ea06b53c10427a2c1c2270ccaf3b2ef102a"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/root_cluster_01.glb",
+      "source": "tupi/public/demos/tupi/models/flora/root_cluster_01.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/root_cluster_01.glb",
+      "sha256": "2df98e869044eae5965a882d198227f3ccf1c5f91d34dcce6181017472f17279"
+    },
+    {
+      "path": "examples/tupi-forest-impostors/original/models/flora/shrub_02_c.glb",
+      "source": "tupi/public/demos/tupi/models/flora/shrub_02_c.glb",
+      "source_url": "https://www.rubenmarcus.dev/demos/tupi/models/flora/shrub_02_c.glb",
+      "sha256": "31a918cb2b5c1db70e434ae1e6db22930abc46d355d0033d6e7f56ce97d208ee"
+    }
+  ]
+}

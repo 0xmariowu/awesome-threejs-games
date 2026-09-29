@@ -1,0 +1,5 @@
+body { margin: 0; font-family: system-ui, sans-serif; } canvas { display: block; touch-action: none; } #status { white-space: pre-line; }
+h1 { font-size: 17px; line-height: 1.3; margin: 0 0 8px; }
+/* Preserve shared control geometry with Chrome's native checkbox painting. */
+html.demo-frame .demo-controls input[type="checkbox"] { appearance: none; display: inline-grid; place-content: center; width: 18px; height: 18px; border-radius: 5px; }
+html.demo-frame input[type="checkbox"]:checked::after { content: '✓'; color: var(--ui-link); font-size: 12px; }

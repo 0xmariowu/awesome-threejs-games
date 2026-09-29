@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "project": "fab-botanic",
+  "example": "botanic-phyllotaxis",
+  "maturity": "independent-implementation",
+  "original_code": true,
+  "candidates": [],
+  "statement": "Independent implementation inspired by FABOTANIC; no FABOTANIC code or assets",
+  "inspiration": {
+    "name": "FABOTANIC",
+    "url": "https://amix-design.com/tl/fab-botanic/",
+    "credit": "AMIX / Haruki Tominaga",
+    "source_accessed": false
+  },
+  "scope": "Original leaf-node arrangements and a Vogel sunflower head, with angle comparison, count, spacing, taper, deterministic seed and top-down inspection.",
+  "third_party": [
+    {
+      "name": "three.js",
+      "version": "r186",
+      "license": "MIT",
+      "files": [
+        {
+          "source": "antikythera/public/vendor/three/build/three.module.js",
+          "path": "vendor/three/build/three.module.js",
+          "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+        },
+        {
+          "source": "antikythera/public/vendor/three/build/three.core.js",
+          "path": "vendor/three/build/three.core.js",
+          "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+        },
+        {
+          "source": "antikythera/public/vendor/three/LICENSE",
+          "path": "vendor/three/LICENSE",
+          "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+        }
+      ]
+    }
+  ],
+  "repository_support": [
+    {
+      "source": "examples/_shared/ui.js",
+      "path": "src/ui.js",
+      "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+    },
+    {
+      "source": "examples/_shared/ui.css",
+      "path": "src/ui.css",
+      "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+    }
+  ],
+  "files": [
+    {
+      "path": "examples/botanic-phyllotaxis/README.md",
+      "sha256": "01df1ce3171ce57b1081c51cb469e26c651dd2dd5b3063350713b8337b3e4156"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/index.html",
+      "sha256": "ce4cf1ac97e5bc1d4c4669ebb60cbde88038578bbcdf163d484accf49c175ced"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/local.json",
+      "sha256": "257c06f4dab03241ff7000acbe0383fd76c14c0899c66658898bd6dd73723df6"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/model.test.mjs",
+      "sha256": "3daf69099836c9409200cc5749302fd599c4860981f5ac38dc66704b14103949"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/provenance.test.mjs",
+      "sha256": "105dab8b1662b448ddb4b2b501bca09a28f6664d4f813a72a2598781e97070a8"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/geometry.js",
+      "sha256": "117240f20ef3606986571b069577848e48764a3ec183efd2a17218485aee5566"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/i18n.js",
+      "sha256": "ae0629d8ae0db1fa622129889fd20e12b5028d6a86a338300c42244899c6a629"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/main.js",
+      "sha256": "d9f456f447d4889a3983c2cd740e974d1bc4c2b1c25dd80723d120ae9014e4ca"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/model.mjs",
+      "sha256": "8d284a41e8a0c5391ffe8209ed3a0a622ece9cb7d00beb44d24bc13367a0381f"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/studio.js",
+      "sha256": "b243f04f0618c7509bd172458abf695a57f5f694ff507c30b010b3cf9c4f5d37"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/style.css",
+      "sha256": "c0b07a3b1e013f409df2bd21f24dfea24b654292d703e63e1ac430e0c28e6ce4"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/ui.css",
+      "sha256": "34e4ab307e9a3f4aa4822222b19718b2fbd1982d076f13b40e0123df09c9abd7"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/src/ui.js",
+      "sha256": "069f006f7d0728596b115353cdf30d03ebc3392666c43d37f83963ddb82b4d76"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/test_browser.py",
+      "sha256": "18a7ac5a0b44002b4e170869f0c94e5f662d487120dcbf7b4b2ceda666339e61"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/vendor/three/LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/vendor/three/build/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6"
+    },
+    {
+      "path": "examples/botanic-phyllotaxis/vendor/three/build/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+    }
+  ]
+}

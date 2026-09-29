@@ -1,0 +1,19 @@
+:root {font-family:Arial,sans-serif;color-scheme:light dark}
+* {box-sizing:border-box} body {margin:0}
+#instrument {position:relative;overflow:hidden;background:#e3eaf0;color:#203c55;container-type:inline-size}
+html[data-theme="dark"] #instrument {background:#0c1825;color:#acc6db}
+#instrument svg {display:block;width:100%;height:100%;font-family:'SFMono-Regular',Consolas,monospace;text-anchor:middle}
+#instrument header,#instrument footer {position:absolute;left:4%;right:4%;display:flex;justify-content:space-between;align-items:center;font:600 1.35cqw/1.4 Arial,sans-serif;letter-spacing:.12em}
+#instrument header {top:5%} #instrument footer {bottom:4%;font-size:1.15cqw;letter-spacing:.04em}
+#instrument a {color:inherit;text-decoration:none}
+#ticks line {stroke:currentColor;stroke-width:2} #ticks text {fill:currentColor;font-size:23px}
+#ticks .red {color:#d44c39;fill:#d44c39} #ticks .minor {opacity:.4;stroke-width:1}
+#rpm-arc,#needle {color:#bd4d31} html[data-theme="dark"] #rpm-arc,html[data-theme="dark"] #needle {color:#ff9c62}
+#instrument text {fill:currentColor} .rpm-value {font-size:57px;font-weight:700;letter-spacing:-3px}
+.unit {font-size:15px;letter-spacing:2px;opacity:.7}.gear-value {font-size:63px}.boost-value {font-size:37px}
+.activity {font:600 17px Arial,sans-serif;letter-spacing:2px} #wave {opacity:.6}
+.actions {display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#instrument[data-limiting="true"] #activity {fill:#d44c39}
+#instrument:focus-visible {outline:2px solid var(--ui-link);outline-offset:-3px}
+html.demo-frame .demo-controls .demo-parameters label[data-demo-control] {display:flex!important}
+html.demo-frame .demo-controls .demo-parameters #voice {width:58%}
