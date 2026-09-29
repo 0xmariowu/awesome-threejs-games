@@ -224,12 +224,14 @@ class Checker:
         demos = context.request.get(self.base+'data/demos.json').json()
         def home():
             assert page.goto(self.base).status == 200
-            expect(page.locator('.game-card')).to_have_count(16)
-            expect(page.locator('nav a').first).to_have_text('Projects' if locale == 'en-US' else '项目')
-            assert page.locator('nav a').count() == 2
+            expect(page.locator('.game-card')).to_have_count(len(pages))
+            nav = page.locator('nav a')
+            expect(nav).to_have_count(3)
+            expect(nav).to_have_text(['Games', 'Tools', 'Demos'] if locale == 'en-US' else ['游戏', '工具', '技术演示'])
             self.capture(page,'home')
-        self.run('home','16 cards',home)
+        self.run('home','{} game cards and 3 navigation links'.format(len(pages)),home)
         self.run('links','README files',lambda:self.readme(context))
+        self.check_tools(context, page)
         for summary in pages:
             slug=summary['slug']
             def project():
@@ -298,6 +300,93 @@ class Checker:
                 self.frame(page,demo['id'])
             self.run('demo',demo['id'],demo_check)
         context.close()
+
+    def check_tools(self, context, page):
+        en = self.locale == 'en-US'
+        lang = 'en' if en else 'zh'
+        tool = context.request.get(self.base+'data/tool/fab-botanic.json').json()
+        open_label = 'Open tool ↗' if en else '打开工具 ↗'
+        terms_label = 'Terms ↗' if en else '使用条款 ↗'
+
+        def external_link(link, url):
+            parsed = urlparse(url)
+            assert parsed.scheme == 'https' and parsed.netloc != urlparse(self.base).netloc, 'Tool link must be external HTTPS'
+            expect(link).to_have_attribute('href', url)
+            expect(link).to_have_attribute('target', '_blank')
+            assert 'noopener' in (link.get_attribute('rel') or '').split(), 'Missing noopener'
+
+        def video_check():
+            video = page.locator('main video')
+            expect(video).to_have_count(1)
+            expect(video).to_have_attribute('src', PREFIX+'media/fab-botanic/overview.mp4')
+            expect(video).to_have_attribute('poster', PREFIX+'previews/fab-botanic.webp')
+            # Decode the poster too: a valid attribute alone cannot detect a broken preview.
+            assert video.evaluate('''async v => {
+                const image = new Image(); image.src = v.poster;
+                await image.decode(); return image.naturalWidth > 0;
+            }'''), 'Tool preview did not decode'
+            page.wait_for_function('() => document.querySelector("main video").readyState >= 2', timeout=30000)
+            start = video.evaluate('async v => { await v.play(); return v.currentTime; }')
+            page.wait_for_timeout(1200)
+            assert video.evaluate('v => v.currentTime') > start+.2, 'Tool video currentTime did not advance'
+
+        def listing():
+            assert page.goto(self.base+'tools').status == 200
+            expect(page.locator('.tool-card')).to_have_count(1)
+            card = page.locator('.tool-card[data-slug="fab-botanic"]')
+            expect(card.locator('h2')).to_have_text(tool['title'])
+            external_link(card.get_by_role('link', name=open_label, exact=True), tool['url'])
+            more = card.get_by_role('link', name='Learn more ›' if en else '了解更多 ›', exact=True)
+            expect(more).to_have_attribute('href', PREFIX+'t/fab-botanic')
+            video_check()
+            self.capture(page, 'tools')
+            more.click()
+            expect(page).to_have_url(self.base+'t/fab-botanic')
+            expect(page.locator('.project h1')).to_have_text(tool['title'])
+        self.run('tools', '1 tool card and external launch', listing, 'fab-botanic')
+
+        def detail():
+            assert page.goto(self.base+'t/fab-botanic').status == 200
+            expect(page.locator('.project h1')).to_have_text(tool['title'])
+            external_link(page.locator('.project-actions').get_by_role('link', name=open_label, exact=True), tool['url'])
+            external_link(page.locator('.project-actions').get_by_role('link', name=terms_label, exact=True), tool['terms_url'])
+            video_check()
+            features = page.locator('.tool-features')
+            expect(features.locator('h2')).to_have_text('What it can do' if en else '能做什么')
+            expect(features.locator('.tool-feature')).to_have_count(4)
+            expect(features.locator('h3')).to_have_text([f['title_en' if en else 'title'] for f in tool['features']])
+            expect(features.locator('p')).to_have_text([f['desc_en' if en else 'desc'] for f in tool['features']])
+            steps = page.locator('.tool-steps')
+            expect(steps.locator('h2')).to_have_text('Use it in your game' if en else '怎么用在游戏里')
+            expect(steps.locator('li')).to_have_count(3)
+            expect(steps.locator('li p')).to_have_text([step[lang] for step in tool['steps']])
+            usage = page.locator('.tool-usage')
+            expect(usage.locator('h2')).to_have_text('Usage rights' if en else '能不能用')
+            expect(usage.locator('p')).to_have_text([
+                '✓ '+' '.join(line[lang] for line in tool['can']),
+                '✗ '+' '.join(line[lang] for line in tool['cannot']),
+            ])
+            external_link(usage.get_by_role('link', name=terms_label, exact=True), tool['terms_url'])
+            expect(page.get_by_role('heading', name='Technique examples' if en else '技术示例', exact=True)).to_be_visible()
+            expect(page.locator('.example-row')).to_have_count(2)
+            self.capture(page, 'fab-botanic')
+            usage.scroll_into_view_if_needed()
+            self.capture(page, 'fab-botanic-sections')
+        self.run('tool', 'fab-botanic sections and terms', detail, 'fab-botanic')
+
+        for example in tool['examples']:
+            def inline_example():
+                row = page.locator('.example-row[data-id="'+example['id']+'"]')
+                expect(row.locator('h3')).to_have_text(example['title_en' if en else 'title'])
+                row.get_by_role('button', name='Run' if en else '运行', exact=True).click()
+                try:
+                    expect(row.locator('iframe')).to_have_count(1)
+                    self.frame(page, 'example:'+example['id'])
+                    assert not self.current['console_errors'], 'Tool example logged console errors'
+                finally:
+                    row.get_by_role('button', name='Stop' if en else '停止', exact=True).click()
+                    expect(page.locator('iframe')).to_have_count(0)
+            self.run('tool-example', example['id'], inline_example, 'fab-botanic')
 
     def finish(self):
         cols, width, height = 5, 320, 246

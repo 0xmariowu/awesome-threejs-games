@@ -118,6 +118,8 @@ KNOWN_MISSING_BACKEND = {
     'vox-arcana': ('/api/status',),
     'smartgame-town': ('/account/api.php', '/town/room-api.php'),
     'tableparty-kart': ('/kart-room',),
+    # Tupi's original-site view counter has no backend in the local archive.
+    'tupi': ('/api/views',),
 }
 
 
