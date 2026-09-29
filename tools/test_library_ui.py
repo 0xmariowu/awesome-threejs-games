@@ -417,7 +417,8 @@ class LibraryUITestCase(unittest.TestCase):
                             expect(nav.nth(1)).to_have_css('color',self.page.locator('body').evaluate('n=>getComputedStyle(n).color'))
                             for link in self.page.get_by_role('link',name='打开工具' if lang=='zh' else 'Open tool',exact=True).all():
                                 expect(link).to_have_attribute('href','http://127.0.0.1:8107/tl/fab-botanic/index.html')
-                                self.assertIsNone(link.get_attribute('target'))
+                                expect(link).to_have_attribute('target','_blank')
+                                self.assertIn('noopener',(link.get_attribute('rel') or '').split())
                             for label, url in [('原站 ↗' if lang=='zh' else 'Original site ↗',tool['url']),('使用条款 ↗' if lang=='zh' else 'Terms ↗',tool['terms_url'])]:
                                 links=self.page.get_by_role('link',name=label,exact=True)
                                 self.assertGreater(links.count(),0)
@@ -466,14 +467,36 @@ class LibraryUITestCase(unittest.TestCase):
             self.goto(route+'?lang=en')
             expect(self.page.locator('header.topbar nav a').nth(active)).to_have_attribute('aria-current','page')
 
-    def test_hosted_tool_launches_from_card_and_detail_in_same_tab(self):
+    def test_hosted_tool_launches_from_card_and_detail_in_new_tab(self):
+        # Exercise the local launch flow without visiting the shared tool on port 8107.
+        launch_url=BASE_URL+'/tool-launch-fixture'
+        requests=[]
+        def launch(route):
+            requests.append(route.request)
+            route.fulfill(json={'url':launch_url})
+        self.context.route('**/api/launch',launch)
+        self.context.route(launch_url,lambda r:r.fulfill(
+            content_type='text/html',body='<h1>Hosted tool launch fixture</h1>'))
         for route in ['/tools','/t/fab-botanic']:
             with self.subTest(route=route):
                 self.goto(route+'?lang=en')
-                self.page.get_by_role('link',name='Open tool',exact=True).click()
-                expect(self.page).to_have_url('http://127.0.0.1:8107/tl/fab-botanic/index.html')
-                expect(self.page.get_by_role('heading',name='植物标本工坊',exact=True)).to_be_visible(timeout=30000)
-                self.assertEqual(len(self.context.pages),1)
+                source_url=self.page.url
+                with self.page.expect_popup() as pending:
+                    self.page.get_by_role('link',name='Open tool',exact=True).click()
+                popup=pending.value
+                try:
+                    expect(popup).to_have_url(launch_url)
+                    expect(popup.get_by_role('heading',name='Hosted tool launch fixture')).to_be_visible()
+                    self.assertTrue(popup.evaluate('window.opener === null'))
+                    expect(self.page).to_have_url(source_url)
+                    self.assertEqual(len(self.context.pages),2)
+                finally:
+                    popup.close()
+        self.assertEqual(len(requests),2)
+        for request in requests:
+            self.assertEqual(request.method,'POST')
+            self.assertEqual(request.post_data_json,{'id':'tool:fab-botanic'})
+            self.assertTrue(request.headers.get('x-library-token'))
 
     def test_tools_grid_fallback_and_shared_examples(self):
         tools=self.context.request.get(BASE_URL+'/data/tools.json').json()
