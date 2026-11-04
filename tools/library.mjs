@@ -105,7 +105,13 @@ export async function createLibrary({index, launcher} = {}) {
     };
     if(req.headers.host!==host)return send(403,{error:`Use ${origin}`});
     if(req.headers.origin && req.headers.origin!==origin)return send(403,{error:'Cross-origin access denied'});
-    if(['cross-site','same-site'].includes(req.headers['sec-fetch-site']))return send(403,{error:'Use the library directly'});
+    // Fetch Metadata: permit same-site top-level navigation from the local portal.
+    // Host and Origin remain mandatory guards; subresources and cross-site stay denied.
+    const sameSiteNavigation = req.headers['sec-fetch-site'] === 'same-site'
+      && ['GET','HEAD'].includes(req.method)
+      && req.headers['sec-fetch-mode'] === 'navigate'
+      && req.headers['sec-fetch-dest'] === 'document';
+    if(['cross-site','same-site'].includes(req.headers['sec-fetch-site']) && !sameSiteNavigation)return send(403,{error:'Use the library directly'});
     try {
       const url=new URL(req.url,origin);
       // Both live and Pages clients consume the same public data paths.

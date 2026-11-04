@@ -608,3 +608,33 @@ test('hosted tool launch uses the token boundary, serves its capture and rejects
   assert.equal(denied.status,400);assert.equal((await denied.json()).error,'File not found');
   assert.equal((await fetch(url)).status,403);
 });
+
+test('same-site GET and HEAD document navigation is allowed without weakening other guards', async t => {
+  const f = await fixture(t);
+  const navigation = {'Sec-Fetch-Site':'same-site','Sec-Fetch-Mode':'navigate','Sec-Fetch-Dest':'document'};
+  const request = (method, headers) => new Promise((resolve, reject) => {
+    const req = http.request(f.base + '/', {method, headers}, res => {
+      res.resume(); res.on('end', () => resolve(res.statusCode));
+    });
+    req.on('error', reject); req.end();
+  });
+  assert.equal(await request('GET', navigation), 200);
+  // The existing router does not implement HEAD; it must reach the same 405
+  // as a direct request instead of being rejected by the metadata guard.
+  assert.equal(await request('HEAD', navigation), await request('HEAD', {}));
+  assert.equal(await request('HEAD', navigation), 405);
+  for (const method of ['POST','PUT','DELETE','OPTIONS']) assert.equal(await request(method, navigation), 403, method);
+  for (const headers of [
+    {...navigation, 'Sec-Fetch-Site':'cross-site'},
+    {...navigation, 'Sec-Fetch-Mode':'cors'},
+    {...navigation, 'Sec-Fetch-Mode':'no-cors'},
+    {...navigation, 'Sec-Fetch-Dest':'iframe'},
+    {...navigation, 'Sec-Fetch-Dest':'script'},
+    {...navigation, 'Sec-Fetch-Dest':'object'},
+    {...navigation, 'Sec-Fetch-Dest':''},
+    {'Sec-Fetch-Site':'same-site'},
+    {...navigation, Origin:'http://127.0.0.1:8800'},
+    {...navigation, Host:'hostile.test'},
+  ]) assert.equal(await request('GET', headers), 403, JSON.stringify(headers));
+  assert.equal(await request('GET', {}), 200);
+});
